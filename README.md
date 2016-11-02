@@ -34,7 +34,7 @@ Check out Nextcloud at https://nextcloud.com
 
 ## Translation / Localization
 
-Do you want the Jabber app in your native language? 
+Do you want the Nextcloud app in your native language? 
 Help translating the app on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/nextcloud_app/)
 
 We kindly ask you to only change the English strings within the repository.
