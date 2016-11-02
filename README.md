@@ -41,10 +41,6 @@ We kindly ask you to only change the English strings within the repository.
 All other languages should be translated on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/nextcloud_app/). 
 We will merge the translation into the project from time to time.
 
-## Screenshots
-
-![Throughput Graph](https://raw.githubusercontent.com/MichaelKohler/jabber-firefox-os/master/screenshots/design_proposal_main_screen.png) 
-
 ## Credits
 
 The Nextcloud App relies on or was inspired by the following projects:
