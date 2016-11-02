@@ -43,7 +43,7 @@ We will merge the translation into the project from time to time.
 
 ## Credits
 
-The Nextcloud App relies on or was inspired by the following projects:
+The Nextcloud App relies on, or was inspired by, the following projects:
 
 * C# client library for ownCloud - https://github.com/bnoffer/owncloud-sharp
 * webDAVNet - http://webdavnet.codeplex.com/
