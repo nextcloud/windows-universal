@@ -1,0 +1,12 @@
+{
+  "locked": false,
+  "version": 1,
+  "targets": {
+    ".NETCore,Version=v4.5.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETCore,Version=v4.5.1": []
+  }
+}

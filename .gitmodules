@@ -1,0 +1,3 @@
+[submodule "webdavnet"]
+	path = webdavnet
+	url = https://github.com/bnoffer/webdavnet.git

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{E2015378-CEFF-4913-A4A6-48706F2625D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NextcloudClient</RootNamespace>
+    <AssemblyName>NextcloudClient</AssemblyName>
+    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <Description>A portable class library to interact with ownCloud servers through WebDAV and the ownCloud OCS API.</Description>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <DefaultLanguage>en</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Debug\NextcloudClient.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>NETFX_CORE;WINDOWS_APP</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Exceptions\ResponseError.cs" />
+    <Compile Include="Exceptions\OCSResponseError.cs" />
+    <Compile Include="Types\PublicShare.cs" />
+    <Compile Include="Types\Share.cs" />
+    <Compile Include="Types\Status.cs" />
+    <Compile Include="Types\UserShare.cs" />
+    <Compile Include="Types\GroupShare.cs" />
+    <Compile Include="NextcloudClient.cs" />
+    <Compile Include="Types\OCS.cs" />
+    <Compile Include="Types\ResourceInfo.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Types\Config.cs" />
+    <Compile Include="Types\AppAttribute.cs" />
+    <Compile Include="Types\User.cs" />
+    <Compile Include="Types\AppInfo.cs" />
+    <Compile Include="UrlBuilder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebDavClient\WebDavClient\WebDavClient.csproj">
+      <Project>{4AD0BDDE-D9AF-49F8-912C-4B6970CBE1BA}</Project>
+      <Name>WebDavClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
