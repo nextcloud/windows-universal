@@ -1,0 +1,80 @@
+﻿<prismMvvm:SessionStateAwarePage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:NextcloudApp.Converter"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    x:Class="NextcloudApp.Views.SettingsPage"
+    mc:Ignorable="d"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Settings" x:Uid="Settings2" Margin="48,0,0,0" VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="0">
+                <StackPanel Orientation="Vertical" Margin="12">
+                    <!--
+                    <ToggleSwitch 
+                        x:Uid="ShowGrouping"
+                        Header="Show file and folder list grouping header"
+                        Margin="0,12"
+                        IsOn="{Binding Settings.ShowFileAndFolderGroupingHeader, Mode=TwoWay}"/>
+                    -->
+
+                    <ComboBox 
+                        Header="Download preview images"
+                        x:Uid="DownloadPreviewImages"
+                        ItemsSource="{Binding PreviewImageDownloadModes}"
+                        SelectedIndex="{Binding PreviewImageDownloadModesSelectedIndex, Mode=TwoWay}"
+                        Margin="0,12"/>
+
+                    <Border 
+                        Margin="0,12" 
+                        Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
+                        Height="1" />
+
+                    <Button 
+                        x:Uid="ReseTthisApp"
+                        Content="Reset this app" 
+                        Margin="0,12"
+                        Command="{Binding ResetCommand}"/>
+                </StackPanel>
+            </ScrollViewer>
+
+            <Border
+                Grid.Row="1" 
+                Margin="0,12" 
+                Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
+                Height="1" />
+
+            <StackPanel Grid.Row="2">
+                <TextBlock
+                    Text="{Binding ServerVersion}"
+                    Visibility="{Binding ServerVersion, Converter={StaticResource NullToVisibilityConverter}}"
+                    Margin="0,0,0,12"
+                    HorizontalAlignment="Center"/>
+
+                <TextBlock 
+                    Text="{Binding AppVersion}"
+                    Margin="0,0,0,12"
+                    HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</prismMvvm:SessionStateAwarePage>

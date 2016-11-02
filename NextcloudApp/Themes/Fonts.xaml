@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="using:NextcloudApp">
+
+    <FontFamily x:Key="NextcloudIcons">/Assets/Fonts/nextcloud.ttf#nextcloud</FontFamily>
+    <x:String x:Key="NextclousLogoWithSlogan">&#xE900;</x:String>
+    <x:String x:Key="NextclousLogo">&#xE901;</x:String>
+    
+</ResourceDictionary>

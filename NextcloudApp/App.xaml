@@ -1,0 +1,34 @@
+﻿<prismUnity:PrismUnityApplication
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prismUnity="using:Prism.Unity.Windows" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:NextcloudApp.Converter"
+    mc:Ignorable="d"
+    x:Class="NextcloudApp.App">
+
+    <prismUnity:PrismUnityApplication.Resources>
+        <ResourceDictionary>
+            <converter:ContentTypeToIconConverter x:Key="ContentTypeToIconConverter"/>
+            <converter:BytesToHumanReadableConverter x:Key="BytesToHumanReadableConverter"/>
+            <converter:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+            <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
+            <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <converter:EmptyPathToSlashConverter x:Key="EmptyPathToSlashConverter"/>
+            <converter:AddSlashToPathConverter x:Key="AddSlashToPathConverter"/> 
+            <converter:IsSortingToSelectionModeConverter x:Key="IsSortingToSelectionModeConverter"/>
+            <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
+                <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />
+                <ResourceDictionary Source="ms-appx:///Themes/MenuFlyoutIconItemStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </prismUnity:PrismUnityApplication.Resources>
+
+</prismUnity:PrismUnityApplication>
+
+
+

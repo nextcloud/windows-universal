@@ -1,0 +1,283 @@
+﻿<prismMvvm:SessionStateAwarePage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    x:Class="NextcloudApp.Views.FileInfoPage"
+    mc:Ignorable="d"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListBox 
+            x:Name="PathList" 
+            ItemsSource="{Binding PathStack}"
+            SelectionMode="Single"
+            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
+            Margin="48,0,0,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                        <ItemsPresenter/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </ListBox.Template>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ResourceInfo.Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <StackPanel 
+                                    Orientation="Horizontal" 
+                                    Height="48">
+                                    <FontIcon 
+                                        Glyph="&#xE26B;"
+                                        FontSize="8"
+                                        Margin="0,0,8,0"
+                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
+                                    <FontIcon 
+                                        Glyph="{StaticResource NextclousLogo}"
+                                        FontFamily="{StaticResource NextcloudIcons}"
+                                        Margin="8,0,8,0"
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center" 
+                                        Margin="0,0,8,0"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ScrollListBoxToEndBehavior/>
+            </interactivity:Interaction.Behaviors>
+        </ListBox>
+
+        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <StackPanel Orientation="Vertical">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid
+                        Height="100" 
+                        Width="100"
+                        Background="{StaticResource SystemControlHighlightAccentBrush}">
+                        <FontIcon 
+                            Glyph="{Binding ResourceInfo, Converter={StaticResource ContentTypeToIconConverter}}" 
+                            FontFamily="Segoe MDL2 Assets"
+                            FontSize="80"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Foreground="White"/>
+                        <Border
+                            Background="#808080"
+                            Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
+                            <Image
+                                Source="{Binding Thumbnail}"
+                                Stretch="UniformToFill"/>
+                        </Border>
+                    </Grid>
+
+                    <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="8,0,0,0">
+                        <TextBlock
+                            Text="{Binding ResourceInfo.Name}" 
+                            TextWrapping="Wrap"/>
+                        <StackPanel 
+                            Orientation="Horizontal">
+                            <TextBlock 
+                                Text="{Binding ResourceInfo.Size, Converter={StaticResource BytesToHumanReadableConverter}}"
+                                Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                Margin="0,0,8,0"/>
+                            <TextBlock 
+                                Text="{Binding ResourceInfo.LastModified, Converter={StaticResource DateTimeToStringConverter}}"
+                                Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock 
+                    Text="Information" 
+                    x:Uid="Information"
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="8"/>
+
+                <Border Margin="8,0" Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" Height="1" />
+
+                <Grid Margin="8,0,8,8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock 
+                        Grid.Row="0"
+                        Grid.Column="0" 
+                        Text="Name" 
+                        x:Uid="Name"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="0"
+                        Grid.Column="1" 
+                        Text="{Binding FileName}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="1"
+                        Grid.Column="0" 
+                        Text="Path" 
+                        x:Uid="Path"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="1"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.Path, Converter={StaticResource AddSlashToPathConverter}}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="2"
+                        Grid.Column="0" 
+                        Text="Type" 
+                        x:Uid="Type"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="2"
+                        Grid.Column="1" 
+                        Text="{Binding FileExtension}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="3"
+                        Grid.Column="0" 
+                        Text="Content-Type" 
+                        x:Uid="ContentType"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="3"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.ContentType}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="4"
+                        Grid.Column="0" 
+                        Text="Size" 
+                        x:Uid="Size"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="4"
+                        Grid.Column="1" 
+                        Text="{Binding FileSizeString}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="5"
+                        Grid.Column="0" 
+                        Text="ETag" 
+                        x:Uid="ETag"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="5"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.ETag}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="6"
+                        Grid.Column="0" 
+                        Text="Last modified" 
+                        x:Uid="LastModified"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="6"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.LastModified, Converter={StaticResource DateTimeToStringConverter}}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="7"
+                        Grid.Column="0" 
+                        Text="Created" 
+                        x:Uid="Created"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock 
+                        Grid.Row="7"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToStringConverter}}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+            <AppBarButton 
+                Icon="Delete" 
+                Label="Delete" 
+                x:Uid="Delete_Label" 
+                Command="{Binding DeleteResourceCommand}"/>
+            <AppBarButton 
+                Icon="Download" 
+                Label="Download" 
+                x:Uid="AppBarDownload" 
+                Command="{Binding DownloadCommand}"/>
+        </CommandBar>
+    </Grid>
+
+</prismMvvm:SessionStateAwarePage>

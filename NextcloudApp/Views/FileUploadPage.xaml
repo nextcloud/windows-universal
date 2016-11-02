@@ -1,0 +1,38 @@
+﻿<prismMvvm:SessionStateAwarePage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="using:NextcloudApp.Converter"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    x:Class="NextcloudApp.Views.FileUploadPage"
+    mc:Ignorable="d"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock 
+                x:Uid="UploadingTheFile" 
+                Text="Uploading the file…"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Visibility="{Binding UploadingFilesTitle, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}"
+                Margin="24"/>
+            <TextBlock 
+                Text="{Binding UploadingFilesTitle}"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Visibility="{Binding UploadingFilesTitle, Converter={StaticResource NullToVisibilityConverter}}"
+                Margin="24"/>
+            <ProgressBar 
+                Minimum="0"
+                Value="{Binding PercentageUploaded}"
+                Maximum="100"/>
+            <TextBlock 
+                Text="{Binding UploadingFileProgressText}"
+                HorizontalAlignment="Right"
+                Margin="0,12,0,0"/>
+        </StackPanel>
+    </Grid>
+
+</prismMvvm:SessionStateAwarePage>
