@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/github/altima/nextcloud-app-uwp)](https://ci.appveyor.com/project/altima/nextcloud-app-uwp) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Nextcloud-App-UWP?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/altima/nextcloud-app-uwp)](https://ci.appveyor.com/project/altima/nextcloud-app-uwp) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Nextcloud-App-UWP/Lobby)
 
 
 # Nextcloud App for Windows Mobile
