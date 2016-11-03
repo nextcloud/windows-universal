@@ -46,7 +46,13 @@ We will merge the translation into the project from time to time.
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/login-screen_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-2_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-3_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-4_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-5_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_dark.png) 
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/login-screen_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-2_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-3_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-4_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-5_light.png" width="300" border="1"/>
+<img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_dark.png" width="300" border="1"/>
 
 ## Credits
 
