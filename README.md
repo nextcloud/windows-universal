@@ -52,5 +52,5 @@ The Nextcloud App relies on, or was inspired by, the following projects:
 
 ## Authors
 
-André Fiedler ( [@SunboX](https://github.com/SunboX) )
-Enrico Meinel ( [@altima](https://github.com/altima) )
+* André Fiedler ( [@SunboX](https://github.com/SunboX) )
+* Enrico Meinel ( [@altima](https://github.com/altima) )
