@@ -44,6 +44,10 @@ We kindly ask you to only change the English strings within the repository.
 All other languages should be translated on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/nextcloud_app/). 
 We will merge the translation into the project from time to time.
 
+## Screenshots
+
+![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/login-screen_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-2_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-3_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-4_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-5_light.png) ![](https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_dark.png) 
+
 ## Credits
 
 The Nextcloud App relies on, or was inspired by, the following projects:
