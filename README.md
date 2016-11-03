@@ -1,4 +1,6 @@
-﻿# Nextcloud App for Windows Mobile
+[![Build status](https://ci.appveyor.com/api/projects/status/github/altima/nextcloud-app-uwp)](https://ci.appveyor.com/project/altima/nextcloud-app-uwp)
+
+# Nextcloud App for Windows Mobile
 
 The Open Source Nextcloud Windows Mobile app allows you to access all your files on your Nextcloud.
 
@@ -51,3 +53,4 @@ The Nextcloud App relies on, or was inspired by, the following projects:
 ## Authors
 
 André Fiedler ( [@SunboX](https://github.com/SunboX) )
+Enrico Meinel ( [@altima](https://github.com/altima) )
