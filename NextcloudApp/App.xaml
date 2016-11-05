@@ -17,9 +17,10 @@
             <converter:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
             <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
             <converter:EmptyPathToSlashConverter x:Key="EmptyPathToSlashConverter"/>
-            <converter:AddSlashToPathConverter x:Key="AddSlashToPathConverter"/> 
+            <converter:AddSlashToPathConverter x:Key="AddSlashToPathConverter"/>
             <converter:IsSortingToSelectionModeConverter x:Key="IsSortingToSelectionModeConverter"/>
             <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
+            <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />

@@ -110,13 +110,16 @@ namespace NextcloudClient
             var resources = new List<ResourceInfo>();
             var result = await _dav.List(GetDavUri(path));
 
+            var baseUri = new Uri(_url);
+            baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
+
             foreach (var item in result)
             {
                 if (item == result[0]) // Skip the first element, since it is always the root
                 {
                     continue;
                 }
-
+                
                 var res = new ResourceInfo
                 {
                     ContentType = item.IsDirectory ? "dav/directory" : item.ContentType,
@@ -127,7 +130,7 @@ namespace NextcloudClient
                     QuotaAvailable = item.QutoaAvailable,
                     QuotaUsed = item.QuotaUsed,
                     Size = item.Size,
-                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsolutePath.Replace("/" + Davpath, ""))
+                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, ""))
                 };
                 if (!res.ContentType.Equals("dav/directory"))
                 {
@@ -147,6 +150,9 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         public async Task<ResourceInfo> GetResourceInfo(string path)
         {
+            var baseUri = new Uri(_url);
+            baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
+            
             var result = await _dav.List(GetDavUri(path));
 
             if (result.Count <= 0)
@@ -164,7 +170,7 @@ namespace NextcloudClient
                 QuotaAvailable = item.QutoaAvailable,
                 QuotaUsed = item.QuotaUsed,
                 Size = item.Size,
-                Path = item.Uri.AbsolutePath.Replace("/" + Davpath, "")
+                Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
             };
             if (!res.ContentType.Equals("dav/directory"))
             {
@@ -318,6 +324,12 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<Status> GetServerStatus(string serverUrl)
         {
+            // In case the URL has no trailing slash, add it
+            if ((serverUrl != null) && !serverUrl.EndsWith("/"))
+            {
+                serverUrl = serverUrl + "/";
+            }
+
             var url = new Uri(new Uri(serverUrl), "status.php");
 
             var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
@@ -335,7 +347,14 @@ namespace NextcloudClient
                 throw new ResponseError(response.ReasonPhrase);
             }
 
-            return JsonConvert.DeserializeObject<Status>(content);
+            try
+            {
+                return JsonConvert.DeserializeObject<Status>(content);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -347,6 +366,12 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password)
         {
+            // In case the URL has no trailing slash, add it
+            if ((serverUrl != null) && !serverUrl.EndsWith("/"))
+            {
+                serverUrl = serverUrl + "/";
+            }
+
             var url = new Uri(new Uri(serverUrl), Davpath);
 
             var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
@@ -868,9 +893,50 @@ namespace NextcloudClient
         /// <param name="username"></param>
         /// <param name="size"></param>
         /// <returns></returns>
-        public Uri GetUserAvatarUrl(string username, int size)
+        public async Task<Uri> GetUserAvatarUrl(string username, int size)
         {
-            return new Uri(_url + "/index.php/avatar/" + username + "/" + size);
+            var url = new Uri(_url + "/index.php/avatar/" + username + "/" + size);
+            var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+
+            client.DefaultRequestHeaders["Pragma"] = "no-cache";
+
+            var request = new HttpRequestMessage(HttpMethod.Head, url);
+            var response = await client.SendRequestAsync(request);
+
+            if (response.StatusCode != HttpStatusCode.Ok)
+            {
+                return null;
+            }
+
+            if (!response.Headers.ContainsKey("Content-Length"))
+            {
+                response = await client.GetAsync(url);
+                if (response != null)
+                {
+                    var stream = (await response.Content.ReadAsInputStreamAsync()).AsStreamForRead();
+                    using (var memStream = new MemoryStream())
+                    {
+                        await stream.CopyToAsync(memStream);
+                        return memStream.Length > 100 ? url : null;
+                    }
+                }
+            }
+            try
+            {
+                if (response != null)
+                {
+                    var length = long.Parse(response.Headers["Content-Length"]);
+                    if (length > 0)
+                    {
+                        return url;
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return url;
         }
 
         /// <summary>

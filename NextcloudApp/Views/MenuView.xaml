@@ -73,11 +73,28 @@
                 Grid.RowSpan="4"
                 Height="52" 
                 Width="52" 
-                Margin="0,0,8,0">
+                Margin="0,0,8,0"
+                Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}}">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="{Binding UserAvatarUrl}"/>
                 </Ellipse.Fill>
             </Ellipse>
+            <Grid
+                Grid.Row="0" 
+                Grid.Column="0"
+                Grid.RowSpan="4"
+                Height="52" 
+                Width="52" 
+                Margin="0,0,8,0"
+                Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
+                <Ellipse Fill="{ThemeResource SystemControlHighlightAccentBrush}" />
+                <TextBlock 
+                    Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    FontSize="30"
+                    LineHeight="47"/>
+            </Grid>
             <TextBlock
                 Grid.Row="0" 
                 Grid.Column="1" 
