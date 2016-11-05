@@ -163,6 +163,22 @@ namespace NextcloudApp.ViewModels
             try
             {
                 var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
+                if (status == null)
+                {
+                    var dialog = new ContentDialog
+                    {
+                        Title = _resourceLoader.GetString("AnErrorHasOccurred"),
+                        Content = new TextBlock
+                        {
+                            Text = _resourceLoader.GetString("ServerNameOrAddressCouldNotBeResolved"),
+                            TextWrapping = TextWrapping.WrapWholeWords,
+                            Margin = new Thickness(0, 20, 0, 0)
+                        },
+                        PrimaryButtonText = _resourceLoader.GetString("OK")
+                    };
+                    await _dialogService.ShowAsync(dialog);
+                    return false;
+                }
                 if (!status.Installed)
                 {
                     var dialog = new ContentDialog

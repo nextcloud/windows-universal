@@ -113,14 +113,14 @@ namespace NextcloudApp.ViewModels
                 switch (SettingsService.Instance.Settings.PreviewImageDownloadMode)
                 {
                     case PreviewImageDownloadMode.Always:
-                        UserAvatarUrl = client.GetUserAvatarUrl(username, 120);
+                        UserAvatarUrl = await client.GetUserAvatarUrl(username, 120);
                         break;
                     case PreviewImageDownloadMode.WiFiOnly:
                         var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
                         // connectionProfile can be null (e.g. airplane mode)
                         if (connectionProfile != null && connectionProfile.IsWlanConnectionProfile)
                         {
-                            UserAvatarUrl = client.GetUserAvatarUrl(username, 120);
+                            UserAvatarUrl = await client.GetUserAvatarUrl(username, 120);
                         }
                         break;
                     case PreviewImageDownloadMode.Never:
