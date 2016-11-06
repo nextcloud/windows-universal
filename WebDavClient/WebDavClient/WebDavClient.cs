@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -307,8 +308,12 @@ namespace WebDavClient
             var streamContent = new HttpStreamContent(inputStream);
             streamContent.Headers["Content-Type"] = contentType;
             streamContent.Headers["Content-Length"] = stream.Size.ToString();
-            var requestContent = new HttpMultipartContent {streamContent};
-            return await _client.PutAsync(uri, requestContent).AsTask(cts.Token, progress);
+
+            //var requestContent = new HttpMultipartContent {streamContent};
+
+            var response = await _client.PutAsync(uri, streamContent).AsTask(cts.Token, progress);
+
+            return response;
         }
 
         /// <summary>
