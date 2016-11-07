@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -41,7 +40,16 @@ namespace WebDavClient
         /// <param name="credential">The credential.</param>
         public WebDavClient(WebDavCredential credential)
         {
-            _client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+            var httpFilter = new HttpBaseProtocolFilter();
+
+            // Disable the write cache, so we can track the real upload progress
+            httpFilter.CacheControl.WriteBehavior =  HttpCacheWriteBehavior.NoCache;
+
+            // Disable the UI mode, we will handle password entry in the app
+            httpFilter.AllowUI = false;
+            
+            _client = new HttpClient(httpFilter);
+
             _client.DefaultRequestHeaders["Pragma"] = "no-cache";
             Credential = credential;
             if (Credential == null)
@@ -308,12 +316,7 @@ namespace WebDavClient
             var streamContent = new HttpStreamContent(inputStream);
             streamContent.Headers["Content-Type"] = contentType;
             streamContent.Headers["Content-Length"] = stream.Size.ToString();
-
-            //var requestContent = new HttpMultipartContent {streamContent};
-
-            var response = await _client.PutAsync(uri, streamContent).AsTask(cts.Token, progress);
-
-            return response;
+            return await _client.PutAsync(uri, streamContent).AsTask(cts.Token, progress);
         }
 
         /// <summary>
