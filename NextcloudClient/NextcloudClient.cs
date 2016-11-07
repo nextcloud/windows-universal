@@ -81,7 +81,11 @@ namespace NextcloudClient
 
             _url = url;
 
-            _client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+            _client = new HttpClient(new HttpBaseProtocolFilter
+            {
+                // Disable the UI mode, we will handle password entry in the app
+                AllowUI = false
+            });
             _client.DefaultRequestHeaders["Pragma"] = "no-cache";
 
             var encoded =
