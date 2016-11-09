@@ -22,12 +22,12 @@ namespace NextcloudApp.Converter
                     return string.Format("{0:0} {1}", size, sizes[order]);
 
                 case 1:
-                    return string.Format("{0:0.#} {1}", size, sizes[order]);
+                    return string.Format("{0:0.0} {1}", size, sizes[order]);
 
                 case 2:
-                    return string.Format("{0:0.##} {1}", size, sizes[order]);
+                    return string.Format("{0:0.00} {1}", size, sizes[order]);
             }
-            return string.Format("{0:0.###} {1}", size, sizes[order]);
+            return string.Format("{0:0.000} {1}", size, sizes[order]);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
