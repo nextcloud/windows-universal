@@ -27,11 +27,19 @@
             <ProgressBar 
                 Minimum="0"
                 Value="{Binding PercentageUploaded}"
-                Maximum="100"/>
+                Maximum="100"
+                IsIndeterminate="{Binding WaitingForServerResponse}"/>
             <TextBlock 
                 Text="{Binding UploadingFileProgressText}"
                 HorizontalAlignment="Right"
-                Margin="0,12,0,0"/>
+                Margin="0,12,0,0"
+                Visibility="{Binding WaitingForServerResponse, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
+            <TextBlock 
+                x:Uid="WaitingForServerResponse"
+                Text="waiting for server response"
+                HorizontalAlignment="Right"
+                Margin="0,12,0,0"
+                Visibility="{Binding WaitingForServerResponse, Converter={StaticResource BooleanToVisibilityConverter}}"/>
         </StackPanel>
     </Grid>
 

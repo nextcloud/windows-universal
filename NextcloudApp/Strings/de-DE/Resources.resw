@@ -335,4 +335,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
     <value>Der Server mit der Adresse {0} konnte nicht erreicht werden.</value>
   </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>auf Antwort des Servers warten</value>
+  </data>
 </root>
