@@ -20,7 +20,7 @@ namespace NextcloudApp.ViewModels
         private readonly INavigationService _navigationService;
         private Settings _settngs;
         private int _previewImageDownloadModesSelectedIndex;
-        private IResourceLoader _resourceLoader;
+        private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
 
         public ICommand ResetCommand { get; private set; }
@@ -89,7 +89,7 @@ namespace NextcloudApp.ViewModels
         }
 
         public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } =
-            new List<PreviewImageDownloadModeItem>() {};
+            new List<PreviewImageDownloadModeItem>();
 
 
         public int PreviewImageDownloadModesSelectedIndex
@@ -121,7 +121,7 @@ namespace NextcloudApp.ViewModels
         public string AppVersion
             =>
                 string.Format(_resourceLoader.GetString("ClientVersion"),
-                    $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}")
+                    $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}")
             ;
 
         private void Reset()
