@@ -332,4 +332,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Delete_Label.Label" xml:space="preserve">
     <value>Löschen</value>
   </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>auf Antwort des Servers warten</value>
+  </data>
 </root>

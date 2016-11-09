@@ -31,6 +31,7 @@ namespace NextcloudApp.ViewModels
         private readonly BytesToHumanReadableConverter _converter;
         private CancellationTokenSource _cts;
         private StorageFile _currentFile;
+        private bool _waitingForServerResponse;
 
         public FileUploadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -149,7 +150,15 @@ namespace NextcloudApp.ViewModels
                     BytesTotal = (long)progressInfo.TotalBytesToSend;
                 }
                 BytesSend = (int)progressInfo.BytesSent;
+
+                WaitingForServerResponse = BytesSend == BytesTotal;
             });
+        }
+
+        public bool WaitingForServerResponse
+        {
+            get { return _waitingForServerResponse; }
+            private set { SetProperty(ref _waitingForServerResponse, value); }
         }
 
         public int PercentageUploaded
