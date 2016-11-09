@@ -36,7 +36,8 @@ namespace NextcloudApp.ViewModels
         public ICommand UploadFilesCommand { get; private set; }
         public ICommand UploadPhotosCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
-        
+        public ICommand RenameResourceCommand { get; private set; }
+
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
@@ -83,6 +84,27 @@ namespace NextcloudApp.ViewModels
             UploadFilesCommand = new DelegateCommand(UploadFiles);
             UploadPhotosCommand = new DelegateCommand(UploadPhotos);
             DeleteResourceCommand = new RelayCommand(DeleteResource);
+            RenameResourceCommand = new RelayCommand(RenameResource);
+        }
+
+        public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
+        {
+            base.OnNavigatedTo(e, viewModelState);
+            Directory = DirectoryService.Instance;
+            StartDirectoryListing();
+            _isNavigatingBack = false;
+        }
+
+        public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
+        {
+            _isNavigatingBack = true;
+            if (!suspending)
+            {
+                Directory.StopDirectoryListing();
+                Directory = null;
+                _selectedFileOrFolder = null;
+            }
+            base.OnNavigatingFrom(e, viewModelState, suspending);
         }
 
         private async void DeleteResource(object parameter)
@@ -198,24 +220,44 @@ namespace NextcloudApp.ViewModels
             }
         }
 
-        public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
+        private async void RenameResource(object parameter)
         {
-            base.OnNavigatedTo(e, viewModelState);
-            Directory = DirectoryService.Instance;
-            StartDirectoryListing();
-            _isNavigatingBack = false;
-        }
-
-        public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
-        {
-            _isNavigatingBack = true;
-            if (!suspending)
+            var resourceInfo = parameter as ResourceInfo;
+            if (resourceInfo == null)
             {
-                Directory.StopDirectoryListing();
-                Directory = null;
-                _selectedFileOrFolder = null;
+                return;
             }
-            base.OnNavigatingFrom(e, viewModelState, suspending);
+
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("Rename"),
+                Content = new TextBox()
+                {
+                    Header = _resourceLoader.GetString("ChooseANewName"),
+                    Text = resourceInfo.Name,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("Ok"),
+                SecondaryButtonText = _resourceLoader.GetString("Cancel")
+            };
+            var dialogResult = await _dialogService.ShowAsync(dialog);
+            if (dialogResult != ContentDialogResult.Primary)
+            {
+                return;
+            }
+            var textBox = dialog.Content as TextBox;
+            var newName = textBox?.Text;
+            if (string.IsNullOrEmpty(newName))
+            {
+                return;
+            }
+            ShowProgressIndicator();
+            var success = await Directory.Rename(resourceInfo.Name, newName);
+            HideProgressIndicator();
+            if (success)
+            {
+                return;
+            }
         }
 
         public DirectoryService Directory

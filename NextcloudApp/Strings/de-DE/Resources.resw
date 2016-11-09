@@ -335,4 +335,16 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>auf Antwort des Servers warten</value>
   </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Wählen Sie einen neuen Namen aus</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Umbennen</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
 </root>

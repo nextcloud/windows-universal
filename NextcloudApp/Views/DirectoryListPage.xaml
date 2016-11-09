@@ -244,10 +244,19 @@
                                 <FlyoutBase.AttachedFlyout>
                                     <MenuFlyout>
                                         <MenuFlyoutItem 
+                                            Tag="Rename"
+                                            x:Uid="Rename_Text"
+                                            Text="Rename"
+                                            Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Delete"
                                             x:Uid="Delete_Text"
                                             Text="Delete"
                                             Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"/>
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                         <!--
                                         <MenuFlyoutItem 
                                             x:Uid="Download"

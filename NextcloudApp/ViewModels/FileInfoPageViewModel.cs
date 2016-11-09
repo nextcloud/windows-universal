@@ -34,6 +34,7 @@ namespace NextcloudApp.ViewModels
         private BitmapImage _thumbnail;
         public ICommand DownloadCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
+        public ICommand RenameResourceCommand { get; private set; }
 
         public FileInfoPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -54,6 +55,7 @@ namespace NextcloudApp.ViewModels
                 _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
             });
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
+            RenameResourceCommand = new DelegateCommand(RenameResource);
         }
         
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -253,6 +255,45 @@ namespace NextcloudApp.ViewModels
 
             ShowProgressIndicator();
             var success = await DirectoryService.Instance.DeleteResource(ResourceInfo);
+            HideProgressIndicator();
+            if (success)
+            {
+                _navigationService.GoBack();
+            }
+        }
+
+        private async void RenameResource()
+        {
+            if (ResourceInfo == null)
+            {
+                return;
+            }
+
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("Rename"),
+                Content = new TextBox()
+                {
+                    Header = _resourceLoader.GetString("ChooseANewName"),
+                    Text = ResourceInfo.Name,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("Ok"),
+                SecondaryButtonText = _resourceLoader.GetString("Cancel")
+            };
+            var dialogResult = await _dialogService.ShowAsync(dialog);
+            if (dialogResult != ContentDialogResult.Primary)
+            {
+                return;
+            }
+            var textBox = dialog.Content as TextBox;
+            var newName = textBox?.Text;
+            if (string.IsNullOrEmpty(newName))
+            {
+                return;
+            }
+            ShowProgressIndicator();
+            var success = await Directory.Rename(ResourceInfo.Name, newName);
             HideProgressIndicator();
             if (success)
             {

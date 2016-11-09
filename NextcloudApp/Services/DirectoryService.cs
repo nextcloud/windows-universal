@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Windows.Networking.Connectivity;
@@ -288,6 +286,36 @@ namespace NextcloudApp.Services
                 : resourceInfo.Path + "/" + resourceInfo.Name;
             var success = await client.Delete(path);
             await StartDirectoryListing();
+            return success;
+        }
+
+        public async Task<bool> Rename(string oldName, string newName)
+        {
+            var client = ClientService.GetClient();
+            if (client == null)
+            {
+                return false;
+            }
+
+            var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "";
+
+            var success = false;
+            try
+            {
+                success = await client.Move(path + "/" + oldName, path + "/" + newName);
+            }
+            catch (ResponseError e)
+            {
+                if (e.StatusCode != "400") // ProtocolError
+                {
+                    ResponseErrorHandlerService.HandleException(e);
+                }
+            }
+
+            if (success)
+            {
+                await StartDirectoryListing();
+            }
             return success;
         }
     }

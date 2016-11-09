@@ -335,4 +335,16 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>waiting for server response</value>
   </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Please choose a new name</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
 </root>
