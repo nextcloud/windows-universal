@@ -1,18 +1,15 @@
+# Nextcloud Windows Mobile App
 [![Build status](https://ci.appveyor.com/api/projects/status/github/altima/nextcloud-app-uwp)](https://ci.appveyor.com/project/altima/nextcloud-app-uwp) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Nextcloud-App-UWP/Lobby)
 
+This is the Nextcloud app allowing you to access all your files on Windows Mobile (...and UWP coming soon).
 
-# Nextcloud App for Windows Mobile 
-**(we are working on UWP support)**
-
-The Open Source Nextcloud Windows Mobile app allows you to access all your files on your Nextcloud.
-
-## Features already implemented
+## Why is this so awesome?
 
 * Easy, modern interface
 * Upload your files to your Nextcloud server
 * Download files from your Nextcloud server
 
-## Feature plans for next releases
+And in the [coming versions](https://github.com/nextcloud/windows-universal/milestones):
 
 * Move and rename files and folders
 * Share your files and folders with others
@@ -26,15 +23,7 @@ The Open Source Nextcloud Windows Mobile app allows you to access all your files
 
 ## Issues
 
-Please report all issues at https://github.com/SunboX/Nextcloud-App-UWP/issues
-
-## New to Nextcloud?
-
-Nextcloud is a private file sync & share and communication server. 
-It is fully open source and you can host it yourself or pay a company to do it for you. 
-That way, you are in control of your photos, your calendar and contact data, your documents and everything else.
-
-Check out Nextcloud at https://nextcloud.com
+Please report all issues over here: https://github.com/nextcloud/windows-universal/issues
 
 ## Translation / Localization
 
@@ -55,14 +44,14 @@ We will merge the translation into the project from time to time.
 <kbd><img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-5_light.png" width="300"/></kbd>
 <kbd><img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_dark.png" width="300"/></kbd>
 
+## Maintainers
+
+* André Fiedler ( [@SunboX](https://github.com/SunboX) )
+* Enrico Meinel ( [@altima](https://github.com/altima) )
+
 ## Credits
 
 The Nextcloud App relies on, or was inspired by, the following projects:
 
 * C# client library for ownCloud - https://github.com/bnoffer/owncloud-sharp
 * webDAVNet - http://webdavnet.codeplex.com/
-
-## Authors
-
-* André Fiedler ( [@SunboX](https://github.com/SunboX) )
-* Enrico Meinel ( [@altima](https://github.com/altima) )
