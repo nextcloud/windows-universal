@@ -10,6 +10,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
@@ -164,15 +165,22 @@ namespace NextcloudApp
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
+            PathInfo pathinfo = PathInfo.Deserialize(args.Arguments); //maybe user opens pinned folder
+
             if (
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) || 
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username) || 
+                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
+                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username) ||
                 string.IsNullOrEmpty(SettingsService.Instance.Settings.Password)
             )
             {
                 var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
                 //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
                 NavigationService.Navigate(PageTokens.Login.ToString(), null);
+            }
+            else if (pathinfo != null)
+            {
+                //open directory
+                NavigationService.Navigate(PageTokens.DirectoryList.ToString(), pathinfo.Serialize());
             }
             else
             {
@@ -181,7 +189,7 @@ namespace NextcloudApp
 
             // Ensure the current window is active
             Window.Current.Activate();
-            
+
             return Task.FromResult(true);
         }
 

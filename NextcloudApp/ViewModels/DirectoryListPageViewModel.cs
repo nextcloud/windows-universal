@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage.Pickers;
+using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using NextcloudApp.Models;
@@ -18,6 +21,7 @@ namespace NextcloudApp.ViewModels
     {
         private Settings _settngs;
         private DirectoryService _directoryService;
+        private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
@@ -37,12 +41,14 @@ namespace NextcloudApp.ViewModels
         public ICommand UploadPhotosCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
+        public ICommand PinResourceCommand { get; private set; }
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
+            _tileService = TileService.Instance;
             Settings = SettingsService.Instance.Settings;
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
@@ -85,13 +91,24 @@ namespace NextcloudApp.ViewModels
             UploadPhotosCommand = new DelegateCommand(UploadPhotos);
             DeleteResourceCommand = new RelayCommand(DeleteResource);
             RenameResourceCommand = new RelayCommand(RenameResource);
+            PinResourceCommand = new RelayCommand(PinResource);
         }
 
-        public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
+        public override async void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
+            if (e.Parameter != null)
+            {
+                var serialized = e.Parameter as string;
+                var pathInfo = PathInfo.Deserialize(serialized);
+                if (pathInfo != null)
+                {
+                    Directory.PathStack.Add(pathInfo);
+                    SelectedPathIndex = Directory.PathStack.Count - 1;
+                }
+            }
             _isNavigatingBack = false;
         }
 
@@ -114,7 +131,7 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            
+
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString(resourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
@@ -136,6 +153,29 @@ namespace NextcloudApp.ViewModels
             ShowProgressIndicator();
             await Directory.DeleteResource(resourceInfo);
             HideProgressIndicator();
+        }
+
+        private void PinResource(object parameter)
+        {
+            var resourceInfo = parameter as ResourceInfo;
+            if (resourceInfo == null || !resourceInfo.IsDirectory())
+            {
+                return;
+            }
+
+            var arguments = (new PathInfo() { ResourceInfo = resourceInfo }).Serialize();
+            var id = resourceInfo.Path.ToBase64();
+            var displayName = resourceInfo.Name;
+
+            if (!_tileService.IsTilePinned(id))
+            {
+                _tileService.CreateTile(
+                    id,
+                    displayName,
+                    arguments,
+                    new Uri("ms-appx:///Assets/Square150x150Logo.png"),
+                    TileSize.Square150x150);
+            }
         }
 
         private void UploadFiles()
@@ -160,7 +200,7 @@ namespace NextcloudApp.ViewModels
             };
             _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
         }
-        
+
         private async void CreateDirectory()
         {
             while (true)

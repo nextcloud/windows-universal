@@ -124,6 +124,7 @@
     <Compile Include="Services\DirectoryService.cs" />
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
+    <Compile Include="Services\TileService.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\SizeSorter.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
