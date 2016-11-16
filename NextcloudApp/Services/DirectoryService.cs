@@ -353,5 +353,33 @@ namespace NextcloudApp.Services
             }
             return true;
         }
+
+        public async Task<bool> Move(string oldPath, string newPath)
+        {
+            var client = ClientService.GetClient();
+            if (client == null)
+            {
+                return false;
+            }
+
+            var success = false;
+            try
+            {
+                success = await client.Move(oldPath, newPath);
+            }
+            catch (ResponseError e)
+            {
+                if (e.StatusCode != "400") // ProtocolError
+                {
+                    ResponseErrorHandlerService.HandleException(e);
+                }
+            }
+
+            if (success)
+            {
+                await StartDirectoryListing();
+            }
+            return success;
+        }
     }
 }

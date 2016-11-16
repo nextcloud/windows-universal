@@ -273,6 +273,11 @@
                 x:Uid="Rename_Label" 
                 Command="{Binding RenameResourceCommand}"/>
             <AppBarButton 
+                Icon="MoveToFolder" 
+                Label="Move to"
+                x:Uid="MoveTo_Label"
+                Command="{Binding MoveResourceCommand}"/>
+            <AppBarButton 
                 Icon="Delete" 
                 Label="Delete" 
                 x:Uid="Delete_Label" 

@@ -114,6 +114,7 @@
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
+    <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
+    <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
@@ -158,6 +160,9 @@
     <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoveFileOrFolder.xaml.cs">
+      <DependentUpon>MoveFileOrFolder.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SingleFileDownloadPage.xaml.cs">
       <DependentUpon>SingleFileDownloadPage.xaml</DependentUpon>
@@ -226,6 +231,10 @@
     <Page Include="Views\FileUploadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MoveFileOrFolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SingleFileDownloadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
