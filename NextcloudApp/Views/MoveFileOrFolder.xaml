@@ -8,7 +8,7 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:behaviors="using:NextcloudApp.Behaviors"
     xmlns:actions="using:NextcloudApp.Actions"
-    x:Class="NextcloudApp.Views.DirectoryListPage"
+    x:Class="NextcloudApp.Views.MoveFileOrFolderPage"
     x:Name="Page"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True"
@@ -34,6 +34,7 @@
             SelectionMode="Single"
             SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
             Margin="48,0,0,0">
+
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal"/>
@@ -96,14 +97,25 @@
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <SemanticZoom.ZoomedInView>
                 <ListView
-                    Name="FileOrFolderListView"
+                    x:Uid="ChooseFolderListView_Header"
+                    Name="ChooseFolderListView"
                     SelectedIndex="-1"
                     IsHoldingEnabled="True" 
                     ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
                     Padding="0,2,0,2"
-                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    ContinuumNavigationTransitionInfo.ExitElementContainer="True"
+                    Header="Choose folder">
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{ThemeResource SystemControlHighlightAccentBrush}">
+                                <TextBlock 
+                                    Text="{Binding}"
+                                    Padding="14,8,14,8"/>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
                     <ListView.Resources>
                         <Style x:Key="FileOrFolderHeaderItemStyle" TargetType="ListViewHeaderItem">
                             <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -235,44 +247,6 @@
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                                 </StackPanel>
-
-                                <interactivity:Interaction.Behaviors>
-                                    <core:EventTriggerBehavior EventName="Holding">
-                                        <actions:OpenMenuFlyoutAction />
-                                    </core:EventTriggerBehavior>
-                                </interactivity:Interaction.Behaviors>
-                                <FlyoutBase.AttachedFlyout>
-                                    <MenuFlyout>
-                                        <MenuFlyoutItem 
-                                            Tag="Rename"
-                                            x:Uid="Rename_Text"
-                                            Text="Rename"
-                                            Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <MenuFlyoutItem 
-                                            Tag="MoveToFolder"
-                                            x:Uid="MoveTo_Text"
-                                            Text="Move to"
-                                            Command="{Binding DataContext.MoveResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <MenuFlyoutItem 
-                                            Tag="Delete"
-                                            x:Uid="Delete_Text"
-                                            Text="Delete"
-                                            Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <!--
-                                        <MenuFlyoutItem 
-                                            x:Uid="Download"
-                                            Text="Download"
-                                            Command="{Binding DataContext.DownloadCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"/>
-                                        -->
-                                    </MenuFlyout>
-                                </FlyoutBase.AttachedFlyout>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -314,68 +288,8 @@
                 x:Uid="AppBarRefresh"
                 Command="{Binding RefreshCommand}"/>
             </CommandBar.SecondaryCommands>
-            <AppBarButton Icon="Sort" Label="Sort" x:Uid="AppBarSort">
-                <AppBarButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByNameASC" 
-                            Text="Name (A nach oben)"
-                            Command="{Binding GroupByNameAscendingCommand}"/>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByNameDESC" 
-                            Text="Name (Z nach oben)"
-                            Command="{Binding GroupByNameDescendingCommand}"/>
-                        <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByDateDESC" 
-                            Text="Datum (Neueste nach oben)"
-                            Command="{Binding GroupByDateDescendingCommand}"/>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByDateASC" 
-                            Text="Datum (Älteste nach oben)"
-                            Command="{Binding GroupByDateAscendingCommand}"/>
-                        <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_BySizeASC" 
-                            Text="Größe (Kleinste nach oben)"
-                            Command="{Binding GroupBySizeAscendingCommand}"/>
-                        <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_BySizeDESC" 
-                            Text="Größe (Größte nach oben)"
-                            Command="{Binding GroupBySizeDescendingCommand}"/>
-                    </MenuFlyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
-            <AppBarButton Icon="Add" Label="Add" x:Uid="AppBarAdd">
-                <AppBarButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem 
-                            Tag="NewFolder" 
-                            x:Uid="AppBarAdd_Flyout_CreateFolder" 
-                            Text="Create folder" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding CreateDirectoryCommand}"/>
-                        <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem 
-                            Tag="Add" 
-                            x:Uid="AppBarAdd_Flyout_UploadFiles" 
-                            Text="Upload files" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding UploadFilesCommand}" />
-                        <MenuFlyoutItem 
-                            Tag="Street" 
-                            x:Uid="AppBarAdd_Flyout_UploadPhotos" 
-                            Text="Upload photos" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding UploadPhotosCommand}" />
-                        <!--MenuFlyoutItem 
-                            Tag="Camera" 
-                            x:Uid="AppBarAdd_Flyout_TakePicture" 
-                            Text="Take picture" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}" /-->
-                    </MenuFlyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
+            <AppBarButton Icon="Accept" Label="Done" x:Uid="AppBarDone" Command="{Binding MoveToSelectedFolderCommand}"/>
+            <AppBarButton Icon="Clear" Label="Cancel" x:Uid="AppBarCancel" Command="{Binding CancelFolderSelectionCommand}"/>
         </CommandBar>
     </Grid>
 

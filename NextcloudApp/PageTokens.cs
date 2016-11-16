@@ -8,6 +8,7 @@
         Settings,
         SingleFileDownload,
         BulkFileDownload,
-        FileUpload
+        FileUpload,
+        MoveFileOrFolder
     }
 }
