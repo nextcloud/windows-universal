@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage.Pickers;
+using Windows.UI.Popups;
 using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -94,24 +96,40 @@ namespace NextcloudApp.ViewModels
             PinResourceCommand = new RelayCommand(PinResource);
         }
 
-        public override async void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
+        public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
+            _isNavigatingBack = false;
+
             if (e.Parameter != null)
             {
-                var serialized = e.Parameter as string;
-                var pathInfo = PathInfo.Deserialize(serialized);
-                if (pathInfo != null)
-                {
-                    Directory.PathStack.Add(pathInfo);
-                    SelectedPathIndex = Directory.PathStack.Count - 1;
-                }
+                var resourceInfo = ResourceInfo.Deserialize(e.Parameter as string);
+                OpenFolder(resourceInfo);
             }
-            _isNavigatingBack = false;
         }
 
+        private async void OpenFolder(ResourceInfo resourceInfo)
+        {
+            _navigationService.RemoveAllPages(PageTokens.DirectoryList.ToString());
+            ShowProgressIndicator();
+            try
+            {
+                if (!await Directory.TryOpenPath(resourceInfo))
+                {
+                    var dialog = new MessageDialog(_resourceLoader.GetString("Folder_NotFound"));
+                    await _dialogService.ShowAsync(dialog);
+                    App.Current.Exit();
+                }
+                SelectedPathIndex = Directory.PathStack.Count - 1;
+            }
+            finally
+            {
+                HideProgressIndicator();
+            }
+        }
+        
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             _isNavigatingBack = true;
@@ -152,30 +170,18 @@ namespace NextcloudApp.ViewModels
 
             ShowProgressIndicator();
             await Directory.DeleteResource(resourceInfo);
+            await _tileService.RemovePinnedObject(resourceInfo);
             HideProgressIndicator();
         }
 
         private void PinResource(object parameter)
         {
             var resourceInfo = parameter as ResourceInfo;
-            if (resourceInfo == null || !resourceInfo.IsDirectory())
+            if (resourceInfo == null)
             {
                 return;
             }
-
-            var arguments = (new PathInfo() { ResourceInfo = resourceInfo }).Serialize();
-            var id = resourceInfo.Path.ToBase64();
-            var displayName = resourceInfo.Name;
-
-            if (!_tileService.IsTilePinned(id))
-            {
-                _tileService.CreateTile(
-                    id,
-                    displayName,
-                    arguments,
-                    new Uri("ms-appx:///Assets/Square150x150Logo.png"),
-                    TileSize.Square150x150);
-            }
+            _tileService.CreatePinnedObject(resourceInfo);
         }
 
         private void UploadFiles()

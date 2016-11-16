@@ -3,13 +3,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.UI.StartScreen;
+using NextcloudApp.Models;
+using NextcloudApp.Utils;
+using NextcloudClient.Types;
 
 namespace NextcloudApp.Services
 {
     public class TileService
     {
         private static TileService _instance;
-        
+
         public TileService()
         {
 
@@ -22,20 +25,32 @@ namespace NextcloudApp.Services
             return SecondaryTile.Exists(id);
         }
 
-        public async void CreateTile(string id, string dispalyName, string arguments, Uri logo150, TileSize tileSize = TileSize.Default)
+        public async void CreatePinnedObject(ResourceInfo resourceInfo)
         {
-            var tile = new SecondaryTile(id, dispalyName, arguments, logo150, tileSize);
-            await tile.RequestCreateAsync();
+            var id = resourceInfo.Path.ToBase64();
+            if (!IsTilePinned(id))
+            {
+                var arguments = resourceInfo.Serialize();
+                var displayName = resourceInfo.Name;
+
+                var tile = new SecondaryTile(id, displayName, arguments, new Uri("ms-appx:///Assets/Square150x150Logo.png"), TileSize.Default);
+                tile.VisualElements.ShowNameOnSquare150x150Logo = true;
+
+                await tile.RequestCreateAsync();
+            }
         }
 
-        public async Task<IAsyncOperation<bool>> DeleteTile(string id)
+        public async Task RemovePinnedObject(ResourceInfo resourceInfo)
         {
-            var tile = (await GetAllPinnedTiles()).FirstOrDefault(t => t.TileId == id);
-            if (tile != null)
+            var id = resourceInfo.Path.ToBase64();
+            if (IsTilePinned(id))
             {
-                return tile.RequestDeleteAsync();
+                var tile = (await GetAllPinnedTiles()).FirstOrDefault(t => t.TileId == id);
+                if (tile != null)
+                {
+                    await tile.RequestDeleteAsync();
+                }
             }
-            return Task.FromResult(false).AsAsyncOperation();
         }
 
         public async Task<SecondaryTile[]> GetAllPinnedTiles()

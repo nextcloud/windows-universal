@@ -14,6 +14,7 @@ using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
+using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 
 namespace NextcloudApp
@@ -165,7 +166,7 @@ namespace NextcloudApp
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
-            PathInfo pathinfo = PathInfo.Deserialize(args.Arguments); //maybe user opens pinned folder
+            ResourceInfo resourceInfo = ResourceInfo.Deserialize(args.Arguments); //maybe user opens pinned folder
 
             if (
                 string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
@@ -177,14 +178,26 @@ namespace NextcloudApp
                 //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
                 NavigationService.Navigate(PageTokens.Login.ToString(), null);
             }
-            else if (pathinfo != null)
-            {
-                //open directory
-                NavigationService.Navigate(PageTokens.DirectoryList.ToString(), pathinfo.Serialize());
-            }
             else
             {
-                NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                if (resourceInfo != null)
+                {
+                    if (resourceInfo.IsDirectory())
+                    {
+                        //open directory
+                        NavigationService.Navigate(PageTokens.DirectoryList.ToString(), resourceInfo.Serialize());
+                    }
+                    else
+                    {
+                        //open file
+                        var arguments = (new FileInfoPageParameters { ResourceInfo = resourceInfo }).Serialize();
+                        NavigationService.Navigate(PageTokens.FileInfo.ToString(), arguments);
+                    }
+                }
+                else
+                {
+                    NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                }
             }
 
             // Ensure the current window is active

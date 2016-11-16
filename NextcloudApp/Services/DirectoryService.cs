@@ -318,5 +318,40 @@ namespace NextcloudApp.Services
             }
             return success;
         }
+
+        public async Task<bool> TryOpenPath(ResourceInfo resourceInfo)
+        {
+            var path = resourceInfo.Path;
+            if (!resourceInfo.IsDirectory())
+            {
+                path = path.Substring(0, path.LastIndexOf('/'));
+            }
+            var pathSteps = path.Split('/').Where(p => !p.IsNullOrEmpty());
+
+            StopDirectoryListing();
+
+            //go to root folder
+            while (PathStack.Count > 1)
+            {
+                PathStack.RemoveAt(PathStack.Count - 1);
+            }
+            //load root folder
+            await StartDirectoryListing();
+
+            //start searching direcotory
+            for (int i = 1; i <= pathSteps.Count(); i++)
+            {
+                var step = string.Join("/", pathSteps.Take(i));
+                var folder = FilesAndFolders.FirstOrDefault(fof => fof.Path == string.Format("/{0}/", step));
+                if (folder == null)
+                {
+                    //folder not found
+                    return false;
+                }
+                PathStack.Add(new PathInfo() { ResourceInfo = folder });
+                await StartDirectoryListing();
+            }
+            return true;
+        }
     }
 }

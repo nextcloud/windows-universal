@@ -347,4 +347,10 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Rename_Text.Text" xml:space="preserve">
     <value>Rename</value>
   </data>
+  <data name="Folder_NotFound" xml:space="preserve">
+    <value>Folder was not found, maybe it was deleted.</value>
+  </data>
+  <data name="Pin.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
 </root>

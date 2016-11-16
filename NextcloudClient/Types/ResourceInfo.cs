@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace NextcloudClient.Types
 {
@@ -90,6 +91,25 @@ namespace NextcloudClient.Types
 	    public bool IsDirectory()
 	    {
 	        return ContentType.Equals("dav/directory");
+	    }
+
+        /// <summary>
+        /// Serializes this instance.
+        /// </summary>
+        /// <returns></returns>
+        public string Serialize()
+	    {
+	        return JsonConvert.SerializeObject(this);
+	    }
+
+        /// <summary>
+        /// Deserializes the specified json.
+        /// </summary>
+        /// <param name="json">The json.</param>
+        /// <returns></returns>
+        public static ResourceInfo Deserialize(string json)
+	    {
+	        return JsonConvert.DeserializeObject<ResourceInfo>(json);
 	    }
 	}
 }
