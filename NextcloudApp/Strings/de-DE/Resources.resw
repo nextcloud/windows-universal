@@ -347,4 +347,19 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Rename_Text.Text" xml:space="preserve">
     <value>Umbenennen</value>
   </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Verschieben nach</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Verschieben nach</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Fertig</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Ordner auswählen</value>
+  </data>
 </root>

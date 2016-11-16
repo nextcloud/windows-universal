@@ -35,6 +35,7 @@ namespace NextcloudApp.ViewModels
         public ICommand DownloadCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
+        public ICommand MoveResourceCommand { get; private set; }
 
         public FileInfoPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -56,6 +57,7 @@ namespace NextcloudApp.ViewModels
             });
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);
+            MoveResourceCommand = new RelayCommand(MoveResource);
         }
         
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -299,6 +301,20 @@ namespace NextcloudApp.ViewModels
             {
                 _navigationService.GoBack();
             }
+        }
+
+        private void MoveResource(object obj)
+        {
+            if (ResourceInfo == null)
+            {
+                return;
+            }
+
+            var parameters = new MoveFileOrFolderPageParameters
+            {
+                ResourceInfo = ResourceInfo
+            };
+            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
     }
 }
