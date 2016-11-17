@@ -332,4 +332,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Delete_Label.Label" xml:space="preserve">
     <value>Löschen</value>
   </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Der Server mit der Adresse {0} konnte nicht erreicht werden.</value>
+  </data>
 </root>

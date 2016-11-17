@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Foundation.Metadata;
@@ -28,6 +27,7 @@ namespace NextcloudApp.ViewModels
         private bool _isLoading;
         private readonly DialogService _dialogService;
         private readonly IResourceLoader _resourceLoader;
+        private string _serverAddressGivenByUser;
 
         public string ServerAddress
         {
@@ -64,7 +64,7 @@ namespace NextcloudApp.ViewModels
             get { return _isLoading; }
             set { SetProperty(ref _isLoading, value); }
         }
-        
+
         public ICommand SaveSettingsCommand { get; private set; }
 
         public LoginPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
@@ -143,19 +143,101 @@ namespace NextcloudApp.ViewModels
         {
             IsLoading = true;
 
+            _serverAddressGivenByUser = ServerAddress + "";
+
+            var serverAddressIsValid = await CheckAndFixServerAddress();
+            if (!serverAddressIsValid)
+            {
+                IsLoading = false;
+                return;
+            }
+
             var serverIsUpAndRunning = await CheckServerStatus();
             var userLoginIsValid = await CheckUserLogin();
 
             IsLoading = false;
 
-            if (serverIsUpAndRunning && userLoginIsValid)
+            if (!serverIsUpAndRunning)
             {
-                SettingsService.Instance.Settings.ServerAddress = ServerAddress;
-                SettingsService.Instance.Settings.Username = Username;
-                SettingsService.Instance.Settings.Password = Password;
-
-                _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                return;
             }
+
+            if (!userLoginIsValid)
+            {
+                var dialog = new ContentDialog
+                {
+                    Title = _resourceLoader.GetString("AnErrorHasOccurred"),
+                    Content = new TextBlock
+                    {
+                        Text = _resourceLoader.GetString("Auth_Unauthorized"),
+                        TextWrapping = TextWrapping.WrapWholeWords,
+                        Margin = new Thickness(0, 20, 0, 0)
+                    },
+                    PrimaryButtonText = _resourceLoader.GetString("OK")
+                };
+                await _dialogService.ShowAsync(dialog);
+                return;
+            }
+
+            SettingsService.Instance.Settings.ServerAddress = ServerAddress;
+            SettingsService.Instance.Settings.Username = Username;
+            SettingsService.Instance.Settings.Password = Password;
+
+            _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+        }
+
+        private async Task<bool> CheckAndFixServerAddress()
+        {
+            if (!ServerAddress.StartsWith("http"))
+            {
+                ServerAddress = string.Format("http://{0}", ServerAddress);
+            }
+
+            try
+            {
+                var response = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
+                if (response == null)
+                {
+                    ServerAddress = ServerAddress.Replace("http:", "https:");
+                }
+            }
+            catch
+            {
+                await ShowServerAddressNotFoundMessage();
+                return false;
+            }
+
+            try
+            {
+                var response = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
+                if (response == null)
+                {
+                    await ShowServerAddressNotFoundMessage();
+                    return false;
+                }
+            }
+            catch
+            {
+                await ShowServerAddressNotFoundMessage();
+                return false;
+            }
+            return true;
+        }
+
+        private async Task ShowServerAddressNotFoundMessage()
+        {
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("AnErrorHasOccurred"),
+                Content = new TextBlock
+                {
+                    Text = string.Format(_resourceLoader.GetString("ServerWithGivenAddressIsNotReachable"), _serverAddressGivenByUser),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("OK")
+            };
+            await _dialogService.ShowAsync(dialog);
         }
 
         private async Task<bool> CheckServerStatus()
@@ -165,18 +247,7 @@ namespace NextcloudApp.ViewModels
                 var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
                 if (status == null)
                 {
-                    var dialog = new ContentDialog
-                    {
-                        Title = _resourceLoader.GetString("AnErrorHasOccurred"),
-                        Content = new TextBlock
-                        {
-                            Text = _resourceLoader.GetString("ServerNameOrAddressCouldNotBeResolved"),
-                            TextWrapping = TextWrapping.WrapWholeWords,
-                            Margin = new Thickness(0, 20, 0, 0)
-                        },
-                        PrimaryButtonText = _resourceLoader.GetString("OK")
-                    };
-                    await _dialogService.ShowAsync(dialog);
+                    await ShowServerAddressNotFoundMessage();
                     return false;
                 }
                 if (!status.Installed)

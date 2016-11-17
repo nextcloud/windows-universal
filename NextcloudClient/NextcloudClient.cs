@@ -336,7 +336,11 @@ namespace NextcloudClient
 
             var url = new Uri(new Uri(serverUrl), "status.php");
 
-            var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+            var client = new HttpClient(new HttpBaseProtocolFilter
+            {
+                AllowUI = false,
+                AllowAutoRedirect = false
+            });
 
             client.DefaultRequestHeaders["Pragma"] = "no-cache";
             var response = await client.GetAsync(url);
