@@ -264,13 +264,13 @@
                                             Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <!--
                                         <MenuFlyoutItem 
+                                            Tag="Download"
                                             x:Uid="Download"
                                             Text="Download"
-                                            Command="{Binding DataContext.DownloadCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"/>
-                                        -->
+                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>
