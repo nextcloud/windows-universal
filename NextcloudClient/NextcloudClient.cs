@@ -1571,10 +1571,11 @@ namespace NextcloudClient
         private Uri GetDavUriZip(string path)
         {
             string[] pathArry = path.Split('/');
-            String files = pathArry[pathArry.Length - 2 ];
-            path = path.Replace(files + "/", "");
-            path = Uri.EscapeDataString(path);
-            return new Uri(_url + "/index.php/apps/files/ajax/download.php?dir=" + path + "&files=" + files);
+            string files = pathArry[pathArry.Length - 2 ];
+            path = path.Substring(0, path.Length - (files.Length + 1) );
+            return new Uri(_url + "/index.php/apps/files/ajax/download.php?dir=" + 
+                Uri.EscapeDataString(path) + 
+                "&files=" + Uri.EscapeDataString(files));
         }
 
         /// <summary>
