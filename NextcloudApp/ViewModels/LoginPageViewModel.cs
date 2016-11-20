@@ -190,7 +190,7 @@ namespace NextcloudApp.ViewModels
         {
             if (!ServerAddress.StartsWith("http"))
             {
-                ServerAddress = string.Format("http://{0}", ServerAddress);
+                ServerAddress = string.Format("https://{0}", ServerAddress);
             }
 
             try
@@ -198,7 +198,7 @@ namespace NextcloudApp.ViewModels
                 var response = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
                 if (response == null)
                 {
-                    ServerAddress = ServerAddress.Replace("http:", "https:");
+                    ServerAddress = ServerAddress.Replace("https:", "http:");
                 }
             }
             catch
