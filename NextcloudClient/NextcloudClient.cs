@@ -1573,9 +1573,18 @@ namespace NextcloudClient
             string[] pathArry = path.Split('/');
             string files = pathArry[pathArry.Length - 2 ];
             path = path.Substring(0, path.Length - (files.Length + 1) );
-            return new Uri(_url + "/index.php/apps/files/ajax/download.php?dir=" + 
-                Uri.EscapeDataString(path) + 
-                "&files=" + Uri.EscapeDataString(files));
+
+            var url = new UrlBuilder(_url + "/index.php/apps/files/ajax/download.php");
+            var parameters = new Dictionary<string, string>
+            {
+                {"dir", path},
+                {"files", files}
+            };
+            foreach (var parameter in parameters)
+            {
+                url.AddQueryParameter(parameter.Key, parameter.Value);
+            }
+            return url.ToUri();
         }
 
         /// <summary>
