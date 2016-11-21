@@ -300,19 +300,14 @@ namespace NextcloudClient
         /// <summary>
         ///     Downloads a remote directory as zip.
         /// </summary>
-        /// <returns>The directory as zip.</returns>
-        /// <param name="path">path to the remote directory to download.</param>
-        public async Task<Stream> DownloadDirectoryAsZip(string path)
+        /// <param name="path">File remote Path.</param>
+        /// <param name="cts"></param>
+        /// <param name="progress"></param>
+        /// <returns>File contents.</returns>
+        //public async Task<IBuffer> Download(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
+        public async Task<IBuffer> DownloadDirectoryAsZip(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
         {
-            var response = await DoRequest(
-                "GET",
-                "/index.php/apps/files/ajax/download.php",
-                new Dictionary<string, string>
-                {
-                    {"dir", path}
-                }
-                );
-            return (await response.Content.ReadAsInputStreamAsync()).AsStreamForRead();
+            return await _dav.DownloadFile(GetDavUriZip(path), cts, progress);
         }
 
         #endregion
@@ -1566,6 +1561,21 @@ namespace NextcloudClient
         private Uri GetDavUri(string path)
         {
             return new Uri(_url + "/" + Davpath + Uri.EscapeDataString(path).Replace("%2F", "/"));
+        }
+
+        /// <summary>
+        ///     Gets the DAV request URI.
+        /// </summary>
+        /// <returns>The DAV URI.</returns>
+        /// <param name="path">remote Path.</param>
+        private Uri GetDavUriZip(string path)
+        {
+            string[] pathArry = path.Split('/');
+            string files = pathArry[pathArry.Length - 2 ];
+            path = path.Substring(0, path.Length - (files.Length + 1) );
+            return new Uri(_url + "/index.php/apps/files/ajax/download.php?dir=" + 
+                Uri.EscapeDataString(path) + 
+                "&files=" + Uri.EscapeDataString(files));
         }
 
         /// <summary>
