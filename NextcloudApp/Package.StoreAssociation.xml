@@ -361,6 +361,7 @@
     <MainPackageIdentityName>36131AndrFiedler.NextcloudApp</MainPackageIdentityName>
     <ReservedNames>
       <ReservedName>Nextcloud App</ReservedName>
+      <ReservedName>Nextcloud</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames />
