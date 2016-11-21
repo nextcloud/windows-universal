@@ -1,2 +1,2 @@
-MainPackage=D:\00_Work\99_AFiedler\NextcloudApp\NextcloudApp\bin\x86\Release\Upload\NextcloudApp_1.0.2.0_x86.appx
-SymbolPackage=D:\00_Work\99_AFiedler\NextcloudApp\NextcloudApp\AppPackages\NextcloudApp_1.0.2.0\NextcloudApp_1.0.2.0_x86.appxsym
+MainPackage=D:\00_Work\99_AFiedler\windows-universal\NextcloudApp\bin\x86\Release\Upload\NextcloudApp_1.0.3.0_x86.appx
+SymbolPackage=D:\00_Work\99_AFiedler\windows-universal\NextcloudApp\AppPackages\NextcloudApp_1.0.3.0\NextcloudApp_1.0.3.0_x86.appxsym

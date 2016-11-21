@@ -1,3 +1,3 @@
-MainPackage=D:\00_Work\99_AFiedler\NextcloudApp\NextcloudApp\bin\ARM\Release\NextcloudApp_1.0.2.0_ARM.appx
-SymbolPackage=D:\00_Work\99_AFiedler\NextcloudApp\NextcloudApp\AppPackages\NextcloudApp_1.0.2.0_Test\NextcloudApp_1.0.2.0_ARM.appxsym
-ResourcePack=D:\00_Work\99_AFiedler\NextcloudApp\NextcloudApp\bin\ARM\Release\NextcloudApp_1.0.2.0_language-de.appx
+MainPackage=D:\00_Work\99_AFiedler\windows-universal\NextcloudApp\bin\ARM\Release\NextcloudApp_1.0.3.0_ARM.appx
+SymbolPackage=D:\00_Work\99_AFiedler\windows-universal\NextcloudApp\AppPackages\NextcloudApp_1.0.3.0_Test\NextcloudApp_1.0.3.0_ARM.appxsym
+ResourcePack=D:\00_Work\99_AFiedler\windows-universal\NextcloudApp\bin\ARM\Release\NextcloudApp_1.0.3.0_language-de.appx
