@@ -28,10 +28,10 @@ Please report all issues over here: https://github.com/nextcloud/windows-univers
 ## Translation / Localization
 
 Do you want the Nextcloud app in your native language? 
-Help translating the app on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/nextcloud_app/)
+Help translating the app on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/)
 
 We kindly ask you to only change the English strings within the repository.
-All other languages should be translated on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/nextcloud_app/). 
+All other languages should be translated on [Transifex](https://www.transifex.com/nextcloud-app-uwp/nextcloud-app-uwp/). 
 We will merge the translation into the project from time to time.
 
 ## Screenshots
