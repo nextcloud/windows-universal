@@ -362,4 +362,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Ordner auswählen</value>
   </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Herunterladen als ZIP Datei</value>
+  </data>
 </root>
