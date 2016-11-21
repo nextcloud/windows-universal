@@ -270,7 +270,16 @@
                                             Text="Download as ZIP file"
                                             Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Download"
+                                            x:Uid="Download"
+                                            Text="Download"
+                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>

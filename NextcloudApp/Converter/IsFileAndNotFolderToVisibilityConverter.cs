@@ -9,7 +9,12 @@ namespace NextcloudApp.Converter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            var invert = parameter != null;
             var item = (ResourceInfo)value;
+            if (invert)
+            {
+                return item.ContentType.Equals("dav/directory") ? Visibility.Visible : Visibility.Collapsed;
+            }
             return item.ContentType.Equals("dav/directory") ? Visibility.Collapsed : Visibility.Visible;
         }
 
