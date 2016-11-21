@@ -266,7 +266,7 @@
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                         <MenuFlyoutItem 
                                             Tag="Download"
-                                            x:Uid="Download"
+                                            x:Uid="Download_Text"
                                             Text="Download"
                                             Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
