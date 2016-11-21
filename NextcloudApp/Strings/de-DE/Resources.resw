@@ -365,4 +365,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Herunterladen als ZIP Datei</value>
   </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Herunterladen</value>
+  </data>
 </root>
