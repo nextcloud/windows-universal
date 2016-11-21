@@ -21,7 +21,8 @@
             <ProgressBar 
                 Minimum="0"
                 Value="{Binding PercentageDownloaded}"
-                Maximum="100"/>
+                Maximum="100"
+                IsIndeterminate="{Binding IsIndeterminate}"/>
             <TextBlock 
                 Text="{Binding DownloadingFileProgressText}"
                 HorizontalAlignment="Right"

@@ -32,6 +32,7 @@ namespace NextcloudApp.ViewModels
         private ResourceInfo _resourceInfo;
         private string _downloadingFileProgressText;
         private StorageFile _currentFile;
+        private bool _isIndeterminate;
 
         public SingleFileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
         {
@@ -146,6 +147,12 @@ namespace NextcloudApp.ViewModels
                 BytesDownloaded = (int)progressInfo.BytesReceived;
             });
         }
+        
+        public bool IsIndeterminate
+        {
+            get { return _isIndeterminate; }
+            private set { SetProperty(ref _isIndeterminate, value); }
+        }
 
         public int PercentageDownloaded
         {
@@ -191,15 +198,24 @@ namespace NextcloudApp.ViewModels
 
         private void Update()
         {
+            if (BytesTotal == 0)
+            {
+                IsIndeterminate = true;
+                DownloadingFileProgressText = string.Format(
+                    _resourceLoader.GetString("DownloadingFileProgressIndeterminate"),
+                    _converter.Convert((long)BytesDownloaded, typeof(string), null, CultureInfo.CurrentCulture.ToString())
+                );
+                return;
+            }
+
             var percentage = (double)BytesDownloaded / BytesTotal;
             PercentageDownloaded = (int)(percentage * 100);
 
+            IsIndeterminate = false;
             DownloadingFileProgressText = string.Format(
-            _resourceLoader.GetString("DownloadingFileProgress"),
-            _converter.Convert((long)BytesDownloaded, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString()),
-            _converter.Convert(BytesTotal, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString())
+                _resourceLoader.GetString("DownloadingFileProgress"),
+                _converter.Convert((long)BytesDownloaded, typeof(string), null, CultureInfo.CurrentCulture.ToString()),
+                _converter.Convert(BytesTotal, typeof(string), null, CultureInfo.CurrentCulture.ToString())
             );
         }
     }
