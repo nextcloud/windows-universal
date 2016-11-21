@@ -1565,7 +1565,7 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         private Uri GetDavUri(string path)
         {
-            return new Uri(_url + "/" + Davpath + path);
+            return new Uri(_url + "/" + Davpath + Uri.EscapeDataString(path).Replace("%2F", "/"));
         }
 
         /// <summary>
