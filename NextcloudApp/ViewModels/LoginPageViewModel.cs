@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Foundation.Metadata;
+using Windows.Security.Credentials;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -181,7 +182,9 @@ namespace NextcloudApp.ViewModels
 
             SettingsService.Instance.Settings.ServerAddress = ServerAddress;
             SettingsService.Instance.Settings.Username = Username;
-            SettingsService.Instance.Settings.Password = Password;
+            
+            var vault = new PasswordVault();
+            vault.Add(new PasswordCredential(ServerAddress, Username, Password));
 
             _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
         }

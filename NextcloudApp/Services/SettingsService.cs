@@ -36,7 +36,6 @@ namespace NextcloudApp.Services
             }
             Settings.ServerAddress = (string)_localSettings.Values["ServerAddress"];
             Settings.Username = (string)_localSettings.Values["Username"];
-            Settings.Password = (string)_localSettings.Values["Password"]; // there's no SecureString by now :(
             var showFileAndFolderGroupingHeader = _localSettings.Values["ShowFileAndFolderGroupingHeader"];
             if (showFileAndFolderGroupingHeader == null)
             {

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Windows.Security.Credentials;
 
 namespace NextcloudApp.Services
 {
-    public class ClientService
+    public static class ClientService
     {
         private static NextcloudClient.NextcloudClient _client;
 
@@ -18,30 +14,49 @@ namespace NextcloudApp.Services
             }
 
             if (!string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) &&
-                !string.IsNullOrEmpty(SettingsService.Instance.Settings.Username) &&
-                !string.IsNullOrEmpty(SettingsService.Instance.Settings.Password))
+                !string.IsNullOrEmpty(SettingsService.Instance.Settings.Username))
             {
-                _client = new NextcloudClient.NextcloudClient(
+                var vault = new PasswordVault();
+                var credentials = vault.Retrieve(
                     SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username,
-                    SettingsService.Instance.Settings.Password
-                    );
+                    SettingsService.Instance.Settings.Username
+                );
+
+                if (credentials != null)
+                {
+                    _client = new NextcloudClient.NextcloudClient(
+                        credentials.Resource,
+                        credentials.UserName,
+                        credentials.Password
+                        );
+                }
             }
 
             SettingsService.Instance.Settings.PropertyChanged += (sender, args) =>
             {
                 if (
                     string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
-                    string.IsNullOrEmpty(SettingsService.Instance.Settings.Username) ||
-                    string.IsNullOrEmpty(SettingsService.Instance.Settings.Password)
+                    string.IsNullOrEmpty(SettingsService.Instance.Settings.Username)
                     )
                 {
                     return;
                 }
-                _client = new NextcloudClient.NextcloudClient(
+
+                var vault = new PasswordVault();
+                var credentials = vault.Retrieve(
                     SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username,
-                    SettingsService.Instance.Settings.Password
+                    SettingsService.Instance.Settings.Username
+                );
+
+                if (credentials == null)
+                {
+                    return;
+                }
+
+                _client = new NextcloudClient.NextcloudClient(
+                    credentials.Resource,
+                    credentials.UserName,
+                    credentials.Password
                     );
             };
 
