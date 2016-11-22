@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Microsoft.Practices.Unity;
@@ -8,6 +7,7 @@ using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
+using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using NextcloudApp.Services;
@@ -159,24 +159,38 @@ namespace NextcloudApp
                 SettingsService.Instance.Settings.AppRunsAfterLastUpdate = 1;
             }
 
+            MigrationService.Instance.StartMigration();
+
             return task;
         }
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
             if (
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) || 
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username) || 
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.Password)
+                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
+                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username)
             )
             {
-                var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
+                //var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
                 //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
                 NavigationService.Navigate(PageTokens.Login.ToString(), null);
             }
             else
             {
-                NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                var vault = new PasswordVault();
+                var credentials = vault.Retrieve(
+                    SettingsService.Instance.Settings.ServerAddress,
+                    SettingsService.Instance.Settings.Username
+                );
+
+                if (!string.IsNullOrEmpty(credentials?.Password))
+                {
+                    NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                }
+                else
+                {
+                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                }
             }
 
             // Ensure the current window is active

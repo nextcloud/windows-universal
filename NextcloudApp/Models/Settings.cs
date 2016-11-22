@@ -9,7 +9,6 @@ namespace NextcloudApp.Models
     {
         private string _serverAddress;
         private string _username;
-        private string _password;
         private bool _showFileAndFolderGroupingHeader = true;
         private PreviewImageDownloadMode _previewImageDownloadMode = PreviewImageDownloadMode.Always;
         private int _appTotalRuns;
@@ -48,24 +47,6 @@ namespace NextcloudApp.Models
                     return;
                 }
                 _username = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string Password
-        {
-            get { return _password; }
-            set
-            {
-                if (value == null)
-                {
-                    value = "";
-                }
-                if (_password == value)
-                {
-                    return;
-                }
-                _password = value;
                 OnPropertyChanged();
             }
         }

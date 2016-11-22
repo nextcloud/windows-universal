@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Windows.ApplicationModel;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Windows.Security.Credentials;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
 using Prism.Commands;
 using Prism.Windows.Navigation;
-using Windows.UI.Xaml.Data;
 using NextcloudApp.Utils;
 using Prism.Windows.AppModel;
 
@@ -126,6 +123,13 @@ namespace NextcloudApp.ViewModels
 
         private void Reset()
         {
+            var vault = new PasswordVault();
+            var credentialList = vault.FindAllByResource(SettingsService.Instance.Settings.ServerAddress);
+            foreach (var credential in credentialList)
+            {
+                vault.Remove(credential);
+            }
+
             SettingsService.Instance.Reset();
 
             _navigationService.Navigate(PageTokens.Login.ToString(), null);
