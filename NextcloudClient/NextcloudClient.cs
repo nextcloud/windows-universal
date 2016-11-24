@@ -210,8 +210,8 @@ namespace NextcloudClient
             }
 
             var uri = new Uri(_url + "/index.php/apps/files/api/v1/thumbnail/" + width + "/" + height +
-                              (string.IsNullOrEmpty(file.Path) ? "/" : file.Path + "/") + file.Name);
-
+                            (string.IsNullOrEmpty(file.Path) ? "/" : Uri.EscapeDataString(file.Path).Replace("%2F", "/") + "/") +
+                            file.Name);
             //See: https://github.com/nextcloud/android/pull/37/files#diff-05dcd4530a2e437ac9592620ca97647eR288
             _client.DefaultRequestHeaders["Cookie"] = "nc_sameSiteCookielax=true;nc_sameSiteCookiestrict=true";
 
