@@ -13,7 +13,8 @@ using Windows.Web.Http.Filters;
 using Newtonsoft.Json;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
-using WebDavClient;
+using DecaTec.WebDav;
+using Windows.Security.Credentials;
 
 namespace NextcloudClient
 {
@@ -27,7 +28,7 @@ namespace NextcloudClient
         /// <summary>
         ///     WebDavNet instance.
         /// </summary>
-        private readonly WebDavClient.WebDavClient _dav;
+        private readonly WebDavSession _dav;
 
         /// <summary>
         ///     ownCloud Base URL.
@@ -93,11 +94,8 @@ namespace NextcloudClient
                     Encoding.GetEncoding("ISO-8859-1").GetBytes(userId + ":" + password));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
 
-            var credentials = new WebDavCredential(userId, password)
-            {
-                AuthenticationType = AuthType.Basic
-            };
-            _dav = new WebDavClient.WebDavClient(credentials);
+            var credentials = new PasswordCredential(_url, userId, password);
+            _dav = new WebDavSession(_url, credentials);
         }
 
         #endregion
@@ -112,28 +110,23 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var result = await _dav.List(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path));
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
             foreach (var item in result)
             {
-                if (item == result[0]) // Skip the first element, since it is always the root
-                {
-                    continue;
-                }
-                
                 var res = new ResourceInfo
                 {
-                    ContentType = item.IsDirectory ? "dav/directory" : item.ContentType,
-                    Created = item.Created,
-                    ETag = item.Etag,
-                    LastModified = item.Modified,
+                    ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
+                    Created = item.CreationDate,
+                    ETag = item.ETag,
+                    LastModified = item.LastModified,
                     Name = System.Net.WebUtility.UrlDecode(item.Name),
-                    QuotaAvailable = item.QutoaAvailable,
-                    QuotaUsed = item.QuotaUsed,
-                    Size = item.Size,
+                    QuotaAvailable = item.QuotaAvailableBytes,
+                    QuotaUsed = item.QuotaUsedBytes,
+                    Size = item.ContentLength,
                     Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, ""))
                 };
                 if (!res.ContentType.Equals("dav/directory"))
@@ -157,7 +150,7 @@ namespace NextcloudClient
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
             
-            var result = await _dav.List(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path));
 
             if (result.Count <= 0)
             {
@@ -166,14 +159,14 @@ namespace NextcloudClient
             var item = result[0];
             var res = new ResourceInfo
             {
-                ContentType = item.IsDirectory ? "dav/directory" : item.ContentType,
-                Created = item.Created,
-                ETag = item.Etag,
-                LastModified = item.Modified,
+                ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
+                Created = item.CreationDate,
+                ETag = item.ETag,
+                LastModified = item.LastModified,
                 Name = System.Net.WebUtility.UrlDecode(item.Name),
-                QuotaAvailable = item.QutoaAvailable,
-                QuotaUsed = item.QuotaUsed,
-                Size = item.Size,
+                QuotaAvailable = item.QuotaAvailableBytes,
+                QuotaUsed = item.QuotaUsedBytes,
+                Size = item.ContentLength,
                 Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
             };
             if (!res.ContentType.Equals("dav/directory"))
@@ -193,7 +186,7 @@ namespace NextcloudClient
         /// <returns>File contents.</returns>
         public async Task<IBuffer> Download(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
         {
-            return await _dav.DownloadFile(GetDavUri(path), cts, progress);
+            return await _dav.DownloadFileAsync(GetDavUri(path), cts, progress);
         }
 
         /// <summary>
@@ -239,10 +232,10 @@ namespace NextcloudClient
         /// <param name="cts"></param>
         /// <param name="progress"></param>
         /// <returns><c>true</c>, if upload successful, <c>false</c> otherwise.</returns>
-        public async Task<HttpResponseMessage> Upload(string path, IRandomAccessStream stream, string contentType,
+        public async Task<bool> Upload(string path, IRandomAccessStream stream, string contentType,
             CancellationTokenSource cts, IProgress<HttpProgress> progress)
         {
-            return await _dav.UploadFile(GetDavUri(path), stream, contentType, cts, progress);
+            return await _dav.UploadFileAsync(GetDavUri(path), stream, contentType, cts, progress);
         }
 
         /// <summary>
@@ -252,7 +245,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if remote path exists, <c>false</c> otherwise.</returns>
         public async Task<bool> Exists(string path)
         {
-            return await _dav.Exists(GetDavUri(path));
+            return await _dav.ExistsAsync(GetDavUri(path));
         }
 
         /// <summary>
@@ -262,7 +255,7 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         public async Task<bool> CreateDirectory(string path)
         {
-            return await _dav.CreateDirectory(GetDavUri(path));
+            return await _dav.CreateDirectoryAsync(GetDavUri(path));
         }
 
         /// <summary>
@@ -272,7 +265,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was deleted, <c>false</c> otherwise.</returns>
         public async Task<bool> Delete(string path)
         {
-            return await _dav.Delete(GetDavUri(path));
+            return await _dav.DeleteAsync(GetDavUri(path));
         }
 
         /// <summary>
@@ -283,7 +276,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was copied, <c>false</c> otherwise.</returns>
         public async Task<bool> Copy(string source, string destination)
         {
-            return await _dav.Copy(GetDavUri(source), GetDavUri(destination));
+            return await _dav.CopyAsync(GetDavUri(source), GetDavUri(destination));
         }
 
         /// <summary>
@@ -294,7 +287,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was moved, <c>false</c> otherwise.</returns>
         public async Task<bool> Move(string source, string destination)
         {
-            return await _dav.Move(GetDavUri(source), GetDavUri(destination));
+            return await _dav.MoveAsync(GetDavUri(source), GetDavUri(destination));
         }
 
         /// <summary>
@@ -307,7 +300,7 @@ namespace NextcloudClient
         //public async Task<IBuffer> Download(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
         public async Task<IBuffer> DownloadDirectoryAsZip(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
         {
-            return await _dav.DownloadFile(GetDavUriZip(path), cts, progress);
+            return await _dav.DownloadFileAsync(GetDavUriZip(path), cts, progress);
         }
 
         #endregion

@@ -265,10 +265,6 @@
       <Project>{E2015378-CEFF-4913-A4A6-48706F2625D4}</Project>
       <Name>NextcloudClient</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebDavClient\WebDavClient\WebDavClient.csproj">
-      <Project>{4AD0BDDE-D9AF-49F8-912C-4B6970CBE1BA}</Project>
-      <Name>WebDavClient</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
