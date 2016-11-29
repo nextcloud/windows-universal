@@ -229,8 +229,7 @@
                                     <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
-                                        Margin="0,0,8,0"
-                                        Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
+                                        Margin="0,0,8,0"/>
                                     <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
@@ -238,6 +237,9 @@
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Holding">
+                                    <actions:OpenMenuFlyoutAction />
+                                    </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="RightTapped">
                                         <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>

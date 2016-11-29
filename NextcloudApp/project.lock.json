@@ -289,7 +289,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -2359,7 +2359,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -4562,7 +4562,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -6806,7 +6806,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -9018,7 +9018,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -11267,7 +11267,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -13479,7 +13479,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.5.0": {
+      "PortableWebDavLibrary/0.5.1": {
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         },
@@ -15832,12 +15832,12 @@
         "tools/install.ps1"
       ]
     },
-    "PortableWebDavLibrary/0.5.0": {
-      "sha512": "P0xIGlwbR0GiLTgwC6CXpWbOZ6C6qgWvndm10PPYHoHze2R5ThRTjCCv6qmp3Z8G8o+JAx9Fsjc7RMsma2P0VQ==",
+    "PortableWebDavLibrary/0.5.1": {
+      "sha512": "WzEFvwrtqTMB0GFacjjbhwnPgyTzrsOLNTb7G9ms/Q+Ih6HpiUIL1d+BxqAaQN1pxfMegFoGXKRlILee7v1BMg==",
       "type": "package",
-      "path": "PortableWebDavLibrary/0.5.0",
+      "path": "PortableWebDavLibrary/0.5.1",
       "files": [
-        "PortableWebDavLibrary.0.5.0.nupkg.sha512",
+        "PortableWebDavLibrary.0.5.1.nupkg.sha512",
         "PortableWebDavLibrary.nuspec",
         "lib/DecaTec.WebDav.NetFx.dll",
         "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll"
