@@ -59,10 +59,4 @@
   <ItemGroup>
     <None Include="project.json" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WebDavClient\WebDavClient\WebDavClient.csproj">
-      <Project>{4AD0BDDE-D9AF-49F8-912C-4B6970CBE1BA}</Project>
-      <Name>WebDavClient</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
