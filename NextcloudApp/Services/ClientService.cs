@@ -17,10 +17,18 @@ namespace NextcloudApp.Services
                 !string.IsNullOrEmpty(SettingsService.Instance.Settings.Username))
             {
                 var vault = new PasswordVault();
-                var credentials = vault.Retrieve(
-                    SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username
-                );
+                PasswordCredential credentials = null;
+
+                try
+                {
+                    credentials = vault.Retrieve(
+                        SettingsService.Instance.Settings.ServerAddress,
+                        SettingsService.Instance.Settings.Username
+                    );
+                }
+                catch
+                {
+                }
 
                 if (credentials != null)
                 {
@@ -43,10 +51,18 @@ namespace NextcloudApp.Services
                 }
 
                 var vault = new PasswordVault();
-                var credentials = vault.Retrieve(
-                    SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username
-                );
+                PasswordCredential credentials = null;
+
+                try
+                {
+                    credentials = vault.Retrieve(
+                        SettingsService.Instance.Settings.ServerAddress,
+                        SettingsService.Instance.Settings.Username
+                    );
+                }
+                catch
+                {
+                }
 
                 if (credentials == null)
                 {

@@ -872,7 +872,7 @@ namespace NextcloudClient
         /// <returns>The user attributes.</returns>
         /// <param name="username">Username.</param>
         public async Task<User> GetUserAttributes(string username)
-        {
+        {            
             var response = await DoApiRequest(
                 "GET",
                 "/" + GetOcsPath(OcsServiceCloud, "users") + "/" + username

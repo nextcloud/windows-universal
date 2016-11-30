@@ -178,10 +178,18 @@ namespace NextcloudApp
             else
             {
                 var vault = new PasswordVault();
-                var credentials = vault.Retrieve(
-                    SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username
-                );
+                PasswordCredential credentials = null;
+
+                try
+                {
+                    credentials = vault.Retrieve(
+                        SettingsService.Instance.Settings.ServerAddress,
+                        SettingsService.Instance.Settings.Username
+                    );
+                }
+                catch
+                {
+                }
 
                 if (!string.IsNullOrEmpty(credentials?.Password))
                 {

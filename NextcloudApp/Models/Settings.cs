@@ -1,134 +1,118 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using NextcloudApp.Annotations;
+﻿using Newtonsoft.Json;
 using NextcloudApp.Utils;
+using Windows.Storage;
 
 namespace NextcloudApp.Models
 {
-    public class Settings : INotifyPropertyChanged
+    public class Settings : ObservableSettings
     {
-        private string _serverAddress;
-        private string _username;
-        private bool _showFileAndFolderGroupingHeader = true;
-        private PreviewImageDownloadMode _previewImageDownloadMode = PreviewImageDownloadMode.Always;
-        private int _appTotalRuns;
-        private string _appRunsAfterLastUpdateVersion;
-        private int _appRunsAfterLastUpdate;
+        private static Settings settings = new Settings();
+        private const string DefaultValueEmptyString = "";
 
+        public static Settings Default
+        {
+            get
+            {
+                return settings;
+            }
+        }
+
+        public Settings()
+            : base(ApplicationData.Current.LocalSettings)
+        {
+        }
+
+        [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string ServerAddress
         {
-            get { return _serverAddress; }
+            get
+            {
+                return Get<string>();
+            }
             set
             {
-                if (value == null)
-                {
-                    value = "";
-                }
-                if (_serverAddress == value)
-                {
-                    return;
-                }
-                _serverAddress = value;
-                OnPropertyChanged();
+                Set(value);
             }
         }
 
+        [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string Username
         {
-            get { return _username; }
+            get
+            {
+                return Get<string>();
+            }
             set
             {
-                if (value == null)
-                {
-                    value = "";
-                }
-                if (_username == value)
-                {
-                    return;
-                }
-                _username = value;
-                OnPropertyChanged();
+                Set(value);
             }
         }
 
+        [DefaultSettingValue(Value = true)]
         public bool ShowFileAndFolderGroupingHeader
         {
-            get { return _showFileAndFolderGroupingHeader; }
+            get
+            {
+                return Get<bool>();
+            }
             set
             {
-                if (_showFileAndFolderGroupingHeader == value)
-                {
-                    return;
-                }
-                _showFileAndFolderGroupingHeader = value;
-                OnPropertyChanged();
+                Set(value);
             }
         }
 
+        [DefaultSettingValue(Value = PreviewImageDownloadMode.Always)]
         public PreviewImageDownloadMode PreviewImageDownloadMode
         {
-            get { return _previewImageDownloadMode; }
+            get
+            {                
+                var strVal = Get<string>();
+                return JsonConvert.DeserializeObject<PreviewImageDownloadMode>(strVal);
+            }
             set
             {
-                if (_previewImageDownloadMode == value)
-                {
-                    return;
-                }
-                _previewImageDownloadMode = value;
-                OnPropertyChanged();
+                var enumVal = JsonConvert.SerializeObject(value);
+                Set(enumVal);
             }
         }
 
+        [DefaultSettingValue(Value = 0)]
         public int AppTotalRuns
         {
-            get { return _appTotalRuns; }
+            get
+            {
+                return Get<int>();
+            }
             set
             {
-                if (_appTotalRuns == value)
-                {
-                    return;
-                }
-                _appTotalRuns = value;
-                OnPropertyChanged();
+                Set(value);
             }
         }
+
+        [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string AppRunsAfterLastUpdateVersion
         {
-            get { return _appRunsAfterLastUpdateVersion; }
+            get
+            {
+                return Get<string>();
+            }
             set
             {
-                if (value == null)
-                {
-                    value = "";
-                }
-                if (_appRunsAfterLastUpdateVersion == value)
-                {
-                    return;
-                }
-                _appRunsAfterLastUpdateVersion = value;
-                OnPropertyChanged();
+                Set(value);
             }
         }
+
+        [DefaultSettingValue(Value = 0)]
         public int AppRunsAfterLastUpdate
         {
-            get { return _appRunsAfterLastUpdate; }
+            get
+            {
+                return Get<int>();
+            }
             set
             {
-                if (_appRunsAfterLastUpdate == value)
-                {
-                    return;
-                }
-                _appRunsAfterLastUpdate = value;
-                OnPropertyChanged();
+                Set(value);
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

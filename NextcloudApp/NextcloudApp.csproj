@@ -126,6 +126,8 @@
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
+    <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
+    <Compile Include="Utils\ObservableSettings.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\SizeSorter.cs" />
