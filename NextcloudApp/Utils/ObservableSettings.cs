@@ -48,7 +48,12 @@ namespace NextcloudApp.Utils
             var attributes = GetType().GetTypeInfo().GetDeclaredProperty(propertyName).CustomAttributes.Where(ca => ca.AttributeType == typeof(DefaultSettingValueAttribute)).ToList();
 
             if (attributes.Count == 1)
-                return (T)attributes[0].NamedArguments[0].TypedValue.Value;
+            {
+                var val =  attributes[0].NamedArguments[0].TypedValue.Value;
+
+                if(val is T)
+                    return (T)val;
+            }
 
             return default(T);
         }
