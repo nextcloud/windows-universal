@@ -14,6 +14,7 @@ namespace NextcloudApp.Utils
     public class ObservableSettings : INotifyPropertyChanged
     {
         private readonly ApplicationDataContainer applicationDataContainer;
+        protected bool enableRaisePropertyChanged = true;
 
         public ObservableSettings(ApplicationDataContainer settings)
         {
@@ -32,7 +33,10 @@ namespace NextcloudApp.Utils
             }
 
             applicationDataContainer.Values[propertyName] = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+            if(enableRaisePropertyChanged)
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
             return true;
         }
 

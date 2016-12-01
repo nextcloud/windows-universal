@@ -13,8 +13,8 @@ namespace NextcloudApp.Services
                 return _client;
             }
 
-            if (!string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) &&
-                !string.IsNullOrEmpty(SettingsService.Instance.Settings.Username))
+            if (!string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) &&
+                !string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username))
             {
                 var vault = new PasswordVault();
                 PasswordCredential credentials = null;
@@ -22,8 +22,8 @@ namespace NextcloudApp.Services
                 try
                 {
                     credentials = vault.Retrieve(
-                        SettingsService.Instance.Settings.ServerAddress,
-                        SettingsService.Instance.Settings.Username
+                        SettingsService.Instance.LocalSettings.ServerAddress,
+                        SettingsService.Instance.LocalSettings.Username
                     );
                 }
                 catch
@@ -40,11 +40,11 @@ namespace NextcloudApp.Services
                 }
             }
 
-            SettingsService.Instance.Settings.PropertyChanged += (sender, args) =>
+            SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>
             {
                 if (
-                    string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
-                    string.IsNullOrEmpty(SettingsService.Instance.Settings.Username)
+                    string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
+                    string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
                     )
                 {
                     return;
@@ -56,8 +56,8 @@ namespace NextcloudApp.Services
                 try
                 {
                     credentials = vault.Retrieve(
-                        SettingsService.Instance.Settings.ServerAddress,
-                        SettingsService.Instance.Settings.Username
+                        SettingsService.Instance.LocalSettings.ServerAddress,
+                        SettingsService.Instance.LocalSettings.Username
                     );
                 }
                 catch

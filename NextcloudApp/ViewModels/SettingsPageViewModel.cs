@@ -15,7 +15,7 @@ namespace NextcloudApp.ViewModels
     public class SettingsPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationService;
-        private Settings _settngs;
+        private LocalSettings _settngs;
         private int _previewImageDownloadModesSelectedIndex;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
@@ -26,7 +26,7 @@ namespace NextcloudApp.ViewModels
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
-            Settings = SettingsService.Instance.Settings;
+            Settings = SettingsService.Instance.LocalSettings;
 
             PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
             {
@@ -79,7 +79,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _serverVersion, value); }
         }
 
-        public Settings Settings
+        public LocalSettings Settings
         {
             get { return _settngs; }
             private set { SetProperty(ref _settngs, value); }
@@ -123,13 +123,6 @@ namespace NextcloudApp.ViewModels
 
         private void Reset()
         {
-            var vault = new PasswordVault();
-            var credentialList = vault.FindAllByResource(SettingsService.Instance.Settings.ServerAddress);
-            foreach (var credential in credentialList)
-            {
-                vault.Remove(credential);
-            }
-
             SettingsService.Instance.Reset();
 
             _navigationService.Navigate(PageTokens.Login.ToString(), null);

@@ -144,19 +144,19 @@ namespace NextcloudApp
             DeviceGestureService.GoBackRequested += DeviceGestureServiceOnGoBackRequested;
 
             // Just count total app starts
-            SettingsService.Instance.Settings.AppTotalRuns = SettingsService.Instance.Settings.AppTotalRuns + 1;
+            SettingsService.Instance.LocalSettings.AppTotalRuns = SettingsService.Instance.LocalSettings.AppTotalRuns + 1;
 
             // Count app starts after last update
             var currentVersion =
                 $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
-            if (currentVersion == SettingsService.Instance.Settings.AppRunsAfterLastUpdateVersion)
+            if (currentVersion == SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion)
             {
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdate = SettingsService.Instance.Settings.AppRunsAfterLastUpdate + 1;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate + 1;
             }
             else
             {
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdateVersion = currentVersion;
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdate = 1;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
             }
 
             MigrationService.Instance.StartMigration();
@@ -167,8 +167,8 @@ namespace NextcloudApp
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
             if (
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username)
+                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
+                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
                 //var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
@@ -183,8 +183,8 @@ namespace NextcloudApp
                 try
                 {
                     credentials = vault.Retrieve(
-                        SettingsService.Instance.Settings.ServerAddress,
-                        SettingsService.Instance.Settings.Username
+                        SettingsService.Instance.LocalSettings.ServerAddress,
+                        SettingsService.Instance.LocalSettings.Username
                     );
                 }
                 catch

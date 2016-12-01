@@ -4,12 +4,15 @@ using Windows.Storage;
 
 namespace NextcloudApp.Models
 {
-    public class Settings : ObservableSettings
+    /// <summary>
+    /// Class for storing settings which should be stored on the local device only.
+    /// </summary>
+    public class LocalSettings : ObservableSettings
     {
-        private static Settings settings = new Settings();
+        private static LocalSettings settings = new LocalSettings();
         private const string DefaultValueEmptyString = "";
 
-        public static Settings Default
+        public static LocalSettings Default
         {
             get
             {
@@ -17,7 +20,7 @@ namespace NextcloudApp.Models
             }
         }
 
-        public Settings()
+        public LocalSettings()
             : base(ApplicationData.Current.LocalSettings)
         {
         }
@@ -61,18 +64,23 @@ namespace NextcloudApp.Models
             }
         }
 
+        // As only serializable objects can be stored in the LocalSettings, we use a string internally.
         [DefaultSettingValue(Value = PreviewImageDownloadMode.Always)]
         public PreviewImageDownloadMode PreviewImageDownloadMode
         {
             get
-            {                
+            {
                 var strVal = Get<string>();
-                return JsonConvert.DeserializeObject<PreviewImageDownloadMode>(strVal);
+
+                if (string.IsNullOrEmpty(strVal))
+                    return PreviewImageDownloadMode.Always;
+                else
+                    return JsonConvert.DeserializeObject<PreviewImageDownloadMode>(strVal);
             }
             set
             {
-                var enumVal = JsonConvert.SerializeObject(value);
-                Set(enumVal);
+                var strVal = JsonConvert.SerializeObject(value);
+                Set(strVal);
             }
         }
 
@@ -113,6 +121,19 @@ namespace NextcloudApp.Models
             {
                 Set(value);
             }
+        }
+
+        public void Reset()
+        {
+            // Do not raise PropertyChanged event when resetting.
+            this.enableRaisePropertyChanged = false;
+
+            this.ServerAddress = DefaultValueEmptyString;
+            this.Username = DefaultValueEmptyString;
+            this.ShowFileAndFolderGroupingHeader = true;
+            this.PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
+
+            this.enableRaisePropertyChanged = true;
         }
     }
 }

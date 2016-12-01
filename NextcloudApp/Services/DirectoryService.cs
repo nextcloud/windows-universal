@@ -146,7 +146,7 @@ namespace NextcloudApp.Services
                 }
             }
 
-            switch (SettingsService.Instance.Settings.PreviewImageDownloadMode)
+            switch (SettingsService.Instance.LocalSettings.PreviewImageDownloadMode)
             {
                 case PreviewImageDownloadMode.Always:
                     DownloadPreviewImages();

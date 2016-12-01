@@ -116,6 +116,7 @@
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
+    <Compile Include="Models\RoamingSettings.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
@@ -140,7 +141,7 @@
     <Compile Include="Converter\DateTimeToStringConverter.cs" />
     <Compile Include="Models\FileOrFolder.cs" />
     <Compile Include="Models\PathInfo.cs" />
-    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\LocalSettings.cs" />
     <Compile Include="PageTokens.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
