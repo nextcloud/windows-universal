@@ -17,6 +17,7 @@ namespace NextcloudApp.ViewModels
         private readonly INavigationService _navigationService;
         private LocalSettings _settngs;
         private int _previewImageDownloadModesSelectedIndex;
+        private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
 
@@ -112,6 +113,18 @@ namespace NextcloudApp.ViewModels
                         Settings.PreviewImageDownloadMode = PreviewImageDownloadMode.Never;
                         break;
                 }
+            }
+        }
+
+        public bool UseWindowsHello
+        {
+            get { return _useWindowsHello; }
+            set
+            {
+                if (!SetProperty(ref _useWindowsHello, value))
+                    return;
+
+                Settings.UseWindowsHello = value;
             }
         }
 

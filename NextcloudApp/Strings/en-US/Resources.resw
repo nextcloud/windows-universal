@@ -374,4 +374,13 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello authentication</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
 </root>

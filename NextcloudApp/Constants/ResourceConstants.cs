@@ -6,5 +6,7 @@
     public static class ResourceConstants
     {
         public static string VerificationService_Prompt = "VerificationService_Prompt";
+
+        public static string WindowsHelloNotAvailable = "WindowsHelloNotAvailable";
     }
 }

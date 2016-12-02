@@ -371,4 +371,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>Um auf Nextcloud zuzugreifen, geben Sie die Anmeldeinformationen für ihr Gerät ein.</value>
   </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello Authentifizierung</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>Es ist keine PIN für das Gerät definiert. Um Windows Hello nutzen zu können, muss eine PIN definiert sein.</value>
+  </data>
 </root>

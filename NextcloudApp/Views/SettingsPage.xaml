@@ -43,6 +43,14 @@
                         SelectedIndex="{Binding PreviewImageDownloadModesSelectedIndex, Mode=TwoWay}"
                         Margin="0,12"/>
 
+                    
+                    <ToggleSwitch 
+                        x:Uid="UseWindowsHello"
+                        Header="Windows Hello authentication"
+                        Margin="0,12"
+                        IsOn="{Binding UseWindowsHello, Mode=TwoWay}"/>
+                    
+
                     <Border 
                         Margin="0,12" 
                         Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
