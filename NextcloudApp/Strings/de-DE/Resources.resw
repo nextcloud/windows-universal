@@ -377,4 +377,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
     <value>Es ist keine PIN für das Gerät definiert. Um Windows Hello nutzen zu können, muss eine PIN definiert sein.</value>
   </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
 </root>

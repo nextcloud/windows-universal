@@ -8,5 +8,7 @@
         public static string VerificationService_Prompt = "VerificationService_Prompt";
 
         public static string WindowsHelloNotAvailable = "WindowsHelloNotAvailable";
+
+        public static string DialogTitle_GeneralNextCloudApp = "DialogTitle_GeneralNextCloudApp";
     }
 }

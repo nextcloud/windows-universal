@@ -9,12 +9,16 @@ using Prism.Commands;
 using Prism.Windows.Navigation;
 using NextcloudApp.Utils;
 using Prism.Windows.AppModel;
+using Windows.UI.Xaml.Controls;
+using NextcloudApp.Constants;
+using Windows.UI.Xaml;
 
 namespace NextcloudApp.ViewModels
 {
     public class SettingsPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationService;
+        private readonly DialogService _dialogService;
         private LocalSettings _settngs;
         private int _previewImageDownloadModesSelectedIndex;
         private bool _useWindowsHello;
@@ -23,10 +27,11 @@ namespace NextcloudApp.ViewModels
 
         public ICommand ResetCommand { get; private set; }
 
-        public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
+        public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
+            _dialogService = dialogService;
             Settings = SettingsService.Instance.LocalSettings;
 
             PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
@@ -125,6 +130,32 @@ namespace NextcloudApp.ViewModels
                     return;
 
                 Settings.UseWindowsHello = value;
+            }
+        }
+
+        public async void UseWindowsHelloToggled()
+        {
+            if (UseWindowsHello)
+            {
+                var available = await VerificationService.CheckAvailabilityAsync();
+
+                if (!available)
+                {
+                    var dialog = new ContentDialog
+                    {
+                        Title = _resourceLoader.GetString(ResourceConstants.DialogTitle_GeneralNextCloudApp),
+                        Content = new TextBlock
+                        {
+                            Text = _resourceLoader.GetString(ResourceConstants.WindowsHelloNotAvailable),
+                            TextWrapping = TextWrapping.WrapWholeWords,
+                            Margin = new Thickness(0, 20, 0, 0)
+                        },
+                        PrimaryButtonText = _resourceLoader.GetString("OK")
+                    };
+                    await _dialogService.ShowAsync(dialog);
+
+                    UseWindowsHello = false;
+                }
             }
         }
 
