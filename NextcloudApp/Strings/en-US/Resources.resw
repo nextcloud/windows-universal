@@ -371,4 +371,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} downloaded</value>
   </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+  </data>
 </root>

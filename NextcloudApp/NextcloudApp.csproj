@@ -110,6 +110,7 @@
     </Compile>
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
+    <Compile Include="Constants\ResourceConstants.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
+    <Compile Include="Services\VerificationService.cs" />
     <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
     <Compile Include="Utils\ObservableSettings.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />

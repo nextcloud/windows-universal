@@ -123,6 +123,20 @@ namespace NextcloudApp.Models
             }
         }
 
+
+        [DefaultSettingValue(Value = false)]
+        public bool UseWindowsHello
+        {
+            get
+            {
+                return Get<bool>();
+            }
+            set
+            {
+                Set(value);
+            }
+        }
+
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
@@ -132,6 +146,7 @@ namespace NextcloudApp.Models
             this.Username = DefaultValueEmptyString;
             this.ShowFileAndFolderGroupingHeader = true;
             this.PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
+            this.UseWindowsHello = false;
 
             this.enableRaisePropertyChanged = true;
         }

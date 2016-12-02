@@ -368,4 +368,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
   </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>Um auf Nextcloud zuzugreifen, geben Sie die Anmeldeinformationen für ihr Gerät ein.</value>
+  </data>
 </root>
