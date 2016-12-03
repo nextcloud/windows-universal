@@ -267,6 +267,13 @@
         </ScrollViewer>
 
         <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton 
+                Icon="Pin" 
+                Label="Pin to start" 
+                x:Uid="AppBarPinToStart"
+                Command="{Binding PinToStartCommand}"/>
+            </CommandBar.SecondaryCommands>
             <AppBarButton 
                 Icon="Rename" 
                 Label="Rename" 

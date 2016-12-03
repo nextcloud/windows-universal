@@ -282,6 +282,13 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="PinToStart"
+                                            x:Uid="PinToStart"
+                                            Text="Pin to start"
+                                            Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>
