@@ -240,6 +240,9 @@
                                     <core:EventTriggerBehavior EventName="Holding">
                                         <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="RightTapped">
+                                        <actions:OpenMenuFlyoutAction />
+                                    </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
                                 <FlyoutBase.AttachedFlyout>
                                     <MenuFlyout>
@@ -280,6 +283,14 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Sync"
+                                            x:Uid="Synchronize"
+                                            Text="{Binding Converter={StaticResource IsFolderSyncedConverter}}"
+                                            Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>

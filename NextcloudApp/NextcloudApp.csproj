@@ -96,6 +96,7 @@
     <Content Include="Assets\Fonts\nextcloud.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
     <PRIResource Include="Strings\de-DE\Resources.resw" />
@@ -114,6 +115,7 @@
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
+    <Compile Include="Models\FolderSyncInfo.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
+    <Compile Include="Utils\DebugTraceListener.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\SizeSorter.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
+    <Compile Include="Utils\SyncDbUtils.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
@@ -277,6 +281,12 @@
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
       <Name>Behaviors SDK %28XAML%29</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.15.1">
+      <Name>SQLite for Universal Windows Platform</Name>
     </SDKReference>
     <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
       <Name>Windows Mobile Extensions for the UWP</Name>

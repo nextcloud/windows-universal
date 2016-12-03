@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Windows.Input;
+using System;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -11,6 +11,8 @@ using NextcloudClient.Types;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
+using Windows.Storage;
+using Windows.Storage.AccessCache;
 
 namespace NextcloudApp.ViewModels
 {
@@ -39,7 +41,8 @@ namespace NextcloudApp.ViewModels
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
-
+        public ICommand SynchronizeFolderCommand { get; private set; }
+        
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
@@ -89,6 +92,7 @@ namespace NextcloudApp.ViewModels
             DeleteResourceCommand = new RelayCommand(DeleteResource);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
+            SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -137,6 +141,35 @@ namespace NextcloudApp.ViewModels
                 ResourceInfo = resourceInfo
             };
             _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+        }
+        private async void SynchronizeFolder(object parameter)
+        {
+            var resourceInfo = parameter as ResourceInfo;
+            if (resourceInfo == null)
+            {
+                return;
+            }
+            var oldInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
+            if (oldInfo != null) {
+                // If there exists an entry for this path - stop sync command has been triggered.
+                SyncDbUtils.DeleteFolderSyncInfo(oldInfo);
+                return;
+            }
+            // Start Sync
+            var syncInfo = new FolderSyncInfo();
+            syncInfo.Path = resourceInfo.Path;
+            var folderPicker = new FolderPicker();
+            folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+            folderPicker.FileTypeFilter.Add(".txt");
+            StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+            if (folder == null)
+            {
+                return;
+            }
+            StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, folder);
+            SyncDbUtils.SaveFolderSyncInfo(syncInfo);
+            StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better war
+            // TODO initial sync
         }
 
         private async void DeleteResource(object parameter)

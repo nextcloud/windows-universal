@@ -371,4 +371,10 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} downloaded</value>
   </data>
+  <data name="Synchronize" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="StopSynchronize" xml:space="preserve">
+    <value>Stop Synchronization</value>
+  </data>
 </root>
