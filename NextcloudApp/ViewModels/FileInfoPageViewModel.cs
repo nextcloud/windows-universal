@@ -26,6 +26,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private DirectoryService _directoryService;
+        private TileService _tileService;
         private ResourceInfo _resourceInfo;
         private string _fileExtension;
         private string _fileName;
@@ -36,6 +37,8 @@ namespace NextcloudApp.ViewModels
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
+        public ICommand PinToStartCommand { get; private set; }
+
 
         public FileInfoPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -44,6 +47,7 @@ namespace NextcloudApp.ViewModels
             _dialogService = dialogService;
 
             Directory = DirectoryService.Instance;
+            _tileService = TileService.Instance;
 
             //DataTransferManager dataTransferManager = DataTransferManager.GetForCurrentView();
             //dataTransferManager.DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(ShareImageHandler);
@@ -58,6 +62,7 @@ namespace NextcloudApp.ViewModels
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
+            PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
         }
         
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -315,6 +320,23 @@ namespace NextcloudApp.ViewModels
                 ResourceInfo = ResourceInfo
             };
             _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+        }
+
+        private void PinToStart(object parameter)
+        {
+            if(!(parameter is ResourceInfo)) return;
+            var resourceInfo = parameter as ResourceInfo;
+            _tileService.CreatePinnedObject(resourceInfo);
+        }
+
+        private bool CanPinToStart(object parameter)
+        {
+            if (parameter is ResourceInfo)
+            {
+                var resourceInfo = parameter as ResourceInfo;
+                return _tileService.IsTilePinned(resourceInfo);
+            }
+            return false;
         }
     }
 }
