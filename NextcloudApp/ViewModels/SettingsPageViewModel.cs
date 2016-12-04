@@ -65,6 +65,8 @@ namespace NextcloudApp.ViewModels
                     throw new ArgumentOutOfRangeException();
             }
 
+            this.UseWindowsHello = Settings.UseWindowsHello;
+
             ResetCommand = new DelegateCommand(Reset);
 
             GetServerVersion();
