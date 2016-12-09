@@ -386,4 +386,13 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Sign-in required</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try again</value>
+  </data>
 </root>

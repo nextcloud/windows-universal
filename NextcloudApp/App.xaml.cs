@@ -166,6 +166,8 @@ namespace NextcloudApp
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
+            var useWindowsHello = SettingsService.Instance.LocalSettings.UseWindowsHello;
+
             if (
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
@@ -173,7 +175,11 @@ namespace NextcloudApp
             {
                 //var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
                 //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
-                NavigationService.Navigate(PageTokens.Login.ToString(), null);
+
+                if (useWindowsHello)
+                    NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
+                else
+                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
             }
             else
             {
@@ -193,17 +199,23 @@ namespace NextcloudApp
 
                 if (!string.IsNullOrEmpty(credentials?.Password))
                 {
-                    NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                    if (useWindowsHello)
+                        NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.DirectoryList.ToString());
+                    else
+                        NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
                 }
                 else
                 {
-                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                    if (useWindowsHello)
+                        NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
+                    else
+                        NavigationService.Navigate(PageTokens.Login.ToString(), null);
                 }
             }
 
             // Ensure the current window is active
             Window.Current.Activate();
-            
+
             return Task.FromResult(true);
         }
 

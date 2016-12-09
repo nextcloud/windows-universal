@@ -10,5 +10,15 @@
         public static string WindowsHelloNotAvailable = "WindowsHelloNotAvailable";
 
         public static string DialogTitle_GeneralNextCloudApp = "DialogTitle_GeneralNextCloudApp";
+
+        public static string DialogTitle_SignInRequired = "DialogTitle_SignInRequired";
+
+        public static string SignInRequiredMessage = "SignInRequiredMessage";
+
+        public static string OK = "OK";
+
+        public static string Cancel = "Cancel";
+
+        public static string TryAgain = "TryAgain";
     }
 }

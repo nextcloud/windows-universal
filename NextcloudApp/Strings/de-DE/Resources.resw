@@ -380,4 +380,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Anmeldung erforderlich</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>Nextcloud kann erst geöffnet werden, wenn Sie die Anmeldeinformationen für Ihr Gerät angeben.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Erneut versuchen</value>
+  </data>
 </root>
