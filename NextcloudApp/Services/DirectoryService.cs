@@ -256,7 +256,7 @@ namespace NextcloudApp.Services
             var success = false;
             try
             {
-                success = await client.CreateDirectory(path + "/" + directoryName);
+                success = await client.CreateDirectory(path + directoryName);
             }
             catch (ResponseError e)
             {
@@ -302,7 +302,7 @@ namespace NextcloudApp.Services
             var success = false;
             try
             {
-                success = await client.Move(path + "/" + oldName, path + "/" + newName);
+                success = await client.Move(path + oldName, path + newName);
             }
             catch (ResponseError e)
             {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -110,12 +110,10 @@
     </Compile>
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
-    <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
-    <Compile Include="Models\FolderSyncInfo.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
@@ -128,7 +126,6 @@
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
-    <Compile Include="Utils\DebugTraceListener.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\SizeSorter.cs" />
@@ -153,7 +150,6 @@
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
-    <Compile Include="Utils\SyncDbUtils.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
@@ -269,6 +265,10 @@
       <Project>{E2015378-CEFF-4913-A4A6-48706F2625D4}</Project>
       <Name>NextcloudClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebDavClient\WebDavClient\WebDavClient.csproj">
+      <Project>{4AD0BDDE-D9AF-49F8-912C-4B6970CBE1BA}</Project>
+      <Name>WebDavClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
@@ -278,12 +278,6 @@
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
       <Name>Behaviors SDK %28XAML%29</Name>
     </SDKReference>
-    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
-      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
-    </SDKReference>
-    <SDKReference Include="SQLite.UWP.2015, Version=3.15.1">
-      <Name>SQLite for Universal Windows Platform</Name>
-    </SDKReference>
     <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
@@ -292,6 +286,13 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
   <PropertyGroup>
     <SkipValidatePackageReferences>true</SkipValidatePackageReferences>
   </PropertyGroup>

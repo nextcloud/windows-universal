@@ -149,10 +149,9 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            var oldInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
-            if (oldInfo != null) {
+            if (resourceInfo.IsSynced) {
                 // If there exists an entry for this path - stop sync command has been triggered.
-                SyncDbUtils.DeleteFolderSyncInfo(oldInfo);
+                SyncDbUtils.DeleteFolderSyncInfo(SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path));
                 return;
             }
             // Start Sync
@@ -168,8 +167,16 @@ namespace NextcloudApp.ViewModels
             }
             StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, folder);
             SyncDbUtils.SaveFolderSyncInfo(syncInfo);
-            StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better war
-            // TODO initial sync
+            StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+            IReadOnlyList<StorageFile> files = await folder.GetFilesAsync();
+            IReadOnlyList<StorageFolder> folders = await folder.GetFoldersAsync();
+            if (files.Count > 0 || folders.Count > 0)
+            {
+                // TODO Dialog to overwrite files locally or on server
+            }
+            SyncService service = new SyncService(true, false, syncInfo);
+            service.SyncFolder(resourceInfo, folder);
+            // TODO Dialog that sync has been started in background
         }
 
         private async void DeleteResource(object parameter)

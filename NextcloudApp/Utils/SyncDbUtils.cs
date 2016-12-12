@@ -32,7 +32,8 @@
                 // Activate Tracing
                 db.TraceListener = new DebugTraceListener();
                 // Init tables
-                var c = db.CreateTable<FolderSyncInfo>();
+                db.CreateTable<FolderSyncInfo>();
+                db.CreateTable<SyncInfoDetail>();
                 return db;
             }
         }

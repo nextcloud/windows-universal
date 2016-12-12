@@ -25,7 +25,7 @@ namespace NextcloudApp.Converter
                 return "";
             }
             ResourceLoader loader = new ResourceLoader();
-            if(SyncDbUtils.GetFolderSyncInfoByPath(item.Path) == null)
+            if(!item.IsSynced)
             {
                return loader.GetString("Synchronize");
             } else { }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -96,6 +96,7 @@
     <Content Include="Assets\Fonts\nextcloud.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
     <PRIResource Include="Strings\de-DE\Resources.resw" />
@@ -110,7 +111,6 @@
     </Compile>
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
-    <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
@@ -269,6 +269,10 @@
       <Project>{E2015378-CEFF-4913-A4A6-48706F2625D4}</Project>
       <Name>NextcloudClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebDavClient\WebDavClient\WebDavClient.csproj">
+      <Project>{4AD0BDDE-D9AF-49F8-912C-4B6970CBE1BA}</Project>
+      <Name>WebDavClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
@@ -292,6 +296,13 @@
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
   <PropertyGroup>
     <SkipValidatePackageReferences>true</SkipValidatePackageReferences>
   </PropertyGroup>
