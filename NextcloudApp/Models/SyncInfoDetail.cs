@@ -15,5 +15,6 @@ namespace NextcloudApp.Models
         public DateTimeOffset DateModified { get; set; }
         public int FsiID { get; set; }
         public string Path { get; set; }
+        public string FilePath { get; set; }
     }
 }

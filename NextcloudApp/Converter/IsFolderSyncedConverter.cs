@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
 namespace NextcloudApp.Converter
@@ -21,16 +22,18 @@ namespace NextcloudApp.Converter
             var item = (ResourceInfo)value;
             if (!item.ContentType.Equals("dav/directory"))
             {
-                // Option not visible to files.
-                return "";
+                return Visibility.Collapsed;
             }
             ResourceLoader loader = new ResourceLoader();
-            if(!item.IsSynced)
+            if (SyncDbUtils.IsSynced(item))
             {
-               return loader.GetString("Synchronize");
-            } else { }
-               return loader.GetString("StopSynchronize");
+                return Visibility.Visible;
             }
+            else
+            {
+                return Visibility.Collapsed;
+            }
+        }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {

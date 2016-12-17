@@ -288,11 +288,19 @@
                                         <MenuFlyoutItem 
                                             Tag="Sync"
                                             x:Uid="Synchronize"
-                                            Text="{Binding Converter={StaticResource IsFolderSyncedConverter}}"
+                                            Text="Synchronize"
                                             Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Sync"
+                                            x:Uid="StopSynchronize"
+                                            Text="Stop Synchronizing"
+                                            Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>

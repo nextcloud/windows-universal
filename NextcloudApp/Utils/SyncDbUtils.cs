@@ -1,6 +1,7 @@
 ﻿namespace NextcloudApp.Utils
 {
     using Models;
+    using NextcloudClient.Types;
     using SQLite.Net;
     using SQLite.Net.Platform.WinRT;
     using System.Collections.Generic;
@@ -89,6 +90,77 @@
                     // Update
                     db.Update(fsi);
                 }
+            }
+        }
+
+        public static SyncInfoDetail getSyncInfoDetail(ResourceInfo info, FolderSyncInfo fsi)
+        {
+            // Create a new connection
+            using (var db = DbConnection)
+            {
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
+                                      where detail.Path == info.Path && detail.FsiID == fsi.Id
+                                      select detail).FirstOrDefault();
+                return sid;
+            }
+        }
+
+        public static SyncInfoDetail getSyncInfoDetail(IStorageItem file, FolderSyncInfo fsi)
+        {
+            // Create a new connection
+            using (var db = DbConnection)
+            {
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
+                                      where detail.FilePath == file.Path && detail.FsiID == fsi.Id
+                                      select detail).FirstOrDefault();
+                return sid;
+            }
+        }
+
+        public static void DeleteSyncInfoDetail(SyncInfoDetail sid, bool isFolder)
+        {
+            using (var db = DbConnection)
+            {
+                if (isFolder)
+                {
+                    // Including subpaths
+                    db.Execute("DELETE FROM SyncInfoDetail WHERE Path LIKE '?%' AND FsiID = ?", sid.Path, sid.Id);
+                } else
+                {
+                    db.Delete(sid);
+                }
+            }
+        }
+
+        public static void SaveSyncInfoDetail(SyncInfoDetail sid)
+        {
+            using (var db = DbConnection)
+            {
+                if (sid.Id == 0)
+                {
+                    // New
+                    db.Insert(sid);
+                }
+                else
+                {
+                    // Update
+                    db.Update(sid);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Is this resource synced with a folder on the device
+        /// </summary>
+        public static bool IsSynced(ResourceInfo info)
+        {
+            if (info == null || info.Path == null)
+            {
+                return false;
+            }
+            else
+            {
+                return GetFolderSyncInfoByPath(info.Path) != null;
             }
         }
     }

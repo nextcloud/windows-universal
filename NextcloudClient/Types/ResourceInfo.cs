@@ -91,23 +91,6 @@ namespace NextcloudClient.Types
 	    {
 	        return ContentType.Equals("dav/directory");
 	    }
-
-        /// <summary>
-        /// Is this resource synced with a folder on the device
-        /// </summary>
-        public bool IsSynced
-        {
-            get
-            {
-                if(Path==null)
-                {
-                    return false;
-                } else
-                {
-                    return SyncDbUtils.GetFolderSyncInfoByPath(Path) != null;
-                }
-            }
-        }
 	}
 }
 

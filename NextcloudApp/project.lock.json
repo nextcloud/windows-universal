@@ -289,6 +289,14 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        }
+      },
       "Prism.Core/6.2.0": {
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -2368,6 +2376,14 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         }
       },
       "Prism.Core/6.2.0": {
@@ -4582,6 +4598,14 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         }
       },
       "Prism.Core/6.2.0": {
@@ -6839,6 +6863,14 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        }
+      },
       "Prism.Core/6.2.0": {
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -9060,6 +9092,14 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         }
       },
       "Prism.Core/6.2.0": {
@@ -11322,6 +11362,14 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        }
+      },
       "Prism.Core/6.2.0": {
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -13543,6 +13591,14 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PortableWebDavLibrary/0.5.1": {
+        "compile": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
+        },
+        "runtime": {
+          "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
         }
       },
       "Prism.Core/6.2.0": {
@@ -15902,6 +15958,17 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "PortableWebDavLibrary/0.5.1": {
+      "sha512": "WzEFvwrtqTMB0GFacjjbhwnPgyTzrsOLNTb7G9ms/Q+Ih6HpiUIL1d+BxqAaQN1pxfMegFoGXKRlILee7v1BMg==",
+      "type": "package",
+      "path": "PortableWebDavLibrary/0.5.1",
+      "files": [
+        "PortableWebDavLibrary.0.5.1.nupkg.sha512",
+        "PortableWebDavLibrary.nuspec",
+        "lib/DecaTec.WebDav.NetFx.dll",
+        "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll"
       ]
     },
     "Prism.Core/6.2.0": {
@@ -21038,8 +21105,8 @@
         "lib/xamarinwatchos10/_._",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
-        "ref/netcore50/System.Text.Encoding.Extensions.dll",
         "ref/net45/_._",
+        "ref/netcore50/System.Text.Encoding.Extensions.dll",
         "ref/netcore50/System.Text.Encoding.Extensions.xml",
         "ref/netcore50/de/System.Text.Encoding.Extensions.xml",
         "ref/netcore50/es/System.Text.Encoding.Extensions.xml",
