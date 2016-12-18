@@ -297,7 +297,7 @@
                                             Tag="Sync"
                                             x:Uid="StopSynchronize"
                                             Text="Stop Synchronizing"
-                                            Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
+                                            Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>

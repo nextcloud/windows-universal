@@ -42,7 +42,8 @@ namespace NextcloudApp.ViewModels
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
         public ICommand SynchronizeFolderCommand { get; private set; }
-        
+        public ICommand StopSynchronizeFolderCommand { get; private set; }
+
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
@@ -93,6 +94,7 @@ namespace NextcloudApp.ViewModels
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
             SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
+            StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -149,34 +151,50 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            if (resourceInfo.IsSynced) {
-                // If there exists an entry for this path - stop sync command has been triggered.
-                SyncDbUtils.DeleteFolderSyncInfo(SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path));
-                return;
-            }
-            // Start Sync
-            var syncInfo = new FolderSyncInfo();
-            syncInfo.Path = resourceInfo.Path;
-            var folderPicker = new FolderPicker();
-            folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            folderPicker.FileTypeFilter.Add(".txt");
-            StorageFolder folder = await folderPicker.PickSingleFolderAsync();
-            if (folder == null)
+            var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
+            if (syncInfo == null)
             {
-                return;
+                // try to Get parent or initialize
+                // Start Sync
+                syncInfo = new FolderSyncInfo();
+                syncInfo.Path = resourceInfo.Path;
+                var folderPicker = new FolderPicker();
+                folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+                folderPicker.FileTypeFilter.Add(".txt");
+                StorageFolder newFolder = await folderPicker.PickSingleFolderAsync();
+                if (newFolder == null)
+                {
+                    return;
+                }
+                StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
+                SyncDbUtils.SaveFolderSyncInfo(syncInfo);
+                IReadOnlyList<StorageFile> files = await newFolder.GetFilesAsync();
+                IReadOnlyList<StorageFolder> folders = await newFolder.GetFoldersAsync();
+                if (files.Count > 0 || folders.Count > 0)
+                {
+                    // TODO Dialog to overwrite files locally or on server
+                }
+                StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
             }
-            StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, folder);
-            SyncDbUtils.SaveFolderSyncInfo(syncInfo);
-            StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
-            IReadOnlyList<StorageFile> files = await folder.GetFilesAsync();
-            IReadOnlyList<StorageFolder> folders = await folder.GetFoldersAsync();
-            if (files.Count > 0 || folders.Count > 0)
-            {
-                // TODO Dialog to overwrite files locally or on server
-            }
-            SyncService service = new SyncService(true, false, syncInfo);
+            StorageFolder folder =  await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
+            SyncService service = new SyncService(false, false, syncInfo);
             service.SyncFolder(resourceInfo, folder);
             // TODO Dialog that sync has been started in background
+        }
+        private void StopSynchronizeFolder(object parameter)
+        {
+            var resourceInfo = parameter as ResourceInfo;
+            if (resourceInfo == null)
+            {
+                return;
+            }
+            var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
+            if (syncInfo!=null)
+            {
+                // If there exists an entry for this path - stop sync command has been triggered.
+                SyncDbUtils.DeleteFolderSyncInfo(syncInfo);
+                StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+            }
         }
 
         private async void DeleteResource(object parameter)

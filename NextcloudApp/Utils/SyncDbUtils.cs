@@ -46,6 +46,7 @@
             {
                 // Object model:
                 db.Delete(folderSyncInfo);
+                db.Execute("DELETE FROM SyncInfoDetail WHERE FsiID = ?", folderSyncInfo.Id);
             }
         }
 
@@ -124,7 +125,7 @@
                 if (isFolder)
                 {
                     // Including subpaths
-                    db.Execute("DELETE FROM SyncInfoDetail WHERE Path LIKE '?%' AND FsiID = ?", sid.Path, sid.Id);
+                    db.Execute("DELETE FROM SyncInfoDetail WHERE Path LIKE '?%' AND FsiID = ?", sid.Path, sid.FsiID);
                 } else
                 {
                     db.Delete(sid);

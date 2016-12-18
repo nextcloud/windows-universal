@@ -11,7 +11,7 @@
     {
         public void Receive(string message)
         {
-            Debug.WriteLine(message);
+            //Debug.WriteLine(message);
         }
     }
 }
