@@ -363,7 +363,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ordner auswählen</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>The server with the address {0} is not reachable.</value>
+    <value>Der Server unter {0} ist nicht erreichbar.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Herunterladen als ZIP Datei</value>
