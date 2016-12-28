@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Alla filer</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Alltid</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Ett fel inträffade</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Lägg till</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Skapa mapp</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Ta ett foto</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Ladda upp filer</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Ladda upp foton</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Ladda ner</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Uppdatera</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Sortera</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Datum (oldest to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Datum (newest to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Namn (A to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Namn (Z to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Storlek (smallest to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Storlek (largest to the top)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Applikationsfel</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Kunde inte skapa mapp</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Anslut</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Content-Type</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Skapa</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Skapad</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Skapa en ny mapp</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Laddar ner filen...</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Ladda ner förhandsvisningsbilder</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} byte)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Mappnamn</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Senast modifierad</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Namn</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Aldrig</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Ny mapp</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Inte behörig</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>Servern svarade med felkod 401 (Obehörig). Vänligen logga in igen.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Lösenord</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Sökväg</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} av {1} använt</value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Återställ denna app</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Försök igen</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Serveradress</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Inställingar</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Inställningar</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Show file and folder list grouping</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Storlek</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Det finns redan ett element med detta namn. Ange ett annat namn.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Användarnamn</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Bara när jag använder Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Radera</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Radera fil</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Är du säker på att du vill radera filen {0}</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Radera mapp</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Är du säker på att du vill radera mappen {0}</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{0} av {1} uppladdad</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Laddar upp {0} av {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Laddar upp filen...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{0} av {1} nedladdad</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Underhållsläget är aktiverat på servern</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Felaktigt användarnamn eller lösenord</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Klientversion {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>The server name or address could not be resolved.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Serverversion {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Radera</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>Väntar på svar från serven</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Vänligen välj ett annat namn</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Byt namn</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Byt namn</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Byt namn</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Flytta till</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Flytta till</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Färdig</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Välj mapp</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Servern med adress {0} kan inte nås.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Ladda ner ZIP-fil</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} nedladdade</value>
+  </data>
+</root>
