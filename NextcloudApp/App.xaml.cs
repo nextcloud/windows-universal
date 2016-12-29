@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Microsoft.Practices.Unity;
@@ -177,39 +178,43 @@ namespace NextcloudApp
                 //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
 
                 if (useWindowsHello)
+                {
                     NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
+                }
                 else
+                {
                     NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                }
             }
             else
             {
                 var vault = new PasswordVault();
-                PasswordCredential credentials = null;
 
-                try
-                {
-                    credentials = vault.Retrieve(
-                        SettingsService.Instance.LocalSettings.ServerAddress,
-                        SettingsService.Instance.LocalSettings.Username
-                    );
-                }
-                catch
-                {
-                }
+                var credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
 
-                if (!string.IsNullOrEmpty(credentials?.Password))
+                if (!string.IsNullOrEmpty(credential?.Password))
                 {
                     if (useWindowsHello)
-                        NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.DirectoryList.ToString());
+                    {
+                        NavigationService.Navigate(PageTokens.Verification.ToString(),
+                            PageTokens.DirectoryList.ToString());
+                    }
                     else
+                    {
                         NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                    }
                 }
                 else
                 {
                     if (useWindowsHello)
+                    {
                         NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
+                    }
                     else
+                    {
                         NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                    }
                 }
             }
 
