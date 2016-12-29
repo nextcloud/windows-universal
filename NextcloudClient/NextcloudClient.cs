@@ -15,6 +15,7 @@ using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
 using DecaTec.WebDav;
 using Windows.Security.Credentials;
+using Windows.Security.Cryptography.Certificates;
 
 namespace NextcloudClient
 {
@@ -74,28 +75,45 @@ namespace NextcloudClient
         /// <param name="password">Password.</param>
         public NextcloudClient(string url, string userId, string password)
         {
+            if (url == null)
+            {
+                return;
+            }
+
             // In case URL has a trailing slash remove it
-            if ((url != null) && url.EndsWith("/"))
+            if (url.EndsWith("/"))
             {
                 url = url.TrimEnd('/');
             }
 
             _url = url;
 
-            _client = new HttpClient(new HttpBaseProtocolFilter
+            var httpBaseProtocolFilter = new HttpBaseProtocolFilter
             {
                 // Disable the UI mode, we will handle password entry in the app
                 AllowUI = false
-            });
+            };
+
+            // Specify the certificate errors which should be ignored.
+            // It is recommended to only ignore expired or untrusted certificate errors.
+            // When an invalid certificate is used by the WebDAV server and these errors are not ignored, 
+            // an exception will be thrown when trying to access WebDAV resources.
+            httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
+            httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+
+            // Specify the user credentials and pass it to a HttpBaseProtocolFilter.
+            var credentials = new PasswordCredential(_url, userId, password);
+            httpBaseProtocolFilter.ServerCredential = credentials;
+
+            _client = new HttpClient(httpBaseProtocolFilter);
             _client.DefaultRequestHeaders["Pragma"] = "no-cache";
 
             var encoded =
                 Convert.ToBase64String(
                     Encoding.GetEncoding("ISO-8859-1").GetBytes(userId + ":" + password));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
-
-            var credentials = new PasswordCredential(_url, userId, password);
-            _dav = new WebDavSession(_url, credentials);
+            
+            _dav = new WebDavSession(_url, httpBaseProtocolFilter);
         }
 
         #endregion
