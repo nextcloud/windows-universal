@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Të gjitha dosjet</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Gjithmonë</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Ka ndodhur një gabim</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Shto</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Krijo dosje</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Bëj një foto</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Ngarko skedarët</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Ngarko foto</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Shkarko</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Rifresko</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Rendit</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Data (me e vjetra ne krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Data (me e reja ne krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Emri (A-ja ne krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Emri (Z-ja ne Krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Madhësia (me e vogla ne krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Madhësia (me e madhja ne krye)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Gabim ne Aplikacion</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>Aplikacioni ka hasur një problem. Ju kërkojmë ndjesë për shqetësimin. Në qoftë se ishit në mes të dickaje, të dhënat që ishit duke përpunuar kanë humbur.
+
+Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dërgoni raportin e gabimit? Kjo ndihmon në eleminimin e problemit më shpejt.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anulo</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Nuk mund të krijojë dosje </value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Lidhuni </value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Lloji i lidhjes</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Krijoni</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>U krijua</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Krijoni një dosje të re</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Duke shkarkuar dosjen...</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Parapamja e imazhit te shkarkuar</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} bajt)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Emri i dosjes</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Të dhëna</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Ndryshuar së fundmi</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Emri</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Asnjëherë</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Dosje e re</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Jo</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>E pa autorizuar</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>Ky shërbyes kthehu nje kode gabimi 401 (I Paautorizuar). Ju lutem identifikohuni dhe njëherë.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Fjalëkalimi</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Rrugë</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>Përdorur {0} nga {1} </value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Rifresko aplikacionin</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Riprovoni</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Adresa e serverit</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Konfigurime</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Konfigurime</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Shfaq listën e grupimit të skedarëve dhe dosjeve</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Madhësia</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Një element me këtë emër ekziston. Specifiko një emër tjetër. </value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Shtypni</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Emri i përdoruesit</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versioni {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Vetëm kur jam në Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Po</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Fshini</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Fshini skedarin</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>A jeni të sigurt që doni ta fshini skedarin {0}</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Fshini dosjen</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>A jeni të sigurt që doni ta fshini dosjen{0}</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>Ngarkuar {0} nga {1} </value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Duke ngarkuar skedarin {0} nga {1}</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Duke ngarkuar skedarin...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>Sharkuar {0} nga {1} </value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Gjëndja e mirëmbajtjes eshte aktivizuar ne shërbyes.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Emër përdoruesi ose fjalëkalim i gabuar.</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Versioni klient {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Emri ose adresa e serverit nuk mund të zgjidhet.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Versioni i serverit {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Fshini</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>duke pritur përgjigjen e serverit</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Ju lutem, zgjidhni një emër të ri</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Riemërtoni</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Riemërtoni</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Riemërtoni</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Shkoni te</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Shkoni te</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Anuloni</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>U bë</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Zgjidhni dosjen</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Serveri me adresën {0} nuk është i arritshëm.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Shkarkoni si skedar ZIP</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>Sharkuar {0} </value>
+  </data>
+</root>
