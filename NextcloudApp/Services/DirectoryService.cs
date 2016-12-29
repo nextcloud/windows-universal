@@ -24,6 +24,7 @@ namespace NextcloudApp.Services
         private DirectoryService()
         {
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
+            _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
             GroupByNameAscending();
         }
 
@@ -43,18 +44,23 @@ namespace NextcloudApp.Services
         };
 
         public ObservableCollection<FileOrFolder> FilesAndFolders { get; } = new ObservableCollection<FileOrFolder>();
+        public ObservableCollection<FileOrFolder> Folders { get; } = new ObservableCollection<FileOrFolder>();
 
         private readonly ObservableGroupingCollection<string, FileOrFolder> _groupedFilesAndFolders;
+        private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
         private bool _isSorting;
         private bool _continueListing;
 
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
+        public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
 
         public void GroupByNameAscending()
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -62,7 +68,9 @@ namespace NextcloudApp.Services
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -70,7 +78,9 @@ namespace NextcloudApp.Services
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -78,7 +88,9 @@ namespace NextcloudApp.Services
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -86,7 +98,9 @@ namespace NextcloudApp.Services
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -94,7 +108,9 @@ namespace NextcloudApp.Services
         {
             IsSorting = true;
             _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
+            OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
         }
 
@@ -138,11 +154,16 @@ namespace NextcloudApp.Services
             }
 
             FilesAndFolders.Clear();
+            Folders.Clear();
             if (list != null)
             {
                 foreach (var item in list)
                 {
                     FilesAndFolders.Add(new FileOrFolder(item));
+                    if (item.IsDirectory())
+                    {
+                        Folders.Add(new FileOrFolder(item));
+                    }
                 }
             }
 
