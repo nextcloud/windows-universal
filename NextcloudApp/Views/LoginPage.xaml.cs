@@ -1,6 +1,4 @@
-﻿using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Prism.Windows.Mvvm;
+﻿using Prism.Windows.Mvvm;
 
 namespace NextcloudApp.Views
 {
@@ -9,9 +7,6 @@ namespace NextcloudApp.Views
         public LoginPage()
         {
             InitializeComponent();
-        }
-        private void ConnectButton_OnClick(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

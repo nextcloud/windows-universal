@@ -16,7 +16,7 @@ namespace NextcloudApp.ViewModels
 {
     public class DirectoryListPageViewModel : ViewModel
     {
-        private Settings _settngs;
+        private LocalSettings _settngs;
         private DirectoryService _directoryService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
@@ -45,7 +45,7 @@ namespace NextcloudApp.ViewModels
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            Settings = SettingsService.Instance.Settings;
+            Settings = SettingsService.Instance.LocalSettings;
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
@@ -298,7 +298,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _directoryService, value); }
         }
 
-        public Settings Settings
+        public LocalSettings Settings
         {
             get { return _settngs; }
             private set { SetProperty(ref _settngs, value); }

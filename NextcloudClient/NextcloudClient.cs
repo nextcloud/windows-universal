@@ -362,36 +362,27 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password)
         {
-            // In case the URL has no trailing slash, add it
+            // This method is also called on app reset.
+            // Only using a HEAD request doesn't seem to work, because in subsequent calls (with wrong user/password), the server always returns HTTP 200 (OK).
+            // So we're using an API call here.
             if ((serverUrl != null) && !serverUrl.EndsWith("/"))
             {
                 serverUrl = serverUrl + "/";
             }
 
-            var url = new Uri(new Uri(serverUrl), Davpath);
+            var client = new NextcloudClient(serverUrl, userId, password);
 
-            var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+            User user = null;
 
-            client.DefaultRequestHeaders["Pragma"] = "no-cache";
-
-            var encoded =
-                Convert.ToBase64String(
-                    Encoding.GetEncoding("ISO-8859-1").GetBytes(userId + ":" + password));
-            client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
-
-            var request = new HttpRequestMessage(HttpMethod.Head, url);
-            var response = await client.SendRequestAsync(request);
-
-            switch (response.StatusCode)
+            try
             {
-                case HttpStatusCode.Ok:
-                    return true;
-
-                case HttpStatusCode.Unauthorized:
-                    return false;
+                user = await client.GetUserAttributes(userId);
+            }
+            catch
+            {
             }
 
-            return false;
+            return user != null;    
         }
 
         /// <summary>
@@ -872,7 +863,7 @@ namespace NextcloudClient
         /// <returns>The user attributes.</returns>
         /// <param name="username">Username.</param>
         public async Task<User> GetUserAttributes(string username)
-        {
+        {            
             var response = await DoApiRequest(
                 "GET",
                 "/" + GetOcsPath(OcsServiceCloud, "users") + "/" + username
