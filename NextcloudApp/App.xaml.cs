@@ -167,24 +167,12 @@ namespace NextcloudApp
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
-            var useWindowsHello = SettingsService.Instance.LocalSettings.UseWindowsHello;
-
             if (
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
-                //var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
-                //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
-
-                if (useWindowsHello)
-                {
-                    NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
-                }
-                else
-                {
-                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
-                }
+                NavigationService.Navigate(PageTokens.Login.ToString(), null);
             }
             else
             {
@@ -193,28 +181,29 @@ namespace NextcloudApp
                 var credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
                 var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
 
-                if (!string.IsNullOrEmpty(credential?.Password))
+                if (credential != null)
                 {
-                    if (useWindowsHello)
+                    credential.RetrievePassword();
+                    if (!string.IsNullOrEmpty(credential.Password))
                     {
-                        NavigationService.Navigate(PageTokens.Verification.ToString(),
-                            PageTokens.DirectoryList.ToString());
-                    }
-                    else
-                    {
-                        NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
-                    }
-                }
-                else
-                {
-                    if (useWindowsHello)
-                    {
-                        NavigationService.Navigate(PageTokens.Verification.ToString(), PageTokens.Login.ToString());
+                        if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+                        {
+                            NavigationService.Navigate(PageTokens.Verification.ToString(),
+                                PageTokens.DirectoryList.ToString());
+                        }
+                        else
+                        {
+                            NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                        }
                     }
                     else
                     {
                         NavigationService.Navigate(PageTokens.Login.ToString(), null);
                     }
+                }
+                else
+                {
+                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
                 }
             }
 
