@@ -371,4 +371,28 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} nedladdade</value>
   </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello authentication</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Sign-in required</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try again</value>
+  </data>
 </root>
