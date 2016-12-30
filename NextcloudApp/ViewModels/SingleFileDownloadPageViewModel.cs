@@ -73,14 +73,20 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            ResourceInfo = resourceInfo;
 
-            if (ResourceInfo.ContentType == "dav/directory")
+            if (resourceInfo.ContentType == "dav/directory")
             {
-                ResourceInfo.Name = ResourceInfo.Name + ".zip";
-                ResourceInfo.ContentType = "application/zip";
+                ResourceInfo = new ResourceInfo
+                {
+                    Name = resourceInfo.Name + ".zip",
+                    ContentType = "application/zip"
+                };
             }
-            
+            else
+            {
+                ResourceInfo = resourceInfo;
+            }
+
             var savePicker = new FileSavePicker();
 
             savePicker.FileTypeChoices.Add(ResourceInfo.ContentType, new List<string> { Path.GetExtension(ResourceInfo.Name) });
@@ -102,9 +108,9 @@ namespace NextcloudApp.ViewModels
             {
                 IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
                 Windows.Storage.Streams.IBuffer buffer;
-                switch (ResourceInfo.ContentType)
+                switch (resourceInfo.ContentType)
                 {
-                    case "application/zip":
+                    case "dav/directory":
                         buffer = await client.DownloadDirectoryAsZip(ResourceInfo.Path, _cts, progress);
                         break;
                     default:
