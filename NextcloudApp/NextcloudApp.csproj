@@ -98,6 +98,16 @@
     </Content>
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\sv\Resources.resw" />
+    <PRIResource Include="Strings\sq\Resources.resw" />
+    <PRIResource Include="Strings\pt_BR\Resources.resw" />
+    <PRIResource Include="Strings\nl\Resources.resw" />
+    <PRIResource Include="Strings\it\Resources.resw" />
+    <PRIResource Include="Strings\hu_HU\Resources.resw" />
+    <PRIResource Include="Strings\fr\Resources.resw" />
+    <PRIResource Include="Strings\es\Resources.resw" />
+    <PRIResource Include="Strings\en\Resources.resw" />
+    <PRIResource Include="Strings\de\Resources.resw" />
     <PRIResource Include="Strings\de-DE\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
@@ -282,6 +292,7 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="SampleData\" />
+    <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
