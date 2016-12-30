@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,258 +118,258 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>All files</value>
+    <value>Todos los archivos</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Always</value>
+    <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>An error has occurred</value>
+    <value>Ha ocurrido un error</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Add</value>
+    <value>Añadir</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Take picture</value>
+    <value>Hacer una foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Upload files</value>
+    <value>Subir archivos</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Upload photos</value>
+    <value>Subir fotos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Download</value>
+    <value>Descargar</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Refresh</value>
+    <value>Volver a cargar</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sort</value>
+    <value>Ordenar</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Fecha (de antiguo a nuevo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Fecha (de nuevo a antiguo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Nombre (A-Z)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Nombre (Z-A)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Tamaño (de menor a mayor)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Tamaño (de mayor a menor)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Application error</value>
+    <value>Error de la aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>La aplicación ha encontrado un problema. Pedimos disculpas por los inconvenientes. Si estabas en medio de algo, la información en la que estabas trabajando se ha perdido.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+¿Quiéres informar a los desarrolladores de la aplicación y enviar el informe de error preparado? Estoy ayuda a eliminar más rápidamente el problema.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Can not create folder</value>
+    <value>No se puede crear la carpeta</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Connect</value>
+    <value>Conectar</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Tipo de contenido</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Create</value>
+    <value>Crear</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Created</value>
+    <value>Creado</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Create a new folder</value>
+    <value>Crear una carpeta nueva</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Downloading the file…</value>
+    <value>Descargando el archivo...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Descargar imágenes de previsualizacóin</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0} ({1} bytes)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Folder name</value>
+    <value>Nombre de la carpeta</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Information</value>
+    <value>Información</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Last modified</value>
+    <value>Modificado por última vez</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Nombre</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>New folder</value>
+    <value>Nueva carpeta</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Not authorized</value>
+    <value>No autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
+    <value>El servidor devolvió un código de error 401 (No autorizad). Por favor, vuelve a registrarte.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Password</value>
+    <value>Contraseña</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Path</value>
+    <value>Ruta</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} of {1} used</value>
+    <value>{0} de {1} usados</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Resetear esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Retry</value>
+    <value>Volver a intentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Server address</value>
+    <value>Dirección del servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Configuración</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Settings</value>
+    <value>Configuración</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Show file and folder list grouping</value>
+    <value>Mostrar agrupada la lista de archivos y carpetas </value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Size</value>
+    <value>Tamaño</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>There is already an element with this name. Specify a different name.</value>
+    <value>Ya existe un elemento con este nombre. Especifica un nombre diferente.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Username</value>
+    <value>Nombre de usuario</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
+    <value>Verión {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Only when I'm on Wi-Fi</value>
+    <value>Solo al estar conectado a Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Sí</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Delete</value>
+    <value>Eliminar</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Delete file</value>
+    <value>Eliminar archivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}</value>
+    <value>¿Está seguro de que quiere eliminar el archivo {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Delete folder</value>
+    <value>Eliminar carpeta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}</value>
+    <value>¿Estás seguro de que quieres eliminar la carpeta {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} of {1} uploaded</value>
+    <value>{0} de {1} descargados</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploading file {0} of {1}…</value>
+    <value>Subiendo archivo {0} de {1}...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Uploading the file…</value>
+    <value>Subiendo el archivo...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} of {1} downloaded</value>
+    <value>{0} de {1} descargado</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>Se ha activado el modo de mantenimiento en el servidor.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Wrong username or password.</value>
+    <value>Usuario o contraseña erróneos.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Client version {0}</value>
+    <value>Versión del cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>No se ha podido resolver la dirección o el nombre del servidor</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Server version {0}</value>
+    <value>Version del servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Delete</value>
+    <value>Eliminar</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>waiting for server response</value>
+    <value>espernado la respuesta del servidor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Please choose a new name</value>
+    <value>Por favor, escoge un nombre nuevo</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Rename</value>
+    <value>Renombrar</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Rename</value>
+    <value>Renombrar</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Rename</value>
+    <value>Renombrar</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Move to</value>
+    <value>Mover a</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Move to</value>
+    <value>Mover a</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Cancelar</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Done</value>
+    <value>Hecho</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Choose folder</value>
+    <value>Escoger carpeta</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>The server with the address {0} is not reachable.</value>
+    <value>No se puede alcanzar el servidor con la dirección {0}.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Download as ZIP file</value>
+    <value>Descargar como archivo ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} downloaded</value>
+    <value>{0} descargado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>
@@ -390,7 +390,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Sign-in required</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Try again</value>

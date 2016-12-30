@@ -16,8 +16,8 @@
 
     <Page.Resources>
         <CollectionViewSource 
-            x:Key="GroupedFilesAndFolders" 
-            Source="{Binding Directory.GroupedFilesAndFolders}" 
+            x:Key="GroupedFolders" 
+            Source="{Binding Directory.GroupedFolders}" 
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
     </Page.Resources>
 
@@ -101,7 +101,7 @@
                     Name="ChooseFolderListView"
                     SelectedIndex="-1"
                     IsHoldingEnabled="True" 
-                    ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
+                    ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
                     Padding="0,2,0,2"
@@ -254,7 +254,7 @@
             </SemanticZoom.ZoomedInView>
             <SemanticZoom.ZoomedOutView>
                 <GridView 
-                    ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}, Path=CollectionGroups}"
+                    ItemsSource="{Binding Source={StaticResource GroupedFolders}, Path=CollectionGroups}"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     VerticalContentAlignment="Center"
