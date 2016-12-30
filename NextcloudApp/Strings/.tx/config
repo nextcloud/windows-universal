@@ -4,6 +4,6 @@ lang_map = ja_JP: ja, de_DE: de-DE
 
 [nextcloud.windows-universal]
 file_filter = <lang>/Resources.resw
-source_file = en-US/Resources.resw
-source_lang = en-US
+source_file = en/Resources.resw
+source_lang = en
 type = RESX
