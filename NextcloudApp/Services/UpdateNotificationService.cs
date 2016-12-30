@@ -1,0 +1,86 @@
+﻿using System.Threading.Tasks;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Microsoft.Practices.Unity;
+using Prism.Commands;
+using Prism.Windows.AppModel;
+
+namespace NextcloudApp.Services
+{
+    public static class UpdateNotificationService
+    {
+        /// <summary>
+        /// Notifies the user.
+        /// </summary>
+        public static async Task NotifyUser()
+        {
+            SettingsService.Instance.LocalSettings.ShowUpdateMessage = false;
+
+            var app = Application.Current as App;
+            if (app == null)
+            {
+                return;
+            }
+            var resourceLoader = app.Container.Resolve<IResourceLoader>();
+            var dialogService = app.Container.Resolve<DialogService>();
+
+            var currentVersion =
+                $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}";
+
+            var currentVersionWithDash =
+                $"{Package.Current.Id.Version.Major}-{Package.Current.Id.Version.Minor}-{Package.Current.Id.Version.Build}";
+
+            var changelog = resourceLoader.GetString(string.Format("Changes_version_{0}", currentVersionWithDash));
+
+            if (string.IsNullOrEmpty(changelog))
+            {
+                return;
+            }
+
+            var line1 = string.Format(resourceLoader.GetString("Changes_Intro_Line_1"), currentVersion);
+            var line2 = resourceLoader.GetString("Changes_Intro_Line_2");
+
+            var dialog = new ContentDialog
+            {
+                Title = resourceLoader.GetString("Changes_Title"),
+                Content = new TextBlock
+                {
+                    Text = string.Format("{0}\n\n{1}\n\n{2}", line1, line2, changelog),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = resourceLoader.GetString("OK"),
+                SecondaryButtonText = resourceLoader.GetString("Changes_Recommend"),
+                SecondaryButtonCommand = new DelegateCommand(RecommendChanges)
+            };
+            await dialogService.ShowAsync(dialog);
+        }
+
+        private static void RecommendChanges()
+        {
+            var dataTransferManager = DataTransferManager.GetForCurrentView();
+            dataTransferManager.DataRequested += delegate(DataTransferManager sender, DataRequestedEventArgs args)
+            {
+                var app = Application.Current as App;
+                if (app == null)
+                {
+                    return;
+                }
+                var resourceLoader = app.Container.Resolve<IResourceLoader>();
+
+                var currentVersionWithDash =
+                    $"{Package.Current.Id.Version.Major}-{Package.Current.Id.Version.Minor}-{Package.Current.Id.Version.Build}";
+
+                var line2 = resourceLoader.GetString("Changes_Intro_Line_2");
+                var changelog = resourceLoader.GetString(string.Format("Changes_version_{0}", currentVersionWithDash));
+                
+                args.Request.Data.Properties.Title = resourceLoader.GetString("Changes_AppName");
+                args.Request.Data.SetText(string.Format("{0}\n\n{1}\n\n{2}\n\n", line2, changelog, "https://www.microsoft.com/store/apps/9nblggh532xq"));
+            };
+
+            DataTransferManager.ShowShareUI();
+        }
+    }
+}

@@ -123,9 +123,21 @@ namespace NextcloudApp.Models
             }
         }
 
-
         [DefaultSettingValue(Value = false)]
         public bool UseWindowsHello
+        {
+            get
+            {
+                return Get<bool>();
+            }
+            set
+            {
+                Set(value);
+            }
+        }
+
+        [DefaultSettingValue(Value = false)]
+        public bool ShowUpdateMessage
         {
             get
             {
