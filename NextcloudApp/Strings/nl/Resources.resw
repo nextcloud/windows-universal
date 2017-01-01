@@ -396,32 +396,32 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Probeer het opnieuw</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud voor Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Je app werd geüpdated naar versie {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Nieuwe functies en verbeteringen in deze versie:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommend</value>
+    <value>Aanbevelen</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Update</value>
+    <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Verplaatsen bestanden en mappen
+• hernoemen bestanden en mappen
+• Downloaden directories als zip-bestand 
+• Selecteer meerdere bestanden en mappen
+• Vastprikken bestanden en mappen aan het startscherm
+• Gebruik Windows Hello om te authenticeren bij start app
+• Toestaan self-signed SSL certificaten
+• Tonen mapomvang in overzicht
+• Behandelen bestandsactivering
+• Gebruik de PasswordVault om iinloggegevens op te slaan
+• Security verbeteringen &amp; bug fixes
+• Nieuwe en meer stabiele WebDAV library</value>
   </data>
 </root>

@@ -396,32 +396,32 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nochmals versuchen</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Ihre App wurde aktualisiert auf Version {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommend</value>
+    <value>Empfehlen</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Update</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Ordner als Zip-Archiv herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Dateien und Ordner am Starbildschirm anheften
+• Windows Hello verwenden um sich beim App-Start zu authentifizieren
+• Erlaube selbsterstellte SSL-Zertifikate
+• Ordnergröße in der Liste anzeigen
+• Dateiaktivierung bearbeiten
+• Passwortspeicher zum Speichern der Zugangsdaten verwenden
+• Sicherheitsverbesserungen und Fehlerbeseitigung
+• Neue und stabilere WebDAV-Bibliothek</value>
   </data>
 </root>
