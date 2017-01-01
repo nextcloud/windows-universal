@@ -13,6 +13,7 @@ using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
+using System.Diagnostics;
 
 namespace NextcloudApp.ViewModels
 {
@@ -152,34 +153,59 @@ namespace NextcloudApp.ViewModels
                 return;
             }
             var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
-            if (syncInfo == null)
+            StorageFolder folder;
+            try
             {
-                // try to Get parent or initialize
-                // Start Sync
-                syncInfo = new FolderSyncInfo();
-                syncInfo.Path = resourceInfo.Path;
-                var folderPicker = new FolderPicker();
-                folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-                folderPicker.FileTypeFilter.Add(".txt");
-                StorageFolder newFolder = await folderPicker.PickSingleFolderAsync();
-                if (newFolder == null)
+                if (syncInfo == null)
                 {
-                    return;
-                }
-                StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
-                SyncDbUtils.SaveFolderSyncInfo(syncInfo);
-                IReadOnlyList<StorageFile> files = await newFolder.GetFilesAsync();
-                IReadOnlyList<StorageFolder> folders = await newFolder.GetFoldersAsync();
-                if (files.Count > 0 || folders.Count > 0)
+                    // try to Get parent or initialize
+                    syncInfo = SyncDbUtils.GetFolderSyncInfoBySubPath(resourceInfo.Path);
+                    if (syncInfo == null)
+                    {
+                        // Initial Sync
+                        syncInfo = new FolderSyncInfo();
+                        syncInfo.Path = resourceInfo.Path;
+                        var folderPicker = new FolderPicker();
+                        folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+                        folderPicker.FileTypeFilter.Add(".txt");
+                        StorageFolder newFolder = await folderPicker.PickSingleFolderAsync();
+                        if (newFolder == null)
+                        {
+                            return;
+                        }
+                        StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
+                        SyncDbUtils.SaveFolderSyncInfo(syncInfo);
+                        IReadOnlyList<IStorageItem> subElements = await newFolder.GetItemsAsync();
+                        if (subElements.Count > 0)
+                        {
+                            // TODO Dialog to overwrite files locally or on server
+                        }
+                        folder = newFolder;
+                        StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+                    } else
+                    {
+                        string subPath = resourceInfo.Path.Substring(syncInfo.Path.Length);
+                        StorageFolder tempFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
+                        foreach(string foldername in subPath.Split('/'))
+                        {
+                            if(foldername.Length > 0)
+                                tempFolder = await tempFolder.GetFolderAsync(foldername);
+                        }
+                        folder = tempFolder;
+                    }
+                } else
                 {
-                    // TODO Dialog to overwrite files locally or on server
+                    folder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
                 }
-                StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+                SyncService service = new SyncService(folder, resourceInfo, syncInfo);
+                service.StartSync();
+                // TODO Dialog that sync has been started in background
             }
-            StorageFolder folder =  await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
-            SyncService service = new SyncService(false, false, syncInfo);
-            service.SyncFolder(resourceInfo, folder);
-            // TODO Dialog that sync has been started in background
+            catch (Exception e)
+            {
+                // ERROR Maybe AccessList timed out.
+                Debug.WriteLine(e.Message);
+            }
         }
         private void StopSynchronizeFolder(object parameter)
         {

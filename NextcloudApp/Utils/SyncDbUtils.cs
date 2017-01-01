@@ -76,6 +76,25 @@
             }
         }
 
+        public static FolderSyncInfo GetFolderSyncInfoBySubPath(string Path)
+        {
+            // Create a new connection
+            using (var db = DbConnection)
+            {
+                IEnumerable<FolderSyncInfo> infos = from fsi in db.Table<FolderSyncInfo>()
+                                    select fsi;
+                foreach(var info in infos)
+                {
+                    int index = Path.IndexOf(info.Path);
+                    if(index == 0 && Path.Substring(info.Path.Length-1, 1).Equals("/"))
+                    {
+                        return info;
+                    }
+                }
+                return null;
+            }
+        }
+
         public static void SaveFolderSyncInfo(FolderSyncInfo fsi)
         {
             // Create a new connection
@@ -94,19 +113,25 @@
             }
         }
 
-        public static SyncInfoDetail getSyncInfoDetail(ResourceInfo info, FolderSyncInfo fsi)
+        public static SyncInfoDetail GetSyncInfoDetail(ResourceInfo info, FolderSyncInfo fsi)
         {
             // Create a new connection
+            string fullPath = info.Path;
+            if(!info.IsDirectory())
+            {
+                fullPath = info.Path + "/" + info.Name;
+            }
+
             using (var db = DbConnection)
             {
                 SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
-                                      where detail.Path == info.Path && detail.FsiID == fsi.Id
+                                      where detail.Path == fullPath && detail.FsiID == fsi.Id
                                       select detail).FirstOrDefault();
                 return sid;
             }
         }
 
-        public static SyncInfoDetail getSyncInfoDetail(IStorageItem file, FolderSyncInfo fsi)
+        public static SyncInfoDetail GetSyncInfoDetail(IStorageItem file, FolderSyncInfo fsi)
         {
             // Create a new connection
             using (var db = DbConnection)
@@ -115,6 +140,17 @@
                                       where detail.FilePath == file.Path && detail.FsiID == fsi.Id
                                       select detail).FirstOrDefault();
                 return sid;
+            }
+        }
+
+        public static List<SyncInfoDetail> GetAllSyncInfoDetails(FolderSyncInfo fsi)
+        {
+            using (var db = DbConnection)
+            {
+                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
+                                      where detail.FsiID == fsi.Id
+                                      select detail);
+                return sidList.ToList();
             }
         }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NextcloudApp.Models
 {
-    public class SyncInfoDetail
+    public class SyncInfoDetail : IEquatable<SyncInfoDetail>
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
@@ -16,5 +16,20 @@ namespace NextcloudApp.Models
         public int FsiID { get; set; }
         public string Path { get; set; }
         public string FilePath { get; set; }
+        public string Error { get; internal set; }
+
+        public SyncInfoDetail()
+        {
+        }
+
+        public SyncInfoDetail(FolderSyncInfo fsi)
+        {
+            this.FsiID = fsi.Id;
+        }
+
+        public bool Equals(SyncInfoDetail other)
+        {
+            return Id != 0 && other.Id == Id;
+        }
     }
 }
