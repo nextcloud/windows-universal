@@ -32,7 +32,13 @@ namespace NextcloudApp.Models
             return Id != 0 && other.Id == Id;
         }
         
-        public string ToString()
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
+        public override string ToString()
         {
             return "Path: " + detail.Path + " - " +
                 "FilePath: " + detail.FilePath + " - " +
