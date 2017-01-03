@@ -31,5 +31,14 @@ namespace NextcloudApp.Models
         {
             return Id != 0 && other.Id == Id;
         }
+        
+        public string ToString()
+        {
+            return "Path: " + detail.Path + " - " +
+                "FilePath: " + detail.FilePath + " - " +
+                "ETag: " + detail.ETag + " - " +
+                "Modified: " + detail.DateModified.ToString("u") + " - " +
+                "Error: " + detail.Error;
+        }
     }
 }
