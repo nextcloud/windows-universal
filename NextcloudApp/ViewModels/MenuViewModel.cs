@@ -92,7 +92,7 @@ namespace NextcloudApp.ViewModels
 
         private async void GetUserInformation()
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;

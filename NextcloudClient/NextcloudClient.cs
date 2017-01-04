@@ -117,7 +117,7 @@ namespace NextcloudClient
             // Disable the UI mode, we will handle password entry in the app
             _httpBaseProtocolFilter.AllowUI = false;
 
-            _client = new HttpClient(httpBaseProtocolFilter);
+            _client = new HttpClient(_httpBaseProtocolFilter);
             _client.DefaultRequestHeaders["Pragma"] = "no-cache";
 
             var encoded =
@@ -154,6 +154,7 @@ namespace NextcloudClient
                     // an exception will be thrown when trying to access WebDAV resources.
                     _httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
                     _httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+                    _httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
                 }
                 else
                 {
@@ -378,7 +379,26 @@ namespace NextcloudClient
         /// </summary>
         /// <param name="serverUrl">The server URL.</param>
         /// <returns></returns>
+        /// <exception cref="ResponseError">The certificate authority is invalid or incorrect
+        /// or
+        /// The remote server returned an error: (401) Unauthorized. - 401
+        /// or</exception>
         public static async Task<Status> GetServerStatus(string serverUrl)
+        {
+            return await GetServerStatus(serverUrl, false);
+        }
+
+        /// <summary>
+        /// Gets the server status.
+        /// </summary>
+        /// <param name="serverUrl">The server URL.</param>
+        /// <param name="ignoreServerCertificateErrors">if set to <c>true</c> [ignore server certificate errors].</param>
+        /// <returns></returns>
+        /// <exception cref="ResponseError">The certificate authority is invalid or incorrect
+        /// or
+        /// The remote server returned an error: (401) Unauthorized. - 401
+        /// or</exception>
+        public static async Task<Status> GetServerStatus(string serverUrl, bool ignoreServerCertificateErrors)
         {
             // In case the URL has no trailing slash, add it
             if ((serverUrl != null) && !serverUrl.EndsWith("/"))
@@ -388,19 +408,50 @@ namespace NextcloudClient
 
             var url = new Uri(new Uri(serverUrl), "status.php");
 
-            var client = new HttpClient(new HttpBaseProtocolFilter
+            var httpBaseProtocolFilter = new HttpBaseProtocolFilter
             {
                 AllowUI = false,
                 AllowAutoRedirect = false
-            });
+            };
+
+            if (ignoreServerCertificateErrors)
+            {
+                // Specify the certificate errors which should be ignored.
+                // It is recommended to only ignore expired or untrusted certificate errors.
+                // When an invalid certificate is used by the WebDAV server and these errors are not ignored, 
+                // an exception will be thrown when trying to access WebDAV resources.
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
+            }
+
+            var client = new HttpClient(httpBaseProtocolFilter);
 
             client.DefaultRequestHeaders["Pragma"] = "no-cache";
-            var response = await client.GetAsync(url);
+
+            HttpResponseMessage response = null;
+            try
+            {
+                response = await client.GetAsync(url);
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("The certificate authority is invalid or incorrect"))
+                {
+                    throw new ResponseError("The certificate authority is invalid or incorrect");
+                }
+            }
+
+            if (response == null)
+            {
+                return null;
+            }
 
             if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
                 throw new ResponseError("The remote server returned an error: (401) Unauthorized.", "401");
             }
+
             var content = await response.Content.ReadAsStringAsync();
             if (string.IsNullOrEmpty(content))
             {
@@ -416,7 +467,6 @@ namespace NextcloudClient
                 return null;
             }
         }
-
         /// <summary>
         /// Checks the user login.
         /// </summary>
@@ -426,15 +476,51 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password)
         {
+            return await CheckUserLogin(serverUrl, userId, password, false);
+        }
+
+        /// <summary>
+        /// Checks the user login.
+        /// </summary>
+        /// <param name="serverUrl">The server URL.</param>
+        /// <param name="userId">The user identifier.</param>
+        /// <param name="password">The password.</param>
+        /// <param name="ignoreServerCertificateErrors">if set to <c>true</c> [ignore server certificate errors].</param>
+        /// <returns></returns>
+        public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password, bool ignoreServerCertificateErrors)
+        {
+            if (serverUrl == null)
+            {
+                return false;
+            }
+
             // This method is also called on app reset.
             // Only using a HEAD request doesn't seem to work, because in subsequent calls (with wrong user/password), the server always returns HTTP 200 (OK).
             // So we're using an API call here.
-            if ((serverUrl != null) && !serverUrl.EndsWith("/"))
+            if (!serverUrl.EndsWith("/"))
             {
                 serverUrl = serverUrl + "/";
             }
 
-            var client = new NextcloudClient(serverUrl, userId, password);
+            var httpBaseProtocolFilter = new HttpBaseProtocolFilter
+            {
+                AllowUI = false,
+                AllowAutoRedirect = false,
+                ServerCredential = new PasswordCredential(serverUrl, userId, password)
+            };
+
+            if (ignoreServerCertificateErrors)
+            {
+                // Specify the certificate errors which should be ignored.
+                // It is recommended to only ignore expired or untrusted certificate errors.
+                // When an invalid certificate is used by the WebDAV server and these errors are not ignored, 
+                // an exception will be thrown when trying to access WebDAV resources.
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+                httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
+            }
+
+            var client = new NextcloudClient(serverUrl, httpBaseProtocolFilter);
 
             User user = null;
 
