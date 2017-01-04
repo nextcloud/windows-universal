@@ -158,6 +158,7 @@ namespace NextcloudApp
             {
                 SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
                 SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
+                SettingsService.Instance.LocalSettings.ShowUpdateMessage = true;
             }
 
             MigrationService.Instance.StartMigration();
