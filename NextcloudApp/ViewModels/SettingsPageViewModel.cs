@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using Windows.ApplicationModel;
-using Windows.Security.Credentials;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
 using Prism.Commands;
@@ -12,6 +11,7 @@ using Prism.Windows.AppModel;
 using Windows.UI.Xaml.Controls;
 using NextcloudApp.Constants;
 using Windows.UI.Xaml;
+using Prism.Unity.Windows;
 
 namespace NextcloudApp.ViewModels
 {
@@ -24,6 +24,7 @@ namespace NextcloudApp.ViewModels
         private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
+        private bool _ignoreServerCertificateErrors;
 
         public ICommand ResetCommand { get; private set; }
 
@@ -65,7 +66,8 @@ namespace NextcloudApp.ViewModels
                     throw new ArgumentOutOfRangeException();
             }
 
-            this.UseWindowsHello = Settings.UseWindowsHello;
+            UseWindowsHello = Settings.UseWindowsHello;
+            IgnoreServerCertificateErrors = Settings.IgnoreServerCertificateErrors;
 
             ResetCommand = new DelegateCommand(Reset);
 
@@ -74,7 +76,7 @@ namespace NextcloudApp.ViewModels
 
         private async void GetServerVersion()
         {
-            var status = await NextcloudClient.NextcloudClient.GetServerStatus(Settings.ServerAddress);
+            var status = await NextcloudClient.NextcloudClient.GetServerStatus(Settings.ServerAddress, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
             if (!string.IsNullOrEmpty(status.VersionString))
             {
                 ServerVersion = string.Format(_resourceLoader.GetString("ServerVersion"), status.VersionString);
@@ -121,6 +123,37 @@ namespace NextcloudApp.ViewModels
                         break;
                 }
             }
+        }
+
+        public bool IgnoreServerCertificateErrors
+        {
+            get { return _ignoreServerCertificateErrors; }
+            set
+            {
+                if (!SetProperty(ref _ignoreServerCertificateErrors, value))
+                    return;
+
+                Settings.IgnoreServerCertificateErrors = value;
+            }
+        }
+
+        public async void IgnoreServerCertificateErrorsToggled()
+        {
+            ClientService.Reset();
+
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("Hint"),
+                Content = new TextBlock
+                {
+                    Text = _resourceLoader.GetString("AppMustBeRestarted"),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("OK")
+            };
+            await _dialogService.ShowAsync(dialog);
+            PrismUnityApplication.Current.Exit();
         }
 
         public bool UseWindowsHello
@@ -170,7 +203,6 @@ namespace NextcloudApp.ViewModels
         private void Reset()
         {
             SettingsService.Instance.Reset();
-
             _navigationService.Navigate(PageTokens.Login.ToString(), null);
         }
     }

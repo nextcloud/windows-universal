@@ -203,11 +203,52 @@ namespace NextcloudApp.ViewModels
                 {
                     ServerAddress = ServerAddress.Replace("https:", "http:");
                 }
+                else
+                {
+                    return true;
+                }
+            }
+            catch (ResponseError e)
+            {
+                if (e.Message.Equals("The certificate authority is invalid or incorrect"))
+                {
+                    var dialog = new ContentDialog
+                    {
+                        Title = _resourceLoader.GetString("Attention_ExclamationMark"),
+                        Content = new TextBlock
+                        {
+                            Text = _resourceLoader.GetString("TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway"),
+                            TextWrapping = TextWrapping.WrapWholeWords,
+                            Margin = new Thickness(0, 20, 0, 0)
+                        },
+                        PrimaryButtonText = _resourceLoader.GetString("Cancel"),
+                        SecondaryButtonText = _resourceLoader.GetString("Connect2"),
+                        SecondaryButtonCommand = new DelegateCommand(IgnoreServerCertificateErrors)
+                    };
+                    await _dialogService.ShowAsync(dialog);
+                }
+                else
+                {
+                    throw;
+                }
             }
             catch
             {
                 await ShowServerAddressNotFoundMessage();
                 return false;
+            }
+
+            if (SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors)
+            {
+                var response = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress, true);
+                if (response == null)
+                {
+                    ServerAddress = ServerAddress.Replace("https:", "http:");
+                }
+                else
+                {
+                    return true;
+                }
             }
 
             try
@@ -219,12 +260,17 @@ namespace NextcloudApp.ViewModels
                     return false;
                 }
             }
-            catch
+            catch 
             {
                 await ShowServerAddressNotFoundMessage();
                 return false;
             }
             return true;
+        }
+
+        private void IgnoreServerCertificateErrors()
+        {
+            SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors = true;
         }
 
         private async Task ShowServerAddressNotFoundMessage()
@@ -247,7 +293,7 @@ namespace NextcloudApp.ViewModels
         {
             try
             {
-                var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress);
+                var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
                 if (status == null)
                 {
                     await ShowServerAddressNotFoundMessage();
@@ -298,7 +344,7 @@ namespace NextcloudApp.ViewModels
         {
             try
             {
-                return await NextcloudClient.NextcloudClient.CheckUserLogin(ServerAddress, Username, Password);
+                return await NextcloudClient.NextcloudClient.CheckUserLogin(ServerAddress, Username, Password, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
             }
             catch (ResponseError)
             {
