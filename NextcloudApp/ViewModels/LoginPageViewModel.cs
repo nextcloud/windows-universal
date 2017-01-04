@@ -180,8 +180,8 @@ namespace NextcloudApp.ViewModels
                 return;
             }
 
-            SettingsService.Instance.Settings.ServerAddress = ServerAddress;
-            SettingsService.Instance.Settings.Username = Username;
+            SettingsService.Instance.LocalSettings.ServerAddress = ServerAddress;
+            SettingsService.Instance.LocalSettings.Username = Username;
             
             var vault = new PasswordVault();
             vault.Add(new PasswordCredential(ServerAddress, Username, Password));

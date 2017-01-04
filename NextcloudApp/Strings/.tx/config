@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = ja_JP: ja, de_DE: de-DE
+
+[nextcloud.windows-universal]
+file_filter = <lang>/Resources.resw
+source_file = en-US/Resources.resw
+source_lang = en-US
+type = RESX

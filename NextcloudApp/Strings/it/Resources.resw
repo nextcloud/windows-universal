@@ -118,258 +118,258 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Alle Dateien</value>
+    <value>Tutti i file</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Immer</value>
+    <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ein Fehler ist aufgetreten</value>
+    <value>Si è verificato un errore</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Hinzufügen</value>
+    <value>Aggiungi</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Ordner erstellen</value>
+    <value>Crea cartella</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Bild aufnehmen</value>
+    <value>Scatta una foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Dateien hochladen</value>
+    <value>Carica file</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Fotos hochladen</value>
+    <value>Carica foto</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Herunterladen</value>
+    <value>Scarica</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Aktualisieren</value>
+    <value>Aggiorna</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sortieren</value>
+    <value>Ordina</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (Älteste nach oben)</value>
+    <value>Data (il più vecchio in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (Neueste nach oben)</value>
+    <value>Data (il più nuovo in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Name (A nach oben)</value>
+    <value>Nome (A in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z nach oben)</value>
+    <value>Nome (Z in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Größe (Kleinste nach oben)</value>
+    <value>Dimensione (più piccolo in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Größe (Größte nach oben)</value>
+    <value>Dimensione (più grande in alto)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Anwendungsfehler</value>
+    <value>Errore dell&apos;applicazione</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>In der Anwendung ist ein Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten. Wenn Sie in der Mitte von etwas waren, sind die Informationen, an denen Sie gearbeitet haben, verloren.
+    <value>L&apos;applicazione ha riscontrato un problema. Ci scusiamo per l&apos;inconveniente. Se stavi lavorando a qualcosa, l&apos;informazione è stata persa.
 
-Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resoconto di errore preparato? Ciò aiuterà a eliminare il problema più rapidamente. </value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Annulla</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Impossibile creare la cartella</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Connetti</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Tipo di contenuto</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Erstellen</value>
+    <value>Crea</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Erstellt</value>
+    <value>Creato</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Neuen Ordner erstellen</value>
+    <value>Crea una nuova cartella</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Herunterladen der Datei…</value>
+    <value>Scaricamento del file in corso...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Bildvorschau herunterladen</value>
+    <value>Scarica immagini di anteprima</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} Byte)</value>
+    <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Ordnername</value>
+    <value>Nome della cartella</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informationen</value>
+    <value>Informazioni</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Zuletzt geändert</value>
+    <value>Ultima modifica</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Nome</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nie</value>
+    <value>Mai</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Neuer Ordner</value>
+    <value>Nuova cartella</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nein</value>
+    <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nicht berechtigt</value>
+    <value>Non autorizzato</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Il server ha restituito un codice di errore 401 (Non autorizzato). Accedi nuovamente.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Passwort</value>
+    <value>Password</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pfad</value>
+    <value>Percorso</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} von {1} verwendet</value>
+    <value>{0} di {1} utilizzati</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Diese App zurücksetzen</value>
+    <value>Ripristina questa applicazione</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Wiederholen</value>
+    <value>Riprova</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Serveradresse</value>
+    <value>Indirizzo del server</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Impostazioni</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Impostazioni</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Gruppierung von Datei- und Ordner-Liste anzeigen</value>
+    <value>Mostra il raggruppamento di file e cartelle</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Größe</value>
+    <value>Dimensione</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Esiste già un elemento con questo nome. Specifica un nome diverso.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Typ</value>
+    <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Benutzername</value>
+    <value>Nome utente</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
+    <value>Versione {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Nur über WLAN</value>
+    <value>Solo quando sono in Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ja</value>
+    <value>Sì</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Elimina</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Datei löschen</value>
+    <value>Elimina file</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>Vuoi davvero eliminare il file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Ordner löschen</value>
+    <value>Elimina cartella</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Vuoi davvero eliminare la cartella {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} hochgeladen</value>
+    <value>{0} di {1} caricati</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Lade Datei {0} von {1} hoch…</value>
+    <value>Caricamento file {0} di {1} in corso...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Hochladen der Datei…</value>
+    <value>Caricamento del file in corso...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} heruntergeladen</value>
+    <value>{0} di {1} scaricati</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Der Maintenance-Mode ist auf dem Server aktiviert.</value>
+    <value>La modalità di manutenzione è abilitata sul server.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Falscher Benutzername oder Passwort</value>
+    <value>Nome utente o password errati.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Client-Version {0}</value>
+    <value>Versione {0} del client</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Der Servername oder die Adresse konnten nicht aufgelöst werden.</value>
+    <value>Il nome del server o l&apos;indirizzo non può essere risolto.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Server-Version {0}</value>
+    <value>Versione {0} del server</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Elimina</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>auf Antwort des Servers warten</value>
+    <value>In attesa di risposta del server</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Scegli un nuovo nome</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Rinomina</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Umbennen</value>
+    <value>Rinomina</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Rinomina</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Sposta in</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Sposta in</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Annulla</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fertig</value>
+    <value>Fatto</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Ordner auswählen</value>
+    <value>Scegli cartella</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Der Server unter {0} ist nicht erreichbar.</value>
+    <value>Il server con l&apos;indirizzo {0} non è raggiungibile.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Herunterladen als ZIP Datei</value>
+    <value>Scarica come file ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} heruntergeladen</value>
+    <value>{0} scaricati</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>

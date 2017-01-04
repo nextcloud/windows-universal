@@ -9,24 +9,30 @@ using Prism.Commands;
 using Prism.Windows.Navigation;
 using NextcloudApp.Utils;
 using Prism.Windows.AppModel;
+using Windows.UI.Xaml.Controls;
+using NextcloudApp.Constants;
+using Windows.UI.Xaml;
 
 namespace NextcloudApp.ViewModels
 {
     public class SettingsPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationService;
-        private Settings _settngs;
+        private readonly DialogService _dialogService;
+        private LocalSettings _settngs;
         private int _previewImageDownloadModesSelectedIndex;
+        private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
 
         public ICommand ResetCommand { get; private set; }
 
-        public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
+        public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
-            Settings = SettingsService.Instance.Settings;
+            _dialogService = dialogService;
+            Settings = SettingsService.Instance.LocalSettings;
 
             PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
             {
@@ -59,6 +65,8 @@ namespace NextcloudApp.ViewModels
                     throw new ArgumentOutOfRangeException();
             }
 
+            this.UseWindowsHello = Settings.UseWindowsHello;
+
             ResetCommand = new DelegateCommand(Reset);
 
             GetServerVersion();
@@ -79,7 +87,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _serverVersion, value); }
         }
 
-        public Settings Settings
+        public LocalSettings Settings
         {
             get { return _settngs; }
             private set { SetProperty(ref _settngs, value); }
@@ -115,6 +123,44 @@ namespace NextcloudApp.ViewModels
             }
         }
 
+        public bool UseWindowsHello
+        {
+            get { return _useWindowsHello; }
+            set
+            {
+                if (!SetProperty(ref _useWindowsHello, value))
+                    return;
+
+                Settings.UseWindowsHello = value;
+            }
+        }
+
+        public async void UseWindowsHelloToggled()
+        {
+            if (UseWindowsHello)
+            {
+                var available = await VerificationService.CheckAvailabilityAsync();
+
+                if (!available)
+                {
+                    var dialog = new ContentDialog
+                    {
+                        Title = _resourceLoader.GetString(ResourceConstants.DialogTitle_GeneralNextCloudApp),
+                        Content = new TextBlock
+                        {
+                            Text = _resourceLoader.GetString(ResourceConstants.WindowsHelloNotAvailable),
+                            TextWrapping = TextWrapping.WrapWholeWords,
+                            Margin = new Thickness(0, 20, 0, 0)
+                        },
+                        PrimaryButtonText = _resourceLoader.GetString("OK")
+                    };
+                    await _dialogService.ShowAsync(dialog);
+
+                    UseWindowsHello = false;
+                }
+            }
+        }
+
         public string AppVersion
             =>
                 string.Format(_resourceLoader.GetString("ClientVersion"),
@@ -123,13 +169,6 @@ namespace NextcloudApp.ViewModels
 
         private void Reset()
         {
-            var vault = new PasswordVault();
-            var credentialList = vault.FindAllByResource(SettingsService.Instance.Settings.ServerAddress);
-            foreach (var credential in credentialList)
-            {
-                vault.Remove(credential);
-            }
-
             SettingsService.Instance.Reset();
 
             _navigationService.Navigate(PageTokens.Login.ToString(), null);

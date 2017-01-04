@@ -118,258 +118,258 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Alle Dateien</value>
+    <value>Të gjitha dosjet</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Immer</value>
+    <value>Gjithmonë</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ein Fehler ist aufgetreten</value>
+    <value>Ka ndodhur një gabim</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Hinzufügen</value>
+    <value>Shto</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Ordner erstellen</value>
+    <value>Krijo dosje</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Bild aufnehmen</value>
+    <value>Bëj një foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Dateien hochladen</value>
+    <value>Ngarko skedarët</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Fotos hochladen</value>
+    <value>Ngarko foto</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Herunterladen</value>
+    <value>Shkarko</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Aktualisieren</value>
+    <value>Rifresko</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sortieren</value>
+    <value>Rendit</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (Älteste nach oben)</value>
+    <value>Data (me e vjetra ne krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (Neueste nach oben)</value>
+    <value>Data (me e reja ne krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Name (A nach oben)</value>
+    <value>Emri (A-ja ne krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z nach oben)</value>
+    <value>Emri (Z-ja ne Krye)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Größe (Kleinste nach oben)</value>
+    <value>Madhësia (me e vogla ne krye)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Größe (Größte nach oben)</value>
+    <value>Madhësia (me e madhja ne krye)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Anwendungsfehler</value>
+    <value>Gabim ne Aplikacion</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>In der Anwendung ist ein Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten. Wenn Sie in der Mitte von etwas waren, sind die Informationen, an denen Sie gearbeitet haben, verloren.
+    <value>Aplikacioni ka hasur një problem. Ju kërkojmë ndjesë për shqetësimin. Në qoftë se ishit në mes të dickaje, të dhënat që ishit duke përpunuar kanë humbur.
 
-Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dërgoni raportin e gabimit? Kjo ndihmon në eleminimin e problemit më shpejt.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Anulo</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Nuk mund të krijojë dosje </value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Lidhuni </value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Lloji i lidhjes</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Erstellen</value>
+    <value>Krijoni</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Erstellt</value>
+    <value>U krijua</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Neuen Ordner erstellen</value>
+    <value>Krijoni një dosje të re</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Herunterladen der Datei…</value>
+    <value>Duke shkarkuar dosjen...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Bildvorschau herunterladen</value>
+    <value>Parapamja e imazhit te shkarkuar</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} Byte)</value>
+    <value>{0} ({1} bajt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Ordnername</value>
+    <value>Emri i dosjes</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informationen</value>
+    <value>Të dhëna</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Zuletzt geändert</value>
+    <value>Ndryshuar së fundmi</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Emri</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nie</value>
+    <value>Asnjëherë</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Neuer Ordner</value>
+    <value>Dosje e re</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nein</value>
+    <value>Jo</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nicht berechtigt</value>
+    <value>E pa autorizuar</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Ky shërbyes kthehu nje kode gabimi 401 (I Paautorizuar). Ju lutem identifikohuni dhe njëherë.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Passwort</value>
+    <value>Fjalëkalimi</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pfad</value>
+    <value>Rrugë</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} von {1} verwendet</value>
+    <value>Përdorur {0} nga {1} </value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Diese App zurücksetzen</value>
+    <value>Rifresko aplikacionin</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Wiederholen</value>
+    <value>Riprovoni</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Serveradresse</value>
+    <value>Adresa e serverit</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Konfigurime</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Konfigurime</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Gruppierung von Datei- und Ordner-Liste anzeigen</value>
+    <value>Shfaq listën e grupimit të skedarëve dhe dosjeve</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Größe</value>
+    <value>Madhësia</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Një element me këtë emër ekziston. Specifiko një emër tjetër. </value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Typ</value>
+    <value>Shtypni</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Benutzername</value>
+    <value>Emri i përdoruesit</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
+    <value>Versioni {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Nur über WLAN</value>
+    <value>Vetëm kur jam në Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ja</value>
+    <value>Po</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Fshini</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Datei löschen</value>
+    <value>Fshini skedarin</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>A jeni të sigurt që doni ta fshini skedarin {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Ordner löschen</value>
+    <value>Fshini dosjen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>A jeni të sigurt që doni ta fshini dosjen{0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} hochgeladen</value>
+    <value>Ngarkuar {0} nga {1} </value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Lade Datei {0} von {1} hoch…</value>
+    <value>Duke ngarkuar skedarin {0} nga {1}</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Hochladen der Datei…</value>
+    <value>Duke ngarkuar skedarin...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} heruntergeladen</value>
+    <value>Sharkuar {0} nga {1} </value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Der Maintenance-Mode ist auf dem Server aktiviert.</value>
+    <value>Gjëndja e mirëmbajtjes eshte aktivizuar ne shërbyes.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Falscher Benutzername oder Passwort</value>
+    <value>Emër përdoruesi ose fjalëkalim i gabuar.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Client-Version {0}</value>
+    <value>Versioni klient {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Der Servername oder die Adresse konnten nicht aufgelöst werden.</value>
+    <value>Emri ose adresa e serverit nuk mund të zgjidhet.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Server-Version {0}</value>
+    <value>Versioni i serverit {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Fshini</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>auf Antwort des Servers warten</value>
+    <value>duke pritur përgjigjen e serverit</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Ju lutem, zgjidhni një emër të ri</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Riemërtoni</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Umbennen</value>
+    <value>Riemërtoni</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Riemërtoni</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Shkoni te</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Shkoni te</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Anuloni</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fertig</value>
+    <value>U bë</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Ordner auswählen</value>
+    <value>Zgjidhni dosjen</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Der Server unter {0} ist nicht erreichbar.</value>
+    <value>Serveri me adresën {0} nuk është i arritshëm.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Herunterladen als ZIP Datei</value>
+    <value>Shkarkoni si skedar ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} heruntergeladen</value>
+    <value>Sharkuar {0} </value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>

@@ -118,258 +118,258 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Alle Dateien</value>
+    <value>Összes fájl</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Immer</value>
+    <value>Mindig</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ein Fehler ist aufgetreten</value>
+    <value>Hiba történt</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Hinzufügen</value>
+    <value>Hozzáadás</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Ordner erstellen</value>
+    <value>Mappa létrehozás</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Bild aufnehmen</value>
+    <value>Kép készítés</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Dateien hochladen</value>
+    <value>Fájlok feltöltése</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Fotos hochladen</value>
+    <value>Fényképek feltöltése</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Herunterladen</value>
+    <value>Letöltés</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Aktualisieren</value>
+    <value>Frissítés</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sortieren</value>
+    <value>Rendezés</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (Älteste nach oben)</value>
+    <value>Dátum (régebbiek felül)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (Neueste nach oben)</value>
+    <value>Dátum (újabbak felül)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Name (A nach oben)</value>
+    <value>Név (A betűsek felül)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z nach oben)</value>
+    <value>Név (Z betűsek felül)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Größe (Kleinste nach oben)</value>
+    <value>Méret (kisebbek felül)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Größe (Größte nach oben)</value>
+    <value>Méret (nagyobbak felül)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Anwendungsfehler</value>
+    <value>Alkalmazás hiba</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>In der Anwendung ist ein Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten. Wenn Sie in der Mitte von etwas waren, sind die Informationen, an denen Sie gearbeitet haben, verloren.
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
 
-Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Mégsem</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Nem lehet létrehozni a mappát</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Kapcsolódás</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Tartalom típus</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Erstellen</value>
+    <value>Létrehoz</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Erstellt</value>
+    <value>Létrehozva</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Neuen Ordner erstellen</value>
+    <value>Új mappa létrehozás</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Herunterladen der Datei…</value>
+    <value>A fájl letöltése...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Bildvorschau herunterladen</value>
+    <value>Előnézeti képek letöltése</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} Byte)</value>
+    <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Ordnername</value>
+    <value>Mappa név</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informationen</value>
+    <value>Információ</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Zuletzt geändert</value>
+    <value>Utoljára módosítva</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Name</value>
+    <value>Név</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nie</value>
+    <value>Soha</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Neuer Ordner</value>
+    <value>Új mappa</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nein</value>
+    <value>Nem</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nicht berechtigt</value>
+    <value>Nem engedélyezett</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>A szerver 401-es (jogosulatlan) hibakóddal tért vissza. Kérlek jelentkezz be újra.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Passwort</value>
+    <value>Jelszó</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pfad</value>
+    <value>Útvonal</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} von {1} verwendet</value>
+    <value>{0} / {1} használt</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Diese App zurücksetzen</value>
+    <value>Alkalmazás visszaállítás</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Wiederholen</value>
+    <value>Újra</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Serveradresse</value>
+    <value>Szerver cím</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Beállítások</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Einstellungen</value>
+    <value>Beállítások</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Gruppierung von Datei- und Ordner-Liste anzeigen</value>
+    <value>Fájlok és mappák listájának megjelenítése csoportosítva</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Größe</value>
+    <value>Méret</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Már van egy elem ezzel a névvel. Adj meg egy másik nevet.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Typ</value>
+    <value>Típus</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Benutzername</value>
+    <value>Felhasználónév</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
+    <value>Verzió {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Nur über WLAN</value>
+    <value>Csak ha WiFi hálózaton vagyok</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ja</value>
+    <value>Igen</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Törlés</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Datei löschen</value>
+    <value>Fájl törlés</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>Biztos, hogy törölni szeretnéd ezt a fájlt: {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Ordner löschen</value>
+    <value>Mappa törlés</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Biztos, hogy törölni szeretnéd ezt a mappát: {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} hochgeladen</value>
+    <value>{0} / {1} feltöltve</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Lade Datei {0} von {1} hoch…</value>
+    <value>{0} / {1} fájl feltöltése...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Hochladen der Datei…</value>
+    <value>Fájl feltöltése...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} von {1} heruntergeladen</value>
+    <value>{0} / {1} letöltve</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Der Maintenance-Mode ist auf dem Server aktiviert.</value>
+    <value>A szerveren be van kapcsolva a karbantartási mód.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Falscher Benutzername oder Passwort</value>
+    <value>Hibás felhasználónév vagy jelszó.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Client-Version {0}</value>
+    <value>Kliens verzió {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Der Servername oder die Adresse konnten nicht aufgelöst werden.</value>
+    <value>A szerver neve vagy címe nem oldható fel.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Server-Version {0}</value>
+    <value>Szerver verzió {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Löschen</value>
+    <value>Törlés</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>auf Antwort des Servers warten</value>
+    <value>várakozás a szerver válaszára</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Kérlek válassz új nevet</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Átnevezés</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Umbennen</value>
+    <value>Átnevezés</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Umbenennen</value>
+    <value>Átnevezés</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Áthelyezés ide</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Verschieben nach</value>
+    <value>Áthelyezés ide</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Abbrechen</value>
+    <value>Mégsem</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fertig</value>
+    <value>Kész</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Ordner auswählen</value>
+    <value>Válassz mappát</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Der Server unter {0} ist nicht erreichbar.</value>
+    <value>A következő című szerver nem érhető el: {0}</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Herunterladen als ZIP Datei</value>
+    <value>Letöltés ZIP fájlként</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} heruntergeladen</value>
+    <value>{0} letöltve</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>

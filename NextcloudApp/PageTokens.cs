@@ -9,6 +9,7 @@
         SingleFileDownload,
         BulkFileDownload,
         FileUpload,
-        MoveFileOrFolder
+        MoveFileOrFolder,
+        Verification
     }
 }

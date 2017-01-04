@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Microsoft.Practices.Unity;
@@ -144,19 +145,19 @@ namespace NextcloudApp
             DeviceGestureService.GoBackRequested += DeviceGestureServiceOnGoBackRequested;
 
             // Just count total app starts
-            SettingsService.Instance.Settings.AppTotalRuns = SettingsService.Instance.Settings.AppTotalRuns + 1;
+            SettingsService.Instance.LocalSettings.AppTotalRuns = SettingsService.Instance.LocalSettings.AppTotalRuns + 1;
 
             // Count app starts after last update
             var currentVersion =
                 $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
-            if (currentVersion == SettingsService.Instance.Settings.AppRunsAfterLastUpdateVersion)
+            if (currentVersion == SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion)
             {
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdate = SettingsService.Instance.Settings.AppRunsAfterLastUpdate + 1;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate + 1;
             }
             else
             {
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdateVersion = currentVersion;
-                SettingsService.Instance.Settings.AppRunsAfterLastUpdate = 1;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
+                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
             }
 
             MigrationService.Instance.StartMigration();
@@ -167,25 +168,38 @@ namespace NextcloudApp
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
             if (
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.ServerAddress) ||
-                string.IsNullOrEmpty(SettingsService.Instance.Settings.Username)
+                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
+                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
-                //var loadState = args.PreviousExecutionState == ApplicationExecutionState.Terminated;
-                //NavigationService.Navigate(PageTokens.Login.ToString(), loadState);
                 NavigationService.Navigate(PageTokens.Login.ToString(), null);
             }
             else
             {
                 var vault = new PasswordVault();
-                var credentials = vault.Retrieve(
-                    SettingsService.Instance.Settings.ServerAddress,
-                    SettingsService.Instance.Settings.Username
-                );
 
-                if (!string.IsNullOrEmpty(credentials?.Password))
+                var credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
+
+                if (credential != null)
                 {
-                    NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                    credential.RetrievePassword();
+                    if (!string.IsNullOrEmpty(credential.Password))
+                    {
+                        if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+                        {
+                            NavigationService.Navigate(PageTokens.Verification.ToString(),
+                                PageTokens.DirectoryList.ToString());
+                        }
+                        else
+                        {
+                            NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                        }
+                    }
+                    else
+                    {
+                        NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                    }
                 }
                 else
                 {
@@ -195,7 +209,7 @@ namespace NextcloudApp
 
             // Ensure the current window is active
             Window.Current.Activate();
-            
+
             return Task.FromResult(true);
         }
 

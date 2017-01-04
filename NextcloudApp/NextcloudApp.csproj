@@ -98,6 +98,16 @@
     </Content>
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\sv\Resources.resw" />
+    <PRIResource Include="Strings\sq\Resources.resw" />
+    <PRIResource Include="Strings\pt_BR\Resources.resw" />
+    <PRIResource Include="Strings\nl\Resources.resw" />
+    <PRIResource Include="Strings\it\Resources.resw" />
+    <PRIResource Include="Strings\hu_HU\Resources.resw" />
+    <PRIResource Include="Strings\fr\Resources.resw" />
+    <PRIResource Include="Strings\es\Resources.resw" />
+    <PRIResource Include="Strings\en\Resources.resw" />
+    <PRIResource Include="Strings\de\Resources.resw" />
     <PRIResource Include="Strings\de-DE\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
@@ -110,12 +120,14 @@
     </Compile>
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
+    <Compile Include="Constants\ResourceConstants.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
+    <Compile Include="Models\RoamingSettings.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
@@ -126,6 +138,9 @@
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
+    <Compile Include="Services\VerificationService.cs" />
+    <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
+    <Compile Include="Utils\ObservableSettings.cs" />
     <Compile Include="Services\TileService.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
@@ -139,7 +154,7 @@
     <Compile Include="Converter\DateTimeToStringConverter.cs" />
     <Compile Include="Models\FileOrFolder.cs" />
     <Compile Include="Models\PathInfo.cs" />
-    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\LocalSettings.cs" />
     <Compile Include="PageTokens.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
@@ -158,6 +173,7 @@
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
+    <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
@@ -186,6 +202,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VerificationPage.xaml.cs">
+      <DependentUpon>VerificationPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +280,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\VerificationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NextcloudClient\NextcloudClient.csproj">
@@ -271,11 +294,9 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="SampleData\" />
+    <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
-      <Name>Behaviors SDK %28XAML%29</Name>
-    </SDKReference>
     <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>

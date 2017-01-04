@@ -15,6 +15,7 @@ using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
 using DecaTec.WebDav;
 using Windows.Security.Credentials;
+using Windows.Security.Cryptography.Certificates;
 
 namespace NextcloudClient
 {
@@ -74,28 +75,45 @@ namespace NextcloudClient
         /// <param name="password">Password.</param>
         public NextcloudClient(string url, string userId, string password)
         {
+            if (url == null)
+            {
+                return;
+            }
+
             // In case URL has a trailing slash remove it
-            if ((url != null) && url.EndsWith("/"))
+            if (url.EndsWith("/"))
             {
                 url = url.TrimEnd('/');
             }
 
             _url = url;
 
-            _client = new HttpClient(new HttpBaseProtocolFilter
+            var httpBaseProtocolFilter = new HttpBaseProtocolFilter
             {
                 // Disable the UI mode, we will handle password entry in the app
                 AllowUI = false
-            });
+            };
+
+            // Specify the certificate errors which should be ignored.
+            // It is recommended to only ignore expired or untrusted certificate errors.
+            // When an invalid certificate is used by the WebDAV server and these errors are not ignored, 
+            // an exception will be thrown when trying to access WebDAV resources.
+            httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
+            httpBaseProtocolFilter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
+
+            // Specify the user credentials and pass it to a HttpBaseProtocolFilter.
+            var credentials = new PasswordCredential(_url, userId, password);
+            httpBaseProtocolFilter.ServerCredential = credentials;
+
+            _client = new HttpClient(httpBaseProtocolFilter);
             _client.DefaultRequestHeaders["Pragma"] = "no-cache";
 
             var encoded =
                 Convert.ToBase64String(
                     Encoding.GetEncoding("ISO-8859-1").GetBytes(userId + ":" + password));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
-
-            var credentials = new PasswordCredential(_url, userId, password);
-            _dav = new WebDavSession(_url, credentials);
+            
+            _dav = new WebDavSession(_url, httpBaseProtocolFilter);
         }
 
         #endregion
@@ -362,36 +380,27 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password)
         {
-            // In case the URL has no trailing slash, add it
+            // This method is also called on app reset.
+            // Only using a HEAD request doesn't seem to work, because in subsequent calls (with wrong user/password), the server always returns HTTP 200 (OK).
+            // So we're using an API call here.
             if ((serverUrl != null) && !serverUrl.EndsWith("/"))
             {
                 serverUrl = serverUrl + "/";
             }
 
-            var url = new Uri(new Uri(serverUrl), Davpath);
+            var client = new NextcloudClient(serverUrl, userId, password);
 
-            var client = new HttpClient(new HttpBaseProtocolFilter { AllowUI = false });
+            User user = null;
 
-            client.DefaultRequestHeaders["Pragma"] = "no-cache";
-
-            var encoded =
-                Convert.ToBase64String(
-                    Encoding.GetEncoding("ISO-8859-1").GetBytes(userId + ":" + password));
-            client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
-
-            var request = new HttpRequestMessage(HttpMethod.Head, url);
-            var response = await client.SendRequestAsync(request);
-
-            switch (response.StatusCode)
+            try
             {
-                case HttpStatusCode.Ok:
-                    return true;
-
-                case HttpStatusCode.Unauthorized:
-                    return false;
+                user = await client.GetUserAttributes(userId);
+            }
+            catch
+            {
             }
 
-            return false;
+            return user != null;    
         }
 
         /// <summary>
@@ -872,7 +881,7 @@ namespace NextcloudClient
         /// <returns>The user attributes.</returns>
         /// <param name="username">Username.</param>
         public async Task<User> GetUserAttributes(string username)
-        {
+        {            
             var response = await DoApiRequest(
                 "GET",
                 "/" + GetOcsPath(OcsServiceCloud, "users") + "/" + username

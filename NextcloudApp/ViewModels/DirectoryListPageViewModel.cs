@@ -16,7 +16,7 @@ namespace NextcloudApp.ViewModels
 {
     public class DirectoryListPageViewModel : ViewModel
     {
-        private Settings _settngs;
+        private LocalSettings _settngs;
         private DirectoryService _directoryService;
         private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
@@ -319,7 +319,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _directoryService, value); }
         }
 
-        public Settings Settings
+        public LocalSettings Settings
         {
             get { return _settngs; }
             private set { SetProperty(ref _settngs, value); }
