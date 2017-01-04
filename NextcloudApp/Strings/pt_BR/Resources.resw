@@ -371,27 +371,56 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>{0} baixado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Para acessar o seu Nextcloud, forneça as informações de início de sessão para o seu dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Janela Olá de autenticação</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Não há PIN definido para este dispositivo. Para usar o Janela Olá de autenticação, é necessário definir um PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Baixar</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Uma conexão é requerida</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Não podemos abrir o Nextcloud até que você forneça as informações de login do dispositivo.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Tente novamente</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud para Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Seu aplicativo foi atualizado para a versão {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Novos recursos e melhorias nesta versão:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Recomendar</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Mover arquivos e pastas
+• Renomear arquivos e pastas
+• Baixar diretórios como arquivo zip 
+• Selecionar vários arquivos e pastas
+• Pinar arquivos e pastas para iniciar tela
+• Use o Windows Hello para autenticar no início do aplicativo
+• Permitir certificados SSL auto-assinados
+• Mostrar o tamanho da pasta na lista
+• Manipular a ativação do arquivo
+• Usar o PasswordVault para armazenar credenciais de usuário
+• Melhorias de segurança &amp; correções de bugs
+• Biblioteca WebDAV nova e mais estável</value>
   </data>
 </root>
