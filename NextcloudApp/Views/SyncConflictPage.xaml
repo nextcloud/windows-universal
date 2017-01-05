@@ -12,79 +12,16 @@
 
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
-        <ListBox 
-            x:Name="PathList" 
-            ItemsSource="{Binding PathStack}"
-            SelectionMode="Single"
-            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
-            Margin="48,0,0,0">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-
-            <ListBox.Template>
-                <ControlTemplate TargetType="ItemsControl">
-                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
-                        <ItemsPresenter/>
-                    </ScrollViewer>
-                </ControlTemplate>
-            </ListBox.Template>
-
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding ResourceInfo.Name}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListBoxItem">
-                                <StackPanel 
-                                    Orientation="Horizontal" 
-                                    Height="48">
-                                    <FontIcon 
-                                        Glyph="&#xE26B;"
-                                        FontSize="8"
-                                        Margin="0,0,8,0"
-                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
-                                    <FontIcon 
-                                        Glyph="{StaticResource NextclousLogo}"
-                                        FontFamily="{StaticResource NextcloudIcons}"
-                                        Margin="8,0,8,0"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    <ContentPresenter 
-                                        VerticalAlignment="Center" 
-                                        Margin="0,0,8,0"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListBox.ItemContainerStyle>
-
-            <interactivity:Interaction.Behaviors>
-                <behaviors:ScrollListBoxToEndBehavior/>
-            </interactivity:Interaction.Behaviors>
-        </ListBox>
+       
 <!-- Pivot with two tabs Conflicts/Errors -->
-        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <!-- multi select ListView -->
         </ScrollViewer>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
             <!-- Buttons for fix options -->
             <AppBarButton 
                 Icon="" 
