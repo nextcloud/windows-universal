@@ -106,7 +106,7 @@ namespace NextcloudApp.ViewModels
 
         private async void DownloadPreviewImages()
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;
