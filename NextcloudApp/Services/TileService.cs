@@ -61,7 +61,7 @@ namespace NextcloudApp.Services
         /// <param name="resourceInfo">The resource information.</param>
         public async void CreatePinnedObject(ResourceInfo resourceInfo)
         {
-            var id = resourceInfo.Path.ToBase64();
+            var id = (resourceInfo.Path + "/" + resourceInfo.Name).ToBase64();
             if (!IsTilePinned(id))
             {
                 var arguments = resourceInfo.Serialize();

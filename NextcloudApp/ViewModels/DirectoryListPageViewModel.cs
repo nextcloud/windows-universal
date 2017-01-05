@@ -47,8 +47,10 @@ namespace NextcloudApp.ViewModels
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            Settings = SettingsService.Instance.Settings;
             _tileService = TileService.Instance;
+
+            Settings = SettingsService.Instance.LocalSettings;
+
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
