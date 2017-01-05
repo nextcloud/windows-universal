@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -179,7 +180,15 @@ namespace NextcloudApp
             {
                 var vault = new PasswordVault();
 
-                var credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                IReadOnlyList<PasswordCredential> credentialList = null;
+                try
+                {
+                    credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                }
+                catch
+                {
+                    // ignored
+                }
                 var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
 
                 if (credential != null)
