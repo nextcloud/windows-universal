@@ -30,7 +30,7 @@ namespace NextcloudApp.Services
             this.baseFolder = startFolder;
             this.folderSyncInfo = syncInfo;
             this.resourceInfo = resourceInfo;
-            sidList = new List();
+            sidList = new List<SyncInfoDetail>();
             client = ClientService.GetClient();
             if (client == null)
             {
@@ -66,7 +66,7 @@ namespace NextcloudApp.Services
                 success = await SyncFolder(resourceInfo, baseFolder);
                 foreach (SyncInfoDetail detail in oldList)
                 {
-                    if(!sidList.Contains(detail)
+                    if(!sidList.Contains(detail))
                     {
                         // The items left here must be deleted both remotely and locally so the sid is obsolete.
                         SyncDbUtils.DeleteSyncInfoDetail(detail, false);
@@ -388,7 +388,7 @@ namespace NextcloudApp.Services
                 success = false;
             }            
             Debug.WriteLine("Synced file " + sid.ToString());
-            sidList.Add(sid):
+            sidList.Add(sid);
             SyncDbUtils.SaveSyncInfoDetail(sid);
             return success;
         }
