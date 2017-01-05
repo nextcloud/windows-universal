@@ -142,7 +142,7 @@
     <value>Ladda upp foton</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Ladda ner</value>
+    <value>Ladda ned</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Uppdatera</value>
@@ -198,10 +198,10 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Skapa en ny mapp</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Laddar ner filen...</value>
+    <value>Laddar ned filen...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Ladda ner förhandsvisningsbilder</value>
+    <value>Ladda ned förhandsvisningsbilder</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -366,7 +366,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Servern med adress {0} kan inte nås.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Ladda ner ZIP-fil</value>
+    <value>Ladda ned ZIP-fil</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} nedladdade</value>
@@ -378,10 +378,10 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>&quot;Windows Hello&quot; autentisering</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Ingen PIN är inställd för den här enheten. För att kunna använda Windows Hello måste en PIN-kod finnas.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Ladda ner</value>
+    <value>Ladda ned</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>NextCloud</value>
@@ -423,5 +423,25 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
 • Använd &quot;PasswordVault&quot; för att spara användaruppgifter
 • Säkerhetsförbättringar och buggfixar
 • Nytt och mer stabilt WebDAV bibliotek</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Attention!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>The app must be restarted</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
   </data>
 </root>

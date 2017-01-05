@@ -424,4 +424,24 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Sicherheitsverbesserungen und Fehlerbeseitigung
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Attention!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>The app must be restarted</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
+  </data>
 </root>
