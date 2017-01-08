@@ -286,7 +286,7 @@
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                         <MenuFlyoutItem 
-                                            Tag="Sync"
+                                            Tag="SyncFolder"
                                             x:Uid="Synchronize"
                                             Text="Synchronize"
                                             Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
@@ -294,7 +294,7 @@
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
                                         <MenuFlyoutItem 
-                                            Tag="Sync"
+                                            Tag="UnSyncFolder"
                                             x:Uid="StopSynchronize"
                                             Text="Stop Synchronizing"
                                             Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"

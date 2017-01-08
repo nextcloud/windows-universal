@@ -12,7 +12,7 @@ namespace NextcloudApp.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string ETag { get; set; }
-        public DateTimeOffset DateModified { get; set; }
+        public DateTimeOffset? DateModified { get; set; }
         public int FsiID { get; set; }
         public string Path { get; set; }
         public string FilePath { get; set; }
@@ -40,11 +40,12 @@ namespace NextcloudApp.Models
         /// </returns>
         public override string ToString()
         {
-            return "Path: " + detail.Path + " - " +
-                "FilePath: " + detail.FilePath + " - " +
-                "ETag: " + detail.ETag + " - " +
-                "Modified: " + detail.DateModified.ToString("u") + " - " +
-                "Error: " + detail.Error;
+            string datemodified = DateModified.HasValue ? DateModified.Value.ToString("u") : "";
+            return "Path: " + Path + " - " +
+                "FilePath: " + FilePath + " - " +
+                "ETag: " + ETag + " - " +
+                "Modified: " + datemodified + " - " +
+                "Error: " + Error;
         }
     }
 }

@@ -264,15 +264,13 @@ namespace NextcloudApp.Services
                     currentModified = basicProperties.DateModified;
                 }
 
-                if (sid.Path == null || sid.FilePath == null)
+                if (sid.Path == null && sid.FilePath == null)
                 {
                     if (file != null && info != null)
                     {
                         sid.Path = info.Path + "/" + info.Name;
                         sid.FilePath = file.Path;
-                        sid.ETag = info.ETag;
-                        sid.DateModified = currentModified;
-                        sid.Error = "File has been created remotely and locally - which is the correct one?";
+                        sid.Error = "Conflict: File has been created remotely and locally - which is the correct one?";
                         Debug.WriteLine("Sync file: Conflict (both new) " + info.Path + "/" + info.Name);
                     } else if (file != null)
                     {
@@ -313,9 +311,9 @@ namespace NextcloudApp.Services
                     }
                 } else
                 {
-                    if (info == null)
+                    if (info == null && sid.ETag != null)
                     {
-                        if (sid.DateModified.Equals(currentModified))
+                        if (sid.DateModified == null || sid.DateModified.Value.Equals(currentModified))
                         {
                             Debug.WriteLine("Sync file (Delete locally) " + sid.Path);
                             // Remove sid and local file
@@ -328,7 +326,7 @@ namespace NextcloudApp.Services
                         }
                     } else if (file == null)
                     {
-                        if (info.ETag.Equals(sid.ETag))
+                        if (sid.ETag == null || info.ETag.Equals(sid.ETag))
                         {
                             Debug.WriteLine("Sync file (Delete remotely) " + sid.Path);
                             // Remove sid and remote file
@@ -352,7 +350,6 @@ namespace NextcloudApp.Services
                                 var _cts = new CancellationTokenSource();
                                 IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
                                 IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
-                                await file.OpenAsync(FileAccessMode.ReadWrite);
                                 await FileIO.WriteBufferAsync(file, buffer);
                                 sid.ETag = info.ETag;
                                 sid.DateModified = currentModified;

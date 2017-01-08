@@ -1,22 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Globalization;
-using System.IO;
 using System.Windows.Input;
-using Windows.Networking.Connectivity;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media.Imaging;
-using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudApp.Utils;
-using NextcloudClient.Exceptions;
-using Prism.Commands;
 using Prism.Windows.Navigation;
-using NextcloudClient.Types;
 using Prism.Windows.AppModel;
+using Prism.Commands;
+using Windows.UI.Xaml.Controls;
 
 namespace NextcloudApp.ViewModels
 {
@@ -25,19 +16,51 @@ namespace NextcloudApp.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
+        public ObservableCollection<SyncInfoDetail> ConflictList { get; private set; }
         public ICommand FixConflictByLocalCommand { get; private set; }
-
+        public ICommand FixConflictByRemoteCommand { get; private set; }
         public SyncConflictPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            FixConflictByLocalCommand = new DelegateCommand(FixConflictByLocal);
+            FixConflictByLocalCommand = new RelayCommand(FixConflictByLocal);
+            FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote);
+            ConflictList = new ObservableCollection<SyncInfoDetail>();
+            List<SyncInfoDetail> conflicts = SyncDbUtils.GetConflicts();
+            conflicts.ForEach(x => ConflictList.Add(x));
         }
         
-        private async void FixConflictByLocal()
+
+        private void FixConflictByLocal(object parameter)
         {
-        
+            ListView listView = parameter as ListView;
+            if (listView == null)
+            {
+                return;
+            }
+            foreach (SyncInfoDetail detail in listView.SelectedItems)
+            {
+                detail.ETag = null;
+                SyncDbUtils.SaveSyncInfoDetail(detail);
+                ConflictList.Remove(detail);
+            }
         }
+
+        private void FixConflictByRemote(object parameter)
+        {
+            ListView listView = parameter as ListView;
+            if (listView == null)
+            {
+                return;
+            }
+            foreach(SyncInfoDetail detail in listView.SelectedItems)
+            {
+                detail.DateModified = null;
+                SyncDbUtils.SaveSyncInfoDetail(detail);
+                ConflictList.Remove(detail);
+            }
+        }
+
     }
 }

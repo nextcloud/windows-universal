@@ -154,6 +154,15 @@
             }
         }
 
+        public static List<SyncInfoDetail> GetConflicts()
+        {
+            using (var db = DbConnection)
+            {
+                List<SyncInfoDetail> sidList = db.Query<SyncInfoDetail>("SELECT * FROM SyncInfoDetail WHERE Error LIKE 'Conflict: %'");
+                return sidList;
+            }
+        }
+
         public static void DeleteSyncInfoDetail(SyncInfoDetail sid, bool isFolder)
         {
             using (var db = DbConnection)

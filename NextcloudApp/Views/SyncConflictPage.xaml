@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:behaviors="using:NextcloudApp.Behaviors"
     x:Class="NextcloudApp.Views.SyncConflictPage"
     mc:Ignorable="d"
@@ -12,22 +13,40 @@
 
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
        
 <!-- Pivot with two tabs Conflicts/Errors -->
-        <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <!-- multi select ListView -->
+        <TextBlock Grid.Row="0" Margin="48,0,0,0" x:Uid="SynchronizationConflicts"  VerticalAlignment="Center"/>
+        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">  
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                            <TextBlock Text="{Binding Path}" />
+                            <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </ScrollViewer>
 
-        <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
             <!-- Buttons for fix options -->
             <AppBarButton 
-                Icon="" 
+                Icon="CellPhone" 
                 Label="Prefer local file" 
-                x:Uid="Sync_FixConflict_PreferLocal" 
-                Command="{Binding FixConflictByLocalCommand}"/>            
+                x:Uid="SyncFixConflictPreferLocal"
+                CommandParameter="{Binding ElementName=ConflictListView}"
+                Command="{Binding FixConflictByLocalCommand}"/>
+            <AppBarButton 
+                Icon="Globe" 
+                Label="Prefer remote file" 
+                x:Uid="SyncFixConflictPreferRemote"
+                CommandParameter="{Binding ElementName=ConflictListView}"
+                Command="{Binding FixConflictByRemoteCommand}"/>
         </CommandBar>
     </Grid>
 
