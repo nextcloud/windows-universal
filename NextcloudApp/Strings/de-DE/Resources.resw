@@ -425,23 +425,23 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>Die App muss neu gestartet werden</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Hinweis</value>
   </data>
 </root>

@@ -425,23 +425,23 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
 • Nuova e più stabile libreria WebDAV</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Connetti</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignora certificati SSL auto-firmati non validi. Ciò consente di utilizzare autorità di certificazione non valide o non corrette. Fai attenzione, non sarai più protetto da attacchi Man-in-the-middle (mitm)!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>L&apos;autorità di certificazione non è valida o corretta. Vuoi collegarti comunque?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Attenzione!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>L&apos;applicazione deve essere riavviata</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Suggerimento</value>
   </data>
 </root>

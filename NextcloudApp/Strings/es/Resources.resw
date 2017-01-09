@@ -372,76 +372,76 @@
     <value>{0} descargado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Para acceder a su Nextcloud, provea la información para iniciar sesión para su dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Identificación con Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>No se ha configurado ningún PIN para este dispositivo. Para poder usar Windows Hello, se necesita un PIN definido.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Descarga</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Inicio de sesión requerido</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>No podemos abrir Nextcloud hasta que provea su información de inicio de sesión.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Intente de nuevo</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Su aplicación fue actualizada a la versión {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Nuevas características y mejoras de esta versión:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommend</value>
+    <value>Recomendar</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Update</value>
+    <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover archivos y carpetas
+• Renombrar archivos y carpetas
+• Descargar directorios como archivos zip
+• Seleccionar múltiples archivos y carpetas
+• Fijar archivos y carpetas a pantalla de inicio
+• Uso de Windows Hello para identificar al inicio de la aplicación
+• Permitir certificados SSL autofirmados
+• Mostrar tamaño de carpeta en la lista
+• Administrar archivo de activación
+• Uso de PasswordVault para guardar credenciales de los usuarios
+• Mejoras de seguridad y corrección de errores
+• Nueva y más estable biblioteca WebDAV</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorar certificado SSL inválido autofirmado. Esto permite certificados SSL inválidos o con autoridades incorrectas para ser usados. Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>La autoridad del certificado es inválida o incorrecta. ¿Conectar de cualquier manera?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>¡Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>La aplicación debe ser reiniciada</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Pista</value>
   </data>
 </root>

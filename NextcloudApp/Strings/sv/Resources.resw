@@ -425,23 +425,23 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
 • Nytt och mer stabilt WebDAV bibliotek</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Anslut</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorera ogiltiga självsignerade SSL-certifikat. Detta gör det möjligt för ogiltig eller felaktig SSL certifikatutfärdare som ska användas. Var försiktig, du kommer inte att skyddas från man-in-the-middle (mitm) attacker längre!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Certifikatutfärdaren är ogiltig eller felaktig. Ansluta ändå?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attacker!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Hör upp!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>Appen måste startas om</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Förslag</value>
   </data>
 </root>

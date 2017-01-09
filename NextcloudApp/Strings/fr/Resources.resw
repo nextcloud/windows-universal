@@ -411,37 +411,37 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Mettre à jour</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Déplacer des fichiers et des dossiers
+• Renommer des fichiers et des dossiers
+• Télécharger des dossiers en tant que fichier zip
+• Sélectionner plusieurs fichiers et dossiers
+• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
+• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
+• Autoriser les certificats SSL auto-signés
+• Afficher la taille du fichier dans la liste
+• Gérer l&apos;activation du fichier
+• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
+• Améliorations de la sécurité &amp; corrections de bugs
+• Nouvelle bibliothèque WebDAV plus stable</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Connecter</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>L&apos;autorité de certificat est invalide ou incorrecte. Se connecter quand même ?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-middle (mitm) !</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Attention !</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>L&apos;application doit être redémarrée</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Indice</value>
   </data>
 </root>

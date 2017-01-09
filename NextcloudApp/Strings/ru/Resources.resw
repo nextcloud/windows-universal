@@ -424,23 +424,23 @@
 • Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Подключиться</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Игнорировать недействительность самозаверенных SSL сертификаты. Это позволяет использовать недействительным или неправильные центры подтверждения действительности сертификатов. Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Центр подтверждения действительности сертификата недействительный или неправильный. Подключаться в любом случае? 
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Внимание!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>Приложение должно быть перезапущено</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Подсказка</value>
   </data>
 </root>
