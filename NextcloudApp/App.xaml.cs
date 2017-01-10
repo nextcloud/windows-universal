@@ -12,9 +12,12 @@ using Windows.ApplicationModel.Resources;
 using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Newtonsoft.Json;
+using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
+using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 
 namespace NextcloudApp
@@ -196,24 +199,46 @@ namespace NextcloudApp
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
+                        PinStartPageParameters pageParameters = null;
+                        if (!string.IsNullOrEmpty(args.Arguments))
+                        {
+                            var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
+                            if (tmpResourceInfo != null)
+                            {
+                                pageParameters = new PinStartPageParameters()
+                                {
+                                    ResourceInfo = tmpResourceInfo,
+                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
+                                };
+
+                            }
+                        }
+
                         if (SettingsService.Instance.LocalSettings.UseWindowsHello)
                         {
-                            NavigationService.Navigate(PageTokens.Verification.ToString(),
-                                PageTokens.DirectoryList.ToString());
+                            NavigationService.Navigate(
+                                PageTokens.Verification.ToString(),
+                                pageParameters?.Serialize());
                         }
                         else
                         {
-                            NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                            NavigationService.Navigate(
+                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
+                                pageParameters?.Serialize());
                         }
                     }
                     else
                     {
-                        NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                        NavigationService.Navigate(
+                            PageTokens.Login.ToString(), 
+                            null);
                     }
                 }
                 else
                 {
-                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                    NavigationService.Navigate(
+                        PageTokens.Login.ToString(), 
+                        null);
                 }
             }
 

@@ -128,6 +128,7 @@
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
+    <Compile Include="Models\PinStartPageParameters.cs" />
     <Compile Include="Models\RoamingSettings.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />

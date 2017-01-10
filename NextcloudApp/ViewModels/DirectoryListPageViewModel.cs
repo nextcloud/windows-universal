@@ -94,7 +94,8 @@ namespace NextcloudApp.ViewModels
             DeleteResourceCommand = new RelayCommand(DeleteResource);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
-            PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
+            //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
+            PinToStartCommand = new DelegateCommand<object>(PinToStart);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -103,6 +104,12 @@ namespace NextcloudApp.ViewModels
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
+
+            if (e.Parameter != null)
+            {
+                var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
+                SelectedFileOrFolder = parameter?.ResourceInfo;
+            }
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -152,7 +159,7 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            
+
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString(resourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
@@ -215,7 +222,7 @@ namespace NextcloudApp.ViewModels
             };
             _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
         }
-        
+
         private async void CreateDirectory()
         {
             while (true)
