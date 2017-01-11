@@ -424,6 +424,12 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
 • Miglioramenti di sicurezza e correzioni di bug
 • Nuova e più stabile libreria WebDAV</value>
   </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
   <data name="Connect2" xml:space="preserve">
     <value>Connetti</value>
   </data>

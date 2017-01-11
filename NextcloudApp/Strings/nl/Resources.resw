@@ -424,6 +424,12 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 • Security verbeteringen &amp; bug fixes
 • Nieuwe en meer stabiele WebDAV library</value>
   </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
   </data>

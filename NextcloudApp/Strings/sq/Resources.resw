@@ -424,6 +424,12 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
 • Security improvements &amp; bug fixes
 • New and more stable WebDAV library</value>
   </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
   <data name="Connect2" xml:space="preserve">
     <value>Connect</value>
   </data>

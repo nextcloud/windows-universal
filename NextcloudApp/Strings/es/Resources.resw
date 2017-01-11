@@ -424,6 +424,12 @@
 • Mejoras de seguridad y corrección de errores
 • Nueva y más estable biblioteca WebDAV</value>
   </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
   </data>

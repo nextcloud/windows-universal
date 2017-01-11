@@ -424,11 +424,17 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Sicherheitsverbesserungen und Fehlerbeseitigung
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
