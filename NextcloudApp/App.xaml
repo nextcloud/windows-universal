@@ -21,6 +21,7 @@
             <converter:IsSortingToSelectionModeConverter x:Key="IsSortingToSelectionModeConverter"/>
             <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
             <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>
+            <converter:IsGlyphToVisibilityConverter x:Key="IsGlyphToVisibilityConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />

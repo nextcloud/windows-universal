@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using NextcloudApp.Models;
 
 namespace NextcloudApp.ViewModels
 {
@@ -27,7 +28,19 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
 
-            this.nextPage = e.Parameter as string;
+            var pageParameters = PinStartPageParameters.Deserialize(e.Parameter) as PinStartPageParameters;
+            if (pageParameters != null)
+            {
+                this.nextPage = pageParameters.PageTarget;
+            }
+            else if (e.Parameter is string)
+            {
+                this.nextPage = e.Parameter as string;
+            }
+            else
+            {
+                this.nextPage = PageTokens.DirectoryList.ToString();
+            }
         }
 
         public async void VerificationPageLoaded()
