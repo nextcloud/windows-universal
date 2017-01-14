@@ -372,27 +372,82 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} heruntergeladen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Dein  Gerät eingeben.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Herunterladen</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Zugangsdaten erforderlich</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Nextcloud kann nicht geöffnet werden, ohne dass die Zugangsdaten eingegeben werden.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Nochmals versuchen</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nexcloud für Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Deine App wurde aktualisiert auf Version {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Empfehlen</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Ordner als Zip-Archiv herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Dateien und Ordner am Starbildschirm anheften
+• Windows Hello verwenden um sich beim App-Start zu authentifizieren
+• Erlaube selbsterstellte SSL-Zertifikate
+• Ordnergröße in der Liste anzeigen
+• Dateiaktivierung bearbeiten
+• Passwortspeicher zum Speichern der Zugangsdaten verwenden
+• Sicherheitsverbesserungen und Fehlerbeseitigung
+• Neue und stabilere WebDAV-Bibliothek</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Verbinden</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
+
+Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Achtung!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Die App muss neu gestartet werden</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hinweis</value>
   </data>
 </root>

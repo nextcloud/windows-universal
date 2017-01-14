@@ -133,7 +133,7 @@
     <value>Создать каталог</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Take picture</value>
+    <value>Сделать фотографию</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Загрузить файлы</value>
@@ -172,9 +172,9 @@
     <value>Ошибка приложения</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Приложение столкнулось с проблемой. Мы сожалеем за причиненные неудобства. Информация, с которой вы работали в момент возникновения ошибки, потеряна.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Хотели бы вы сообщить разработчикам приложения об ошибке и отправить подготовленный отчёт? Это поможет устранить проблему быстрее.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Отмена</value>
@@ -186,7 +186,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Подключиться</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Тип содержимого</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Создать</value>
@@ -201,7 +201,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Скачивание файла...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Скачать миниатюры изображений</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -264,7 +264,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Настройки</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Show file and folder list grouping</value>
+    <value>Отображать группированный список файлов и папок</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Размер</value>
@@ -372,27 +372,81 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} скачано</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Что бы получить доступ в ваш Nextcloud, предоставьте информацию для входа вашему устройству.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Проверка подлинности Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Для устройства не был установлен PIN. Что бы использовать Windows Hello требуется задать PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Скачать</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Требуется вход</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Мы не можем открыть Nextcloud пока вы не предоставите своему устройству данные для входа в систему</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Попытаться снова</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud для Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Выше приложение было обновлено до версии  {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Новые возможности и улучшения в этой версии:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Рекомендовать</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Перемещение файлы и каталогов
+• Переименование файлов и каталогов
+• Скачивание каталогов одним zip файлом
+• Закрепление файлов и каталогов на начальном экране
+• Использование WIndows Hello для аутентификации при запуске приложения
+• Разрешено использовать самозаверенные сертификаты SSL
+• В режиме просмотра списком, отображается размер каталов
+• Обработка активации файла
+• Для хранения реквизитов пользователя используется Хранилище Паролей
+• Улучшения безопасности и устранение ошибок
+• Новая и более стабильная библиотека WebDAV</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Подключиться</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Игнорировать недействительность самозаверенных SSL сертификаты. Это позволяет использовать недействительным или неправильные центры подтверждения действительности сертификатов. Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>Центр подтверждения действительности сертификата недействительный или неправильный. Подключаться в любом случае? 
+
+Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Внимание!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Приложение должно быть перезапущено</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Подсказка</value>
   </data>
 </root>

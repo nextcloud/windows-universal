@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NextcloudApp</RootNamespace>
     <AssemblyName>NextcloudApp</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>en</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
@@ -123,11 +123,13 @@
     <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
+    <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
     <Compile Include="Models\FolderSyncInfo.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
+    <Compile Include="Models\PinStartPageParameters.cs" />
     <Compile Include="Models\RoamingSettings.cs" />
     <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
@@ -141,10 +143,12 @@
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
     <Compile Include="Services\SyncService.cs" />
+    <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
     <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
     <Compile Include="Utils\ObservableSettings.cs" />
     <Compile Include="Utils\DebugTraceListener.cs" />
+    <Compile Include="Services\TileService.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="Utils\SizeSorter.cs" />
@@ -170,6 +174,7 @@
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\SyncDbUtils.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />

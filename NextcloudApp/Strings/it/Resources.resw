@@ -372,27 +372,82 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>{0} scaricati</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Per accedere al tuo Nextcloud, fornisci le informazioni di accesso del tuo dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Autenticazione Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Non è stato impostato un PIN per questo dispositivo. Per poter utilizzare Windows Hello, deve essere definito un PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Scarica</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Accesso richiesto</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Non possiamo aprire Nextcloud fino a quando non fornisci le informazioni di accesso del tuo dispositivo.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Riprova</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud per Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>La tua applicazione è stata aggiornata alla versione {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Nuove funzionalità e miglioramenti in questa versione:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Consiglia</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Sposta file e cartelle
+• Rinomina file e cartelle
+• Scarica cartelle come file zip
+• Seleziona più file e cartelle
+• Aggiunge file e cartelle alla schermata di avvio
+• Utilizza Windows Hello per autenticare all&apos;avvio dell&apos;applicazione
+• Consente l&apos;utilizzo di certificati SSL auto-firmati
+• Mostra la dimensione delle cartelle nell&apos;elenco
+• Gestisce l&apos;attivazione dei file
+• Utilizza PasswordVault per memorizzare le credenziali degli utenti
+• Miglioramenti di sicurezza e correzioni di bug
+• Nuova e più stabile libreria WebDAV</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Connetti</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignora certificati SSL auto-firmati non validi. Ciò consente di utilizzare autorità di certificazione non valide o non corrette. Fai attenzione, non sarai più protetto da attacchi Man-in-the-middle (mitm)!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>L&apos;autorità di certificazione non è valida o corretta. Vuoi collegarti comunque?
+
+Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Attenzione!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>L&apos;applicazione deve essere riavviata</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Suggerimento</value>
   </data>
 </root>

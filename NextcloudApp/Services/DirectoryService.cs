@@ -133,7 +133,7 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;
@@ -189,7 +189,7 @@ namespace NextcloudApp.Services
 
         private async void DownloadPreviewImages()
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;
@@ -266,7 +266,7 @@ namespace NextcloudApp.Services
 
         public async Task<bool> CreateDirectory(string directoryName)
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return false;
@@ -296,7 +296,7 @@ namespace NextcloudApp.Services
 
         public async Task<bool> DeleteResource(ResourceInfo resourceInfo)
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return false;
@@ -312,7 +312,7 @@ namespace NextcloudApp.Services
 
         public async Task<bool> Rename(string oldName, string newName)
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return false;
@@ -342,7 +342,7 @@ namespace NextcloudApp.Services
 
         public async Task<bool> Move(string oldPath, string newPath)
         {
-            var client = ClientService.GetClient();
+            var client = await ClientService.GetClient();
             if (client == null)
             {
                 return false;

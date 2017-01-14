@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,9 +12,12 @@ using Windows.ApplicationModel.Resources;
 using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Newtonsoft.Json;
+using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
+using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 
 namespace NextcloudApp
@@ -158,6 +162,7 @@ namespace NextcloudApp
             {
                 SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
                 SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
+                SettingsService.Instance.LocalSettings.ShowUpdateMessage = true;
             }
 
             MigrationService.Instance.StartMigration();
@@ -178,7 +183,15 @@ namespace NextcloudApp
             {
                 var vault = new PasswordVault();
 
-                var credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                IReadOnlyList<PasswordCredential> credentialList = null;
+                try
+                {
+                    credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                }
+                catch
+                {
+                    // ignored
+                }
                 var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
 
                 if (credential != null)
@@ -186,24 +199,46 @@ namespace NextcloudApp
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
+                        PinStartPageParameters pageParameters = null;
+                        if (!string.IsNullOrEmpty(args.Arguments))
+                        {
+                            var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
+                            if (tmpResourceInfo != null)
+                            {
+                                pageParameters = new PinStartPageParameters()
+                                {
+                                    ResourceInfo = tmpResourceInfo,
+                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
+                                };
+
+                            }
+                        }
+
                         if (SettingsService.Instance.LocalSettings.UseWindowsHello)
                         {
-                            NavigationService.Navigate(PageTokens.Verification.ToString(),
-                                PageTokens.DirectoryList.ToString());
+                            NavigationService.Navigate(
+                                PageTokens.Verification.ToString(),
+                                pageParameters?.Serialize());
                         }
                         else
                         {
-                            NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                            NavigationService.Navigate(
+                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
+                                pageParameters?.Serialize());
                         }
                     }
                     else
                     {
-                        NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                        NavigationService.Navigate(
+                            PageTokens.Login.ToString(), 
+                            null);
                     }
                 }
                 else
                 {
-                    NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                    NavigationService.Navigate(
+                        PageTokens.Login.ToString(), 
+                        null);
                 }
             }
 

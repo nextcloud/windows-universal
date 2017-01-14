@@ -9,16 +9,9 @@ namespace NextcloudApp.Models
     /// </summary>
     public class LocalSettings : ObservableSettings
     {
-        private static LocalSettings settings = new LocalSettings();
         private const string DefaultValueEmptyString = "";
 
-        public static LocalSettings Default
-        {
-            get
-            {
-                return settings;
-            }
-        }
+        public static LocalSettings Default { get; } = new LocalSettings();
 
         public LocalSettings()
             : base(ApplicationData.Current.LocalSettings)
@@ -123,9 +116,34 @@ namespace NextcloudApp.Models
             }
         }
 
-
         [DefaultSettingValue(Value = false)]
         public bool UseWindowsHello
+        {
+            get
+            {
+                return Get<bool>();
+            }
+            set
+            {
+                Set(value);
+            }
+        }
+
+        [DefaultSettingValue(Value = false)]
+        public bool ShowUpdateMessage
+        {
+            get
+            {
+                return Get<bool>();
+            }
+            set
+            {
+                Set(value);
+            }
+        }
+
+        [DefaultSettingValue(Value = false)]
+        public bool IgnoreServerCertificateErrors
         {
             get
             {
@@ -140,15 +158,15 @@ namespace NextcloudApp.Models
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
-            this.enableRaisePropertyChanged = false;
+            enableRaisePropertyChanged = false;
 
-            this.ServerAddress = DefaultValueEmptyString;
-            this.Username = DefaultValueEmptyString;
-            this.ShowFileAndFolderGroupingHeader = true;
-            this.PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
-            this.UseWindowsHello = false;
+            ServerAddress = DefaultValueEmptyString;
+            Username = DefaultValueEmptyString;
+            ShowFileAndFolderGroupingHeader = true;
+            PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
+            UseWindowsHello = false;
 
-            this.enableRaisePropertyChanged = true;
+            enableRaisePropertyChanged = true;
         }
     }
 }

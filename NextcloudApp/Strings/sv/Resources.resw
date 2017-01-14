@@ -142,7 +142,7 @@
     <value>Ladda upp foton</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Ladda ner</value>
+    <value>Ladda ned</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Uppdatera</value>
@@ -172,9 +172,9 @@
     <value>Applikationsfel</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Appen har stött på ett problem. Vi ber om ursäkt för detta besvär. Om du var mitt uppe i något så har du tyvärr förlorat det du hade gjort.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Vill du informera appens utvecklare om detta problem och skicka en färdig felrapport? Detta hjälper till att åtgärda problemet så snart som möjligt.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Avbryt</value>
@@ -186,7 +186,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Anslut</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Innehållstyp</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Skapa</value>
@@ -198,10 +198,10 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Skapa en ny mapp</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Laddar ner filen...</value>
+    <value>Laddar ned filen...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Ladda ner förhandsvisningsbilder</value>
+    <value>Ladda ned förhandsvisningsbilder</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -264,7 +264,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Inställningar</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Show file and folder list grouping</value>
+    <value>Visa fil- och mapplistgruppering</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Storlek</value>
@@ -324,7 +324,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Klientversion {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>Servernamnet eller adressen kunde ej beslutas.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Serverversion {0}</value>
@@ -366,33 +366,88 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Servern med adress {0} kan inte nås.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Ladda ner ZIP-fil</value>
+    <value>Ladda ned ZIP-fil</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} nedladdade</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>För att få tillgång till servern så måste du ange korrekt inloggningsinformation i din enhet.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>&quot;Windows Hello&quot; autentisering</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Ingen PIN är inställd för den här enheten. För att kunna använda Windows Hello måste en PIN-kod finnas.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Ladda ned</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
-    <value>Nextcloud</value>
+    <value>NextCloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Inloggning krävs</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Kan ej öppna Nextcloud förrän du anger din enhets inloggningsinformation.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Försök igen</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud för Windows Mobil</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Din app uppdaterades till version {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Nya funktioner och förbättringar i denna version:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Rekommendera</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Uppdatera</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Flytta filer och mappar
+• Byt namn på filer och mappar
+• Ladda ner mappar som .zip fil
+• Markera flera filer och mappar
+• Fäst filer och mappar på startskärmen
+• Använd Windows Hello för att autentisera när du startar appen
+• Tillåt självsignerade SSL certifikat
+• Visa mappstorlek i listan
+• Hantera filaktivering
+• Använd &quot;PasswordVault&quot; för att spara användaruppgifter
+• Säkerhetsförbättringar och buggfixar
+• Nytt och mer stabilt WebDAV bibliotek</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Anslut</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorera ogiltiga självsignerade SSL-certifikat. Detta gör det möjligt för ogiltig eller felaktig SSL certifikatutfärdare som ska användas. Var försiktig, du kommer inte att skyddas från man-in-the-middle (mitm) attacker längre!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>Certifikatutfärdaren är ogiltig eller felaktig. Ansluta ändå?
+
+Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attacker!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Hör upp!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Appen måste startas om</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Förslag</value>
   </data>
 </root>

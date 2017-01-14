@@ -21,6 +21,7 @@ namespace NextcloudApp.ViewModels
     {
         private LocalSettings _settngs;
         private DirectoryService _directoryService;
+        private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
@@ -44,13 +45,17 @@ namespace NextcloudApp.ViewModels
         public ICommand MoveResourceCommand { get; private set; }
         public ICommand SynchronizeFolderCommand { get; private set; }
         public ICommand StopSynchronizeFolderCommand { get; private set; }
+        public ICommand PinToStartCommand { get; private set; }
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
+            _tileService = TileService.Instance;
+
             Settings = SettingsService.Instance.LocalSettings;
+
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
@@ -96,6 +101,8 @@ namespace NextcloudApp.ViewModels
             MoveResourceCommand = new RelayCommand(MoveResource);
             SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
             StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
+            //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
+            PinToStartCommand = new DelegateCommand<object>(PinToStart);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -104,6 +111,12 @@ namespace NextcloudApp.ViewModels
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
+
+            if (e.Parameter != null)
+            {
+                var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
+                SelectedFileOrFolder = parameter?.ResourceInfo;
+            }
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -230,7 +243,7 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            
+
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString(resourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
@@ -252,6 +265,23 @@ namespace NextcloudApp.ViewModels
             ShowProgressIndicator();
             await Directory.DeleteResource(resourceInfo);
             HideProgressIndicator();
+        }
+
+        private void PinToStart(object parameter)
+        {
+            if (!(parameter is ResourceInfo)) return;
+            var resourceInfo = parameter as ResourceInfo;
+            _tileService.CreatePinnedObject(resourceInfo);
+        }
+
+        private bool CanPinToStart(object parameter)
+        {
+            if (parameter is ResourceInfo)
+            {
+                var resourceInfo = parameter as ResourceInfo;
+                return _tileService.IsTilePinned(resourceInfo);
+            }
+            return false;
         }
 
         private void UploadFiles()
@@ -276,7 +306,7 @@ namespace NextcloudApp.ViewModels
             };
             _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
         }
-        
+
         private async void CreateDirectory()
         {
             while (true)

@@ -242,9 +242,6 @@
                                     <core:EventTriggerBehavior EventName="RightTapped">
                                         <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
-                                    <core:EventTriggerBehavior EventName="RightTapped">
-                                        <actions:OpenMenuFlyoutAction />
-                                    </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
                                 <FlyoutBase.AttachedFlyout>
                                     <MenuFlyout>
@@ -301,6 +298,13 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Pin"
+                                            x:Uid="PinToStart"
+                                            Text="Pin to start"
+                                            Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>

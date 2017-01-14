@@ -372,27 +372,82 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>{0} gedownload</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Om toegang te krijgen tot je Nextcloud moet je de inloginfo voor je apparaat opgeven.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Windows Hello authenticatie</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Er is geen PIN ingesteld voor dit apparaat. Om Windows Hello te kunnen gebruiken, moet een PIN worden ingesteld.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Downloaden</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Inloggen vereist</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>We kunnen Nextcloud niet openen totdat je apparaat inloginfo hebt opgegeven.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Probeer het opnieuw</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud voor Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Je app werd geüpdated naar versie {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Nieuwe functies en verbeteringen in deze versie:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Aanbevelen</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Bijwerken</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Verplaatsen bestanden en mappen
+• hernoemen bestanden en mappen
+• Downloaden directories als zip-bestand 
+• Selecteer meerdere bestanden en mappen
+• Vastprikken bestanden en mappen aan het startscherm
+• Gebruik Windows Hello om te authenticeren bij start app
+• Toestaan self-signed SSL certificaten
+• Tonen mapomvang in overzicht
+• Behandelen bestandsactivering
+• Gebruik de PasswordVault om iinloggegevens op te slaan
+• Security verbeteringen &amp; bug fixes
+• Nieuwe en meer stabiele WebDAV library</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Verbinden</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;Man-in-the-middle (mitm)&apos;  aanvallen!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
+
+Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Attentie!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Deze app moet worden herstart</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
   </data>
 </root>
