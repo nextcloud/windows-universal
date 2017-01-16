@@ -46,6 +46,24 @@ namespace NextcloudApp.Services
                 navigationService.Navigate(PageTokens.Login.ToString(), null);
                 return;
             }
+            if (e.StatusCode == "503") // Maintenance mode
+            {
+                dialog = new ContentDialog
+                {
+                    Title = resourceLoader.GetString("AnErrorHasOccurred"),
+                    Content = new TextBlock
+                    {
+                        Text = resourceLoader.GetString("ServiceTemporarilyUnavailable"),
+                        TextWrapping = TextWrapping.WrapWholeWords,
+                        Margin = new Thickness(0, 20, 0, 0)
+                    },
+                    PrimaryButtonText = resourceLoader.GetString("OK")
+                };
+                await dialogService.ShowAsync(dialog);
+                navigationService.Navigate(PageTokens.Login.ToString(), null);
+                app.Exit();
+                return;
+            }
             dialog = new ContentDialog
             {
                 Title = resourceLoader.GetString("AnErrorHasOccurred"),
