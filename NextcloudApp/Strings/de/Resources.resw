@@ -425,10 +425,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>

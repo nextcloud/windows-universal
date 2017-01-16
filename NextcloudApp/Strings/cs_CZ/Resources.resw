@@ -118,336 +118,334 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Alle bestanden</value>
+    <value>Všechny soubory</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Altijd</value>
+    <value>Vždy</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Er heeft zich een fout voorgedaan.</value>
+    <value>Došlo k chybě</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Toevoegen</value>
+    <value>Přidat</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Aanmaken nieuwe map</value>
+    <value>Vytvořit složku</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Maak een foto</value>
+    <value>Vyfotit obrázek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Uploaden bestanden</value>
+    <value>Nahrát soubory</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Uploaden foto&apos;s</value>
+    <value>Nahrát fotky</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Stáhnout</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Vernieuwen</value>
+    <value>Obnovit</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sorteren</value>
+    <value>Řadit</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (oudste bovenaan)</value>
+    <value>Datum (nejstarší nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (nieuwste bovenaan)</value>
+    <value>Datum (nejnovější nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Naam (A bovenaan)</value>
+    <value>méno (A nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Naam (Z bovenaan)</value>
+    <value>Jméno (Z nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Omvang (kleinste bovenaan)</value>
+    <value>Velikost (nejmenší nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Omvang (grootste bovenaan)</value>
+    <value>Velikost (největší nahoru)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Applicatiefout</value>
+    <value>Chyba aplikace</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>De applicatie vond een probleem. Excuus voor dit ongemak. Als je ergens mee bezig was, dan is de informatie waar je aan werkte verloren.
-
-Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmelding doorsturen? Dit kan wellicht helpen om het probleem sneller op te lossen.</value>
+    <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého úkolu, informace jsou ztraceny.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Annuleren</value>
+    <value>Zrušit</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Kan map niet aanmaken</value>
+    <value>Nelze vytvořit složku</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Připojit</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Typ obsahu (Content-Type)</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Creëren</value>
+    <value>Vytvořit</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Aangemaakt</value>
+    <value>Vytvořeno</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Creëer een nieuwe map</value>
+    <value>Vytvořit novou složku</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Downloaden bestand...</value>
+    <value>Stahování souboru…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Downloaden voorbeeldafbeeldingen</value>
+    <value>Stáhnout ukázkové obrázky</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0} ({1} byt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Mapnaam</value>
+    <value>Jméno složky</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informatie</value>
+    <value>Informace</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Laatst gewijzigd</value>
+    <value>Naposledy upraveno</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Naam</value>
+    <value>Jméno</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nooit</value>
+    <value>Nikdy</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Nieuwe map</value>
+    <value>Nová složka</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nee</value>
+    <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Niet geautoriseerd</value>
+    <value>Neautorizován</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>De server meldde een fout met code 401 (Ongeautoriseerd). Meld je opnieuw aan.</value>
+    <value>Server vrátil chybový kód 401 (neautorizovaný). Prosím, přihlašte se znovu.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Wachtwoord</value>
+    <value>Heslo</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pad</value>
+    <value>Cesta</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} van {1} gebruikt</value>
+    <value>Využito {0} z {1}</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reset deze app</value>
+    <value>Resetovat tuto aplikaci</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Opnieuw</value>
+    <value>Zkusit znovu</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Serveradres</value>
+    <value>Adresa serveru</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Instellingen</value>
+    <value>Nastavení</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Instellingen</value>
+    <value>Nastavení</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Tonen bestand- en mappenlijst groepering</value>
+    <value>Zobrazit seskupení seznamu souborů a složek</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Grootte</value>
+    <value>Velikost</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Er bestaat al een element met deze naam. Geef een andere op.</value>
+    <value>Element s takovým jménem již existuje. Specifikujte jiné jméno.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>Typ</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Gebruikersnaam</value>
+    <value>Uživatelské jméno</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Versie {0}</value>
+    <value>Verze {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Alleen met Wifi verbinding</value>
+    <value>Pouze, když jsem na Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ja</value>
+    <value>Ano</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Verwijderen</value>
+    <value>Smazat</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Verwijderen bestand</value>
+    <value>Smazat soubor</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Weet je zeker dat je bestand {0} wilt verwijderen</value>
+    <value>Opravdu chcete smazat soubor {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Verwijder map</value>
+    <value>Smazat složku</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Weet je zeker dat je map {0} wilt verwijderen?</value>
+    <value>Opravdu chcete smazat složku {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} van {1} geüpload</value>
+    <value>Nahráno {0} z {1}</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploaden bestand {0} van {1}…</value>
+    <value>Nahrávání souboru {0} z  {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Uploaden bestand...</value>
+    <value>Nahrávání souboru</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} van {1} gedownload</value>
+    <value>Staženo {0} z {1}</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>De onderhoudsmodus is op de server ingeschakeld.</value>
+    <value>Na serveru je povolen režim údržby.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Verkeerde gebruikersnaam of wachtwoord.</value>
+    <value>Špatné uživatelské jméno nebo heslo.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Clientversie {0}</value>
+    <value>Verze klienta {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>De servernaam of adres kon niet worden gevonden.</value>
+    <value>Jméno nebo adresu serveru se nepodařilo převést.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Serverversie {0}</value>
+    <value>Verze serveru {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Verwijderen</value>
+    <value>Smazat</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>wachter op de serverreactie</value>
+    <value>Čekání na odpověď serveru</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Kies een nieuwe naam</value>
+    <value>Prosím, zvolte nové jméno</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Verplaatsen naar</value>
+    <value>Přesunout do</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Verplaatsen naar</value>
+    <value>Přesunout do</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Annuleren</value>
+    <value>Zrušit</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Gedaan</value>
+    <value>Hotovo</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Kies map</value>
+    <value>Vybrat složku</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>De server met adres {0} is niet te bereiken.</value>
+    <value>Server s adresou {0} není dostupný.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Downloaden als ZIP bestand</value>
+    <value>Stáhnout jako ZIP soubor</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} gedownload</value>
+    <value>{0} stažen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Om toegang te krijgen tot je Nextcloud moet je de inloginfo voor je apparaat opgeven.</value>
+    <value>Abyste mohli přistupovat k vašemu Nextcloudu, zadejte přihlašovací údae pro vaše zařízení.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authenticatie</value>
+    <value>Autentizace Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Er is geen PIN ingesteld voor dit apparaat. Om Windows Hello te kunnen gebruiken, moet een PIN worden ingesteld.</value>
+    <value>Pro toto zařízení není nastavený PIN. Pokud chcete použít Windows Hello, musí být definován.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Stáhnout</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Inloggen vereist</value>
+    <value>Vyžadováno přihlášení</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We kunnen Nextcloud niet openen totdat je apparaat inloginfo hebt opgegeven.</value>
+    <value>Nemůžeme otevřít Nexcloud, dokud nedodáte přihlašovací údaje.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Probeer het opnieuw</value>
+    <value>Zkusit znovu</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud voor Windows Mobile</value>
+    <value>Nextcloud pro Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Je app werd geüpdated naar versie {0}</value>
+    <value>Vaše aplikace byla aktualizována na verzi {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nieuwe functies en verbeteringen in deze versie:</value>
+    <value>Nové vlastnosti a vylepšení v této verzi:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Aanbevelen</value>
+    <value>Doporučit</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Bijwerken</value>
+    <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• hernoemen bestanden en mappen
-• Downloaden directories als zip-bestand 
-• Selecteer meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan het startscherm
-• Gebruik Windows Hello om te authenticeren bij start app
-• Toestaan self-signed SSL certificaten
-• Tonen mapomvang in overzicht
-• Behandelen bestandsactivering
-• Gebruik de PasswordVault om iinloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Přesouvejte soubory a složky
+• Přejmenovávejte soubory a složky
+• Stahujte adresáře jako zip soubor
+• Vybírejte více souborů a složek
+• Připínejte soubory a složky na startovní obrazovku
+• Používejte Windows Hello k autentizaci při spuštění aplikace
+• Jsou povoleny SSL certifikáty podepsané sami sebou
+• V seznamu se zobrazuje velikost složky
+• Zpracovává se aktivace souboru
+• K uložení pověření uživatelů se používá PasswordVault
+• Bezpečnostní vylepšení &amp; opravy chyb
+• Nová a stabilnější WebDAV knihovna</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin om te starten</value>
+    <value>Připnout na start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin om te starten</value>
+    <value>Připnout na start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Připojit</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;Man-in-the-middle (mitm)&apos;  aanvallen!</value>
+    <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti mitm útokům.</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
+    <value>Certifikační autorita je neznámá, nebo neplatná. Přesto připojit?
 
-Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
+Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attentie!</value>
+    <value>Pozor!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Deze app moet worden herstart</value>
+    <value>Aplikace musí být restartována</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Nápověda</value>
   </data>
 </root>

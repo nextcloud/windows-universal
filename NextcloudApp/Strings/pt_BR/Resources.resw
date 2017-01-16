@@ -424,10 +424,10 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
 • Biblioteca WebDAV nova e mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Iniciar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Iniciar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>

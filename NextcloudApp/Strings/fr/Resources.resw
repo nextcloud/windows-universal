@@ -425,10 +425,10 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
 • Nouvelle bibliothèque WebDAV plus stable</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Épingler au menu Démarrer</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Épingler au menu Démarrer</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Connecter</value>
