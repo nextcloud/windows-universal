@@ -44,11 +44,6 @@ The translated files will be merge automatically by our [tx-robot] every night.
 <kbd><img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-5_light.png" width="300"/></kbd>
 <kbd><img src="https://raw.githubusercontent.com/SunboX/Nextcloud-App-UWP/master/resources/screenshots/en-us/screen-1_dark.png" width="300"/></kbd>
 
-## Maintainers
-
-* André Fiedler ( [@SunboX](https://github.com/SunboX) )
-* Enrico Meinel ( [@altima](https://github.com/altima) )
-
 ## Credits
 
 The Nextcloud App relies on, or was inspired by, the following projects:
