@@ -53,5 +53,5 @@ The translated files will be merge automatically by our [tx-robot] every night.
 
 The Nextcloud App relies on, or was inspired by, the following projects:
 
+* The Portable WebDAV Library by [@DecaTec](https://github.com/DecaTec) - https://github.com/DecaTec/Portable-WebDAV-Library
 * C# client library for ownCloud - https://github.com/bnoffer/owncloud-sharp
-* webDAVNet - http://webdavnet.codeplex.com/
