@@ -192,7 +192,7 @@ namespace NextcloudClient
                     QuotaAvailable = item.QuotaAvailableBytes,
                     QuotaUsed = item.QuotaUsedBytes,
                     Size = item.ContentLength != 0 ? item.ContentLength : item.QuotaUsedBytes,
-                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, ""))
+                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
                 };
                 if (!res.ContentType.Equals("dav/directory"))
                 {
