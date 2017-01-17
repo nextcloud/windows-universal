@@ -449,4 +449,8 @@
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
   </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
 </root>

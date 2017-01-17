@@ -448,4 +448,8 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
   <data name="Hint" xml:space="preserve">
     <value>Nápověda</value>
   </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
 </root>

@@ -449,4 +449,8 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
 </root>

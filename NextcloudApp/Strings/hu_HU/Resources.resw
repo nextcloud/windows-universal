@@ -450,4 +450,8 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
 </root>
