@@ -10,6 +10,7 @@ using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.Security.Credentials;
+using Windows.Storage.AccessCache;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
@@ -130,6 +131,50 @@ namespace NextcloudApp
             await
                 ExceptionReportService.Handle(exceptionType, exceptionMessage, exceptionStackTrace,
                     innerExceptionType, exceptionHashCode);
+        }
+
+        protected override async void OnFileActivated(FileActivatedEventArgs args)
+        {
+            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+                await InitializeFrameAsync(args);
+                await OnLaunchApplicationAsync(null);
+            }
+
+            base.OnFileActivated(args);
+
+            //TODO
+        }
+
+        protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        {
+            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+                await InitializeFrameAsync(args);
+                await OnLaunchApplicationAsync(null);
+            }
+
+            base.OnShareTargetActivated(args);
+            
+            var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
+
+            var pageParameters = new ShareTargetPageParameters()
+            {
+                ShareOperation = args.ShareOperation,
+                FileTokens = new List<string>()
+            };
+
+            foreach (var storageItem in sorageItems)
+            {
+                var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                pageParameters.FileTokens.Add(token);
+            }
+            
+            args.ShareOperation.ReportDataRetrieved();
+            
+            NavigationService.Navigate(
+                PageTokens.ShareTarget.ToString(),
+                pageParameters?.Serialize());
         }
 
         protected override UIElement CreateShell(Frame rootFrame)

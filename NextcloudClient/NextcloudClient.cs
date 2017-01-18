@@ -1704,7 +1704,7 @@ namespace NextcloudClient
         /// <param name="action">Action.</param>
         private string GetOcsPath(string service, string action)
         {
-            var slash = !service.Equals("") ? "/" : "";
+            var slash = string.IsNullOrEmpty(service) ? "" : "/";
             return service + slash + action;
         }
 
