@@ -450,7 +450,7 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Dica</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Serviço temporariamente indisponível (usualmente por curto período de tempo em trabalho de manutenção).
+Por favor tente mais tarde.</value>
   </data>
 </root>

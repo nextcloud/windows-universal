@@ -451,7 +451,7 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
     <value>Indice</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Service temporairement indisponible (normalement dû à un travail de maintenance de courte durée).
+Veuillez réessayer plus tard.</value>
   </data>
 </root>

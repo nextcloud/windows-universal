@@ -450,7 +450,7 @@
     <value>Подсказка</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Сервис временно недоступен (обычно по причине непродолжительных  работ по обслуживанию).
+Попробуйте еще раз позже.</value>
   </data>
 </root>

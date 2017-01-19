@@ -451,7 +451,7 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
     <value>Hinweis</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
+Bitte später noch einmal versuchen.</value>
   </data>
 </root>
