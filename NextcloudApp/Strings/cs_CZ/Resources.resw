@@ -449,7 +449,7 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
     <value>Nápověda</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Služba dočasně nedostupná (většinou kvůli krátkodobé údržbě).
+Prosím zkuste to znovu později.</value>
   </data>
 </root>
