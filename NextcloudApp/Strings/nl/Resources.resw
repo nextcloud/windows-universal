@@ -425,10 +425,10 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 • Nieuwe en meer stabiele WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin om te starten</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin om te starten</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
@@ -449,5 +449,9 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service tijdelijk niet beschikbaar (gewoonlijk wegens korte termijn onderhoud)
+Probeer het later opnieuw.</value>
   </data>
 </root>

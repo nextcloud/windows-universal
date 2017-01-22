@@ -424,10 +424,10 @@
 • Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Введите PIN чтобы начать</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Введите PIN чтобы начать</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Подключиться</value>
@@ -448,5 +448,9 @@
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Сервис временно недоступен (обычно по причине непродолжительных  работ по обслуживанию).
+Попробуйте еще раз позже.</value>
   </data>
 </root>

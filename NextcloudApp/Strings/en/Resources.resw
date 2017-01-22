@@ -479,5 +479,8 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
   </data>
 </root>

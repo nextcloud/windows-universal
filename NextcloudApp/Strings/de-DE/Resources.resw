@@ -151,22 +151,22 @@
     <value>Sortieren</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (Älteste nach oben)</value>
+    <value>Datum (Ältestestes oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (Neueste nach oben)</value>
+    <value>Datum (Neuestes oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
     <value>Name (A nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z nach oben)</value>
+    <value>Name (Z oben)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Größe (Kleinste nach oben)</value>
+    <value>Größe (Kleinste oben)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Größe (Größte nach oben)</value>
+    <value>Größe (Größte oben)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
@@ -201,7 +201,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Herunterladen der Datei…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Bildvorschau herunterladen</value>
+    <value>Vorschaubilder herunterladen</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -366,7 +366,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Der Server unter {0} ist nicht erreichbar.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Herunterladen als ZIP Datei</value>
+    <value>Herunterladen als ZIP-Datei</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} heruntergeladen</value>
@@ -425,10 +425,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
@@ -449,5 +449,9 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
+Bitte später noch einmal versuchen.</value>
   </data>
 </root>

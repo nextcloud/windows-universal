@@ -425,10 +425,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>PIN um zu beginnen</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
@@ -449,5 +449,9 @@ Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
+Bitte später noch einmal versuchen.</value>
   </data>
 </root>

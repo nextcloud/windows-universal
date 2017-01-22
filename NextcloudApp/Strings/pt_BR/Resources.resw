@@ -424,10 +424,10 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
 • Biblioteca WebDAV nova e mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Iniciar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Iniciar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
@@ -448,5 +448,9 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Serviço temporariamente indisponível (usualmente por curto período de tempo em trabalho de manutenção).
+Por favor tente mais tarde.</value>
   </data>
 </root>

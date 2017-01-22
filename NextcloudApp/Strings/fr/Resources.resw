@@ -425,10 +425,10 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
 • Nouvelle bibliothèque WebDAV plus stable</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Épingler au menu Démarrer</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Épingler au menu Démarrer</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Connecter</value>
@@ -449,5 +449,9 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indice</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporairement indisponible (normalement dû à un travail de maintenance de courte durée).
+Veuillez réessayer plus tard.</value>
   </data>
 </root>

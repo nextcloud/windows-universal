@@ -442,12 +442,16 @@ Would you like to inform the application developers and submit the prepared erro
 Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Figyelem!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>Az alkalmazást újra kell indítani</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Megjegyzés</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
   </data>
 </root>
