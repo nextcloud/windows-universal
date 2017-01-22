@@ -395,6 +395,22 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="TryAgain" xml:space="preserve">
     <value>Try again</value>
   </data>
+<<<<<<< HEAD
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stop Synchronization</value>
+  </data>
+  <data name="SynchronizationConflicts.Text" xml:space="preserve">
+    <value>Synchronization Conflicts</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
+=======
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud for Windows Mobile</value>
   </data>
@@ -436,18 +452,6 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
-  </data>
-  <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
-  </data>
-  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
-  </data>
-  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
-  </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>The certificate authority is invalid or incorrect. Connect anyway?
 
@@ -461,23 +465,6 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
-  </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
-  </data>
-  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
-  </data>
-  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don't know which files are the correct ones.</value>
-  </data>
-  <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
-  </data>
-  <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+>>>>>>> 0a2c7080892d655af32ddf54269cd2582e39f133
   </data>
 </root>

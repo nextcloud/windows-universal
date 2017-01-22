@@ -8,6 +8,7 @@
     using System.IO;
     using System.Linq;
     using Windows.Storage;
+    using System;
 
     internal static class SyncDbUtils
     {
@@ -62,6 +63,15 @@
             }
 
             return models;
+        }
+
+        public static List<SyncInfoDetail> GetErrors()
+        {
+            using (var db = DbConnection)
+            {
+                List<SyncInfoDetail> sidList = db.Query<SyncInfoDetail>("SELECT * FROM SyncInfoDetail WHERE Error <> '' AND Error NOT LIKE 'Conflict: %'");
+                return sidList;
+            }
         }
 
         public static FolderSyncInfo GetFolderSyncInfoByPath(string Path)

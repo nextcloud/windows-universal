@@ -43,9 +43,12 @@ namespace NextcloudApp.ViewModels
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
+<<<<<<< HEAD
         public ICommand SynchronizeFolderCommand { get; private set; }
         public ICommand StopSynchronizeFolderCommand { get; private set; }
+=======
         public ICommand PinToStartCommand { get; private set; }
+>>>>>>> 0a2c7080892d655af32ddf54269cd2582e39f133
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -99,10 +102,13 @@ namespace NextcloudApp.ViewModels
             DeleteResourceCommand = new RelayCommand(DeleteResource);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
+<<<<<<< HEAD
             SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
             StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
+=======
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             PinToStartCommand = new DelegateCommand<object>(PinToStart);
+>>>>>>> 0a2c7080892d655af32ddf54269cd2582e39f133
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -187,31 +193,13 @@ namespace NextcloudApp.ViewModels
                             return;
                         }
                         StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
+                        SyncDbUtils.SaveFolderSyncInfo(syncInfo);
                         IReadOnlyList<IStorageItem> subElements = await newFolder.GetItemsAsync();
-                        NextcloudClient.NextcloudClient client = await ClientService.GetClient();
-                        var remoteElements = await client.List(resourceInfo.Path);
-                        if (subElements.Count > 0 && remoteElements.Count > 0)
+                        if (subElements.Count > 0)
                         {
-                            var dialogNotEmpty = new ContentDialog
-                            {
-                                Title = _resourceLoader.GetString("SyncFoldersNotEmptyWarning"),
-                                Content = new TextBlock()
-                                {
-                                    Text = _resourceLoader.GetString("SyncFoldersNotEmptyWarningDetail"),
-                                    TextWrapping = TextWrapping.WrapWholeWords,
-                                    Margin = new Thickness(0, 20, 0, 0)
-                                },
-                                PrimaryButtonText = _resourceLoader.GetString("OK"),
-                                SecondaryButtonText = _resourceLoader.GetString("Cancel")
-                            };
-                            var dialogResult = await _dialogService.ShowAsync(dialogNotEmpty);
-                            if (dialogResult != ContentDialogResult.Primary)
-                            {
-                                return;
-                            }
+                            // TODO Dialog to overwrite files locally or on server
                         }
                         folder = newFolder;
-                        SyncDbUtils.SaveFolderSyncInfo(syncInfo);
                         StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
                     } else
                     {
@@ -230,18 +218,7 @@ namespace NextcloudApp.ViewModels
                 }
                 SyncService service = new SyncService(folder, resourceInfo, syncInfo);
                 service.StartSync();
-                var dialog = new ContentDialog
-                {
-                    Title = _resourceLoader.GetString("SyncStarted"),
-                    Content = new TextBlock()
-                    {
-                        Text = _resourceLoader.GetString("SyncStartedDetail"),
-                        TextWrapping = TextWrapping.WrapWholeWords,
-                        Margin = new Thickness(0, 20, 0, 0)
-                    },
-                    PrimaryButtonText = _resourceLoader.GetString("OK")
-                };
-                await _dialogService.ShowAsync(dialog);
+                // TODO Dialog that sync has been started in background
             }
             catch (Exception e)
             {

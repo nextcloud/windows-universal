@@ -31,17 +31,17 @@ namespace NextcloudApp.Services
             this.folderSyncInfo = syncInfo;
             this.resourceInfo = resourceInfo;
             sidList = new List<SyncInfoDetail>();
-            client = ClientService.GetClient();
+        }
+
+        public async Task<bool> StartSync()
+        {
+            client = await ClientService.GetClient();
             if (client == null)
             {
                 // ERROR
                 throw new Exception("Error creating webdav client");
             }
-        }
-
-        public async Task<bool> StartSync()
-        {
-            bool success = true;            
+            int errorCount = 0;            
             List<SyncInfoDetail> oldList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);            
             Debug.WriteLine("Sid List before Sync: ");
             foreach (SyncInfoDetail detail in oldList)
@@ -63,7 +63,7 @@ namespace NextcloudApp.Services
                     sidList.Remove(sid);
                     sid.Error = null;
                 }
-                success = await SyncFolder(resourceInfo, baseFolder);
+                errorCount = await SyncFolder(resourceInfo, baseFolder);
                 foreach (SyncInfoDetail detail in oldList)
                 {
                     if(!sidList.Contains(detail))
@@ -75,7 +75,7 @@ namespace NextcloudApp.Services
             } catch (Exception e)
             {
                 sid.Error = e.Message;
-                success = false;
+                errorCount++;
             }
             SyncDbUtils.SaveSyncInfoDetail(sid);
             List<SyncInfoDetail> newSidList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
@@ -84,7 +84,8 @@ namespace NextcloudApp.Services
             {
                 Debug.WriteLine("Detail: " + detail.ToString());
             }
-            return success;
+            // TODO Toast notification including errors
+            return errorCount==0;
         }
 
 
@@ -93,11 +94,11 @@ namespace NextcloudApp.Services
         /// </summary>
         /// <param name="resourceInfo">webdav Resource to sync</param>
         /// <param name="folder">Target folder</param>
-        private async Task<bool> SyncFolder(ResourceInfo info, StorageFolder folder)
+        private async Task<int> SyncFolder(ResourceInfo info, StorageFolder folder)
         {
             SyncInfoDetail sid = SyncDbUtils.GetSyncInfoDetail(info, folderSyncInfo);
             sid.Error = null;
-            bool success = true;
+            int errorCount = 0;
             try
             {
                 Debug.WriteLine("Sync folder " + info.Path + ":" + folder.Path);
@@ -138,7 +139,7 @@ namespace NextcloudApp.Services
                                     {
                                         sid.Error = "Deletion of " + subInfo.Path + " on nextcloud failed.";
                                         // Error could be overridden by other errors
-                                        success = false;
+                                        errorCount++;
                                     }
                                 }
                                 else
@@ -150,7 +151,7 @@ namespace NextcloudApp.Services
                                     syncInfoDetail.Path = subInfo.Path;
                                     syncInfoDetail.FilePath = subFolder.Path;
                                     SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
-                                    success = success && await SyncFolder(subInfo, subFolder);
+                                    errorCount = errorCount + await SyncFolder(subInfo, subFolder);
                                     // syncTasks.Add(SyncFolder(subInfo, subFolder));
                                 }
                             }
@@ -167,7 +168,7 @@ namespace NextcloudApp.Services
                                     SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
                                 }
                                 synced.Add(subFolder);
-                                success = success && await SyncFolder(subInfo, subFolder);
+                                errorCount = errorCount + await SyncFolder(subInfo, subFolder);
                                 // syncTasks.Add(SyncFolder(subInfo, subFolder));
                             }
                         }
@@ -180,7 +181,7 @@ namespace NextcloudApp.Services
                             {
                                 synced.Add(subFile);
                             }
-                            success = success && await SyncFile(subInfo, subFile, info, folder);
+                            errorCount = errorCount + await SyncFile(subInfo, subFile, info, folder);
                             //syncTasks.Add(SyncFile(subInfo, subFile, info, folder));
                         }
                     }
@@ -189,7 +190,7 @@ namespace NextcloudApp.Services
                 {
                     if (!synced.Contains(file))
                     {
-                        success = success && await SyncFile(null, file, info, folder);
+                        errorCount = errorCount + await SyncFile(null, file, info, folder);
                         //syncTasks.Add(SyncFile(null, file, info, folder));
                     }
                 }
@@ -217,13 +218,13 @@ namespace NextcloudApp.Services
                                 syncInfoDetail.Path = subInfo.Path;
                                 syncInfoDetail.FilePath = localFolder.Path;
                                 SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
-                                success = success && await SyncFolder(subInfo, localFolder);
+                                errorCount = errorCount + await SyncFolder(subInfo, localFolder);
                                 //syncTasks.Add(SyncFolder(subInfo, localFolder));                                
                             }
                             else
                             {
                                 sid.Error = "Could not create directory on nextcloud: " + newPath;
-                                success = false;
+                                errorCount++;
                             }
                         }
                     }
@@ -233,17 +234,18 @@ namespace NextcloudApp.Services
             catch (Exception e)
             {
                 sid.Error = e.Message;
-                success = false;
+                errorCount++;
             }
             sidList.Add(sid);
             SyncDbUtils.SaveSyncInfoDetail(sid);
-            return success;
+            return errorCount;
         }
 
-        private async Task<bool> SyncFile(ResourceInfo info, StorageFile file, ResourceInfo parent, StorageFolder parentFolder)
+        private async Task<int> SyncFile(ResourceInfo info, StorageFile file, ResourceInfo parent, StorageFolder parentFolder)
         {
             SyncInfoDetail sid = null;
             bool success = true;
+            bool deleted = false;
             if (info != null)
             {
                 sid = SyncDbUtils.GetSyncInfoDetail(info, folderSyncInfo);
@@ -298,10 +300,8 @@ namespace NextcloudApp.Services
                         Debug.WriteLine("Sync file (Download)" + localFile.Path);
                         var _cts = new CancellationTokenSource();
                         IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                        CachedFileManager.DeferUpdates(localFile);
                         IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
                         await FileIO.WriteBufferAsync(localFile, buffer);
-                        var status = await CachedFileManager.CompleteUpdatesAsync(localFile);
                         BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
                         currentModified = basicProperties.DateModified;
                         sid.Path = info.Path + "/" + info.Name;
@@ -311,18 +311,50 @@ namespace NextcloudApp.Services
                     }
                 } else
                 {
-                    if (info == null && sid.ETag != null)
+                    if (info == null)
                     {
-                        if (sid.DateModified == null || sid.DateModified.Value.Equals(currentModified))
+                        if (sid.DateModified.Value.Equals(currentModified))
                         {
                             Debug.WriteLine("Sync file (Delete locally) " + sid.Path);
                             // Remove sid and local file
                             await file.DeleteAsync();
                             SyncDbUtils.DeleteSyncInfoDetail(sid, false);
+                            deleted = true;
                         } else
                         {
-                            Debug.WriteLine("Sync file: Conflict (Deleted remotely, but changed locally) " + sid.Path);
-                            sid.Error = "Conflict: Deleted file remotely but changed locally. Which do you prefer?";
+                            switch(sid.ConflictSolution)
+                            {
+                                case ConflictSolution.PREFER_LOCAL:
+                                    string newPath = parent.Path + file.Name;
+                                    Debug.WriteLine("Sync file (Upload)" + newPath);
+                                    var _cts = new CancellationTokenSource();
+                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
+                                    sid.DateModified = currentModified;
+                                    sid.FilePath = file.Path;
+                                    if (await client.Upload(newPath, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                                    {
+                                        ResourceInfo newInfo = await client.GetResourceInfo(parent.Path, file.Name);
+                                        sid.Path = newInfo.Path + "/" + newInfo.Name;
+                                        sid.ETag = newInfo.ETag;
+                                        sid.ConflictSolution = ConflictSolution.NONE;
+                                    }
+                                    else
+                                    {
+                                        sid.Error = "Error while uploading File to nextcloud.";
+                                    }
+                                    break;
+                                case ConflictSolution.PREFER_REMOTE:
+                                    Debug.WriteLine("Sync file (Delete locally) " + sid.Path);
+                                    // Remove sid and local file
+                                    await file.DeleteAsync();
+                                    SyncDbUtils.DeleteSyncInfoDetail(sid, false);
+                                    deleted = true;
+                                    break;
+                                default:
+                                    Debug.WriteLine("Sync file: Conflict (Deleted remotely, but changed locally) " + sid.Path);
+                                    sid.Error = "Conflict: Deleted file remotely but changed locally. Which do you prefer?";
+                                    break;
+                            }
                         }
                     } else if (file == null)
                     {
@@ -332,12 +364,39 @@ namespace NextcloudApp.Services
                             // Remove sid and remote file
                             await client.Delete(info.Path + "/" + info.Name);
                             SyncDbUtils.DeleteSyncInfoDetail(sid, false);
+                            deleted = true;
                         }
                         else
                         {
-                            // Conflict
-                            Debug.WriteLine("Sync file: Conflict (Deleted locally, but changed remotely) " + sid.Path);
-                            sid.Error = "Conflict: Deleted file locally but changed remotely. Which do you prefer?";
+                            switch (sid.ConflictSolution)
+                            {
+                                case ConflictSolution.PREFER_LOCAL:
+                                    Debug.WriteLine("Sync file (Delete remotely) " + sid.Path);
+                                    // Remove sid and remote file
+                                    await client.Delete(info.Path + "/" + info.Name);
+                                    SyncDbUtils.DeleteSyncInfoDetail(sid, false);
+                                    deleted = true;
+                                    break;
+                                case ConflictSolution.PREFER_REMOTE:
+                                    // Update local file
+                                    StorageFile localFile = await parentFolder.CreateFileAsync(info.Name);
+                                    Debug.WriteLine("Sync file (Download)" + localFile.Path);
+                                    var _cts = new CancellationTokenSource();
+                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
+                                    IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
+                                    await FileIO.WriteBufferAsync(localFile, buffer);
+                                    BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
+                                    currentModified = basicProperties.DateModified;
+                                    sid.ETag = info.ETag;
+                                    sid.DateModified = currentModified;
+                                    sid.ConflictSolution = ConflictSolution.NONE;
+                                    break;
+                                default:
+                                    // Conflict
+                                    Debug.WriteLine("Sync file: Conflict (Deleted locally, but changed remotely) " + sid.Path);
+                                    sid.Error = "Conflict: Deleted file locally but changed remotely. Which do you prefer?";
+                                    break;
+                            }
                         }
                     } else
                     {
@@ -373,8 +432,51 @@ namespace NextcloudApp.Services
                             }
                         } else
                         {
-                            Debug.WriteLine("Sync file: Conflict (Changed remotely and locally) " + sid.Path);
-                            sid.Error = "Conflict: File changed locally and remotely. Which do you prefer?";
+                            switch(sid.ConflictSolution)
+                            {
+                                case ConflictSolution.PREFER_LOCAL:
+                                    // update file on nextcloud
+                                    Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
+                                    var _cts = new CancellationTokenSource();
+                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
+
+                                    if (await client.Upload(info.Path + "/" + info.Name, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                                    {
+                                        ResourceInfo newInfo = await client.GetResourceInfo(info.Path, info.Name);
+                                        sid.ETag = newInfo.ETag;
+                                        sid.DateModified = currentModified;
+                                        sid.ConflictSolution = ConflictSolution.NONE;
+                                    }
+                                    else
+                                    {
+                                        sid.Error = "Error while uploading file to nextcloud";
+                                    }
+                                    break;
+                                case ConflictSolution.PREFER_REMOTE:
+                                    // Update local file
+                                    Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
+                                    var _cts2 = new CancellationTokenSource();
+                                    IProgress<HttpProgress> progress2 = new Progress<HttpProgress>(ProgressHandler);
+                                    IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts2, progress2);
+                                    await FileIO.WriteBufferAsync(file, buffer);
+                                    sid.ETag = info.ETag;
+                                    sid.DateModified = currentModified;
+                                    sid.ConflictSolution = ConflictSolution.NONE;
+                                    break;
+                                default:
+                                    // Conflict
+                                    if (sid.ETag == null && !sid.DateModified.HasValue)
+                                    {
+                                        sid.Error = "Conflict: File has been created remotely and locally - which is the correct one?";
+                                        Debug.WriteLine("Sync file: Conflict (both new) " + info.Path + "/" + info.Name);
+                                    }
+                                    else
+                                    {
+                                        Debug.WriteLine("Sync file: Conflict (Changed remotely and locally) " + sid.Path);
+                                        sid.Error = "Conflict: File changed locally and remotely. Which do you prefer?";
+                                    }
+                                    break;
+                            }
                         }
                     }
                 }
@@ -386,8 +488,11 @@ namespace NextcloudApp.Services
             }            
             Debug.WriteLine("Synced file " + sid.ToString());
             sidList.Add(sid);
-            SyncDbUtils.SaveSyncInfoDetail(sid);
-            return success;
+            if (!deleted)
+            {
+                SyncDbUtils.SaveSyncInfoDetail(sid);
+            }
+            return success? 0 : 1;
         }
                        
         private void ProgressHandler(HttpProgress progressInfo)

@@ -17,6 +17,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         public ObservableCollection<SyncInfoDetail> ConflictList { get; private set; }
+        public ObservableCollection<SyncInfoDetail> ErrorList { get; private set; }
         public ICommand FixConflictByLocalCommand { get; private set; }
         public ICommand FixConflictByRemoteCommand { get; private set; }
         public SyncConflictPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
@@ -27,8 +28,11 @@ namespace NextcloudApp.ViewModels
             FixConflictByLocalCommand = new RelayCommand(FixConflictByLocal);
             FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote);
             ConflictList = new ObservableCollection<SyncInfoDetail>();
+            ErrorList = new ObservableCollection<SyncInfoDetail>();
             List<SyncInfoDetail> conflicts = SyncDbUtils.GetConflicts();
             conflicts.ForEach(x => ConflictList.Add(x));
+            List<SyncInfoDetail> errors = SyncDbUtils.GetErrors();
+            errors.ForEach(x => ErrorList.Add(x));
         }
         
 
@@ -39,12 +43,14 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
+            var selectedList = new List<SyncInfoDetail>();
             foreach (SyncInfoDetail detail in listView.SelectedItems)
             {
-                detail.ETag = null;
+                detail.ConflictSolution = ConflictSolution.PREFER_LOCAL;
                 SyncDbUtils.SaveSyncInfoDetail(detail);
-                ConflictList.Remove(detail);
+                selectedList.Add(detail);
             }
+            selectedList.ForEach(x => ConflictList.Remove(x));
         }
 
         private void FixConflictByRemote(object parameter)
@@ -54,12 +60,14 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            foreach(SyncInfoDetail detail in listView.SelectedItems)
+            var selectedList = new List<SyncInfoDetail>();
+            foreach (SyncInfoDetail detail in listView.SelectedItems)
             {
-                detail.DateModified = null;
+                detail.ConflictSolution = ConflictSolution.PREFER_REMOTE;
                 SyncDbUtils.SaveSyncInfoDetail(detail);
-                ConflictList.Remove(detail);
+                selectedList.Add(detail);
             }
+            selectedList.ForEach(x=>ConflictList.Remove(x));
         }
 
     }

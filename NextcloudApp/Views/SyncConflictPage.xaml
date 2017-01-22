@@ -12,42 +12,69 @@
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
 
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-       
-<!-- Pivot with two tabs Conflicts/Errors -->
-        <TextBlock Grid.Row="0" Margin="48,0,0,0" x:Uid="SynchronizationConflicts"  VerticalAlignment="Center"/>
-        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">  
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
-                            <TextBlock Text="{Binding Path}" />
-                            <TextBlock Text="{Binding Error}" Foreground="Red"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollViewer>
+        <Pivot>
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="48,0,0,0" Text="{Binding}" />
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem x:Uid="SynchronizationConflicts"  Header="">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                        <TextBlock Text="{Binding Path}" />
+                                        <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
-            <!-- Buttons for fix options -->
-            <AppBarButton 
-                Icon="CellPhone" 
-                Label="Prefer local file" 
-                x:Uid="SyncFixConflictPreferLocal"
-                CommandParameter="{Binding ElementName=ConflictListView}"
-                Command="{Binding FixConflictByLocalCommand}"/>
-            <AppBarButton 
-                Icon="Globe" 
-                Label="Prefer remote file" 
-                x:Uid="SyncFixConflictPreferRemote"
-                CommandParameter="{Binding ElementName=ConflictListView}"
-                Command="{Binding FixConflictByRemoteCommand}"/>
-        </CommandBar>
+                    <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+                        <!-- Buttons for fix options -->
+                        <AppBarButton 
+                            Icon="CellPhone" 
+                            Label="Prefer local file" 
+                            x:Uid="SyncFixConflictPreferLocal"
+                            CommandParameter="{Binding ElementName=ConflictListView}"
+                            Command="{Binding FixConflictByLocalCommand}"/>
+                       <AppBarButton 
+                            Icon="Globe" 
+                            Label="Prefer remote file" 
+                            x:Uid="SyncFixConflictPreferRemote"
+                            CommandParameter="{Binding ElementName=ConflictListView}"
+                            Command="{Binding FixConflictByRemoteCommand}"/>
+                    </CommandBar>
+                </Grid>                
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationErrors"  Header="">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" />
+                    <ListView Grid.Row="1" Name="ErrorListView" ItemsSource="{Binding ErrorList}" SelectionMode="None" 
+                                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                    <TextBlock Text="{Binding Path}" />
+                                    <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+        </Pivot>
     </Grid>
 
 </prismMvvm:SessionStateAwarePage>
