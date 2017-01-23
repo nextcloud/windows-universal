@@ -130,7 +130,7 @@
     <value>Ajouter</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Créer le dossier</value>
+    <value>Créer un dossier</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Prendre une photo</value>
