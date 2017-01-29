@@ -306,7 +306,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>{0} de {1} téléversé</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Téléversement du fichier {0} of {1}...</value>
+    <value>Téléversement du fichier {0} de {1}...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
     <value>Téléversement du fichier en cours...</value>
