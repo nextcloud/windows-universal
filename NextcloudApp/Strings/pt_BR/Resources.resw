@@ -269,7 +269,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Tamanho</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Já existe um elemento com este nome. Por favor espacifique um nome diferente.</value>
+    <value>Já existe um elemento com este nome. Por favor, indique um nome diferente.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Tipo</value>
@@ -281,7 +281,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Versão {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Somente quando estou no Wifi</value>
+    <value>Somente quando estou no Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sim</value>
@@ -302,7 +302,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Tem certeza de que deseja excluir a pasta {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} de{1} enviados</value>
+    <value>{0} de {1} enviados</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
     <value>Enviando arquivo {0} de {1}…</value>
