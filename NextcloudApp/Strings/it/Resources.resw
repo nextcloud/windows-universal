@@ -425,10 +425,10 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
 • Nuova e più stabile libreria WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Aggiungi a Start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Aggiungi a Start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Connetti</value>
@@ -451,7 +451,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Suggerimento</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Servizio momentaneamente non disponibile (solitamente causato da brevi lavori di manutenzione).
+Riprova più tardi.</value>
   </data>
 </root>
