@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Wszystkie pliki</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Zawsze</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Wystąpił błąd</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Utwórz folder</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Zrób zdjęcie</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Wyślij plik</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Wyślij zdjęcie</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Odśwież</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Sortuj</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Data (najstarsza na górze)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Data (najnowsza na górze)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Nazwa (A na górze)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Nazwa (Z na górze)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Rozmiar (najmniejsze na górze)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Rozmiar (największe na górze)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Błąd aplikacji</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Nie można utworzyć folderu</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Połącz</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Typ połączenia</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Utwórz</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Utworzono</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Utwórz nowy folder</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Pobieranie pliku...</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Pobieranie miniaturek</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} bajtów)
+</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Nazwa folderu</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Informacja</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Ostatnia modyfikacja</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Nigdy</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Nowy folder</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Brak dostępu</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>Serwer zwrócił kod błędu 401 (Brak dostępu). Zaloguj się ponownie.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Ścieżka</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} z {1} użytych</value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Zresetuj ustawienia</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Ponów</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Adres serwera</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Pokaż grupową listę plików i folderów</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Rozmiar</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Jest już element z taka nazwą. Utwórz inna nazwę.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Wersja {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Tylko po Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Usuń plik</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć plik {0}</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Usuń folder</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Czy na pewno chcesz usunąć folder {0}</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>Wysłano {0} z {1}</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Wysyłam plik {0} z {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Wysyłam plik...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>Ściągnięto {0} z {1}</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Włączono tryb konserwacji na serwerze</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Zły login lub hasło</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Wersja klienta {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Rozwiązanie nazwy serwera lub adresu nie udało się.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Wersja serwera {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>oczekiwanie na odpowiedź serwera</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Wybierz nową nazwę</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Zmień nazwę</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Zmień nazwę</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Zmień nazwę</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Move to</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Move to</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Zrobiono</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Wybierz folder</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Serwer o adresie {0} nie jest dostępny</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Ściągnij jako plik ZIP</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>Ściągnięto {0}</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>Aby zalogować się do Nextclouda wprowadź informacje logowania swojego urządzenia</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Uwierzytelnienie Windows Hello</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>PIN nie jest ustawiony dla tego urządzenia. Żeby użyć Windows Hello musi być zdefiniowany PIN.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Ściągnij</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Zalogowanie jest wymagane</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>Nie możemy otworzyć Nextclouda dopóki nie będa wprowadzone informacje logowania urządzenia</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Spróbuj ponownie</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud dla Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Aplikacja została zaktualizowana do wersji {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Nowości w tej wersji:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Zalecane</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Aktualizacja</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Move files and folders
+• Rename files and folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authentificate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Handle file activation
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Przypnij do Startu</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Przypnij do Startu</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Połącz</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Uwaga!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Aplikacja musi zostać ponownie uruchomiona</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Wskazówka</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
+</root>
