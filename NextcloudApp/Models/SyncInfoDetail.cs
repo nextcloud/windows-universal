@@ -18,6 +18,7 @@ namespace NextcloudApp.Models
         public string FilePath { get; set; }
         public string Error { get; internal set; }
         public ConflictSolution ConflictSolution { get; set; }
+        public ConflictType ConflictType { get; set; }
 
         public SyncInfoDetail()
         {

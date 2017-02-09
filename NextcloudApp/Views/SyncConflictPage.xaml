@@ -30,7 +30,7 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
                                         <TextBlock Text="{Binding Path}" />
-                                        <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                        <TextBlock Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}" Foreground="Red"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>

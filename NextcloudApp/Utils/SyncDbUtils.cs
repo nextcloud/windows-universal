@@ -9,6 +9,7 @@
     using System.Linq;
     using Windows.Storage;
     using System;
+    using Windows.ApplicationModel.Resources;
 
     internal static class SyncDbUtils
     {
@@ -69,8 +70,10 @@
         {
             using (var db = DbConnection)
             {
-                List<SyncInfoDetail> sidList = db.Query<SyncInfoDetail>("SELECT * FROM SyncInfoDetail WHERE Error <> '' AND Error NOT LIKE 'Conflict: %'");
-                return sidList;
+                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
+                                                       where detail.Error != null
+                                                       select detail);
+                return sidList.ToList();
             }
         }
 
@@ -168,8 +171,10 @@
         {
             using (var db = DbConnection)
             {
-                List<SyncInfoDetail> sidList = db.Query<SyncInfoDetail>("SELECT * FROM SyncInfoDetail WHERE Error LIKE 'Conflict: %'");
-                return sidList;
+                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
+                                                       where detail.ConflictType != ConflictType.NONE
+                                                       select detail);
+                return sidList.ToList();
             }
         }
 

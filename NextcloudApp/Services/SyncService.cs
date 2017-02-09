@@ -258,6 +258,8 @@ namespace NextcloudApp.Services
                 sid = new SyncInfoDetail(folderSyncInfo);
             }
             sid.Error = null;
+            sid.ConflictType = ConflictType.NONE;
+
             try {
                 DateTimeOffset currentModified;
                 if(file != null)
@@ -272,7 +274,7 @@ namespace NextcloudApp.Services
                     {
                         sid.Path = info.Path + "/" + info.Name;
                         sid.FilePath = file.Path;
-                        sid.Error = "Conflict: File has been created remotely and locally - which is the correct one?";
+                        sid.ConflictType = ConflictType.BOTHNEW;
                         Debug.WriteLine("Sync file: Conflict (both new) " + info.Path + "/" + info.Name);
                     } else if (file != null)
                     {
@@ -352,7 +354,7 @@ namespace NextcloudApp.Services
                                     break;
                                 default:
                                     Debug.WriteLine("Sync file: Conflict (Deleted remotely, but changed locally) " + sid.Path);
-                                    sid.Error = "Conflict: Deleted file remotely but changed locally. Which do you prefer?";
+                                    sid.ConflictType = ConflictType.REMOTEDEL_LOCALCHANGE;
                                     break;
                             }
                         }
@@ -394,7 +396,7 @@ namespace NextcloudApp.Services
                                 default:
                                     // Conflict
                                     Debug.WriteLine("Sync file: Conflict (Deleted locally, but changed remotely) " + sid.Path);
-                                    sid.Error = "Conflict: Deleted file locally but changed remotely. Which do you prefer?";
+                                    sid.ConflictType = ConflictType.LOCALDEL_REMOTECHANGE;
                                     break;
                             }
                         }
@@ -467,13 +469,13 @@ namespace NextcloudApp.Services
                                     // Conflict
                                     if (sid.ETag == null && !sid.DateModified.HasValue)
                                     {
-                                        sid.Error = "Conflict: File has been created remotely and locally - which is the correct one?";
+                                        sid.ConflictType = ConflictType.BOTHNEW;
                                         Debug.WriteLine("Sync file: Conflict (both new) " + info.Path + "/" + info.Name);
                                     }
                                     else
                                     {
                                         Debug.WriteLine("Sync file: Conflict (Changed remotely and locally) " + sid.Path);
-                                        sid.Error = "Conflict: File changed locally and remotely. Which do you prefer?";
+                                        sid.ConflictType = ConflictType.BOTH_CHANGED;
                                     }
                                     break;
                             }
