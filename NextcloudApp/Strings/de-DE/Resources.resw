@@ -303,7 +303,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ausgewählte Dateien löschen</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Ausgewählten Datein ({0}) löschen möchten?</value>
+    <value>Sind Sie sicher, dass Sie die Ausgewählten Dateien ({0}) löschen möchten?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
