@@ -349,10 +349,10 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Zmień nazwę</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Move to</value>
+    <value>Przenieś do</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Move to</value>
+    <value>Przenieś do</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
     <value>Anuluj</value>
