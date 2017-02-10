@@ -147,6 +147,9 @@
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Aktualisieren</value>
   </data>
+  <data name="AppBarSelect.Label" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Sortieren</value>
   </data>

@@ -338,9 +338,9 @@
                 Label="Select" 
                 Command="{Binding SelectToggleCommand}"/>
             <AppBarButton
+                x:Uid="AppBarSort"
                 Icon="Sort" 
                 Label="Sort" 
-                x:Uid="AppBarSort"
                 Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
