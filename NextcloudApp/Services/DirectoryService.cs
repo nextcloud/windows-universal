@@ -133,11 +133,43 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
+            /*
+             * Also contains webdav session after client has been returned
+             * */
             var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;
             }
+
+            var shares = await client.GetShares("");
+            List<ResourceInfo> sharesList = null;
+
+            //try
+            //{
+            //    sharesList = await client.List(shares[0].TargetPath);
+            //}
+            //catch (ResponseError e)
+            //{
+            //    ResponseErrorHandlerService.HandleException(e);
+            //}
+            ResourceInfo resource = null;
+            resource = await client.GetResourceInfo(shares[0].TargetPath);
+            //sharesList.Add(resource);
+            //foreach (var item in shares)
+            //{
+            //    try
+            //    {
+            //        resource = await client.GetResourceInfo(item.TargetPath);
+            //        sharesList.Add(resource);
+            //    }
+            //    catch (ResponseError e)
+            //    {
+            //        ResponseErrorHandlerService.HandleException(e);
+            //    }
+            //}
+
+
 
             _continueListing = true;
 
@@ -152,7 +184,7 @@ namespace NextcloudApp.Services
             {
                 ResponseErrorHandlerService.HandleException(e);
             }
-
+            list = sharesList;
             FilesAndFolders.Clear();
             Folders.Clear();
             if (list != null)

@@ -49,6 +49,9 @@ namespace NextcloudApp.ViewModels
             _dialogService = dialogService;
             _tileService = TileService.Instance;
 
+            /**
+             * Contains the User Settings ie. Server-Address and Username
+             */
             Settings = SettingsService.Instance.LocalSettings;
 
             GroupByNameAscendingCommand = new DelegateCommand(() =>
