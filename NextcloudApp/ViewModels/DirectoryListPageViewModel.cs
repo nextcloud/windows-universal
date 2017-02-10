@@ -37,6 +37,7 @@ namespace NextcloudApp.ViewModels
         public ICommand UploadFilesCommand { get; private set; }
         public ICommand UploadPhotosCommand { get; private set; }
         public ICommand DownloadResourceCommand { get; private set; }
+        public ICommand DownloadSelectedCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
@@ -96,6 +97,7 @@ namespace NextcloudApp.ViewModels
             UploadFilesCommand = new DelegateCommand(UploadFiles);
             UploadPhotosCommand = new DelegateCommand(UploadPhotos);
             DownloadResourceCommand = new RelayCommand(DownloadResource);
+            DownloadSelectedCommand = new RelayCommand(DownloadSelected);
             DeleteResourceCommand = new RelayCommand(DeleteResource);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
@@ -141,6 +143,33 @@ namespace NextcloudApp.ViewModels
                 ResourceInfo = resourceInfo
             };
             _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
+        }
+
+        private void DownloadSelected(object parameter)
+        {
+            var listView = parameter as ListView;
+            if (listView != null)
+            {
+                var selectedItems = new List<ResourceInfo>();
+                var files = new List<string>();
+                foreach (var selectedItem in listView.SelectedItems)
+                {
+                    var resourceInfo = selectedItem as ResourceInfo;
+                    if (resourceInfo != null)
+                    {
+                        selectedItems.Add(resourceInfo);
+                    }
+                }
+                if (selectedItems.Count == 1)
+                {
+                }
+                var parameters = new FileDownloadPageParameters
+                {
+                    ResourceInfos = selectedItems
+                };
+                Directory.ToggleSelectionMode();
+                _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
+            }
         }
 
         private void MoveResource(object parameter)

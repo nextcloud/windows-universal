@@ -130,7 +130,7 @@
     <Compile Include="Models\PageParameters.cs" />
     <Compile Include="Models\PinStartPageParameters.cs" />
     <Compile Include="Models\RoamingSettings.cs" />
-    <Compile Include="Models\SingleFileDownloadPageParameters.cs" />
+    <Compile Include="Models\FileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
@@ -172,7 +172,7 @@
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
-    <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
+    <Compile Include="ViewModels\FileDownloadPageViewModel.cs" />
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
@@ -184,8 +184,8 @@
     <Compile Include="Views\MoveFileOrFolder.xaml.cs">
       <DependentUpon>MoveFileOrFolder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SingleFileDownloadPage.xaml.cs">
-      <DependentUpon>SingleFileDownloadPage.xaml</DependentUpon>
+    <Compile Include="Views\FileDownloadPage.xaml.cs">
+      <DependentUpon>FileDownloadPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FileInfoPage.xaml.cs">
       <DependentUpon>FileInfoPage.xaml</DependentUpon>
@@ -259,7 +259,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SingleFileDownloadPage.xaml">
+    <Page Include="Views\FileDownloadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
