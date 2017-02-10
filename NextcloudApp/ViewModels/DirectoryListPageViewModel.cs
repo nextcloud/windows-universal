@@ -153,7 +153,6 @@ namespace NextcloudApp.ViewModels
             if (listView != null)
             {
                 var selectedItems = new List<ResourceInfo>();
-                var files = new List<string>();
                 foreach (var selectedItem in listView.SelectedItems)
                 {
                     var resourceInfo = selectedItem as ResourceInfo;
@@ -162,13 +161,17 @@ namespace NextcloudApp.ViewModels
                         selectedItems.Add(resourceInfo);
                     }
                 }
-                if (selectedItems.Count == 1)
-                {
-                }
                 var parameters = new FileDownloadPageParameters
                 {
                     ResourceInfos = selectedItems
                 };
+                if (selectedItems.Count == 1)
+                {
+                    parameters = new FileDownloadPageParameters
+                    {
+                        ResourceInfo = selectedItems[0]
+                    };
+                }
                 Directory.ToggleSelectionMode();
                 _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
             }
