@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Data;
 
 namespace NextcloudApp.Converter
 {
-    public class IsSortingToSelectionModeConverter : IValueConverter
+    public class IsSelectingToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
