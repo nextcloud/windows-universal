@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+using NextcloudClient.Types;
 
 namespace NextcloudApp.Converter
 {
@@ -10,21 +10,16 @@ namespace NextcloudApp.Converter
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var invert = parameter != null;
-            if (value is bool && (bool)value)
+            if (!invert)
             {
-                return !invert ? ListViewSelectionMode.None : ListViewSelectionMode.Single;
+                return (bool)value ? Visibility.Visible : Visibility.Collapsed;
             }
-            return !invert ? ListViewSelectionMode.Single : ListViewSelectionMode.None;
+            return (bool)value ? Visibility.Collapsed : Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            var invert = parameter != null;
-            if (value is ListViewSelectionMode && (ListViewSelectionMode)value == ListViewSelectionMode.None)
-            {
-                return !invert;
-            }
-            return invert;
+            return new ResourceInfo();
         }
     }
 }

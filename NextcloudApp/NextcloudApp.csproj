@@ -124,7 +124,7 @@
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
-    <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
+    <Compile Include="Converter\IsSelectingToVisibilityConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />

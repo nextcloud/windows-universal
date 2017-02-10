@@ -50,6 +50,8 @@ namespace NextcloudApp.Services
         private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
         private bool _isSorting;
         private bool _continueListing;
+        private bool _isSelecting;
+        private string _selectionMode;
 
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
@@ -114,6 +116,11 @@ namespace NextcloudApp.Services
             IsSorting = false;
         }
 
+        public void ToggleSelectionMode()
+        {
+            IsSelecting = IsSelecting ? false : true;
+        }
+
         private static string GetSizeHeader(ResourceInfo fileOrFolder)
         {
             var size = fileOrFolder.Size;
@@ -134,7 +141,7 @@ namespace NextcloudApp.Services
         public async Task StartDirectoryListing()
         {
             var client = await ClientService.GetClient();
-            if (client == null)
+            if (client == null || IsSelecting)
             {
                 return;
             }
@@ -247,10 +254,39 @@ namespace NextcloudApp.Services
                     return;
                 }
                 _isSorting = value;
+                SelectionMode = _isSorting ? "None" : "Single";
                 OnPropertyChanged();
             }
         }
 
+        public bool IsSelecting
+        {
+            get { return _isSelecting; }
+            set
+            {
+                if (_isSelecting == value)
+                {
+                    return;
+                }
+                _isSelecting = value;
+                SelectionMode = _isSelecting ? "Multiple" : "Single";
+                OnPropertyChanged();
+            }
+        }
+
+        public string SelectionMode
+        {
+            get { return _selectionMode; }
+            set
+            {
+                if (_selectionMode == value)
+                {
+                    return;
+                }
+                _selectionMode = value;
+                OnPropertyChanged();
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
