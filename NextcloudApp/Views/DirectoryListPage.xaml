@@ -237,7 +237,7 @@
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Holding">
-                                    <actions:OpenMenuFlyoutAction />
+                                        <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
                                     <core:EventTriggerBehavior EventName="RightTapped">
                                         <actions:OpenMenuFlyoutAction />
@@ -332,7 +332,16 @@
                 x:Uid="AppBarRefresh"
                 Command="{Binding RefreshCommand}"/>
             </CommandBar.SecondaryCommands>
-            <AppBarButton Icon="Sort" Label="Sort" x:Uid="AppBarSort">
+            <AppBarButton 
+                x:Uid="AppBarSelect" 
+                Icon="Bullets" 
+                Label="Select" 
+                Command="{Binding SelectToggleCommand}"/>
+            <AppBarButton
+                Icon="Sort" 
+                Label="Sort" 
+                x:Uid="AppBarSort"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem 
@@ -364,7 +373,11 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-            <AppBarButton Icon="Add" Label="Add" x:Uid="AppBarAdd">
+            <AppBarButton
+                Icon="Add" 
+                Label="Add" 
+                x:Uid="AppBarAdd"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">>
                 <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem 
@@ -394,6 +407,27 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
+            <!--<AppBarButton
+                Icon="Delete"
+                x:Uid="Delete_Label"
+                Label="Delete"
+                Command="{Binding DataContext.DeleteSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>-->
+            <AppBarButton
+                Icon="Download"
+                x:Uid="AppBarDownload"
+                Label="AppBarDownload"
+                Command="{Binding DataContext.DownloadSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <!--<AppBarButton
+                Icon="MoveToFolder"
+                x:Uid="MoveTo_Label"
+                Label="Move to"
+                Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>-->
         </CommandBar>
     </Grid>
 
