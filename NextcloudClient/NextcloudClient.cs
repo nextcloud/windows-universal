@@ -554,6 +554,23 @@ namespace NextcloudClient
         }
 
         /// <summary>
+        ///     List all remote shares.
+        /// </summary>
+        /// <returns>List of remote shares.</returns>
+        public async Task<object> ListShare()
+        {
+            var response = await DoApiRequest(
+                "GET",
+                "/" + GetOcsPath(OcsServiceShare, "shares")
+                );
+
+            //Debug.Assert(response.StatusCode == HttpStatusCode.OK);
+
+            // TODO: Parse response
+            return response;
+        }
+
+        /// <summary>
         ///     Accepts a remote share
         /// </summary>
         /// <returns><c>true</c>, if remote share was accepted, <c>false</c> otherwise.</returns>
@@ -1815,6 +1832,12 @@ namespace NextcloudClient
                 if (node != null)
                 {
                     share.TargetPath = node.Value;
+                }
+
+                node = data.Element(XName.Get("path"));
+                if (node != null)
+                {
+                    share.Path = node.Value;
                 }
 
                 node = data.Element(XName.Get("permissions"));

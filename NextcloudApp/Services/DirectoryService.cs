@@ -142,8 +142,11 @@ namespace NextcloudApp.Services
                 return;
             }
 
+            var remoteShares = await client.ListOpenRemoteShare();
             var shares = await client.GetShares("");
-            List<ResourceInfo> sharesList = null;
+            //List<ResourceInfo> sharesList = null;
+            List<ResourceInfo> sharesList = new List<ResourceInfo>();
+
 
             //try
             //{
@@ -153,9 +156,18 @@ namespace NextcloudApp.Services
             //{
             //    ResponseErrorHandlerService.HandleException(e);
             //}
-            ResourceInfo resource = null;
-            resource = await client.GetResourceInfo(shares[0].TargetPath);
-            //sharesList.Add(resource);
+            ResourceInfo resource;
+            resource = await client.GetResourceInfo(shares[0].Path);
+
+            try
+            {
+                sharesList.Add(resource);
+            }
+            catch (ResponseError e)
+            {
+                ResponseErrorHandlerService.HandleException(e);
+            }
+
             //foreach (var item in shares)
             //{
             //    try
