@@ -346,6 +346,29 @@ namespace NextcloudApp.Services
             return success;
         }
 
+        public async Task<bool> DeleteSelected(List<ResourceInfo> resourceInfos)
+        {
+            var client = await ClientService.GetClient();
+            if (client == null)
+            {
+                return false;
+            }
+
+            foreach (var resourceInfo in resourceInfos)
+            {
+                var path = resourceInfo.ContentType.Equals("dav/directory")
+                ? resourceInfo.Path
+                : resourceInfo.Path + "/" + resourceInfo.Name;
+                var success = await client.Delete(path);
+                if (!success)
+                {
+                    return success;
+                }
+            }
+            await StartDirectoryListing();
+            return true;
+        }
+
         public async Task<bool> Rename(string oldName, string newName)
         {
             var client = await ClientService.GetClient();

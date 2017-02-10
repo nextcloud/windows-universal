@@ -407,13 +407,13 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-            <!--<AppBarButton
+            <AppBarButton
                 Icon="Delete"
                 x:Uid="Delete_Label"
                 Label="Delete"
                 Command="{Binding DataContext.DeleteSelectedCommand, ElementName=Page}"
                 CommandParameter="{Binding ElementName=FileOrFolderListView}"
-                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>-->
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
             <AppBarButton
                 Icon="Download"
                 x:Uid="AppBarDownload"

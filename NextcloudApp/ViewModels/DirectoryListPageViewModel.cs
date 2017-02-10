@@ -39,6 +39,7 @@ namespace NextcloudApp.ViewModels
         public ICommand DownloadResourceCommand { get; private set; }
         public ICommand DownloadSelectedCommand { get; private set; }
         public ICommand DeleteResourceCommand { get; private set; }
+        public ICommand DeleteSelectedCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
         public ICommand PinToStartCommand { get; private set; }
@@ -99,6 +100,7 @@ namespace NextcloudApp.ViewModels
             DownloadResourceCommand = new RelayCommand(DownloadResource);
             DownloadSelectedCommand = new RelayCommand(DownloadSelected);
             DeleteResourceCommand = new RelayCommand(DeleteResource);
+            DeleteSelectedCommand = new RelayCommand(DeleteSelected);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
@@ -215,6 +217,45 @@ namespace NextcloudApp.ViewModels
             ShowProgressIndicator();
             await Directory.DeleteResource(resourceInfo);
             HideProgressIndicator();
+        }
+
+        private async void DeleteSelected(object parameter)
+        {
+            var listView = parameter as ListView;
+            if (listView != null)
+            {
+                var selectedItems = new List<ResourceInfo>();
+                foreach (var selectedItem in listView.SelectedItems)
+                {
+                    var resourceInfo = selectedItem as ResourceInfo;
+                    if (resourceInfo != null)
+                    {
+                        selectedItems.Add(resourceInfo);
+                    }
+                }
+                var dialog = new ContentDialog
+                {
+                    Title = _resourceLoader.GetString("DeleteFiles"),
+                    Content = new TextBlock()
+                    {
+                        Text = string.Format(_resourceLoader.GetString("DeleteFiles_Description"), selectedItems.Count),
+                        TextWrapping = TextWrapping.WrapWholeWords,
+                        Margin = new Thickness(0, 20, 0, 0)
+                    },
+                    PrimaryButtonText = _resourceLoader.GetString("Yes"),
+                    SecondaryButtonText = _resourceLoader.GetString("No")
+                };
+                var dialogResult = await _dialogService.ShowAsync(dialog);
+                if (dialogResult != ContentDialogResult.Primary)
+                {
+                    return;
+                }
+
+                Directory.ToggleSelectionMode();
+                ShowProgressIndicator();
+                await Directory.DeleteSelected(selectedItems);
+                HideProgressIndicator();
+            }
         }
 
         private void PinToStart(object parameter)
