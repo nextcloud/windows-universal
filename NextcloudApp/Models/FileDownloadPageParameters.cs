@@ -2,7 +2,7 @@
 
 namespace NextcloudApp.Models
 {
-    public class SingleFileDownloadPageParameters : PageParameters<SingleFileDownloadPageParameters>
+    public class FileDownloadPageParameters : PageParameters<FileDownloadPageParameters>
     {
         public ResourceInfo ResourceInfo { get; set; }
     }

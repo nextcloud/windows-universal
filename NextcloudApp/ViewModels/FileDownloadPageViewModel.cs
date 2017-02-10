@@ -18,7 +18,7 @@ using Prism.Windows.AppModel;
 
 namespace NextcloudApp.ViewModels
 {
-    public class SingleFileDownloadPageViewModel : ViewModel
+    public class FileDownloadPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationService;
         private CancellationTokenSource _cts;
@@ -32,7 +32,7 @@ namespace NextcloudApp.ViewModels
         private StorageFile _currentFile;
         private bool _isIndeterminate;
 
-        public SingleFileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
+        public FileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
@@ -67,7 +67,7 @@ namespace NextcloudApp.ViewModels
 
             _cts = new CancellationTokenSource();
 
-            var parameters = SingleFileDownloadPageParameters.Deserialize(e.Parameter);
+            var parameters = FileDownloadPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
             if (resourceInfo == null)
             {

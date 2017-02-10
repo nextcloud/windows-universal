@@ -136,11 +136,11 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
-            var parameters = new SingleFileDownloadPageParameters
+            var parameters = new FileDownloadPageParameters
             {
                 ResourceInfo = resourceInfo
             };
-            _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
         }
 
         private void MoveResource(object parameter)
