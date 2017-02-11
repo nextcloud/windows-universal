@@ -451,7 +451,7 @@ Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm
     <value>Pista</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Servicio temporalmente no disponible (normalmente debido a trabajos de mantenimiento de corto plazo).
+Por favor, inténtelo de nuevo más tarde.</value>
   </data>
 </root>
