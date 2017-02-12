@@ -421,13 +421,13 @@
                 Command="{Binding DataContext.DownloadSelectedCommand, ElementName=Page}"
                 CommandParameter="{Binding ElementName=FileOrFolderListView}"
                 Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
-            <!--<AppBarButton
+            <AppBarButton
                 Icon="MoveToFolder"
                 x:Uid="MoveTo_Label"
                 Label="Move to"
                 Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
                 CommandParameter="{Binding ElementName=FileOrFolderListView}"
-                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>-->
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
         </CommandBar>
     </Grid>
 

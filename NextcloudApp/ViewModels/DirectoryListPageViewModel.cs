@@ -42,6 +42,7 @@ namespace NextcloudApp.ViewModels
         public ICommand DeleteSelectedCommand { get; private set; }
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
+        public ICommand MoveSelectedCommand { get; private set; }
         public ICommand PinToStartCommand { get; private set; }
         public ICommand SelectToggleCommand { get; private set; }
 
@@ -103,6 +104,7 @@ namespace NextcloudApp.ViewModels
             DeleteSelectedCommand = new RelayCommand(DeleteSelected);
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
+            MoveSelectedCommand = new RelayCommand(MoveSelected);
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             PinToStartCommand = new DelegateCommand<object>(PinToStart);
         }
@@ -189,6 +191,36 @@ namespace NextcloudApp.ViewModels
                 ResourceInfo = resourceInfo
             };
             _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+        }
+
+        private void MoveSelected(object parameter)
+        {
+            var listView = parameter as ListView;
+            if (listView != null)
+            {
+                var selectedItems = new List<ResourceInfo>();
+                foreach (var selectedItem in listView.SelectedItems)
+                {
+                    var resourceInfo = selectedItem as ResourceInfo;
+                    if (resourceInfo != null)
+                    {
+                        selectedItems.Add(resourceInfo);
+                    }
+                }
+                var parameters = new MoveFileOrFolderPageParameters
+                {
+                    ResourceInfos = selectedItems
+                };
+                if (selectedItems.Count == 1)
+                {
+                    parameters = new MoveFileOrFolderPageParameters
+                    {
+                        ResourceInfo = selectedItems[0]
+                    };
+                }
+                Directory.ToggleSelectionMode();
+                _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+            }
         }
 
         private async void DeleteResource(object parameter)
