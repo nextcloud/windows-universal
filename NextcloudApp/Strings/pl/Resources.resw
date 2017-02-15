@@ -172,9 +172,9 @@
     <value>Błąd aplikacji</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Aplikacja napotkała problem. Przepraszamy za niedogodności. Jeśli byłeś w trakcie jakiejś pracy informacje, nad którymi pracowałeś są stracone.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o błędzie? Pomoże to szybciej wyeliminować problem w przyszłości.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Anuluj</value>
@@ -412,18 +412,18 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Przenosić pliki i foldery
+• Zmieniać nazwy plików i folderów
+• Pobierać foldery jako plik zip
+• Wybierać wiele plików i folderów
+• Przypinać pliki i folderu do ekranu domowego
+• Używać Windows Hello do uwierzytelnienia aplikacji na starcie
+• Używać własnopodpisanych certyfikatów
+• Pokazywać rozmiar folderów na liście
+• Utrzymywać aktywację pliku
+• Używać krypty haseł do przechowywania poświqadczeń użytkownika
+• Wzmocnienie bezpieczeństwa i poprawa błędów
+• Nowa i bardziej stabilna biblioteka WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
@@ -435,12 +435,12 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Połącz</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignoruj błędnie samopodpisane certyfikaty. Pozwala to na użycie błędnych lub niewłaściwych certyfikatów SSL. Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Jednostka certyfikująca jest błędna lub niepoprawna. Połączyć na pewno?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Uwaga!</value>
@@ -452,7 +452,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Wskazówka</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Usługa tymczasowo niedostępna (najczęściej przed krótkie prace serwisowe)
+Proszę spróbować ponownie później,</value>
   </data>
 </root>
