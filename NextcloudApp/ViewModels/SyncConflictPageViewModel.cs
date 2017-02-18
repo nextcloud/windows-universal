@@ -8,6 +8,7 @@ using Prism.Windows.Navigation;
 using Prism.Windows.AppModel;
 using Prism.Commands;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Notifications;
 
 namespace NextcloudApp.ViewModels
 {
@@ -22,6 +23,8 @@ namespace NextcloudApp.ViewModels
         public ICommand FixConflictByRemoteCommand { get; private set; }
         public SyncConflictPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;

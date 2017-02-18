@@ -499,4 +499,13 @@ Please try again later.</value>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
   </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
 </root>

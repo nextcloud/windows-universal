@@ -245,6 +245,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -349,6 +357,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.native.System.IO.Compression/4.1.0": {
@@ -2333,6 +2349,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -2438,6 +2462,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -4555,6 +4587,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -4660,6 +4700,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -6818,6 +6866,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -6923,6 +6979,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -9049,6 +9113,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -9154,6 +9226,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -11317,6 +11397,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -11422,6 +11510,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -13548,6 +13644,14 @@
         }
       },
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {},
+      "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+        "compile": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll": {}
+        }
+      },
       "Microsoft.VisualBasic/10.0.1": {
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -13653,6 +13757,14 @@
         },
         "runtime": {
           "lib/uap10.0/Prism.Windows.dll": {}
+        }
+      },
+      "QueryString.NET/1.0.0": {
+        "compile": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/QueryString.NETCore.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -15860,6 +15972,30 @@
         "runtime.json"
       ]
     },
+    "Microsoft.Toolkit.Uwp.Notifications/1.3.1": {
+      "sha512": "mmKqoXjjOrJ5hdSl/EIJozh+ahewzuIw074fHZ4vW3WmMvNb/dGsOteoJFdLweMEC6+/TGj+4uwHXhW+98rXdg==",
+      "type": "package",
+      "path": "Microsoft.Toolkit.Uwp.Notifications/1.3.1",
+      "files": [
+        "Microsoft.Toolkit.Uwp.Notifications.1.3.1.nupkg.sha512",
+        "Microsoft.Toolkit.Uwp.Notifications.nuspec",
+        "build/native/Microsoft.Toolkit.Uwp.Notifications.targets",
+        "lib/dotnet/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/dotnet/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/dotnet/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.pri",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.winmd",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.winmd.xml",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/portable-net40+sl50+win+wpa81+wp80/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/portable-net40+sl50+win+wpa81+wp80/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/portable-net40+sl50+win+wpa81+wp80/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/uap10.0/Microsoft.Toolkit.Uwp.Notifications.xml"
+      ]
+    },
     "Microsoft.VisualBasic/10.0.1": {
       "sha512": "HpNyOf/4Tp2lh4FyywB55VITk0SqVxEjDzsVDDyF1yafDN6Bq18xcHowzCPINyYHUTgGcEtmpYiRsFdSo0KKdQ==",
       "type": "package",
@@ -16017,6 +16153,21 @@
         "lib/uap10.0/Prism.Windows.dll",
         "lib/uap10.0/Prism.Windows.pri",
         "lib/uap10.0/Prism.Windows.xml"
+      ]
+    },
+    "QueryString.NET/1.0.0": {
+      "sha512": "u+MbuqDtckYQv90rphUgmz1PXA4lBSG50MvP5yHUiCzn/kxAs2W8Pyb9VQRlnc+fBB0q6C/Q+bk+nuKbFVqiIg==",
+      "type": "package",
+      "path": "QueryString.NET/1.0.0",
+      "files": [
+        "QueryString.NET.1.0.0.nupkg.sha512",
+        "QueryString.NET.nuspec",
+        "lib/dotnet/QueryString.NETCore.XML",
+        "lib/dotnet/QueryString.NETCore.dll",
+        "lib/dotnet/QueryString.NETCore.pdb",
+        "lib/portable-net4+sl50+win+wpa81+wp80/QueryString.Portable.dll",
+        "lib/portable-net4+sl50+win+wpa81+wp80/QueryString.Portable.pdb",
+        "lib/portable-net4+sl50+win+wpa81+wp80/QueryString.Portable.xml"
       ]
     },
     "runtime.any.System.Collections/4.0.11": {
@@ -21792,8 +21943,10 @@
     "": [
       "Microsoft.Bcl.Build >= 1.0.21",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
+      "Microsoft.Toolkit.Uwp.Notifications >= 1.3.1",
       "Newtonsoft.Json >= 9.0.1",
       "Prism.Unity >= 6.2.0",
+      "QueryString.NET >= 1.0.0",
       "SQLite.Net-PCL >= 3.1.1"
     ],
     "UAP,Version=v10.0": []

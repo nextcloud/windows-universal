@@ -14,6 +14,7 @@ using Prism.Windows.Navigation;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace NextcloudApp.ViewModels
 {
@@ -169,6 +170,7 @@ namespace NextcloudApp.ViewModels
             StorageFolder folder;
             try
             {
+                Task<ContentDialogResult> firstRunDialog = null;
                 if (syncInfo == null)
                 {
                     // try to Get parent or initialize
@@ -213,6 +215,18 @@ namespace NextcloudApp.ViewModels
                         folder = newFolder;
                         SyncDbUtils.SaveFolderSyncInfo(syncInfo);
                         StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+                        var dialog = new ContentDialog
+                        {
+                            Title = _resourceLoader.GetString("SyncStarted"),
+                            Content = new TextBlock()
+                            {
+                                Text = _resourceLoader.GetString("SyncStartedDetail"),
+                                TextWrapping = TextWrapping.WrapWholeWords,
+                                Margin = new Thickness(0, 20, 0, 0)
+                            },
+                            PrimaryButtonText = _resourceLoader.GetString("OK")
+                        };
+                        firstRunDialog = _dialogService.ShowAsync(dialog);
                     } else
                     {
                         string subPath = resourceInfo.Path.Substring(syncInfo.Path.Length);
@@ -227,21 +241,14 @@ namespace NextcloudApp.ViewModels
                 } else
                 {
                     folder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
+                    // TODO catch exceptions
                 }
                 SyncService service = new SyncService(folder, resourceInfo, syncInfo);
                 service.StartSync();
-                var dialog = new ContentDialog
+                if(firstRunDialog != null)
                 {
-                    Title = _resourceLoader.GetString("SyncStarted"),
-                    Content = new TextBlock()
-                    {
-                        Text = _resourceLoader.GetString("SyncStartedDetail"),
-                        TextWrapping = TextWrapping.WrapWholeWords,
-                        Margin = new Thickness(0, 20, 0, 0)
-                    },
-                    PrimaryButtonText = _resourceLoader.GetString("OK")
-                };
-                await _dialogService.ShowAsync(dialog);
+                    await firstRunDialog;
+                }
             }
             catch (Exception e)
             {

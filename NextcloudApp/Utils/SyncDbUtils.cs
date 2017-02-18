@@ -89,6 +89,19 @@
             }
         }
 
+        public static int GetErrorConflictCount(FolderSyncInfo folderSyncInfo)
+        {
+            // Create a new connection
+            using (var db = DbConnection)
+            {
+                return (from sid in db.Table<SyncInfoDetail>()
+                                    where sid.FsiID == folderSyncInfo.Id 
+                                    && (sid.ConflictType != ConflictType.NONE 
+                                    || sid.Error != null)
+                        select sid).Count();
+            }
+        }
+
         public static FolderSyncInfo GetFolderSyncInfoBySubPath(string Path)
         {
             // Create a new connection

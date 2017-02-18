@@ -148,6 +148,7 @@
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
     <Compile Include="Services\SyncService.cs" />
+    <Compile Include="Services\ToastNotificationService.cs" />
     <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
     <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
