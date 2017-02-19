@@ -151,10 +151,10 @@
     <value>排序</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>日期(顶部最久)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>日期(最新的在顶部)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
     <value>按名称排序(A-Z)</value>
@@ -312,13 +312,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>上传文件中 … </value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} of {1} downloaded</value>
+    <value>{0} 于 {1} 下载</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
     <value>The maintenance mode is enabled on the server.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Wrong username or password.</value>
+    <value>错误的用户名或密码.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>客户端版本 {0}</value>
@@ -336,7 +336,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>等待服务器响应</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Please choose a new name</value>
+    <value>请选择一个新的名字</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>重命名</value>
@@ -363,7 +363,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>选择目录</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>The server with the address {0} is not reachable.</value>
+    <value>该服务器地址 {0} 无法访问.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>下载为 ZIP 文件</value>
@@ -372,7 +372,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>已下载 {0}</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>要访问你的 Nextcloud, 为你的设备提供登录信息.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello 认证</value>
@@ -390,16 +390,16 @@ Would you like to inform the application developers and submit the prepared erro
     <value>要求登录</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>再试一次</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud Windows 移动版</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>该应用更新到版本 {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>此版本的新功能和改进：</value>
@@ -425,10 +425,10 @@ Would you like to inform the application developers and submit the prepared erro
 • New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin 启动</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin 启动</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>连接</value>
@@ -442,10 +442,10 @@ Would you like to inform the application developers and submit the prepared erro
 Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>注意!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>该应用需要重启</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
