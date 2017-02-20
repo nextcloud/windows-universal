@@ -408,6 +408,13 @@
                 </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton
+                Icon="MoveToFolder"
+                x:Uid="MoveTo_Label"
+                Label="Move to"
+                Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <AppBarButton
                 Icon="Delete"
                 x:Uid="Delete_Label"
                 Label="Delete"
@@ -419,13 +426,6 @@
                 x:Uid="AppBarDownload"
                 Label="AppBarDownload"
                 Command="{Binding DataContext.DownloadSelectedCommand, ElementName=Page}"
-                CommandParameter="{Binding ElementName=FileOrFolderListView}"
-                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
-            <AppBarButton
-                Icon="MoveToFolder"
-                x:Uid="MoveTo_Label"
-                Label="Move to"
-                Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
                 CommandParameter="{Binding ElementName=FileOrFolderListView}"
                 Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
         </CommandBar>
