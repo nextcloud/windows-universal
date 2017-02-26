@@ -11,9 +11,9 @@
     <ReleaseVersion>0.1.0</ReleaseVersion>
     <Description>A portable class library to interact with ownCloud servers through WebDAV and the ownCloud OCS API.</Description>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <DefaultLanguage>en</DefaultLanguage>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
-    <DefaultLanguage>en</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
