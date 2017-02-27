@@ -157,7 +157,8 @@ namespace NextcloudApp.Services
             //    ResponseErrorHandlerService.HandleException(e);
             //}
             ResourceInfo resource;
-            resource = await client.GetResourceInfo(shares[0].Path);
+            resource = await client.GetResourceInfo(shares[1].Path);
+            //sharesList = await client.List(shares[1].Path);
 
             try
             {

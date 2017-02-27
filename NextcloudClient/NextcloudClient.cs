@@ -175,6 +175,7 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
+            var test = GetDavUri(path);
             var result = await _dav.ListAsync(GetDavUri(path));
 
             var baseUri = new Uri(_url);
@@ -216,7 +217,18 @@ namespace NextcloudClient
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
             
             var result = await _dav.ListAsync(GetDavUri(path));
-
+            /**
+             * This is the Problem with getting the information.
+             * The GetResourceInfo function is trying to pull data from a directory listing, but needs
+             * to pull the data of a single element to work with what we need.
+             * Need to build a function to just get the single element resource information.
+             * This could be done using the "GetDavUri(path);" function.
+             * "GetDavUri(path);" returns the remote URI that could be used to get the correct
+             * ResourceInfo.
+             * "https://ourcloud.sorglosinternet.de/remote.php/webdav/Photos/Squirrel.jpg"
+             * 
+             * This needs to be done in my next session.
+             * */
             if (result.Count <= 0)
             {
                 return null;
