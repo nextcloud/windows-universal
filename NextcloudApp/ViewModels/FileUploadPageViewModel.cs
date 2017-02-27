@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
+using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 using Windows.UI.Core;
 using Windows.Web.Http;
@@ -88,18 +90,34 @@ namespace NextcloudApp.ViewModels
                 return;
             }
             ResourceInfo = resourceInfo;
-            SuggestedStartLocation = parameters.PickerLocationId;
+
+            IReadOnlyList<StorageFile> storageFiles = null;
+
+            if (parameters.FileTokens != null && parameters.FileTokens.Any())
+            {
+                storageFiles = new List<StorageFile>();
+                foreach (var token in parameters.FileTokens)
+                {
+                    ((List<StorageFile>) storageFiles).Add(
+                        await StorageApplicationPermissions.FutureAccessList.GetFileAsync(token));
+                }
+            }
+
+            if (storageFiles == null || !storageFiles.Any())
+            {
+                SuggestedStartLocation = parameters.PickerLocationId;
+
+                var openPicker = new FileOpenPicker
+                {
+                    SuggestedStartLocation = SuggestedStartLocation
+                };
+                openPicker.FileTypeFilter.Add("*");
+                storageFiles = await openPicker.PickMultipleFilesAsync();
+            }
+
             UploadingFilesTitle = null;
             UploadingFileProgressText = null;
             var i = 0;
-
-            var openPicker = new FileOpenPicker
-            {
-                SuggestedStartLocation = SuggestedStartLocation
-            };
-            openPicker.FileTypeFilter.Add("*");
-            var storageFiles = await openPicker.PickMultipleFilesAsync();
-
             foreach (var localFile in storageFiles)
             {
                 _currentFile = localFile;

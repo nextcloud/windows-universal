@@ -1,4 +1,5 @@
-﻿using Windows.Storage.Pickers;
+﻿using System.Collections.Generic;
+using Windows.Storage.Pickers;
 using NextcloudClient.Types;
 
 namespace NextcloudApp.Models
@@ -7,5 +8,6 @@ namespace NextcloudApp.Models
     {
         public ResourceInfo ResourceInfo { get; set; }
         public PickerLocationId PickerLocationId { get; set; }
+        public List<string> FileTokens { get; set; }
     }
 }

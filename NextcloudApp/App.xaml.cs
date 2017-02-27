@@ -34,8 +34,21 @@ namespace NextcloudApp
         /// </summary>
         public App()
         {
-            InitializeComponent();
             UnhandledException += OnUnhandledException;
+            TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+            InitializeComponent();
+        }
+
+        private async void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs args)
+        {
+            var exceptionStackTrace = args.Exception.StackTrace;
+            var
+                exceptionHashCode = string.IsNullOrEmpty(exceptionStackTrace)
+                    ? args.Exception.GetHashCode().ToString()
+                    : exceptionStackTrace.GetHashCode().ToString();
+            await
+                ExceptionReportService.Handle(args.Exception.GetType().ToString(), args.Exception.Message,
+                    exceptionStackTrace, args.Exception.InnerException.GetType().ToString(), exceptionHashCode);
         }
 
         private async void OnUnhandledException(object sender, UnhandledExceptionEventArgs args)
@@ -133,50 +146,43 @@ namespace NextcloudApp
                     innerExceptionType, exceptionHashCode);
         }
 
-        protected override async void OnFileActivated(FileActivatedEventArgs args)
+        protected override void OnFileActivated(FileActivatedEventArgs args)
         {
-            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
-            {
-                await InitializeFrameAsync(args);
-                await OnLaunchApplicationAsync(null);
-            }
-
-            base.OnFileActivated(args);
-
-            //TODO
+            OnActivated(args);
         }
 
-        protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
-            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
-            {
-                await InitializeFrameAsync(args);
-                await OnLaunchApplicationAsync(null);
-            }
-
-            base.OnShareTargetActivated(args);
-            
-            var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
-
-            var pageParameters = new ShareTargetPageParameters()
-            {
-                ShareOperation = args.ShareOperation,
-                FileTokens = new List<string>()
-            };
-
-            foreach (var storageItem in sorageItems)
-            {
-                var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
-                pageParameters.FileTokens.Add(token);
-            }
-            
-            args.ShareOperation.ReportDataRetrieved();
-            
-            NavigationService.Navigate(
-                PageTokens.ShareTarget.ToString(),
-                pageParameters?.Serialize());
+            OnActivated((IActivatedEventArgs)args);
         }
 
+        protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
+        {
+            var activatedEventArgs = args as ShareTargetActivatedEventArgs;
+            if (activatedEventArgs != null)
+            {
+                var sorageItems = await activatedEventArgs.ShareOperation.Data.GetStorageItemsAsync();
+
+                var pageParameters = new ShareTargetPageParameters()
+                {
+                    ShareOperation = activatedEventArgs.ShareOperation,
+                    FileTokens = new List<string>()
+                };
+
+                foreach (var storageItem in sorageItems)
+                {
+                    var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                    pageParameters.FileTokens.Add(token);
+                }
+
+                activatedEventArgs.ShareOperation.ReportDataRetrieved();
+                NavigationService.Navigate(
+                    PageTokens.ShareTarget.ToString(),
+                    pageParameters.Serialize());
+            }
+            await base.OnActivateApplicationAsync(args);
+        }
+        
         protected override UIElement CreateShell(Frame rootFrame)
         {
             var shell = Container.Resolve<AppShell>();
@@ -214,7 +220,7 @@ namespace NextcloudApp
 
             return task;
         }
-
+        
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
             if (
@@ -237,7 +243,8 @@ namespace NextcloudApp
                 {
                     // ignored
                 }
-                var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
+
+                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
 
                 if (credential != null)
                 {
@@ -245,7 +252,7 @@ namespace NextcloudApp
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
                         PinStartPageParameters pageParameters = null;
-                        if (!string.IsNullOrEmpty(args.Arguments))
+                        if (!string.IsNullOrEmpty(args?.Arguments))
                         {
                             var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
                             if (tmpResourceInfo != null)

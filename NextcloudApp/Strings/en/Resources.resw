@@ -454,4 +454,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Service temporarily unavailable (usually due to short-term maintenance work).
 Please try again later.</value>
   </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
+  </data>
 </root>
