@@ -180,7 +180,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Abbrechen</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Ordner kann nicht erstellt werden</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Verbinden</value>
@@ -234,7 +234,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nicht berechtigt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
