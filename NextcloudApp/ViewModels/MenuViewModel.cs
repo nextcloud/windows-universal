@@ -48,6 +48,15 @@ namespace NextcloudApp.ViewModels
                         () => CanNavigateToPage(PageTokens.DirectoryList)
                     )
                 },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("Sharing"),
+                    FontIcon = "\uE72D",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageTokens.SharesOut),
+                        () => CanNavigateToPage(PageTokens.SharesOut)
+                    )
+                },
             };
 
             ExtraCommands = new ObservableCollection<MenuItem>

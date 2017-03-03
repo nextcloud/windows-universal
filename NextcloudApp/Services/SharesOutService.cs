@@ -17,18 +17,18 @@ using NextcloudClient.Types;
 
 namespace NextcloudApp.Services
 {
-    public class DirectoryService : INotifyPropertyChanged
+    public class SharesOutService : INotifyPropertyChanged
     {
-        private static DirectoryService _instance;
+        private static SharesOutService _instance;
 
-        private DirectoryService()
+        private SharesOutService()
         {
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
             _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
             GroupByNameAscending();
         }
 
-        public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
+        public static SharesOutService Instance => _instance ?? (_instance = new SharesOutService());
 
         public ObservableCollection<PathInfo> PathStack { get; } = new ObservableCollection<PathInfo>
         {
@@ -133,11 +133,58 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
+            /*
+             * Also contains webdav session after client has been returned
+             * */
             var client = await ClientService.GetClient();
             if (client == null)
             {
                 return;
             }
+
+            var test = await client.GetSharesOut();
+
+            var remoteShares = await client.ListOpenRemoteShare();
+            var shares = await client.GetShares("");
+            //List<ResourceInfo> sharesList = null;
+            List<ResourceInfo> sharesList = new List<ResourceInfo>();
+
+
+            //try
+            //{
+            //    sharesList = await client.List(shares[0].TargetPath);
+            //}
+            //catch (ResponseError e)
+            //{
+            //    ResponseErrorHandlerService.HandleException(e);
+            //}
+            ResourceInfo resource;
+            resource = await client.GetResourceInfo(shares[1].Path);
+            //sharesList = await client.List(shares[1].Path);
+
+            try
+            {
+                sharesList.Add(resource);
+            }
+            catch (ResponseError e)
+            {
+                ResponseErrorHandlerService.HandleException(e);
+            }
+
+            //foreach (var item in shares)
+            //{
+            //    try
+            //    {
+            //        resource = await client.GetResourceInfo(item.TargetPath);
+            //        sharesList.Add(resource);
+            //    }
+            //    catch (ResponseError e)
+            //    {
+            //        ResponseErrorHandlerService.HandleException(e);
+            //    }
+            //}
+
+
 
             _continueListing = true;
 
@@ -152,7 +199,7 @@ namespace NextcloudApp.Services
             {
                 ResponseErrorHandlerService.HandleException(e);
             }
-
+            list = test;
             FilesAndFolders.Clear();
             Folders.Clear();
             if (list != null)

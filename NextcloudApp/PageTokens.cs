@@ -4,6 +4,7 @@
     {
         Login,
         DirectoryList,
+        SharesOut,
         FileInfo,
         Settings,
         SingleFileDownload,
