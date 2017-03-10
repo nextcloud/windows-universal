@@ -364,36 +364,6 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-            <AppBarButton Icon="Add" Label="Add" x:Uid="AppBarAdd">
-                <AppBarButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem 
-                            Tag="NewFolder" 
-                            x:Uid="AppBarAdd_Flyout_CreateFolder" 
-                            Text="Create folder" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding CreateDirectoryCommand}"/>
-                        <MenuFlyoutSeparator/>
-                        <MenuFlyoutItem 
-                            Tag="Add" 
-                            x:Uid="AppBarAdd_Flyout_UploadFiles" 
-                            Text="Upload files" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding UploadFilesCommand}" />
-                        <MenuFlyoutItem 
-                            Tag="Street" 
-                            x:Uid="AppBarAdd_Flyout_UploadPhotos" 
-                            Text="Upload photos" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                            Command="{Binding UploadPhotosCommand}" />
-                        <!--MenuFlyoutItem 
-                            Tag="Camera" 
-                            x:Uid="AppBarAdd_Flyout_TakePicture" 
-                            Text="Take picture" 
-                            Style="{StaticResource MenuFlyoutIconItemStyle}" /-->
-                    </MenuFlyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
         </CommandBar>
     </Grid>
 

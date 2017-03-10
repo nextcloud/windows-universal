@@ -260,15 +260,12 @@ namespace NextcloudClient
             {
                 try
                 {
-                    //resource = await client.GetResourceInfo(item.TargetPath);
-                    //sharesList.Add(resource);
                     var parentPath = item.Path.Replace(item.TargetPath, "/");
                     var itemName = item.TargetPath.Replace("/", "");
 
                     var itemShare = await FilterForShare(parentPath, itemName);
 
                     sharesList.Add(itemShare);
-                    //sharesList.Add(await FilterForShare(parentPath, itemName));
                 }
                 catch (ResponseError e)
                 {
@@ -279,6 +276,12 @@ namespace NextcloudClient
             return sharesList;
         }
 
+        /// <summary>
+        ///     Finds resource info for item by searching its parent.
+        /// </summary>
+        /// <returns>Resource Info if given item.</returns>
+        /// <param name="parentPath">Path of item parent to get resource info from and search for item.</param>
+        /// <param name="itemName">Name of item to get resource info from parent.</param>
         private async Task<ResourceInfo> FilterForShare(string parentPath, string itemName)
         {
 

@@ -33,7 +33,6 @@ namespace NextcloudApp.ViewModels
         public ICommand GroupBySizeAscendingCommand { get; private set; }
         public ICommand GroupBySizeDescendingCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
-        public ICommand CreateDirectoryCommand { get; private set; }
         public ICommand UploadFilesCommand { get; private set; }
         public ICommand UploadPhotosCommand { get; private set; }
         public ICommand DownloadResourceCommand { get; private set; }
@@ -90,7 +89,6 @@ namespace NextcloudApp.ViewModels
                 await Directory.Refresh();
                 HideProgressIndicator();
             });
-            CreateDirectoryCommand = new DelegateCommand(CreateDirectory);
             UploadFilesCommand = new DelegateCommand(UploadFiles);
             UploadPhotosCommand = new DelegateCommand(UploadPhotos);
             DownloadResourceCommand = new RelayCommand(DownloadResource);
@@ -226,65 +224,6 @@ namespace NextcloudApp.ViewModels
             _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
         }
 
-        private async void CreateDirectory()
-        {
-            while (true)
-            {
-                var dialog = new ContentDialog
-                {
-                    Title = _resourceLoader.GetString("CreateNewFolder"),
-                    Content = new TextBox()
-                    {
-                        Header = _resourceLoader.GetString("FolderName"),
-                        PlaceholderText = _resourceLoader.GetString("NewFolder"),
-                        Margin = new Thickness(0, 20, 0, 0)
-                    },
-                    PrimaryButtonText = _resourceLoader.GetString("Create"),
-                    SecondaryButtonText = _resourceLoader.GetString("Cancel")
-                };
-                var dialogResult = await _dialogService.ShowAsync(dialog);
-                if (dialogResult != ContentDialogResult.Primary)
-                {
-                    return;
-                }
-                var textBox = dialog.Content as TextBox;
-                if (textBox == null)
-                {
-                    return;
-                }
-                var folderName = textBox.Text;
-                if (string.IsNullOrEmpty(folderName))
-                {
-                    folderName = _resourceLoader.GetString("NewFolder");
-                }
-                ShowProgressIndicator();
-                var success = await Directory.CreateDirectory(folderName);
-                HideProgressIndicator();
-                if (success)
-                {
-                    return;
-                }
-
-                dialog = new ContentDialog
-                {
-                    Title = _resourceLoader.GetString("CanNotCreateFolder"),
-                    Content = new TextBlock
-                    {
-                        Text = _resourceLoader.GetString("SpecifyDifferentName"),
-                        TextWrapping = TextWrapping.WrapWholeWords,
-                        Margin = new Thickness(0, 20, 0, 0)
-                    },
-                    PrimaryButtonText = _resourceLoader.GetString("Retry"),
-                    SecondaryButtonText = _resourceLoader.GetString("Cancel")
-                };
-                dialogResult = await _dialogService.ShowAsync(dialog);
-                if (dialogResult != ContentDialogResult.Primary)
-                {
-                    return;
-                }
-            }
-        }
-
         private async void RenameResource(object parameter)
         {
             var resourceInfo = parameter as ResourceInfo;
@@ -375,11 +314,53 @@ namespace NextcloudApp.ViewModels
                 }
                 if (value.IsDirectory())
                 {
-                    Directory.PathStack.Add(new PathInfo
+                    //Directory.PathStack.Add(new PathInfo
+                    //{
+                    //    ResourceInfo = value
+                    //});
+
+                    //var
+                    //char seperator = '/';
+                    string[] pathSplit = value.Path.Split('/');
+
+                    foreach (string pathPart in pathSplit)
+                    {
+                        if (pathPart.Length > 0)
+                        {
+                            Directory.PathStack.Add(new PathInfo
+                            {
+                                ResourceInfo = new ResourceInfo()
+                                {
+                                    Name = pathPart,
+                                    Path = "/" + ((Directory.PathStack[Directory.PathStack.Count - 1]).ResourceInfo.Path + "/" + pathPart).TrimStart('/')
+                                },
+                                IsRoot = false
+                            });
+                        }
+                    }
+
+                    //for (int p = 0; p < pathSplit.Length; p++)
+                    //{
+
+                    //}
+
+                    //new PathInfo
+                    //{
+                    //    ResourceInfo = new ResourceInfo()
+                    //    {
+                    //        Name = "Nextcloud",
+                    //        Path = "/"
+                    //    },
+                    //    IsRoot = true
+                    //}
+                    //Directory.PathStack.Clear();
+                    var parameters = new FileInfoPageParameters
                     {
                         ResourceInfo = value
-                    });
-                    SelectedPathIndex = Directory.PathStack.Count - 1;
+                    };
+
+                    _navigationService.Navigate(PageTokens.DirectoryList.ToString(), parameters.Serialize());
+                    //SelectedPathIndex = Directory.PathStack.Count - 1;
                 }
                 else
                 {

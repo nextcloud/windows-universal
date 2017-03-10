@@ -142,69 +142,39 @@ namespace NextcloudApp.Services
                 return;
             }
 
-            var test = await client.GetSharesOut();
-
-            var remoteShares = await client.ListOpenRemoteShare();
-            var shares = await client.GetShares("");
-            //List<ResourceInfo> sharesList = null;
-            List<ResourceInfo> sharesList = new List<ResourceInfo>();
-
-
-            //try
-            //{
-            //    sharesList = await client.List(shares[0].TargetPath);
-            //}
-            //catch (ResponseError e)
-            //{
-            //    ResponseErrorHandlerService.HandleException(e);
-            //}
-            ResourceInfo resource;
-            resource = await client.GetResourceInfo(shares[1].Path);
-            //sharesList = await client.List(shares[1].Path);
-
-            try
-            {
-                sharesList.Add(resource);
-            }
-            catch (ResponseError e)
-            {
-                ResponseErrorHandlerService.HandleException(e);
-            }
-
-            //foreach (var item in shares)
-            //{
-            //    try
-            //    {
-            //        resource = await client.GetResourceInfo(item.TargetPath);
-            //        sharesList.Add(resource);
-            //    }
-            //    catch (ResponseError e)
-            //    {
-            //        ResponseErrorHandlerService.HandleException(e);
-            //    }
-            //}
-
-
-
             _continueListing = true;
 
-            var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
-            List<ResourceInfo> list = null;
+            PathStack.Clear();
 
-            try
+            PathStack.Add(new PathInfo
             {
-                list = await client.List(path);
-            }
-            catch (ResponseError e)
-            {
-                ResponseErrorHandlerService.HandleException(e);
-            }
-            list = test;
+                ResourceInfo = new ResourceInfo()
+                {
+                    Name = "Nextcloud",
+                    Path = "/"
+                },
+                IsRoot = true
+            });
+
+            //new PathInfo
+            //{
+            //    ResourceInfo = new ResourceInfo()
+            //    {
+            //        Name = "Nextcloud",
+            //        Path = "/"
+            //    },
+            //    IsRoot = true
+            //}
+
+
+            //var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
+
+            List < ResourceInfo> sharesList = await client.GetSharesOut();
             FilesAndFolders.Clear();
             Folders.Clear();
-            if (list != null)
+            if (sharesList != null)
             {
-                foreach (var item in list)
+                foreach (var item in sharesList)
                 {
                     FilesAndFolders.Add(new FileOrFolder(item));
                     if (item.IsDirectory())
@@ -309,36 +279,6 @@ namespace NextcloudApp.Services
         public void StopDirectoryListing()
         {
             _continueListing = false;
-        }
-
-        public async Task<bool> CreateDirectory(string directoryName)
-        {
-            var client = await ClientService.GetClient();
-            if (client == null)
-            {
-                return false;
-            }
-
-            var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "";
-
-            var success = false;
-            try
-            {
-                success = await client.CreateDirectory(path + directoryName);
-            }
-            catch (ResponseError e)
-            {
-                if (e.StatusCode != "400") // ProtocolError
-                {
-                    ResponseErrorHandlerService.HandleException(e);
-                }
-            }
-
-            if (success)
-            {
-                await StartDirectoryListing();
-            }
-            return success;
         }
 
         public async Task<bool> DeleteResource(ResourceInfo resourceInfo)
