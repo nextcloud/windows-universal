@@ -425,10 +425,10 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
 • Nytt och mer stabilt WebDAV bibliotek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Nåla fast högst upp</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Nåla fast högst upp</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Anslut</value>
