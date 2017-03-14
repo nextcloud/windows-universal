@@ -12,7 +12,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "PortableWebDavLibrary/0.6.1": {
+      "PortableWebDavLibrary/0.6.3": {
         "type": "package",
         "compile": {
           "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll": {}
@@ -48,12 +48,12 @@
         "tools/install.ps1"
       ]
     },
-    "PortableWebDavLibrary/0.6.1": {
-      "sha512": "959t6RbP1q/4PWQbjK9qVoX/sfGkBpMEltrWam7E3bWR925wrB1U3DMSI83jOjoTZdTfjYm6VO6kjxPaXbbkag==",
+    "PortableWebDavLibrary/0.6.3": {
+      "sha512": "OdTUjc1xjximdKOynselzYMjF5OdEycjxCYpdXf8kjFNpmleV1iWc+MVwnB3g+PZ9xNBvr/CgDukms6Ymi222Q==",
       "type": "package",
-      "path": "PortableWebDavLibrary/0.6.1",
+      "path": "PortableWebDavLibrary/0.6.3",
       "files": [
-        "PortableWebDavLibrary.0.6.1.nupkg.sha512",
+        "PortableWebDavLibrary.0.6.3.nupkg.sha512",
         "PortableWebDavLibrary.nuspec",
         "lib/DecaTec.WebDav.NetFx.dll",
         "lib/portable-Profile32/DecaTec.WebDav.Uwp.dll"
@@ -63,7 +63,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Newtonsoft.Json >= 9.0.1",
-      "PortableWebDavLibrary >= 0.6.1"
+      "PortableWebDavLibrary >= 0.6.3"
     ],
     ".NETCore,Version=v4.5.1": []
   },
