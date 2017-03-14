@@ -451,7 +451,7 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
     <value>Hint</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Service tijdelijk niet beschikbaar (gewoonlijk wegens korte termijn onderhoud)
+Probeer het later opnieuw.</value>
   </data>
 </root>
