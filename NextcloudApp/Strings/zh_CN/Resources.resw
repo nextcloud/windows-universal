@@ -324,7 +324,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>客户端版本 {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>服务器名字或地址无法被识别</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>服务器版本 {0}</value>
