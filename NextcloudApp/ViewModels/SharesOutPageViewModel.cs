@@ -339,6 +339,8 @@ namespace NextcloudApp.ViewModels
                         }
                     }
 
+                    //Directory.PathStack.Clear();
+
                     //for (int p = 0; p < pathSplit.Length; p++)
                     //{
 

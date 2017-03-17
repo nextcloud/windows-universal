@@ -141,6 +141,41 @@ namespace NextcloudApp.Services
 
             _continueListing = true;
 
+            if (PathStack.Count > 0)
+            {
+                var value = PathStack[PathStack.Count - 1].ResourceInfo;
+
+                PathStack.Clear();
+
+                PathStack.Add(new PathInfo
+                {
+                    ResourceInfo = new ResourceInfo()
+                    {
+                        Name = "Nextcloud",
+                        Path = "/"
+                    },
+                    IsRoot = true
+                });
+
+                string[] pathSplit = value.Path.Split('/');
+
+                foreach (string pathPart in pathSplit)
+                {
+                    if (pathPart.Length > 0)
+                    {
+                        PathStack.Add(new PathInfo
+                        {
+                            ResourceInfo = new ResourceInfo()
+                            {
+                                Name = pathPart,
+                                Path = "/" + ((PathStack[PathStack.Count - 1]).ResourceInfo.Path + "/" + pathPart).TrimStart('/')
+                            },
+                            IsRoot = false
+                        });
+                    }
+                }
+            }
+
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
             List<ResourceInfo> list = null;
 
