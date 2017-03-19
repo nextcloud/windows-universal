@@ -183,7 +183,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Impossible de créer le dossier</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Connecter</value>
+    <value> Se connecter</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
     <value>Type de contenu</value>

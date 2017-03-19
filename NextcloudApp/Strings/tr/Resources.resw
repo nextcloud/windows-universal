@@ -372,86 +372,86 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>{0} indirildi</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Nextcloud hesabınıza erişmek için aygıtınızdan oturum açın.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Windows Hello kimlik doğrulaması</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Bu aygıt için henüz bir PIN kodu ayarlanmamış. Windos Hello kimlik doğrulamasını kullanabilmek için bir PIN ayarlamalısınız.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>İndir</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Oturum açmalısınız</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Aygıtınızın oturum açma bilgileri verilmeden Nextcloud açılamaz.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Yeniden deneyin</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Windows Mobile için Nextcloud</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Uygulamanız {0} sürümüne güncellendi</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Bu sürümdeki yeni özellik ve geliştirmeler:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommend</value>
+    <value>Önerin</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Update</value>
+    <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dosya ve klasör taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri ZIP dosyası olarak indirme
+• Birden çok dosya ve klasörü seçebilme
+• Dosya ve klasörleri açılış sayfasına ekleyebilme
+• Açılışta kimlik doğrulaması için Windows Hello kullanabilme
+• Kendinden imzalı SSL sertifikalarını kullanabilme
+• Listede klasör boyutunu görebilme
+• Dosya etkinleştirme işlemleri
+• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanabilme
+• Güvenlik iyileştirmeleri ve hata düzeltmeleri
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Açılışa ekle</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Açılışa ekle</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Bağlan</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Sertifika yayıncısı geçersiz ya da hatalı. Gene de bağlantı kurulsun mu?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Dikkat!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>Uygulamayı yeniden başlatmalısınız</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>İpucu</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Hizmet geçici olarak kullanılamıyor (genellikle kısa süreli bakım çalışmaları nedeniyle).
+Lütfen bir süre sonra yeniden deneyin.</value>
   </data>
 </root>
