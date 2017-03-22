@@ -186,7 +186,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>连接</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>内容类型</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>创建</value>
@@ -315,7 +315,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} 于 {1} 下载</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>服务器维护模式被启用.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>错误的用户名或密码.</value>
@@ -378,7 +378,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Windows Hello 认证</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>该设备没有设置 PIN .要使用 Windows Hello, 必须定义 PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Download</value>
@@ -448,10 +448,10 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>该应用需要重启</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>提示</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>服务临时不可用 (通常由于短时间的维护工作).
+请稍后重试.</value>
   </data>
 </root>
