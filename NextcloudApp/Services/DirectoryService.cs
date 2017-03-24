@@ -215,7 +215,18 @@ namespace NextcloudApp.Services
 
                     if (item.IsDirectory())
                     {
-                        Folders.Add(new FileOrFolder(item));
+                        if (RemoveResourceInfos != null)
+                        {
+                            int index = RemoveResourceInfos.FindIndex(
+                                delegate (ResourceInfo res)
+                                {
+                                    return res.Path.Equals(item.Path, StringComparison.Ordinal);
+                                });
+                            if (index == -1)
+                            {
+                                Folders.Add(new FileOrFolder(item));
+                            }
+                        }
                     }
                 }
             }
@@ -305,6 +316,22 @@ namespace NextcloudApp.Services
                 OnPropertyChanged();
             }
         }
+
+        public string SelectionMode
+        {
+            get { return _selectionMode; }
+            set
+            {
+                if (_selectionMode == value)
+                {
+                    return;
+                }
+                _selectionMode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
