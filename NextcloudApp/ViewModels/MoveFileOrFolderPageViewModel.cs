@@ -329,8 +329,16 @@ namespace NextcloudApp.ViewModels
         {
             ShowProgressIndicator();
 
+            if (ResourceInfo != null)
+            {
+                Directory.RemoveResourceInfos = new List<ResourceInfo> { ResourceInfo };
+            }
+            else if (ResourceInfos != null)
+            {
+                Directory.RemoveResourceInfos = ResourceInfos;
+            }
             await Directory.StartDirectoryListing();
-
+               
             HideProgressIndicator();
         }
 
