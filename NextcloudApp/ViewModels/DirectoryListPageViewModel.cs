@@ -107,12 +107,6 @@ namespace NextcloudApp.ViewModels
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
-
-            if (e.Parameter != null)
-            {
-                var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
-                SelectedFileOrFolder = parameter?.ResourceInfo;
-            }
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -120,7 +114,7 @@ namespace NextcloudApp.ViewModels
             _isNavigatingBack = true;
             if (!suspending)
             {
-                Directory.StopDirectoryListing();
+                if (Directory != null) Directory.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }
@@ -328,16 +322,16 @@ namespace NextcloudApp.ViewModels
         public DirectoryService Directory
         {
             get { return _directoryService; }
-            private set { SetProperty(ref _directoryService, value); }
+            set { SetProperty(ref _directoryService, value); }
         }
 
         public LocalSettings Settings
         {
             get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
+            set { SetProperty(ref _settngs, value); }
         }
 
-        public ResourceInfo SelectedFileOrFolder
+        public virtual ResourceInfo SelectedFileOrFolder
         {
             get { return _selectedFileOrFolder; }
             set

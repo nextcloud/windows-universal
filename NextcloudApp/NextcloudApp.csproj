@@ -136,7 +136,6 @@
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
-    <Compile Include="Services\SharesOutService.cs" />
     <Compile Include="Services\DirectoryService.cs" />
     <Compile Include="Services\ExceptionReportService.cs" />
     <Compile Include="Services\MigrationService.cs" />

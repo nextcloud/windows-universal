@@ -14,95 +14,29 @@ using Prism.Windows.Navigation;
 
 namespace NextcloudApp.ViewModels
 {
-    public class SharesOutPageViewModel : ViewModel
+    public class SharesOutPageViewModel : DirectoryListPageViewModel
     {
-        private LocalSettings _settngs;
-        private SharesOutService _sharesOutService;
         private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
-        private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
 
-        public ICommand GroupByNameAscendingCommand { get; private set; }
-        public ICommand GroupByNameDescendingCommand { get; private set; }
-        public ICommand GroupByDateAscendingCommand { get; private set; }
-        public ICommand GroupByDateDescendingCommand { get; private set; }
-        public ICommand GroupBySizeAscendingCommand { get; private set; }
-        public ICommand GroupBySizeDescendingCommand { get; private set; }
-        public ICommand RefreshCommand { get; private set; }
-        public ICommand UploadFilesCommand { get; private set; }
-        public ICommand UploadPhotosCommand { get; private set; }
-        public ICommand DownloadResourceCommand { get; private set; }
-        public ICommand DeleteResourceCommand { get; private set; }
-        public ICommand RenameResourceCommand { get; private set; }
-        public ICommand MoveResourceCommand { get; private set; }
-        public ICommand PinToStartCommand { get; private set; }
-
         public SharesOutPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
+            : base(navigationService, resourceLoader, dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
             _tileService = TileService.Instance;
 
-            /**
-             * Contains the User Settings ie. Server-Address and Username
-             */
-            Settings = SettingsService.Instance.LocalSettings;
-
-            GroupByNameAscendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupByNameAscending();
-                SelectedFileOrFolder = null;
-            });
-            GroupByNameDescendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupByNameDescending();
-                SelectedFileOrFolder = null;
-            });
-            GroupByDateAscendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupByDateAscending();
-                SelectedFileOrFolder = null;
-            });
-            GroupByDateDescendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupByDateDescending();
-                SelectedFileOrFolder = null;
-            });
-            GroupBySizeAscendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupBySizeAscending();
-                SelectedFileOrFolder = null;
-            });
-            GroupBySizeDescendingCommand = new DelegateCommand(() =>
-            {
-                Directory.GroupBySizeDescending();
-                SelectedFileOrFolder = null;
-            });
-            RefreshCommand = new DelegateCommand(async () =>
-            {
-                ShowProgressIndicator();
-                await Directory.Refresh();
-                HideProgressIndicator();
-            });
-            UploadFilesCommand = new DelegateCommand(UploadFiles);
-            UploadPhotosCommand = new DelegateCommand(UploadPhotos);
-            DownloadResourceCommand = new RelayCommand(DownloadResource);
-            DeleteResourceCommand = new RelayCommand(DeleteResource);
-            RenameResourceCommand = new RelayCommand(RenameResource);
-            MoveResourceCommand = new RelayCommand(MoveResource);
-            //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
-            PinToStartCommand = new DelegateCommand<object>(PinToStart);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
-            Directory = SharesOutService.Instance;
+            Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
 
@@ -125,158 +59,7 @@ namespace NextcloudApp.ViewModels
             base.OnNavigatingFrom(e, viewModelState, suspending);
         }
 
-        private void DownloadResource(object parameter)
-        {
-            var resourceInfo = parameter as ResourceInfo;
-            if (resourceInfo == null)
-            {
-                return;
-            }
-            var parameters = new SingleFileDownloadPageParameters
-            {
-                ResourceInfo = resourceInfo
-            };
-            _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
-        }
-
-        private void MoveResource(object parameter)
-        {
-            var resourceInfo = parameter as ResourceInfo;
-            if (resourceInfo == null)
-            {
-                return;
-            }
-            var parameters = new MoveFileOrFolderPageParameters
-            {
-                ResourceInfo = resourceInfo
-            };
-            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
-        }
-
-        private async void DeleteResource(object parameter)
-        {
-            var resourceInfo = parameter as ResourceInfo;
-            if (resourceInfo == null)
-            {
-                return;
-            }
-
-            var dialog = new ContentDialog
-            {
-                Title = _resourceLoader.GetString(resourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
-                Content = new TextBlock()
-                {
-                    Text = string.Format(_resourceLoader.GetString(resourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder_Description" : "DeleteFile_Description"), resourceInfo.Name),
-                    TextWrapping = TextWrapping.WrapWholeWords,
-                    Margin = new Thickness(0, 20, 0, 0)
-                },
-                PrimaryButtonText = _resourceLoader.GetString("Yes"),
-                SecondaryButtonText = _resourceLoader.GetString("No")
-            };
-            var dialogResult = await _dialogService.ShowAsync(dialog);
-            if (dialogResult != ContentDialogResult.Primary)
-            {
-                return;
-            }
-
-            ShowProgressIndicator();
-            await Directory.DeleteResource(resourceInfo);
-            HideProgressIndicator();
-        }
-
-        private void PinToStart(object parameter)
-        {
-            if (!(parameter is ResourceInfo)) return;
-            var resourceInfo = parameter as ResourceInfo;
-            _tileService.CreatePinnedObject(resourceInfo);
-        }
-
-        private bool CanPinToStart(object parameter)
-        {
-            if (parameter is ResourceInfo)
-            {
-                var resourceInfo = parameter as ResourceInfo;
-                return _tileService.IsTilePinned(resourceInfo);
-            }
-            return false;
-        }
-
-        private void UploadFiles()
-        {
-            var parameters = new FileUploadPageParameters
-            {
-                ResourceInfo = Directory.PathStack.Count > 0
-                    ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
-                    : new ResourceInfo()
-            };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
-        }
-
-        private void UploadPhotos()
-        {
-            var parameters = new FileUploadPageParameters
-            {
-                ResourceInfo = Directory.PathStack.Count > 0
-                    ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
-                    : new ResourceInfo(),
-                PickerLocationId = PickerLocationId.PicturesLibrary
-            };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
-        }
-
-        private async void RenameResource(object parameter)
-        {
-            var resourceInfo = parameter as ResourceInfo;
-            if (resourceInfo == null)
-            {
-                return;
-            }
-
-            var dialog = new ContentDialog
-            {
-                Title = _resourceLoader.GetString("Rename"),
-                Content = new TextBox()
-                {
-                    Header = _resourceLoader.GetString("ChooseANewName"),
-                    Text = resourceInfo.Name,
-                    Margin = new Thickness(0, 20, 0, 0)
-                },
-                PrimaryButtonText = _resourceLoader.GetString("Ok"),
-                SecondaryButtonText = _resourceLoader.GetString("Cancel")
-            };
-            var dialogResult = await _dialogService.ShowAsync(dialog);
-            if (dialogResult != ContentDialogResult.Primary)
-            {
-                return;
-            }
-            var textBox = dialog.Content as TextBox;
-            var newName = textBox?.Text;
-            if (string.IsNullOrEmpty(newName))
-            {
-                return;
-            }
-            ShowProgressIndicator();
-            var success = await Directory.Rename(resourceInfo.Name, newName);
-            HideProgressIndicator();
-            if (success)
-            {
-                return;
-            }
-        }
-
-        public SharesOutService Directory
-        {
-            get { return _sharesOutService; }
-            private set { SetProperty(ref _sharesOutService, value); }
-        }
-
-        public LocalSettings Settings
-        {
-            get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
-        }
-
-        public ResourceInfo SelectedFileOrFolder
+        public override ResourceInfo SelectedFileOrFolder
         {
             get { return _selectedFileOrFolder; }
             set
@@ -294,7 +77,6 @@ namespace NextcloudApp.ViewModels
                 }
                 catch
                 {
-                    _selectedPathIndex = -1;
                     return;
                 }
 
@@ -314,55 +96,43 @@ namespace NextcloudApp.ViewModels
                 }
                 if (value.IsDirectory())
                 {
-                    //Directory.PathStack.Add(new PathInfo
-                    //{
-                    //    ResourceInfo = value
-                    //});
-
-                    //var
-                    //char seperator = '/';
-                    string[] pathSplit = value.Path.Split('/');
-
-                    foreach (string pathPart in pathSplit)
-                    {
-                        if (pathPart.Length > 0)
-                        {
-                            Directory.PathStack.Add(new PathInfo
-                            {
-                                ResourceInfo = new ResourceInfo()
-                                {
-                                    Name = pathPart,
-                                    Path = "/" + ((Directory.PathStack[Directory.PathStack.Count - 1]).ResourceInfo.Path + "/" + pathPart).TrimStart('/')
-                                },
-                                IsRoot = false
-                            });
-                        }
-                    }
-
-                    //Directory.PathStack.Clear();
-
-                    //for (int p = 0; p < pathSplit.Length; p++)
-                    //{
-
-                    //}
-
-                    //new PathInfo
-                    //{
-                    //    ResourceInfo = new ResourceInfo()
-                    //    {
-                    //        Name = "Nextcloud",
-                    //        Path = "/"
-                    //    },
-                    //    IsRoot = true
-                    //}
-                    //Directory.PathStack.Clear();
                     var parameters = new FileInfoPageParameters
                     {
                         ResourceInfo = value
                     };
 
-                    _navigationService.Navigate(PageTokens.DirectoryList.ToString(), parameters.Serialize());
-                    //SelectedPathIndex = Directory.PathStack.Count - 1;
+                    if (parameters.ResourceInfo != null)
+                    {
+                        Directory.PathStack.Clear();
+
+                        Directory.PathStack.Add(new PathInfo
+                        {
+                            ResourceInfo = new ResourceInfo()
+                            {
+                                Name = "Nextcloud",
+                                Path = "/"
+                            },
+                            IsRoot = true
+                        });
+
+                        string[] pathSplit = value.Path.Split('/');
+                        foreach (string pathPart in pathSplit)
+                        {
+                            if (pathPart.Length > 0)
+                            {
+                                Directory.PathStack.Add(new PathInfo
+                                {
+                                    ResourceInfo = new ResourceInfo()
+                                    {
+                                        Name = pathPart,
+                                        Path = "/" + ((Directory.PathStack[Directory.PathStack.Count - 1]).ResourceInfo.Path + "/" + pathPart).TrimStart('/')
+                                    },
+                                    IsRoot = false
+                                });
+                            }
+                        }
+                    }
+                    _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
                 }
                 else
                 {
@@ -374,57 +144,14 @@ namespace NextcloudApp.ViewModels
                 }
             }
         }
-
-        public int SelectedPathIndex
-        {
-            get { return _selectedPathIndex; }
-            set
-            {
-                try
-                {
-                    if (!SetProperty(ref _selectedPathIndex, value))
-                    {
-                        return;
-                    }
-                }
-                catch
-                {
-                    _selectedPathIndex = -1;
-                    return;
-                }
-
-                if (Directory?.PathStack == null)
-                {
-                    return;
-                }
-
-                while (Directory.PathStack.Count > 0 && Directory.PathStack.Count > _selectedPathIndex + 1)
-                {
-                    Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
-                }
-
-                StartDirectoryListing();
-            }
-        }
-
+        
         private async void StartDirectoryListing()
         {
             ShowProgressIndicator();
 
-            await Directory.StartDirectoryListing();
+            await Directory.StartDirectoryListing("sharesOut");
 
             HideProgressIndicator();
-        }
-
-
-        public override bool CanRevertState()
-        {
-            return SelectedPathIndex > 0;
-        }
-
-        public override void RevertState()
-        {
-            SelectedPathIndex--;
         }
     }
 }
