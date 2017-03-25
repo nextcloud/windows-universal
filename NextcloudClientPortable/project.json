@@ -2,7 +2,7 @@
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
-    "PortableWebDavLibrary": "0.6.1"
+    "PortableWebDavLibrary": "0.7.0"
   },
   "frameworks": {
     "uap10.0": {}
