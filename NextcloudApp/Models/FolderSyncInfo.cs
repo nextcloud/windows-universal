@@ -13,6 +13,7 @@ namespace NextcloudApp.Models
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Path { get; set; }
+        public bool Active { get; set; }
         public string AccessListKey
         {
             get

@@ -142,6 +142,19 @@ namespace NextcloudApp
             return shell;
         }
 
+        protected override Task OnSuspendingApplicationAsync()
+        {
+            var task = base.OnSuspendingApplicationAsync();
+            // Stop Background Sync Tasks
+            List<FolderSyncInfo> activeSyncs = SyncDbUtils.GetActiveSyncInfos();
+            foreach(var fsi in activeSyncs)
+            {
+                ToastNotificationService.ShowSyncSuspendedNotification(fsi);
+                SyncDbUtils.UnlockFolderSyncInfo(fsi);
+            }
+            return task;
+        }
+
         protected override Task OnInitializeAsync(IActivatedEventArgs args)
         {
             Container.RegisterInstance(new DialogService());

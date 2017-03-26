@@ -14,6 +14,7 @@
     internal static class SyncDbUtils
     {
         private static string dbPath = string.Empty;
+        private static Object fsiLock = new Object();
         private static string DbPath
         {
             get
@@ -118,6 +119,61 @@
                     }
                 }
                 return null;
+            }
+        }
+
+        internal static void UnlockFolderSyncInfo(FolderSyncInfo folderSyncInfo)
+        {
+            lock(fsiLock)
+            {
+                using (var db = DbConnection)
+                {
+                    FolderSyncInfo m = (from fsi in db.Table<FolderSyncInfo>()
+                                        where fsi.Id == folderSyncInfo.Id
+                                        select fsi).FirstOrDefault();
+                    if (m == null || !m.Active)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        m.Active = false;
+                        db.Update(m);
+                        return;
+                    }
+                }
+            }
+        }
+
+        internal static bool LockFolderSyncInfo(FolderSyncInfo folderSyncInfo)
+        {
+            lock (fsiLock)
+            {
+                using (var db = DbConnection)
+                {
+                    FolderSyncInfo m = (from fsi in db.Table<FolderSyncInfo>()
+                                        where fsi.Id == folderSyncInfo.Id
+                                        select fsi).FirstOrDefault();
+                    if(m == null || m.Active)
+                    {
+                        return false;
+                    } else
+                    {
+                        m.Active = true;
+                        db.Update(m);
+                        return true;
+                    }
+                }
+            }
+        }
+
+        internal static List<FolderSyncInfo> GetActiveSyncInfos()
+        {
+            using (var db = DbConnection)
+            {
+                IEnumerable<FolderSyncInfo> list = (from fsi in db.Table<FolderSyncInfo>()
+                                    where fsi.Active select fsi);
+                return list.ToList();
             }
         }
 

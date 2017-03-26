@@ -508,4 +508,10 @@ Please try again later.</value>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Synchronization has been finished</value>
   </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
 </root>

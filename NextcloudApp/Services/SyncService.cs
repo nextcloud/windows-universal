@@ -35,60 +35,71 @@ namespace NextcloudApp.Services
 
         public async Task<bool> StartSync()
         {
-            client = await ClientService.GetClient();
-            if (client == null)
+            if(!SyncDbUtils.LockFolderSyncInfo(folderSyncInfo))
             {
-                // ERROR
-                throw new Exception("Error creating webdav client");
+                return false;
             }
-            int changedCount = 0;            
-            List<SyncInfoDetail> oldList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);            
-            Debug.WriteLine("Sid List before Sync: ");
-            foreach (SyncInfoDetail detail in oldList)
-            {
-                Debug.WriteLine("Detail: " + detail.ToString());
-            }
-            SyncInfoDetail sid = SyncDbUtils.GetSyncInfoDetail(resourceInfo, folderSyncInfo);
-            var errorCount = 0;
             try
             {
-                if (sid == null)
+                client = await ClientService.GetClient();
+                if (client == null)
                 {
-                    sid = new SyncInfoDetail(folderSyncInfo);
-                    sid.Path = resourceInfo.Path;
-                    sid.FilePath = baseFolder.Path;
-                    SyncDbUtils.SaveSyncInfoDetail(sid);
+                    // ERROR
+                    throw new Exception("Error creating webdav client");
                 }
-                else
-                {
-                    sidList.Remove(sid);
-                    sid.Error = null;
-                }
-                changedCount = await SyncFolder(resourceInfo, baseFolder);
+                int changedCount = 0;
+                List<SyncInfoDetail> oldList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
+                Debug.WriteLine("Sid List before Sync: ");
                 foreach (SyncInfoDetail detail in oldList)
                 {
-                    if(!sidList.Contains(detail) && detail.FilePath.StartsWith(baseFolder.Path))
-                    {
-                        // The items left here must have been deleted both remotely and locally so the sid is obsolete.
-                        SyncDbUtils.DeleteSyncInfoDetail(detail, false);
-                        changedCount++;
-                    }
+                    Debug.WriteLine("Detail: " + detail.ToString());
                 }
-                errorCount = SyncDbUtils.GetErrorConflictCount(folderSyncInfo);
-            } catch (Exception e)
+                SyncInfoDetail sid = SyncDbUtils.GetSyncInfoDetail(resourceInfo, folderSyncInfo);
+                var errorCount = 0;
+                try
+                {
+                    if (sid == null)
+                    {
+                        sid = new SyncInfoDetail(folderSyncInfo);
+                        sid.Path = resourceInfo.Path;
+                        sid.FilePath = baseFolder.Path;
+                        SyncDbUtils.SaveSyncInfoDetail(sid);
+                    }
+                    else
+                    {
+                        sidList.Remove(sid);
+                        sid.Error = null;
+                    }
+                    changedCount = await SyncFolder(resourceInfo, baseFolder);
+                    foreach (SyncInfoDetail detail in oldList)
+                    {
+                        if (!sidList.Contains(detail) && detail.FilePath.StartsWith(baseFolder.Path))
+                        {
+                            // The items left here must have been deleted both remotely and locally so the sid is obsolete.
+                            SyncDbUtils.DeleteSyncInfoDetail(detail, false);
+                            changedCount++;
+                        }
+                    }
+                    errorCount = SyncDbUtils.GetErrorConflictCount(folderSyncInfo);
+                }
+                catch (Exception e)
+                {
+                    sid.Error = e.Message;
+                    errorCount++;
+                }
+                SyncDbUtils.SaveSyncInfoDetail(sid);
+                List<SyncInfoDetail> newSidList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
+                Debug.WriteLine("Sid List after Sync: ");
+                foreach (SyncInfoDetail detail in newSidList)
+                {
+                    Debug.WriteLine("Detail: " + detail.ToString());
+                }
+                ToastNotificationService.ShowSyncFinishedNotification(folderSyncInfo.Path, changedCount, errorCount);
+                return errorCount == 0;
+            } finally
             {
-                sid.Error = e.Message;
-                errorCount++;
+                SyncDbUtils.UnlockFolderSyncInfo(folderSyncInfo);
             }
-            SyncDbUtils.SaveSyncInfoDetail(sid);
-            List<SyncInfoDetail> newSidList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
-            Debug.WriteLine("Sid List after Sync: ");
-            foreach (SyncInfoDetail detail in newSidList)
-            {
-                Debug.WriteLine("Detail: " + detail.ToString());
-            }
-            ToastNotificationService.ShowSyncFinishedNotification(folderSyncInfo.Path, changedCount, errorCount);
-            return errorCount== 0;
         }
 
 
