@@ -172,9 +172,9 @@
     <value>应用程序错误</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>程序发生了一个问题，在此期间你操作的信息可能已经丢失，我们对此向您表示歉意。
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+您是否同意将错误报告发送给程序开发者？这将有助于更快的解决问题。</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
@@ -411,18 +411,18 @@ Would you like to inform the application developers and submit the prepared erro
     <value>更新</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• 移动文件和文件夹
+• 重命名文件和文件夹
+• 压缩目录为 ZIP 并下载
+• 选择多个文件和文件夹
+• 将文件和文件夹钉在开始界面
+• 使用 Windows Hello 认证应用启动
+• 允许使用自签名的 SSL 证书
+• 在列表显示文件夹大小
+• 处理文件活动
+• 使用 PasswordVault 存储用户证件
+• 安全改进和 Bug 修复
+• 新版更加稳定的 WebDAV 类库</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin 启动</value>
@@ -434,12 +434,12 @@ Would you like to inform the application developers and submit the prepared erro
     <value>连接</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>忽略无效的自签名 SSL 证书。这将允许使用无效或不正确的 SSL 证书做身份认证。请注意，这将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>证书认证机构无效或不正确，是否继续连接？
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+请注意，你将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>注意!</value>
