@@ -151,10 +151,10 @@
     <value>排序</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>日期(顶部最久)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>日期(最新的在顶部)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
     <value>按名称排序(A-Z)</value>
@@ -172,9 +172,9 @@
     <value>应用程序错误</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>程序发生了一个问题，在此期间你操作的信息可能已经丢失，我们对此向您表示歉意。
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+您是否同意将错误报告发送给程序开发者？这将有助于更快的解决问题。</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
@@ -186,7 +186,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>连接</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>内容类型</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>创建</value>
@@ -312,19 +312,19 @@ Would you like to inform the application developers and submit the prepared erro
     <value>上传文件中 … </value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} of {1} downloaded</value>
+    <value>{0} 于 {1} 下载</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>服务器维护模式被启用.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Wrong username or password.</value>
+    <value>错误的用户名或密码.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>客户端版本 {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>服务器名字或地址无法被识别</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>服务器版本 {0}</value>
@@ -336,7 +336,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>等待服务器响应</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Please choose a new name</value>
+    <value>请选择一个新的名字</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>重命名</value>
@@ -363,7 +363,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>选择目录</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>The server with the address {0} is not reachable.</value>
+    <value>该服务器地址 {0} 无法访问.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>下载为 ZIP 文件</value>
@@ -372,13 +372,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>已下载 {0}</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>要访问你的 Nextcloud, 为你的设备提供登录信息.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello 认证</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>该设备没有设置 PIN .要使用 Windows Hello, 必须定义 PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Download</value>
@@ -390,16 +390,16 @@ Would you like to inform the application developers and submit the prepared erro
     <value>要求登录</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>再试一次</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud Windows 移动版</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>该应用更新到版本 {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>此版本的新功能和改进：</value>
@@ -411,47 +411,47 @@ Would you like to inform the application developers and submit the prepared erro
     <value>更新</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• 移动文件和文件夹
+• 重命名文件和文件夹
+• 压缩目录为 ZIP 并下载
+• 选择多个文件和文件夹
+• 将文件和文件夹钉在开始界面
+• 使用 Windows Hello 认证应用启动
+• 允许使用自签名的 SSL 证书
+• 在列表显示文件夹大小
+• 处理文件活动
+• 使用 PasswordVault 存储用户证件
+• 安全改进和 Bug 修复
+• 新版更加稳定的 WebDAV 类库</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin 启动</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin 启动</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>连接</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>忽略无效的自签名 SSL 证书。这将允许使用无效或不正确的 SSL 证书做身份认证。请注意，这将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>证书认证机构无效或不正确，是否继续连接？
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+请注意，你将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>注意!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>该应用需要重启</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>提示</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>服务临时不可用 (通常由于短时间的维护工作).
+请稍后重试.</value>
   </data>
 </root>

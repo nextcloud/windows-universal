@@ -118,340 +118,340 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Tous les fichiers</value>
+    <value>Tüm dosyalar</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Toujours</value>
+    <value>Herzaman</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Une erreur est survenue</value>
+    <value>Bir sorun çıktı</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Ajouter</value>
+    <value>Ekle</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Créer un dossier</value>
+    <value>Klasör ekle</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Prendre une photo</value>
+    <value>Resim çek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Téléverser des fichiers</value>
+    <value>Dosya yükle</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Téléverser des photos</value>
+    <value>Fotoğraf yükle</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Télécharger</value>
+    <value>İndir</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Rafraîchir</value>
+    <value>Yenile</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Trier</value>
+    <value>Sırala</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Date (ordre croissant)</value>
+    <value>Tarih (Eskiden Yeniye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Date (ordre décroissant)</value>
+    <value>Tarih (Yeniden Eskiye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nom (ordre croissant)</value>
+    <value>Ad (A-&gt;Z)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nom (ordre décroissant)</value>
+    <value>Ad (Z-&gt;A)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Taille (ordre croissant)</value>
+    <value>Boyut (Küçükten Büyüğe)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Taille (ordre décroissant)</value>
+    <value>Boyut (Büyükten Küçüğe)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Erreur d&apos;application</value>
+    <value>Uygulama hatası</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>L&apos;application a rencontré un problème. Nous nous excusons pour le désagrément. Si vous étiez en train de faire quelque chose, les informations sur lesquelles vous avez travaillé sont perdues.
+    <value>Uygulamada bir sorun çıktı. Rahatsızlık verdiğimiz için özür dileriz. Bir işin ortasında kaldıysanız yapmakta olduğunuz işlemle ilgili bilgiler kayboldu.
 
-Souhaitez-vous informer les développeurs de l&apos;application et envoyer le rapport d&apos;erreur préparé ? Cela aidera à résoudre le problème plus rapidement.</value>
+Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ister misiniz? Böylecek sorun çok daha çabuk çözülebilir.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Annuler</value>
+    <value>İptal</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Impossible de créer le dossier</value>
+    <value>Klasör eklenemedi</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value> Se connecter</value>
+    <value>Bağlan</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Type de contenu</value>
+    <value>İçerik Türü</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Créer</value>
+    <value>Ekle</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Créé</value>
+    <value>Eklendi</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Créer un nouveau dossier</value>
+    <value>Yeni klasör ekle</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Téléchargement du fichier en cours...</value>
+    <value>Dosya indiriliyor...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Télécharger les aperçus des images</value>
+    <value>Önizleme görselleri indirilsin</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} octet)</value>
+    <value>{0} ({1} bayt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Nom du dossier</value>
+    <value>Klasör adı</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Information</value>
+    <value>Bilgiler</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Dernière modification</value>
+    <value>Son değiştirilme</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Nom</value>
+    <value>Ad</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Jamais</value>
+    <value>Asla</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Nouveau dossier</value>
+    <value>Yeni klasör</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Non</value>
+    <value>Hayır</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Non autorisé</value>
+    <value>Yeterli izin yok</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Le serveur a retourné un code d&apos;erreur 401 (Non autorisé). Veuillez s&apos;il vous plaît vous reconnecter.</value>
+    <value>Sunucu 401 hata kodunu döndürdü (Yeterli izin yok). Lütfen yeniden oturum açın.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>Tamam</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Mot de passe</value>
+    <value>Parola</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Chemin</value>
+    <value>Yol</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} de {1} utilisé</value>
+    <value>{0} / {1} kullanılmış</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Réinitialiser cette application</value>
+    <value>Bu uygulamayı sıfırla</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Réessayer</value>
+    <value>Yeniden Dene</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Adresse du serveur</value>
+    <value>Sunucu adresi</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Paramètres</value>
+    <value>Ayarlar</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Paramètres</value>
+    <value>Ayarlar</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Afficher le groupe de listes de fichiers et de dossiers</value>
+    <value>Dosya ve klasör listesi gruplaması görüntülensin</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Taille</value>
+    <value>Boyut</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Il y a déjà un élément avec ce nom. Indiquez un nom différent.</value>
+    <value>Aynı adlı bir bileşen zaten var. Lütfen farklı bir ad kullanın.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Type</value>
+    <value>Tür</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nom d&apos;utilisateur</value>
+    <value>Kullanıcı Adı</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Version {0}</value>
+    <value>Sürüm {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Seulement quand je suis connecté en Wi-Fi</value>
+    <value>Yalnız Wi-Fi bağlantısı ile</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Oui</value>
+    <value>Evet</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Supprimer</value>
+    <value>Sil</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Effacer le fichier</value>
+    <value>Dosyayı sil</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer le fichier {0}</value>
+    <value>{0} dosyasını silmek istediğinize emin misiniz</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Supprimer le dossier</value>
+    <value>Klasörü sil</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer le dossier {0}</value>
+    <value>{0} klasörünü silmek istediğinize emin misiniz</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} téléversé</value>
+    <value>{0} / {1} yüklendi</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Téléversement du fichier {0} de {1}...</value>
+    <value>Dosyalar yükleniyor {0} / {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Téléversement du fichier en cours...</value>
+    <value>Dosya yükleniyor...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} téléchargé</value>
+    <value>{0} / {1} indirildi</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Le mode de maintenance est activé sur le serveur.</value>
+    <value>Sunucu bakım kipinde.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nom d&apos;utilisateur ou mot de passe incorrect.</value>
+    <value>Kullanıcı adı ya da parola hatalı.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Version du client {0}</value>
+    <value>İstemci sürümü {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Le nom du serveur ou l&apos;adresse n&apos;a pu être résolu.</value>
+    <value>Sunucu adı ya da adresi çözümlenemedi.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Version du serveur {0}</value>
+    <value>Sunucu sürümü {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Supprimer</value>
+    <value>Sil</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>En attente d&apos;une réponse du serveur</value>
+    <value>sunucu yanıtı bekleniyor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Veuillez s&apos;il vous plaît choisir un nouveau nom</value>
+    <value>Lütfen yeni bir ad seçin</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Renommer</value>
+    <value>Yeniden adlandır</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Renommer</value>
+    <value>Yeniden adlandır</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Renommer</value>
+    <value>Yeniden adlandır</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Déplacer vers</value>
+    <value>Şuraya taşı</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Déplacer vers</value>
+    <value>Şuraya taşı</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Annuler</value>
+    <value>İptal</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fait</value>
+    <value>Bitti</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Choisir le dossier</value>
+    <value>Klasör seçin</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Le serveur avec l&apos;adresse {0} n&apos;est pas accessible.</value>
+    <value>{0} adresindeki sunucuya erişilemiyor.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Télécharger en tant que fichier ZIP</value>
+    <value>ZIP dosyası olarak indir</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} téléchargé</value>
+    <value>{0} indirildi</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Pour accéder à votre Nextcloud, fournissez les informations de connexion pour votre appareil.</value>
+    <value>Nextcloud hesabınıza erişmek için aygıtınızdan oturum açın.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Authentification Windows Hello</value>
+    <value>Windows Hello kimlik doğrulaması</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Aucun code PIN n&apos;est défini pour cet appareil. Pour pouvoir utiliser Windows Hello, un code PIN doit être défini.</value>
+    <value>Bu aygıt için henüz bir PIN kodu ayarlanmamış. Windos Hello kimlik doğrulamasını kullanabilmek için bir PIN ayarlamalısınız.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Télécharger</value>
+    <value>İndir</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Identification requise</value>
+    <value>Oturum açmalısınız</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nous ne pouvons pas lancer Nextcloud jusqu&apos;à ce que vous fournissez les informations de connexion de votre appareil.</value>
+    <value>Aygıtınızın oturum açma bilgileri verilmeden Nextcloud açılamaz.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Essayez à nouveau</value>
+    <value>Yeniden deneyin</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud pour Windows Mobile</value>
+    <value>Windows Mobile için Nextcloud</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Votre application a été mise à jour vers la version {0}</value>
+    <value>Uygulamanız {0} sürümüne güncellendi</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nouvelles fonctionnalités et améliorations dans cette version :</value>
+    <value>Bu sürümdeki yeni özellik ve geliştirmeler:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommander</value>
+    <value>Önerin</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Mettre à jour</value>
+    <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Déplacer des fichiers et des dossiers
-• Renommer des fichiers et des dossiers
-• Télécharger des dossiers en tant que fichier zip
-• Sélectionner plusieurs fichiers et dossiers
-• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
-• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
-• Autoriser les certificats SSL auto-signés
-• Afficher la taille du fichier dans la liste
-• Gérer l&apos;activation du fichier
-• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
-• Améliorations de la sécurité &amp; corrections de bugs
-• Nouvelle bibliothèque WebDAV plus stable</value>
+    <value>• Dosya ve klasör taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri ZIP dosyası olarak indirme
+• Birden çok dosya ve klasörü seçebilme
+• Dosya ve klasörleri açılış sayfasına ekleyebilme
+• Açılışta kimlik doğrulaması için Windows Hello kullanabilme
+• Kendinden imzalı SSL sertifikalarını kullanabilme
+• Listede klasör boyutunu görebilme
+• Dosya etkinleştirme işlemleri
+• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanabilme
+• Güvenlik iyileştirmeleri ve hata düzeltmeleri
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Épingler au menu Démarrer</value>
+    <value>Açılışa ekle</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Épingler au menu Démarrer</value>
+    <value>Açılışa ekle</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connecter</value>
+    <value>Bağlan</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
+    <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>L&apos;autorité de certificat est invalide ou incorrecte. Se connecter quand même ?
+    <value>Sertifika yayıncısı geçersiz ya da hatalı. Gene de bağlantı kurulsun mu?
 
-Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-middle (mitm) !</value>
+Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention !</value>
+    <value>Dikkat!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>L&apos;application doit être redémarrée</value>
+    <value>Uygulamayı yeniden başlatmalısınız</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Indice</value>
+    <value>İpucu</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporairement indisponible (normalement dû à un travail de maintenance de courte durée).
-Veuillez réessayer plus tard.</value>
+    <value>Hizmet geçici olarak kullanılamıyor (genellikle kısa süreli bakım çalışmaları nedeniyle).
+Lütfen bir süre sonra yeniden deneyin.</value>
   </data>
 </root>

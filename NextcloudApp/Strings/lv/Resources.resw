@@ -172,9 +172,9 @@
     <value>Lietojumprogrammas kļūda</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Lietojumprogrammā radās problēma. Mēs atvainojamies par sagādātajām neērtībām. Ja nebijāt darbu pabeidzis, informācija, ar kuru strādājat jau ir zaudēta.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavoto kļūdas ziņojumu? Tas palīdzēs novērst problēmu ātrāk.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Atcelt</value>
@@ -378,7 +378,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Windows sveiks autentifikācija</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Nav PIN iestatīts šai ierīcei. Lai izmantotu Windows Hallo, PIN KODS ir jādefinē.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Lejupielādēt</value>
@@ -451,7 +451,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Atgādinājums</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Pakalpojums īslaicīgi nav pieejams (parasti, īstermiņa tehniskās apkopes darbu dēļ).
+Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
 </root>
