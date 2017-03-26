@@ -298,9 +298,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NextcloudClient\NextcloudClient.csproj">
-      <Project>{E2015378-CEFF-4913-A4A6-48706F2625D4}</Project>
-      <Name>NextcloudClient</Name>
+    <ProjectReference Include="..\NextcloudClientPortable\NextcloudClientPortable.csproj">
+      <Project>{07797e3b-7077-43ef-8197-f8723e2b0cc4}</Project>
+      <Name>NextcloudClientPortable</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
