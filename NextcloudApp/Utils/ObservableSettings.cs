@@ -1,9 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.ComponentModel;
+using System.Threading;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Storage;
+using Windows.UI.Core;
 
 namespace NextcloudApp.Utils
 {
@@ -13,47 +18,54 @@ namespace NextcloudApp.Utils
     /// <remarks>See https://github.com/joseangelmt/ObservableSettings</remarks>
     public class ObservableSettings : INotifyPropertyChanged
     {
-        private readonly ApplicationDataContainer applicationDataContainer;
-        protected bool enableRaisePropertyChanged = true;
+        private readonly ApplicationDataContainer _applicationDataContainer;
+        protected bool EnableRaisePropertyChanged = true;
 
         public ObservableSettings(ApplicationDataContainer settings)
         {
-            this.applicationDataContainer = settings;
+            _applicationDataContainer = settings;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected bool Set<T>(T value, [CallerMemberName] string propertyName = null)
+        protected async Task<bool> Set<T>(T value, [CallerMemberName] string propertyName = null)
         {
-            if (applicationDataContainer.Values.ContainsKey(propertyName))
+            if (_applicationDataContainer.Values.ContainsKey(propertyName))
             {
-                var currentValue = (T)applicationDataContainer.Values[propertyName];
+                var currentValue = (T)_applicationDataContainer.Values[propertyName];
                 if (EqualityComparer<T>.Default.Equals(currentValue, value))
+                {
                     return false;
+                }
             }
 
-            applicationDataContainer.Values[propertyName] = value;
+            _applicationDataContainer.Values[propertyName] = value;
 
-            if(enableRaisePropertyChanged)
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (EnableRaisePropertyChanged)
+            {
+                await Task.Factory.StartNew(() =>
+                {
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                }, CancellationToken.None, TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                    TaskScheduler.Default).ConfigureAwait(false);
+            }
 
             return true;
         }
 
         protected T Get<T>([CallerMemberName] string propertyName = null)
         {
-            if (applicationDataContainer.Values.ContainsKey(propertyName))
-                return (T)applicationDataContainer.Values[propertyName];
+            if (_applicationDataContainer.Values.ContainsKey(propertyName))
+            {
+                return (T)_applicationDataContainer.Values[propertyName];
+            }
 
             var attributes = GetType().GetTypeInfo().GetDeclaredProperty(propertyName).CustomAttributes.Where(ca => ca.AttributeType == typeof(DefaultSettingValueAttribute)).ToList();
 
-            if (attributes.Count == 1)
-            {
-                var val =  attributes[0].NamedArguments[0].TypedValue.Value;
+            if (attributes.Count != 1) return default(T);
+            var val =  attributes[0].NamedArguments[0].TypedValue.Value;
 
-                if(val is T)
-                    return (T)val;
-            }
+            if(val is T) return (T)val;
 
             return default(T);
         }

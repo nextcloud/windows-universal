@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.Web.Http;
 using NextcloudApp.Converter;
@@ -58,18 +62,20 @@ namespace NextcloudApp.ViewModels
         public override async void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             base.OnNavigatingFrom(e, viewModelState, suspending);
-            if (!suspending)
+            if (suspending)
             {
-                // Let Windows know that we're finished changing the file so
-                // the other app can update the remote version of the file.
-                // Completing updates may require Windows to ask for user input.
-                if (_currentFile != null)
-                {
-                    await CachedFileManager.CompleteUpdatesAsync(_currentFile);
-                }
-
-                _cts?.Cancel();
+                return;
             }
+
+            // Let Windows know that we're finished changing the file so
+            // the other app can update the remote version of the file.
+            // Completing updates may require Windows to ask for user input.
+            if (_currentFile != null)
+            {
+                await CachedFileManager.CompleteUpdatesAsync(_currentFile);
+            }
+
+            _cts?.Cancel();
         }
 
         public override async void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -101,6 +107,7 @@ namespace NextcloudApp.ViewModels
                     ((List<StorageFile>) storageFiles).Add(
                         await StorageApplicationPermissions.FutureAccessList.GetFileAsync(token));
                 }
+                StorageApplicationPermissions.FutureAccessList.Clear();
             }
 
             if (storageFiles == null || !storageFiles.Any())
@@ -135,11 +142,18 @@ namespace NextcloudApp.ViewModels
                 {
                     var properties = await localFile.GetBasicPropertiesAsync();
                     BytesTotal = (long) properties.Size;
-                    
-                    var stream = await localFile.OpenAsync(FileAccessMode.ReadWrite);
+
+                    // this moves the OpenReadAsync off of the UI thread and works fine...
+                    var stream =
+                        await
+                            Task.Factory.StartNew(async () => await localFile.OpenReadAsync(), CancellationToken.None,
+                                TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                                TaskScheduler.Default).ConfigureAwait(false);
 
                     IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                    await client.Upload(ResourceInfo.Path + localFile.Name, stream, localFile.ContentType, _cts, progress);
+                    await
+                        client.Upload(ResourceInfo.Path + localFile.Name, stream.Result, localFile.ContentType, _cts,
+                            progress);
                 }
                 catch (ResponseError e2)
                 {
@@ -161,7 +175,7 @@ namespace NextcloudApp.ViewModels
 
         private async void ProgressHandler(HttpProgress progressInfo)
         {
-            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 if (progressInfo.TotalBytesToSend != null)
                 {

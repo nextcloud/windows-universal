@@ -83,21 +83,20 @@ namespace NextcloudApp.ViewModels
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
-            /*
-            var parameters = MoveFileOrFolderPageParameters.Deserialize(e.Parameter);
-            var resourceInfo = parameters?.ResourceInfo;
-            if (resourceInfo == null)
+            
+            var parameters = ShareTargetPageParameters.Deserialize(e.Parameter);
+            var fileTokens = parameters?.FileTokens;
+            if (fileTokens == null)
             {
                 return;
             }
-            ResourceInfo = resourceInfo;
+            FileTokens = fileTokens;
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
-            */
         }
 
-        public ResourceInfo ResourceInfo { get; private set; }
+        public List<string> FileTokens { get; private set; }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
@@ -122,9 +121,10 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = Directory.PathStack.Count > 0
                     ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
-                    : new ResourceInfo()
+                    : new ResourceInfo(),
+                FileTokens = FileTokens
             };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
         }
 
         private async void CreateDirectory()

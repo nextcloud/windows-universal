@@ -126,6 +126,7 @@
     <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
     <Compile Include="Converter\IsSortingToSelectionModeConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
+    <Compile Include="Models\IPageParameters.cs" />
     <Compile Include="Models\ShareTargetPageParameters.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
@@ -159,7 +160,7 @@
     <Compile Include="Models\FileOrFolder.cs" />
     <Compile Include="Models\PathInfo.cs" />
     <Compile Include="Models\LocalSettings.cs" />
-    <Compile Include="PageTokens.cs" />
+    <Compile Include="PageToken.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
     <Compile Include="Services\SettingsService.cs" />

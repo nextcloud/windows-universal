@@ -158,7 +158,7 @@ namespace NextcloudApp.Models
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
-            enableRaisePropertyChanged = false;
+            EnableRaisePropertyChanged = false;
 
             ServerAddress = DefaultValueEmptyString;
             Username = DefaultValueEmptyString;
@@ -166,7 +166,7 @@ namespace NextcloudApp.Models
             PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
             UseWindowsHello = false;
 
-            enableRaisePropertyChanged = true;
+            EnableRaisePropertyChanged = true;
         }
     }
 }

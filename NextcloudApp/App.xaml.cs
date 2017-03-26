@@ -146,48 +146,57 @@ namespace NextcloudApp
                     innerExceptionType, exceptionHashCode);
         }
 
-        protected override void OnFileActivated(FileActivatedEventArgs args)
-        {
-            OnActivated(args);
-        }
-
-        protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
-        {
-            OnActivated((IActivatedEventArgs)args);
-        }
-
-        protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
-        {
-            var activatedEventArgs = args as ShareTargetActivatedEventArgs;
-            if (activatedEventArgs != null)
-            {
-                var sorageItems = await activatedEventArgs.ShareOperation.Data.GetStorageItemsAsync();
-
-                var pageParameters = new ShareTargetPageParameters()
-                {
-                    ShareOperation = activatedEventArgs.ShareOperation,
-                    FileTokens = new List<string>()
-                };
-
-                foreach (var storageItem in sorageItems)
-                {
-                    var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
-                    pageParameters.FileTokens.Add(token);
-                }
-
-                activatedEventArgs.ShareOperation.ReportDataRetrieved();
-                NavigationService.Navigate(
-                    PageTokens.ShareTarget.ToString(),
-                    pageParameters.Serialize());
-            }
-            await base.OnActivateApplicationAsync(args);
-        }
-        
         protected override UIElement CreateShell(Frame rootFrame)
         {
             var shell = Container.Resolve<AppShell>();
             shell.SetContentFrame(rootFrame);
             return shell;
+        }
+
+        /*
+        protected override void OnFileActivated(FileActivatedEventArgs args)
+        {
+            OnActivated(args);
+        }
+        */
+
+        protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        {
+            await InitializeFrameAsync(args);
+
+            OnActivated(args);
+
+            // Ensure the current window is active
+            Window.Current.Activate();
+        }
+
+        protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
+        {
+            await base.OnActivateApplicationAsync(args);
+            if (args.Kind == ActivationKind.ShareTarget)
+            {
+                var activatedEventArgs = args as ShareTargetActivatedEventArgs;
+                if (activatedEventArgs != null)
+                {
+                    var sorageItems = await activatedEventArgs.ShareOperation.Data.GetStorageItemsAsync();
+
+                    var pageParameters = new ShareTargetPageParameters()
+                    {
+                        //ShareOperation = activatedEventArgs.ShareOperation,
+                        FileTokens = new List<string>()
+                    };
+
+                    StorageApplicationPermissions.FutureAccessList.Clear();
+                    foreach (var storageItem in sorageItems)
+                    {
+                        var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                        pageParameters.FileTokens.Add(token);
+                    }
+
+                    activatedEventArgs.ShareOperation.ReportDataRetrieved();
+                    CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
+                }
+            }
         }
 
         protected override Task OnInitializeAsync(IActivatedEventArgs args)
@@ -223,12 +232,43 @@ namespace NextcloudApp
         
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
         {
+            // Ensure the current window is active
+            Window.Current.Activate();
+
+            PinStartPageParameters pageParameters = null;
+            if (!string.IsNullOrEmpty(args?.Arguments))
+            {
+                var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
+                if (tmpResourceInfo != null)
+                {
+                    pageParameters = new PinStartPageParameters()
+                    {
+                        ResourceInfo = tmpResourceInfo,
+                        PageTarget = tmpResourceInfo.IsDirectory() ? PageToken.DirectoryList : PageToken.FileInfo
+                    };
+                }
+            }
+
+            if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+            {
+                CheckSettingsAndContinue(PageToken.Verification, pageParameters);
+            }
+            else
+            {
+                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, pageParameters);
+            }
+
+            return Task.FromResult(true);
+        }
+
+        private void CheckSettingsAndContinue(PageToken requestedPage, IPageParameters pageParameters)
+        {
             if (
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
-                NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                NavigationService.Navigate(PageToken.Login.ToString(), null);
             }
             else
             {
@@ -251,53 +291,22 @@ namespace NextcloudApp
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
-                        PinStartPageParameters pageParameters = null;
-                        if (!string.IsNullOrEmpty(args?.Arguments))
-                        {
-                            var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
-                            if (tmpResourceInfo != null)
-                            {
-                                pageParameters = new PinStartPageParameters()
-                                {
-                                    ResourceInfo = tmpResourceInfo,
-                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
-                                };
-
-                            }
-                        }
-
-                        if (SettingsService.Instance.LocalSettings.UseWindowsHello)
-                        {
-                            NavigationService.Navigate(
-                                PageTokens.Verification.ToString(),
-                                pageParameters?.Serialize());
-                        }
-                        else
-                        {
-                            NavigationService.Navigate(
-                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
-                                pageParameters?.Serialize());
-                        }
+                        NavigationService.Navigate(requestedPage.ToString(), pageParameters?.Serialize());
                     }
                     else
                     {
                         NavigationService.Navigate(
-                            PageTokens.Login.ToString(), 
+                            PageToken.Login.ToString(),
                             null);
                     }
                 }
                 else
                 {
                     NavigationService.Navigate(
-                        PageTokens.Login.ToString(), 
+                        PageToken.Login.ToString(),
                         null);
                 }
             }
-
-            // Ensure the current window is active
-            Window.Current.Activate();
-
-            return Task.FromResult(true);
         }
 
         private void DeviceGestureServiceOnGoBackRequested(object sender, DeviceGestureEventArgs e)

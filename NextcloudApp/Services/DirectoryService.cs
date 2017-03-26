@@ -6,8 +6,11 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Networking.Connectivity;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Imaging;
 using NextcloudApp.Annotations;
 using NextcloudApp.Models;
@@ -254,9 +257,13 @@ namespace NextcloudApp.Services
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual async void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            await Task.Factory.StartNew(() =>
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }, CancellationToken.None, TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                TaskScheduler.Default).ConfigureAwait(false);
         }
 
         public void StopDirectoryListing()

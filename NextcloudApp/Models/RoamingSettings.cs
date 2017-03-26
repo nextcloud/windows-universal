@@ -8,16 +8,7 @@ namespace NextcloudApp.Models
     /// </summary>
     public class RoamingSettings : ObservableSettings
     {
-        private static RoamingSettings settings = new RoamingSettings();
-        private const string DefaultValueEmptyString = "";
-
-        public static RoamingSettings Default
-        {
-            get
-            {
-                return settings;
-            }
-        }
+        public static RoamingSettings Default { get; } = new RoamingSettings();
 
         public RoamingSettings()
             : base(ApplicationData.Current.RoamingSettings)
@@ -27,11 +18,11 @@ namespace NextcloudApp.Models
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
-            this.enableRaisePropertyChanged = false;
+            EnableRaisePropertyChanged = false;
 
             //  Assign default values to your settings here.
 
-            this.enableRaisePropertyChanged = true;
+            EnableRaisePropertyChanged = true;
         }
     }
 }

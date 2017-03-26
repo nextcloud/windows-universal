@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq.Expressions;
 using System.Windows.Input;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
@@ -18,7 +17,7 @@ namespace NextcloudApp.ViewModels
     {
         private LocalSettings _settngs;
         private DirectoryService _directoryService;
-        private TileService _tileService;
+        private readonly TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
@@ -135,7 +134,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = resourceInfo
             };
-            _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.SingleFileDownload.ToString(), parameters.Serialize());
         }
 
         private void MoveResource(object parameter)
@@ -149,7 +148,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = resourceInfo
             };
-            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
 
         private async void DeleteResource(object parameter)
@@ -192,12 +191,9 @@ namespace NextcloudApp.ViewModels
 
         private bool CanPinToStart(object parameter)
         {
-            if (parameter is ResourceInfo)
-            {
-                var resourceInfo = parameter as ResourceInfo;
-                return _tileService.IsTilePinned(resourceInfo);
-            }
-            return false;
+            if (!(parameter is ResourceInfo)) return false;
+            var resourceInfo = (ResourceInfo) parameter;
+            return _tileService.IsTilePinned(resourceInfo);
         }
 
         private void UploadFiles()
@@ -208,7 +204,7 @@ namespace NextcloudApp.ViewModels
                     ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
                     : new ResourceInfo()
             };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
         }
 
         private void UploadPhotos()
@@ -220,7 +216,7 @@ namespace NextcloudApp.ViewModels
                     : new ResourceInfo(),
                 PickerLocationId = PickerLocationId.PicturesLibrary
             };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
         }
 
         private async void CreateDirectory()
@@ -384,7 +380,7 @@ namespace NextcloudApp.ViewModels
                     {
                         ResourceInfo = value
                     };
-                    _navigationService.Navigate(PageTokens.FileInfo.ToString(), parameters.Serialize());
+                    _navigationService.Navigate(PageToken.FileInfo.ToString(), parameters.Serialize());
                 }
             }
         }

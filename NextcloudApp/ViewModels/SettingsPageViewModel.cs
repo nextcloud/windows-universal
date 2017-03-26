@@ -203,7 +203,7 @@ namespace NextcloudApp.ViewModels
         private void Reset()
         {
             SettingsService.Instance.Reset();
-            _navigationService.Navigate(PageTokens.Login.ToString(), null);
+            _navigationService.Navigate(PageToken.Login.ToString(), null);
         }
     }
 }

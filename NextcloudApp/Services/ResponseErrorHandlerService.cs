@@ -43,7 +43,7 @@ namespace NextcloudApp.Services
                     PrimaryButtonText = resourceLoader.GetString("OK")
                 };
                 await dialogService.ShowAsync(dialog);
-                navigationService.Navigate(PageTokens.Login.ToString(), null);
+                navigationService.Navigate(PageToken.Login.ToString(), null);
                 return;
             }
             if (e.StatusCode == "503") // Maintenance mode
@@ -60,7 +60,7 @@ namespace NextcloudApp.Services
                     PrimaryButtonText = resourceLoader.GetString("OK")
                 };
                 await dialogService.ShowAsync(dialog);
-                navigationService.Navigate(PageTokens.Login.ToString(), null);
+                navigationService.Navigate(PageToken.Login.ToString(), null);
                 app.Exit();
                 return;
             }
