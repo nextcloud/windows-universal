@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
-using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.Web.Http;
 using NextcloudApp.Converter;
@@ -19,6 +17,7 @@ using NextcloudApp.Services;
 using NextcloudClient.Exceptions;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
+using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 
 namespace NextcloudApp.ViewModels
@@ -99,6 +98,8 @@ namespace NextcloudApp.ViewModels
 
             IReadOnlyList<StorageFile> storageFiles = null;
 
+            ActivationKind = parameters.ActivationKind;
+
             if (parameters.FileTokens != null && parameters.FileTokens.Any())
             {
                 storageFiles = new List<StorageFile>();
@@ -124,6 +125,7 @@ namespace NextcloudApp.ViewModels
 
             UploadingFilesTitle = null;
             UploadingFileProgressText = null;
+
             var i = 0;
             foreach (var localFile in storageFiles)
             {
@@ -135,7 +137,8 @@ namespace NextcloudApp.ViewModels
 
                 if (storageFiles.Count > 1)
                 {
-                    UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i, storageFiles.Count);
+                    UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i,
+                        storageFiles.Count);
                 }
 
                 try
@@ -165,11 +168,26 @@ namespace NextcloudApp.ViewModels
                 // Completing updates may require Windows to ask for user input.
                 await CachedFileManager.CompleteUpdatesAsync(localFile);
 
-                UploadingFileProgressText = null;
+                await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    UploadingFileProgressText = null;
+                });
 
             }
-            _navigationService.GoBack();
+            if (ActivationKind == ActivationKind.ShareTarget)
+            {
+                PrismUnityApplication.Current.Exit();
+            }
+            else
+            {
+                await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    _navigationService.GoBack();
+                });
+            }
         }
+
+        public ActivationKind ActivationKind { get; private set; }
 
         private PickerLocationId SuggestedStartLocation { get; set; }
 
@@ -228,18 +246,18 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _resourceInfo, value); }
         }
 
-        private void Update()
+        private async void Update()
         {
-            var percentage = (double)BytesSend / BytesTotal;
-            PercentageUploaded = (int)(percentage * 100);
+            var percentage = (double) BytesSend/BytesTotal;
+            PercentageUploaded = (int) (percentage*100);
 
             UploadingFileProgressText = string.Format(
-            _resourceLoader.GetString("UploadingFileProgress"),
-            _converter.Convert((long)BytesSend, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString()),
-            _converter.Convert(BytesTotal, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString())
-            );
+                _resourceLoader.GetString("UploadingFileProgress"),
+                _converter.Convert((long) BytesSend, typeof(string), null,
+                    CultureInfo.CurrentCulture.ToString()),
+                _converter.Convert(BytesTotal, typeof(string), null,
+                    CultureInfo.CurrentCulture.ToString())
+                );
         }
     }
 }

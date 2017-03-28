@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Input;
+using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using NextcloudApp.Models;
@@ -90,11 +91,14 @@ namespace NextcloudApp.ViewModels
             {
                 return;
             }
+            ActivationKind = parameters.ActivationKind;
             FileTokens = fileTokens;
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
         }
+
+        public ActivationKind ActivationKind { get; private set; }
 
         public List<string> FileTokens { get; private set; }
 
@@ -119,6 +123,7 @@ namespace NextcloudApp.ViewModels
         {
             var parameters = new FileUploadPageParameters
             {
+                ActivationKind = ActivationKind,
                 ResourceInfo = Directory.PathStack.Count > 0
                     ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
                     : new ResourceInfo(),

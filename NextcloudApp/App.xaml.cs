@@ -162,12 +162,9 @@ namespace NextcloudApp
 
         protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
-            await InitializeFrameAsync(args);
+            //await InitializeFrameAsync(args);
 
             OnActivated(args);
-
-            // Ensure the current window is active
-            Window.Current.Activate();
         }
 
         protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
@@ -183,6 +180,7 @@ namespace NextcloudApp
                     var pageParameters = new ShareTargetPageParameters()
                     {
                         //ShareOperation = activatedEventArgs.ShareOperation,
+                        ActivationKind = ActivationKind.ShareTarget,
                         FileTokens = new List<string>()
                     };
 
