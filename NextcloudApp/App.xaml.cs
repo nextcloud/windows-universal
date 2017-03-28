@@ -153,17 +153,8 @@ namespace NextcloudApp
             return shell;
         }
 
-        /*
-        protected override void OnFileActivated(FileActivatedEventArgs args)
-        {
-            OnActivated(args);
-        }
-        */
-
         protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
-            //await InitializeFrameAsync(args);
-
             OnActivated(args);
         }
 
