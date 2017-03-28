@@ -37,6 +37,7 @@ namespace NextcloudApp.ViewModels
         private CancellationTokenSource _cts;
         private StorageFile _currentFile;
         private bool _waitingForServerResponse;
+        private readonly CoreDispatcher _dispatcher;
 
         public FileUploadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -44,6 +45,13 @@ namespace NextcloudApp.ViewModels
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
             _converter = new BytesToHumanReadableConverter();
+
+            // See: http://csharperimage.jeremylikness.com/2013/06/mvvm-and-accessing-ui-thread-in-windows.html
+            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+            {
+                return;
+            }
+            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public string UploadingFilesTitle
@@ -168,7 +176,7 @@ namespace NextcloudApp.ViewModels
                 // Completing updates may require Windows to ask for user input.
                 await CachedFileManager.CompleteUpdatesAsync(localFile);
 
-                await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                await OnUiThread(() =>
                 {
                     UploadingFileProgressText = null;
                 });
@@ -180,7 +188,7 @@ namespace NextcloudApp.ViewModels
             }
             else
             {
-                await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                await OnUiThread(() =>
                 {
                     _navigationService.GoBack();
                 });
@@ -193,7 +201,7 @@ namespace NextcloudApp.ViewModels
 
         private async void ProgressHandler(HttpProgress progressInfo)
         {
-            await CoreApplication.Views.First().Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            await OnUiThread(() =>
             {
                 if (progressInfo.TotalBytesToSend != null)
                 {
@@ -258,6 +266,11 @@ namespace NextcloudApp.ViewModels
                 _converter.Convert(BytesTotal, typeof(string), null,
                     CultureInfo.CurrentCulture.ToString())
                 );
+        }
+
+        private async Task OnUiThread(Action action)
+        {
+            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
         }
     }
 }
