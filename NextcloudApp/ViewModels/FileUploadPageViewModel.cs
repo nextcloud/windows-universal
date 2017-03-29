@@ -129,29 +129,36 @@ namespace NextcloudApp.ViewModels
                 openPicker.FileTypeFilter.Add("*");
                 storageFiles = await openPicker.PickMultipleFilesAsync();
             }
-
-            UploadingFilesTitle = null;
-            UploadingFileProgressText = null;
+            
+            await OnUiThread(() =>
+            {
+                UploadingFilesTitle = null;
+                UploadingFileProgressText = null;
+            });
 
             var i = 0;
             foreach (var localFile in storageFiles)
             {
                 _currentFile = localFile;
 
-                // Prevent updates to the remote version of the file until
-                // we finish making changes and call CompleteUpdatesAsync.
-                CachedFileManager.DeferUpdates(localFile);
-
                 if (storageFiles.Count > 1)
                 {
-                    UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i,
-                        storageFiles.Count);
+                    await OnUiThread(() =>
+                    {
+                        UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i,
+                            storageFiles.Count);
+                    });
                 }
 
                 try
                 {
                     var properties = await localFile.GetBasicPropertiesAsync();
-                    BytesTotal = (long) properties.Size;
+
+                    await OnUiThread(() =>
+                    {
+                        BytesSend = 0;
+                        BytesTotal = (long) properties.Size;
+                    });
 
                     // this moves the OpenReadAsync off of the UI thread and works fine...
                     var stream =
@@ -169,12 +176,7 @@ namespace NextcloudApp.ViewModels
                 {
                     ResponseErrorHandlerService.HandleException(e2);
                 }
-
-                // Let Windows know that we're finished changing the file so
-                // the other app can update the remote version of the file.
-                // Completing updates may require Windows to ask for user input.
-                await CachedFileManager.CompleteUpdatesAsync(localFile);
-
+                
                 await OnUiThread(() =>
                 {
                     UploadingFileProgressText = null;
@@ -253,7 +255,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _resourceInfo, value); }
         }
 
-        private async void Update()
+        private void Update()
         {
             var percentage = (double) BytesSend/BytesTotal;
             PercentageUploaded = (int) (percentage*100);
