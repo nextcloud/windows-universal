@@ -9,8 +9,11 @@ using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
+using Windows.Foundation;
 using Windows.Security.Credentials;
+using Windows.Storage;
 using Windows.Storage.AccessCache;
+using Windows.Storage.Pickers.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
@@ -153,7 +156,17 @@ namespace NextcloudApp
             return shell;
         }
 
-        protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        {
+            OnActivated(args);
+        }
+
+        protected override void OnFileSavePickerActivated(FileSavePickerActivatedEventArgs args)
+        {
+            OnActivated(args);
+        }
+
+        protected override void OnFileActivated(FileActivatedEventArgs args)
         {
             OnActivated(args);
         }
@@ -186,6 +199,49 @@ namespace NextcloudApp
                     CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
                 }
             }
+            else if (args.Kind == ActivationKind.FileSavePicker)
+            {
+                var activatedEventArgs = args as FileSavePickerActivatedEventArgs;
+                if (activatedEventArgs != null)
+                {
+                    activatedEventArgs.FileSavePickerUI.TargetFileRequested += OnTargetFileRequested;
+                }
+            }
+            else if (args.Kind == ActivationKind.File)
+            {
+                var activatedEventArgs = args as FileActivatedEventArgs;
+                if (activatedEventArgs != null)
+                {
+                    var sorageItems = activatedEventArgs.Files;
+
+                    var pageParameters = new ShareTargetPageParameters()
+                    {
+                        //ShareOperation = activatedEventArgs.ShareOperation,
+                        ActivationKind = ActivationKind.ShareTarget,
+                        FileTokens = new List<string>()
+                    };
+
+                    StorageApplicationPermissions.FutureAccessList.Clear();
+                    foreach (var storageItem in sorageItems)
+                    {
+                        var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                        pageParameters.FileTokens.Add(token);
+                    }
+
+                    CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
+                }
+            }
+        }
+
+        private void OnTargetFileRequested(FileSavePickerUI sender, TargetFileRequestedEventArgs args)
+        {
+            // Requesting a deferral allows the app to call another asynchronous method and complete the request at a later time 
+            var deferral = args.Request.GetDeferral();
+
+            //args.Request.TargetFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(sender.FileName, CreationCollisionOption.GenerateUniqueName);
+
+            // Complete the deferral to let the Picker know the request is finished 
+            deferral.Complete();
         }
 
         protected override Task OnInitializeAsync(IActivatedEventArgs args)
