@@ -42,6 +42,8 @@ namespace NextcloudApp
             InitializeComponent();
         }
 
+        public IActivatedEventArgs ActivatedEventArgs { get; private set; }
+
         private async void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs args)
         {
             var exceptionStackTrace = args.Exception.StackTrace;
@@ -158,21 +160,31 @@ namespace NextcloudApp
 
         protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
+            base.OnShareTargetActivated(args);
             OnActivated(args);
         }
 
         protected override void OnFileSavePickerActivated(FileSavePickerActivatedEventArgs args)
         {
+            base.OnFileSavePickerActivated(args);
+            OnActivated(args);
+        }
+
+        protected override void OnCachedFileUpdaterActivated(CachedFileUpdaterActivatedEventArgs args)
+        {
+            base.OnCachedFileUpdaterActivated(args);
             OnActivated(args);
         }
 
         protected override void OnFileActivated(FileActivatedEventArgs args)
         {
+            base.OnFileActivated(args);
             OnActivated(args);
         }
 
         protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
         {
+            ActivatedEventArgs = args;
             await base.OnActivateApplicationAsync(args);
             if (args.Kind == ActivationKind.ShareTarget)
             {
@@ -199,13 +211,9 @@ namespace NextcloudApp
                     CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
                 }
             }
-            else if (args.Kind == ActivationKind.FileSavePicker)
+            else if (args.Kind == ActivationKind.FileSavePicker || args.Kind == ActivationKind.CachedFileUpdater)
             {
-                var activatedEventArgs = args as FileSavePickerActivatedEventArgs;
-                if (activatedEventArgs != null)
-                {
-                    activatedEventArgs.FileSavePickerUI.TargetFileRequested += OnTargetFileRequested;
-                }
+                CheckSettingsAndContinue(PageToken.FileSavePicker, null);
             }
             else if (args.Kind == ActivationKind.File)
             {
@@ -231,17 +239,6 @@ namespace NextcloudApp
                     CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
                 }
             }
-        }
-
-        private void OnTargetFileRequested(FileSavePickerUI sender, TargetFileRequestedEventArgs args)
-        {
-            // Requesting a deferral allows the app to call another asynchronous method and complete the request at a later time 
-            var deferral = args.Request.GetDeferral();
-
-            //args.Request.TargetFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(sender.FileName, CreationCollisionOption.GenerateUniqueName);
-
-            // Complete the deferral to let the Picker know the request is finished 
-            deferral.Complete();
         }
 
         protected override Task OnInitializeAsync(IActivatedEventArgs args)

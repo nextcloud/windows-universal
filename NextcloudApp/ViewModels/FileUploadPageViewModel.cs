@@ -8,6 +8,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
+using Windows.System.Display;
 using Windows.UI.Core;
 using Windows.Web.Http;
 using NextcloudApp.Converter;
@@ -37,6 +38,7 @@ namespace NextcloudApp.ViewModels
         private StorageFile _currentFile;
         private bool _waitingForServerResponse;
         private readonly CoreDispatcher _dispatcher;
+        private DisplayRequest _displayRequest;
 
         public FileUploadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -68,6 +70,10 @@ namespace NextcloudApp.ViewModels
         public override async void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             base.OnNavigatingFrom(e, viewModelState, suspending);
+
+            // release the disblay keep active lock
+            _displayRequest.RequestRelease();
+
             if (suspending)
             {
                 return;
@@ -87,6 +93,10 @@ namespace NextcloudApp.ViewModels
         public override async void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
+
+            // keep the display enabled while uploading
+            _displayRequest = new DisplayRequest();
+            _displayRequest.RequestActive();
 
             var client = await ClientService.GetClient();
             if (client == null)
@@ -183,6 +193,10 @@ namespace NextcloudApp.ViewModels
                 });
 
             }
+
+            // release the disblay keep active lock
+            _displayRequest.RequestRelease();
+
             if (ActivationKind == ActivationKind.ShareTarget)
             {
                 PrismUnityApplication.Current.Exit();
@@ -195,7 +209,7 @@ namespace NextcloudApp.ViewModels
                 });
             }
         }
-
+        
         public ActivationKind ActivationKind { get; private set; }
 
         private PickerLocationId SuggestedStartLocation { get; set; }

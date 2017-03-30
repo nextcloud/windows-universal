@@ -47,6 +47,7 @@
             <uap:DataFormat>RTF</uap:DataFormat>
           </uap:ShareTarget>
         </uap:Extension>
+        <uap:Extension Category="windows.cachedFileUpdater" />
       </Extensions>
     </Application>
   </Applications>

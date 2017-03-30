@@ -173,6 +173,7 @@
     <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
+    <Compile Include="ViewModels\FileSavePickerPageViewModel.cs" />
     <Compile Include="ViewModels\ShareTargetPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\SingleFileDownloadPageViewModel.cs" />
@@ -183,6 +184,9 @@
     <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FileSavePickerPage.xaml.cs">
+      <DependentUpon>FileSavePickerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShareTargetPage.xaml.cs">
       <DependentUpon>ShareTargetPage.xaml</DependentUpon>
@@ -258,6 +262,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FileUploadPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FileSavePickerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

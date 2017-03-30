@@ -11,6 +11,7 @@
         FileUpload,
         MoveFileOrFolder,
         Verification,
-        ShareTarget
+        ShareTarget,
+        FileSavePicker
     }
 }
