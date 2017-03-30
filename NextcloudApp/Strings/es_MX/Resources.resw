@@ -172,9 +172,9 @@
     <value>Error de la aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Se ha presentado un problema con la aplicación. Sentimos los inconvenientes. Si estaba trabajando en algo, esta información pudo haberse perdido.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+¿Le gustaría informarle a los desarrolladores de la aplicación y presentar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente. </value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
@@ -201,7 +201,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Descargando el archivo...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargar imagenes preeliminares</value>
+    <value>Descargar previsualización de imagenes</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
