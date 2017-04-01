@@ -234,7 +234,7 @@
     <value>No autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor regresó un código de error 401 (No autorizado). Favor de autenticarse de nuevo.</value>
+    <value>El servidor regresó un código de error 401 (No autorizado). Favor de iniciar sesión de nuevo.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -425,7 +425,7 @@
 • New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Anclar al inicio</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
     <value>Pin to start</value>
