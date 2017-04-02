@@ -174,7 +174,7 @@
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>Se ha presentado un problema con la aplicación. Sentimos los inconvenientes. Si estaba trabajando en algo, esta información pudo haberse perdido.
 
-¿Le gustaría informarle a los desarrolladores de la aplicación y presentar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente. </value>
+¿Le gustaría informarle a los desarrolladores de la aplicación y enviar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
