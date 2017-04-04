@@ -428,7 +428,7 @@
     <value>Anclar al inicio</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Anclar al inicio</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
