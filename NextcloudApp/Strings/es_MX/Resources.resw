@@ -378,7 +378,7 @@
     <value>Autenticación Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>No se ha establecido un PIN para este dispositivo. Para poder usar Windows Hello, se debe definir un PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Descargar</value>
@@ -411,18 +411,16 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover archivos y carpetasNew line&quot;&gt;
+• Renombrar archivos y carpetasNew line&quot;&gt;
+• Descargar directorios como un archivo zip New line&quot;&gt;
+• Seleccionar multiples archivos y carpetasNew line&quot;&gt;
+• Anclar archivos y carpetas a la pantalla de inicioNew line&quot;&gt;
+• Usar Windows Hello para autenticar en el inicio de la aplicaciónNew line&quot;&gt;
+• Permitir certificados SSL auto firmadosNew line&quot;&gt;
+• Mostrar el tamaño del archivo en la listaNew line&quot;&gt;
+• Manejar la activación de archivoNew line&quot;&gt;
+• Usar la Bóveda de Contraseñas para almacerar las credenciales del usuarioNew line&quot;&gt;</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -437,9 +435,9 @@
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>La autoridad del certificado es inválida o incorrecta. ¿Conectarse de cualquier modo?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+¡Tenga cuidado, no estará protegido de ataques de Hombre-En-Medio (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>¡Atención!</value>
