@@ -411,16 +411,16 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetasNew line&quot;&gt;
-• Renombrar archivos y carpetasNew line&quot;&gt;
-• Descargar directorios como un archivo zip New line&quot;&gt;
-• Seleccionar multiples archivos y carpetasNew line&quot;&gt;
-• Anclar archivos y carpetas a la pantalla de inicioNew line&quot;&gt;
-• Usar Windows Hello para autenticar en el inicio de la aplicaciónNew line&quot;&gt;
-• Permitir certificados SSL auto firmadosNew line&quot;&gt;
-• Mostrar el tamaño del archivo en la listaNew line&quot;&gt;
-• Manejar la activación de archivoNew line&quot;&gt;
-• Usar la Bóveda de Contraseñas para almacerar las credenciales del usuarioNew line&quot;&gt;</value>
+    <value>• Mover archivos y carpetas
+• Renombrar archivos y carpetas
+• Descargar directorios como un archivo zip
+• Seleccionar multiples archivos y carpetas
+• Anclar archivos y carpetas a la pantalla de inicio
+• Usar Windows Hello para autenticar en el inicio de la aplicación
+• Permitir certificados SSL auto firmados
+• Mostrar el tamaño del archivo en la lista
+• Manejar la activación de archivo
+• Usar la Bóveda de Contraseñas para almacerar las credenciales del usuario</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -432,7 +432,7 @@
     <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de la autoridad certificadora SSL inválida o incorrecta. Tenga cuidado, no estará más protegido contra ataques de Hombre-en-medio (mitm)</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>La autoridad del certificado es inválida o incorrecta. ¿Conectarse de cualquier modo?
