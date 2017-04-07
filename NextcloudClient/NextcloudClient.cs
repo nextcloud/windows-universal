@@ -277,6 +277,41 @@ namespace NextcloudClient
         }
 
         /// <summary>
+        ///     Finds user favorites.
+        /// </summary>
+        /// <returns>List of favorites.</returns>
+        public async Task<List<ResourceInfo>> GetFavorites()
+        {
+            //var remoteShares = await ListOpenRemoteShare();
+
+            var url = new UrlBuilder(_url + "/remote.php/dav/files");
+            HttpResponseMessage response;
+
+            var parameters = new Dictionary<string, string>
+            {
+                {"data", "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>"}
+            };
+
+            //var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
+            var content = "<?xml version=\"1.0\"?><d:propfind  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><oc:favorite /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></d:propfind>";
+            var request = new HttpRequestMessage(new HttpMethod("PROPFIND"), url.ToUri());
+            request.Content = new HttpStringContent(content, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/xml");
+
+            var response2 = await _client.SendRequestAsync(request);
+
+            //var response = await DoApiRequest("POST", "/remote.php/dav", parameters);
+
+            var content2 = new HttpFormUrlEncodedContent(parameters);
+            var test = "test";
+            content2.Headers.ContentType.MediaType = "text/plain";
+            //content2.Headers["OCS-APIREQUEST"] = true.ToString();
+            response = await _client.PostAsync(url.ToUri(), content2);
+            //response = await _client.PostAsync(url.ToUri(), content2);
+
+            return null;
+        }
+
+        /// <summary>
         ///     Finds resource info for item by searching its parent.
         /// </summary>
         /// <returns>Resource Info if given item.</returns>

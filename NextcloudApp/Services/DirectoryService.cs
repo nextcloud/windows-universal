@@ -163,7 +163,13 @@ namespace NextcloudApp.Services
                 {
                     PathStack.Clear();
                     list = await client.GetSharesOut();
-                } else
+                }
+                else if (viewName == "favorites")
+                {
+                    PathStack.Clear();
+                    list = await client.GetFavorites();
+                }
+                else
                 {
                     list = await client.List(path);
                 }
