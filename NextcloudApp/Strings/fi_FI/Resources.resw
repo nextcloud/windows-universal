@@ -246,7 +246,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Polku</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} of {1} used</value>
+    <value>{0}/{1} käytetty</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
     <value>Resetoi tämä sovellus</value>
@@ -282,7 +282,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Versio {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Vain Wi-Fi-yhteydellä</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Kyllä</value>
@@ -315,19 +315,19 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0}/{1} ladattu</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>Huoltotila on aktivoitu palvelimella.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>Väärä käyttäjätunnus tai salasana.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Client version {0}</value>
+    <value>Sovellusversio {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
     <value>The server name or address could not be resolved.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Server version {0}</value>
+    <value>Palvelimen versio {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
     <value>Poista</value>
@@ -396,13 +396,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Yritä uudelleen</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud Windows Mobile -laitteelle</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
     <value>Sovelluksesi päivitettiin versioon {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Uudet toiminnot ja parannukset tässä versiossa:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Suositeltu</value>
