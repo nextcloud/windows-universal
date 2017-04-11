@@ -15,6 +15,7 @@ using NextcloudClient.Exceptions;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
 using Prism.Windows.AppModel;
+using DecaTec.WebDav;
 
 namespace NextcloudApp.ViewModels
 {
@@ -79,7 +80,8 @@ namespace NextcloudApp.ViewModels
                 ResourceInfo = new ResourceInfo
                 {
                     Name = resourceInfo.Name + ".zip",
-                    ContentType = "application/zip"
+                    ContentType = "application/zip",
+                    Path = resourceInfo.Path
                 };
             }
             else
@@ -106,18 +108,19 @@ namespace NextcloudApp.ViewModels
 
             try
             {
-                IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                Windows.Storage.Streams.IBuffer buffer;
+                IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+                var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite);
+                Stream targetStream = randomAccessStream.AsStreamForWrite();
+
                 switch (resourceInfo.ContentType)
                 {
                     case "dav/directory":
-                        buffer = await client.DownloadDirectoryAsZip(ResourceInfo.Path, _cts, progress);
+                        await client.DownloadDirectoryAsZip(ResourceInfo.Path, targetStream, progress, _cts.Token);
                         break;
                     default:
-                        buffer = await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, _cts, progress);
+                        await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, targetStream, progress, _cts.Token);
                         break;
                 }
-                await FileIO.WriteBufferAsync(localFile, buffer);
             }
             catch (ResponseError e2)
             {
@@ -140,15 +143,12 @@ namespace NextcloudApp.ViewModels
             _navigationService.GoBack();
         }
 
-        private async void ProgressHandler(HttpProgress progressInfo)
+        private async void ProgressHandler(WebDavProgress progressInfo)
         {
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                if (progressInfo.TotalBytesToReceive != null)
-                {
-                    BytesTotal = (long)progressInfo.TotalBytesToReceive;
-                }
-                BytesDownloaded = (int)progressInfo.BytesReceived;
+                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesDownloaded = (int)progressInfo.Bytes;
             });
         }
         
