@@ -7,7 +7,6 @@ using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Core;
-using Windows.Web.Http;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -109,17 +108,20 @@ namespace NextcloudApp.ViewModels
             try
             {
                 IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
-                var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite);
-                Stream targetStream = randomAccessStream.AsStreamForWrite();
 
-                switch (resourceInfo.ContentType)
+                using (var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite))
                 {
-                    case "dav/directory":
-                        await client.DownloadDirectoryAsZip(ResourceInfo.Path, targetStream, progress, _cts.Token);
-                        break;
-                    default:
-                        await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, targetStream, progress, _cts.Token);
-                        break;
+                    Stream targetStream = randomAccessStream.AsStreamForWrite();
+
+                    switch (resourceInfo.ContentType)
+                    {
+                        case "dav/directory":
+                            await client.DownloadDirectoryAsZip(ResourceInfo.Path, targetStream, progress, _cts.Token);
+                            break;
+                        default:
+                            await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, targetStream, progress, _cts.Token);
+                            break;
+                    }
                 }
             }
             catch (ResponseError e2)

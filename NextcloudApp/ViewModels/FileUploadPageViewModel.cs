@@ -6,7 +6,6 @@ using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Core;
-using Windows.Web.Http;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -120,11 +119,13 @@ namespace NextcloudApp.ViewModels
                     var properties = await localFile.GetBasicPropertiesAsync();
                     BytesTotal = (long) properties.Size;
 
-                    var stream = await localFile.OpenAsync(FileAccessMode.ReadWrite);
-                    var targetStream = stream.AsStreamForRead();
+                    using (var stream = await localFile.OpenAsync(FileAccessMode.Read))
+                    {
+                        var targetStream = stream.AsStreamForRead();
 
-                    IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
-                    await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                        IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+                        await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                    }
                 }
                 catch (ResponseError e2)
                 {
