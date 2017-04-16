@@ -168,7 +168,8 @@
     <Compile Include="Utils\DateSorter.cs" />
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
-    <Compile Include="Utils\SortMode.cs" />
+    <Compile Include="Utils\GroupMode.cs" />
+    <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />

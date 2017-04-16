@@ -25,7 +25,30 @@ namespace NextcloudApp.Services
         {
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
             _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
-            GroupByNameAscending();
+
+            switch (SettingsService.Instance.LocalSettings.GroupMode)
+            {
+                case GroupMode.GroupByNameAscending:
+                    GroupByNameAscending();
+                    break;
+                case GroupMode.GroupByNameDescending:
+                    GroupByNameDescending();
+                    break;
+                case GroupMode.GroupByDateAscending:
+                    GroupByDateAscending();
+                    break;
+                case GroupMode.GroupByDateDescending:
+                    GroupByDateDescending();
+                    break;
+                case GroupMode.GroupBySizeAscending:
+                    GroupBySizeAscending();
+                    break;
+                case GroupMode.GroupBySizeDescending:
+                    GroupBySizeDescending();
+                    break;
+                default:
+                    break;
+            }
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -57,61 +80,67 @@ namespace NextcloudApp.Services
         public void GroupByNameAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
-            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
         }
 
         public void GroupByNameDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
-            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
         }
 
         public void GroupByDateAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
-            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
         }
 
         public void GroupByDateDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
-            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
         }
 
         public void GroupBySizeAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
-            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
+            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
         }
 
         public void GroupBySizeDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
-            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
+            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
         private static string GetSizeHeader(ResourceInfo fileOrFolder)

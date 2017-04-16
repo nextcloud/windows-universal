@@ -155,6 +155,26 @@ namespace NextcloudApp.Models
             }
         }
 
+        // As only serializable objects can be stored in the LocalSettings, we use a string internally.
+        [DefaultSettingValue(Value = GroupMode.GroupByNameAscending)]
+        public GroupMode GroupMode
+        {
+            get
+            {
+                var strVal = Get<string>();
+
+                if (string.IsNullOrEmpty(strVal))
+                    return GroupMode.GroupByNameAscending;
+                else
+                    return JsonConvert.DeserializeObject<GroupMode>(strVal);
+            }
+            set
+            {
+                var strVal = JsonConvert.SerializeObject(value);
+                Set(strVal);
+            }
+        }
+
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
@@ -165,6 +185,7 @@ namespace NextcloudApp.Models
             ShowFileAndFolderGroupingHeader = true;
             PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
             UseWindowsHello = false;
+            GroupMode = GroupMode.GroupByNameAscending;
 
             enableRaisePropertyChanged = true;
         }
