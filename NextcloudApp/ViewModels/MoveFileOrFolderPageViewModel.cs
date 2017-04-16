@@ -298,7 +298,8 @@ namespace NextcloudApp.ViewModels
         {
             ShowProgressIndicator();
 
-            await Directory.StartDirectoryListing();
+            // The folder to move should not be set as target.
+            await Directory.StartDirectoryListing(ResourceInfo);
 
             HideProgressIndicator();
         }
