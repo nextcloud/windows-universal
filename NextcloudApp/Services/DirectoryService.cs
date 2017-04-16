@@ -133,6 +133,11 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
+            await StartDirectoryListing(null);
+        }
+
+        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
+        {
             var client = await ClientService.GetClient();
             if (client == null)
             {
@@ -155,11 +160,16 @@ namespace NextcloudApp.Services
 
             FilesAndFolders.Clear();
             Folders.Clear();
+
             if (list != null)
             {
                 foreach (var item in list)
                 {
+                    if (resourceInfoToExclude != null && item == resourceInfoToExclude)
+                        continue;
+
                     FilesAndFolders.Add(new FileOrFolder(item));
+
                     if (item.IsDirectory())
                     {
                         Folders.Add(new FileOrFolder(item));
