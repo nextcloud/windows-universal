@@ -21,7 +21,7 @@ namespace NextcloudClient
     /// <summary>
     ///     Nextcloud OCS and DAV access client
     /// </summary>
-    public class NextcloudClient
+    public class NextcloudClient : IDisposable
     {
         #region PRIVATE PROPERTIES
 
@@ -2211,5 +2211,23 @@ namespace NextcloudClient
         }
 
         #endregion
+
+        #region IDisposable
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _dav?.Dispose();
+            }
+        }
+
+        #endregion IDisposable
     }
 }
