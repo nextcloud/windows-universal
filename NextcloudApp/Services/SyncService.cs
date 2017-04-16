@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using NextcloudClient.Types;
-using Windows.Storage;
 using NextcloudClient.Exceptions;
 using NextcloudApp.Models;
 using Windows.Storage.FileProperties;
 using NextcloudApp.Utils;
-using NextcloudClient;
 using System.Threading;
 using Windows.Web.Http;
-using Windows.Storage.Streams;
 using System.Diagnostics;
+using DecaTec.WebDav;
+using Windows.Storage;
 
 namespace NextcloudApp.Services
 {
@@ -292,11 +291,9 @@ namespace NextcloudApp.Services
                         // Create sid and upload file
                         string newPath = parent.Path + file.Name;
                         Debug.WriteLine("Sync file (Upload)" + newPath);
-                        var _cts = new CancellationTokenSource();
-                        IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
                         sid.DateModified = currentModified;
                         sid.FilePath = file.Path;
-                        if (await client.Upload(newPath, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                        if (await uploadFile(file, newPath))
                         {
                             ResourceInfo newInfo = await client.GetResourceInfo(parent.Path, file.Name);
                             sid.Path = newInfo.Path + "/" + newInfo.Name;
@@ -312,20 +309,23 @@ namespace NextcloudApp.Services
                         // Create sid and download file
                         StorageFile localFile = await parentFolder.CreateFileAsync(info.Name);
                         Debug.WriteLine("Sync file (Download)" + localFile.Path);
-                        var _cts = new CancellationTokenSource();
-                        IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                        IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
-                        await FileIO.WriteBufferAsync(localFile, buffer);
-                        BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
-                        currentModified = basicProperties.DateModified;
-                        sid.Path = info.Path + "/" + info.Name;
-                        sid.ETag = info.ETag;
-                        sid.DateModified = currentModified;
-                        sid.FilePath = localFile.Path;
-                        changed = true;
+                        if (await this.downloadFile(localFile, info.Path + "/" + info.Name))
+                        {
+                            BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
+                            currentModified = basicProperties.DateModified;
+                            sid.Path = info.Path + "/" + info.Name;
+                            sid.ETag = info.ETag;
+                            sid.DateModified = currentModified;
+                            sid.FilePath = localFile.Path;
+                            changed = true;
+                        }
+                        else
+                        {
+                            sid.Error = "Error while downloading file from nextcloud";
+                        }
                     }
-                } else
-                {
+                        } else
+                    {
                     if (info == null)
                     {
                         if (sid.DateModified.Value.Equals(currentModified))
@@ -343,11 +343,9 @@ namespace NextcloudApp.Services
                                 case ConflictSolution.PREFER_LOCAL:
                                     string newPath = parent.Path + file.Name;
                                     Debug.WriteLine("Sync file (Upload)" + newPath);
-                                    var _cts = new CancellationTokenSource();
-                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
                                     sid.DateModified = currentModified;
                                     sid.FilePath = file.Path;
-                                    if (await client.Upload(newPath, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                                    if (await uploadFile(file, newPath))
                                     {
                                         ResourceInfo newInfo = await client.GetResourceInfo(parent.Path, file.Name);
                                         sid.Path = newInfo.Path + "/" + newInfo.Name;
@@ -401,16 +399,18 @@ namespace NextcloudApp.Services
                                     // Update local file
                                     StorageFile localFile = await parentFolder.CreateFileAsync(info.Name);
                                     Debug.WriteLine("Sync file (Download)" + localFile.Path);
-                                    var _cts = new CancellationTokenSource();
-                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                                    IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
-                                    await FileIO.WriteBufferAsync(localFile, buffer);
-                                    BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
-                                    currentModified = basicProperties.DateModified;
-                                    sid.ETag = info.ETag;
-                                    sid.DateModified = currentModified;
-                                    sid.ConflictSolution = ConflictSolution.NONE;
-                                    changed = true;
+                                    if(await this.downloadFile(localFile, info.Path + "/" + info.Name)) { 
+                                        BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
+                                        currentModified = basicProperties.DateModified;
+                                        sid.ETag = info.ETag;
+                                        sid.DateModified = currentModified;
+                                        sid.ConflictSolution = ConflictSolution.NONE;
+                                        changed = true;
+                                    }
+                                    else
+                                    {
+                                        sid.Error = "Error while downloading file from nextcloud";
+                                    }
                                     break;
                                 default:
                                     // Conflict
@@ -427,22 +427,22 @@ namespace NextcloudApp.Services
                             {
                                 // Update local file
                                 Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
-                                var _cts = new CancellationTokenSource();
-                                IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                                IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts, progress);
-                                await FileIO.WriteBufferAsync(file, buffer);
-                                sid.ETag = info.ETag;
-                                sid.DateModified = currentModified;
-                                changed = true;
+                                if(await this.downloadFile(file, info.Path + "/" + info.Name)) { 
+                                    sid.ETag = info.ETag;
+                                    sid.DateModified = currentModified;
+                                    changed = true;
+                                }
+                                else
+                                {
+                                    sid.Error = "Error while downloading file from nextcloud";
+                                }
                             }
                         } else if (info.ETag.Equals(sid.ETag))
                         {
                             // update file on nextcloud
                             Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
-                            var _cts = new CancellationTokenSource();
-                            IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-
-                            if (await client.Upload(info.Path + "/" + info.Name, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                            
+                            if (await uploadFile(file, info.Path + "/" + info.Name))
                             {
                                 ResourceInfo newInfo = await client.GetResourceInfo(info.Path, info.Name);
                                 sid.ETag = newInfo.ETag;
@@ -460,10 +460,8 @@ namespace NextcloudApp.Services
                                 case ConflictSolution.PREFER_LOCAL:
                                     // update file on nextcloud
                                     Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
-                                    var _cts = new CancellationTokenSource();
-                                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-
-                                    if (await client.Upload(info.Path + "/" + info.Name, await file.OpenReadAsync(), file.ContentType, _cts, progress))
+                                   
+                                    if (await uploadFile(file, info.Path + "/" + info.Name))
                                     {
                                         ResourceInfo newInfo = await client.GetResourceInfo(info.Path, info.Name);
                                         sid.ETag = newInfo.ETag;
@@ -479,14 +477,16 @@ namespace NextcloudApp.Services
                                 case ConflictSolution.PREFER_REMOTE:
                                     // Update local file
                                     Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
-                                    var _cts2 = new CancellationTokenSource();
-                                    IProgress<HttpProgress> progress2 = new Progress<HttpProgress>(ProgressHandler);
-                                    IBuffer buffer = await client.Download(info.Path + "/" + info.Name, _cts2, progress2);
-                                    await FileIO.WriteBufferAsync(file, buffer);
-                                    sid.ETag = info.ETag;
-                                    sid.DateModified = currentModified;
-                                    sid.ConflictSolution = ConflictSolution.NONE;
-                                    changed = true;
+                                    if (await this.downloadFile(file, info.Path + "/" + info.Name))
+                                    {
+                                        sid.ETag = info.ETag;
+                                        sid.DateModified = currentModified;
+                                        sid.ConflictSolution = ConflictSolution.NONE;
+                                        changed = true;
+                                    } else
+                                    {
+                                        sid.Error = "Error while downloading file from nextcloud";
+                                    }
                                     break;
                                 default:
                                     // Conflict
@@ -518,10 +518,61 @@ namespace NextcloudApp.Services
             }
             return changed? 1 : 0;
         }
-                       
-        private void ProgressHandler(HttpProgress progressInfo)
+
+        private void ProgressHandler(WebDavProgress progressInfo)
         {
-            
+            // progress
+        }
+
+        private async Task<bool> uploadFile(StorageFile localFile, string path)
+        {
+            bool result = false;
+            var _cts = new CancellationTokenSource();
+            CachedFileManager.DeferUpdates(localFile);
+            try
+            {
+                var properties = await localFile.GetBasicPropertiesAsync();
+                long BytesTotal = (long)properties.Size;
+
+                using (var stream = await localFile.OpenAsync(FileAccessMode.Read))
+                {
+                    var targetStream = stream.AsStreamForRead();
+
+                    IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+                    await client.Upload(path, targetStream, localFile.ContentType, progress, _cts.Token);
+                }
+            }
+            catch (ResponseError e2)
+            {
+                ResponseErrorHandlerService.HandleException(e2);
+            }
+
+            // Let Windows know that we're finished changing the file so
+            // the other app can update the remote version of the file.
+            // Completing updates may require Windows to ask for user input.
+            await CachedFileManager.CompleteUpdatesAsync(localFile); 
+            return result;
+        }
+
+        private async Task<bool> downloadFile(StorageFile localFile, string path)
+        {
+            bool result = false;
+            CachedFileManager.DeferUpdates(localFile);
+            var _cts = new CancellationTokenSource();
+            IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+
+            using (var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                Stream targetStream = randomAccessStream.AsStreamForWrite();
+
+                result = await client.Download(path, targetStream, progress, _cts.Token);
+            }
+
+            // Let Windows know that we're finished changing the file so
+            // the other app can update the remote version of the file.
+            // Completing updates may require Windows to ask for user input.
+            await CachedFileManager.CompleteUpdatesAsync(localFile);
+            return result;
         }
     }
 }
