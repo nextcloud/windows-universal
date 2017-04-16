@@ -127,7 +127,10 @@ namespace NextcloudClient
                     ));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
 
-            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password));
+            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password))
+            {
+                Timeout = Timeout.InfiniteTimeSpan
+            };
         }
 
         #endregion
