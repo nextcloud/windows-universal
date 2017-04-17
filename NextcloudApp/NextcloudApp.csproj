@@ -106,10 +106,9 @@
     <PRIResource Include="Strings\hu_HU\Resources.resw" />
     <PRIResource Include="Strings\fr\Resources.resw" />
     <PRIResource Include="Strings\es\Resources.resw" />
-    <PRIResource Include="Strings\en\Resources.resw">
-      <SubType>Designer</SubType>
-    </PRIResource>
+    <PRIResource Include="Strings\en\Resources.resw" />
     <PRIResource Include="Strings\de\Resources.resw" />
+    <PRIResource Include="Strings\de-DE\Resources.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +179,8 @@
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\SyncDbUtils.cs" />
+    <Compile Include="Utils\GroupMode.cs" />
+    <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
