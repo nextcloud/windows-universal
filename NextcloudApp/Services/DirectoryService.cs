@@ -26,7 +26,9 @@ namespace NextcloudApp.Services
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
             _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
 
-            SortList();
+            // Arrange for the first time, so that the collections get filled.
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
