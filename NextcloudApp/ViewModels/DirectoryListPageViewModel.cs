@@ -433,6 +433,7 @@ namespace NextcloudApp.ViewModels
             await Directory.StartDirectoryListing();
 
             HideProgressIndicator();
+            SelectedFileOrFolder = null;
         }
 
 
