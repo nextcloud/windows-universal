@@ -152,8 +152,8 @@ namespace NextcloudApp.Services
         {
             var sizeMb = fileOrFolder.Size / 1024f / 1024f;
 
-            long[] sizesValuesMb = { 1, 10, 20, 30, 40, 50, 100, 1024, 5120, 10240, 102400 };
-            string[] sizesDisplay = { "<1MB", ">1MB", ">10MB", ">20MB", ">30MB", ">40MB", ">50MB", ">100MB", ">1GB", ">5GB", ">10GB", ">100GB" };
+            long[] sizesValuesMb = { 1, 5, 10, 25, 50, 100, 250, 500, 1024, 5120, 10240, 102400, 1048576 };
+            string[] sizesDisplay = { "<1MB", ">1MB", ">5MB", ">10MB", ">25MB", ">50MB", ">100MB", ">250MB", ">500MB", ">1GB", ">5GB", ">10GB", ">100GB", ">1TB" };
 
             var index = 0;
 
