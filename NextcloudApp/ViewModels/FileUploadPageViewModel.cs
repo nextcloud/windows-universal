@@ -10,7 +10,6 @@ using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 using Windows.System.Display;
 using Windows.UI.Core;
-using Windows.Web.Http;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -19,6 +18,8 @@ using Prism.Windows.Navigation;
 using NextcloudClient.Types;
 using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
+using DecaTec.WebDav;
+using System.IO;
 
 namespace NextcloudApp.ViewModels
 {
@@ -177,7 +178,7 @@ namespace NextcloudApp.ViewModels
                                 TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
                                 TaskScheduler.Default).ConfigureAwait(false);
 
-                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
+                        IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
                     await
                         client.Upload(ResourceInfo.Path + localFile.Name, stream.Result, localFile.ContentType, _cts,
                             progress);
@@ -214,15 +215,12 @@ namespace NextcloudApp.ViewModels
 
         private PickerLocationId SuggestedStartLocation { get; set; }
 
-        private async void ProgressHandler(HttpProgress progressInfo)
+        private async void ProgressHandler(WebDavProgress progressInfo)
         {
             await OnUiThread(() =>
             {
-                if (progressInfo.TotalBytesToSend != null)
-                {
-                    BytesTotal = (long)progressInfo.TotalBytesToSend;
-                }
-                BytesSend = (int)progressInfo.BytesSent;
+                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesSend = (int)progressInfo.Bytes;
 
                 WaitingForServerResponse = BytesSend == BytesTotal;
             });

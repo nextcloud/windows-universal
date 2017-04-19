@@ -118,90 +118,90 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Todos los archivos</value>
+    <value>Kaikki tiedostot</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Siempre</value>
+    <value>Aina</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Se ha presentado un error</value>
+    <value>Tapahtui virhe</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Agregar</value>
+    <value>Lisää</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Crear carpeta</value>
+    <value>Luo kansio</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Capturar imagen</value>
+    <value>Ota kuva</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Cargar archivos</value>
+    <value>Lähetä tiedostoja</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Cargar fotos</value>
+    <value>Lähetä kuvia</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Descargar</value>
+    <value>Lataa</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Actualizar</value>
+    <value>Päivitä</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Ordenar</value>
+    <value>Lajittele</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Fecha (más antiguo al principio)</value>
+    <value>Päivämäärä (vanhin ensin)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Fecha (más reciente al principio)</value>
+    <value>Päivämäärä (uusin ensin)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nombre (A al principio)</value>
+    <value>Nimi (aakkosjärjetys)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nombre (Z al principio)</value>
+    <value>Nimi (käänteinen aakkosjärjestys)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Tamaño (más pequeño al principio)</value>
+    <value>Koko (pienin ensin)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Tamaño (más grande al principio)</value>
+    <value>Koko (suurin ensin)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Error de la aplicación</value>
+    <value>Sovellusvirhe</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Se ha presentado un problema con la aplicación. Sentimos los inconvenientes. Si estaba trabajando en algo, esta información pudo haberse perdido.
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
 
-¿Le gustaría informarle a los desarrolladores de la aplicación y enviar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente.</value>
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Peruuta</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>No se puede crear la carpeta</value>
+    <value>Ei voida luoda kansiota</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Yhdistä</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Tipo de contenido</value>
+    <value>Sisällön tyyppi</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Crear</value>
+    <value>Luo</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Creado</value>
+    <value>Luotu</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Crear una carpeta nueva</value>
+    <value>Luo uusi kansio</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Descargando el archivo...</value>
+    <value>Ladataan tiedostoa...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargar previsualización de imagenes</value>
+    <value>Lataa esikatselukuvat</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -210,245 +210,248 @@
     <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Nombre de la carpeta</value>
+    <value>Kansion nimi</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Información</value>
+    <value>Tiedot</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Última modificación</value>
+    <value>Viimeksi muokattu</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Nimi</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+    <value>Ei koskaan</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Carpeta nueva</value>
+    <value>Uusi kansio</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No </value>
+    <value>Ei</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>No autorizado</value>
+    <value>Ei sallittu</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor regresó un código de error 401 (No autorizado). Favor de iniciar sesión de nuevo.</value>
+    <value>Palvelin palautti virhekoodin 401 (Pääsy evätty). Kirjaudu uudelleen.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Contraseña</value>
+    <value>Salasana</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Ruta</value>
+    <value>Polku</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} de {1} usado</value>
+    <value>{0}/{1} käytetty</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reiniciar esta aplicación</value>
+    <value>Resetoi tämä sovellus</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Reintentar</value>
+    <value>Yritä uudelleen</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Dirección del servidor</value>
+    <value>Palvelimen osoite</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Ajustes</value>
+    <value>Asetukset</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Ajustes</value>
+    <value>Asetukset</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Mostrar agrupación de archivos y carpetas</value>
+    <value>Näytä tiedosto ja kansio lista ryhmänä</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Tamaño</value>
+    <value>Koko</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Ya existe un elemento con este nombre. Especifique un nombre diferente</value>
+    <value>There is already an element with this name. Specify a different name.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Tyyppi</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nombre del usuario</value>
+    <value>Käyttäjätunnus</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Versión {0}</value>
+    <value>Versio {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Sólo cuando este conectado por Wi-Fi</value>
+    <value>Vain Wi-Fi-yhteydellä</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Sí</value>
+    <value>Kyllä</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Poista</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Borrar archivo</value>
+    <value>Poista tiedosto</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Está seguro que quiere borrar este archivo {0}</value>
+    <value>Haluatko varmasti poistaa tiedoston {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Borrar carpeta</value>
+    <value>Poista kansio</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Está seguro que quiere borrar esta carpeta {0}</value>
+    <value>Haluatko varmasti poistaa kansion {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} cargado</value>
+    <value>{0}/{1} lähetetty</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Cargando archivo {0} de {1}…</value>
+    <value>Lähetetään tiedostoa {0}/{1}...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Cargando el archivo... </value>
+    <value>Lähetetään tiedostoa...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} descargado</value>
+    <value>{0}/{1} ladattu</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>El modo mantenimiento está habilitado en el servidor</value>
+    <value>Huoltotila on aktivoitu palvelimella.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nombre de usuario o contraseña equivocado. </value>
+    <value>Väärä käyttäjätunnus tai salasana.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Versión del cliente {0}</value>
+    <value>Sovellusversio {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>El nombre del servidor o la dirección no pudo ser resuelta. </value>
+    <value>The server name or address could not be resolved.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Versión del servidor  {0}</value>
+    <value>Palvelimen versio {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Poista</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>esperando respuesta del servidor</value>
+    <value>waiting for server response</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Favor de elegir un nuevo nombre</value>
+    <value>Valitse uusi nimi</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Nimeä uudelleen</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Nimeä uudelleen</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Nimeä uudelleen</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Mover a</value>
+    <value>Siirrä kohteeseen</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Mover a</value>
+    <value>Siirrä kohteeseen</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Peruuta</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Hecho</value>
+    <value>Valmis</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Elegir carpeta</value>
+    <value>Valitse kansio</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>El servidor en la dirección {0} no puede ser alcanzado.</value>
+    <value>Palvelin osoitteessa {0} ei ole tavoitettavissa.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Descargar como un archivo ZIP</value>
+    <value>Lataa ZIP-tiedostona</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} descargado</value>
+    <value>{0} ladattu</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Para acceder a su Nextcloud, proporcione la información de autenticación de su dispositivo.</value>
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Autenticación Windows Hello</value>
+    <value>Windows Hello -tunnistautuminen</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No se ha establecido un PIN para este dispositivo. Para poder usar Windows Hello, se debe definir un PIN.</value>
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Descargar</value>
+    <value>Lataa</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Se requiere autenticación</value>
+    <value>Kirjautuminen vaaditaan</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de su dispositivo. </value>
+    <value>Nextcloudia ei voida avata ennen kirjautumistietojen syöttämistä.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Vuelva a intentar</value>
+    <value>Yritä uudelleen</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud para Windows Mobile</value>
+    <value>Nextcloud Windows Mobile -laitteelle</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Su aplicación se actualizó a la versión {0}</value>
+    <value>Sovelluksesi päivitettiin versioon {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nuevas funcionalidades y mejoras en esta versión:</value>
+    <value>Uudet toiminnot ja parannukset tässä versiossa:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recomendado</value>
+    <value>Suositeltu</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Actualizar</value>
+    <value>Päivitä</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas
-• Renombrar archivos y carpetas
-• Descargar directorios como un archivo zip
-• Seleccionar multiples archivos y carpetas
-• Anclar archivos y carpetas a la pantalla de inicio
-• Usar Windows Hello para autenticar en el inicio de la aplicación
-• Permitir certificados SSL auto firmados
-• Mostrar el tamaño del archivo en la lista
-• Manejar la activación de archivo
-• Usar la Bóveda de Contraseñas para almacerar las credenciales del usuario</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authentificate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Handle file activation
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Anclar al inicio</value>
+    <value>Pin to start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Anclar al inicio</value>
+    <value>Pin to start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Yhdistä</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de la autoridad certificadora SSL inválida o incorrecta. Tenga cuidado, no estará más protegido contra ataques de Hombre-en-medio (mitm)</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>La autoridad del certificado es inválida o incorrecta. ¿Conectarse de cualquier modo?
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
 
-¡Tenga cuidado, no estará protegido de ataques de Hombre-En-Medio (mitm)!</value>
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>¡Atención!</value>
+    <value>Huomio!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>La aplicación se debe reiniciar</value>
+    <value>Sovellus pitää käynnistää uudelleen</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Pista</value>
+    <value>Vihje</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>El servicio está temporalmente no disponible (generalmente debido a trabajo de manteimiento de corto plazo). Favor de intentar más tarde. </value>
+    <value>Palvelu on väliaikaisesti poissa käytöstä (yleensä lyhyen huoltotyön vuoksi).
+Yritä myöhemmin uudelleen.</value>
   </data>
 </root>

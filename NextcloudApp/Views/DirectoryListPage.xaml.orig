@@ -242,6 +242,9 @@
                                     <core:EventTriggerBehavior EventName="RightTapped">
                                         <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="RightTapped">
+                                        <actions:OpenMenuFlyoutAction />
+                                    </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
                                 <FlyoutBase.AttachedFlyout>
                                     <MenuFlyout>
@@ -283,6 +286,7 @@
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                         <MenuFlyoutItem 
+<<<<<<< HEAD
                                             Tag="SyncFolder"
                                             x:Uid="Synchronize"
                                             Text="Synchronize"
@@ -298,13 +302,14 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
-                                        <MenuFlyoutItem 
+=======
                                             Tag="Pin"
                                             x:Uid="PinToStart"
                                             Text="Pin to start"
                                             Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+>>>>>>> 0a2c7080892d655af32ddf54269cd2582e39f133
                                     </MenuFlyout>
                                 </FlyoutBase.AttachedFlyout>
                             </Grid>

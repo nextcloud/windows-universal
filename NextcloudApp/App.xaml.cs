@@ -23,6 +23,9 @@ using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
+using Microsoft.QueryStringDotNET;
+using Windows.UI.Notifications;
+using System.Diagnostics;
 
 namespace NextcloudApp
 {
@@ -241,6 +244,19 @@ namespace NextcloudApp
             }
         }
 
+        protected override Task OnSuspendingApplicationAsync()
+        {
+            var task = base.OnSuspendingApplicationAsync();
+            // Stop Background Sync Tasks
+            List<FolderSyncInfo> activeSyncs = SyncDbUtils.GetActiveSyncInfos();
+            foreach(var fsi in activeSyncs)
+            {
+                ToastNotificationService.ShowSyncSuspendedNotification(fsi);
+                SyncDbUtils.UnlockFolderSyncInfo(fsi);
+            }
+            return task;
+        }
+
         protected override Task OnInitializeAsync(IActivatedEventArgs args)
         {
             Container.RegisterInstance(new DialogService());
@@ -333,7 +349,35 @@ namespace NextcloudApp
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
-                        NavigationService.Navigate(requestedPage.ToString(), pageParameters?.Serialize());
+                        // Remove unnecessary notifications whenever the app is used.
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+                        PinStartPageParameters pageParameters = null;
+                        if (!string.IsNullOrEmpty(args.Arguments))
+                        {
+                            var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
+                            if (tmpResourceInfo != null)
+                            {
+                                pageParameters = new PinStartPageParameters()
+                                {
+                                    ResourceInfo = tmpResourceInfo,
+                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
+                                };
+
+                            }
+                        }
+
+                        if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+                        {
+                            NavigationService.Navigate(
+                                PageTokens.Verification.ToString(),
+                                pageParameters?.Serialize());
+                        }
+                        else
+                        {
+                            NavigationService.Navigate(
+                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
+                                pageParameters?.Serialize());
+                        }
                     }
                     else
                     {
@@ -349,6 +393,40 @@ namespace NextcloudApp
                         null);
                 }
             }
+
+            // Ensure the current window is active
+            Window.Current.Activate();
+            
+            return Task.FromResult(true);
+        }
+
+        protected override Task OnActivateApplicationAsync(IActivatedEventArgs e)
+        {
+            // Remove unnecessary notifications whenever the app is used.
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            // Handle toast activation
+            if (e is ToastNotificationActivatedEventArgs)
+            {
+                var toastActivationArgs = e as ToastNotificationActivatedEventArgs;
+                // Parse the query string
+                QueryString args = QueryString.Parse(toastActivationArgs.Argument);
+                // See what action is being requested 
+                switch (args["action"])
+                {
+                    // Nothing to do here
+                    case ToastNotificationService.SYNCACTION:
+                        NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                        break;
+                    // Open Conflict Page
+                    case ToastNotificationService.SYNCONFLICTACTION:
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
+                        NavigationService.Navigate(PageTokens.SyncConflict.ToString(), null);
+                        break;
+                }
+            }
+            // Ensure the current window is active
+            Window.Current.Activate();
+            return Task.FromResult(true);
         }
 
         private void DeviceGestureServiceOnGoBackRequested(object sender, DeviceGestureEventArgs e)
