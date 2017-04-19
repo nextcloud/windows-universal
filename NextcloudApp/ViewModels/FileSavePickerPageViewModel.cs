@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
 using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers.Provider;
 using Windows.Storage.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
 using NextcloudClient.Types;
@@ -28,6 +30,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
+        private FileSavePickerUI _fileSavePickerUI;
 
         public ICommand GroupByNameAscendingCommand { get; private set; }
         public ICommand GroupByNameDescendingCommand { get; private set; }
@@ -95,7 +98,8 @@ namespace NextcloudApp.ViewModels
             var fileSavePickerActivatedEventArgs = app?.ActivatedEventArgs as FileSavePickerActivatedEventArgs;
             if (fileSavePickerActivatedEventArgs != null)
             {
-                fileSavePickerActivatedEventArgs.FileSavePickerUI.TargetFileRequested += OnTargetFileRequested;
+                _fileSavePickerUI = fileSavePickerActivatedEventArgs.FileSavePickerUI;
+                _fileSavePickerUI.TargetFileRequested += new TypedEventHandler<FileSavePickerUI, TargetFileRequestedEventArgs>(OnTargetFileRequested);
             }
 
             var cachedFileUpdaterActivatedEventArgs = app?.ActivatedEventArgs as CachedFileUpdaterActivatedEventArgs;
@@ -113,6 +117,25 @@ namespace NextcloudApp.ViewModels
             _isNavigatingBack = false;
         }
 
+        public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState,
+            bool suspending)
+        {
+            base.OnNavigatingFrom(e, viewModelState, suspending);
+            _isNavigatingBack = true;
+            if (!suspending)
+            {
+                Directory.StopDirectoryListing();
+                Directory = null;
+                _selectedFileOrFolder = null;
+            }
+            if (_fileSavePickerUI != null)
+            {
+                _fileSavePickerUI.TargetFileRequested -=
+                    new TypedEventHandler<FileSavePickerUI, TargetFileRequestedEventArgs>(OnTargetFileRequested);
+                _fileSavePickerUI = null;
+            }
+        }
+
         private async void OnTargetFileRequested(FileSavePickerUI sender, TargetFileRequestedEventArgs args)
         {
             // Requesting a deferral allows the app to call another asynchronous method and complete the request at a later time 
@@ -120,10 +143,10 @@ namespace NextcloudApp.ViewModels
             
             // Create a temporary file
             var storageItem = await ApplicationData.Current.TemporaryFolder.CreateFileAsync(sender.FileName, CreationCollisionOption.GenerateUniqueName);
-            var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+            //var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
 
             // See: http://www.jonathanantoine.com/2013/03/25/win8-the-cached-file-updater-contract-or-how-to-make-more-useful-the-file-save-picker-contract/
-            CachedFileUpdater.SetUpdateInformation(storageItem, token, ReadActivationMode.BeforeAccess, WriteActivationMode.AfterWrite, CachedFileOptions.None);
+            CachedFileUpdater.SetUpdateInformation(storageItem, "testttt", ReadActivationMode.NotNeeded, WriteActivationMode.AfterWrite, CachedFileOptions.RequireUpdateOnAccess);
 
             args.Request.TargetFile = storageItem;
 
@@ -152,18 +175,6 @@ namespace NextcloudApp.ViewModels
         public ActivationKind ActivationKind { get; private set; }
 
         public List<string> FileTokens { get; private set; }
-
-        public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
-        {
-            _isNavigatingBack = true;
-            if (!suspending)
-            {
-                Directory.StopDirectoryListing();
-                Directory = null;
-                _selectedFileOrFolder = null;
-            }
-            base.OnNavigatingFrom(e, viewModelState, suspending);
-        }
 
         private void CancelFolderSelection()
         {
