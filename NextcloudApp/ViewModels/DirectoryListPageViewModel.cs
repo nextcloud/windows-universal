@@ -16,7 +16,7 @@ namespace NextcloudApp.ViewModels
 {
     public class DirectoryListPageViewModel : ViewModel
     {
-        private LocalSettings _settngs;
+        private LocalSettings _settings;
         private DirectoryService _directoryService;
         private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
@@ -115,12 +115,17 @@ namespace NextcloudApp.ViewModels
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             _isNavigatingBack = true;
+
             if (!suspending)
             {
+                _isNavigatingBack = true;
                 Directory.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }
+            else
+                _isNavigatingBack = false;
+
             base.OnNavigatingFrom(e, viewModelState, suspending);
         }
 
@@ -330,15 +335,15 @@ namespace NextcloudApp.ViewModels
 
         public LocalSettings Settings
         {
-            get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
+            get { return _settings; }
+            private set { SetProperty(ref _settings, value); }
         }
 
         public ResourceInfo SelectedFileOrFolder
         {
             get { return _selectedFileOrFolder; }
             set
-            {
+            {                
                 if (_isNavigatingBack)
                 {
                     return;
@@ -428,6 +433,7 @@ namespace NextcloudApp.ViewModels
             await Directory.StartDirectoryListing();
 
             HideProgressIndicator();
+            SelectedFileOrFolder = null;
         }
 
 

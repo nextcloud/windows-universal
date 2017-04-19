@@ -25,7 +25,10 @@ namespace NextcloudApp.Services
         {
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
             _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
-            GroupByNameAscending();
+
+            // Arrange for the first time, so that the collections get filled.
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -54,76 +57,117 @@ namespace NextcloudApp.Services
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
 
+        private void SortList()
+        {
+            switch (SettingsService.Instance.LocalSettings.GroupMode)
+            {
+                case GroupMode.GroupByNameAscending:
+                    GroupByNameAscending();
+                    break;
+                case GroupMode.GroupByNameDescending:
+                    GroupByNameDescending();
+                    break;
+                case GroupMode.GroupByDateAscending:
+                    GroupByDateAscending();
+                    break;
+                case GroupMode.GroupByDateDescending:
+                    GroupByDateDescending();
+                    break;
+                case GroupMode.GroupBySizeAscending:
+                    GroupBySizeAscending();
+                    break;
+                case GroupMode.GroupBySizeDescending:
+                    GroupBySizeDescending();
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void GroupByNameAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
-            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
         }
 
         public void GroupByNameDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
-            _groupedFolders.ArrangeItems(new NameSorter(SortMode.Desc), x => x.Name.First().ToString().ToUpper());
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
         }
 
         public void GroupByDateAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
-            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
         }
 
         public void GroupByDateDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
-            _groupedFolders.ArrangeItems(new DateSorter(SortMode.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFilesAndFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
+            _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
         }
 
         public void GroupBySizeAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
-            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Asc), GetSizeHeader);
+            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
         }
 
         public void GroupBySizeDescending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
-            _groupedFolders.ArrangeItems(new SizeSorter(SortMode.Desc), GetSizeHeader);
+            _groupedFilesAndFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
+            _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
             OnPropertyChanged(nameof(GroupedFilesAndFolders));
             OnPropertyChanged(nameof(GroupedFolders));
             IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
         private static string GetSizeHeader(ResourceInfo fileOrFolder)
         {
-            var size = fileOrFolder.Size;
-            string[] sizes = { "B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
-            var order = 0;
-            while (size >= 1024 && ++order < sizes.Length)
+            var sizeMb = fileOrFolder.Size / 1024f / 1024f;
+
+            long[] sizesValuesMb = { 1, 5, 10, 25, 50, 100, 250, 500, 1024, 5120, 10240, 102400, 1048576 };
+            string[] sizesDisplay = { "<1MB", ">1MB", ">5MB", ">10MB", ">25MB", ">50MB", ">100MB", ">250MB", ">500MB", ">1GB", ">5GB", ">10GB", ">100GB", ">1TB" };
+
+            var index = 0;
+
+            for (int i = 0; i < sizesValuesMb.Length; i++)
             {
-                size = size / 1024;
+                if (sizeMb > sizesValuesMb[i])
+                    index++;
+                else
+                    break;
             }
-            return sizes[order];
+
+            return sizesDisplay[index];
         }
 
         public async Task Refresh()
@@ -133,11 +177,15 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
+            await StartDirectoryListing(null);
+        }
+
+        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
+        {
             var client = await ClientService.GetClient();
+
             if (client == null)
-            {
                 return;
-            }
 
             _continueListing = true;
 
@@ -155,11 +203,16 @@ namespace NextcloudApp.Services
 
             FilesAndFolders.Clear();
             Folders.Clear();
+
             if (list != null)
             {
                 foreach (var item in list)
                 {
+                    if (resourceInfoToExclude != null && item == resourceInfoToExclude)
+                        continue;
+
                     FilesAndFolders.Add(new FileOrFolder(item));
+
                     if (item.IsDirectory())
                     {
                         Folders.Add(new FileOrFolder(item));
@@ -185,6 +238,8 @@ namespace NextcloudApp.Services
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            SortList();
         }
 
         private async void DownloadPreviewImages()

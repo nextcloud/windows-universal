@@ -7,9 +7,9 @@ namespace NextcloudApp.Utils
 {
     public class NameSorter : Comparer<FileOrFolder>
     {
-        private readonly SortMode _sortMode;
+        private readonly SortSequence _sortMode;
 
-        public NameSorter(SortMode sortMode)
+        public NameSorter(SortSequence sortMode)
         {
             _sortMode = sortMode;
         }
@@ -17,7 +17,7 @@ namespace NextcloudApp.Utils
         public override int Compare(FileOrFolder x, FileOrFolder y)
         {
             int result;
-            if (_sortMode == SortMode.Asc)
+            if (_sortMode == SortSequence.Asc)
             {
                 result = x.Name.First().CompareTo(y.Name.First());
 

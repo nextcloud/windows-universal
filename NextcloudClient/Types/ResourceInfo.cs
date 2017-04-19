@@ -101,6 +101,50 @@ namespace NextcloudClient.Types
 	    {
 	        return JsonConvert.SerializeObject(this);
 	    }
-	}
+
+        #region Equals
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            var other = obj as ResourceInfo;
+            return this.Equals(other);
+        }
+
+        public bool Equals(ResourceInfo other)
+        {
+            if (other == null)
+                return false;
+
+            return this.GetHashCode() == other.GetHashCode();
+        }
+
+        public static bool operator ==(ResourceInfo a, ResourceInfo b)
+        {
+            if (System.Object.ReferenceEquals(a, b))
+                return true;
+
+            if (((object)a == null) || ((object)b == null))
+                return false;
+
+            return a.GetHashCode() == b.GetHashCode();
+        }
+
+        public static bool operator !=(ResourceInfo a, ResourceInfo b)
+        {
+            return !(a == b);
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = this.ContentType.GetHashCode() ^ this.Created.GetHashCode() ^ this.ETag.GetHashCode() ^ this.LastModified.GetHashCode() ^ this.Name.GetHashCode() 
+                ^ this.Path.GetHashCode() ^ this.Size.GetHashCode();
+            return hashCode;
+        }
+
+        #endregion Equals
+    }
 }
 
