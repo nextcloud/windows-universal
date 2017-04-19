@@ -314,11 +314,16 @@ namespace NextcloudApp.Services
         [NotifyPropertyChangedInvocator]
         protected virtual async void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            /*
             await Task.Factory.StartNew(() =>
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }, CancellationToken.None, TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-                TaskScheduler.Default).ConfigureAwait(false);
+            }, 
+            CancellationToken.None, 
+            TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+            TaskScheduler.Default).ConfigureAwait(false);
+            */
         }
 
         public void StopDirectoryListing()

@@ -172,16 +172,22 @@ namespace NextcloudApp.ViewModels
                     });
 
                     // this moves the OpenReadAsync off of the UI thread and works fine...
-                    var stream =
-                        await
-                            Task.Factory.StartNew(async () => await localFile.OpenReadAsync(), CancellationToken.None,
+                    using (
+                        var stream = (
+                            await Task.Factory.StartNew(
+                                async () => await localFile.OpenReadAsync(),
+                                CancellationToken.None,
                                 TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-                                TaskScheduler.Default).ConfigureAwait(false);
+                                TaskScheduler.Default
+                            ).ConfigureAwait(false)
+                        ).Result
+                    )
+                    {
+                        var targetStream = stream.AsStreamForRead();
 
                         IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
-                    await
-                        client.Upload(ResourceInfo.Path + localFile.Name, stream.Result, localFile.ContentType, _cts,
-                            progress);
+                        await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                    }
                 }
                 catch (ResponseError e2)
                 {

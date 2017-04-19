@@ -12,6 +12,7 @@
         MoveFileOrFolder,
         Verification,
         ShareTarget,
-        FileSavePicker
+        FileSavePicker,
+        SyncConflict
     }
 }

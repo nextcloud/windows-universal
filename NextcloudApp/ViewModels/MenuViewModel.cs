@@ -66,8 +66,8 @@ namespace NextcloudApp.ViewModels
                     DisplayName = resourceLoader.GetString("SynchronizationConflicts/Header"),
                     FontIcon = "\uEA6A",
                     Command = new DelegateCommand(
-                        () => NavigateToPage(PageTokens.SyncConflict),
-                        () => CanNavigateToPage(PageTokens.SyncConflict)
+                        () => NavigateToPage(PageToken.SyncConflict),
+                        () => CanNavigateToPage(PageToken.SyncConflict)
                     )
                 },
             };
