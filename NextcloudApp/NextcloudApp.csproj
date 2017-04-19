@@ -177,7 +177,6 @@
     <Compile Include="Utils\DateSorter.cs" />
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
-    <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\SyncDbUtils.cs" />
     <Compile Include="Utils\GroupMode.cs" />
     <Compile Include="Utils\SortSequence.cs" />
