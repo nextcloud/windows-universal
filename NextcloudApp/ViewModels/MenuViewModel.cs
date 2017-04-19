@@ -61,6 +61,15 @@ namespace NextcloudApp.ViewModels
                         () => CanNavigateToPage(PageTokens.Settings)
                     )
                 },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SynchronizationConflicts/Header"),
+                    FontIcon = "\uEA6A",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageTokens.SyncConflict),
+                        () => CanNavigateToPage(PageTokens.SyncConflict)
+                    )
+                },
             };
             
             SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>

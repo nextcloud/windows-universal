@@ -32,5 +32,8 @@
     <Capability Name="internetClient" />
     <Capability Name="privateNetworkClientServer" />
     <uap:Capability Name="picturesLibrary" />
+    <uap:Capability Name="videosLibrary" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="musicLibrary" />
   </Capabilities>
 </Package>
