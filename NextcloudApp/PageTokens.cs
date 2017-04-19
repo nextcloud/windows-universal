@@ -10,6 +10,7 @@
         BulkFileDownload,
         FileUpload,
         MoveFileOrFolder,
-        Verification
+        Verification,
+        SyncConflict
     }
 }

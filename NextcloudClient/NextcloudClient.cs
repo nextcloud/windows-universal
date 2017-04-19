@@ -212,7 +212,8 @@ namespace NextcloudClient
         /// </summary>
         /// <returns>The resource info.</returns>
         /// <param name="path">remote Path.</param>
-        public async Task<ResourceInfo> GetResourceInfo(string path)
+        /// <param name="name">name of resource to get</param>
+        public async Task<ResourceInfo> GetResourceInfo(string path, string name)
         {
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
@@ -223,25 +224,31 @@ namespace NextcloudClient
             {
                 return null;
             }
-            var item = result[0];
-            var res = new ResourceInfo
+            foreach (var item in result)
             {
-                ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                Created = item.CreationDate,
-                ETag = item.ETag,
-                LastModified = item.LastModified,
-                Name = System.Net.WebUtility.UrlDecode(item.Name),
-                QuotaAvailable = item.QuotaAvailableBytes,
-                QuotaUsed = item.QuotaUsedBytes,
-                Size = item.ContentLength,
-                Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
-            };
-            if (!res.ContentType.Equals("dav/directory"))
-            {
-                // if resource not a directory, remove the file name from remote path.
-                res.Path = res.Path.Replace("/" + res.Name, "");
+                if (item.Name.Equals(name))
+                {
+                    var res = new ResourceInfo
+                    {
+                        ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
+                        Created = item.CreationDate,
+                        ETag = item.ETag,
+                        LastModified = item.LastModified,
+                        Name = System.Net.WebUtility.UrlDecode(item.Name),
+                        QuotaAvailable = item.QuotaAvailableBytes,
+                        QuotaUsed = item.QuotaUsedBytes,
+                        Size = item.ContentLength,
+                        Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
+                    };
+                    if (!res.ContentType.Equals("dav/directory"))
+                    {
+                        // if resource not a directory, remove the file name from remote path.
+                        res.Path = res.Path.Replace("/" + res.Name, "");
+                    }
+                    return res;
+                }
             }
-            return res;
+            return null;
         }
 
         /// <summary>
