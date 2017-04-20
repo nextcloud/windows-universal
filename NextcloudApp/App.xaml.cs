@@ -9,11 +9,8 @@ using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
-using Windows.Foundation;
 using Windows.Security.Credentials;
-using Windows.Storage;
 using Windows.Storage.AccessCache;
-using Windows.Storage.Pickers.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
@@ -25,7 +22,6 @@ using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 using Microsoft.QueryStringDotNET;
 using Windows.UI.Notifications;
-using System.Diagnostics;
 
 namespace NextcloudApp
 {
@@ -167,17 +163,19 @@ namespace NextcloudApp
             OnActivated(args);
         }
 
-        protected override void OnFileSavePickerActivated(FileSavePickerActivatedEventArgs args)
-        {
-            base.OnFileSavePickerActivated(args);
-            OnActivated(args);
-        }
+        //TODO: Find out, why this is not working on WP10
+        //SEE: https://github.com/nextcloud/windows-universal/issues/32
+        //protected override void OnFileSavePickerActivated(FileSavePickerActivatedEventArgs args)
+        //{
+        //    base.OnFileSavePickerActivated(args);
+        //    OnActivated(args);
+        //}
 
-        protected override void OnCachedFileUpdaterActivated(CachedFileUpdaterActivatedEventArgs args)
-        {
-            base.OnCachedFileUpdaterActivated(args);
-            OnActivated(args);
-        }
+        //protected override void OnCachedFileUpdaterActivated(CachedFileUpdaterActivatedEventArgs args)
+        //{
+        //    base.OnCachedFileUpdaterActivated(args);
+        //    OnActivated(args);
+        //}
 
         protected override void OnFileActivated(FileActivatedEventArgs args)
         {
