@@ -1,6 +1,6 @@
 [main]
 host = https://www.transifex.com
-lang_map = ja_JP: ja, de_DE: de-DE, hu_HU: hu-HU, pt_PR: pt-PR, pt_PT: pt-PT, nb_NO: nb-NO, lt_LT: lt-LT, ms_MY: ms-MY, nn_NO: nn-NO, sl_SK: sl-SK, sk_SK: sk-SK, es_AR: es-AR, es_CL: es-CL
+lang_map = bg_BG: bg-BG, ja_JP: ja, cs_CZ: cs-CZ, de_DE: de-DE, hu_HU: hu-HU, pt_PR: pt-PR, pt_PT: pt-PT, nb_NO: nb-NO, lt_LT: lt-LT, ms_MY: ms-MY, nn_NO: nn-NO, sl_SK: sl-SK, sk_SK: sk-SK, es_AR: es-AR, es_CL: es-CL, es_MX: es-MX, fi_FI: fi-FI, hu_HU: hu-HU, pt_BR: pt-BR, zh_CN: zh-CN
 
 [nextcloud.windows-universal]
 file_filter = <lang>/Resources.resw

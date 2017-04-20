@@ -98,6 +98,7 @@
     </Content>
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
+    <None Include="Strings\.tx\config" />
     <PRIResource Include="Strings\sv\Resources.resw" />
     <PRIResource Include="Strings\sq\Resources.resw" />
     <PRIResource Include="Strings\pt_BR\Resources.resw" />
