@@ -147,6 +147,9 @@
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Aktualisieren</value>
   </data>
+  <data name="AppBarSelect.Label" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Sortieren</value>
   </data>
@@ -295,6 +298,12 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Ausgewählte Dateien löschen</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie die Ausgewählten Dateien ({0}) löschen möchten?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>

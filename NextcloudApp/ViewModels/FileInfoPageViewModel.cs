@@ -53,11 +53,11 @@ namespace NextcloudApp.ViewModels
             //dataTransferManager.DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(ShareImageHandler);
             DownloadCommand = new DelegateCommand(() =>
             {
-                var parameters = new SingleFileDownloadPageParameters
+                var parameters = new FileDownloadPageParameters
                 {
                     ResourceInfo = ResourceInfo
                 };
-                _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
+                _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
             });
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);

@@ -53,6 +53,8 @@ namespace NextcloudApp.Services
         private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
         private bool _isSorting;
         private bool _continueListing;
+        private bool _isSelecting;
+        private string _selectionMode;
 
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
@@ -150,6 +152,11 @@ namespace NextcloudApp.Services
             SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
+        public void ToggleSelectionMode()
+        {
+            IsSelecting = IsSelecting ? false : true;
+        }
+
         private static string GetSizeHeader(ResourceInfo fileOrFolder)
         {
             var sizeMb = fileOrFolder.Size / 1024f / 1024f;
@@ -183,8 +190,8 @@ namespace NextcloudApp.Services
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
         {
             var client = await ClientService.GetClient();
-
-            if (client == null)
+            if (client == null || IsSelecting)
+            {
                 return;
 
             _continueListing = true;
@@ -313,6 +320,7 @@ namespace NextcloudApp.Services
                     return;
                 }
                 _isSorting = value;
+                SelectionMode = _isSorting ? "None" : "Single";
                 OnPropertyChanged();
             }
         }
@@ -330,6 +338,37 @@ namespace NextcloudApp.Services
                 OnPropertyChanged();
             }
         }
+
+        public bool IsSelecting
+        {
+            get { return _isSelecting; }
+            set
+            {
+                if (_isSelecting == value)
+                {
+                    return;
+                }
+                _isSelecting = value;
+                SelectionMode = _isSelecting ? "Multiple" : "Single";
+                OnPropertyChanged();
+            }
+        }
+
+        public string SelectionMode
+        {
+            get { return _selectionMode; }
+            set
+            {
+                if (_selectionMode == value)
+                {
+                    return;
+                }
+                _selectionMode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
         public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
@@ -390,6 +429,29 @@ namespace NextcloudApp.Services
             var success = await client.Delete(path);
             await StartDirectoryListing();
             return success;
+        }
+
+        public async Task<bool> DeleteSelected(List<ResourceInfo> resourceInfos)
+        {
+            var client = await ClientService.GetClient();
+            if (client == null)
+            {
+                return false;
+            }
+
+            foreach (var resourceInfo in resourceInfos)
+            {
+                var path = resourceInfo.ContentType.Equals("dav/directory")
+                ? resourceInfo.Path
+                : resourceInfo.Path + "/" + resourceInfo.Name;
+                var success = await client.Delete(path);
+                if (!success)
+                {
+                    return success;
+                }
+            }
+            await StartDirectoryListing();
+            return true;
         }
 
         public async Task<bool> Rename(string oldName, string newName)
