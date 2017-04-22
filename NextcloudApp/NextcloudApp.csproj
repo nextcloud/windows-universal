@@ -101,7 +101,6 @@
     <None Include="Strings\.tx\config" />
     <PRIResource Include="Strings\cs-CZ\Resources.resw" />
     <PRIResource Include="Strings\ca\Resources.resw" />
-    <PRIResource Include="Strings\bg-BG\Resources.resw" />
     <PRIResource Include="Strings\zh-CN\Resources.resw" />
     <PRIResource Include="Strings\tr\Resources.resw" />
     <PRIResource Include="Strings\pt-BR\Resources.resw" />
@@ -151,6 +150,7 @@
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
+    <Compile Include="Models\ShareTargetPageParameters.cs" />
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
     <Compile Include="Services\ClientService.cs" />
@@ -338,6 +338,7 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="SampleData\" />
+    <Folder Include="Strings\bg-BG\" />
     <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>
