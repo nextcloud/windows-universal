@@ -202,7 +202,7 @@ namespace NextcloudApp.ViewModels
             var vault = new PasswordVault();
             vault.Add(new PasswordCredential(ServerAddress, Username, Password));
 
-            _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+            _navigationService.Navigate(PageToken.DirectoryList.ToString(), null);
         }
 
         private async Task<bool> CheckAndFixServerAddress()

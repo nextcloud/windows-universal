@@ -159,7 +159,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = resourceInfo
             };
-            _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileDownload.ToString(), parameters.Serialize());
         }
 
         private void DownloadSelected(object parameter)
@@ -188,7 +188,7 @@ namespace NextcloudApp.ViewModels
                     };
                 }
                 Directory.ToggleSelectionMode();
-                _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
+                _navigationService.Navigate(PageToken.FileDownload.ToString(), parameters.Serialize());
             }
         }
 
@@ -203,7 +203,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = resourceInfo
             };
-            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
         private async void SynchronizeFolder(object parameter)
         {
@@ -363,7 +363,7 @@ namespace NextcloudApp.ViewModels
                     };
                 }
                 Directory.ToggleSelectionMode();
-                _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+                _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
             }
         }
 
@@ -462,7 +462,7 @@ namespace NextcloudApp.ViewModels
                     ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
                     : new ResourceInfo()
             };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
         }
 
         private void UploadPhotos()
@@ -474,7 +474,7 @@ namespace NextcloudApp.ViewModels
                     : new ResourceInfo(),
                 PickerLocationId = PickerLocationId.PicturesLibrary
             };
-            _navigationService.Navigate(PageTokens.FileUpload.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
         }
 
         private async void CreateDirectory()
@@ -644,7 +644,7 @@ namespace NextcloudApp.ViewModels
                     {
                         ResourceInfo = value
                     };
-                    _navigationService.Navigate(PageTokens.FileInfo.ToString(), parameters.Serialize());
+                    _navigationService.Navigate(PageToken.FileInfo.ToString(), parameters.Serialize());
                 }
             }
         }
