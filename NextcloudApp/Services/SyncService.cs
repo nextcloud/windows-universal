@@ -9,7 +9,6 @@ using NextcloudApp.Models;
 using Windows.Storage.FileProperties;
 using NextcloudApp.Utils;
 using System.Threading;
-using Windows.Web.Http;
 using System.Diagnostics;
 using DecaTec.WebDav;
 using Windows.Storage;
@@ -293,7 +292,7 @@ namespace NextcloudApp.Services
                         Debug.WriteLine("Sync file (Upload)" + newPath);
                         sid.DateModified = currentModified;
                         sid.FilePath = file.Path;
-                        if (await uploadFile(file, newPath))
+                        if (await UploadFile(file, newPath))
                         {
                             ResourceInfo newInfo = await client.GetResourceInfo(parent.Path, file.Name);
                             sid.Path = newInfo.Path + "/" + newInfo.Name;
@@ -309,7 +308,7 @@ namespace NextcloudApp.Services
                         // Create sid and download file
                         StorageFile localFile = await parentFolder.CreateFileAsync(info.Name);
                         Debug.WriteLine("Sync file (Download)" + localFile.Path);
-                        if (await this.downloadFile(localFile, info.Path + "/" + info.Name))
+                        if (await this.DownloadFile(localFile, info.Path + "/" + info.Name))
                         {
                             BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
                             currentModified = basicProperties.DateModified;
@@ -345,7 +344,7 @@ namespace NextcloudApp.Services
                                     Debug.WriteLine("Sync file (Upload)" + newPath);
                                     sid.DateModified = currentModified;
                                     sid.FilePath = file.Path;
-                                    if (await uploadFile(file, newPath))
+                                    if (await UploadFile(file, newPath))
                                     {
                                         ResourceInfo newInfo = await client.GetResourceInfo(parent.Path, file.Name);
                                         sid.Path = newInfo.Path + "/" + newInfo.Name;
@@ -399,7 +398,7 @@ namespace NextcloudApp.Services
                                     // Update local file
                                     StorageFile localFile = await parentFolder.CreateFileAsync(info.Name);
                                     Debug.WriteLine("Sync file (Download)" + localFile.Path);
-                                    if(await this.downloadFile(localFile, info.Path + "/" + info.Name)) { 
+                                    if(await this.DownloadFile(localFile, info.Path + "/" + info.Name)) { 
                                         BasicProperties basicProperties = await localFile.GetBasicPropertiesAsync();
                                         currentModified = basicProperties.DateModified;
                                         sid.ETag = info.ETag;
@@ -427,7 +426,7 @@ namespace NextcloudApp.Services
                             {
                                 // Update local file
                                 Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
-                                if(await this.downloadFile(file, info.Path + "/" + info.Name)) { 
+                                if(await this.DownloadFile(file, info.Path + "/" + info.Name)) { 
                                     sid.ETag = info.ETag;
                                     sid.DateModified = currentModified;
                                     changed = true;
@@ -442,7 +441,7 @@ namespace NextcloudApp.Services
                             // update file on nextcloud
                             Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
                             
-                            if (await uploadFile(file, info.Path + "/" + info.Name))
+                            if (await UploadFile(file, info.Path + "/" + info.Name))
                             {
                                 ResourceInfo newInfo = await client.GetResourceInfo(info.Path, info.Name);
                                 sid.ETag = newInfo.ETag;
@@ -461,7 +460,7 @@ namespace NextcloudApp.Services
                                     // update file on nextcloud
                                     Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
                                    
-                                    if (await uploadFile(file, info.Path + "/" + info.Name))
+                                    if (await UploadFile(file, info.Path + "/" + info.Name))
                                     {
                                         ResourceInfo newInfo = await client.GetResourceInfo(info.Path, info.Name);
                                         sid.ETag = newInfo.ETag;
@@ -477,7 +476,7 @@ namespace NextcloudApp.Services
                                 case ConflictSolution.PREFER_REMOTE:
                                     // Update local file
                                     Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
-                                    if (await this.downloadFile(file, info.Path + "/" + info.Name))
+                                    if (await this.DownloadFile(file, info.Path + "/" + info.Name))
                                     {
                                         sid.ETag = info.ETag;
                                         sid.DateModified = currentModified;
@@ -524,7 +523,7 @@ namespace NextcloudApp.Services
             // progress
         }
 
-        private async Task<bool> uploadFile(StorageFile localFile, string path)
+        private async Task<bool> UploadFile(StorageFile localFile, string path)
         {
             bool result = false;
             var _cts = new CancellationTokenSource();
@@ -554,7 +553,7 @@ namespace NextcloudApp.Services
             return result;
         }
 
-        private async Task<bool> downloadFile(StorageFile localFile, string path)
+        private async Task<bool> DownloadFile(StorageFile localFile, string path)
         {
             bool result = false;
             CachedFileManager.DeferUpdates(localFile);

@@ -438,10 +438,10 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Ignora certificati SSL auto-firmati non validi. Ciò consente di utilizzare autorità di certificazione non valide o non corrette. Fai attenzione, non sarai più protetto da attacchi Man-in-the-middle (mitm)!</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
+    <value>Conflitti di sincronizzazione</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Sincronizza</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Prefer local file</value>
@@ -464,13 +464,13 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Suggerimento</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
+    <value>Errori di sincronizzazione</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Attenzione ai conflitti!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
@@ -495,7 +495,7 @@ Riprova più tardi.</value>
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Conflitto:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -514,5 +514,8 @@ Riprova più tardi.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronization suspended</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
   </data>
 </root>

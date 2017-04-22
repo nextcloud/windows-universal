@@ -8,6 +8,7 @@ using NextcloudClient.Types;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
+using System.Threading.Tasks;
 
 namespace NextcloudApp.ViewModels
 {
@@ -30,6 +31,7 @@ namespace NextcloudApp.ViewModels
         public ICommand GroupBySizeDescendingCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
         public ICommand CreateDirectoryCommand { get; private set; }
+        public ICommand SelectToggleCommand { get; private set; }
         public object CancelFolderSelectionCommand { get; private set; }
         public object MoveToSelectedFolderCommand { get; private set; }
 
@@ -75,6 +77,10 @@ namespace NextcloudApp.ViewModels
                 await Directory.Refresh();
                 HideProgressIndicator();
             });
+            SelectToggleCommand = new DelegateCommand(() =>
+            {
+                Directory.ToggleSelectionMode();
+            });
             CreateDirectoryCommand = new DelegateCommand(CreateDirectory);
             MoveToSelectedFolderCommand = new DelegateCommand(MoveToSelectedFolder);
             CancelFolderSelectionCommand = new DelegateCommand(CancelFolderSelection);
@@ -84,19 +90,31 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
             base.OnNavigatedTo(e, viewModelState);
+            ResourceInfo = null;
+            ResourceInfos = null;
             var parameters = MoveFileOrFolderPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
-            if (resourceInfo == null)
+            var resourceInfos = parameters?.ResourceInfos;
+            if (resourceInfo != null)
+            {
+                ResourceInfo = resourceInfo;
+            }
+            else if (resourceInfos != null)
+            {
+                ResourceInfos = resourceInfos;
+            }
+            else
             {
                 return;
             }
-            ResourceInfo = resourceInfo;
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
         }
 
         public ResourceInfo ResourceInfo { get; private set; }
+
+        public List<ResourceInfo> ResourceInfos { get; private set; }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
@@ -125,27 +143,40 @@ namespace NextcloudApp.ViewModels
             var currentFolderResourceInfo = Directory.PathStack.Count > 0
                 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
                 : new ResourceInfo();
+            if (ResourceInfo != null)
+            {
+                await Move(ResourceInfo, currentFolderResourceInfo);
+            }
+            else if (ResourceInfos != null)
+            {
+                foreach (var resInfo in ResourceInfos)
+                {
+                    await Move(resInfo, currentFolderResourceInfo);
+                }
+            }
 
-            var oldPath = string.IsNullOrEmpty(ResourceInfo.Path) ? "/" : ResourceInfo.Path;
+            HideProgressIndicator();
+
+            _navigationService.GoBack();
+        }
+
+        private async Task Move(ResourceInfo resInfo, ResourceInfo currentFolderResourceInfo)
+        {
+            var oldPath = string.IsNullOrEmpty(resInfo.Path) ? "/" : resInfo.Path;
             oldPath = oldPath.TrimEnd('/');
 
-            if (!ResourceInfo.ContentType.Equals("dav/directory"))
+            if (!resInfo.ContentType.Equals("dav/directory"))
             {
-                oldPath = oldPath + "/" + ResourceInfo.Name;
+                oldPath = oldPath + "/" + resInfo.Name;
             }
 
             var newPath = string.IsNullOrEmpty(currentFolderResourceInfo.Path) ? "/" : currentFolderResourceInfo.Path;
             newPath = newPath.TrimEnd('/');
-            newPath = newPath + "/" + ResourceInfo.Name;
+            newPath = newPath + "/" + resInfo.Name;
 
             var success = await Directory.Move(oldPath, newPath);
 
-            HideProgressIndicator();
-
-            if (success)
-            {
-                _navigationService.GoBack();
-            }
+            return;
         }
 
         private async void CreateDirectory()
@@ -302,6 +333,15 @@ namespace NextcloudApp.ViewModels
         {
             ShowProgressIndicator();
 
+            if (ResourceInfo != null)
+            {
+                Directory.RemoveResourceInfos = new List<ResourceInfo> { ResourceInfo };
+            }
+            else if (ResourceInfos != null)
+            {
+                Directory.RemoveResourceInfos = ResourceInfos;
+            }
+               
             // The folder to move should not be set as target.
             await Directory.StartDirectoryListing(ResourceInfo);
 

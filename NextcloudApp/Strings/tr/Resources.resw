@@ -411,19 +411,19 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dosya ve klasörleri taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Listede klasör boyutunu görüntüleme
+• Dosya etkinleştirmeyi işleme
+• Kullanıcı bilgilerini saklamak için PasswordVault kullanımı
+• Güvenlik geliştirmeleri ve hata ayıklamaları
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
@@ -438,16 +438,16 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
+    <value>Eşitleme Çakışmaları</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Eşitle</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Yerel dosya korunsun</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Uzak dosya korunsun</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Sertifika yayıncısı geçersiz ya da hatalı. Gene de bağlantı kurulsun mu?
@@ -464,55 +464,58 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
     <value>İpucu</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
+    <value>Eşitleme Sorunları</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Çakışmalara dikkat edin!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Uzak ve yerel klasörler boş değil. Bu durum hangi dosyaların doğru olduğu bilinemeyeceğinden pek çok çakışmaya yol açabilir.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Eşitleme başlatıldı!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Eşitleme art alanda yürütülecek ve işlemin tamamlandığı bildirilecek.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Hizmet geçici olarak kullanılamıyor (genellikle kısa süreli bakım çalışmaları nedeniyle).
 Lütfen bir süre sonra yeniden deneyin.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>Dosya hem yerel hem uzak klasörde değiştirilmiş. Hangisi korunsun?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Dosya hem yerel hem uzak klasörde oluşturulmuş. Hangisi korunsun?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Dosya yerel klasörden silinmiş ve uzak klasörde değiştirilmiş. Hangisi korunsun?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Çakışma</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Dosya uzak klasörden silinmiş ve yerel klasörde değiştirilmiş. Hangisi korunsun?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>{0} klasörünün eşitlenmesi {1} değişiklik ve {2} çakışma sorunu ile tamamlandı.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>{0} klasörünün eşitlenmesi {1} değişiklik ile tamamlandı.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>Eşitleme tamamlandı</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Uygulama duraklatıldığından {0} klasörünün eşitlenmesi durduruldu.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Eşitleme duraklatıldı</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Dosyaların yüklenmesini istediğiniz klasörü seçin.</value>
   </data>
 </root>

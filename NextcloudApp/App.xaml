@@ -18,7 +18,7 @@
             <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
             <converter:EmptyPathToSlashConverter x:Key="EmptyPathToSlashConverter"/>
             <converter:AddSlashToPathConverter x:Key="AddSlashToPathConverter"/>
-            <converter:IsSortingToSelectionModeConverter x:Key="IsSortingToSelectionModeConverter"/>
+            <converter:IsSelectingToVisibilityConverter x:Key="IsSelectingToVisibilityConverter"/>
             <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
             <converter:IsFolderSyncedConverter x:Key="IsFolderSyncedConverter"/>
             <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>

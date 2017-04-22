@@ -118,404 +118,403 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Все файлы</value>
+    <value>Todos os arquivos</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Всегда</value>
+    <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Произошла ошибка.</value>
+    <value>Ocorreu um erro</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Добавить</value>
+    <value>Adicionar</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Создать каталог</value>
+    <value>Criar uma pasta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Сделать фотографию</value>
+    <value>Tirar uma foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Загрузить файлы</value>
+    <value>Enviar arquivos</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Загрузить фотографии</value>
+    <value>Enviar fotos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Скачать</value>
+    <value>Baixar</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Обновить</value>
+    <value>Atualizar</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Сортировка</value>
+    <value>Ordenar</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Дата (по возрастанию)</value>
+    <value>Data (mais antiga no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Дата (по убыванию)</value>
+    <value>Data (mais recente no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Имя (по возрастанию)</value>
+    <value>Nome (A no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Имя (по убыванию)</value>
+    <value>Nome (Z no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Размер (по возрастанию)</value>
+    <value>Tamanho (menor no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Размер (по убыванию)</value>
+    <value>Tamanho (maior no topo)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Ошибка приложения</value>
+    <value>Erro de aplicação</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Приложение столкнулось с проблемой. Мы сожалеем за причиненные неудобства. Информация, с которой вы работали в момент возникновения ошибки, потеряна.
-
-Хотели бы вы сообщить разработчикам приложения об ошибке и отправить подготовленный отчёт? Это поможет устранить проблему быстрее.</value>
+    <value>O aplicativo encontrou um problema. Pedimos desculpas pela inconveniência. Se você estava no meio de algo, a informação na qual estava trabalhando foi perdida.
+Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de erro? Isso ajuda a eliminar o problema mais rapidamente.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Отмена</value>
+    <value>Cancelar</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Невозможно создать каталог</value>
+    <value>Não foi possível criar pasta</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Подключиться</value>
+    <value>Conectar</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Тип содержимого</value>
+    <value>Tipo-de-Conteudo</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Создать</value>
+    <value>Criar</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Создан</value>
+    <value>Criado</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Создать новый каталог</value>
+    <value>Criar uma nova pasta</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Скачивание файла...</value>
+    <value>Baixando o arquivo...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Скачать миниатюры изображений</value>
+    <value>Baixar imagens de visualização</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETag</value>
+    <value>ETiqueta</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} байт)</value>
+    <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Имя каталога</value>
+    <value>Nome da pasta</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Информация</value>
+    <value>Informação</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Изменён</value>
+    <value>Última modificação</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Имя</value>
+    <value>Nome</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Никогда</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Новый каталог</value>
+    <value>Nova pasta</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Нет</value>
+    <value>Não</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Не авторизован</value>
+    <value>Não autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Сервер вернул ошибку 401 (Неавторизован). Пожалуйста, войдите снова.</value>
+    <value>O servidor retornou um código de erro 401 (não autorizado). Por favor faça login novamente.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>ОК</value>
+    <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Пароль</value>
+    <value>Senha</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Путь</value>
+    <value>Caminho</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>использовано {0} из {1}</value>
+    <value>{0} de {1} usado</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Сбросить настройки приложения</value>
+    <value>Reiniciar este aplicativo</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Повторить</value>
+    <value>Tentar novamente</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Адрес сервера</value>
+    <value>Endereço do servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Настройки</value>
+    <value>Configurações</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Настройки</value>
+    <value>Configurações</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Отображать группированный список файлов и папок</value>
+    <value>Mostrar lista agrupada de arquivos e pastas</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Размер</value>
+    <value>Tamanho</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Уже существует элемент с таким именем. Пожалуйста, укажите другое имя.</value>
+    <value>Já existe um elemento com este nome. Por favor, indique um nome diferente.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Тип</value>
+    <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Имя пользователя</value>
+    <value>Nome de Usuário</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Версия {0}</value>
+    <value>Versão {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Только при подключенном Wi-Fi</value>
+    <value>Somente quando estou no Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Да</value>
+    <value>Sim</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Удалить</value>
+    <value>Excluir</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Удалить файл</value>
+    <value>Excluir arquivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Вы уверены что хотите удалить файл {0}?</value>
+    <value>Tem certeza de que deseja excluir o arquivo {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Удалить каталог</value>
+    <value>Excluir pasta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Вы уверены что хотите удалить каталог {0}?</value>
+    <value>Tem certeza de que deseja excluir a pasta {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} из {1} загружено</value>
+    <value>{0} de {1} enviados</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Загрузка файлов {0} из {1}…</value>
+    <value>Enviando arquivo {0} de {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Загрузка файла...</value>
+    <value>Enviando o arquivo...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} из {1} скачано</value>
+    <value>{0} de {1} baixados</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>На сервере включен режим обслуживания.</value>
+    <value>O modo de manutenção está ativado no servidor.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Неверное имя пользователя или пароль</value>
+    <value>Nome de usuário ou senha incorreto.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Версия клиента {0}</value>
+    <value>Versão do cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Не удается определить имя или адрес сервера.</value>
+    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Версия сервера {0}</value>
+    <value>Versão do servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Удалить</value>
+    <value>Excluir</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>ожидание ответа сервера</value>
+    <value>aguardando resposta do servidor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Пожалуйста, выберите имя</value>
+    <value>Por favor escolha um novo nome</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Переименовать</value>
+    <value>Renomear</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Переименовать</value>
+    <value>Renomear</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Переименовать</value>
+    <value>Renomear</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Переместить в</value>
+    <value>Mover para</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Переместить в</value>
+    <value>Mover para</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Отмена</value>
+    <value>Cancelar</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Готово</value>
+    <value>Concluído</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Выберите каталог</value>
+    <value>Escolha uma pasta</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Сервер по адресу {0} недоступен</value>
+    <value>O servidor com o endereço {0} não está acessível.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Скачать как ZIP архив</value>
+    <value>Baixar como arquivo ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} скачано</value>
+    <value>{0} baixado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Что бы получить доступ в ваш Nextcloud, предоставьте информацию для входа вашему устройству.</value>
+    <value>Para acessar o seu Nextcloud, forneça as informações de login para o seu dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Проверка подлинности Windows Hello</value>
+    <value>Autenticação Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Для устройства не был установлен PIN. Что бы использовать Windows Hello требуется задать PIN.</value>
+    <value>Nenhum PIN definido para este dispositivo. Para usar a autenticação Windows Hello, é necessário definir um PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Скачать</value>
+    <value>Baixar</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Требуется вход</value>
+    <value>Um login é requerido</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Мы не можем открыть Nextcloud пока вы не предоставите своему устройству данные для входа в систему</value>
+    <value>Não podemos abrir o Nextcloud até que você forneça as informações de login do dispositivo.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Попытаться снова</value>
+    <value>Tentar novamente</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud для Windows Mobile</value>
+    <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Выше приложение было обновлено до версии  {0}</value>
+    <value>Seu aplicativo foi atualizado para a versão {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Новые возможности и улучшения в этой версии:</value>
+    <value>Novos recursos e melhorias nesta versão:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Рекомендовать</value>
+    <value>Recomendar</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Обновить</value>
+    <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Перемещение файлов и каталогов
-• Переименовывание файлов и каталогов
-• Ручная сихнронизация каталогов
-• Загрузка каталогов в виде zip-файла 
-• Выбор множества файлов и каталогов
-• Закрепление файлоы или каталогов на начальном экране
-• Использование Windows Hello для аутентификации при запуске приложения
-• Поддержка самоподписанных сертификатов SSL
-• Показ размера каталога в списке
-• Поддержка фаловой активации
-• Использование PasswordVault для хранения пользовательских реквизитов
-• Улушения безопасности и исправления ошибок
-• Новая и более стабильная библиотека WebDAV</value>
+    <value>• Mover arquivos e pastas
+• Renomear arquivos e pastas
+• Sincronização manual de pastas
+• Baixar diretórios como arquivo zip
+• Selecionar múltiplos arquivos e pastas
+• Destacar arquivos e pastas na tela inicial
+• Usar autenticação Windows Hello ao iniciar aplicativo
+• Permitir certificados SSL auto assinados
+• Mostrar tamanho da pasta na lista
+• Manipular ativação de arquivo
+• Usar PasswordVault para armazenar credenciais de usuário
+• Melhorias de segurança &amp; correção de bugs
+• Biblioteca WebDAV nova e mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Введите PIN чтобы начать</value>
+    <value>Destacar no niciar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Введите PIN чтобы начать</value>
+    <value>Destacar no iniciar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Подключиться</value>
+    <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
+    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Конфликты синхронизации</value>
+    <value>Conflitos de sincronização</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Синхронизировать</value>
+    <value>Sincronizar</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Предпочесть локальный файл</value>
+    <value>Preferir arquivo local</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Предпочесть файл с сервера</value>
+    <value>Preferir arquivo remoto</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>Центр подтверждения действительности сертификата недействительный или неправильный. Подключаться в любом случае? 
+    <value>A autoridade de certificação é inválida ou incorreta. Conectar mesmo assim?
 
-Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
+Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Внимание!</value>
+    <value>Atenção!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Приложение должно быть перезапущено</value>
+    <value>O aplicativo tem que ser reinicializado</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Подсказка</value>
+    <value>Dica</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Ошибки синхронизации</value>
+    <value>Erros de sincronização</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Список ошибок синхронизации. Скорее всего, это временные проблемы (например, файл был открыт в другом приложении) и они не должны повториться при следующем запуске синхронизации.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outra aplicação) e isso deve ser resolvido após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Остерегайтесь конфликтов!</value>
+    <value>Cuidado com os conflitos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Как локальный, так и каталог на серверере не пустые. Такая ситуация может привести к большому количеству конфликтов, потому что неизвестно какие из файлов правильные.</value>
+    <value>As pastas locais e remotas não estão vazias. Isso pode resultar em muitos conflitos pois não sabemos quais arquivos são os corretos.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Синхроонизация была активирована!</value>
+    <value>A sincronização foi acionada!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Синхронизация будет происходить в фоновом режиме. После окончания вы получите уведомление.</value>
+    <value>A sincronização ficará em segundo plano. Você será notificado quando terminar.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Сервис временно недоступен (обычно по причине непродолжительных  работ по обслуживанию).
-Попробуйте еще раз позже.</value>
+    <value>Serviço temporariamente indisponível (normalmente devido a trabalhos rápidos de manutenção).
+Por favor tente mais tarde.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Файлы изменены и локально и на сервере. Какие предпочесть?</value>
+    <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Файл был создан и на сервере и локально — какой из них правильный?</value>
+    <value>Arquivo criado local e remotamente. Qual o correto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Файл был удалён локально, но изменён на сервере. Какой предпочесть?</value>
+    <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Конфликт:</value>
+    <value>Conflito:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Файл был удалён на сервере, но изменён локально. Какой предпочесть?</value>
+    <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Синхронизизация каталога {0} завершена  с {1} изменениями и {2} ошибками или конфликтом.</value>
+    <value>A sincronização da pasta {0} terminou com {1} alterações e{2} erros ou conflitos.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Синхронизизация каталога {0} завершена с {1} изменениями.</value>
+    <value>A sincronização da pasta {0} terminou com {1} alterações.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Синхронизация была завершена</value>
+    <value>A sincronização terminou.</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Синхронизизация каталога {0} была остановлена по причине приостановки приложения.</value>
+    <value>A sincronização da pasta {0} parou pois o aplicativo foi suspenso.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Синхронизация приостановлена</value>
+    <value>A sincronização foi suspensa</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Выберите каталог для загрузки файлов</value>
+    <value>Escolha a pasta para onde você quer enviar arquivos</value>
   </data>
 </root>

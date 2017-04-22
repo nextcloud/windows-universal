@@ -101,7 +101,7 @@
                     IsHoldingEnabled="True" 
                     ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
+                    SelectionMode="{Binding Directory.SelectionMode}" 
                     Padding="0,2,0,2"
                     ContinuumNavigationTransitionInfo.ExitElementContainer="True">
                     <ListView.Resources>
@@ -237,7 +237,7 @@
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Holding">
-                                    <actions:OpenMenuFlyoutAction />
+                                        <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
                                     <core:EventTriggerBehavior EventName="RightTapped">
                                         <actions:OpenMenuFlyoutAction />
@@ -333,7 +333,8 @@
                                     TextWrapping="NoWrap"
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center"
-                                    Margin="8"/>
+                                    Margin="8"
+                                    Padding="8"/>
                             </Border>
                         </DataTemplate>
                     </GridView.ItemTemplate>
@@ -348,7 +349,16 @@
                 x:Uid="AppBarRefresh"
                 Command="{Binding RefreshCommand}"/>
             </CommandBar.SecondaryCommands>
-            <AppBarButton Icon="Sort" Label="Sort" x:Uid="AppBarSort">
+            <AppBarButton 
+                x:Uid="AppBarSelect" 
+                Icon="Bullets" 
+                Label="Select" 
+                Command="{Binding SelectToggleCommand}"/>
+            <AppBarButton
+                x:Uid="AppBarSort"
+                Icon="Sort" 
+                Label="Sort" 
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem 
@@ -380,7 +390,11 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
-            <AppBarButton Icon="Add" Label="Add" x:Uid="AppBarAdd">
+            <AppBarButton
+                Icon="Add" 
+                Label="Add" 
+                x:Uid="AppBarAdd"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">>
                 <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem 
@@ -410,6 +424,27 @@
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
+            <AppBarButton
+                Icon="MoveToFolder"
+                x:Uid="MoveTo_Label"
+                Label="Move to"
+                Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <AppBarButton
+                Icon="Delete"
+                x:Uid="Delete_Label"
+                Label="Delete"
+                Command="{Binding DataContext.DeleteSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <AppBarButton
+                Icon="Download"
+                x:Uid="AppBarDownload"
+                Label="AppBarDownload"
+                Command="{Binding DataContext.DownloadSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
         </CommandBar>
     </Grid>
 

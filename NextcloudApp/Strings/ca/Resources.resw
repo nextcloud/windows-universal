@@ -514,4 +514,7 @@ Si us plau, torni a intentar-ho més tard.</value>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronization suspended</value>
   </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
+  </data>
 </root>
