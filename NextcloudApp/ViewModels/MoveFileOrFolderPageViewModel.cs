@@ -341,7 +341,6 @@ namespace NextcloudApp.ViewModels
             {
                 Directory.RemoveResourceInfos = ResourceInfos;
             }
-            await Directory.StartDirectoryListing();
                
             // The folder to move should not be set as target.
             await Directory.StartDirectoryListing(ResourceInfo);

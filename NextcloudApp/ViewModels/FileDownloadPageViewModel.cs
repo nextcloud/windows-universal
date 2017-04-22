@@ -111,9 +111,9 @@ namespace NextcloudApp.ViewModels
             _navigationService.GoBack();
         }
 
-        private async Task Download(ResourceInfo resInfo, NextcloudClient.NextcloudClient client, StorageFolder folder)
+        private async Task Download(ResourceInfo resourceInfo, NextcloudClient.NextcloudClient client, StorageFolder folder)
         {
-            if (resInfo.ContentType == "dav/directory")
+            if (resourceInfo.ContentType == "dav/directory")
             {
                 ResourceInfo = new ResourceInfo
                 {
@@ -124,7 +124,7 @@ namespace NextcloudApp.ViewModels
             }
             else
             {
-                ResourceInfo = resInfo;
+                ResourceInfo = resourceInfo;
             }
 
             var savePicker = new FileSavePicker();

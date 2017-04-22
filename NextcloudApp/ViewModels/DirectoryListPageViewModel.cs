@@ -573,13 +573,17 @@ namespace NextcloudApp.ViewModels
         {
             get { return _selectedFileOrFolder; }
             set
-            {                
             {
-                if (Directory != null && Directory.IsSelecting) return;
+                if (Directory != null && Directory.IsSelecting)
+                {
+                    return;
+                }
+
                 if (_isNavigatingBack)
                 {
                     return;
                 }
+
                 try
                 {
                     if (!SetProperty(ref _selectedFileOrFolder, value))

@@ -190,9 +190,11 @@ namespace NextcloudApp.Services
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
         {
             var client = await ClientService.GetClient();
+
             if (client == null || IsSelecting)
             {
                 return;
+            }
 
             _continueListing = true;
 
@@ -353,22 +355,6 @@ namespace NextcloudApp.Services
                 OnPropertyChanged();
             }
         }
-
-        public string SelectionMode
-        {
-            get { return _selectionMode; }
-            set
-            {
-                if (_selectionMode == value)
-                {
-                    return;
-                }
-                _selectionMode = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
         public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
