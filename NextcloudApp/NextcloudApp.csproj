@@ -153,7 +153,6 @@
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
-    <Compile Include="PageToken.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\DirectoryService.cs" />
@@ -182,7 +181,6 @@
     <Compile Include="Models\FileOrFolder.cs" />
     <Compile Include="Models\PathInfo.cs" />
     <Compile Include="Models\LocalSettings.cs" />
-    <Compile Include="Models\PathInfo.cs" />
     <Compile Include="PageToken.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
