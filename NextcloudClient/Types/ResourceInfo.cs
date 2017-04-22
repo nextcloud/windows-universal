@@ -139,8 +139,13 @@ namespace NextcloudClient.Types
 
         public override int GetHashCode()
         {
-            var hashCode = this.ContentType.GetHashCode() ^ this.Created.GetHashCode() ^ this.ETag.GetHashCode() ^ this.LastModified.GetHashCode() ^ this.Name.GetHashCode() 
+            var hashCode = this.ContentType.GetHashCode() ^ this.Created.GetHashCode() ^ this.LastModified.GetHashCode() ^ this.Name.GetHashCode() 
                 ^ this.Path.GetHashCode() ^ this.Size.GetHashCode();
+
+            // Is null on directories
+            if (this.ETag != null)
+                hashCode ^= this.ETag.GetHashCode();
+
             return hashCode;
         }
 
