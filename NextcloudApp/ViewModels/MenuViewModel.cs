@@ -211,7 +211,7 @@ namespace NextcloudApp.ViewModels
             _currentPageToken = navigatedTo;
             ShowMenuButton = 
                 _currentPageToken != PageToken.Login &&
-                _currentPageToken != PageToken.SingleFileDownload &&
+                _currentPageToken != PageToken.FileDownload &&
                 _currentPageToken != PageToken.FileUpload;
             IsMenuOpen = false;
         }

@@ -57,7 +57,7 @@ namespace NextcloudApp.ViewModels
                 {
                     ResourceInfo = ResourceInfo
                 };
-                _navigationService.Navigate(PageToken.SingleFileDownload.ToString(), parameters.Serialize());
+                _navigationService.Navigate(PageToken.FileDownload.ToString(), parameters.Serialize());
             });
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);
