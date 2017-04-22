@@ -208,12 +208,15 @@ namespace NextcloudApp.ViewModels
         private async void SynchronizeFolder(object parameter)
         {
             var resourceInfo = parameter as ResourceInfo;
+
             if (resourceInfo == null)
             {
                 return;
             }
+
             var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
             StorageFolder folder;
+
             try
             {
                 Task<ContentDialogResult> firstRunDialog = null;
@@ -224,20 +227,29 @@ namespace NextcloudApp.ViewModels
                     if (syncInfo == null)
                     {
                         // Initial Sync
-                        syncInfo = new FolderSyncInfo();
-                        syncInfo.Path = resourceInfo.Path;
-                        var folderPicker = new FolderPicker();
-                        folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+                        syncInfo = new FolderSyncInfo()
+                        {
+                            Path = resourceInfo.Path
+                        };
+
+                        var folderPicker = new FolderPicker()
+                        {
+                            SuggestedStartLocation = PickerLocationId.Desktop
+                        };
+
                         folderPicker.FileTypeFilter.Add(".txt");
                         StorageFolder newFolder = await folderPicker.PickSingleFolderAsync();
+
                         if (newFolder == null)
                         {
                             return;
                         }
+
                         StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
                         IReadOnlyList<IStorageItem> subElements = await newFolder.GetItemsAsync();
                         NextcloudClient.NextcloudClient client = await ClientService.GetClient();
                         var remoteElements = await client.List(resourceInfo.Path);
+
                         if (subElements.Count > 0 && remoteElements.Count > 0)
                         {
                             var dialogNotEmpty = new ContentDialog
@@ -253,14 +265,17 @@ namespace NextcloudApp.ViewModels
                                 SecondaryButtonText = _resourceLoader.GetString("Cancel")
                             };
                             var dialogResult = await _dialogService.ShowAsync(dialogNotEmpty);
+
                             if (dialogResult != ContentDialogResult.Primary)
                             {
                                 return;
                             }
                         }
+
                         folder = newFolder;
                         SyncDbUtils.SaveFolderSyncInfo(syncInfo);
                         StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+
                         var dialog = new ContentDialog
                         {
                             Title = _resourceLoader.GetString("SyncStarted"),
@@ -273,7 +288,8 @@ namespace NextcloudApp.ViewModels
                             PrimaryButtonText = _resourceLoader.GetString("OK")
                         };
                         firstRunDialog = _dialogService.ShowAsync(dialog);
-                    } else
+                    }
+                    else
                     {
                         string subPath = resourceInfo.Path.Substring(syncInfo.Path.Length);
                         StorageFolder tempFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
@@ -284,13 +300,16 @@ namespace NextcloudApp.ViewModels
                         }
                         folder = tempFolder;
                     }
-                } else
+                }
+                else
                 {
                     folder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
                     // TODO catch exceptions
                 }
+
                 SyncService service = new SyncService(folder, resourceInfo, syncInfo);
-                service.StartSync();
+                await service.StartSync();
+
                 if(firstRunDialog != null)
                 {
                     await firstRunDialog;

@@ -9,7 +9,6 @@
     using System.Linq;
     using Windows.Storage;
     using System;
-    using Windows.ApplicationModel.Resources;
 
     internal static class SyncDbUtils
     {
@@ -199,6 +198,7 @@
         {
             // Create a new connection
             string fullPath = info.Path;
+
             if(!info.IsDirectory())
             {
                 fullPath = info.Path + "/" + info.Name;
@@ -208,6 +208,25 @@
             {
                 SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
                                       where detail.Path == fullPath && detail.FsiID == fsi.Id
+                                      select detail).FirstOrDefault();
+                return sid;
+            }
+        }
+
+        public static SyncInfoDetail IsResourceInfoSynced(ResourceInfo info)
+        {
+            // Create a new connection
+            string fullPath = info.Path;
+
+            if (!info.IsDirectory())
+            {
+                fullPath = info.Path + "/" + info.Name;
+            }
+
+            using (var db = DbConnection)
+            {
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
+                                      where detail.Path == fullPath
                                       select detail).FirstOrDefault();
                 return sid;
             }
