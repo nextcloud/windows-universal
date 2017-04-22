@@ -57,7 +57,7 @@ namespace NextcloudApp.ViewModels
                 {
                     ResourceInfo = ResourceInfo
                 };
-                _navigationService.Navigate(PageTokens.FileDownload.ToString(), parameters.Serialize());
+                _navigationService.Navigate(PageToken.FileDownload.ToString(), parameters.Serialize());
             });
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);
@@ -319,7 +319,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = ResourceInfo
             };
-            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
 
         private void PinToStart(object parameter)

@@ -1,6 +1,6 @@
 ﻿namespace NextcloudApp
 {
-    public enum PageTokens
+    public enum PageToken
     {
         Login,
         DirectoryList,

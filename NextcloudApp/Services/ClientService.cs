@@ -163,7 +163,7 @@ namespace NextcloudApp.Services
             };
             await dialogService.ShowAsync(dialog);
             SettingsService.Instance.Reset();
-            navigationService.Navigate(PageTokens.Login.ToString(), null);
+            navigationService.Navigate(PageToken.Login.ToString(), null);
         }
 
         public static void Reset()

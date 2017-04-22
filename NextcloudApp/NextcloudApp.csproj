@@ -179,7 +179,7 @@
     <Compile Include="Models\FileOrFolder.cs" />
     <Compile Include="Models\LocalSettings.cs" />
     <Compile Include="Models\PathInfo.cs" />
-    <Compile Include="PageTokens.cs" />
+    <Compile Include="PageToken.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
     <Compile Include="Services\SettingsService.cs" />
