@@ -333,7 +333,8 @@
                                     TextWrapping="NoWrap"
                                     HorizontalAlignment="Center" 
                                     VerticalAlignment="Center"
-                                    Margin="8"/>
+                                    Margin="8"
+                                    Padding="8"/>
                             </Border>
                         </DataTemplate>
                     </GridView.ItemTemplate>
