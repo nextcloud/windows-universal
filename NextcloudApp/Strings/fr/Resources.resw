@@ -516,6 +516,6 @@ Veuillez réessayer plus tard.</value>
     <value>Synchronisation suspendue</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Choisissez le dossier où vous souhaitez téléverser les fichiers</value>
   </data>
 </root>

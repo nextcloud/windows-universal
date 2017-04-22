@@ -515,6 +515,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisation unterbrochen</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>
   </data>
 </root>

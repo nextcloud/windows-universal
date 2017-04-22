@@ -148,7 +148,7 @@
     <value>Обновить</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Сортировать</value>
+    <value>Сортировка</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
     <value>Дата (по возрастанию)</value>
@@ -516,6 +516,6 @@
     <value>Синхронизация приостановлена</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Выберите каталог для загрузки файлов</value>
   </data>
 </root>
