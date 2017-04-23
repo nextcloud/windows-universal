@@ -9,6 +9,9 @@ using NextcloudClient.Types;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
+using System.Threading.Tasks;
+using System;
+using Windows.UI.Core;
 
 namespace NextcloudApp.ViewModels
 {
@@ -22,6 +25,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
+        private CoreDispatcher _dispatcher;
 
         public ICommand GroupByNameAscendingCommand { get; private set; }
         public ICommand GroupByNameDescendingCommand { get; private set; }
@@ -79,6 +83,7 @@ namespace NextcloudApp.ViewModels
             CreateDirectoryCommand = new DelegateCommand(CreateDirectory);
             StartUploadCommand = new DelegateCommand(StartUpload);
             CancelFolderSelectionCommand = new DelegateCommand(CancelFolderSelection);
+            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -284,13 +289,15 @@ namespace NextcloudApp.ViewModels
 
         private async void StartDirectoryListing()
         {
-            ShowProgressIndicator();
+            await OnUiThread(async () =>
+            {
+                ShowProgressIndicator();
 
-            await Directory.StartDirectoryListing();
+                await Directory.StartDirectoryListing();
 
-            HideProgressIndicator();
+                HideProgressIndicator();
+            });
         }
-
 
         public override bool CanRevertState()
         {
@@ -300,6 +307,10 @@ namespace NextcloudApp.ViewModels
         public override void RevertState()
         {
             SelectedPathIndex--;
+        }
+        private async Task OnUiThread(Action action)
+        {
+            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
         }
     }
 }
