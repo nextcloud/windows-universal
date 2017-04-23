@@ -293,15 +293,13 @@
                 if (sid.Id == 0)
                 {
                     // New
-                    db.Insert(sid);                    
+                    db.Insert(sid);                   
                 }
                 else
                 {
                     // Update
                     db.Update(sid);
                 }
-
-                SaveSyncHistory(sid);
             }
         }
 
@@ -334,16 +332,7 @@
                     SyncDate = DateTime.Now
                 };
 
-                if (syncHistory.Id == 0)
-                {
-                    // New
-                    db.Insert(syncHistory);
-                }
-                else
-                {
-                    // Update
-                    db.Update(syncHistory);
-                }
+                db.Insert(syncHistory);                
             }
         }
 
