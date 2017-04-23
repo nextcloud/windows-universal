@@ -118,340 +118,397 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>全部文件</value>
+    <value>Todos os arquivos</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>总是</value>
+    <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>发生错误</value>
+    <value>Ocorreu um erro</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>添加</value>
+    <value>Adicionar</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>创建文件夹</value>
+    <value>Criar uma pasta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>拍照片</value>
+    <value>Tirar uma foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>上传文件</value>
+    <value>Enviar arquivos</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>上传图像</value>
+    <value>Enviar fotos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>下载</value>
+    <value>Baixar</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>刷新</value>
+    <value>Atualizar</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>排序</value>
+    <value>Ordenar</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>日期(顶部最久)</value>
+    <value>Data (mais antiga no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>日期(最新的在顶部)</value>
+    <value>Data (mais recente no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>按名称排序(A-Z)</value>
+    <value>Nome (A no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>按名称排序(Z-A)</value>
+    <value>Nome (Z no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>按大小排序(由小到大)</value>
+    <value>Tamanho (menor no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>按大小排序(由大到小)</value>
+    <value>Tamanho (maior no topo)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>应用程序错误</value>
+    <value>Erro de aplicação</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>程序发生了一个问题，在此期间你操作的信息可能已经丢失，我们对此向您表示歉意。
-
-您是否同意将错误报告发送给程序开发者？这将有助于更快的解决问题。</value>
+    <value>O aplicativo encontrou um problema. Pedimos desculpas pela inconveniência. Se você estava no meio de algo, a informação na qual estava trabalhando foi perdida.
+Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de erro? Isso ajuda a eliminar o problema mais rapidamente.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>取消</value>
+    <value>Cancelar</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>无法创建文件夹</value>
+    <value>Não foi possível criar pasta</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>连接</value>
+    <value>Conectar</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>内容类型</value>
+    <value>Tipo-de-Conteudo</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>创建</value>
+    <value>Criar</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>已创建</value>
+    <value>Criado</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>创建一个新文件夹</value>
+    <value>Criar uma nova pasta</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>文件下载中…</value>
+    <value>Baixando o arquivo...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>下载预览图片</value>
+    <value>Baixar imagens de visualização</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETag</value>
+    <value>ETiqueta</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} 字节)</value>
+    <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>文件夹名称</value>
+    <value>Nome da pasta</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>信息</value>
+    <value>Informação</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>上一次更改</value>
+    <value>Última modificação</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>名称</value>
+    <value>Nome</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>从不</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>新建文件夹</value>
+    <value>Nova pasta</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>否</value>
+    <value>Não</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>未经授权</value>
+    <value>Não autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>服务器返回错误代码401(未经授权). 请重新登录.</value>
+    <value>O servidor retornou um código de erro 401 (não autorizado). Por favor faça login novamente.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>确定</value>
+    <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>密码</value>
+    <value>Senha</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>路径</value>
+    <value>Caminho</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>已使用{0} (总计{1})</value>
+    <value>{0} de {1} usado</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>重置此应用</value>
+    <value>Reiniciar este aplicativo</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>重试</value>
+    <value>Tentar novamente</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>服务器地址</value>
+    <value>Endereço do servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>设置</value>
+    <value>Configurações</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>设置</value>
+    <value>Configurações</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>显示文件和文件夹列表分组</value>
+    <value>Mostrar lista agrupada de arquivos e pastas</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>大小</value>
+    <value>Tamanho</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>此名称已存在.指定其他名称.</value>
+    <value>Já existe um elemento com este nome. Por favor, indique um nome diferente.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>类型</value>
+    <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>用户名</value>
+    <value>Nome de Usuário</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>版本 {0}</value>
+    <value>Versão {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>只有在使用Wi-Fi时</value>
+    <value>Somente quando estou no Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>是</value>
+    <value>Sim</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>删除</value>
+    <value>Excluir</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>删除文件</value>
+    <value>Excluir arquivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>您确定要删除此文件 {0} ?</value>
+    <value>Tem certeza de que deseja excluir o arquivo {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>删除目录</value>
+    <value>Excluir pasta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>您确定要删除此文件夹 {0} ?</value>
+    <value>Tem certeza de que deseja excluir a pasta {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0}已上传,共计 {1} 个</value>
+    <value>{0} de {1} enviados</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploading file {0} of {1}…</value>
+    <value>Enviando arquivo {0} de {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>上传文件中 … </value>
+    <value>Enviando o arquivo...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} 于 {1} 下载</value>
+    <value>{0} de {1} baixados</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>服务器维护模式被启用.</value>
+    <value>O modo de manutenção está ativado no servidor.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>错误的用户名或密码.</value>
+    <value>Nome de usuário ou senha incorreto.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>客户端版本 {0}</value>
+    <value>Versão do cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>服务器名字或地址无法被识别</value>
+    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>服务器版本 {0}</value>
+    <value>Versão do servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>删除</value>
+    <value>Excluir</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>等待服务器响应</value>
+    <value>aguardando resposta do servidor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>请选择一个新的名字</value>
+    <value>Por favor escolha um novo nome</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>重命名</value>
+    <value>Renomear</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>重命名</value>
+    <value>Renomear</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>重命名</value>
+    <value>Renomear</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>移动到</value>
+    <value>Mover para</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>移动到</value>
+    <value>Mover para</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>取消</value>
+    <value>Cancelar</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>完成</value>
+    <value>Concluído</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>选择目录</value>
+    <value>Escolha uma pasta</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>该服务器地址 {0} 无法访问.</value>
+    <value>O servidor com o endereço {0} não está acessível.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>下载为 ZIP 文件</value>
+    <value>Baixar como arquivo ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>已下载 {0}</value>
+    <value>{0} baixado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>要访问你的 Nextcloud, 为你的设备提供登录信息.</value>
+    <value>Para acessar o seu Nextcloud, forneça as informações de login para o seu dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello 认证</value>
+    <value>Autenticação Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>该设备没有设置 PIN .要使用 Windows Hello, 必须定义 PIN.</value>
+    <value>Nenhum PIN definido para este dispositivo. Para usar a autenticação Windows Hello, é necessário definir um PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Baixar</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>要求登录</value>
+    <value>Um login é requerido</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息.</value>
+    <value>Não podemos abrir o Nextcloud até que você forneça as informações de login do dispositivo.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>再试一次</value>
+    <value>Tentar novamente</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud Windows 移动版</value>
+    <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>该应用更新到版本 {0}</value>
+    <value>Seu aplicativo foi atualizado para a versão {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>此版本的新功能和改进：</value>
+    <value>Novos recursos e melhorias nesta versão:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>推荐</value>
+    <value>Recomendar</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>更新</value>
+    <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• 移动文件和文件夹
-• 重命名文件和文件夹
-• 压缩目录为 ZIP 并下载
-• 选择多个文件和文件夹
-• 将文件和文件夹钉在开始界面
-• 使用 Windows Hello 认证应用启动
-• 允许使用自签名的 SSL 证书
-• 在列表显示文件夹大小
-• 处理文件活动
-• 使用 PasswordVault 存储用户证件
-• 安全改进和 Bug 修复
-• 新版更加稳定的 WebDAV 类库</value>
+    <value>• Mover arquivos e pastas
+• Renomear arquivos e pastas
+• Sincronização manual de pastas
+• Baixar diretórios como arquivo zip
+• Selecionar múltiplos arquivos e pastas
+• Destacar arquivos e pastas na tela inicial
+• Usar autenticação Windows Hello ao iniciar aplicativo
+• Permitir certificados SSL auto assinados
+• Mostrar tamanho da pasta na lista
+• Manipular ativação de arquivo
+• Usar PasswordVault para armazenar credenciais de usuário
+• Melhorias de segurança &amp; correção de bugs
+• Biblioteca WebDAV nova e mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin 启动</value>
+    <value>Destacar no niciar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin 启动</value>
+    <value>Destacar no iniciar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>连接</value>
+    <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>忽略无效的自签名 SSL 证书。这将允许使用无效或不正确的 SSL 证书做身份认证。请注意，这将无法避免中间人攻击(mitm)！</value>
+    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Preferir arquivo local</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Preferir arquivo remoto</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>证书认证机构无效或不正确，是否继续连接？
+    <value>A autoridade de certificação é inválida ou incorreta. Conectar mesmo assim?
 
-请注意，你将无法避免中间人攻击(mitm)！</value>
+Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>注意!</value>
+    <value>Atenção!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>该应用需要重启</value>
+    <value>O aplicativo tem que ser reinicializado</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>提示</value>
+    <value>Dica</value>
+  </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outra aplicação) e isso deve ser resolvido após a próxima sincronização.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Cuidado com os conflitos!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>As pastas locais e remotas não estão vazias. Isso pode resultar em muitos conflitos pois não sabemos quais arquivos são os corretos.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>A sincronização foi acionada!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>A sincronização ficará em segundo plano. Você será notificado quando terminar.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>服务临时不可用 (通常由于短时间的维护工作).
-请稍后重试.</value>
+    <value>Serviço temporariamente indisponível (normalmente devido a trabalhos rápidos de manutenção).
+Por favor tente mais tarde.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Arquivo criado local e remotamente. Qual o correto?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflito:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>A sincronização da pasta {0} terminou com {1} alterações e{2} erros ou conflitos.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>A sincronização da pasta {0} terminou com {1} alterações.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>A sincronização terminou.</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>A sincronização da pasta {0} parou pois o aplicativo foi suspenso.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>A sincronização foi suspensa</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Escolha a pasta para onde você quer enviar arquivos</value>
   </data>
 </root>

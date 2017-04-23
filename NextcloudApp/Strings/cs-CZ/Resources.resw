@@ -118,339 +118,396 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Todos os arquivos</value>
+    <value>Všechny soubory</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Sempre</value>
+    <value>Vždy</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ocorreu um erro</value>
+    <value>Došlo k chybě</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Adicionar</value>
+    <value>Přidat</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Criar uma pasta</value>
+    <value>Vytvořit složku</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Tirar uma foto</value>
+    <value>Vyfotit obrázek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Enviar arquivos</value>
+    <value>Nahrát soubory</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Enviar fotos</value>
+    <value>Nahrát fotky</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Baixar</value>
+    <value>Stáhnout</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Atualizar</value>
+    <value>Obnovit</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Ordenar</value>
+    <value>Řadit</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Data (mais antiga no topo)</value>
+    <value>Datum (nejstarší nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Data (mais recente no topo)</value>
+    <value>Datum (nejnovější nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nome (A no topo)</value>
+    <value>méno (A nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nome (Z no topo)</value>
+    <value>Jméno (Z nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Tamanho (menor no topo)</value>
+    <value>Velikost (nejmenší nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Tamanho (maior no topo)</value>
+    <value>Velikost (největší nahoru)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Erro de aplicação</value>
+    <value>Chyba aplikace</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>O aplicativo encontrou um problema. Pedimos desculpas pela inconveniência. Se você estava no meio de algo, a informação na qual estava trabalhando foi perdida.
-Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de erro? Isso ajuda a eliminar o problema mais rapidamente.</value>
+    <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého úkolu, informace jsou ztraceny.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Zrušit</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Não foi possível criar pasta</value>
+    <value>Nelze vytvořit složku</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Připojit</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Tipo-de-Conteudo</value>
+    <value>Typ obsahu (Content-Type)</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Criar</value>
+    <value>Vytvořit</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Criado</value>
+    <value>Vytvořeno</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Criar uma nova pasta</value>
+    <value>Vytvořit novou složku</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Baixando o arquivo...</value>
+    <value>Stahování souboru…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Baixar imagens de visualização</value>
+    <value>Stáhnout ukázkové obrázky</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETiqueta</value>
+    <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0} ({1} byt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Nome da pasta</value>
+    <value>Jméno složky</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informação</value>
+    <value>Informace</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Última modificação</value>
+    <value>Naposledy upraveno</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Nome</value>
+    <value>Jméno</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+    <value>Nikdy</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Nova pasta</value>
+    <value>Nová složka</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Não</value>
+    <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Não autorizado</value>
+    <value>Neautorizován</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>O servidor retornou um código de erro 401 (não autorizado). Por favor faça login novamente.</value>
+    <value>Server vrátil chybový kód 401 (neautorizovaný). Prosím, přihlašte se znovu.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Senha</value>
+    <value>Heslo</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Caminho</value>
+    <value>Cesta</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} de {1} usado</value>
+    <value>Využito {0} z {1}</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reiniciar este aplicativo</value>
+    <value>Resetovat tuto aplikaci</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Tentar novamente</value>
+    <value>Zkusit znovu</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Endereço do servidor</value>
+    <value>Adresa serveru</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Configurações</value>
+    <value>Nastavení</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Configurações</value>
+    <value>Nastavení</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Mostrar lista agrupada de arquivos e pastas</value>
+    <value>Zobrazit seskupení seznamu souborů a složek</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Tamanho</value>
+    <value>Velikost</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Já existe um elemento com este nome. Por favor, indique um nome diferente.</value>
+    <value>Element s takovým jménem již existuje. Specifikujte jiné jméno.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Typ</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nome de Usuário</value>
+    <value>Uživatelské jméno</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Versão {0}</value>
+    <value>Verze {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Somente quando estou no Wi-Fi</value>
+    <value>Pouze, když jsem na Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Sim</value>
+    <value>Ano</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Excluir</value>
+    <value>Smazat</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Excluir arquivo</value>
+    <value>Smazat soubor</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Tem certeza de que deseja excluir o arquivo {0}</value>
+    <value>Opravdu chcete smazat soubor {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Excluir pasta</value>
+    <value>Smazat složku</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Tem certeza de que deseja excluir a pasta {0}</value>
+    <value>Opravdu chcete smazat složku {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} enviados</value>
+    <value>Nahráno {0} z {1}</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Enviando arquivo {0} de {1}…</value>
+    <value>Nahrávání souboru {0} z  {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Enviando o arquivo...</value>
+    <value>Nahrávání souboru</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} baixados</value>
+    <value>Staženo {0} z {1}</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>O modo de manutenção está ativado no servidor.</value>
+    <value>Na serveru je povolen režim údržby.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nome de usuário ou senha incorreto.</value>
+    <value>Špatné uživatelské jméno nebo heslo.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Versão do cliente {0}</value>
+    <value>Verze klienta {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
+    <value>Jméno nebo adresu serveru se nepodařilo převést.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Versão do servidor {0}</value>
+    <value>Verze serveru {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Excluir</value>
+    <value>Smazat</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>aguardando resposta do servidor</value>
+    <value>Čekání na odpověď serveru</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Popr favor escolha um novo nome</value>
+    <value>Prosím, zvolte nové jméno</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Renomear</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Renomear</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Renomear</value>
+    <value>Přejmenovat</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Mover para</value>
+    <value>Přesunout do</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Mover para</value>
+    <value>Přesunout do</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Zrušit</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Concluído</value>
+    <value>Hotovo</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Escolha uma pasta</value>
+    <value>Vybrat složku</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>O servidor com o endereço {0} não está acessível.</value>
+    <value>Server s adresou {0} není dostupný.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Baixar como arquivo ZIP</value>
+    <value>Stáhnout jako ZIP soubor</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} baixado</value>
+    <value>{0} stažen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Para acessar o seu Nextcloud, forneça as informações de login para o seu dispositivo.</value>
+    <value>Abyste mohli přistupovat k vašemu Nextcloudu, zadejte přihlašovací údae pro vaše zařízení.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Autenticação Windows Hello</value>
+    <value>Autentizace Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Nenhum PIN definido para este dispositivo. Para usar a autenticação Windows Hello, é necessário definir um PIN.</value>
+    <value>Pro toto zařízení není nastavený PIN. Pokud chcete použít Windows Hello, musí být definován.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Baixar</value>
+    <value>Stáhnout</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Um login é requerido</value>
+    <value>Vyžadováno přihlášení</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Não podemos abrir o Nextcloud até que você forneça as informações de login do dispositivo.</value>
+    <value>Nemůžeme otevřít Nexcloud, dokud nedodáte přihlašovací údaje.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Tentar novamente</value>
+    <value>Zkusit znovu</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud para Windows Mobile</value>
+    <value>Nextcloud pro Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Seu aplicativo foi atualizado para a versão {0}</value>
+    <value>Vaše aplikace byla aktualizována na verzi {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Novos recursos e melhorias nesta versão:</value>
+    <value>Nové vlastnosti a vylepšení v této verzi:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recomendar</value>
+    <value>Doporučit</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Atualizar</value>
+    <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover arquivos e pastas
-• Renomear arquivos e pastas
-• Baixar diretórios como arquivo zip 
-• Selecionar vários arquivos e pastas
-• Destacar arquivos e pastas para a tela inicial
-• Use a autenticação Windows Hello ao iniciar o aplicativo
-• Permitir certificados SSL auto-assinados
-• Mostrar o tamanho da pasta na lista
-• Manipular a ativação de arquivo
-• Usar o PasswordVault para armazenar credenciais de usuário
-• Melhorias de segurança &amp; correções de bugs
-• Biblioteca WebDAV nova e mais estável</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authentificate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Handle file activation
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Destacar no niciar</value>
+    <value>Připnout na start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Destacar no iniciar</value>
+    <value>Připnout na start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Připojit</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
+    <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti mitm útokům.</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>A autoridade de certificação é inválida ou incorreta. Conectar mesmo assim?
+    <value>Certifikační autorita je neznámá, nebo neplatná. Přesto připojit?
 
-Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)!</value>
+Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Atenção!</value>
+    <value>Pozor!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>O aplicativo tem que ser reinicializado</value>
+    <value>Aplikace musí být restartována</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Dica</value>
+    <value>Nápověda</value>
+  </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Beware of conflicts!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Serviço temporariamente indisponível (normalmente devido a trabalhos rápidos de manutenção).
-Por favor tente mais tarde.</value>
+    <value>Služba dočasně nedostupná (většinou kvůli krátkodobé údržbě).
+Prosím zkuste to znovu později.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflict: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
   </data>
 </root>

@@ -39,7 +39,7 @@ namespace NextcloudApp.ViewModels
             }
             else
             {
-                this.nextPage = PageTokens.DirectoryList.ToString();
+                this.nextPage = PageToken.DirectoryList.ToString();
             }
         }
 

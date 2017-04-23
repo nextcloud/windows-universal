@@ -193,7 +193,7 @@ namespace NextcloudApp
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
-                NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                NavigationService.Navigate(PageToken.Login.ToString(), null);
             }
             else
             {
@@ -226,7 +226,7 @@ namespace NextcloudApp
                                 pageParameters = new PinStartPageParameters()
                                 {
                                     ResourceInfo = tmpResourceInfo,
-                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
+                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageToken.DirectoryList.ToString() : PageToken.FileInfo.ToString()
                                 };
 
                             }
@@ -235,27 +235,27 @@ namespace NextcloudApp
                         if (SettingsService.Instance.LocalSettings.UseWindowsHello)
                         {
                             NavigationService.Navigate(
-                                PageTokens.Verification.ToString(),
+                                PageToken.Verification.ToString(),
                                 pageParameters?.Serialize());
                         }
                         else
                         {
                             NavigationService.Navigate(
-                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
+                                pageParameters!=null ? pageParameters.PageTarget : PageToken.DirectoryList.ToString(), 
                                 pageParameters?.Serialize());
                         }
                     }
                     else
                     {
                         NavigationService.Navigate(
-                            PageTokens.Login.ToString(), 
+                            PageToken.Login.ToString(), 
                             null);
                     }
                 }
                 else
                 {
                     NavigationService.Navigate(
-                        PageTokens.Login.ToString(), 
+                        PageToken.Login.ToString(), 
                         null);
                 }
             }
@@ -281,12 +281,12 @@ namespace NextcloudApp
                 {
                     // Nothing to do here
                     case ToastNotificationService.SYNCACTION:
-                        NavigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                        NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
                         break;
-                    // Open Conflict Page
+                    // Open Status Page
                     case ToastNotificationService.SYNCONFLICTACTION:
                         ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
-                        NavigationService.Navigate(PageTokens.SyncConflict.ToString(), null);
+                        NavigationService.Navigate(PageToken.SyncStatus.ToString(), null);
                         break;
                 }
             }

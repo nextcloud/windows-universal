@@ -9,12 +9,12 @@
     using System.Linq;
     using Windows.Storage;
     using System;
-    using Windows.ApplicationModel.Resources;
 
     internal static class SyncDbUtils
     {
         private static string dbPath = string.Empty;
         private static Object fsiLock = new Object();
+
         private static string DbPath
         {
             get
@@ -32,12 +32,16 @@
         {
             get
             {
-                var db = new SQLiteConnection(new SQLitePlatformWinRT(), DbPath);
-                // Activate Tracing
-                db.TraceListener = new DebugTraceListener();
+                var db = new SQLiteConnection(new SQLitePlatformWinRT(), DbPath)
+                {
+                    // Activate Tracing
+                    TraceListener = new DebugTraceListener()
+                };
+
                 // Init tables
                 db.CreateTable<FolderSyncInfo>();
                 db.CreateTable<SyncInfoDetail>();
+                db.CreateTable<SyncHistory>();
                 return db;
             }
         }
@@ -199,6 +203,7 @@
         {
             // Create a new connection
             string fullPath = info.Path;
+
             if(!info.IsDirectory())
             {
                 fullPath = info.Path + "/" + info.Name;
@@ -208,6 +213,25 @@
             {
                 SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
                                       where detail.Path == fullPath && detail.FsiID == fsi.Id
+                                      select detail).FirstOrDefault();
+                return sid;
+            }
+        }
+
+        public static SyncInfoDetail IsResourceInfoSynced(ResourceInfo info)
+        {
+            // Create a new connection
+            string fullPath = info.Path;
+
+            if (!info.IsDirectory())
+            {
+                fullPath = info.Path + "/" + info.Name;
+            }
+
+            using (var db = DbConnection)
+            {
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
+                                      where detail.Path == fullPath
                                       select detail).FirstOrDefault();
                 return sid;
             }
@@ -269,13 +293,15 @@
                 if (sid.Id == 0)
                 {
                     // New
-                    db.Insert(sid);
+                    db.Insert(sid);                    
                 }
                 else
                 {
                     // Update
                     db.Update(sid);
                 }
+
+                SaveSyncHistory(sid);
             }
         }
 
@@ -293,5 +319,53 @@
                 return GetFolderSyncInfoByPath(info.Path) != null;
             }
         }
+
+        #region SyncHistory
+
+        public static void SaveSyncHistory(SyncInfoDetail sid)
+        {
+            using (var db = DbConnection)
+            {
+                var syncHistory = new SyncHistory()
+                {
+                    ConflictType = sid.ConflictType,
+                    Error = sid.Error,
+                    Path = sid.Path,
+                    SyncDate = DateTime.Now
+                };
+
+                if (syncHistory.Id == 0)
+                {
+                    // New
+                    db.Insert(syncHistory);
+                }
+                else
+                {
+                    // Update
+                    db.Update(syncHistory);
+                }
+            }
+        }
+
+        public static void DeleteSyncHistory()
+        {
+            using (var db = DbConnection)
+            {
+                db.DeleteAll(typeof(SyncHistory));
+            }
+        }
+
+        public static List<SyncHistory> GetSyncHistory()
+        {
+            using (var db = DbConnection)
+            {
+                // Only first 500 entries
+                IEnumerable<SyncHistory> historyList = (from detail in db.Table<SyncHistory>()
+                                                       select detail).Take(500);
+                return historyList.OrderByDescending(x => x.SyncDate).ToList();
+            }
+        }
+
+        #endregion SyncHistory
     }
 }

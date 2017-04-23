@@ -411,17 +411,18 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dosya ve klasör taşıma
+    <value>• Dosya ve klasörleri taşıma
 • Dosya ve klasörleri yeniden adlandırma
-• Klasörleri ZIP dosyası olarak indirme
-• Birden çok dosya ve klasörü seçebilme
-• Dosya ve klasörleri açılış sayfasına ekleyebilme
-• Açılışta kimlik doğrulaması için Windows Hello kullanabilme
-• Kendinden imzalı SSL sertifikalarını kullanabilme
-• Listede klasör boyutunu görebilme
-• Dosya etkinleştirme işlemleri
-• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanabilme
-• Güvenlik iyileştirmeleri ve hata düzeltmeleri
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Listede klasör boyutunu görüntüleme
+• Dosya etkinleştirmeyi işleme
+• Kullanıcı bilgilerini saklamak için PasswordVault kullanımı
+• Güvenlik geliştirmeleri ve hata ayıklamaları
 • Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -435,6 +436,15 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Eşitle</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Yerel dosya korunsun</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Uzak dosya korunsun</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Sertifika yayıncısı geçersiz ya da hatalı. Gene de bağlantı kurulsun mu?
@@ -450,8 +460,56 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
   <data name="Hint" xml:space="preserve">
     <value>İpucu</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Çakışmalara dikkat edin!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Uzak ve yerel klasörler boş değil. Bu durum hangi dosyaların doğru olduğu bilinemeyeceğinden pek çok çakışmaya yol açabilir.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Eşitleme başlatıldı!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Eşitleme art alanda yürütülecek ve işlemin tamamlandığı bildirilecek.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Hizmet geçici olarak kullanılamıyor (genellikle kısa süreli bakım çalışmaları nedeniyle).
 Lütfen bir süre sonra yeniden deneyin.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Dosya hem yerel hem uzak klasörde değiştirilmiş. Hangisi korunsun?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Dosya hem yerel hem uzak klasörde oluşturulmuş. Hangisi korunsun?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Dosya yerel klasörden silinmiş ve uzak klasörde değiştirilmiş. Hangisi korunsun?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Çakışma</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Dosya uzak klasörden silinmiş ve yerel klasörde değiştirilmiş. Hangisi korunsun?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>{0} klasörünün eşitlenmesi {1} değişiklik ve {2} çakışma sorunu ile tamamlandı.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>{0} klasörünün eşitlenmesi {1} değişiklik ile tamamlandı.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Eşitleme tamamlandı</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Uygulama duraklatıldığından {0} klasörünün eşitlenmesi durduruldu.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Eşitleme duraklatıldı</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Dosyaların yüklenmesini istediğiniz klasörü seçin.</value>
   </data>
 </root>

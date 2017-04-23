@@ -412,18 +412,19 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Przenosić pliki i foldery
-• Zmieniać nazwy plików i folderów
-• Pobierać foldery jako plik zip
-• Wybierać wiele plików i folderów
-• Przypinać pliki i folderu do ekranu domowego
-• Używać Windows Hello do uwierzytelnienia aplikacji na starcie
-• Używać własnopodpisanych certyfikatów
-• Pokazywać rozmiar folderów na liście
-• Utrzymywać aktywację pliku
-• Używać krypty haseł do przechowywania poświqadczeń użytkownika
-• Wzmocnienie bezpieczeństwa i poprawa błędów
-• Nowa i bardziej stabilna biblioteka WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authentificate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Handle file activation
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
@@ -436,6 +437,15 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignoruj błędnie samopodpisane certyfikaty. Pozwala to na użycie błędnych lub niewłaściwych certyfikatów SSL. Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Jednostka certyfikująca jest błędna lub niepoprawna. Połączyć na pewno?
@@ -451,8 +461,56 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
   <data name="Hint" xml:space="preserve">
     <value>Wskazówka</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Beware of conflicts!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Usługa tymczasowo niedostępna (najczęściej przed krótkie prace serwisowe)
 Proszę spróbować ponownie później,</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflict: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
   </data>
 </root>

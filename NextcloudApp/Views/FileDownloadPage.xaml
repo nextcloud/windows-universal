@@ -7,7 +7,7 @@
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:NextcloudApp.Behaviors"
-    x:Class="NextcloudApp.Views.SingleFileDownloadPage"
+    x:Class="NextcloudApp.Views.FileDownloadPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
 

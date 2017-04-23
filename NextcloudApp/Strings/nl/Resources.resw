@@ -412,16 +412,17 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Verplaatsen bestanden en mappen
-• hernoemen bestanden en mappen
-• Downloaden directories als zip-bestand 
-• Selecteer meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan het startscherm
-• Gebruik Windows Hello om te authenticeren bij start app
-• Toestaan self-signed SSL certificaten
-• Tonen mapomvang in overzicht
-• Behandelen bestandsactivering
-• Gebruik de PasswordVault om iinloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
+• Hernoemen bestanden en mappen
+• Handmatige synchronisatie van mappen
+• Downloaden mappen als zip-bestand
+• Selecteren meerdere bestanden en mappen
+• Vastprikken bestanden en mappen aan startscherm
+• Gebruiken Windows Hello om te authenticeren bij starten app
+• Toestaan van self-signed SSL certificaten
+• Tonen mapgrootte in lijst
+• Afhandelen bestandsactivering
+• Gebruiken PasswordVault om inloggegevens op te slaan
+• Security verbeteringen &amp; bug fixes
 • Nieuwe en meer stabiele WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -435,6 +436,15 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;Man-in-the-middle (mitm)&apos;  aanvallen!</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchroniseren</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Voorkeur lokaal bestand</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Voorkeur extern bestand</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
@@ -450,8 +460,56 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Let op conflicten!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronisatie is getriggerd!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronisatie vindt plaats in de achtergrond. Je krijgt een melding als die klaar is.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service tijdelijk niet beschikbaar (gewoonlijk wegens korte termijn onderhoud)
 Probeer het later opnieuw.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Bestand zowel lokaal als extern gewijzigd. Welke heeft je voorkeur?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Bestand zowel lokaal als extern aangemaakt - wat is het juiste?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Bestand lokaal verwijderd, maar extern gewijzigd. Wat heeft je voorkeur?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflict: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Bestand extern verwijderd, maar lokaal gewijzigd. Wat heeft je voorkeur?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronisatie van map {0} geëindigd met {1} wijziginen en {2} fouten of conflicten.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronisatie van map {0} geëindigd met {1} wijzigingen.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronisatie is beëindigd</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronisatie van map {0} werd gestopt door dat de app is afgebroken.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronisatie onderbroken</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Kies de map waar je de bestanden naar wilt uploaden</value>
   </data>
 </root>

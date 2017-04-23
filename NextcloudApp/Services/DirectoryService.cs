@@ -26,29 +26,9 @@ namespace NextcloudApp.Services
             _groupedFilesAndFolders = new ObservableGroupingCollection<string, FileOrFolder>(FilesAndFolders);
             _groupedFolders = new ObservableGroupingCollection<string, FileOrFolder>(Folders);
 
-            switch (SettingsService.Instance.LocalSettings.GroupMode)
-            {
-                case GroupMode.GroupByNameAscending:
-                    GroupByNameAscending();
-                    break;
-                case GroupMode.GroupByNameDescending:
-                    GroupByNameDescending();
-                    break;
-                case GroupMode.GroupByDateAscending:
-                    GroupByDateAscending();
-                    break;
-                case GroupMode.GroupByDateDescending:
-                    GroupByDateDescending();
-                    break;
-                case GroupMode.GroupBySizeAscending:
-                    GroupBySizeAscending();
-                    break;
-                case GroupMode.GroupBySizeDescending:
-                    GroupBySizeDescending();
-                    break;
-                default:
-                    break;
-            }
+            // Arrange for the first time, so that the collections get filled.
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -73,9 +53,38 @@ namespace NextcloudApp.Services
         private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
         private bool _isSorting;
         private bool _continueListing;
+        private bool _isSelecting;
+        private string _selectionMode;
 
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
+
+        private void SortList()
+        {
+            switch (SettingsService.Instance.LocalSettings.GroupMode)
+            {
+                case GroupMode.GroupByNameAscending:
+                    GroupByNameAscending();
+                    break;
+                case GroupMode.GroupByNameDescending:
+                    GroupByNameDescending();
+                    break;
+                case GroupMode.GroupByDateAscending:
+                    GroupByDateAscending();
+                    break;
+                case GroupMode.GroupByDateDescending:
+                    GroupByDateDescending();
+                    break;
+                case GroupMode.GroupBySizeAscending:
+                    GroupBySizeAscending();
+                    break;
+                case GroupMode.GroupBySizeDescending:
+                    GroupBySizeDescending();
+                    break;
+                default:
+                    break;
+            }
+        }
 
         public void GroupByNameAscending()
         {
@@ -143,16 +152,29 @@ namespace NextcloudApp.Services
             SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
+        public void ToggleSelectionMode()
+        {
+            IsSelecting = IsSelecting ? false : true;
+        }
+
         private static string GetSizeHeader(ResourceInfo fileOrFolder)
         {
-            var size = fileOrFolder.Size;
-            string[] sizes = { "B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
-            var order = 0;
-            while (size >= 1024 && ++order < sizes.Length)
+            var sizeMb = fileOrFolder.Size / 1024f / 1024f;
+
+            long[] sizesValuesMb = { 1, 5, 10, 25, 50, 100, 250, 500, 1024, 5120, 10240, 102400, 1048576 };
+            string[] sizesDisplay = { "<1MB", ">1MB", ">5MB", ">10MB", ">25MB", ">50MB", ">100MB", ">250MB", ">500MB", ">1GB", ">5GB", ">10GB", ">100GB", ">1TB" };
+
+            var index = 0;
+
+            for (int i = 0; i < sizesValuesMb.Length; i++)
             {
-                size = size / 1024;
+                if (sizeMb > sizesValuesMb[i])
+                    index++;
+                else
+                    break;
             }
-            return sizes[order];
+
+            return sizesDisplay[index];
         }
 
         public async Task Refresh()
@@ -168,7 +190,8 @@ namespace NextcloudApp.Services
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
         {
             var client = await ClientService.GetClient();
-            if (client == null)
+
+            if (client == null || IsSelecting)
             {
                 return;
             }
@@ -201,7 +224,18 @@ namespace NextcloudApp.Services
 
                     if (item.IsDirectory())
                     {
-                        Folders.Add(new FileOrFolder(item));
+                        if (RemoveResourceInfos != null)
+                        {
+                            int index = RemoveResourceInfos.FindIndex(
+                                delegate (ResourceInfo res)
+                                {
+                                    return res.Path.Equals(item.Path, StringComparison.Ordinal);
+                                });
+                            if (index == -1)
+                            {
+                                Folders.Add(new FileOrFolder(item));
+                            }
+                        }
                     }
                 }
             }
@@ -224,6 +258,8 @@ namespace NextcloudApp.Services
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            SortList();
         }
 
         private async void DownloadPreviewImages()
@@ -286,9 +322,41 @@ namespace NextcloudApp.Services
                     return;
                 }
                 _isSorting = value;
+                SelectionMode = _isSorting ? "None" : "Single";
                 OnPropertyChanged();
             }
         }
+
+        public string SelectionMode
+        {
+            get { return _selectionMode; }
+            set
+            {
+                if (_selectionMode == value)
+                {
+                    return;
+                }
+                _selectionMode = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsSelecting
+        {
+            get { return _isSelecting; }
+            set
+            {
+                if (_isSelecting == value)
+                {
+                    return;
+                }
+                _isSelecting = value;
+                SelectionMode = _isSelecting ? "Multiple" : "Single";
+                OnPropertyChanged();
+            }
+        }
+
+        public List<ResourceInfo> RemoveResourceInfos { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -347,6 +415,29 @@ namespace NextcloudApp.Services
             var success = await client.Delete(path);
             await StartDirectoryListing();
             return success;
+        }
+
+        public async Task<bool> DeleteSelected(List<ResourceInfo> resourceInfos)
+        {
+            var client = await ClientService.GetClient();
+            if (client == null)
+            {
+                return false;
+            }
+
+            foreach (var resourceInfo in resourceInfos)
+            {
+                var path = resourceInfo.ContentType.Equals("dav/directory")
+                ? resourceInfo.Path
+                : resourceInfo.Path + "/" + resourceInfo.Name;
+                var success = await client.Delete(path);
+                if (!success)
+                {
+                    return success;
+                }
+            }
+            await StartDirectoryListing();
+            return true;
         }
 
         public async Task<bool> Rename(string oldName, string newName)

@@ -27,8 +27,9 @@ Please report all issues over here: https://github.com/nextcloud/windows-univers
 
 ## Translation / Localization
 
-Do you want the Nextcloud app in your native language? 
-Help translating the app on [Transifex](https://www.transifex.com/nextcloud/nextcloud/windows-universal/)
+Do you want the Nextcloud app in your native language?    
+Help translating the app on [Transifex](https://www.transifex.com/nextcloud/nextcloud/windows-universal/)    
+Make sure you are logged in to your Transifex account, otherwise you will get a 403 error page asking you to login first. :smirk:
 
 ### :exclamation: We kindly ask you to only change the English strings `/Strings/en/Resources.resw` within the repository  :exclamation:
 All other languages are translated on [Transifex](https://www.transifex.com/nextcloud/nextcloud/windows-universal/). 

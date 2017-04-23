@@ -103,7 +103,7 @@
                     IsHoldingEnabled="True" 
                     ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
+                    SelectionMode="{Binding Directory.SelectionMode}"
                     Padding="0,2,0,2"
                     ContinuumNavigationTransitionInfo.ExitElementContainer="True"
                     Header="Choose folder">

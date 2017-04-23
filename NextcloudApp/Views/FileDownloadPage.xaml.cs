@@ -2,9 +2,9 @@
 
 namespace NextcloudApp.Views
 {
-    public sealed partial class SingleFileDownloadPage : SessionStateAwarePage
+    public sealed partial class FileDownloadPage : SessionStateAwarePage
     {
-        public SingleFileDownloadPage()
+        public FileDownloadPage()
         {
             InitializeComponent();
         }
