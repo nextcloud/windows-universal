@@ -12,6 +12,7 @@
         Verification,
         ShareTarget,
         FileSavePicker,
-        SyncConflict
+        SyncConflict,
+        SyncStatus
     }
 }

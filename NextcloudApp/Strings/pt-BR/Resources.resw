@@ -436,9 +436,6 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflitos de sincronização</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Sincronizar</value>
   </data>
@@ -461,9 +458,6 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Erros de sincronização</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outra aplicação) e isso deve ser resolvido após a próxima sincronização.</value>

@@ -24,6 +24,8 @@
             <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>
             <converter:IsGlyphToVisibilityConverter x:Key="IsGlyphToVisibilityConverter"/>
             <converter:ConflictTypeToStringConverter x:Key="ConflictTypeToStringConverter"/>
+            <converter:SyncInfoStoragePathConverter x:Key="SyncInfoStoragePathConverter" />
+            <converter:ConflictTypeToForegroundConverter x:Key="ConflictTypeToForegroundConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />
