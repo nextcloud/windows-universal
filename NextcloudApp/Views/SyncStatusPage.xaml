@@ -17,7 +17,7 @@
                     <TextBlock Margin="48,0,0,0" Text="{Binding}" />
                 </DataTemplate>
             </Pivot.HeaderTemplate>
-            <PivotItem x:Uid="SynchronizationStatus"  Header="" Margin="0">
+            <PivotItem x:Uid="SynchronizationFolders"  Header="" Margin="0">
                 <ListView Grid.Row="1" Name="StatusListView" ItemsSource="{Binding FolderSyncList}" SelectionMode="None" 
                                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                     <ListView.ItemTemplate>
@@ -42,7 +42,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            <PivotItem x:Uid="SynchronizationHistory" Header="">
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationHistory" Header="" Margin="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
