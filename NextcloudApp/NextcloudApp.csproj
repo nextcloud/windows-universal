@@ -204,6 +204,7 @@
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
+    <Compile Include="ViewModels\ShareTargetPageViewModel.cs" />
     <Compile Include="ViewModels\SyncStatusPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
@@ -237,6 +238,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShareTargetPage.xaml.cs">
+      <DependentUpon>ShareTargetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SyncStatusPage.xaml.cs">
       <DependentUpon>SyncStatusPage.xaml</DependentUpon>
@@ -322,6 +326,10 @@
     <Page Include="Views\MenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShareTargetPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SyncStatusPage.xaml">
       <Generator>MSBuild:Compile</Generator>
