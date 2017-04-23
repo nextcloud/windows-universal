@@ -437,9 +437,6 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflits de synchronisation</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchroniser</value>
   </data>
@@ -462,9 +459,6 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indice</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Erreurs de synchronisation</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>Liste des erreurs qui ont survenues lors de la synchronisation. Ceux-ci devraient être des problèmes temporaires (par exemple un fichier qui a été ouvert par une autre application) et devraient disparaître après la prochaine synchronisation.</value>

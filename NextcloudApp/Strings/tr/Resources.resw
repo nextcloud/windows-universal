@@ -437,9 +437,6 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Eşitleme Çakışmaları</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Eşitle</value>
   </data>
@@ -462,9 +459,6 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
   </data>
   <data name="Hint" xml:space="preserve">
     <value>İpucu</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Eşitleme Sorunları</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>

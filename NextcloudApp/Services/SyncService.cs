@@ -37,30 +37,39 @@ namespace NextcloudApp.Services
             {
                 return false;
             }
+
             try
             {
                 client = await ClientService.GetClient();
+
                 if (client == null)
                 {
                     // ERROR
                     throw new Exception("Error creating webdav client");
                 }
+
                 int changedCount = 0;
                 List<SyncInfoDetail> oldList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
                 Debug.WriteLine("Sid List before Sync: ");
+
                 foreach (SyncInfoDetail detail in oldList)
                 {
                     Debug.WriteLine("Detail: " + detail.ToString());
                 }
-                SyncInfoDetail sid = SyncDbUtils.GetSyncInfoDetail(resourceInfo, folderSyncInfo);
+
+                var sid = SyncDbUtils.GetSyncInfoDetail(resourceInfo, folderSyncInfo);
                 var errorCount = 0;
+
                 try
                 {
                     if (sid == null)
                     {
-                        sid = new SyncInfoDetail(folderSyncInfo);
-                        sid.Path = resourceInfo.Path;
-                        sid.FilePath = baseFolder.Path;
+                        sid = new SyncInfoDetail(folderSyncInfo)
+                        {
+                            Path = resourceInfo.Path,
+                            FilePath = baseFolder.Path,
+                        };
+
                         SyncDbUtils.SaveSyncInfoDetail(sid);
                     }
                     else
@@ -68,7 +77,9 @@ namespace NextcloudApp.Services
                         sidList.Remove(sid);
                         sid.Error = null;
                     }
+
                     changedCount = await SyncFolder(resourceInfo, baseFolder);
+
                     foreach (SyncInfoDetail detail in oldList)
                     {
                         if (!sidList.Contains(detail) && detail.FilePath.StartsWith(baseFolder.Path))
@@ -85,21 +96,24 @@ namespace NextcloudApp.Services
                     sid.Error = e.Message;
                     errorCount++;
                 }
+
                 SyncDbUtils.SaveSyncInfoDetail(sid);
                 List<SyncInfoDetail> newSidList = SyncDbUtils.GetAllSyncInfoDetails(folderSyncInfo);
                 Debug.WriteLine("Sid List after Sync: ");
+
                 foreach (SyncInfoDetail detail in newSidList)
                 {
                     Debug.WriteLine("Detail: " + detail.ToString());
                 }
+
                 ToastNotificationService.ShowSyncFinishedNotification(folderSyncInfo.Path, changedCount, errorCount);
                 return errorCount == 0;
-            } finally
+            }
+            finally
             {
                 SyncDbUtils.UnlockFolderSyncInfo(folderSyncInfo);
             }
         }
-
 
         /// <summary>
         /// Folder Synchronization
@@ -158,9 +172,13 @@ namespace NextcloudApp.Services
                                     // Create sid and local folder
                                     Debug.WriteLine("Sync folder (create locally) " + subInfo.Path);
                                     subFolder = await folder.CreateFolderAsync(subInfo.Name);
-                                    SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo);
-                                    syncInfoDetail.Path = subInfo.Path;
-                                    syncInfoDetail.FilePath = subFolder.Path;
+
+                                    SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo)
+                                    {
+                                        Path = subInfo.Path,
+                                        FilePath = subFolder.Path
+                                    };
+
                                     SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
                                     changesCount = changesCount + await SyncFolder(subInfo, subFolder);
                                     // syncTasks.Add(SyncFolder(subInfo, subFolder));
@@ -173,9 +191,13 @@ namespace NextcloudApp.Services
                                 {
                                     // Both new
                                     Debug.WriteLine("Sync folder (create both) " + subInfo.Path);
-                                    SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo);
-                                    syncInfoDetail.Path = subInfo.Path;
-                                    syncInfoDetail.FilePath = subFolder.Path;
+
+                                    SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo)
+                                    {
+                                        Path = subInfo.Path,
+                                        FilePath = subFolder.Path
+                                    };
+
                                     SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
                                 }
                                 synced.Add(subFolder);
@@ -222,12 +244,17 @@ namespace NextcloudApp.Services
                             // Create sid and remotefolder
                             string newPath = info.Path + localFolder.Name;
                             Debug.WriteLine("Sync folder (create remotely) " + newPath);
+
                             if (await client.CreateDirectory(newPath))
                             {
                                 ResourceInfo subInfo = await client.GetResourceInfo(info.Path, localFolder.Name);
-                                SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo);
-                                syncInfoDetail.Path = subInfo.Path;
-                                syncInfoDetail.FilePath = localFolder.Path;
+
+                                SyncInfoDetail syncInfoDetail = new SyncInfoDetail(folderSyncInfo)
+                                {
+                                    Path = subInfo.Path,
+                                    FilePath = localFolder.Path
+                                };
+
                                 SyncDbUtils.SaveSyncInfoDetail(syncInfoDetail);
                                 changesCount = changesCount + await SyncFolder(subInfo, localFolder);
                                 //syncTasks.Add(SyncFolder(subInfo, localFolder));                                

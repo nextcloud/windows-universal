@@ -437,9 +437,6 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronize</value>
   </data>
@@ -462,10 +459,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Ábending</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
-  </data>
+  </data> 
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>

@@ -52,6 +52,15 @@ namespace NextcloudApp.ViewModels
 
             ExtraCommands = new ObservableCollection<MenuItem>
             {
+                 new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SynchronizationStatus/Header"),
+                    FontIcon = "\uE895",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.SyncStatus),
+                        () => CanNavigateToPage(PageToken.SyncStatus)
+                    )
+                },
                 new MenuItem
                 {
                     DisplayName = resourceLoader.GetString("Settings"),
@@ -60,16 +69,7 @@ namespace NextcloudApp.ViewModels
                         () => NavigateToPage(PageToken.Settings),
                         () => CanNavigateToPage(PageToken.Settings)
                     )
-                },
-                new MenuItem
-                {
-                    DisplayName = resourceLoader.GetString("SynchronizationConflicts/Header"),
-                    FontIcon = "\uEA6A",
-                    Command = new DelegateCommand(
-                        () => NavigateToPage(PageToken.SyncConflict),
-                        () => CanNavigateToPage(PageToken.SyncConflict)
-                    )
-                },
+                },               
             };
             
             SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>
