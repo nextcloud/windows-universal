@@ -20,6 +20,8 @@ namespace NextcloudApp.ViewModels
         public ObservableCollection<SyncHistory> SyncHistoryList { get; private set; }
         public ObservableCollection<SyncInfoDetail> ConflictList { get; private set; }
         public ObservableCollection<SyncInfoDetail> ErrorList { get; private set; }
+        public ObservableCollection<FolderSyncInfo> FolderSyncList { get; private set; }
+        
         public ICommand FixConflictByLocalCommand { get; private set; }
         public ICommand FixConflictByRemoteCommand { get; private set; }
         public ICommand ClearSyncHistoryCommand { get; private set; }
@@ -39,6 +41,7 @@ namespace NextcloudApp.ViewModels
             SyncHistoryList = new ObservableCollection<SyncHistory>();
             ConflictList = new ObservableCollection<SyncInfoDetail>();
             ErrorList = new ObservableCollection<SyncInfoDetail>();
+            FolderSyncList = new ObservableCollection<FolderSyncInfo>();
 
             List<SyncHistory> history = SyncDbUtils.GetSyncHistory();
             history.ForEach(x => SyncHistoryList.Add(x));
@@ -48,6 +51,8 @@ namespace NextcloudApp.ViewModels
 
             List<SyncInfoDetail> errors = SyncDbUtils.GetErrors();
             errors.ForEach(x => ErrorList.Add(x));
+            List<FolderSyncInfo> fsis = SyncDbUtils.GetAllFolderSyncInfos();
+            fsis.ForEach(x => FolderSyncList.Add(x));
         }
 
 
