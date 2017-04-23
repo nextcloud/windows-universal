@@ -29,77 +29,66 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <TextBlock Text="Settings" x:Uid="Settings2" Margin="48,0,0,0" VerticalAlignment="Center"/>
 
-        <Grid Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <StackPanel Orientation="Vertical" Margin="12">
+                <!--
+                <ToggleSwitch 
+                    x:Uid="ShowGrouping"
+                    Header="Show file and folder list grouping header"
+                    Margin="0,12"
+                    IsOn="{Binding Settings.ShowFileAndFolderGroupingHeader, Mode=TwoWay}"/>
+                -->
 
-            <ScrollViewer Grid.Row="0">
-                <StackPanel Orientation="Vertical" Margin="12">
-                    <!--
-                    <ToggleSwitch 
-                        x:Uid="ShowGrouping"
-                        Header="Show file and folder list grouping header"
-                        Margin="0,12"
-                        IsOn="{Binding Settings.ShowFileAndFolderGroupingHeader, Mode=TwoWay}"/>
-                    -->
+                <ComboBox 
+                    Header="Download preview images"
+                    x:Uid="DownloadPreviewImages"
+                    ItemsSource="{Binding PreviewImageDownloadModes}"
+                    SelectedIndex="{Binding PreviewImageDownloadModesSelectedIndex, Mode=TwoWay}"
+                    Margin="0,12"/>
 
-                    <ComboBox 
-                        Header="Download preview images"
-                        x:Uid="DownloadPreviewImages"
-                        ItemsSource="{Binding PreviewImageDownloadModes}"
-                        SelectedIndex="{Binding PreviewImageDownloadModesSelectedIndex, Mode=TwoWay}"
-                        Margin="0,12"/>
+                <ToggleSwitch 
+                    x:Uid="UseWindowsHello"
+                    Header="Windows Hello authentication"
+                    Margin="0,12"
+                    IsOn="{Binding UseWindowsHello, Mode=TwoWay}">
+                    <interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Toggled">
+                            <Core:CallMethodAction TargetObject="{Binding}" MethodName="UseWindowsHelloToggled"></Core:CallMethodAction>
+                        </Core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ToggleSwitch>
 
-                    <ToggleSwitch 
-                        x:Uid="UseWindowsHello"
-                        Header="Windows Hello authentication"
-                        Margin="0,12"
-                        IsOn="{Binding UseWindowsHello, Mode=TwoWay}">
-                        <interactivity:Interaction.Behaviors>
-                            <Core:EventTriggerBehavior EventName="Toggled">
-                                <Core:CallMethodAction TargetObject="{Binding}" MethodName="UseWindowsHelloToggled"></Core:CallMethodAction>
-                            </Core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
-                    </ToggleSwitch>
+                <ToggleSwitch 
+                    x:Uid="IgnoreInvalidSelfSignedSslCertificates"
+                    Header="Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!"
+                    Margin="0,12"
+                    IsOn="{Binding IgnoreServerCertificateErrors, Mode=TwoWay}">
+                    <interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Toggled">
+                            <Core:CallMethodAction TargetObject="{Binding}" MethodName="IgnoreServerCertificateErrorsToggled"></Core:CallMethodAction>
+                        </Core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ToggleSwitch>
 
-                    <ToggleSwitch 
-                        x:Uid="IgnoreInvalidSelfSignedSslCertificates"
-                        Header="Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!"
-                        Margin="0,12"
-                        IsOn="{Binding IgnoreServerCertificateErrors, Mode=TwoWay}">
-                        <interactivity:Interaction.Behaviors>
-                            <Core:EventTriggerBehavior EventName="Toggled">
-                                <Core:CallMethodAction TargetObject="{Binding}" MethodName="IgnoreServerCertificateErrorsToggled"></Core:CallMethodAction>
-                            </Core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
-                    </ToggleSwitch>
-                    
-                    <Border 
-                        Margin="0,12" 
-                        Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
-                        Height="1" />
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
+                    Height="1" />
 
-                    <Button 
-                        x:Uid="ReseTthisApp"
-                        Content="Reset this app" 
-                        Margin="0,12"
-                        Command="{Binding ResetCommand}"/>
-                </StackPanel>
-            </ScrollViewer>
+                <Button 
+                    x:Uid="ReseTthisApp"
+                    Content="Reset this app" 
+                    Margin="0,12"
+                    Command="{Binding ResetCommand}"/>
 
-            <Border
-                Grid.Row="1" 
-                Margin="0,12" 
-                Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
-                Height="1" />
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
+                    Height="1" />
 
-            <StackPanel Grid.Row="2">
                 <TextBlock
                     Text="{Binding ServerVersion}"
                     Visibility="{Binding ServerVersion, Converter={StaticResource NullToVisibilityConverter}}"
@@ -111,7 +100,7 @@
                     Margin="0,0,0,12"
                     HorizontalAlignment="Center"/>
             </StackPanel>
-        </Grid>
+        </ScrollViewer>
     </Grid>
 
 </prismMvvm:SessionStateAwarePage>
