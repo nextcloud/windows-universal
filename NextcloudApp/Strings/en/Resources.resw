@@ -437,7 +437,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
+    <value>Conflicts</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronize</value>
@@ -463,7 +463,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Hint</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
+    <value>Errors</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
@@ -513,5 +513,17 @@ Please try again later.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronization suspended</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synchronization Status</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Local Path:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Path:</value>
   </data>
 </root>

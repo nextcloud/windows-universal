@@ -19,6 +19,8 @@ namespace NextcloudApp.ViewModels
         private readonly DialogService _dialogService;
         public ObservableCollection<SyncInfoDetail> ConflictList { get; private set; }
         public ObservableCollection<SyncInfoDetail> ErrorList { get; private set; }
+        public ObservableCollection<FolderSyncInfo> FolderSyncList { get; private set; }
+        
         public ICommand FixConflictByLocalCommand { get; private set; }
         public ICommand FixConflictByRemoteCommand { get; private set; }
         public SyncConflictPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
@@ -32,10 +34,13 @@ namespace NextcloudApp.ViewModels
             FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote);
             ConflictList = new ObservableCollection<SyncInfoDetail>();
             ErrorList = new ObservableCollection<SyncInfoDetail>();
+            FolderSyncList = new ObservableCollection<FolderSyncInfo>();
             List<SyncInfoDetail> conflicts = SyncDbUtils.GetConflicts();
             conflicts.ForEach(x => ConflictList.Add(x));
             List<SyncInfoDetail> errors = SyncDbUtils.GetErrors();
             errors.ForEach(x => ErrorList.Add(x));
+            List<FolderSyncInfo> fsis = SyncDbUtils.GetAllFolderSyncInfos();
+            fsis.ForEach(x => FolderSyncList.Add(x));
         }
         
 

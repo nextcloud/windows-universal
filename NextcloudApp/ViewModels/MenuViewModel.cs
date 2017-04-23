@@ -63,7 +63,7 @@ namespace NextcloudApp.ViewModels
                 },
                 new MenuItem
                 {
-                    DisplayName = resourceLoader.GetString("SynchronizationConflicts/Header"),
+                    DisplayName = resourceLoader.GetString("SynchronizationPage"),
                     FontIcon = "\uEA6A",
                     Command = new DelegateCommand(
                         () => NavigateToPage(PageTokens.SyncConflict),

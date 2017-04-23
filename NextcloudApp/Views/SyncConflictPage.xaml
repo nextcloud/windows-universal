@@ -10,7 +10,6 @@
     x:Class="NextcloudApp.Views.SyncConflictPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
-
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
         <Pivot>
             <Pivot.HeaderTemplate>
@@ -18,7 +17,33 @@
                     <TextBlock Margin="48,0,0,0" Text="{Binding}" />
                 </DataTemplate>
             </Pivot.HeaderTemplate>
-            <PivotItem x:Uid="SynchronizationConflicts"  Header="">
+            <PivotItem x:Uid="SynchronizationStatus"  Header="" Margin="0">
+                <ListView Grid.Row="1" Name="StatusListView" ItemsSource="{Binding FolderSyncList}" SelectionMode="None" 
+                                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Uid="SyncPathRemote" Text="" Grid.Column="0" Grid.Row="0" Margin="0,0,4,0" />
+                                <TextBlock x:Uid="SyncPathLocal" Text="" Grid.Column="0" Grid.Row="1" Margin="0,0,4,0" />
+                                <TextBlock Text="{Binding Path}" Grid.Column="1" Grid.Row="0" />
+                                <TextBlock 
+                                    DataContext="{Binding AccessListKey, Converter={StaticResource SyncInfoStoragePathConverter}}" 
+                                    Text="{Binding AsyncValue}"
+                                    Grid.Column="1" Grid.Row="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationConflicts"  Header="" Margin="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -54,13 +79,13 @@
                     </CommandBar>
                 </Grid>                
             </PivotItem>
-            <PivotItem x:Uid="SynchronizationErrors"  Header="">
+            <PivotItem x:Uid="SynchronizationErrors"  Header="" Margin="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" />
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4" />
                     <ListView Grid.Row="1" Name="ErrorListView" ItemsSource="{Binding ErrorList}" SelectionMode="None" 
                                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                         <ListView.ItemTemplate>
