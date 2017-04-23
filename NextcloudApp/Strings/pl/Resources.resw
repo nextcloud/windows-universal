@@ -438,9 +438,6 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignoruj błędnie samopodpisane certyfikaty. Pozwala to na użycie błędnych lub niewłaściwych certyfikatów SSL. Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronize</value>
   </data>
@@ -463,9 +460,6 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Wskazówka</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>

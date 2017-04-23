@@ -437,9 +437,6 @@
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de la autoridad certificadora SSL inválida o incorrecta. Tenga cuidado, no estará más protegido contra ataques de Hombre-en-medio (mitm)</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflictos de Sincronización</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Sincronizar</value>
   </data>
@@ -462,10 +459,7 @@
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errores de Sincronización</value>
-  </data>
+  </data> 
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>Lista de los errores que se presentaron durante la sincronización. Estos deberían ser temas temporales (ejem. un archivo que esté abierto por otra aplicación) y no deberían presentarse durante la siguiente sincronización. </value>
   </data>

@@ -434,9 +434,6 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronisations-Konflikte</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronisieren</value>
   </data>
@@ -459,9 +456,6 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronisations-Fehler</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value> Liste der bei der Synchronisation aufgetretenen Fehler. Es sollte sich um vorübergehende Fehler handeln (z.B. weil die Datei in einem anderen Programm geöffnet war) und mit der nächsten Synchronisation behoben sein.</value>

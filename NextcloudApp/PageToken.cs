@@ -10,6 +10,6 @@
         FileUpload,
         MoveFileOrFolder,
         Verification,
-        SyncConflict
+        SyncStatus
     }
 }

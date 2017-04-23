@@ -133,6 +133,7 @@
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
     <Compile Include="Constants\ResourceConstants.cs" />
+    <Compile Include="Converter\ConflictTypeToForegroundConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Models\FileInfoPageParameters.cs" />
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
     <Compile Include="Models\SyncConflict.cs" />
+    <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
@@ -199,7 +201,7 @@
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
-    <Compile Include="ViewModels\SyncConflictPageViewModel.cs" />
+    <Compile Include="ViewModels\SyncStatusPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Compile Include="Views\FileUploadPage.xaml.cs">
@@ -230,8 +232,8 @@
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SyncConflictPage.xaml.cs">
-      <DependentUpon>SyncConflictPage.xaml</DependentUpon>
+    <Compile Include="Views\SyncStatusPage.xaml.cs">
+      <DependentUpon>SyncStatusPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VerificationPage.xaml.cs">
       <DependentUpon>VerificationPage.xaml</DependentUpon>
@@ -310,7 +312,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SyncConflictPage.xaml">
+    <Page Include="Views\SyncStatusPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -437,9 +437,6 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorera ogiltiga självsignerade SSL-certifikat. Detta gör det möjligt för ogiltig eller felaktig SSL certifikatutfärdare som ska användas. Var försiktig, du kommer inte att skyddas från man-in-the-middle (mitm) attacker längre!</value>
   </data>
-  <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Synchronization Conflicts</value>
-  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronize</value>
   </data>
@@ -462,9 +459,6 @@ Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attack
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Förslag</value>
-  </data>
-  <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Synchronization Errors</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>

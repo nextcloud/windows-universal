@@ -7,7 +7,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:behaviors="using:NextcloudApp.Behaviors"
-    x:Class="NextcloudApp.Views.SyncConflictPage"
+    x:Class="NextcloudApp.Views.SyncStatusPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
 
@@ -18,7 +18,36 @@
                     <TextBlock Margin="48,0,0,0" Text="{Binding}" />
                 </DataTemplate>
             </Pivot.HeaderTemplate>
-            <PivotItem x:Uid="SynchronizationConflicts"  Header="">
+            <PivotItem x:Uid="SynchronizationHistory" Header="">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView Name="HistoryListView" ItemsSource="{Binding SyncHistoryList}" SelectionMode="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" Margin="0,0,15,0" />
+                                        <TextBlock Text="{Binding Path}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+
+                    <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+                        <!-- Buttons for fix options -->
+                        <AppBarButton 
+                            Icon="Delete" 
+                            Label="Clear history" 
+                            x:Uid="SyncClearHistory"
+                            Command="{Binding ClearSyncHistoryCommand}"/>                       
+                    </CommandBar>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationConflicts" Header="">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

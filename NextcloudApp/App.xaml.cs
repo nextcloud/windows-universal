@@ -283,10 +283,10 @@ namespace NextcloudApp
                     case ToastNotificationService.SYNCACTION:
                         NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
                         break;
-                    // Open Conflict Page
+                    // Open Status Page
                     case ToastNotificationService.SYNCONFLICTACTION:
                         ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
-                        NavigationService.Navigate(PageToken.SyncConflict.ToString(), null);
+                        NavigationService.Navigate(PageToken.SyncStatus.ToString(), null);
                         break;
                 }
             }
