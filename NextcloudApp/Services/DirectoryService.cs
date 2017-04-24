@@ -6,23 +6,28 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Core;
 using Windows.Networking.Connectivity;
-using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Imaging;
 using NextcloudApp.Annotations;
 using NextcloudApp.Models;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
+using Windows.UI.Core;
 
 namespace NextcloudApp.Services
 {
     public class DirectoryService : INotifyPropertyChanged
     {
         private static DirectoryService _instance;
+        private readonly ObservableGroupingCollection<string, FileOrFolder> _groupedFilesAndFolders;
+        private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
+        private bool _isSorting;
+        private bool _continueListing;
+        private bool _isSelecting;
+        private string _selectionMode;
+        private CoreDispatcher _dispatcher;
 
         private DirectoryService()
         {
@@ -32,6 +37,8 @@ namespace NextcloudApp.Services
             // Arrange for the first time, so that the collections get filled.
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+
+            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -51,14 +58,6 @@ namespace NextcloudApp.Services
 
         public ObservableCollection<FileOrFolder> FilesAndFolders { get; } = new ObservableCollection<FileOrFolder>();
         public ObservableCollection<FileOrFolder> Folders { get; } = new ObservableCollection<FileOrFolder>();
-
-        private readonly ObservableGroupingCollection<string, FileOrFolder> _groupedFilesAndFolders;
-        private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
-        private bool _isSorting;
-        private bool _continueListing;
-        private bool _isSelecting;
-        private string _selectionMode;
-
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFilesAndFolders => _groupedFilesAndFolders.Items;
         public ObservableCollection<Grouping<string, FileOrFolder>> GroupedFolders => _groupedFolders.Items;
 
@@ -366,15 +365,21 @@ namespace NextcloudApp.Services
         [NotifyPropertyChangedInvocator]
         protected virtual async void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            /*
-            await Task.Factory.StartNew(() =>
+            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }, 
-            CancellationToken.None, 
-            TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-            TaskScheduler.Default).ConfigureAwait(false);
+            });
+
+            /*
+            await Task.Factory.StartNew(
+                () =>
+                {
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                }, 
+                CancellationToken.None, 
+                TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                TaskScheduler.Default
+            ).ConfigureAwait(false);
             */
         }
 

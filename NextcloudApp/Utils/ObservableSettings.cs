@@ -4,9 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Reflection;
 using System.ComponentModel;
-using System.Threading;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
 
@@ -20,10 +18,12 @@ namespace NextcloudApp.Utils
     {
         private readonly ApplicationDataContainer _applicationDataContainer;
         protected bool EnableRaisePropertyChanged = true;
+        private CoreDispatcher _dispatcher;
 
         public ObservableSettings(ApplicationDataContainer settings)
         {
             _applicationDataContainer = settings;
+            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -43,11 +43,22 @@ namespace NextcloudApp.Utils
 
             if (EnableRaisePropertyChanged)
             {
-                await Task.Factory.StartNew(() =>
+                await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-                }, CancellationToken.None, TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-                    TaskScheduler.Default).ConfigureAwait(false);
+                });
+                
+                /*
+                await Task.Factory.StartNew(
+                    () =>
+                    {
+                        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                    }, 
+                    CancellationToken.None, 
+                    TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                    TaskScheduler.Default
+                ).ConfigureAwait(false);
+                */
             }
 
             return true;
