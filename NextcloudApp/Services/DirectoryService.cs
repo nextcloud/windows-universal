@@ -200,7 +200,8 @@ namespace NextcloudApp.Services
 
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
             List<ResourceInfo> list = null;
-
+            path = Uri.EscapeDataString(path);
+            path = path.Replace("%2F", "/");
             try
             {
                 list = await client.List(path);
