@@ -415,10 +415,10 @@
 • Download directories as zip file 
 • Select multiple files and folders
 • Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
+• Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
 • Show folder size in list
-• Handle file activation
+• Share files with the app (share target)
 • Use the PasswordVault to store user credentials
 • Security improvements &amp; bug fixes
 • New and more stable WebDAV library</value>
@@ -435,11 +435,26 @@
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti mitm útokům.</value>
   </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Conflicts</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Errors</value>
+  </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronize</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Prefer local file</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Clear sync history</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Prefer remote file</value>
@@ -507,7 +522,19 @@ Prosím zkuste to znovu později.</value>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronization suspended</value>
   </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synchronization Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Local Path:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Path:</value>
+  </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Folders</value>
   </data>
 </root>
