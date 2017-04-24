@@ -284,7 +284,7 @@ namespace NextcloudClient
         {
             //var remoteShares = await ListOpenRemoteShare();
 
-            var url = new UrlBuilder(_url + "/remote.php/dav/files");
+            var url = new UrlBuilder(_url + "/remote.php/webdav");
             HttpResponseMessage response;
 
             var parameters = new Dictionary<string, string>
@@ -292,9 +292,10 @@ namespace NextcloudClient
                 {"data", "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>"}
             };
 
+            var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><d:getetag /><d:getcontenttype /><d:resourcetype /><oc:fileid /><oc:permissions /><oc:size /><d:getcontentlength /><nc:has-preview /><oc:tags /><oc:favorite /><oc:comments-unread /><oc:owner-display-name /><oc:share-types /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
             //var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
-            var content = "<?xml version=\"1.0\"?><d:propfind  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><oc:favorite /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></d:propfind>";
-            var request = new HttpRequestMessage(new HttpMethod("PROPFIND"), url.ToUri());
+            //var content = "<?xml version=\"1.0\"?><d:propfind  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><oc:favorite /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></d:propfind>";
+            var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri());
             request.Content = new HttpStringContent(content, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/xml");
 
             var response2 = await _client.SendRequestAsync(request);

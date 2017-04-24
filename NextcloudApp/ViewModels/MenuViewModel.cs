@@ -50,8 +50,17 @@ namespace NextcloudApp.ViewModels
                 },
                 new MenuItem
                 {
-                    DisplayName = resourceLoader.GetString("Sharing"),
-                    FontIcon = "\uE72D",
+                    DisplayName = resourceLoader.GetString("Favorites"),
+                    FontIcon = "\uE734",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageTokens.SharesOut), // TODO
+                        () => CanNavigateToPage(PageTokens.SharesOut) // TODO
+                    )
+                },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SharingOut"),
+                    FontIcon = "\uF003",
                     Command = new DelegateCommand(
                         () => NavigateToPage(PageTokens.SharesOut),
                         () => CanNavigateToPage(PageTokens.SharesOut)
