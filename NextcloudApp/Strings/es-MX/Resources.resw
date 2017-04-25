@@ -411,19 +411,19 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover archivos y carpetas
+• Renombrar archivos y carpetas
+• Sincronización manual de carpetas
+• Descargar directorios como un arhivo .zip
+• Seleccionar multiples archivos y carpetas
+• Anclar archivos y carpetas a la pantalla de inicio
+• Usar Windows Hello para autenticar al iniciar la aplicación
+• Permitir certificados SSL auto firmados
+• Mostrar el tamañano de carpetas en la lista
+• Compartir archivos con la aplicación (comparitr el blanco)
+• Usar la Bóveda de Contraseñas para almacenar credenciales de usuario
+• Mejoras de seguridad y corrección de fallas
+• Una nueva y más estáble librería WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -438,16 +438,16 @@
     <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de la autoridad certificadora SSL inválida o incorrecta. Tenga cuidado, no estará más protegido contra ataques de Hombre-en-medio (mitm)</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Estatus de sincronización</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Histórico</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Conflictos</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Errores</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Sincronizar</value>
@@ -456,7 +456,7 @@
     <value>Preferir archivo local </value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Borrar histórico de sincronización</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Preferir archivo remoto</value>
@@ -524,18 +524,18 @@
     <value>La sincronización se ha suspendido</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Estatus de Sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Ruta Local:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Ruta de Nextcloud:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Favor de elegir la carpeta donde prefiera cargar los archivos</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Carpetas</value>
   </data>
 </root>

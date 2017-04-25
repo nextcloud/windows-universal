@@ -411,19 +411,19 @@
     <value>Обновить</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Перемещение файлов и каталогов
+• Переименовывание файлов и каталогов
+• Ручная сихнронизация каталогов
+• Загрузка каталогов в виде zip-файла 
+• Выбор множества файлов и каталогов
+• Закрепление файлоы или каталогов на начальном экране
+• Использование Windows Hello для аутентификации при запуске приложения
+• Поддержка самоподписанных сертификатов SSL
+• Показ размера каталога в списке
+• Открытие общего доступа при помощи приложения
+• Использование PasswordVault для хранения пользовательских реквизитов
+• Улушения безопасности и исправления ошибок
+• Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Введите PIN чтобы начать</value>
@@ -438,16 +438,16 @@
     <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Состояние синхронизации</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>История</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Конфликты</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Ошибки</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Синхронизировать</value>
@@ -456,7 +456,7 @@
     <value>Предпочесть локальный файл</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Очистить историю синхронизации</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Предпочесть файл с сервера</value>
@@ -525,18 +525,18 @@
     <value>Синхронизация приостановлена</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Состояние синхронизации</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Местный путь:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Путь Nextcloud:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Выберите каталог для загрузки файлов</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Каталоги</value>
   </data>
 </root>
