@@ -238,6 +238,10 @@ namespace NextcloudApp.Services
                                 Folders.Add(new FileOrFolder(item));
                             }
                         }
+                        else
+                        {
+                            Folders.Add(new FileOrFolder(item));
+                        }
                     }
                 }
             }
