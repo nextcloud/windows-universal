@@ -438,28 +438,28 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
     <value>Ignorer ugyldig selv-signert SSL sertifikater. Dette tillater bruk av ugyldige eller feil SSL sertifikater. Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep heretter.</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Synkroniseringsstatus</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Historikk</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Konflikter</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Feil</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Synkroniser</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Foretrekk lokal fil</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Tøm synkroniseringshistorikk</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Foretrekk fil som ikke er lokal</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Sertifikatet er ugyldig eller feil. Koble til uansett?
@@ -479,7 +479,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Se opp for konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
@@ -504,7 +504,7 @@ Vennligst prøv igjen senere.</value>
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -522,21 +522,21 @@ Vennligst prøv igjen senere.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Synkronisering utsatt</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Synkroniseringsstatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Lokal sti:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud-sti:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Velg mappen der du vil laste opp filene</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Mapper</value>
   </data>
 </root>

@@ -411,19 +411,19 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dateien und Ordner verschieben 
+• Dateien und Ordner umbenennen 
+• Manuelle Ordner-Synchronisation 
+• Ordner als ZIP-Datei herunterladen 
+• Mehrere Dateien und Ordner auswählen 
+• Dateien und Ordner am Startbildschirm anheften 
+• Nutze Windows Hello zur Authentifizierung beim App-Start 
+• Erlaube selbst signierte Zertifikate
+• Zeige die Ordgröße in der Liste an 
+• Teile dateien mit der App (Freigabeziel)
+• Benutze den PasswortVault um Benutzerberechtigungen zu speichern 
+• Sicherheits-Verbesserungen &amp; Fehler-Beseitigung 
+• Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>PIN um zu beginnen</value>
@@ -438,16 +438,16 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Synchronisations-Status</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Verlauf</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Konflikte</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Fehler</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Synchronisation</value>
@@ -456,7 +456,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Bevorzuge lokale Datei</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Lösche Synchronisations-Verlauf</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Bevorzuge entfernte Datei</value>
@@ -525,18 +525,18 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisation unterbrochen</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Synchronisations-Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Lokaler Pfad:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud-Pfad:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Ordner</value>
   </data>
 </root>

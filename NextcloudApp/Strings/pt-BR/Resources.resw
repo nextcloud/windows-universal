@@ -169,7 +169,7 @@
     <value>Tamanho (maior no topo)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Erro de aplicação</value>
+    <value>Erro de aplicativo</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>O aplicativo encontrou um problema. Pedimos desculpas pela inconveniência. Se você estava no meio de algo, a informação na qual estava trabalhando foi perdida.
@@ -410,19 +410,19 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover arquivos e pastas
+• Renomear arquivos e pastas
+• Sincronizar pastas manualmente
+• Baixar diretórios como arquivos zip 
+• Selecionar múltiplos arquivos e pastas
+• Destacar arquivos e pastas na tela inicial
+• Usar autenticação Hello Windows ao iniciar o aplicativo
+• Permitir certificados SSL auto assinados
+• Mostrar tamanho de pastas na lista
+• Compartilhar arquivos com o aplicativo (compartilhar alvo)
+• Usar o PasswordVault para armazenar as credenciais do usuário
+• Melhoria na segurança &amp; correção de erros
+• Nova biblioteca WebDAV mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Destacar no niciar</value>
@@ -437,16 +437,16 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Status da sincronização</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Histórico</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Conflitos</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Erros</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Sincronizar</value>
@@ -455,7 +455,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Preferir arquivo local</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Apagar histórico de sincronização</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Preferir arquivo remoto</value>
@@ -475,7 +475,7 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outra aplicação) e isso deve ser resolvido após a próxima sincronização.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outro aplicativo) e isso deve ser resolvido após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -524,18 +524,18 @@ Por favor tente mais tarde.</value>
     <value>A sincronização foi suspensa</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Status da sincronização</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Caminho local:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Caminho Nexcloud:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escolha a pasta para onde você quer enviar arquivos</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Pastas</value>
   </data>
 </root>
