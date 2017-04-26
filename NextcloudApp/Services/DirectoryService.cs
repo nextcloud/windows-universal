@@ -27,7 +27,7 @@ namespace NextcloudApp.Services
         private bool _continueListing;
         private bool _isSelecting;
         private string _selectionMode;
-        private CoreDispatcher _dispatcher;
+        //private CoreDispatcher _dispatcher;
 
         private DirectoryService()
         {
@@ -38,7 +38,7 @@ namespace NextcloudApp.Services
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
 
-            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -363,24 +363,24 @@ namespace NextcloudApp.Services
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual async void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            });
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-            /*
-            await Task.Factory.StartNew(
-                () =>
-                {
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-                }, 
-                CancellationToken.None, 
-                TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-                TaskScheduler.Default
-            ).ConfigureAwait(false);
-            */
+            //await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            //{
+            //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //});
+
+            //await Task.Factory.StartNew(
+            //    () =>
+            //    {
+            //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //    }, 
+            //    CancellationToken.None, 
+            //    TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+            //    TaskScheduler.Default
+            //).ConfigureAwait(false);
         }
 
         public void StopDirectoryListing()

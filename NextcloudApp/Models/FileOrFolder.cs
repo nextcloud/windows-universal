@@ -11,11 +11,11 @@ namespace NextcloudApp.Models
     public class FileOrFolder : ResourceInfo, INotifyPropertyChanged
     {
         private BitmapImage _thumbnail;
-        private CoreDispatcher _dispatcher;
+        //private CoreDispatcher _dispatcher;
 
         public FileOrFolder()
         {
-            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public FileOrFolder(ResourceInfo item)
@@ -48,24 +48,24 @@ namespace NextcloudApp.Models
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual async void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            });
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-            /*
-            await Task.Factory.StartNew(
-                () =>
-                {
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-                }, 
-                CancellationToken.None, 
-                TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
-                TaskScheduler.Default
-            ).ConfigureAwait(false);
-            */
+            //await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            //{
+            //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //});
+
+            //await Task.Factory.StartNew(
+            //    () =>
+            //    {
+            //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //    }, 
+            //    CancellationToken.None, 
+            //    TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+            //    TaskScheduler.Default
+            //).ConfigureAwait(false);
         }
     }
 }

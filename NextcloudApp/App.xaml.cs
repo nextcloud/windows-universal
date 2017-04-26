@@ -22,6 +22,10 @@ using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 using Microsoft.QueryStringDotNET;
 using Windows.UI.Notifications;
+using Windows.Foundation.Collections;
+using Windows.System;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.Storage;
 
 namespace NextcloudApp
 {
@@ -154,7 +158,38 @@ namespace NextcloudApp
         protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
             base.OnShareTargetActivated(args);
-            OnActivated(args);
+
+            OnShareTargetActivatedsyncAsync(args);
+        }
+
+        private async Task OnShareTargetActivatedsyncAsync(ShareTargetActivatedEventArgs args)
+        {
+            var fileTokens = new List<string>();
+            var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
+            StorageApplicationPermissions.FutureAccessList.Clear();
+            foreach (var storageItem in sorageItems)
+            {
+                if (storageItem.IsOfType(StorageItemTypes.File))
+                {
+                    var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                    fileTokens.Add(token);
+                }
+            }
+            args.ShareOperation.ReportDataRetrieved();
+
+            var options = new LauncherOptions()
+            {
+                TargetApplicationPackageFamilyName = Package.Current.Id.FamilyName
+            };
+
+            ValueSet inputData = new ValueSet
+            {
+                { "FileTokens", fileTokens.ToArray() }
+            };
+            Uri uri = new Uri("nextcloud:///share");
+            await Launcher.LaunchUriAsync(uri, options, inputData);
+
+            args.ShareOperation.ReportCompleted();
         }
 
         //TODO: Find out, why this is not working on WP10
@@ -180,8 +215,10 @@ namespace NextcloudApp
         {
             ActivatedEventArgs = args;
             await base.OnActivateApplicationAsync(args);
+
             // Remove unnecessary notifications whenever the app is used.
             ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+
             // Handle toast activation
             if (args is ToastNotificationActivatedEventArgs)
             {
@@ -202,24 +239,26 @@ namespace NextcloudApp
                         break;
                 }
             }
-            else if (args.Kind == ActivationKind.ShareTarget)
+            else if (args.Kind == ActivationKind.Protocol)
             {
-                if (args is ShareTargetActivatedEventArgs activatedEventArgs)
+                var protocolArgs = args as ProtocolActivatedEventArgs;
+                
+                if (protocolArgs.Uri.AbsolutePath == "/share")
                 {
-                    var sorageItems = await activatedEventArgs.ShareOperation.Data.GetStorageItemsAsync();
                     var pageParameters = new ShareTargetPageParameters()
                     {
-                        //ShareOperation = activatedEventArgs.ShareOperation,
                         ActivationKind = ActivationKind.ShareTarget,
                         FileTokens = new List<string>()
                     };
-                    StorageApplicationPermissions.FutureAccessList.Clear();
-                    foreach (var storageItem in sorageItems)
+
+                    if (protocolArgs.Data.ContainsKey("FileTokens"))
                     {
-                        var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
-                        pageParameters.FileTokens.Add(token);
+                        foreach (var token in protocolArgs.Data["FileTokens"] as string[])
+                        {
+                            pageParameters.FileTokens.Add(token);
+                        }
                     }
-                    activatedEventArgs.ShareOperation.ReportDataRetrieved();
+                    
                     CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
                 }
             }
