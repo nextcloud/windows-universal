@@ -411,19 +411,19 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dosya ve klasörleri taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Listede klasör boyutunu görüntüleme
+• Uygulama üzerinden dosya paylaşımı (hedef paylaşımı)
+• Kullanıcı bilgilerini saklamak için PasswordVault kullanımı
+• Güvenlik geliştirmeleri ve hata ayıklamaları
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
@@ -438,16 +438,16 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Eşitleme durumu</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Geçmiş</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Çakışmalar</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Hatalar</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Eşitle</value>
@@ -456,7 +456,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Yerel dosya korunsun</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Eşitleme geçmişini temizle</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Uzak dosya korunsun</value>
@@ -525,18 +525,18 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Eşitleme duraklatıldı</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Eşitleme Durumu</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Yerel Yol:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud Yolu:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Dosyaların yüklenmesini istediğiniz klasörü seçin.</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Klasörler</value>
   </data>
 </root>

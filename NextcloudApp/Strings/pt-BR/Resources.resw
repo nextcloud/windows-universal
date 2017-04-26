@@ -169,7 +169,7 @@
     <value>Tamanho (maior no topo)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Erro de aplicação</value>
+    <value>Erro de aplicativo</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>O aplicativo encontrou um problema. Pedimos desculpas pela inconveniência. Se você estava no meio de algo, a informação na qual estava trabalhando foi perdida.
@@ -475,7 +475,7 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outra aplicação) e isso deve ser resolvido após a próxima sincronização.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outro aplicativo) e isso deve ser resolvido após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
