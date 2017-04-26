@@ -31,7 +31,7 @@ namespace NextcloudApp.Utils
             _sortOrder = sortorder;
             _groupFunction = group;
 
-            var temp = _rootCollection
+         var temp = _rootCollection
                 .OrderBy(i => i, _sortOrder)
                 .GroupBy(_groupFunction)
                 .ToList()
