@@ -374,14 +374,15 @@ namespace NextcloudApp.Services
         public async Task<bool> CreateDirectory(string directoryName)
         {
             var client = await ClientService.GetClient();
+
             if (client == null)
             {
                 return false;
             }
 
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "";
-
             var success = false;
+
             try
             {
                 success = await client.CreateDirectory(path + directoryName);
@@ -398,12 +399,14 @@ namespace NextcloudApp.Services
             {
                 await StartDirectoryListing();
             }
+
             return success;
         }
 
         public async Task<bool> DeleteResource(ResourceInfo resourceInfo)
         {
             var client = await ClientService.GetClient();
+
             if (client == null)
             {
                 return false;
@@ -412,6 +415,7 @@ namespace NextcloudApp.Services
             var path = resourceInfo.ContentType.Equals("dav/directory")
                 ? resourceInfo.Path
                 : resourceInfo.Path + "/" + resourceInfo.Name;
+
             var success = await client.Delete(path);
             await StartDirectoryListing();
             return success;
@@ -420,6 +424,7 @@ namespace NextcloudApp.Services
         public async Task<bool> DeleteSelected(List<ResourceInfo> resourceInfos)
         {
             var client = await ClientService.GetClient();
+
             if (client == null)
             {
                 return false;
@@ -436,6 +441,7 @@ namespace NextcloudApp.Services
                     return success;
                 }
             }
+
             await StartDirectoryListing();
             return true;
         }
@@ -443,14 +449,15 @@ namespace NextcloudApp.Services
         public async Task<bool> Rename(string oldName, string newName)
         {
             var client = await ClientService.GetClient();
+
             if (client == null)
             {
                 return false;
             }
 
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "";
-
             var success = false;
+
             try
             {
                 success = await client.Move(path + oldName, path + newName);
@@ -473,12 +480,14 @@ namespace NextcloudApp.Services
         public async Task<bool> Move(string oldPath, string newPath)
         {
             var client = await ClientService.GetClient();
+
             if (client == null)
             {
                 return false;
             }
 
             var success = false;
+
             try
             {
                 success = await client.Move(oldPath, newPath);
