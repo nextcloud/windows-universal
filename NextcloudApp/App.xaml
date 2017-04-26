@@ -13,6 +13,7 @@
             <converter:ContentTypeToIconConverter x:Key="ContentTypeToIconConverter"/>
             <converter:BytesToHumanReadableConverter x:Key="BytesToHumanReadableConverter"/>
             <converter:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+            <converter:DateTimeToVisibilityConverter x:Key="DateTimeToVisibilityConverter"/>
             <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <converter:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
             <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
