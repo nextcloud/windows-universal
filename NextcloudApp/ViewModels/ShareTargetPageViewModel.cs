@@ -47,33 +47,30 @@ namespace NextcloudApp.ViewModels
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
-                SelectedFileOrFolder = null;
             });
             GroupByNameDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameDescending();
-                SelectedFileOrFolder = null;
             });
             GroupByDateAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateAscending();
-                SelectedFileOrFolder = null;
             });
             GroupByDateDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateDescending();
-                SelectedFileOrFolder = null;
             });
             GroupBySizeAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeAscending();
-                SelectedFileOrFolder = null;
             });
             GroupBySizeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeDescending();
-                SelectedFileOrFolder = null;
             });
+
+            SelectedFileOrFolder = null;
+
             RefreshCommand = new DelegateCommand(async () =>
             {
                 ShowProgressIndicator();
@@ -289,14 +286,13 @@ namespace NextcloudApp.ViewModels
 
         private async void StartDirectoryListing()
         {
-            await OnUiThread(async () =>
-            {
-                ShowProgressIndicator();
+            ShowProgressIndicator();
 
-                await Directory.StartDirectoryListing();
+            await Directory.StartDirectoryListing();
 
-                HideProgressIndicator();
-            });
+            HideProgressIndicator();
+
+            SelectedFileOrFolder = null;
         }
 
         public override bool CanRevertState()
