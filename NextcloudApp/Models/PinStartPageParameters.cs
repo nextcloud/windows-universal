@@ -9,6 +9,6 @@ namespace NextcloudApp.Models
 {
     public class PinStartPageParameters : FileInfoPageParameters
     {
-        public string PageTarget { get; set; }
+        public PageToken PageTarget { get; set; }
     }
 }
