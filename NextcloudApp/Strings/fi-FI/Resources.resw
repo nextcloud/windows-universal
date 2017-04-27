@@ -324,7 +324,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Sovellusversio {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>Palvelimen nimeä tai osoitetta ei voitu selvittää.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Palvelimen versio {0}</value>
@@ -333,7 +333,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Poista</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>waiting for server response</value>
+    <value>odotetaan palvelimen vastausta</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
     <value>Valitse uusi nimi</value>
@@ -413,13 +413,14 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
 • Rename files and folders
+• Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
 • Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
+• Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
 • Show folder size in list
-• Handle file activation
+• Share files with the app (share target)
 • Use the PasswordVault to store user credentials
 • Security improvements &amp; bug fixes
 • New and more stable WebDAV library</value>
@@ -436,6 +437,30 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synkronoinnin tila</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Ristiriidat</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Virheet</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synkronoi</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Suosi paikallista tiedostoa</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Tyhjennä synkronointihistoria</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Suosi etäpään tiedostoa</value>
+  </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>The certificate authority is invalid or incorrect. Connect anyway?
 
@@ -450,8 +475,68 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   <data name="Hint" xml:space="preserve">
     <value>Vihje</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Beware of conflicts!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Palvelu on väliaikaisesti poissa käytöstä (yleensä lyhyen huoltotyön vuoksi).
 Yritä myöhemmin uudelleen.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Ristiriita:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synkronointi on valmistunut</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synkronoinnin tila</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Paikallinen polku:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud-polku:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Valitse kansio, mihin haluat lähettää tiedostot</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Kansiot</value>
   </data>
 </root>
