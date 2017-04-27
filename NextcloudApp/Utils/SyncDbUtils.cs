@@ -204,7 +204,7 @@
             // Create a new connection
             string fullPath = info.Path;
 
-            if(!info.IsDirectory())
+            if(!info.IsDirectory)
             {
                 fullPath = info.Path + "/" + info.Name;
             }
@@ -223,7 +223,7 @@
             // Create a new connection
             string fullPath = info.Path;
 
-            if (!info.IsDirectory())
+            if (!info.IsDirectory)
             {
                 fullPath = info.Path + "/" + info.Name;
             }
