@@ -331,7 +331,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
-    <Folder Include="SampleData\" />
     <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>

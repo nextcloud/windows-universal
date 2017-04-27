@@ -146,7 +146,7 @@ namespace NextcloudApp.Services
                 {
                     foreach (ResourceInfo subInfo in list)
                     {
-                        if (subInfo.IsDirectory())
+                        if (subInfo.IsDirectory)
                         {
                             IEnumerable<StorageFolder> localFoldersWithName = localFolders.Where(f => f.Name.Equals(subInfo.Name));
                             StorageFolder subFolder = localFoldersWithName.FirstOrDefault();

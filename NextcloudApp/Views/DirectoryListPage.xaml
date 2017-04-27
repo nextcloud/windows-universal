@@ -26,6 +26,7 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <ListBox 
@@ -341,7 +342,12 @@
                 </GridView>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+
+        <StackPanel Orientation="Horizontal" Height="25" Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}">
+            <TextBlock Margin="25,0,0,0" Text="{Binding StatusBarText, Mode=OneWay}" />
+        </StackPanel>
+        
+        <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
                 Icon="Sync" 

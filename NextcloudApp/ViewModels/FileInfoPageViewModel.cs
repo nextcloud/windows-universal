@@ -183,7 +183,7 @@ namespace NextcloudApp.ViewModels
                     return;
                 }
                 _thumbnail = value;
-                OnPropertyChanged();
+                RaisePropertyChanged(nameof(Thumbnail));
             }
         }
 

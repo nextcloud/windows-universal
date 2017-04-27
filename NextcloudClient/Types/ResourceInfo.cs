@@ -88,9 +88,12 @@ namespace NextcloudClient.Types
         /// 
         /// </summary>
         /// <returns></returns>
-        public bool IsDirectory()
+        public bool IsDirectory
         {
-            return ContentType.Equals("dav/directory");
+            get
+            {
+                return ContentType == null ? false : ContentType.Equals("dav/directory");
+            }
         }
 
         /// <summary>

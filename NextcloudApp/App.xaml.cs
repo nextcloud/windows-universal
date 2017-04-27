@@ -226,7 +226,7 @@ namespace NextcloudApp
                                 pageParameters = new PinStartPageParameters()
                                 {
                                     ResourceInfo = tmpResourceInfo,
-                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageToken.DirectoryList.ToString() : PageToken.FileInfo.ToString()
+                                    PageTarget = tmpResourceInfo.IsDirectory ? PageToken.DirectoryList.ToString() : PageToken.FileInfo.ToString()
                                 };
 
                             }
