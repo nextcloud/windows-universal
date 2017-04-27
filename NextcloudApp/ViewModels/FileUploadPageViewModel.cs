@@ -202,7 +202,10 @@ namespace NextcloudApp.ViewModels
             }
 
             // release the disblay keep active lock
-            _displayRequest.RequestRelease();
+            await OnUiThread(() =>
+            {
+                _displayRequest.RequestRelease();
+            });
 
             if (ActivationKind == ActivationKind.ShareTarget)
             {
