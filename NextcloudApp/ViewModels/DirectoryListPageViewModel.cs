@@ -15,6 +15,7 @@ using Windows.Storage;
 using Windows.Storage.AccessCache;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace NextcloudApp.ViewModels
 {
@@ -413,6 +414,7 @@ namespace NextcloudApp.ViewModels
             await Directory.DeleteResource(parameter as ResourceInfo);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
+            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private async void DeleteSelected(object parameter)
@@ -452,6 +454,7 @@ namespace NextcloudApp.ViewModels
                 await Directory.DeleteSelected(selectedItems);
                 HideProgressIndicator();
                 SelectedFileOrFolder = null;
+                RaisePropertyChanged(nameof(StatusBarText));
             }
         }
 
@@ -546,6 +549,7 @@ namespace NextcloudApp.ViewModels
                 if (success)
                 {
                     SelectedFileOrFolder = null;
+                    RaisePropertyChanged(nameof(StatusBarText));
                     return;
                 }
 
@@ -567,6 +571,7 @@ namespace NextcloudApp.ViewModels
                 if (dialogResult != ContentDialogResult.Primary)
                 {
                     SelectedFileOrFolder = null;
+                    RaisePropertyChanged(nameof(StatusBarText));
                     return;
                 }
             }
@@ -674,7 +679,7 @@ namespace NextcloudApp.ViewModels
                 {
                     return;
                 }
-                if (value.IsDirectory())
+                if (value.IsDirectory)
                 {
                     Directory.PathStack.Add(new PathInfo
                     {
@@ -733,6 +738,7 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
+            RaisePropertyChanged(nameof(StatusBarText));
         }
 
 
@@ -744,6 +750,16 @@ namespace NextcloudApp.ViewModels
         public override void RevertState()
         {
             SelectedPathIndex--;
+        }
+
+        public string StatusBarText
+        {
+            get
+            {
+                var folderCount = Directory.FilesAndFolders.Where(x => x.IsDirectory).Count();
+                var fileCount = Directory.FilesAndFolders.Where(x => !x.IsDirectory).Count();
+                return String.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                
+            }
         }
     }
 }
