@@ -31,12 +31,15 @@ namespace NextcloudApp.ViewModels
             var pageParameters = PinStartPageParameters.Deserialize(e.Parameter) as PinStartPageParameters;
             if (pageParameters != null)
             {
-                nextPage = pageParameters.PageTarget.ToString();
+                this.nextPage = pageParameters.PageTarget.ToString();
+            }
+            else if (e.Parameter is string)
+            {
+                this.nextPage = e.Parameter as string;
             }
             else
             {
-                var s = e.Parameter as string;
-                nextPage = s ?? PageToken.DirectoryList.ToString();
+                this.nextPage = PageToken.DirectoryList.ToString();
             }
         }
 
