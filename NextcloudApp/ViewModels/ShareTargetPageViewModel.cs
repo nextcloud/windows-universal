@@ -241,7 +241,7 @@ namespace NextcloudApp.ViewModels
                 {
                     return;
                 }
-                if (value.IsDirectory())
+                if (value.IsDirectory)
                 {
                     Directory.PathStack.Add(new PathInfo
                     {
