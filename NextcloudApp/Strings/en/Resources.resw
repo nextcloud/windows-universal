@@ -554,4 +554,10 @@ Please try again later.</value>
   <data name="Favorites" xml:space="preserve">
     <value>Favorites</value>
   </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Shared with me</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared over a Link</value>
+  </data>
 </root>

@@ -548,4 +548,10 @@ Bitte später noch einmal versuchen.</value>
   <data name="SharingOut" xml:space="preserve">
     <value>Von dir geteilt</value>
   </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Mit dir geteilt</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Geteilt über ein Link</value>
+  </data>
 </root>

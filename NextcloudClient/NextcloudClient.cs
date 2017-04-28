@@ -257,10 +257,11 @@ namespace NextcloudClient
         ///     Finds remote outgoing shares.
         /// </summary>
         /// <returns>List of shares.</returns>
-        public async Task<List<ResourceInfo>> GetSharesOut()
+        public async Task<List<ResourceInfo>> GetSharesView(string viewname)
         {
-
-            var shares = await GetShares("");
+            var param = new Tuple<string, string>("shared_with_me", "false");
+            if (viewname == "sharesIn") param = new Tuple<string, string>("shared_with_me", "true");
+            var shares = await GetShares(param);
 
             List<ResourceInfo> sharesList = new List<ResourceInfo>();
 
@@ -320,7 +321,7 @@ namespace NextcloudClient
 
                     try
                     {
-                        var itemFav = await GetResourceInfoByPath(favoritePath);
+                        var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
 
                         favoritesList.Add(itemFav);
                     }
@@ -990,7 +991,7 @@ namespace NextcloudClient
         /// <param name="path">path to the share to be checked.</param>
         public async Task<bool> IsShared(string path)
         {
-            var result = await GetShares(path);
+            var result = await GetShares(new Tuple<string, string>("path", path));
             return result.Count > 0;
         }
 
@@ -1002,14 +1003,14 @@ namespace NextcloudClient
         /// <param name="path">(optional) path to the share to be checked.</param>
         /// <param name="reshares">(optional) returns not only the shares from	the current user but all shares from the given file.</param>
         /// <param name="subfiles">(optional) returns all shares within	a folder, given that path defines a folder.</param>
-        public async Task<List<Share>> GetShares(string path, OcsBoolParam reshares = OcsBoolParam.None,
+        public async Task<List<Share>> GetShares(Tuple<string, string> tParam, OcsBoolParam reshares = OcsBoolParam.None,
             OcsBoolParam subfiles = OcsBoolParam.None)
         {
             var parameters = new Dictionary<string, string>();
 
-            if (!string.IsNullOrEmpty(path))
+            if (tParam != null)
             {
-                parameters.Add("path", path);
+                parameters.Add(tParam.Item1, tParam.Item2);
             }
 
             switch (reshares)
