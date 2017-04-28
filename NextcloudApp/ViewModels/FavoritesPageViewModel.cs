@@ -94,7 +94,7 @@ namespace NextcloudApp.ViewModels
                 {
                     return;
                 }
-                if (value.IsDirectory())
+                if (value.IsDirectory)
                 {
                     var parameters = new FileInfoPageParameters
                     {
@@ -132,7 +132,7 @@ namespace NextcloudApp.ViewModels
                             }
                         }
                     }
-                    _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+                    _navigationService.Navigate(PageToken.DirectoryList.ToString(), null);
                 }
                 else
                 {
@@ -140,7 +140,7 @@ namespace NextcloudApp.ViewModels
                     {
                         ResourceInfo = value
                     };
-                    _navigationService.Navigate(PageTokens.FileInfo.ToString(), parameters.Serialize());
+                    _navigationService.Navigate(PageToken.FileInfo.ToString(), parameters.Serialize());
                 }
             }
         }
@@ -149,7 +149,7 @@ namespace NextcloudApp.ViewModels
         {
             ShowProgressIndicator();
 
-            await Directory.StartDirectoryListing("favorites");
+            await Directory.StartDirectoryListing(null, "favorites");
 
             HideProgressIndicator();
         }

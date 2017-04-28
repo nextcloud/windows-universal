@@ -53,8 +53,8 @@ namespace NextcloudApp.ViewModels
                     DisplayName = resourceLoader.GetString("Favorites"),
                     FontIcon = "\uE734",
                     Command = new DelegateCommand(
-                        () => NavigateToPage(PageTokens.Favorites), // TODO
-                        () => CanNavigateToPage(PageTokens.Favorites) // TODO
+                        () => NavigateToPage(PageToken.Favorites), // TODO
+                        () => CanNavigateToPage(PageToken.Favorites) // TODO
                     )
                 },
                 new MenuItem
@@ -62,8 +62,8 @@ namespace NextcloudApp.ViewModels
                     DisplayName = resourceLoader.GetString("SharingOut"),
                     FontIcon = "\uF003",
                     Command = new DelegateCommand(
-                        () => NavigateToPage(PageTokens.SharesOut),
-                        () => CanNavigateToPage(PageTokens.SharesOut)
+                        () => NavigateToPage(PageToken.SharesOut),
+                        () => CanNavigateToPage(PageToken.SharesOut)
                     )
                 },
             };

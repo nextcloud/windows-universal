@@ -301,7 +301,32 @@ namespace NextcloudClient
                 {"data", "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>"}
             };
 
-            var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><d:getetag /><d:getcontenttype /><d:resourcetype /><oc:fileid /><oc:permissions /><oc:size /><d:getcontentlength /><nc:has-preview /><oc:tags /><oc:favorite /><oc:comments-unread /><oc:owner-display-name /><oc:share-types /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
+            string[] properties = {
+                "<d:getlastmodified />",
+                "<d:getetag />",
+                "<d:getcontenttype />",
+                "<d:resourcetype />",
+                "<oc:fileid />",
+                "<oc:permissions />",
+                "<oc:size />",
+                "<d:getcontentlength />",
+                "<nc:has-preview />",
+                "<oc:favorite />",
+                "<oc:comments-unread />",
+                "<oc:owner-display-name />",
+                "<oc:share-types />"
+            };
+
+            var propertiesString = "";
+
+            foreach (var prop in properties)
+            {
+                propertiesString += prop;
+            }
+
+            var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop>"
+                + propertiesString
+                + "</d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
             //var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
             //var content = "<?xml version=\"1.0\"?><d:propfind  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><oc:favorite /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></d:propfind>";
             var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri());

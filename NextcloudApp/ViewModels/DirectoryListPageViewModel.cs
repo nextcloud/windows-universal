@@ -152,7 +152,7 @@ namespace NextcloudApp.ViewModels
             if (!suspending)
             {
                 _isNavigatingBack = true;
-                Directory.StopDirectoryListing();
+                if (Directory != null) Directory.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }

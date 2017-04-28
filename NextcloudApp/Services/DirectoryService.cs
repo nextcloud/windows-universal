@@ -208,12 +208,12 @@ namespace NextcloudApp.Services
             await StartDirectoryListing();
         }
 
-        public async Task StartDirectoryListing(String viewName = null)
+        public async Task StartDirectoryListing()
         {
-            await StartDirectoryListing(null);
+            await StartDirectoryListing(null, null);
         }
 
-        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
+        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, String viewName = null)
         {
             var client = await ClientService.GetClient();
 
