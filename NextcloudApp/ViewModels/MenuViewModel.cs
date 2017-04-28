@@ -53,8 +53,8 @@ namespace NextcloudApp.ViewModels
                     DisplayName = resourceLoader.GetString("Favorites"),
                     FontIcon = "\uE734",
                     Command = new DelegateCommand(
-                        () => NavigateToPage(PageTokens.SharesOut), // TODO
-                        () => CanNavigateToPage(PageTokens.SharesOut) // TODO
+                        () => NavigateToPage(PageTokens.Favorites), // TODO
+                        () => CanNavigateToPage(PageTokens.Favorites) // TODO
                     )
                 },
                 new MenuItem

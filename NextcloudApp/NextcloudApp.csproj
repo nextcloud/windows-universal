@@ -170,6 +170,7 @@
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortMode.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="ViewModels\FavoritesPageViewModel.cs" />
     <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
@@ -179,6 +180,9 @@
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="Views\FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SharesOutPage.xaml.cs">
       <DependentUpon>SharesOutPage.xaml</DependentUpon>
     </Compile>
@@ -254,6 +258,10 @@
     <Page Include="Themes\SplitViewStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FavoritesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SharesOutPage.xaml">
       <Generator>MSBuild:Compile</Generator>

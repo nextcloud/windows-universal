@@ -159,12 +159,12 @@ namespace NextcloudApp.Services
 
             try
             {
-                if (viewName == "sharesOut_TEMP_RMVD")
+                if (viewName == "sharesOut")
                 {
                     PathStack.Clear();
                     list = await client.GetSharesOut();
                 }
-                else if (viewName == "sharesOut")
+                else if (viewName == "favorites")
                 {
                     PathStack.Clear();
                     list = await client.GetFavorites();
