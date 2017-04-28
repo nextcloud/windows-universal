@@ -259,7 +259,6 @@ namespace NextcloudClient
         /// <returns>List of shares.</returns>
         public async Task<List<ResourceInfo>> GetSharesOut()
         {
-            //var remoteShares = await ListOpenRemoteShare();
 
             var shares = await GetShares("");
 
@@ -269,10 +268,7 @@ namespace NextcloudClient
             {
                 try
                 {
-                    var parentPath = item.Path.Replace(item.TargetPath, "/");
-                    var itemName = item.TargetPath.Replace("/", "");
-
-                    var itemShare = await FilterForShare(parentPath, itemName);
+                    var itemShare = await GetResourceInfoByPath(item.Path);
 
                     sharesList.Add(itemShare);
                 }
@@ -291,69 +287,64 @@ namespace NextcloudClient
         /// <returns>List of favorites.</returns>
         public async Task<List<ResourceInfo>> GetFavorites()
         {
-            //var remoteShares = await ListOpenRemoteShare();
-
             var url = new UrlBuilder(_url + "/remote.php/webdav");
-            HttpResponseMessage response;
 
-            var parameters = new Dictionary<string, string>
+            // See: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html#listing-favorites
+            // Also, for Props see: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html
+            var content = "<?xml version=\"1.0\"?>"
+                + "<oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\">"
+                    + "<d:prop>"
+                        + "<oc:favorite />"
+                    + "</d:prop>"
+                    + "<oc:filter-rules>"
+                        + "<oc:favorite>1</oc:favorite>"
+                    + "</oc:filter-rules>"
+                + "</oc:filter-files>";
+
+            var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri())
             {
-                {"data", "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>"}
+                Content = new HttpStringContent(content, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/xml")
             };
 
-            string[] properties = {
-                "<d:getlastmodified />",
-                "<d:getetag />",
-                "<d:getcontenttype />",
-                "<d:resourcetype />",
-                "<oc:fileid />",
-                "<oc:permissions />",
-                "<oc:size />",
-                "<d:getcontentlength />",
-                "<nc:has-preview />",
-                "<oc:favorite />",
-                "<oc:comments-unread />",
-                "<oc:owner-display-name />",
-                "<oc:share-types />"
-            };
+            var response = await _client.SendRequestAsync(request);
 
-            var propertiesString = "";
+            var xDoc = XDocument.Parse(response.Content.ToString());
 
-            foreach (var prop in properties)
+            List<ResourceInfo> favoritesList = new List<ResourceInfo>();
+
+            foreach (XElement element in xDoc.Descendants())
             {
-                propertiesString += prop;
+                if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
+                {
+                    var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/remote.php/webdav", "").Replace("</d:href>", "");
+
+                    try
+                    {
+                        var itemFav = await GetResourceInfoByPath(favoritePath);
+
+                        favoritesList.Add(itemFav);
+                    }
+                    catch (ResponseError e)
+                    {
+                        throw e;
+                    }
+                }
             }
 
-            var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop>"
-                + propertiesString
-                + "</d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
-            //var content = "<?xml version=\"1.0\"?><oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></oc:filter-files>";
-            //var content = "<?xml version=\"1.0\"?><d:propfind  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\"><d:prop><d:getlastmodified /><oc:favorite /></d:prop><oc:filter-rules><oc:favorite>1</oc:favorite></oc:filter-rules></d:propfind>";
-            var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri());
-            request.Content = new HttpStringContent(content, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/xml");
-
-            var response2 = await _client.SendRequestAsync(request);
-
-            //var response = await DoApiRequest("POST", "/remote.php/dav", parameters);
-
-            var content2 = new HttpFormUrlEncodedContent(parameters);
-            var test = "test";
-            content2.Headers.ContentType.MediaType = "text/plain";
-            //content2.Headers["OCS-APIREQUEST"] = true.ToString();
-            response = await _client.PostAsync(url.ToUri(), content2);
-            //response = await _client.PostAsync(url.ToUri(), content2);
-
-            return null;
+            return favoritesList;
         }
 
         /// <summary>
         ///     Finds resource info for item by searching its parent.
         /// </summary>
         /// <returns>Resource Info if given item.</returns>
-        /// <param name="parentPath">Path of item parent to get resource info from and search for item.</param>
-        /// <param name="itemName">Name of item to get resource info from parent.</param>
-        private async Task<ResourceInfo> FilterForShare(string parentPath, string itemName)
+        /// <param name="Path">Path to the Item.</param>
+        private async Task<ResourceInfo> GetResourceInfoByPath(string Path)
         {
+
+            var targetPath = "/" + Path.Split('/')[Path.Split('/').Length - 1];
+            var parentPath = Path.Replace(targetPath, "/");
+            var itemName = targetPath.Replace("/", "");
 
             var parentResource = await List(parentPath);
             var itemResource = new ResourceInfo();
@@ -1020,6 +1011,7 @@ namespace NextcloudClient
             {
                 parameters.Add("path", path);
             }
+
             switch (reshares)
             {
                 case OcsBoolParam.True:
@@ -1787,7 +1779,7 @@ namespace NextcloudClient
                     {
                         foreach (var parameter in parameters)
                         {
-                            url.AddQueryParameter(parameter.Value, parameter.Value);
+                            url.AddQueryParameter(parameter.Key, parameter.Value);
                         }
                     }
                     _client.DefaultRequestHeaders["OCS-APIREQUEST"] = "true";
