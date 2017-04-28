@@ -426,10 +426,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>PIN um zu beginnen</value>
+    <value>An Start anheften</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>PIN um zu beginnen</value>
+    <value>An Start anheften</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
@@ -538,5 +538,8 @@ Bitte später noch einmal versuchen.</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Ordner</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

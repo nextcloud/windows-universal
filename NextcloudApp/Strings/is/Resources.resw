@@ -438,28 +438,28 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Staða samstillingar</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Ferill</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Árekstrar</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Villur</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Samstilla</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Velja frekar skrá á tölvu</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Hreinsa samstillingaferil</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Velja frekar fjartengda skrá</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>The certificate authority is invalid or incorrect. Connect anyway?
@@ -479,13 +479,13 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Varaðu þig á árekstrum!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Samstilling hefur verið ræst!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
@@ -504,7 +504,7 @@ Please try again later.</value>
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Árekstur:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -516,7 +516,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>Samstillingu er lokið</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
@@ -525,18 +525,21 @@ Please try again later.</value>
     <value>Synchronization suspended</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Staða samstillingar</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Staðvær slóð:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud-slóð:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Veldu möppuna sem þú vilt senda skrár inn í</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Möppur</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

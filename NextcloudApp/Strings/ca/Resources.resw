@@ -538,4 +538,7 @@ Si us plau, torni a intentar-ho més tard.</value>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Folders</value>
   </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
+  </data>
 </root>
