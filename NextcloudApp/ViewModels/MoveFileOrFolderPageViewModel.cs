@@ -29,6 +29,8 @@ namespace NextcloudApp.ViewModels
         public ICommand GroupByDateDescendingCommand { get; private set; }
         public ICommand GroupBySizeAscendingCommand { get; private set; }
         public ICommand GroupBySizeDescendingCommand { get; private set; }
+        public ICommand GroupByTypeAscendingCommand { get; private set; }
+        public ICommand GroupByTypeDescendingCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
         public ICommand CreateDirectoryCommand { get; private set; }
         public ICommand SelectToggleCommand { get; private set; }
@@ -70,6 +72,16 @@ namespace NextcloudApp.ViewModels
             GroupBySizeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeDescending();
+            });
+
+            GroupByTypeAscendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeAscending();
+            });
+
+            GroupByTypeDescendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeDescending();
             });
 
             SelectedFileOrFolder = null;

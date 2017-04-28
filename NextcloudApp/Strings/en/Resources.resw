@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Size (largest to the top)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Application error</value>
   </data>

@@ -81,6 +81,12 @@ namespace NextcloudApp.Services
                 case GroupMode.GroupBySizeDescending:
                     GroupBySizeDescending();
                     break;
+                case GroupMode.GroupByTypeAscending:
+                    GroupByTypeAscending();                    
+                    break;
+                case GroupMode.GroupByTypeDescending:
+                    GroupByTypeDescending();
+                    break;
                 default:
                     break;
             }
@@ -150,6 +156,26 @@ namespace NextcloudApp.Services
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
             SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
+        }
+
+        public void GroupByTypeAscending()
+        {
+            IsSorting = true;
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.ContentType);
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.ContentType);
+            FirePropertyChangedFilesAndFolders();
+            IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeAscending;
+        }
+
+        public void GroupByTypeDescending()
+        {
+            IsSorting = true;
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.ContentType);
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.ContentType);
+            FirePropertyChangedFilesAndFolders();
+            IsSorting = false;
+            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeDescending;
         }
 
         public void ToggleSelectionMode()

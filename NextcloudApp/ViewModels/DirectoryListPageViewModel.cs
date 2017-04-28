@@ -37,6 +37,8 @@ namespace NextcloudApp.ViewModels
         public ICommand GroupByDateDescendingCommand { get; private set; }
         public ICommand GroupBySizeAscendingCommand { get; private set; }
         public ICommand GroupBySizeDescendingCommand { get; private set; }
+        public ICommand GroupByTypeAscendingCommand { get; private set; }
+        public ICommand GroupByTypeDescendingCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
         public ICommand CreateDirectoryCommand { get; private set; }
         public ICommand UploadFilesCommand { get; private set; }
@@ -66,25 +68,40 @@ namespace NextcloudApp.ViewModels
             {
                 Directory.GroupByNameAscending();
             });
+
             GroupByNameDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameDescending();
             });
+
             GroupByDateAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateAscending();
             });
+
             GroupByDateDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateDescending();
             });
+
             GroupBySizeAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeAscending();
             });
+
             GroupBySizeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeDescending();
+            });
+
+            GroupByTypeAscendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeAscending();
+            });
+
+            GroupByTypeDescendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeDescending();
             });
 
             SelectedFileOrFolder = null;

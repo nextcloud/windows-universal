@@ -7,6 +7,8 @@
         GroupByDateAscending,
         GroupByDateDescending,
         GroupBySizeAscending,
-        GroupBySizeDescending
+        GroupBySizeDescending,
+        GroupByTypeAscending,
+        GroupByTypeDescending
     }
 }

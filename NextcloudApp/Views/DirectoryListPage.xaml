@@ -393,6 +393,15 @@
                             x:Uid="AppBarSort_Flyout_BySizeDESC" 
                             Text="Größe (Größte nach oben)"
                             Command="{Binding GroupBySizeDescendingCommand}"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByTypeASC" 
+                            Text="Typ (aufsteigend)"
+                            Command="{Binding GroupByTypeAscendingCommand}"/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByTypeDESC" 
+                            Text="Typ (absteigend)"
+                            Command="{Binding GroupByTypeDescendingCommand}"/>
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
