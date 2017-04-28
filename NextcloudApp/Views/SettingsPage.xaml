@@ -74,10 +74,10 @@
                 </ToggleSwitch>
 
                 <ToggleSwitch 
-                    x:Uid="DeveloperMode"
+                    x:Uid="ExpertMode"
                     Header="Developer mode"
                     Margin="0,12"
-                    IsOn="{Binding DeveloperMode, Mode=TwoWay}">                    
+                    IsOn="{Binding ExpertMode, Mode=TwoWay}">                    
                 </ToggleSwitch>
 
                 <Border 

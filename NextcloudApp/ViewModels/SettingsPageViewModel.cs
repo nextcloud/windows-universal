@@ -25,7 +25,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
         private bool _ignoreServerCertificateErrors;
-        private bool _developerMode;
+        private bool _expertMode;
 
         public ICommand ResetCommand { get; private set; }
 
@@ -71,7 +71,7 @@ namespace NextcloudApp.ViewModels
 
             UseWindowsHello = Settings.UseWindowsHello;
             IgnoreServerCertificateErrors = Settings.IgnoreServerCertificateErrors;
-            DeveloperMode = Settings.DeveloperMode;
+            ExpertMode = Settings.ExpertMode;
 
             ResetCommand = new DelegateCommand(Reset);
 
@@ -162,15 +162,15 @@ namespace NextcloudApp.ViewModels
             PrismUnityApplication.Current.Exit();
         }
 
-        public bool DeveloperMode
+        public bool ExpertMode
         {
-            get { return _developerMode; }
+            get { return _expertMode; }
             set
             {
-                if (!SetProperty(ref _developerMode, value))
+                if (!SetProperty(ref _expertMode, value))
                     return;
 
-                Settings.DeveloperMode = value;
+                Settings.ExpertMode = value;
             }
         }
 

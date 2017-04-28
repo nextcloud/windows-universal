@@ -5,11 +5,11 @@ using Windows.UI.Xaml.Data;
 
 namespace NextcloudApp.Converter
 {
-    public class DeveloperModeToVisibilityConverter : IValueConverter
+    public class ExpertModeToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return SettingsService.Instance.LocalSettings.DeveloperMode ? Visibility.Visible : Visibility.Collapsed;
+            return SettingsService.Instance.LocalSettings.ExpertMode ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
