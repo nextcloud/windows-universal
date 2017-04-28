@@ -136,7 +136,7 @@
     <Compile Include="Converter\ConflictTypeToForegroundConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
-    <Compile Include="Converter\DeveloperModeToVisibilityConverter.cs" />
+    <Compile Include="Converter\ExpertModeToVisibilityConverter.cs" />
     <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />

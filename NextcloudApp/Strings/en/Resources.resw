@@ -443,8 +443,8 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
-  <data name="DeveloperMode.Header" xml:space="preserve">
-    <value>Developer mode</value>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
