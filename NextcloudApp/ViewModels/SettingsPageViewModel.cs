@@ -25,6 +25,7 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
         private bool _ignoreServerCertificateErrors;
+        private bool _developerMode;
 
         public ICommand ResetCommand { get; private set; }
 
@@ -40,11 +41,13 @@ namespace NextcloudApp.ViewModels
                 Name = resourceLoader.GetString("Always"),
                 Value = PreviewImageDownloadMode.Always
             });
+
             PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
             {
                 Name = resourceLoader.GetString("WiFiOnly"),
                 Value = PreviewImageDownloadMode.WiFiOnly
             });
+
             PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
             {
                 Name = resourceLoader.GetString("Never"),
@@ -68,6 +71,7 @@ namespace NextcloudApp.ViewModels
 
             UseWindowsHello = Settings.UseWindowsHello;
             IgnoreServerCertificateErrors = Settings.IgnoreServerCertificateErrors;
+            DeveloperMode = Settings.DeveloperMode;
 
             ResetCommand = new DelegateCommand(Reset);
 
@@ -77,6 +81,7 @@ namespace NextcloudApp.ViewModels
         private async void GetServerVersion()
         {
             var status = await NextcloudClient.NextcloudClient.GetServerStatus(Settings.ServerAddress, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+
             if (!string.IsNullOrEmpty(status.VersionString))
             {
                 ServerVersion = string.Format(_resourceLoader.GetString("ServerVersion"), status.VersionString);
@@ -95,8 +100,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _settings, value); }
         }
 
-        public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } =
-            new List<PreviewImageDownloadModeItem>();
+        public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } = new List<PreviewImageDownloadModeItem>();
 
 
         public int PreviewImageDownloadModesSelectedIndex
@@ -108,6 +112,7 @@ namespace NextcloudApp.ViewModels
                 {
                     return;
                 }
+
                 switch (value)
                 {
                     case 0:
@@ -152,8 +157,21 @@ namespace NextcloudApp.ViewModels
                 },
                 PrimaryButtonText = _resourceLoader.GetString("OK")
             };
+
             await _dialogService.ShowAsync(dialog);
             PrismUnityApplication.Current.Exit();
+        }
+
+        public bool DeveloperMode
+        {
+            get { return _developerMode; }
+            set
+            {
+                if (!SetProperty(ref _developerMode, value))
+                    return;
+
+                Settings.DeveloperMode = value;
+            }
         }
 
         public bool UseWindowsHello
@@ -197,8 +215,7 @@ namespace NextcloudApp.ViewModels
         public string AppVersion
             =>
                 string.Format(_resourceLoader.GetString("ClientVersion"),
-                    $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}")
-            ;
+                    $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}");
 
         private void Reset()
         {
