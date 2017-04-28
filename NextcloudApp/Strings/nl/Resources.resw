@@ -411,18 +411,19 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• hernoemen bestanden en mappen
-• Downloaden directories als zip-bestand 
-• Selecteer meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan het startscherm
-• Gebruik Windows Hello om te authenticeren bij start app
-• Toestaan self-signed SSL certificaten
-• Tonen mapomvang in overzicht
-• Behandelen bestandsactivering
-• Gebruik de PasswordVault om iinloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app (share target)
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
@@ -435,6 +436,30 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;Man-in-the-middle (mitm)&apos;  aanvallen!</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Conflicts</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchroniseren</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Voorkeur lokaal bestand</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Clear sync history</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Voorkeur extern bestand</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
@@ -450,8 +475,71 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Lijst met synchronisatiefouten. Dit zouden tijdelijke problemen moet zijn (bijv. bestand was geopend door een andere app) en die zouden dan ook verdwenen moeten zijn na de volgende synchronisatie.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Let op conflicten!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Zowel de externe als de lokale map is niet leeg. Dat kan leiden tot veel conflicten, omdat we niet weten welke bestanden de juiste zijn.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronisatie is getriggerd!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronisatie vindt plaats in de achtergrond. Je krijgt een melding als die klaar is.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service tijdelijk niet beschikbaar (gewoonlijk wegens korte termijn onderhoud)
 Probeer het later opnieuw.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Bestand zowel lokaal als extern gewijzigd. Welke heeft je voorkeur?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Bestand zowel lokaal als extern aangemaakt - wat is het juiste?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Bestand lokaal verwijderd, maar extern gewijzigd. Wat heeft je voorkeur?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflict: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Bestand extern verwijderd, maar lokaal gewijzigd. Wat heeft je voorkeur?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronisatie van map {0} geëindigd met {1} wijziginen en {2} fouten of conflicten.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronisatie van map {0} geëindigd met {1} wijzigingen.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronisatie is beëindigd</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronisatie van map {0} werd gestopt door dat de app is afgebroken.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronisatie onderbroken</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synchronization Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Local Path:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Path:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Kies de map waar je de bestanden naar wilt uploaden</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

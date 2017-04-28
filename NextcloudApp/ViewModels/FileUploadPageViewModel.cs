@@ -6,7 +6,6 @@ using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Core;
-using Windows.Web.Http;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -14,6 +13,8 @@ using NextcloudClient.Exceptions;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
 using Prism.Windows.AppModel;
+using DecaTec.WebDav;
+using System.IO;
 
 namespace NextcloudApp.ViewModels
 {
@@ -117,11 +118,14 @@ namespace NextcloudApp.ViewModels
                 {
                     var properties = await localFile.GetBasicPropertiesAsync();
                     BytesTotal = (long) properties.Size;
-                    
-                    var stream = await localFile.OpenAsync(FileAccessMode.ReadWrite);
 
-                    IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                    await client.Upload(ResourceInfo.Path + localFile.Name, stream, localFile.ContentType, _cts, progress);
+                    using (var stream = await localFile.OpenAsync(FileAccessMode.Read))
+                    {
+                        var targetStream = stream.AsStreamForRead();
+
+                        IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+                        await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                    }
                 }
                 catch (ResponseError e2)
                 {
@@ -141,15 +145,12 @@ namespace NextcloudApp.ViewModels
 
         private PickerLocationId SuggestedStartLocation { get; set; }
 
-        private async void ProgressHandler(HttpProgress progressInfo)
+        private async void ProgressHandler(WebDavProgress progressInfo)
         {
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                if (progressInfo.TotalBytesToSend != null)
-                {
-                    BytesTotal = (long)progressInfo.TotalBytesToSend;
-                }
-                BytesSend = (int)progressInfo.BytesSent;
+                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesSend = (int)progressInfo.Bytes;
 
                 WaitingForServerResponse = BytesSend == BytesTotal;
             });

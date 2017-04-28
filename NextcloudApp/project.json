@@ -1,10 +1,12 @@
 ﻿{
   "dependencies": {
     "Microsoft.Bcl.Build": "1.0.21",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "Microsoft.Xaml.Behaviors.Uwp.Managed": "2.0.0",
-    "Newtonsoft.Json": "9.0.1",
-    "Prism.Unity": "6.2.0"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.2",
+    "Microsoft.Toolkit.Uwp.Notifications": "1.4.1",
+    "Newtonsoft.Json": "10.0.2",
+    "Prism.Unity": "6.3.0",
+    "QueryString.NET": "1.0.0",
+    "SQLite.Net-PCL": "3.1.1"
   },
   "frameworks": {
     "uap10.0": {}

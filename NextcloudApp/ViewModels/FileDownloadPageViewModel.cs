@@ -7,7 +7,6 @@ using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Core;
-using Windows.Web.Http;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -15,10 +14,13 @@ using NextcloudClient.Exceptions;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
 using Prism.Windows.AppModel;
+using DecaTec.WebDav;
+using Windows.Storage.AccessCache;
+using System.Threading.Tasks;
 
 namespace NextcloudApp.ViewModels
 {
-    public class SingleFileDownloadPageViewModel : ViewModel
+    public class FileDownloadPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationService;
         private CancellationTokenSource _cts;
@@ -28,11 +30,12 @@ namespace NextcloudApp.ViewModels
         private int _percentageDownloaded;
         private long _bytesTotal;
         private ResourceInfo _resourceInfo;
+        private List<ResourceInfo> _resourceInfos;
         private string _downloadingFileProgressText;
         private StorageFile _currentFile;
         private bool _isIndeterminate;
 
-        public SingleFileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
+        public FileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
@@ -67,19 +70,56 @@ namespace NextcloudApp.ViewModels
 
             _cts = new CancellationTokenSource();
 
-            var parameters = SingleFileDownloadPageParameters.Deserialize(e.Parameter);
+            var parameters = FileDownloadPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
-            if (resourceInfo == null)
+            var resourceInfos = parameters?.ResourceInfos;
+
+            if (resourceInfo != null)
+            {
+                ResourceInfo = resourceInfo;
+
+                await Download(resourceInfo, client, null);
+            }
+            else if (resourceInfos != null)
+            {
+                ResourceInfos = resourceInfos;
+
+                FolderPicker folderPicker = new FolderPicker();
+                folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+                folderPicker.FileTypeFilter.Add(".zip");
+                StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+                if (folder != null)
+                {
+                    // Application now has read/write access to all contents in the picked folder (including other sub-folder contents)
+                    StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+                }
+                else
+                {
+                    return;
+                }
+
+                foreach (var resInfo in ResourceInfos)
+                {
+                    await Download(resInfo, client, folder);
+                }
+            }
+            else
             {
                 return;
             }
 
+            _navigationService.GoBack();
+        }
+
+        private async Task Download(ResourceInfo resourceInfo, NextcloudClient.NextcloudClient client, StorageFolder folder)
+        {
             if (resourceInfo.ContentType == "dav/directory")
             {
                 ResourceInfo = new ResourceInfo
                 {
                     Name = resourceInfo.Name + ".zip",
-                    ContentType = "application/zip"
+                    ContentType = "application/zip",
+                    Path = resourceInfo.Path
                 };
             }
             else
@@ -92,7 +132,25 @@ namespace NextcloudApp.ViewModels
             savePicker.FileTypeChoices.Add(ResourceInfo.ContentType, new List<string> { Path.GetExtension(ResourceInfo.Name) });
             savePicker.SuggestedFileName = ResourceInfo.Name;
 
-            var localFile = await savePicker.PickSaveFileAsync();
+            StorageFile localFile;
+            if (folder != null)
+            {
+                try
+                {
+                    localFile = await folder.CreateFileAsync(
+                        savePicker.SuggestedFileName,
+                        CreationCollisionOption.GenerateUniqueName);
+                }
+                catch (FileNotFoundException ex)
+                {
+                    //this.textBlock.Text = "Error " + ex;
+                    return;
+                }
+            }
+            else
+            {
+                localFile = await savePicker.PickSaveFileAsync();
+            }
             if (localFile == null)
             {
                 return;
@@ -106,18 +164,22 @@ namespace NextcloudApp.ViewModels
 
             try
             {
-                IProgress<HttpProgress> progress = new Progress<HttpProgress>(ProgressHandler);
-                Windows.Storage.Streams.IBuffer buffer;
-                switch (resourceInfo.ContentType)
+                IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
+
+                using (var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite))
                 {
-                    case "dav/directory":
-                        buffer = await client.DownloadDirectoryAsZip(ResourceInfo.Path, _cts, progress);
-                        break;
-                    default:
-                        buffer = await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, _cts, progress);
-                        break;
+                    Stream targetStream = randomAccessStream.AsStreamForWrite();
+
+                    switch (resourceInfo.ContentType)
+                    {
+                        case "dav/directory":
+                            await client.DownloadDirectoryAsZip(ResourceInfo.Path, targetStream, progress, _cts.Token);
+                            break;
+                        default:
+                            await client.Download(ResourceInfo.Path + "/" + ResourceInfo.Name, targetStream, progress, _cts.Token);
+                            break;
+                    }
                 }
-                await FileIO.WriteBufferAsync(localFile, buffer);
             }
             catch (ResponseError e2)
             {
@@ -136,22 +198,18 @@ namespace NextcloudApp.ViewModels
             {
                 //this.textBlock.Text = "Path " + file.Name + " couldn't be saved.";
             }
-
-            _navigationService.GoBack();
+            return;
         }
 
-        private async void ProgressHandler(HttpProgress progressInfo)
+        private async void ProgressHandler(WebDavProgress progressInfo)
         {
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                if (progressInfo.TotalBytesToReceive != null)
-                {
-                    BytesTotal = (long)progressInfo.TotalBytesToReceive;
-                }
-                BytesDownloaded = (int)progressInfo.BytesReceived;
+                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesDownloaded = (int)progressInfo.Bytes;
             });
         }
-        
+
         public bool IsIndeterminate
         {
             get { return _isIndeterminate; }
@@ -192,6 +250,12 @@ namespace NextcloudApp.ViewModels
         {
             get { return _resourceInfo; }
             private set { SetProperty(ref _resourceInfo, value); }
+        }
+
+        public List<ResourceInfo> ResourceInfos
+        {
+            get { return _resourceInfos; }
+            private set { SetProperty(ref _resourceInfos, value); }
         }
 
         public string DownloadingFileProgressText

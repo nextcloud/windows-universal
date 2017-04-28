@@ -7,16 +7,16 @@ namespace NextcloudApp.Utils
 {
     public class DateSorter : Comparer<FileOrFolder>
     {
-        private readonly SortMode _sortMode;
+        private readonly SortSequence _sortMode;
 
-        public DateSorter(SortMode sortMode)
+        public DateSorter(SortSequence sortMode)
         {
             _sortMode = sortMode;
         }
 
         public override int Compare(FileOrFolder x, FileOrFolder y)
         {
-            return _sortMode == SortMode.Asc
+            return _sortMode == SortSequence.Asc
                 ? x.LastModified.CompareTo(y.LastModified)
                 : y.LastModified.CompareTo(x.LastModified);
         }

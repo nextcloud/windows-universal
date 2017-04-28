@@ -183,7 +183,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Impossible de créer le dossier</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Connecter</value>
+    <value> Se connecter</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
     <value>Type de contenu</value>
@@ -413,13 +413,14 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Déplacer des fichiers et des dossiers
 • Renommer des fichiers et des dossiers
+• Synchronisation manuelle de dossiers
 • Télécharger des dossiers en tant que fichier zip
 • Sélectionner plusieurs fichiers et dossiers
 • Épingler des fichiers et des dossiers à l&apos;écran de démarrage
 • Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
 • Autoriser les certificats SSL auto-signés
 • Afficher la taille du fichier dans la liste
-• Gérer l&apos;activation du fichier
+• Partager des fichiers avec l&apos;application (partager la cible)
 • Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
 • Améliorations de la sécurité &amp; corrections de bugs
 • Nouvelle bibliothèque WebDAV plus stable</value>
@@ -436,6 +437,30 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
   </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Statut de synchronisation</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Journal</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Conflits</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Erreurs</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchroniser</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Préférer le fichier local</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Effacer le journal de synchronisation</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Préférer le fichier distant</value>
+  </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>L&apos;autorité de certificat est invalide ou incorrecte. Se connecter quand même ?
 
@@ -450,8 +475,71 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
   <data name="Hint" xml:space="preserve">
     <value>Indice</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Liste des erreurs qui ont survenues lors de la synchronisation. Ceux-ci devraient être des problèmes temporaires (par exemple un fichier qui a été ouvert par une autre application) et devraient disparaître après la prochaine synchronisation.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Attention aux conflits !</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Le dossier local et à distance ne sont pas vides. Cela peut causer beaucoup de conflits car nous ne pouvons pas savoir quels fichiers sont les bons.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>La synchronisation a été déclenchée !</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>La synchronisation aura lieu en arrière-plan. Vous aurez une notification quand elle sera terminée.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service temporairement indisponible (normalement dû à un travail de maintenance de courte durée).
 Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Le fichier a été modifié à la fois localement et à distance. Lequel préférez-vous ?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Le fichier a été créé localement et à distance. Quel est le bon ?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Le fichier supprimé localement a été modifié à distance. Lequel préférez-vous ?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflit :</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Le fichier supprimé à distance a été modifié localement. Lequel préférez-vous ?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronisation du dossier {0} fini avec {1} modifications et {2} erreurs ou conflits.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronisation du dossier {0} fini avec {1} modifications.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>La synchronisation a été terminée</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronisation du dossier {0} a été stoppée car l&apos;application a été suspendue.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronisation suspendue</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Statut de synchronisation</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Chemin local :</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Chemin Nextcloud :</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choisissez le dossier où vous souhaitez téléverser les fichiers</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Dossiers</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

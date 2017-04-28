@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Windows.Storage.Streams;
 using Windows.Web.Http;
 using Windows.Web.Http.Filters;
 using Newtonsoft.Json;
@@ -22,7 +21,7 @@ namespace NextcloudClient
     /// <summary>
     ///     Nextcloud OCS and DAV access client
     /// </summary>
-    public class NextcloudClient
+    public class NextcloudClient : IDisposable
     {
         #region PRIVATE PROPERTIES
 
@@ -128,7 +127,10 @@ namespace NextcloudClient
                     ));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
 
-            _dav = new WebDavSession(_url, _httpBaseProtocolFilter);
+            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password))
+            {
+                Timeout = Timeout.InfiniteTimeSpan
+            };
         }
 
         #endregion
@@ -211,7 +213,8 @@ namespace NextcloudClient
         /// </summary>
         /// <returns>The resource info.</returns>
         /// <param name="path">remote Path.</param>
-        public async Task<ResourceInfo> GetResourceInfo(string path)
+        /// <param name="name">name of resource to get</param>
+        public async Task<ResourceInfo> GetResourceInfo(string path, string name)
         {
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
@@ -222,25 +225,31 @@ namespace NextcloudClient
             {
                 return null;
             }
-            var item = result[0];
-            var res = new ResourceInfo
+            foreach (var item in result)
             {
-                ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                Created = item.CreationDate,
-                ETag = item.ETag,
-                LastModified = item.LastModified,
-                Name = System.Net.WebUtility.UrlDecode(item.Name),
-                QuotaAvailable = item.QuotaAvailableBytes,
-                QuotaUsed = item.QuotaUsedBytes,
-                Size = item.ContentLength,
-                Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
-            };
-            if (!res.ContentType.Equals("dav/directory"))
-            {
-                // if resource not a directory, remove the file name from remote path.
-                res.Path = res.Path.Replace("/" + res.Name, "");
+                if (item.Name.Equals(name))
+                {
+                    var res = new ResourceInfo
+                    {
+                        ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
+                        Created = item.CreationDate,
+                        ETag = item.ETag,
+                        LastModified = item.LastModified,
+                        Name = System.Net.WebUtility.UrlDecode(item.Name),
+                        QuotaAvailable = item.QuotaAvailableBytes,
+                        QuotaUsed = item.QuotaUsedBytes,
+                        Size = item.ContentLength,
+                        Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
+                    };
+                    if (!res.ContentType.Equals("dav/directory"))
+                    {
+                        // if resource not a directory, remove the file name from remote path.
+                        res.Path = res.Path.Replace("/" + res.Name, "");
+                    }
+                    return res;
+                }
             }
-            return res;
+            return null;
         }
 
 
@@ -339,12 +348,13 @@ namespace NextcloudClient
         ///     Download the specified file.
         /// </summary>
         /// <param name="path">File remote Path.</param>
-        /// <param name="cts"></param>
+        /// <param name="localStream"></param>
+        /// <param name="cancellationToken"></param>
         /// <param name="progress"></param>
         /// <returns>File contents.</returns>
-        public async Task<IBuffer> Download(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
+        public async Task<bool> Download(string path, Stream localStream, IProgress<WebDavProgress> progress, CancellationToken cancellationToken)
         {
-            return await _dav.DownloadFileAsync(GetDavUri(path), cts, progress);
+            return await _dav.DownloadFileWithProgressAsync(GetDavUri(path), localStream, progress, cancellationToken);
         }
 
         /// <summary>
@@ -387,13 +397,12 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         /// <param name="stream"></param>
         /// <param name="contentType">File content type.</param>
-        /// <param name="cts"></param>
+        /// <param name="cancellationToken"></param>
         /// <param name="progress"></param>
         /// <returns><c>true</c>, if upload successful, <c>false</c> otherwise.</returns>
-        public async Task<bool> Upload(string path, IRandomAccessStream stream, string contentType,
-            CancellationTokenSource cts, IProgress<HttpProgress> progress)
+        public async Task<bool> Upload(string path, Stream stream, string contentType, IProgress<WebDavProgress> progress, CancellationToken cancellationToken)
         {
-            return await _dav.UploadFileAsync(GetDavUri(path), stream, contentType, cts, progress);
+            return await _dav.UploadFileWithProgressAsync(GetDavUri(path), stream, contentType, progress, cancellationToken);
         }
 
         /// <summary>
@@ -452,13 +461,14 @@ namespace NextcloudClient
         ///     Downloads a remote directory as zip.
         /// </summary>
         /// <param name="path">File remote Path.</param>
-        /// <param name="cts"></param>
+        /// <param name="localStream"></param>
+        /// <param name="cancellationToken"></param>
         /// <param name="progress"></param>
         /// <returns>File contents.</returns>
         //public async Task<IBuffer> Download(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
-        public async Task<IBuffer> DownloadDirectoryAsZip(string path, CancellationTokenSource cts, IProgress<HttpProgress> progress)
+        public async Task<bool> DownloadDirectoryAsZip(string path, Stream localStream, IProgress<WebDavProgress> progress, CancellationToken cancellationToken)
         {
-            return await _dav.DownloadFileAsync(GetDavUriZip(path), cts, progress);
+            return await _dav.DownloadFileWithProgressAsync(GetDavUriZip(path), localStream, progress, cancellationToken);
         }
 
         #endregion
@@ -582,7 +592,7 @@ namespace NextcloudClient
         /// <returns></returns>
         public static async Task<bool> CheckUserLogin(string serverUrl, string userId, string password, bool ignoreServerCertificateErrors)
         {
-            if (serverUrl == null)
+            if (string.IsNullOrEmpty(serverUrl) || string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(password))
             {
                 return false;
             }
@@ -2324,5 +2334,23 @@ namespace NextcloudClient
         }
 
         #endregion
+
+        #region IDisposable
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _dav?.Dispose();
+            }
+        }
+
+        #endregion IDisposable
     }
 }

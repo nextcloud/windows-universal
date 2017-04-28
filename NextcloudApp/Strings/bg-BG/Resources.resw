@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Всички файлове</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Винаги</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Възникна грешка</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Добави</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Създаване на папка</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Заснемане</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Качване на файлове</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Качване на снимки</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Изтегляне</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Опресняване</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Сортиране</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Дата (старите в началото)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Дата (новите в началото)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Име (А в началото)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Име (Z в началото)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Размер (малките в началото)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Размер (големите в началото)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Програмна грешка</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>Приложението се натъкна на проблем. Извиняваме се за неудобството. Ако сте изпълнявали конкретна задача, информацията, върху която сте работили е загубена.
+
+Бихте ли искали да информирате разработчиците на приложението и да предоставите изготвения доклад за грешки? Това помага за по-бързо елиминиране на проблемите.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отказ</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Не може да се създаде папка</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Свързване</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Content-Type</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Създаване</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Създаден</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Създаване на нова папка</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Изтегляне на файл...</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Изтегляне на изображения за визуализация</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} байта)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Име на папката</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Последно променен</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Име</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Никога</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Нова папка</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Не</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Не е разрешен</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>Сървърът върна код за грешка 401 (Unauthorized). Моля, влезте отново.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Парола</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Път</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} от {1} използвани</value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Нулиране на приложението</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Повторен опит</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Адрес на сървъра</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Показване на файл и папка списъците групирано</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Вече съществува елемент с това име. Посочете различно име.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Потребител</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Само при Wi-Fi връзка</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Изтриване</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Изтриване на файл</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете файла {0}</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Изтриване на папка</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Сигурни ли сте, че искате да изтриете папката {0}</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{0} от {1} качени</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Качване на файл {0} от {1}</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Качване на файл...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{0} от {1} изтеглени</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Режимът на поддръжка е включен на сървъра.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Грешно потребителско име или парола</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Версия на клиента {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Името или адресът на сървъра не можаха да бъдат намерени.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Версия на сървъра {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Изтриване</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>изчакване на отговор от сървъра</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Моля изберете ново име</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Преименуване</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Преименуване</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Преименуване</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Преместване в</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Преместване в</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Отказ</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Избор на папка</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Сървърът с адрес {0} не е достъпен.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Изтегляне като ZIP файл</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} изтеглени</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>За достъп до вашия Nextcloud, предоставете информация за вход на вашето устройство.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello удостоверяване</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>PIN не е настроен за това устройство. За да използвате  Windows Hello, трябва да дефинирате PIN за устройството.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Изтегляне</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Изисква се вход</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>Не може да стартираме Nextcloud, докато не се осигурите информация за вход на вашето устройство.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Нов опит</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud за Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Приложението ви беше обновено до версия {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Нови функции и подобрения в тази версия:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Препоръчвам</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Обновяване</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app (share target)
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Закачи към старт</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Закачи към старт</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Свързване</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Игнориране на невалидни самостоятелно подписани SSL сертификати. Това позволява ползването на невалидни или неправилни SSL органи за сертификати.  Бъдете внимателни, вие няма да бъдете защитени от Man-in-the-middle (човек-в-средата) атаки!</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Conflicts</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Clear sync history</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>Органът за сертификат е невалиден или некоректен. Ще се свържете ли все пак?
+
+Бъдете внимателни, вие няма да бъдете защитени от Man-in-the-middle (човек-в-средата) атаки!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Внимание!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Приложението трябва да се рестартира</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Подсказка</value>
+  </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Beware of conflicts!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Услугата е временно недостъпна (обикновено това се дължи на краткосрочна работа по поддръжката).
+Моля, опитайте отново по-късно.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflict: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synchronization Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Local Path:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Path:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
+  </data>
+</root>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudClient", "NextcloudClient\NextcloudClient.csproj", "{E2015378-CEFF-4913-A4A6-48706F2625D4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudApp", "NextcloudApp\NextcloudApp.csproj", "{99EFB7EA-88A3-4FCF-9289-22734215B5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudClientPortable", "NextcloudClientPortable\NextcloudClientPortable.csproj", "{07797E3B-7077-43EF-8197-F8723E2B0CC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,22 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|ARM.Build.0 = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|x64.Build.0 = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Debug|x86.Build.0 = Debug|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|ARM.ActiveCfg = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|ARM.Build.0 = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|x64.ActiveCfg = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|x64.Build.0 = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|x86.ActiveCfg = Release|Any CPU
-		{E2015378-CEFF-4913-A4A6-48706F2625D4}.Release|x86.Build.0 = Release|Any CPU
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Debug|Any CPU.Build.0 = Debug|x86
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Debug|Any CPU.Deploy.0 = Debug|x86
@@ -57,6 +41,22 @@ Global
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Release|x86.ActiveCfg = Release|x86
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Release|x86.Build.0 = Release|x86
 		{99EFB7EA-88A3-4FCF-9289-22734215B5CF}.Release|x86.Deploy.0 = Release|x86
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|ARM.Build.0 = Debug|ARM
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|x64.ActiveCfg = Debug|x64
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|x64.Build.0 = Debug|x64
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|x86.ActiveCfg = Debug|x86
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Debug|x86.Build.0 = Debug|x86
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|ARM.ActiveCfg = Release|ARM
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|ARM.Build.0 = Release|ARM
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|x64.ActiveCfg = Release|x64
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|x64.Build.0 = Release|x64
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|x86.ActiveCfg = Release|x86
+		{07797E3B-7077-43EF-8197-F8723E2B0CC4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

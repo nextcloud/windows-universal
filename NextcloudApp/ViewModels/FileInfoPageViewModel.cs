@@ -53,12 +53,14 @@ namespace NextcloudApp.ViewModels
             //dataTransferManager.DataRequested += new TypedEventHandler<DataTransferManager, DataRequestedEventArgs>(ShareImageHandler);
             DownloadCommand = new DelegateCommand(() =>
             {
-                var parameters = new SingleFileDownloadPageParameters
+                var parameters = new FileDownloadPageParameters
                 {
                     ResourceInfo = ResourceInfo
                 };
-                _navigationService.Navigate(PageTokens.SingleFileDownload.ToString(), parameters.Serialize());
+
+                _navigationService.Navigate(PageToken.FileDownload.ToString(), parameters.Serialize());
             });
+
             DeleteResourceCommand = new DelegateCommand(DeleteResource);
             RenameResourceCommand = new DelegateCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
@@ -68,29 +70,36 @@ namespace NextcloudApp.ViewModels
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
+
             foreach(var path in Directory.PathStack)
             {
                 PathStack.Add(path);
             }
+
             var parameters = FileInfoPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
+
             if (resourceInfo == null)
             {
                 return;
             }
+
             PathStack.Add(new PathInfo
             {
                 ResourceInfo = resourceInfo
             });
+
             ResourceInfo = resourceInfo;
             FileExtension = Path.GetExtension(ResourceInfo.Name);
             FileName = Path.GetFileNameWithoutExtension(ResourceInfo.Name);
             var converter = new BytesToHumanReadableConverter();
+
             FileSizeString = LocalizationService.Instance.GetString(
                 "FileSizeString",
                 converter.Convert(ResourceInfo.Size, typeof(string), null, CultureInfo.CurrentCulture.ToString()),
                 ResourceInfo.Size
             );
+
             DownloadPreviewImages();
         }
 
@@ -174,7 +183,7 @@ namespace NextcloudApp.ViewModels
                     return;
                 }
                 _thumbnail = value;
-                OnPropertyChanged();
+                RaisePropertyChanged(nameof(Thumbnail));
             }
         }
 
@@ -319,7 +328,7 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfo = ResourceInfo
             };
-            _navigationService.Navigate(PageTokens.MoveFileOrFolder.ToString(), parameters.Serialize());
+            _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
 
         private void PinToStart(object parameter)

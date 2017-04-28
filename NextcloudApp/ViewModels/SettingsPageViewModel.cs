@@ -19,7 +19,7 @@ namespace NextcloudApp.ViewModels
     {
         private readonly INavigationService _navigationService;
         private readonly DialogService _dialogService;
-        private LocalSettings _settngs;
+        private LocalSettings _settings;
         private int _previewImageDownloadModesSelectedIndex;
         private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
@@ -91,8 +91,8 @@ namespace NextcloudApp.ViewModels
 
         public LocalSettings Settings
         {
-            get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
+            get { return _settings; }
+            private set { SetProperty(ref _settings, value); }
         }
 
         public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } =
@@ -203,7 +203,7 @@ namespace NextcloudApp.ViewModels
         private void Reset()
         {
             SettingsService.Instance.Reset();
-            _navigationService.Navigate(PageTokens.Login.ToString(), null);
+            _navigationService.Navigate(PageToken.Login.ToString(), null);
         }
     }
 }

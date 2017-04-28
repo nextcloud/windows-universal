@@ -19,6 +19,9 @@ using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
+using Microsoft.QueryStringDotNET;
+using Windows.UI.Notifications;
+using System.Diagnostics;
 
 namespace NextcloudApp
 {
@@ -139,6 +142,19 @@ namespace NextcloudApp
             return shell;
         }
 
+        protected override Task OnSuspendingApplicationAsync()
+        {
+            var task = base.OnSuspendingApplicationAsync();
+            // Stop Background Sync Tasks
+            List<FolderSyncInfo> activeSyncs = SyncDbUtils.GetActiveSyncInfos();
+            foreach(var fsi in activeSyncs)
+            {
+                ToastNotificationService.ShowSyncSuspendedNotification(fsi);
+                SyncDbUtils.UnlockFolderSyncInfo(fsi);
+            }
+            return task;
+        }
+
         protected override Task OnInitializeAsync(IActivatedEventArgs args)
         {
             Container.RegisterInstance(new DialogService());
@@ -177,7 +193,7 @@ namespace NextcloudApp
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
             )
             {
-                NavigationService.Navigate(PageTokens.Login.ToString(), null);
+                NavigationService.Navigate(PageToken.Login.ToString(), null);
             }
             else
             {
@@ -199,6 +215,8 @@ namespace NextcloudApp
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
+                        // Remove unnecessary notifications whenever the app is used.
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
                         PinStartPageParameters pageParameters = null;
                         if (!string.IsNullOrEmpty(args.Arguments))
                         {
@@ -208,7 +226,7 @@ namespace NextcloudApp
                                 pageParameters = new PinStartPageParameters()
                                 {
                                     ResourceInfo = tmpResourceInfo,
-                                    PageTarget = tmpResourceInfo.IsDirectory() ? PageTokens.DirectoryList.ToString() : PageTokens.FileInfo.ToString()
+                                    PageTarget = tmpResourceInfo.IsDirectory ? PageToken.DirectoryList : PageToken.FileInfo
                                 };
 
                             }
@@ -217,34 +235,63 @@ namespace NextcloudApp
                         if (SettingsService.Instance.LocalSettings.UseWindowsHello)
                         {
                             NavigationService.Navigate(
-                                PageTokens.Verification.ToString(),
+                                PageToken.Verification.ToString(),
                                 pageParameters?.Serialize());
                         }
                         else
                         {
                             NavigationService.Navigate(
-                                pageParameters!=null ? pageParameters.PageTarget : PageTokens.DirectoryList.ToString(), 
+                                pageParameters != null ? pageParameters.PageTarget.ToString() : PageToken.DirectoryList.ToString(), 
                                 pageParameters?.Serialize());
                         }
                     }
                     else
                     {
                         NavigationService.Navigate(
-                            PageTokens.Login.ToString(), 
+                            PageToken.Login.ToString(), 
                             null);
                     }
                 }
                 else
                 {
                     NavigationService.Navigate(
-                        PageTokens.Login.ToString(), 
+                        PageToken.Login.ToString(), 
                         null);
                 }
             }
 
             // Ensure the current window is active
             Window.Current.Activate();
+            
+            return Task.FromResult(true);
+        }
 
+        protected override Task OnActivateApplicationAsync(IActivatedEventArgs e)
+        {
+            // Remove unnecessary notifications whenever the app is used.
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            // Handle toast activation
+            if (e is ToastNotificationActivatedEventArgs)
+            {
+                var toastActivationArgs = e as ToastNotificationActivatedEventArgs;
+                // Parse the query string
+                QueryString args = QueryString.Parse(toastActivationArgs.Argument);
+                // See what action is being requested 
+                switch (args["action"])
+                {
+                    // Nothing to do here
+                    case ToastNotificationService.SYNCACTION:
+                        NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
+                        break;
+                    // Open Status Page
+                    case ToastNotificationService.SYNCONFLICTACTION:
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
+                        NavigationService.Navigate(PageToken.SyncStatus.ToString(), null);
+                        break;
+                }
+            }
+            // Ensure the current window is active
+            Window.Current.Activate();
             return Task.FromResult(true);
         }
 

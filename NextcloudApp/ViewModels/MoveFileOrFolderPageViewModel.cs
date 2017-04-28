@@ -8,12 +8,13 @@ using NextcloudClient.Types;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
+using System.Threading.Tasks;
 
 namespace NextcloudApp.ViewModels
 {
     public class MoveFileOrFolderPageViewModel : ViewModel
     {
-        private LocalSettings _settngs;
+        private LocalSettings _settings;
         private DirectoryService _directoryService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
@@ -28,8 +29,11 @@ namespace NextcloudApp.ViewModels
         public ICommand GroupByDateDescendingCommand { get; private set; }
         public ICommand GroupBySizeAscendingCommand { get; private set; }
         public ICommand GroupBySizeDescendingCommand { get; private set; }
+        public ICommand GroupByTypeAscendingCommand { get; private set; }
+        public ICommand GroupByTypeDescendingCommand { get; private set; }
         public ICommand RefreshCommand { get; private set; }
         public ICommand CreateDirectoryCommand { get; private set; }
+        public ICommand SelectToggleCommand { get; private set; }
         public object CancelFolderSelectionCommand { get; private set; }
         public object MoveToSelectedFolderCommand { get; private set; }
 
@@ -39,42 +43,61 @@ namespace NextcloudApp.ViewModels
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
             Settings = SettingsService.Instance.LocalSettings;
+
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
-                Directory.GroupByNameAscending();
-                SelectedFileOrFolder = null;
+                Directory.GroupByNameAscending();                
             });
+
             GroupByNameDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameDescending();
-                SelectedFileOrFolder = null;
             });
+
             GroupByDateAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateAscending();
-                SelectedFileOrFolder = null;
             });
+
             GroupByDateDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateDescending();
-                SelectedFileOrFolder = null;
             });
+
             GroupBySizeAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeAscending();
-                SelectedFileOrFolder = null;
             });
+
             GroupBySizeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeDescending();
-                SelectedFileOrFolder = null;
             });
+
+            GroupByTypeAscendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeAscending();
+            });
+
+            GroupByTypeDescendingCommand = new DelegateCommand(() =>
+            {
+                Directory.GroupByTypeDescending();
+            });
+
+            SelectedFileOrFolder = null;
+
             RefreshCommand = new DelegateCommand(async () =>
             {
                 ShowProgressIndicator();
                 await Directory.Refresh();
                 HideProgressIndicator();
             });
+
+            SelectToggleCommand = new DelegateCommand(() =>
+            {
+                Directory.ToggleSelectionMode();
+            });
+
             CreateDirectoryCommand = new DelegateCommand(CreateDirectory);
             MoveToSelectedFolderCommand = new DelegateCommand(MoveToSelectedFolder);
             CancelFolderSelectionCommand = new DelegateCommand(CancelFolderSelection);
@@ -84,29 +107,48 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
             base.OnNavigatedTo(e, viewModelState);
+            ResourceInfo = null;
+            ResourceInfos = null;
             var parameters = MoveFileOrFolderPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
-            if (resourceInfo == null)
+            var resourceInfos = parameters?.ResourceInfos;
+
+            if (resourceInfo != null)
+            {
+                ResourceInfo = resourceInfo;
+            }
+            else if (resourceInfos != null)
+            {
+                ResourceInfos = resourceInfos;
+            }
+            else
             {
                 return;
             }
-            ResourceInfo = resourceInfo;
+
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
+            SelectedFileOrFolder = null;
         }
 
         public ResourceInfo ResourceInfo { get; private set; }
 
+        public List<ResourceInfo> ResourceInfos { get; private set; }
+
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             _isNavigatingBack = true;
+
             if (!suspending)
             {
                 Directory.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }
+            else
+                _isNavigatingBack = false;
+
             base.OnNavigatingFrom(e, viewModelState, suspending);
         }
 
@@ -122,26 +164,39 @@ namespace NextcloudApp.ViewModels
                 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo
                 : new ResourceInfo();
 
-            var oldPath = string.IsNullOrEmpty(ResourceInfo.Path) ? "/" : ResourceInfo.Path;
+            if (ResourceInfo != null)
+            {
+                await Move(ResourceInfo, currentFolderResourceInfo);
+            }
+            else if (ResourceInfos != null)
+            {
+                foreach (var resInfo in ResourceInfos)
+                {
+                    await Move(resInfo, currentFolderResourceInfo);
+                }
+            }
+
+            HideProgressIndicator();
+            _navigationService.GoBack();
+        }
+
+        private async Task Move(ResourceInfo resInfo, ResourceInfo currentFolderResourceInfo)
+        {
+            var oldPath = string.IsNullOrEmpty(resInfo.Path) ? "/" : resInfo.Path;
             oldPath = oldPath.TrimEnd('/');
 
-            if (!ResourceInfo.ContentType.Equals("dav/directory"))
+            if (!resInfo.ContentType.Equals("dav/directory"))
             {
-                oldPath = oldPath + "/" + ResourceInfo.Name;
+                oldPath = oldPath + "/" + resInfo.Name;
             }
 
             var newPath = string.IsNullOrEmpty(currentFolderResourceInfo.Path) ? "/" : currentFolderResourceInfo.Path;
             newPath = newPath.TrimEnd('/');
-            newPath = newPath + "/" + ResourceInfo.Name;
+            newPath = newPath + "/" + resInfo.Name;
 
             var success = await Directory.Move(oldPath, newPath);
 
-            HideProgressIndicator();
-
-            if (success)
-            {
-                _navigationService.GoBack();
-            }
+            return;
         }
 
         private async void CreateDirectory()
@@ -160,24 +215,32 @@ namespace NextcloudApp.ViewModels
                     PrimaryButtonText = _resourceLoader.GetString("Create"),
                     SecondaryButtonText = _resourceLoader.GetString("Cancel")
                 };
+
                 var dialogResult = await _dialogService.ShowAsync(dialog);
+
                 if (dialogResult != ContentDialogResult.Primary)
                 {
                     return;
                 }
+
                 var textBox = dialog.Content as TextBox;
+
                 if (textBox == null)
                 {
                     return;
                 }
+
                 var folderName = textBox.Text;
+
                 if (string.IsNullOrEmpty(folderName))
                 {
                     folderName = _resourceLoader.GetString("NewFolder");
                 }
+
                 ShowProgressIndicator();
                 var success = await Directory.CreateDirectory(folderName);
                 HideProgressIndicator();
+
                 if (success)
                 {
                     return;
@@ -195,7 +258,9 @@ namespace NextcloudApp.ViewModels
                     PrimaryButtonText = _resourceLoader.GetString("Retry"),
                     SecondaryButtonText = _resourceLoader.GetString("Cancel")
                 };
+
                 dialogResult = await _dialogService.ShowAsync(dialog);
+
                 if (dialogResult != ContentDialogResult.Primary)
                 {
                     return;
@@ -211,8 +276,8 @@ namespace NextcloudApp.ViewModels
 
         public LocalSettings Settings
         {
-            get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
+            get { return _settings; }
+            private set { SetProperty(ref _settings, value); }
         }
 
         public ResourceInfo SelectedFileOrFolder
@@ -251,7 +316,7 @@ namespace NextcloudApp.ViewModels
                 {
                     return;
                 }
-                if (value.IsDirectory())
+                if (value.IsDirectory)
                 {
                     Directory.PathStack.Add(new PathInfo
                     {
@@ -298,9 +363,19 @@ namespace NextcloudApp.ViewModels
         {
             ShowProgressIndicator();
 
-            await Directory.StartDirectoryListing();
-
+            if (ResourceInfo != null)
+            {
+                Directory.RemoveResourceInfos = new List<ResourceInfo> { ResourceInfo };
+            }
+            else if (ResourceInfos != null)
+            {
+                Directory.RemoveResourceInfos = ResourceInfos;
+            }
+               
+            // The folder to move should not be set as target.
+            await Directory.StartDirectoryListing(ResourceInfo);
             HideProgressIndicator();
+            SelectedFileOrFolder = null;
         }
 
 

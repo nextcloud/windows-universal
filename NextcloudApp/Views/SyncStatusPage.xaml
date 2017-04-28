@@ -1,0 +1,134 @@
+<prismMvvm:SessionStateAwarePage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    x:Class="NextcloudApp.Views.SyncStatusPage"
+    mc:Ignorable="d"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+        <Pivot>
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="48,0,0,0" Text="{Binding}" />
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem x:Uid="SynchronizationFolders"  Header="" Margin="0">
+                <ListView Grid.Row="1" Name="StatusListView" ItemsSource="{Binding FolderSyncList}" SelectionMode="None" 
+                                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Uid="SyncPathRemote" Text="" Grid.Column="0" Grid.Row="0" Margin="0,0,4,0" />
+                                <TextBlock x:Uid="SyncPathLocal" Text="" Grid.Column="0" Grid.Row="1" Margin="0,0,4,0" />
+                                <TextBlock Text="{Binding Path}" Grid.Column="1" Grid.Row="0" />
+                                <TextBlock 
+                                    DataContext="{Binding AccessListKey, Converter={StaticResource SyncInfoStoragePathConverter}}" 
+                                    Text="{Binding AsyncValue}"
+                                    Grid.Column="1" Grid.Row="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationHistory" Header="" Margin="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView Name="HistoryListView" ItemsSource="{Binding SyncHistoryList}" SelectionMode="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" Margin="0,0,15,0" />
+                                        <TextBlock Text="{Binding Path}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+
+                    <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+                        <!-- Buttons for fix options -->
+                        <AppBarButton 
+                            Icon="Delete" 
+                            Label="Clear history" 
+                            x:Uid="SyncClearHistory"
+                            Command="{Binding ClearSyncHistoryCommand}"/>                       
+                    </CommandBar>
+                </Grid>
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationConflicts"  Header="" Margin="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                        <TextBlock Text="{Binding Path}" />
+                                        <TextBlock Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}" Foreground="Red"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+
+                    <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+                        <!-- Buttons for fix options -->
+                        <AppBarButton 
+                            Icon="CellPhone" 
+                            Label="Prefer local file" 
+                            x:Uid="SyncFixConflictPreferLocal"
+                            CommandParameter="{Binding ElementName=ConflictListView}"
+                            Command="{Binding FixConflictByLocalCommand}"/>
+                       <AppBarButton 
+                            Icon="Globe" 
+                            Label="Prefer remote file" 
+                            x:Uid="SyncFixConflictPreferRemote"
+                            CommandParameter="{Binding ElementName=ConflictListView}"
+                            Command="{Binding FixConflictByRemoteCommand}"/>
+                    </CommandBar>
+                </Grid>                
+            </PivotItem>
+            <PivotItem x:Uid="SynchronizationErrors"  Header="" Margin="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4" />
+                    <ListView Grid.Row="1" Name="ErrorListView" ItemsSource="{Binding ErrorList}" SelectionMode="None" 
+                                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                    <TextBlock Text="{Binding Path}" />
+                                    <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+
+</prismMvvm:SessionStateAwarePage>

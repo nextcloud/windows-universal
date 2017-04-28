@@ -2,42 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using NextcloudApp.Models;
+using System.Globalization;
 
 namespace NextcloudApp.Utils
 {
     public class NameSorter : Comparer<FileOrFolder>
     {
-        private readonly SortMode _sortMode;
+        private readonly SortSequence sortMode;
+        private readonly StringComparer comparer;
 
-        public NameSorter(SortMode sortMode)
+        public NameSorter(SortSequence sortMode)
         {
-            _sortMode = sortMode;
+            this.sortMode = sortMode;
+            this.comparer = StringComparer.CurrentCulture;
         }
 
         public override int Compare(FileOrFolder x, FileOrFolder y)
         {
             int result;
-            if (_sortMode == SortMode.Asc)
+
+            if (sortMode == SortSequence.Asc)
             {
-                result = x.Name.First().CompareTo(y.Name.First());
+                result = x.Name.First().ToString().CompareTo(y.Name.First().ToString());
 
                 if (result != 0)
                 {
                     return result;
                 }
-                result = string.Compare(x.Name, y.Name, StringComparison.Ordinal);
 
-                return result != 0 ? result : string.Compare(x.Name, y.Name, StringComparison.Ordinal);
+                result = comparer.Compare(x.Name, y.Name);
+                return result != 0 ? result : comparer.Compare(x.Name, y.Name);
             }
-            result = y.Name.First().CompareTo(x.Name.First());
+
+            result = y.Name.First().ToString().CompareTo(x.Name.First().ToString());
 
             if (result != 0)
             {
                 return result;
             }
-            result = string.Compare(y.Name, x.Name, StringComparison.Ordinal);
 
-            return result != 0 ? result : string.Compare(y.Name, x.Name, StringComparison.Ordinal);
+            result = comparer.Compare(y.Name, x.Name);
+            return result != 0 ? result : comparer.Compare(y.Name, x.Name);
         }
     }
 }

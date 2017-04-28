@@ -13,15 +13,20 @@
             <converter:ContentTypeToIconConverter x:Key="ContentTypeToIconConverter"/>
             <converter:BytesToHumanReadableConverter x:Key="BytesToHumanReadableConverter"/>
             <converter:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+            <converter:DateTimeToVisibilityConverter x:Key="DateTimeToVisibilityConverter"/>
             <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <converter:IntToVisibilityConverter x:Key="IntToVisibilityConverter"/>
             <converter:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
             <converter:EmptyPathToSlashConverter x:Key="EmptyPathToSlashConverter"/>
             <converter:AddSlashToPathConverter x:Key="AddSlashToPathConverter"/>
-            <converter:IsSortingToSelectionModeConverter x:Key="IsSortingToSelectionModeConverter"/>
+            <converter:IsSelectingToVisibilityConverter x:Key="IsSelectingToVisibilityConverter"/>
             <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
+            <converter:IsFolderSyncedConverter x:Key="IsFolderSyncedConverter"/>
             <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>
             <converter:IsGlyphToVisibilityConverter x:Key="IsGlyphToVisibilityConverter"/>
+            <converter:ConflictTypeToStringConverter x:Key="ConflictTypeToStringConverter"/>
+            <converter:SyncInfoStoragePathConverter x:Key="SyncInfoStoragePathConverter" />
+            <converter:ConflictTypeToForegroundConverter x:Key="ConflictTypeToForegroundConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />

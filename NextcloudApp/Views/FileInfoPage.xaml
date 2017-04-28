@@ -217,47 +217,49 @@
                         Grid.Column="1" 
                         Text="{Binding FileSizeString}" 
                         Margin="0,8"
-                        TextWrapping="Wrap"/>
+                        TextWrapping="Wrap"/>                    
 
                     <TextBlock 
                         Grid.Row="5"
-                        Grid.Column="0" 
-                        Text="ETag" 
-                        x:Uid="ETag"
-                        Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
-                    <TextBlock 
-                        Grid.Row="5"
-                        Grid.Column="1" 
-                        Text="{Binding ResourceInfo.ETag}" 
-                        Margin="0,8"
-                        TextWrapping="Wrap"/>
-
-                    <TextBlock 
-                        Grid.Row="6"
                         Grid.Column="0" 
                         Text="Last modified" 
                         x:Uid="LastModified"
                         Margin="0,8,8,8"
                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                     <TextBlock 
-                        Grid.Row="6"
+                        Grid.Row="5"
                         Grid.Column="1" 
                         Text="{Binding ResourceInfo.LastModified, Converter={StaticResource DateTimeToStringConverter}}" 
                         Margin="0,8"
                         TextWrapping="Wrap"/>
 
                     <TextBlock 
-                        Grid.Row="7"
+                        Visibility="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToVisibilityConverter}}"
+                        Grid.Row="6"
                         Grid.Column="0" 
                         Text="Created" 
                         x:Uid="Created"
                         Margin="0,8,8,8"
                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                    <TextBlock
+                        Visibility="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToVisibilityConverter}}"
+                        Grid.Row="6"
+                        Grid.Column="1" 
+                        Text="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToStringConverter}}" 
+                        Margin="0,8"
+                        TextWrapping="Wrap"/>
+
+                    <TextBlock 
+                        Grid.Row="7"
+                        Grid.Column="0" 
+                        Text="ETag" 
+                        x:Uid="ETag"
+                        Margin="0,8,8,8"
+                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                     <TextBlock 
                         Grid.Row="7"
                         Grid.Column="1" 
-                        Text="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToStringConverter}}" 
+                        Text="{Binding ResourceInfo.ETag}" 
                         Margin="0,8"
                         TextWrapping="Wrap"/>
 

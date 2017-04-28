@@ -1,6 +1,6 @@
 ﻿namespace NextcloudApp
 {
-    public enum PageTokens
+    public enum PageToken
     {
         Login,
         DirectoryList,
@@ -8,10 +8,10 @@
         SharesOut,
         FileInfo,
         Settings,
-        SingleFileDownload,
-        BulkFileDownload,
+        FileDownload,
         FileUpload,
         MoveFileOrFolder,
-        Verification
+        Verification,
+        SyncStatus
     }
 }

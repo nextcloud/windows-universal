@@ -148,7 +148,7 @@
     <value>Обновить</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Сортировать</value>
+    <value>Сортировка</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
     <value>Дата (по возрастанию)</value>
@@ -411,16 +411,18 @@
     <value>Обновить</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Перемещение файлы и каталогов
-• Переименование файлов и каталогов
-• Скачивание каталогов одним zip файлом
-• Закрепление файлов и каталогов на начальном экране
-• Использование WIndows Hello для аутентификации при запуске приложения
-• Разрешено использовать самозаверенные сертификаты SSL
-• В режиме просмотра списком, отображается размер каталов
-• Обработка активации файла
-• Для хранения реквизитов пользователя используется Хранилище Паролей
-• Улучшения безопасности и устранение ошибок
+    <value>• Перемещение файлов и каталогов
+• Переименовывание файлов и каталогов
+• Ручная сихнронизация каталогов
+• Загрузка каталогов в виде zip-файла 
+• Выбор множества файлов и каталогов
+• Закрепление файлоы или каталогов на начальном экране
+• Использование Windows Hello для аутентификации при запуске приложения
+• Поддержка самоподписанных сертификатов SSL
+• Показ размера каталога в списке
+• Открытие общего доступа при помощи приложения
+• Использование PasswordVault для хранения пользовательских реквизитов
+• Улушения безопасности и исправления ошибок
 • Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -433,7 +435,31 @@
     <value>Подключиться</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Игнорировать недействительность самозаверенных SSL сертификаты. Это позволяет использовать недействительным или неправильные центры подтверждения действительности сертификатов. Будьте осторожны, вы не будете защищены от атаки человек-в-середине (MITM)!</value>
+    <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Состояние синхронизации</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Конфликты</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Синхронизировать</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Предпочесть локальный файл</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Очистить историю синхронизации</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Предпочесть файл с сервера</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Центр подтверждения действительности сертификата недействительный или неправильный. Подключаться в любом случае? 
@@ -449,8 +475,71 @@
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Список ошибок синхронизации. Скорее всего, это временные проблемы (например, файл был открыт в другом приложении) и они не должны повториться при следующем запуске синхронизации.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Остерегайтесь конфликтов!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Как локальный, так и каталог на серверере не пустые. Такая ситуация может привести к большому количеству конфликтов, потому что неизвестно какие из файлов правильные.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Синхроонизация была активирована!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Синхронизация будет происходить в фоновом режиме. После окончания вы получите уведомление.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Сервис временно недоступен (обычно по причине непродолжительных  работ по обслуживанию).
 Попробуйте еще раз позже.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Файлы изменены и локально и на сервере. Какие предпочесть?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Файл был создан и на сервере и локально — какой из них правильный?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Файл был удалён локально, но изменён на сервере. Какой предпочесть?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Конфликт:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Файл был удалён на сервере, но изменён локально. Какой предпочесть?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Синхронизизация каталога {0} завершена  с {1} изменениями и {2} ошибками или конфликтом.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Синхронизизация каталога {0} завершена с {1} изменениями.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Синхронизация была завершена</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Синхронизизация каталога {0} была остановлена по причине приостановки приложения.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Синхронизация приостановлена</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Состояние синхронизации</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Местный путь:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Путь Nextcloud:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Выберите каталог для загрузки файлов</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Каталоги</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

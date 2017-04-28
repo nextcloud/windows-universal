@@ -25,11 +25,6 @@ namespace NextcloudApp.Utils
             return _canExecuteFunc();
         }
 
-        public void Dispose()
-        {
-            RemoveAllEvents();
-        }
-
         public void Execute(object parameter)
         {
             _executeAction(parameter);
@@ -43,6 +38,27 @@ namespace NextcloudApp.Utils
         public void RaiseCanExecuteChanged()
         {
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }        
+
+        #region IDisposable
+
+        /// <summary>
+        /// Disposes the object.
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                RemoveAllEvents();
+            }
+        }
+
+        #endregion IDisposable
     }
 }

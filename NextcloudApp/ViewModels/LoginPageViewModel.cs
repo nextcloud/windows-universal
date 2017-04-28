@@ -12,6 +12,8 @@ using NextcloudClient.Exceptions;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
+using Windows.UI.Core;
+using Windows.System;
 
 namespace NextcloudApp.ViewModels
 {
@@ -75,6 +77,20 @@ namespace NextcloudApp.ViewModels
             _dialogService = dialogService;
 
             SaveSettingsCommand = new DelegateCommand(SaveSettings);
+            CoreWindow.GetForCurrentThread().KeyDown += LoginPageViewModel_KeyDown;
+        }
+
+        private void LoginPageViewModel_KeyDown(CoreWindow sender, KeyEventArgs args)
+        {
+            // Login in on 'Enter'.
+            switch (args.VirtualKey)
+            {
+                case VirtualKey.Enter:
+                    SaveSettingsCommand.Execute(null);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> dictionary)
@@ -186,7 +202,7 @@ namespace NextcloudApp.ViewModels
             var vault = new PasswordVault();
             vault.Add(new PasswordCredential(ServerAddress, Username, Password));
 
-            _navigationService.Navigate(PageTokens.DirectoryList.ToString(), null);
+            _navigationService.Navigate(PageToken.DirectoryList.ToString(), null);
         }
 
         private async Task<bool> CheckAndFixServerAddress()

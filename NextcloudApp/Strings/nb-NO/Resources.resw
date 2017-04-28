@@ -160,7 +160,7 @@
     <value>Navn (A først)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Navn Å først)</value>
+    <value>Navn (Å først)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
     <value>Størrelse (minste først)</value>
@@ -172,9 +172,9 @@
     <value>Programfeil</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Dette programmet har fått et problem. Vi beklager ubehagelighetene. Hvis du var midt i et arbeid så har dette forsvunnet.
+    <value>Programmet har fått et problem. Vi beklager ulempene dette medfører. Hvis du var midt i et arbeid, har dette forsvunnet.
 
-Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse problemet raskere.</value>
+Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å løse problemet raskere.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Avbryt</value>
@@ -201,7 +201,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
     <value>Last ned filen...</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Last ned forshåndsvisningsbildene</value>
+    <value>Last ned forhåndsvisningsbildene</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -264,7 +264,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
     <value>Innstillinger</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Vis fil og mappelistegruppering</value>
+    <value>Vis fil- og mappelistegruppering</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Størrelse</value>
@@ -366,7 +366,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
     <value>Tjeneren med adressen {0} kan ikke nås.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Last ned ZIP fil</value>
+    <value>Last ned ZIP- fil</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} lastet ned</value>
@@ -399,10 +399,10 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
     <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Appen din ble oppdatert til {0}</value>
+    <value>Appen din ble oppdatert til versjon {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nye muligheter og forbedringer i denne versjonen:</value>
+    <value>Nye funksjoner og forbedringer i denne versjonen:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Anbefal</value>
@@ -412,17 +412,18 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Flytt filer og mapper
-• Endre navn på filer og mapper
-• Last ned mappes som en Zip fil 
+• Gi nytt navn til filer og mapper
+• Manuell synkronisering av mapper
+• Last ned mapper som en ZIP- fil 
 • Velg flere filer og mapper
 • Fest filer og mapper til startskjermen
-• Bruk Windows Hello for å autentisere i appen
-• Tillat selvsignert SSL sertifikat
-• Vis mappestørrelse i listen
-• Håndter filaktivering
-• Bruk passordvelvet for å lagre påloggingsinformasjon
-• Sikkerhetsoppdateringer og fikser
-• Nytt og mer stabild WebDAV bibliotek</value>
+• Bruk Windows Hello for autentisering ved applikasjonsstart
+• Tillat selvsignerte SSL sertifikater
+• Hvis mappestørrelse i listen
+• Del filer med app&apos;en (del mål)
+• Bruk PasswordVault for å lagre påloggingsinfo til brukere
+• Sikkerhetsforbedringer og feilrettinger
+• Nytt og mer stabilt WebDAV- bibliotek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>
@@ -436,13 +437,37 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe å fikse 
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorer ugyldig selv-signert SSL sertifikater. Dette tillater bruk av ugyldige eller feil SSL sertifikater. Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep heretter.</value>
   </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synkroniseringsstatus</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Historikk</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Konflikter</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Feil</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synkroniser</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Foretrekk lokal fil</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Tøm synkroniseringshistorikk</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Foretrekk fil som ikke er lokal</value>
+  </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Sertifikatet er ugyldig eller feil. Koble til uansett?
 
 Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Oppmerksomhet!</value>
+    <value>OBS!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
     <value>Appen må startes på nytt</value>
@@ -450,8 +475,71 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>En liste med feil som oppsto under synkronisering. Disse er sannsynligvis midlertidige problemstillinger (f.eks. fil har blitt åpnet av en annen applikasjon) og bør være i orden etter neste synkronisering.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Se opp for konflikter!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Både sentral og lokal mappe er ikke tom. Dette kan føre til konflikter, siden vi ikke vet hvilke filer som er de korrekte.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synkronisering har blitt startet!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synkronisering foregår i bakgrunnen. Du vil få beskjed når den er ferdig.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Tjenesten er midlertidig utilgjengelig (vanligvis på grunn av litt vedlikehold).
 Vennligst prøv igjen senere.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Fil endret seg både sentralt og lokalt - hvilken er den korrekte?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Fil har blitt opprettet både sentralt og lokalt - hvilken er den korrekte?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Slettet fil lokalt, men endret sentralt - hvilken foretrekker du?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Konflikt:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Slettet fil sentralt, men endret lokalt. Hvilken foretrekker du?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synkronisering av mappe {0} ferdig med {1} endringer og {2} feil eller konflikter.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synkronisering av mappe {0} ferdig med {1} endringer.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synkronisering har blitt avsluttet.</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synkronisering av mappe {0} har blitt stoppet, fordi applikasjonen har blitt suspendert.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synkronisering utsatt</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synkroniseringsstatus</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Lokal sti:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud-sti:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Velg mappen der du vil laste opp filene</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Mapper</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

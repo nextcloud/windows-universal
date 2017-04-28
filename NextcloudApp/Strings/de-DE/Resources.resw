@@ -180,7 +180,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Abbrechen</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Ordner kann nicht erstellt werden</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Verbinden</value>
@@ -234,7 +234,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nicht berechtigt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -413,28 +413,53 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Dateien und Ordner verschieben
 • Dateien und Ordner umbenennen
-• Ordner als Zip-Archiv herunterladen
+• Manuelle Ordner-Synchronisation
+• Ordner als ZIP-Datei herunterladen
 • Mehrere Dateien und Ordner auswählen
-• Dateien und Ordner am Starbildschirm anheften
-• Windows Hello verwenden um sich beim App-Start zu authentifizieren
-• Erlaube selbsterstellte SSL-Zertifikate
-• Ordnergröße in der Liste anzeigen
-• Dateiaktivierung bearbeiten
-• Passwortspeicher zum Speichern der Zugangsdaten verwenden
-• Sicherheitsverbesserungen und Fehlerbeseitigung
+• Dateien und Ordner am Startbildschirm anheften
+• Nutze Windows Hello zur Authentifizierung beim App-Start
+• Erlaube selbst signierte Zertifikate
+• Zeige die Ordgröße in der Liste an
+• Teile dateien mit der App (Freigabeziel)
+• Benutze den PasswortVault um Benutzerberechtigungen zu speichern
+• Sicherheits-Verbesserungen &amp; Fehler-Beseitigung
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>PIN um zu beginnen</value>
+    <value>An Start anheften</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>PIN um zu beginnen</value>
+    <value>An Start anheften</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synchronisations-Status</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Verlauf</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Konflikte</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synchronisieren</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Bevorzuge lokale Datei</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Lösche Synchronisations-Verlauf</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Bevorzuge entfernte Datei</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
@@ -450,8 +475,71 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
   </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value> Liste der bei der Synchronisation aufgetretenen Fehler. Es sollte sich um vorübergehende Fehler handeln (z.B. weil die Datei in einem anderen Programm geöffnet war) und mit der nächsten Synchronisation behoben sein.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Vorsicht vor Konflikten!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu diversen Problemen führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronisation wurde ausgelöst!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie erhalten eine Benachrichtigung wenn sie beendet ist.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
 Bitte später noch einmal versuchen.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugen Sie?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>Datei wurde lokal und auf dem Server erstellt - welche ist die richtige?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugen Sie?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Konflikt:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugen Sie?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronisation von Ordner {0} führte zu {1} Änderungen und {2} Fehlern oder Konflikten.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronisation von Ordner {0} führte zu {1} Änderungen.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronisation beendet</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronisation von Ordner {0} wurde angehalten, da die App unterbrochen wurde.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronisation unterbrochen</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synchronisations-Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Lokaler Pfad:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud-Pfad:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Wählen Sie den Ordner, in den Sie die Dateien hochladen möchten.</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Ordner</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>{0} items (folders: {1} files: {2})</value>
   </data>
 </root>

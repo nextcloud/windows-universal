@@ -31,7 +31,7 @@ namespace NextcloudApp.ViewModels
             var pageParameters = PinStartPageParameters.Deserialize(e.Parameter) as PinStartPageParameters;
             if (pageParameters != null)
             {
-                this.nextPage = pageParameters.PageTarget;
+                this.nextPage = pageParameters.PageTarget.ToString();
             }
             else if (e.Parameter is string)
             {
@@ -39,7 +39,7 @@ namespace NextcloudApp.ViewModels
             }
             else
             {
-                this.nextPage = PageTokens.DirectoryList.ToString();
+                this.nextPage = PageToken.DirectoryList.ToString();
             }
         }
 
