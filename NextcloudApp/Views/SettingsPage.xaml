@@ -73,6 +73,13 @@
                     </interactivity:Interaction.Behaviors>
                 </ToggleSwitch>
 
+                <ToggleSwitch 
+                    x:Uid="DeveloperMode"
+                    Header="Developer mode"
+                    Margin="0,12"
+                    IsOn="{Binding DeveloperMode, Mode=TwoWay}">                    
+                </ToggleSwitch>
+
                 <Border 
                     Margin="0,12" 
                     Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" 
