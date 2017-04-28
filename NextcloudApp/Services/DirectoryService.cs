@@ -242,10 +242,10 @@ namespace NextcloudApp.Services
 
             try
             {
-                if (viewName == "sharesOut")
+                if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
                 {
                     PathStack.Clear();
-                    list = await client.GetSharesOut();
+                    list = await client.GetSharesView(viewName);
                 }
                 else if (viewName == "favorites")
                 {
