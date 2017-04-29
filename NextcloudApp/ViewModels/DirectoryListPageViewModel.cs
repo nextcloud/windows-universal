@@ -50,7 +50,9 @@ namespace NextcloudApp.ViewModels
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
         public ICommand SynchronizeFolderCommand { get; private set; }
+        public ICommand SynchronizeThisFolderCommand { get; private set; }
         public ICommand StopSynchronizeFolderCommand { get; private set; }
+        public ICommand StopSynchronizeThisFolderCommand { get; private set; }
         public ICommand MoveSelectedCommand { get; private set; }
         public ICommand PinToStartCommand { get; private set; }
         public ICommand SelectToggleCommand { get; private set; }
@@ -128,7 +130,9 @@ namespace NextcloudApp.ViewModels
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
             SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
+            SynchronizeThisFolderCommand = new RelayCommand(SynchronizeThisFolder);
             StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
+            StopSynchronizeThisFolderCommand = new RelayCommand(StopSynchronizeThisFolder);
             MoveSelectedCommand = new RelayCommand(MoveSelected);
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             PinToStartCommand = new DelegateCommand<object>(PinToStart);
@@ -235,6 +239,28 @@ namespace NextcloudApp.ViewModels
         {
             var resourceInfo = parameter as ResourceInfo;
 
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            await SychronizeFolder(resourceInfo);
+        }
+
+        private async void SynchronizeThisFolder(object parameter)
+        {
+            var resourceInfo = Directory.PathStack.Count > 0 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo : null;
+
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            await SychronizeFolder(resourceInfo);
+        }
+
+        private async Task SychronizeFolder(ResourceInfo resourceInfo)
+        {
             if (resourceInfo == null)
             {
                 return;
@@ -349,10 +375,33 @@ namespace NextcloudApp.ViewModels
                 Debug.WriteLine(e.Message);
             }
         }
+
         private void StopSynchronizeFolder(object parameter)
         {
             var resourceInfo = parameter as ResourceInfo;
 
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            StopSynchronizeFolder(resourceInfo);
+        }
+
+        private void StopSynchronizeThisFolder(object parameter)
+        {
+            var resourceInfo = Directory.PathStack.Count > 0 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo : null;
+
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            StopSynchronizeFolder(resourceInfo);
+        }
+
+        private void StopSynchronizeFolder(ResourceInfo resourceInfo)
+        {
             if (resourceInfo == null)
             {
                 return;
