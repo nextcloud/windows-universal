@@ -1,4 +1,5 @@
-﻿using NextcloudApp.Utils;
+﻿using NextcloudApp.Services;
+using NextcloudApp.Utils;
 using NextcloudClient.Types;
 using System;
 using Windows.ApplicationModel.Resources;
@@ -8,16 +9,18 @@ using Windows.UI.Xaml.Data;
 namespace NextcloudApp.Converter
 {
     /// <summary>
-    /// Checks if the folder is Synchronized or not
+    /// Checks if the current folder is synchronized or not
     /// </summary>
-    public class IsFolderSyncedConverter : IValueConverter
+    public class IsThisFolderSyncedConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var invert = parameter != null;
-            var item = (ResourceInfo)value;
+            var item = DirectoryService.Instance.PathStack.Count > 0 ? DirectoryService.Instance.PathStack[DirectoryService.Instance.PathStack.Count - 1].ResourceInfo : null;
 
-            if (item.ContentType== null || !item.ContentType.Equals("dav/directory"))
+            if (item == null)
+                return Visibility.Visible;
+
+            if (item.ContentType == null || !item.ContentType.Equals("dav/directory"))
             {
                 return Visibility.Collapsed;
             }

@@ -23,6 +23,7 @@
             <converter:IsSelectingToVisibilityConverter x:Key="IsSelectingToVisibilityConverter"/>
             <converter:IsFileAndNotFolderToVisibilityConverter x:Key="IsFileAndNotFolderToVisibilityConverter"/>
             <converter:IsFolderSyncedConverter x:Key="IsFolderSyncedConverter"/>
+            <converter:IsThisFolderSyncedConverter x:Key="IsThisFolderSyncedConverter"/>
             <converter:FirstCharFromStringConverter x:Key="FirstCharFromStringConverter"/>
             <converter:IsGlyphToVisibilityConverter x:Key="IsGlyphToVisibilityConverter"/>
             <converter:ConflictTypeToStringConverter x:Key="ConflictTypeToStringConverter"/>

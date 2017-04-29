@@ -294,7 +294,7 @@
                                         <MenuFlyoutItem 
                                             Tag="UnSyncFolder"
                                             x:Uid="StopSynchronize"
-                                            Text="Stop Synchronizing"
+                                            Text="Stop synchronizing"
                                             Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
@@ -354,6 +354,17 @@
                 Label="Refresh" 
                 x:Uid="AppBarRefresh"
                 Command="{Binding RefreshCommand}"/>
+                <AppBarButton 
+                Icon="SyncFolder" 
+                Label="Synchronize this folder" 
+                x:Uid="AppBarSyncThisFolder"
+                Command="{Binding SynchronizeThisFolderCommand}"/>
+                <AppBarButton 
+                Icon="UnsyncFolder" 
+                Label="Stop synchronizing this folder" 
+                x:Uid="AppBarUnSyncThisFolder"
+                Command="{Binding StopSynchronizeThisFolderCommand}"
+                Visibility="{Binding SelectedFileOrFolder, Converter={StaticResource IsThisFolderSyncedConverter}}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton 
                 x:Uid="AppBarSelect" 
