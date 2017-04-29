@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Velikost (největší nahoru)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Chyba aplikace</value>
   </data>
@@ -435,6 +441,9 @@
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti mitm útokům.</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
   </data>
@@ -538,6 +547,6 @@ Prosím zkuste to znovu později.</value>
     <value>Folders</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

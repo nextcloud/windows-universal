@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Boyut (Büyükten Küçüğe)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Uygulama hatası</value>
   </data>
@@ -437,6 +443,9 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Eşitleme durumu</value>
   </data>
@@ -540,6 +549,6 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Klasörler</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

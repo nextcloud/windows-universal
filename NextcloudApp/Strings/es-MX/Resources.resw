@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Tamaño (más grande al principio)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Error de la aplicación</value>
   </data>
@@ -437,6 +443,9 @@
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de la autoridad certificadora SSL inválida o incorrecta. Tenga cuidado, no estará más protegido contra ataques de Hombre-en-medio (mitm)</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Estatus de sincronización</value>
   </data>
@@ -539,6 +548,6 @@
     <value>Carpetas</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

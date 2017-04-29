@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Größe (Größte oben)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
   </data>
@@ -201,7 +207,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Herunterladen der Datei…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Vorschaubilder herunterladen</value>
+    <value>Bildvorschau herunterladen</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -399,7 +405,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Ihre App wurde aktualisiert auf Version {0}</value>
+    <value>Ihre App wurde auf Version {0} aktualisiert </value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
@@ -436,6 +442,9 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronisations-Status</value>
@@ -540,6 +549,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Ordner</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

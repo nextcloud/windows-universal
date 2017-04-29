@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Размер (по убыванию)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Ошибка приложения</value>
   </data>
@@ -437,6 +443,9 @@
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Состояние синхронизации</value>
   </data>
@@ -540,6 +549,6 @@
     <value>Каталоги</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>
