@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Controls;
 using NextcloudApp.Constants;
 using Windows.UI.Xaml;
 using Prism.Unity.Windows;
+using Windows.UI.Popups;
+using System.Threading.Tasks;
 
 namespace NextcloudApp.ViewModels
 {
@@ -28,6 +30,8 @@ namespace NextcloudApp.ViewModels
         private bool _expertMode;
 
         public ICommand ResetCommand { get; private set; }
+        public ICommand ShowHelpExpertModeCommand { get; private set; }
+        public ICommand ShowHelpIgnoreInvalidSslCertificatesCommand { get; private set; }
 
         public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -74,6 +78,8 @@ namespace NextcloudApp.ViewModels
             ExpertMode = Settings.ExpertMode;
 
             ResetCommand = new DelegateCommand(Reset);
+            ShowHelpExpertModeCommand = new DelegateCommand(ShowHelpExpertMode);
+            ShowHelpIgnoreInvalidSslCertificatesCommand = new DelegateCommand(ShowHelpInvalidSslCertificates);
 
             GetServerVersion();
         }
@@ -221,6 +227,24 @@ namespace NextcloudApp.ViewModels
         {
             SettingsService.Instance.Reset();
             _navigationService.Navigate(PageToken.Login.ToString(), null);
+        }
+
+        private async void ShowHelpExpertMode()
+        {
+            var text = _resourceLoader.GetString(ResourceConstants.HelpText_ExpertMode);
+            await ShowHelp(text);
+        }
+
+        private async void ShowHelpInvalidSslCertificates()
+        {
+            var text = _resourceLoader.GetString(ResourceConstants.HelpText_HelpTextIgnoreInvalidSelfSignedSslCertificates);
+            await ShowHelp(text);
+        }
+
+        private async Task ShowHelp(string message)
+        {
+            var messageDialog = new MessageDialog(message, string.Empty);
+            await _dialogService.ShowAsync(messageDialog);
         }
     }
 }

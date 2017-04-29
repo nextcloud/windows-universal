@@ -20,5 +20,9 @@
         public static string Cancel = "Cancel";
 
         public static string TryAgain = "TryAgain";
+
+        public static string HelpText_ExpertMode = "HelpTextExpertMode";
+
+        public static string HelpText_HelpTextIgnoreInvalidSelfSignedSslCertificates = "HelpTextIgnoreInvalidSelfSignedSslCertificates";
     }
 }
