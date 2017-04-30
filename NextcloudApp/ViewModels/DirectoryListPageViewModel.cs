@@ -398,29 +398,7 @@ namespace NextcloudApp.ViewModels
             }
 
             StopSynchronizeFolder(resourceInfo);
-        }
-
-        private bool CanExecuteStopSynchronizeThisFolder()
-        {
-            var item = DirectoryService.Instance.PathStack.Count > 0 ? DirectoryService.Instance.PathStack[DirectoryService.Instance.PathStack.Count - 1].ResourceInfo : null;
-
-            if (item == null)
-                return false;
-
-            if (item.ContentType == null || !item.ContentType.Equals("dav/directory"))
-            {
-                return false;
-            }
-
-            if (SyncDbUtils.IsSynced(item))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        }      
 
         private void StopSynchronizeFolder(ResourceInfo resourceInfo)
         {
