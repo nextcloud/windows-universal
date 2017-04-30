@@ -364,7 +364,7 @@
                 Label="Stop synchronizing this folder" 
                 x:Uid="AppBarUnSyncThisFolder"
                 Command="{Binding StopSynchronizeThisFolderCommand}"
-                Visibility="{Binding SelectedFileOrFolder, Converter={StaticResource IsThisFolderSyncedConverter}}"/>
+                IsEnabled="{Binding SelectedFileOrFolder, Converter={StaticResource IsThisFolderSyncedToIsEnabledConverter}}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton 
                 x:Uid="AppBarSelect" 

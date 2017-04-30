@@ -143,7 +143,7 @@
     <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
     <Compile Include="Converter\IsSelectingToVisibilityConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
-    <Compile Include="Converter\IsThisFolderSyncedConverter.cs" />
+    <Compile Include="Converter\IsThisFolderSyncedToIsEnabledConverter.cs" />
     <Compile Include="Converter\SyncInfoStoragePathConverter.cs" />
     <Compile Include="Models\ConflictSolution.cs" />
     <Compile Include="Models\FolderSyncInfo.cs" />
