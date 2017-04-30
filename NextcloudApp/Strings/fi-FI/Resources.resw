@@ -441,7 +441,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Yhdistä</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expert mode</value>
@@ -550,5 +550,20 @@ Yritä myöhemmin uudelleen.</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
     <value>Items: {0} (folders: {1} files: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stop synchronizing this folder</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stop synchronizing</value>
   </data>
 </root>

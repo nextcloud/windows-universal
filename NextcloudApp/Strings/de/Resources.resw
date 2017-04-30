@@ -169,10 +169,10 @@
     <value>Größe (Größte nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Typ (aufsteigend)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Typ (absteigend)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
@@ -441,10 +441,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Expertenmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronisations-Status</value>
@@ -549,6 +549,21 @@ Bitte später noch einmal versuchen.</value>
     <value>Ordner</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elemente: {0} (Ordner: {1} Dateien: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stop synchronizing this folder</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stop synchronizing</value>
   </data>
 </root>
