@@ -286,7 +286,7 @@
                                         <MenuFlyoutItem 
                                             Tag="SyncFolder"
                                             x:Uid="Synchronize"
-                                            Text="Synchronize"
+                                            Text="{Binding Converter={StaticResource SynchronizeFolderToTextConverter}}"
                                             Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
@@ -356,8 +356,8 @@
                 Command="{Binding RefreshCommand}"/>
                 <AppBarButton 
                 Icon="SyncFolder" 
-                Label="Synchronize this folder" 
-                x:Uid="AppBarSyncThisFolder"
+                x:Uid="SyncFolder"
+                Label="{Binding SelectedFileOrFolder, Converter={StaticResource SynchronizeThisFolderToTextConverter}}"
                 Command="{Binding SynchronizeThisFolderCommand}"/>
                 <AppBarButton 
                 Icon="UnsyncFolder" 
@@ -407,11 +407,11 @@
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutItem 
                             x:Uid="AppBarSort_Flyout_ByTypeASC" 
-                            Text="Typ (aufsteigend)"
+                            Text="Typ (A nach oben)"
                             Command="{Binding GroupByTypeAscendingCommand}"/>
                         <MenuFlyoutItem 
                             x:Uid="AppBarSort_Flyout_ByTypeDESC" 
-                            Text="Typ (absteigend)"
+                            Text="Typ (Z nach oben)"
                             Command="{Binding GroupByTypeDescendingCommand}"/>
                     </MenuFlyout>
                 </AppBarButton.Flyout>
