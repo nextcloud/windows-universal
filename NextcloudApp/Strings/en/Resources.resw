@@ -566,4 +566,7 @@ Please try again later.</value>
   <data name="StopSynchronize.Text" xml:space="preserve">
     <value>Stop synchronizing</value>
   </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
 </root>

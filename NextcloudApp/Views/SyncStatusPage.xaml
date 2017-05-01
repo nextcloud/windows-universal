@@ -11,10 +11,15 @@
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
-        <Pivot>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Synchronization status" x:Uid="SyncStatusPageHeader" Margin="48,0,0,0" VerticalAlignment="Center" Grid.Row="0"/>
+        <Pivot Grid.Row="1">
             <Pivot.HeaderTemplate>
                 <DataTemplate>
-                    <TextBlock Margin="48,0,0,0" Text="{Binding}" />
+                    <TextBlock Text="{Binding}" />
                 </DataTemplate>
             </Pivot.HeaderTemplate>
             <PivotItem x:Uid="SynchronizationFolders"  Header="" Margin="0">
