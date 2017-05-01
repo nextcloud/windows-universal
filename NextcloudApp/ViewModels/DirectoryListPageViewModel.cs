@@ -257,6 +257,8 @@ namespace NextcloudApp.ViewModels
             }
 
             await SychronizeFolder(resourceInfo);
+            await Directory.StartDirectoryListing();
+            SelectedFileOrFolder = null;
         }
 
         private async Task SychronizeFolder(ResourceInfo resourceInfo)

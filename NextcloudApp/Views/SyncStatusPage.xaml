@@ -149,7 +149,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4" />
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4,4,4,14" Style="{StaticResource BodyTextBlockStyle}" />
                     <ListView Grid.Row="1" Name="ErrorListView" ItemsSource="{Binding ErrorList}" SelectionMode="None" 
                                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                         <ListView.ItemTemplate>
