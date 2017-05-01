@@ -160,6 +160,7 @@
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
+    <Compile Include="Models\ThemeItem.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\DirectoryService.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Utils\GroupMode.cs" />
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\Theme.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\FileDownloadPageViewModel.cs" />

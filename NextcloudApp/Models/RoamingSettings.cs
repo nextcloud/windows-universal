@@ -1,4 +1,5 @@
-﻿using NextcloudApp.Utils;
+﻿using Newtonsoft.Json;
+using NextcloudApp.Utils;
 using Windows.Storage;
 
 namespace NextcloudApp.Models
@@ -24,12 +25,33 @@ namespace NextcloudApp.Models
         {
         }
 
+        // As only serializable objects can be stored in the LocalSettings, we use a string internally.
+        [DefaultSettingValue(Value = Theme.System)]
+        public Theme Theme
+        {
+            get
+            {
+                var strVal = Get<string>();
+
+                if (string.IsNullOrEmpty(strVal))
+                    return Theme.System;
+                else
+                    return JsonConvert.DeserializeObject<Theme>(strVal);
+            }
+            set
+            {
+                var strVal = JsonConvert.SerializeObject(value);
+                Set(strVal);
+            }
+        }
+
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
             this.enableRaisePropertyChanged = false;
 
             //  Assign default values to your settings here.
+            Theme = Theme.System;
 
             this.enableRaisePropertyChanged = true;
         }

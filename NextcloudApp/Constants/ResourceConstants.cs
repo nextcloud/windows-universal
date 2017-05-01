@@ -32,5 +32,11 @@
         public static string SynchronizeThisFolderStart = "SynchronizeThisFolderStart";
 
         public static string SynchronizeThisFolderNow = "SynchronizeThisFolderNow";
+
+        public static string ThemeSystem = "ThemeSystem";
+
+        public static string ThemeDark = "ThemeDark";
+
+        public static string ThemeLight = "ThemeLight";
     }
 }

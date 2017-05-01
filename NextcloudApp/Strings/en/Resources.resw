@@ -479,7 +479,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Attention!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
@@ -580,5 +580,17 @@ Please try again later.</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>
