@@ -548,6 +548,7 @@ namespace NextcloudApp.Services
             }
             catch (Exception e)
             {
+                // TODO: do not write only the raw exception message in the sid.Error.
                 sid.Error = e.Message;
             }
             Debug.WriteLine("Synced file " + sid.ToString());
