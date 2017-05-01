@@ -169,10 +169,10 @@
     <value>Taille (ordre décroissant)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Type (par ordre croissant)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Type (par ordre décroissant)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erreur d&apos;application</value>
@@ -441,10 +441,10 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Connecter</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorer les certificats SSL auto-signés non valides</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Mode Expert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Statut de synchronisation</value>
@@ -549,21 +549,21 @@ Veuillez réessayer plus tard.</value>
     <value>Dossiers</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Eléments: {0} (dossiers: {1} fichiers: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synchronisation ce dossier</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Arrêter de synchroniser ce dossier</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Arrêter la synchronisation</value>
   </data>
 </root>

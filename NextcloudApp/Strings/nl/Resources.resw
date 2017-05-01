@@ -417,19 +417,19 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Verplaatsen bestanden en mappen
+• Hernoemen bestanden en mappen
+• Handmatige synchronisatie van mappen
+• Downloaden mappen als zip-bestand
+• Selecteren meerdere bestanden en mappen
+• Vastprikken bestanden en mappen aan startscherm
+• Gebruiken Windows Hello om te authenticeren bij starten app
+• Toestaan van self-signed SSL certificaten
+• Tonen mapgrootte in lijst
+• Deel bestanden via de app (share doel)
+• Gebruiken PasswordVault om inloggegevens op te slaan
+• Security verbeteringen &amp; bug fixes
+• Nieuwe en meer stabiele WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
@@ -441,7 +441,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten.</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertmodus</value>
@@ -465,7 +465,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Voorkeur lokaal bestand</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Leegmaken sync geschiedenis</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Voorkeur extern bestand</value>
@@ -558,12 +558,12 @@ Probeer het later opnieuw.</value>
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synchroniseer deze map</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Stop met synchroniseren van deze map</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Stop synchroniseren</value>
   </data>
 </root>

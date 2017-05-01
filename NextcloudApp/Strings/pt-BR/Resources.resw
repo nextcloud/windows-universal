@@ -440,7 +440,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignore certificados SSL auto-assinados inválidos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo avançado</value>
@@ -551,18 +551,18 @@ Por favor tente mais tarde.</value>
     <value>Itens: {0} (pastas: {1} arquivos: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Quando o modo avançado está habilitado, o aplicativo fornece alguns recursos/informações adicionais os quais podem não ser interessantes a todos os usuários.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignore certificados SSL auto-assinados inválidos. Isso permite que certificados SSL incorretos ou  inválidos sejam usados. Seja cuidadoso pois você não estará mais protegido de ataques Man-in-the-middle (mitm)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Sincronizar esta pasta</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Parar de sincronizar esta pasta</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Parar de sincronizar</value>
   </data>
 </root>

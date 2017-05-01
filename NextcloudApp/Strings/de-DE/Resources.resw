@@ -441,7 +441,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertenmodus</value>
@@ -552,18 +552,18 @@ Bitte später noch einmal versuchen.</value>
     <value>Elemente: {0} (Ordner: {1} Dateien: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Wenn der Expertenmodus aktiv ist, bietet die App zusätzliche Features/Informationen, die nicht für alle Benutzer relevant sind.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt ist!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synchronisiere diesen Ordner.</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Stoppe die Synchronisation dieses Ordners.</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Synchronisation stoppen. </value>
   </data>
 </root>

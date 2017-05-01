@@ -169,10 +169,10 @@
     <value>Boyut (Büyükten Küçüğe)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Tür (Artan)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Tür (Azalan)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Uygulama hatası</value>
@@ -441,10 +441,10 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Bağlan</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Geçersiz kendinden imzalı SSL sertifikaları yoksayılsın</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Uzman kipi</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Eşitleme durumu</value>
@@ -549,21 +549,21 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Klasörler</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Öge: {0} (klasör: {1} dosya: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Uzman kipinde, uygulama çoğu kullanıcının ilgilenmeyebileceği bazı ek özellik ve bilgiler sunar.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Kendinden imzalı SSL sertifikaları yoksayılır. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Bu klasörü eşitle</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Bu klasörü eşitleme</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Eşitlemeyi durdur</value>
   </data>
 </root>
