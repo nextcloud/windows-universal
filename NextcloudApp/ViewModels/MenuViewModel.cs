@@ -75,16 +75,16 @@ namespace NextcloudApp.ViewModels
                         () => CanNavigateToPage(PageToken.SharesOut)
                     )
                 },
-                //new MenuItem
-                //{
-                //    DisplayName = resourceLoader.GetString("SharingLink"),
-                //    FontIcon = "\uE167",
-                //    Command = new DelegateCommand(
-                //        () => NavigateToPage(PageToken.SharesLink),
-                //        () => CanNavigateToPage(PageToken.SharesLink)
-                //    )
-                //},
-                
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SharingLink"),
+                    FontIcon = "\uE167",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.SharesLink),
+                        () => CanNavigateToPage(PageToken.SharesLink)
+                    )
+                },
+
             };
 
             ExtraCommands = new ObservableCollection<MenuItem>

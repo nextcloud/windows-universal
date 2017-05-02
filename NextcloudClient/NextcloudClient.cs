@@ -252,7 +252,6 @@ namespace NextcloudClient
             return null;
         }
 
-
         /// <summary>
         ///     Finds remote outgoing shares.
         /// </summary>
@@ -261,7 +260,7 @@ namespace NextcloudClient
         {
             var param = new Tuple<string, string>("shared_with_me", "false");
             if (viewname == "sharesIn") param = new Tuple<string, string>("shared_with_me", "true");
-            var shares = await GetShares(param);
+            List<Share> shares = await GetShares(param);
 
             List<ResourceInfo> sharesList = new List<ResourceInfo>();
 
@@ -269,9 +268,21 @@ namespace NextcloudClient
             {
                 try
                 {
-                    var itemShare = await GetResourceInfoByPath(item.Path);
+                    if (viewname == "sharesLink")
+                    {
+                        var type = item.GetType().ToString();
+                        if (type == "NextcloudClient.Types.PublicShare")
+                        {
+                            ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
+                            sharesList.Add(itemShare);
+                        }
+                    }
+                    else
+                    {
+                        ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
+                        sharesList.Add(itemShare);
+                    }
 
-                    sharesList.Add(itemShare);
                 }
                 catch (ResponseError e)
                 {
