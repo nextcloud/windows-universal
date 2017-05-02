@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Mida (més gran a sobre)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Error en l\&apos;aplicació</value>
   </data>
@@ -437,6 +443,9 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignora certificats SSL autosignats incorrectes. Aixó permet autoritzar per a l\&apos;ús certificats SSL invàlids o incorrectes. Tinguis cura, no estàs protegit davant atacs de tipus Man-in-the-middle(mitm)</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
   </data>
@@ -539,6 +548,6 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Folders</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

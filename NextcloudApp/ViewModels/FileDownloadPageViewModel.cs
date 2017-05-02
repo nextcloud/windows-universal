@@ -141,7 +141,7 @@ namespace NextcloudApp.ViewModels
                         savePicker.SuggestedFileName,
                         CreationCollisionOption.GenerateUniqueName);
                 }
-                catch (FileNotFoundException ex)
+                catch (FileNotFoundException)
                 {
                     //this.textBlock.Text = "Error " + ex;
                     return;

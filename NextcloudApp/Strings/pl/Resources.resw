@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Rozmiar (największe na górze)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ascending)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (descending)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Błąd aplikacji</value>
   </data>
@@ -438,6 +444,9 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignoruj błędnie samopodpisane certyfikaty. Pozwala to na użycie błędnych lub niewłaściwych certyfikatów SSL. Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
   </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
   </data>
@@ -541,6 +550,6 @@ Proszę spróbować ponownie później,</value>
     <value>Folders</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
 </root>

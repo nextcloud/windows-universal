@@ -136,12 +136,16 @@
     <Compile Include="Converter\ConflictTypeToForegroundConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
+    <Compile Include="Converter\ExpertModeToVisibilityConverter.cs" />
     <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
     <Compile Include="Converter\IsSelectingToVisibilityConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
+    <Compile Include="Converter\IsThisFolderSyncedToIsEnabledConverter.cs" />
+    <Compile Include="Converter\SynchronizeFolderToTextConverter.cs" />
+    <Compile Include="Converter\SynchronizeThisFolderToTextConverter.cs" />
     <Compile Include="Converter\SyncInfoStoragePathConverter.cs" />
     <Compile Include="Models\ConflictSolution.cs" />
     <Compile Include="Models\FolderSyncInfo.cs" />
@@ -156,6 +160,7 @@
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
+    <Compile Include="Models\ThemeItem.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\DirectoryService.cs" />
@@ -197,6 +202,7 @@
     <Compile Include="Utils\GroupMode.cs" />
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\Theme.cs" />
     <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
     <Compile Include="ViewModels\SharesInPageViewModel.cs" />
     <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
@@ -290,11 +296,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\HelpButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Themes\MenuFlyoutIconItemStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\SplitViewStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileUploadPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MoveFileOrFolder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -313,14 +332,6 @@
     <Page Include="Views\FavoritesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\FileUploadPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MoveFileOrFolder.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\FileDownloadPage.xaml">
       <Generator>MSBuild:Compile</Generator>

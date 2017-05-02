@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Tamanho (maior no topo)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (A to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Z to the top)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erro de aplicativo</value>
   </data>
@@ -434,7 +440,10 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
+    <value>Ignore certificados SSL auto-assinados inválidos</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Modo avançado</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Status da sincronização</value>
@@ -469,13 +478,13 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Atenção!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>O aplicativo tem que ser reinicializado</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outro aplicativo) e isso deve ser resolvido após a próxima sincronização.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -539,6 +548,48 @@ Por favor tente mais tarde.</value>
     <value>Pastas</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Itens: {0} (pastas: {1} arquivos: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Quando o modo avançado está habilitado, o aplicativo fornece alguns recursos/informações adicionais os quais podem não ser interessantes a todos os usuários.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore certificados SSL auto-assinados inválidos. Isso permite que certificados SSL incorretos ou  inválidos sejam usados. Seja cuidadoso pois você não estará mais protegido de ataques Man-in-the-middle (mitm)!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sincronizar esta pasta</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Parar de sincronizar esta pasta</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Parar de sincronizar</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>

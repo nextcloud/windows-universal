@@ -34,8 +34,8 @@ namespace NextcloudApp.ViewModels
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
 
-            FixConflictByLocalCommand = new RelayCommand(FixConflictByLocal);
-            FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote);
+            FixConflictByLocalCommand = new RelayCommand(FixConflictByLocal, CanExecuteFixConflict);
+            FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote, CanExecuteFixConflict);
             ClearSyncHistoryCommand = new RelayCommand(ClearSyncHistory);
 
             SyncHistoryList = new ObservableCollection<SyncHistory>();
@@ -96,6 +96,11 @@ namespace NextcloudApp.ViewModels
             }
 
             selectedList.ForEach(x => ConflictList.Remove(x));
+        }
+
+        private bool CanExecuteFixConflict()
+        {
+            return ConflictList?.Count() > 0;
         }
 
         private void ClearSyncHistory(object parameter)

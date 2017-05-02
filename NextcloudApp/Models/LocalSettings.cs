@@ -155,6 +155,19 @@ namespace NextcloudApp.Models
             }
         }
 
+        [DefaultSettingValue(Value = false)]
+        public bool ExpertMode
+        {
+            get
+            {
+                return Get<bool>();
+            }
+            set
+            {
+                Set(value);
+            }
+        }
+
         // As only serializable objects can be stored in the LocalSettings, we use a string internally.
         [DefaultSettingValue(Value = GroupMode.GroupByNameAscending)]
         public GroupMode GroupMode
@@ -186,6 +199,7 @@ namespace NextcloudApp.Models
             PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
             UseWindowsHello = false;
             GroupMode = GroupMode.GroupByNameAscending;
+            ExpertMode = false;
 
             enableRaisePropertyChanged = true;
         }

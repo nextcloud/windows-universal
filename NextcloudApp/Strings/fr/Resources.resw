@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Taille (ordre décroissant)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (A to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Z to the top)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erreur d&apos;application</value>
   </data>
@@ -435,7 +441,10 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Connecter</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
+    <value>Ignorer les certificats SSL auto-signés non valides</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Mode Expert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Statut de synchronisation</value>
@@ -470,13 +479,13 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
     <value>Attention !</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>L&apos;application doit être redémarrée</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indice</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Liste des erreurs qui ont survenues lors de la synchronisation. Ceux-ci devraient être des problèmes temporaires (par exemple un fichier qui a été ouvert par une autre application) et devraient disparaître après la prochaine synchronisation.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Attention aux conflits !</value>
@@ -540,6 +549,48 @@ Veuillez réessayer plus tard.</value>
     <value>Dossiers</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Eléments: {0} (dossiers: {1} fichiers: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronisation ce dossier</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Arrêter de synchroniser ce dossier</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Arrêter la synchronisation</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>

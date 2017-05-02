@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Boyut (Büyükten Küçüğe)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (A to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Z to the top)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Uygulama hatası</value>
   </data>
@@ -435,7 +441,10 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Bağlan</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
+    <value>Geçersiz kendinden imzalı SSL sertifikaları yoksayılsın</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Uzman kipi</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Eşitleme durumu</value>
@@ -470,13 +479,13 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
     <value>Dikkat!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Uygulamayı yeniden başlatmalısınız</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>İpucu</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Çakışmalara dikkat edin!</value>
@@ -540,6 +549,48 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Klasörler</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Öge: {0} (klasör: {1} dosya: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Uzman kipinde, uygulama çoğu kullanıcının ilgilenmeyebileceği bazı ek özellik ve bilgiler sunar.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Kendinden imzalı SSL sertifikaları yoksayılır. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Bu klasörü eşitle</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Bu klasörü eşitleme</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Eşitlemeyi durdur</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>

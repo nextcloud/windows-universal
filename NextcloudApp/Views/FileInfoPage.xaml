@@ -250,6 +250,7 @@
                         TextWrapping="Wrap"/>
 
                     <TextBlock 
+                        Visibility="{Binding Converter={StaticResource ExpertModeToVisibilityConverter}}"
                         Grid.Row="7"
                         Grid.Column="0" 
                         Text="ETag" 
@@ -257,6 +258,7 @@
                         Margin="0,8,8,8"
                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                     <TextBlock 
+                        Visibility="{Binding Converter={StaticResource ExpertModeToVisibilityConverter}}"
                         Grid.Row="7"
                         Grid.Column="1" 
                         Text="{Binding ResourceInfo.ETag}" 

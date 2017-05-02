@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Größe (Größte oben)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (A to the top)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Z to the top)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
   </data>
@@ -201,7 +207,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Herunterladen der Datei…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Vorschaubilder herunterladen</value>
+    <value>Bildvorschau herunterladen</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -399,7 +405,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Ihre App wurde aktualisiert auf Version {0}</value>
+    <value>Ihre App wurde auf Version {0} aktualisiert </value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
@@ -420,9 +426,9 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Nutze Windows Hello zur Authentifizierung beim App-Start
 • Erlaube selbst signierte Zertifikate
 • Zeige die Ordgröße in der Liste an
-• Teile dateien mit der App (Freigabeziel)
+• Teile Dateien mit der App (Freigabeziel)
 • Benutze den PasswortVault um Benutzerberechtigungen zu speichern
-• Sicherheits-Verbesserungen &amp; Fehler-Beseitigung
+• Sicherheits-Verbesserungen &amp; Fehlerbeseitigung
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -435,7 +441,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Seien Sie vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expertenmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronisations-Status</value>
@@ -470,13 +479,13 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
     <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Die App muss neu gestartet werden</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value> Liste der bei der Synchronisation aufgetretenen Fehler. Es sollte sich um vorübergehende Fehler handeln (z.B. weil die Datei in einem anderen Programm geöffnet war) und mit der nächsten Synchronisation behoben sein.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
@@ -540,6 +549,48 @@ Bitte später noch einmal versuchen.</value>
     <value>Ordner</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Elemente: {0} (Ordner: {1} Dateien: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Wenn der Expertenmodus aktiv ist, bietet die App zusätzliche Features/Informationen, die nicht für alle Benutzer relevant sind.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt ist!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronisiere diesen Ordner</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stoppe die Synchronisation dieses Ordners</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Synchronisation stoppen</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>

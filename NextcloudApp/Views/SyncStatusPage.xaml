@@ -11,10 +11,15 @@
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
-        <Pivot>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Synchronization status" x:Uid="SyncStatusPageHeader" Margin="48,0,0,0" VerticalAlignment="Center" Grid.Row="0"/>
+        <Pivot Grid.Row="1">
             <Pivot.HeaderTemplate>
                 <DataTemplate>
-                    <TextBlock Margin="48,0,0,0" Text="{Binding}" />
+                    <TextBlock Text="{Binding}" />
                 </DataTemplate>
             </Pivot.HeaderTemplate>
             <PivotItem x:Uid="SynchronizationFolders"  Header="" Margin="0">
@@ -29,15 +34,25 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <TextBlock x:Uid="SyncPathRemote" Text="" Grid.Column="0" Grid.Row="0" Margin="0,0,4,0" />
-                                <TextBlock x:Uid="SyncPathLocal" Text="" Grid.Column="0" Grid.Row="1" Margin="0,0,4,0" />
-                                <TextBlock Text="{Binding Path}" Grid.Column="1" Grid.Row="0" />
+                                <Grid
+                                    Grid.Column="0"
+                                    Grid.RowSpan="2"
+                                    Height="40" 
+                                    Width="40"
+                                    Margin="0,0,4,0"
+                                    Background="{StaticResource SystemControlHighlightAccentBrush}">
+                                    <SymbolIcon Symbol="SyncFolder" Grid.Column="0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></SymbolIcon>
+                                </Grid>
+                                <TextBlock x:Uid="SyncPathRemote" Text="" Grid.Column="1" Grid.Row="0" Margin="0,0,4,0" />
+                                <TextBlock x:Uid="SyncPathLocal" Text="" Grid.Column="1" Grid.Row="1" Margin="0,0,4,0" />
+                                <TextBlock Text="{Binding Path}" Grid.Column="2" Grid.Row="0" />
                                 <TextBlock 
                                     DataContext="{Binding AccessListKey, Converter={StaticResource SyncInfoStoragePathConverter}}" 
                                     Text="{Binding AsyncValue}"
-                                    Grid.Column="1" Grid.Row="1" />
+                                    Grid.Column="2" Grid.Row="1" />
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -54,8 +69,17 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" Margin="0,0,15,0" />
-                                        <TextBlock Text="{Binding Path}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" />
+                                        <Grid Background="{StaticResource SystemControlHighlightAccentBrush}" Height="40" Width="40" Margin="0,0,4,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <FontIcon 
+                                                Glyph="&#xE81C;"
+                                                FontFamily="Segoe MDL2 Assets"
+                                                FontSize="28"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White" />
+                                        </Grid>
+                                        <TextBlock Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" Margin="0,0,15,0" VerticalAlignment="Center" />
+                                        <TextBlock Text="{Binding Path}" Foreground="{Binding ConflictType, Converter={StaticResource ConflictTypeToForegroundConverter}}" VerticalAlignment="Center" />
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -68,7 +92,7 @@
                             Icon="Delete" 
                             Label="Clear history" 
                             x:Uid="SyncClearHistory"
-                            Command="{Binding ClearSyncHistoryCommand}"/>                       
+                            Command="{Binding ClearSyncHistoryCommand}"/>
                     </CommandBar>
                 </Grid>
             </PivotItem>
@@ -82,9 +106,20 @@
                         <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
-                                        <TextBlock Text="{Binding Path}" />
-                                        <TextBlock Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}" Foreground="Red"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Grid Background="{StaticResource SystemControlHighlightAccentBrush}" Height="40" Width="40" Margin="0,0,4,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <FontIcon 
+                                                Glyph="&#xE783;"
+                                                FontFamily="Segoe MDL2 Assets"
+                                                FontSize="28"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White" />
+                                        </Grid>
+                                        <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                            <TextBlock Text="{Binding Path}" />
+                                            <TextBlock Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}" Foreground="Red"/>
+                                        </StackPanel>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -99,14 +134,14 @@
                             x:Uid="SyncFixConflictPreferLocal"
                             CommandParameter="{Binding ElementName=ConflictListView}"
                             Command="{Binding FixConflictByLocalCommand}"/>
-                       <AppBarButton 
+                        <AppBarButton 
                             Icon="Globe" 
                             Label="Prefer remote file" 
                             x:Uid="SyncFixConflictPreferRemote"
                             CommandParameter="{Binding ElementName=ConflictListView}"
                             Command="{Binding FixConflictByRemoteCommand}"/>
                     </CommandBar>
-                </Grid>                
+                </Grid>
             </PivotItem>
             <PivotItem x:Uid="SynchronizationErrors"  Header="" Margin="0">
                 <Grid>
@@ -114,14 +149,25 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4" />
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap" x:Uid="SyncErrorHint" Margin="4,4,4,14" Style="{StaticResource BodyTextBlockStyle}" />
                     <ListView Grid.Row="1" Name="ErrorListView" ItemsSource="{Binding ErrorList}" SelectionMode="None" 
                                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
-                                    <TextBlock Text="{Binding Path}" />
-                                    <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Background="{StaticResource SystemControlHighlightAccentBrush}" Height="40" Width="40" Margin="0,0,4,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <FontIcon 
+                                                Glyph="&#xE783;"
+                                                FontFamily="Segoe MDL2 Assets"
+                                                FontSize="28"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White" />
+                                    </Grid>
+                                    <StackPanel Orientation="Vertical" BorderThickness="0,0,0,1">
+                                        <TextBlock Text="{Binding Path}" />
+                                        <TextBlock Text="{Binding Error}" Foreground="Red"/>
+                                    </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
