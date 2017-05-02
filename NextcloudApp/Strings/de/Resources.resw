@@ -169,10 +169,10 @@
     <value>Größe (Größte nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Typ (aufsteigend)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Typ (absteigend)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
@@ -426,9 +426,9 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
 • Nutze Windows Hello zur Authentifizierung beim App-Start 
 • Erlaube selbst signierte Zertifikate
 • Zeige die Ordgröße in der Liste an 
-• Teile dateien mit der App (Freigabeziel)
+• Teile Dateien mit der App (Freigabeziel)
 • Benutze den PasswortVault um Benutzerberechtigungen zu speichern 
-• Sicherheits-Verbesserungen &amp; Fehler-Beseitigung 
+• Sicherheits-Verbesserungen &amp; Fehlerbeseitigung 
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -479,13 +479,13 @@ Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Die App muss neu gestartet werden</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value> Liste der bei der Synchronisation aufgetretenen Fehler. Es sollte sich um vorübergehende Fehler handeln (z.B. weil die Datei in einem anderen Programm geöffnet war) und mit der nächsten Synchronisation behoben sein.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
@@ -558,12 +558,39 @@ Bitte später noch einmal versuchen.</value>
     <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt ist!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronisiere diesen Ordner.</value>
+    <value>Synchronisiere diesen Ordner</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stoppe die Synchronisation dieses Ordners.</value>
+    <value>Stoppe die Synchronisation dieses Ordners</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Synchronisation stoppen. </value>
+    <value>Synchronisation stoppen</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>
