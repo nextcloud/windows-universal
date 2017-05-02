@@ -35,7 +35,6 @@ namespace NextcloudApp.ViewModels
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
-            base.OnNavigatedTo(e, viewModelState);
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
