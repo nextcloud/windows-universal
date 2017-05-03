@@ -170,12 +170,6 @@
     <Compile Include="WebDav\WebDavArtifacts\NextcloudShareTypes.cs" />
     <EmbeddedResource Include="Properties\NextcloudClientPortable.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="DecaTec.WebDav, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Portable-WebDAV-Library\Build\Debug\netstandard1.1\DecaTec.WebDav.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
