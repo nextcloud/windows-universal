@@ -134,13 +134,13 @@ namespace NextcloudClient.WebDav
 
                     // RFC4331
                     webDavSessionItem.QuotaAvailableBytes = prop.QuotaAvailableBytes;
-                    webDavSessionItem.QuotaUsedBytes = prop.QuotaUsedBytes;                    
+                    webDavSessionItem.QuotaUsedBytes = prop.QuotaUsedBytes;
 
                     //// Make sure that the IsDirectory property is set if it's a directory.
-                    //if (prop.IsFolder.HasValue && prop.IsFolder.Value)
-                    //    webDavSessionItem.IsFolder = prop.IsFolder.Value;
-                    //else if (prop.ResourceType != null && prop.ResourceType.Collection != null)
-                    //    webDavSessionItem.IsFolder = true;
+                    if (prop.IsFolder.HasValue && prop.IsFolder.Value)
+                        webDavSessionItem.IsFolder = prop.IsFolder.Value;
+                    else if (prop.ResourceType != null && prop.ResourceType.Collection != null)
+                        webDavSessionItem.IsFolder = true;
 
                     // Make sure that the name property is set.
                     // Naming priority:
