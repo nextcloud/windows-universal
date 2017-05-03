@@ -169,10 +169,10 @@
     <value>Rozmiar (największe na górze)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Typ (A na górze)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Typ (Z na górze)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Błąd aplikacji</value>
@@ -418,19 +418,19 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Przenoś pliki i foldery
+• Zmieniaj nazwy plików i folderów
+• Ręcznie synchronizuj pliki i foldery
+• Pobieraj katalogi jako pliki zip
+• Wybieraj wiele plików i folderów
+• Przypinaj pliki i foldery do ekranu startowego
+• Używaj Windows Hello do uwierzytelnienia na starcie aplikacji
+• Zezwalaj na samopodpisane certyfikaty SSL
+• Pokazuj na liście rozmiary folderów
+• Współdziel pliki z aplikacją
+• Używaj Krypty Haseł do przechowywania poświadczeń
+• Poprawki bezpieczeństwa i błędów
+• Nowa i bardziej stablna biblioteka WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
@@ -442,34 +442,34 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
     <value>Połącz</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignoruj błędnie samopodpisane certyfikaty. Pozwala to na użycie błędnych lub niewłaściwych certyfikatów SSL. Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in-the-middle (mitm).</value>
+    <value>Ignoruj błędne samopodpisane certyfikaty SSL</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Tryb eksperta</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Status synchronizacji</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Historia</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Konflikty</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Błędy</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Synchronizuj</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Preferuj lokalny plik</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Czyść historię synchronizacji</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Preferuj zdalny plik</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Jednostka certyfikująca jest błędna lub niepoprawna. Połączyć na pewno?
@@ -480,76 +480,118 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
     <value>Uwaga!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Aplikacja musi zostać ponownie uruchomiona</value>
+    <value>Aplikacja musi być uruchomiona ponownie, aby to ustaweienie zadziałało.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Wskazówka</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista będów, które wystąpiły podczas sunchronizacji. Mogą to być tymczasowe problemy (np. plik został otwarty w innej aplikacji) i powinny zniknąć po następnej synchronizacji.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Uważaj na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Lokalny i zdalny folder nie sa puste. Może to skutkowwać wieloma konfliktami, ponieważ nie wiemy które pliki są właściwymi plikami.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Synchronizacja została włączona!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synchronizacja będzie przebiegała w tle. Otrzymasz powiadomienie kiedy się zakończy.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Usługa tymczasowo niedostępna (najczęściej przed krótkie prace serwisowe)
 Proszę spróbować ponownie później,</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>Plik został zmieniony lokalnie i zdalnie. Który wybierasz?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Plik został utworzony lokalnie i zdalnie -- który jest tym właściwym?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Usunięto plik lokalnie, ale zmieniono go zdalnie. Co wybierasz?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Usunięto plik zdalnie, ale zmieniono lokalnie. Co wybierasz?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Synchronizacja folderu {0} została ukończona z {1} zmianami i {2} błędami lub konfliktami.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Synchronizacja folderu {0} została ukończona z {1} zmianami.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>Synchronizacjia została ukończona.</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Synchronizacja folderu {0} została zatrzymana, ponieważ aplikacja została wstrzymana.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Synchronizacja została wstrzymana.</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Status synchronizacji</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Ścieżka lokalna:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Scieżka Nextclouda:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Wybierz folder, do którego chcesz wysłać pliki</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Foldery</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Zawartość: {0} (foldery: {1}, pliki: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignoruj błędny samopodpisany certyfikat SSL. Umożliwia to na użycie błędnych lub niepoprawnych wystawców certfyfikatów SSL. Uważaj, nie będziesz już chroniony przed atakamie Man-in-the-middle (mitm).</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronizuj ten folder</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Nie synchronizuj tego folderu</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Wstrzymaj synchronizację</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Status synchronizacji</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronizuj teraz</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronizuj</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronizuj ten folder teraz</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronizuj ten folder</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Ciemny</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Jasny</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Systemowy</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Temat</value>
   </data>
 </root>

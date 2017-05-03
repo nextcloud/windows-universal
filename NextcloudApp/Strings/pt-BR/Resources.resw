@@ -169,10 +169,10 @@
     <value>Tamanho (maior no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Tipo (A no topo)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Tipo (Z no topo)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erro de aplicativo</value>
@@ -478,13 +478,13 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Atenção!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Para esta configuração funcionar, o aplicativo deve ser reiniciado.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Devem ser problemas temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -566,30 +566,30 @@ Por favor tente mais tarde.</value>
     <value>Parar de sincronizar</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Status da sincronização</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Sincronizar agora</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Sincronizar</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Sincronizar esta pasta agora</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Sincronizar esta pasta</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Escuro</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+    <value>Sistema</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Tema</value>
   </data>
 </root>
