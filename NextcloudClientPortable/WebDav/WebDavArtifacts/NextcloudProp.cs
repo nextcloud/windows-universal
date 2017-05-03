@@ -66,7 +66,7 @@ namespace NextcloudClient.WebDav.WebDavArtifacts
                         prop.OwnerDisplayName = string.Empty;
                         break;
                     case NextcloudPropNameConstants.ShareTypes:
-                        prop.ShareTypes= string.Empty;
+                        prop.ShareTypes= new NextcloudShareTypes();
                         break;
                     case NextcloudPropNameConstants.Checksums:
                         prop.Checksums = string.Empty;
@@ -108,7 +108,7 @@ namespace NextcloudClient.WebDav.WebDavArtifacts
                 CommentsUnreadString = string.Empty,
                 OwnerId = string.Empty,
                 OwnerDisplayName = string.Empty,
-                ShareTypes = string.Empty,
+                ShareTypes = new NextcloudShareTypes(),
                 Checksums = string.Empty,
                 HasPreviewString = string.Empty,
                 SizeString = string.Empty
@@ -395,7 +395,7 @@ namespace NextcloudClient.WebDav.WebDavArtifacts
         }
 
         [XmlElement(ElementName = NextcloudPropNameConstants.ShareTypes, Namespace = WebDavNextcloudConstants.OwncloudNamespace)]
-        public string ShareTypes
+        public NextcloudShareTypes ShareTypes
         {
             get;
             set;

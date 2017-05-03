@@ -26,5 +26,7 @@ namespace NextcloudClient.WebDav.Constants
         public const string HasPreview = "has-preview";
 
         public const string Size = "size";
+
+        public const string ShareType = "share-type";
     }
 }

@@ -188,13 +188,25 @@ namespace NextcloudClient
             {
                 var res = new ResourceInfo
                 {
+                    Checksums = item.Checksums,
+                    CommentsCount = item.CommentsCount ?? 0,
+                    CommentsHref = item.CommentsHref,
+                    CommentsUnread = item.CommentsUnread ?? 0,
+                    Created = item.CreationDate ?? DateTime.MinValue,
+                    FileId = item.FileId,
+                    HasPreview = item.HasPreview ?? false,
+                    Id = item.Id,
+                    IsFavorite = item.IsFavorite ?? false,
+                    OwnderId = item.OwnerId,
+                    OwnerDisplayName = item.OwnerDisplayName,
+                    ShareTypes = item.ShareTypes,
                     ContentType = item.IsFolder.HasValue && item.IsFolder.Value ? "dav/directory" : item.ContentType,
                     ETag = item.ETag,
                     LastModified = item.LastModified ?? DateTime.MinValue,
                     Name = System.Net.WebUtility.UrlDecode(item.Name),
                     QuotaAvailable = item.QuotaAvailableBytes ?? 0,
                     QuotaUsed = item.QuotaUsedBytes ?? 0,
-                    Size = item.ContentLength.HasValue && item.ContentLength.Value != 0 ? item.ContentLength.Value : item.QuotaUsedBytes.Value,
+                    Size = item.ContentLength.HasValue && item.ContentLength.Value != 0 ? item.ContentLength.Value : item.Size.HasValue ? item.Size.Value : item.QuotaAvailableBytes ?? 0,
                     Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
                 };
                 if (!res.ContentType.Equals("dav/directory"))
@@ -231,8 +243,19 @@ namespace NextcloudClient
                 {
                     var res = new ResourceInfo
                     {
-                        ContentType = item.IsFolder.HasValue && item.IsFolder.Value ? "dav/directory" : item.ContentType,
+                        Checksums = item.Checksums,
+                        CommentsCount = item.CommentsCount ?? 0,
+                        CommentsHref = item.CommentsHref,
+                        CommentsUnread = item.CommentsUnread ?? 0,
                         Created = item.CreationDate ?? DateTime.MinValue,
+                        FileId = item.FileId,
+                        HasPreview = item.HasPreview ?? false,
+                        Id = item.Id,
+                        IsFavorite = item.IsFavorite ?? false,
+                        OwnderId = item.OwnerId,
+                        OwnerDisplayName = item.OwnerDisplayName,
+                        ShareTypes = item.ShareTypes,
+                        ContentType = item.IsFolder.HasValue && item.IsFolder.Value ? "dav/directory" : item.ContentType,
                         ETag = item.ETag,
                         LastModified = item.LastModified ?? DateTime.MinValue,
                         Name = System.Net.WebUtility.UrlDecode(item.Name),

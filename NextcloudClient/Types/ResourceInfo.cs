@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using NextcloudClient.WebDav.WebDavArtifacts;
 
 namespace NextcloudClient.Types
 {
@@ -61,6 +62,28 @@ namespace NextcloudClient.Types
         /// </summary>
         /// <value>The quota available in bytes.</value>
         public long QuotaAvailable { get; set; }
+
+        public string Id { get; set; }
+
+        public string FileId { get; set; }
+
+        public bool IsFavorite { get; set; }
+
+        public Uri CommentsHref { get; set; }
+
+        public long CommentsCount { get; set; }
+
+        public long CommentsUnread { get; set; }
+
+        public string OwnderId { get; set; }
+
+        public string OwnerDisplayName { get; set; }
+
+        public NextcloudShareTypes ShareTypes { get; set; }
+
+        public string Checksums { get; set; }
+
+        public bool HasPreview { get; set; }
 
         /// <summary>
         /// Returns a <see cref="System.String" /> that represents this instance.

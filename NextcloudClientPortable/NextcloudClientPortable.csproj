@@ -167,6 +167,7 @@
     <Compile Include="WebDav\WebDavArtifacts\NextcloudPropfind.cs" />
     <Compile Include="WebDav\WebDavArtifacts\NextcloudPropstat.cs" />
     <Compile Include="WebDav\WebDavArtifacts\NextcloudResponse.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudShareTypes.cs" />
     <EmbeddedResource Include="Properties\NextcloudClientPortable.rd.xml" />
   </ItemGroup>
   <ItemGroup>

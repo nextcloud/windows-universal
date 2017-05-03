@@ -1,4 +1,5 @@
 ﻿using DecaTec.WebDav;
+using NextcloudClient.WebDav.WebDavArtifacts;
 using System;
 
 namespace NextcloudClient.WebDav
@@ -53,7 +54,7 @@ namespace NextcloudClient.WebDav
             set;
         }
 
-        public string ShareTypes
+        public NextcloudShareTypes ShareTypes
         {
             get;
             set;
