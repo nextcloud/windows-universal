@@ -156,7 +156,24 @@
       <Link>UrlBuilder.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebDav\Constants\NextcloudPropNameConstants.cs" />
+    <Compile Include="WebDav\Constants\WebDavNextcloudConstants.cs" />
+    <Compile Include="WebDav\NextcloudWebDavClient.cs" />
+    <Compile Include="WebDav\NextcloudWebDavResponseContentParser.cs" />
+    <Compile Include="WebDav\NextcloudWebDavSession.cs" />
+    <Compile Include="WebDav\NextcloudWebDavSessionListItem.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudMultiStatus.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudProp.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudPropfind.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudPropstat.cs" />
+    <Compile Include="WebDav\WebDavArtifacts\NextcloudResponse.cs" />
     <EmbeddedResource Include="Properties\NextcloudClientPortable.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DecaTec.WebDav, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Portable-WebDAV-Library\Build\Debug\netstandard1.1\DecaTec.WebDav.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

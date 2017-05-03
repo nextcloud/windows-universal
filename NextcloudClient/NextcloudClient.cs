@@ -15,6 +15,8 @@ using NextcloudClient.Types;
 using DecaTec.WebDav;
 using Windows.Security.Credentials;
 using Windows.Security.Cryptography.Certificates;
+using NextcloudClient.WebDav;
+using NextcloudClient.WebDav.WebDavArtifacts;
 
 namespace NextcloudClient
 {
@@ -28,7 +30,7 @@ namespace NextcloudClient
         /// <summary>
         ///     WebDavNet instance.
         /// </summary>
-        private readonly WebDavSession _dav;
+        private readonly NextcloudWebDavSession _dav;
 
         /// <summary>
         ///     Nextcloud Base URL.
@@ -127,7 +129,7 @@ namespace NextcloudClient
                     ));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
 
-            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password))
+            _dav = new NextcloudWebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password))
             {
                 Timeout = Timeout.InfiniteTimeSpan
             };
@@ -177,7 +179,7 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var result = await _dav.ListAsync(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path), NextcloudPropFind.CreatePropFindWithEmptyPropertiesAll());
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
@@ -186,14 +188,13 @@ namespace NextcloudClient
             {
                 var res = new ResourceInfo
                 {
-                    ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                    Created = item.CreationDate,
+                    ContentType = item.IsFolder.HasValue && item.IsFolder.Value ? "dav/directory" : item.ContentType,
                     ETag = item.ETag,
-                    LastModified = item.LastModified,
+                    LastModified = item.LastModified ?? DateTime.MinValue,
                     Name = System.Net.WebUtility.UrlDecode(item.Name),
-                    QuotaAvailable = item.QuotaAvailableBytes,
-                    QuotaUsed = item.QuotaUsedBytes,
-                    Size = item.ContentLength != 0 ? item.ContentLength : item.QuotaUsedBytes,
+                    QuotaAvailable = item.QuotaAvailableBytes ?? 0,
+                    QuotaUsed = item.QuotaUsedBytes ?? 0,
+                    Size = item.ContentLength.HasValue && item.ContentLength.Value != 0 ? item.ContentLength.Value : item.QuotaUsedBytes.Value,
                     Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
                 };
                 if (!res.ContentType.Equals("dav/directory"))
@@ -230,14 +231,14 @@ namespace NextcloudClient
                 {
                     var res = new ResourceInfo
                     {
-                        ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                        Created = item.CreationDate,
+                        ContentType = item.IsFolder.HasValue && item.IsFolder.Value ? "dav/directory" : item.ContentType,
+                        Created = item.CreationDate ?? DateTime.MinValue,
                         ETag = item.ETag,
-                        LastModified = item.LastModified,
+                        LastModified = item.LastModified ?? DateTime.MinValue,
                         Name = System.Net.WebUtility.UrlDecode(item.Name),
-                        QuotaAvailable = item.QuotaAvailableBytes,
-                        QuotaUsed = item.QuotaUsedBytes,
-                        Size = item.ContentLength,
+                        QuotaAvailable = item.QuotaAvailableBytes ?? 0,
+                        QuotaUsed = item.QuotaUsedBytes ?? 0,
+                        Size = item.ContentLength ?? 0,
                         Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
                     };
                     if (!res.ContentType.Equals("dav/directory"))
