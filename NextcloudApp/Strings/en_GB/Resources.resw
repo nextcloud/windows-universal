@@ -118,479 +118,479 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Todos los archivos</value>
+    <value>All files</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Siempre</value>
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ha ocurrido un error</value>
+    <value>An error has occurred</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Añadir</value>
+    <value>Add</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Crear carpeta</value>
+    <value>Create folder</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Hacer una foto</value>
+    <value>Take picture</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Subir archivos</value>
+    <value>Upload files</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Subir fotos</value>
+    <value>Upload photos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Descargar</value>
+    <value>Download</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Volver a cargar</value>
+    <value>Refresh</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Ordenar</value>
+    <value>Sort</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Fecha (de antiguo a nuevo)</value>
+    <value>Date (oldest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Fecha (de nuevo a antiguo)</value>
+    <value>Date (newest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nombre (A-Z)</value>
+    <value>Name (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nombre (Z-A)</value>
+    <value>Name (Z to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Tamaño (de menor a mayor)</value>
+    <value>Size (smallest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Tamaño (de mayor a menor)</value>
+    <value>Size (largest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Tipo (A arriba)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Tipo (Z arriba)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Error de la aplicación</value>
+    <value>Application error</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>La aplicación ha encontrado un problema. Pedimos disculpas por los inconvenientes. Si estabas en medio de algo, la información en la que estabas trabajando se ha perdido.
+    <value>The application has encountered a problem. We apologise for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
 
-¿Quiéres informar a los desarrolladores de la aplicación y enviar el informe de error preparado? Estoy ayuda a eliminar más rápidamente el problema.</value>
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>No se puede crear la carpeta</value>
+    <value>Can not create folder</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Connect</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Tipo de contenido</value>
+    <value>Content-Type</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Crear</value>
+    <value>Create</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Creado</value>
+    <value>Created</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Crear una carpeta nueva</value>
+    <value>Create a new folder</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Descargando el archivo...</value>
+    <value>Downloading the file…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargar imágenes de previsualizacóin</value>
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} bytes)</value>
+    <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Nombre de la carpeta</value>
+    <value>Folder name</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Información</value>
+    <value>Information</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Modificado por última vez</value>
+    <value>Last modified</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Name</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Nueva carpeta</value>
+    <value>New folder</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>No autorizado</value>
+    <value>Not authorised</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor devolvió un código de error 401 (No autorizad). Por favor, vuelve a registrarte.</value>
+    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Contraseña</value>
+    <value>Password</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Ruta</value>
+    <value>Path</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} de {1} usados</value>
+    <value>{0} of {1} used</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Resetear esta aplicación</value>
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Volver a intentar</value>
+    <value>Retry</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Dirección del servidor</value>
+    <value>Server address</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Configuración</value>
+    <value>Settings</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Configuración</value>
+    <value>Settings</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Mostrar agrupada la lista de archivos y carpetas </value>
+    <value>Show file and folder list grouping</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Tamaño</value>
+    <value>Size</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Ya existe un elemento con este nombre. Especifica un nombre diferente.</value>
+    <value>There is already an element with this name. Specify a different name.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Type</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nombre de usuario</value>
+    <value>Username</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Verión {0}</value>
+    <value>Version {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Solo al estar conectado a Wi-Fi</value>
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Sí</value>
+    <value>Yes</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Eliminar</value>
+    <value>Delete</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Eliminar archivo</value>
+    <value>Delete file</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>¿Está seguro de que quiere eliminar el archivo {0}?</value>
+    <value>Are you sure, you want to delete the file {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Eliminar carpeta</value>
+    <value>Delete folder</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>¿Estás seguro de que quieres eliminar la carpeta {0}?</value>
+    <value>Are you sure, you want to delete the folder {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} descargados</value>
+    <value>{0} of {1} uploaded</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Subiendo archivo {0} de {1}...</value>
+    <value>Uploading file {0} of {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Subiendo el archivo...</value>
+    <value>Uploading the file…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} de {1} descargado</value>
+    <value>{0} of {1} downloaded</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Se ha activado el modo de mantenimiento en el servidor.</value>
+    <value>The maintenance mode is enabled on the server.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Usuario o contraseña erróneos.</value>
+    <value>Wrong username or password.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Versión del cliente {0}</value>
+    <value>Client version {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>No se ha podido resolver la dirección o el nombre del servidor</value>
+    <value>The server name or address could not be resolved.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Version del servidor {0}</value>
+    <value>Server version {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Eliminar</value>
+    <value>Delete</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>espernado la respuesta del servidor</value>
+    <value>waiting for server response</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Por favor, escoge un nombre nuevo</value>
+    <value>Please choose a new name</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Rename</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Mover a</value>
+    <value>Move to</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Mover a</value>
+    <value>Move to</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Cancel</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Hecho</value>
+    <value>Done</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Escoger carpeta</value>
+    <value>Choose folder</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>No se puede alcanzar el servidor con la dirección {0}.</value>
+    <value>The server with the address {0} is not reachable.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Descargar como archivo ZIP</value>
+    <value>Download as ZIP file</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} descargado</value>
+    <value>{0} downloaded</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Para acceder a su Nextcloud, provea la información para iniciar sesión para su dispositivo.</value>
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Identificación con Windows Hello</value>
+    <value>Windows Hello authentication</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No se ha configurado ningún PIN para este dispositivo. Para poder usar Windows Hello, se necesita un PIN definido.</value>
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Descarga</value>
+    <value>Download</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Inicio de sesión requerido</value>
+    <value>Sign-in required</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>No podemos abrir Nextcloud hasta que provea su información de inicio de sesión.</value>
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Intente de nuevo</value>
+    <value>Try again</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud para Windows Mobile</value>
+    <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Su aplicación fue actualizada a la versión {0}</value>
+    <value>Your app was updated to version {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nuevas características y mejoras de esta versión:</value>
+    <value>New features and improvements in this version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recomendar</value>
+    <value>Recommend</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Actualizar</value>
+    <value>Update</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas
-• Renombrar archivos y carpetas
-• Sincronización manual de carpetas
-• Descargar directorios como archivos zip 
-• Seleccionar múltipls archivos y carrpetas
-• Fijar archivos y carpetas a la pantalla de inicio
-• Usar Windows Hello para autenticar al iniciar la app
-• Permitir certificados SSL autofirmados
-• Mostrar el tamaño de la carpeta en la lista
-• Compartir archivos con la app (destino cuando se comparte)
-• Usar la caja de seguridad de credenciales para almacenar las contraseñas
-• Mejoras en la seguridad y corrección de errores
-• Biblioteca WebDAV nueva y más estable</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronisation of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app (share target)
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin para iniciar</value>
+    <value>Pin to start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin para iniciar</value>
+    <value>Pin to start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Conectar</value>
+    <value>Connect</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL autofirmados no válidos</value>
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Modo experto</value>
+    <value>Expert mode</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Estado de la sincronización</value>
+    <value>Synchronisation status</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>Historial</value>
+    <value>History</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflictos</value>
+    <value>Conflicts</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errores</value>
+    <value>Errors</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Sincronizar</value>
+    <value>Synchronise</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Preferir archivo local</value>
+    <value>Prefer local file</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Limpiar historial de sincronización</value>
+    <value>Clear sync history</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Preferir archivo remoto</value>
+    <value>Prefer remote file</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>La autoridad del certificado es inválida o incorrecta. ¿Conectar de cualquier manera?
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
 
-Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm)!</value>
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>¡Atención!</value>
+    <value>Attention!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Para aque esta configuración tenga efecto, la app necesita reiniciar</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Pista</value>
+    <value>Hint</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de los errores que ocurrieron durante la sincronización. Estos deberían ser problemas temporales (p. ej., el archivo se ha abierto en otra app) y deberían desaparecer tras la próxima sincronización.</value>
+    <value>List of errors that occurred during synchronisation. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronisation run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>¡Cuidado con los conflictos!</value>
+    <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Ni la carpeta local ni la remota están vacías. Esto puede provocar muchos conflictos, porque no sabemos qué archivos son los correctos.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>¡Se ha iniciado la sincronización!</value>
+    <value>Synchronisation has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>La sincronización tendrá lugar en segundo plan. Recibirás una notificación cuando termine.</value>
+    <value>Synchronisation will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Servicio temporalmente no disponible (normalmente debido a trabajos de mantenimiento de corto plazo).
-Por favor, inténtelo de nuevo más tarde.</value>
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>El archivo ha cambiado local y localmente. ¿Cuál prefieres?</value>
+    <value>File changed locally and remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>El archivo ha sido creado remota y localmente. ¿Cuál es el correcto?</value>
+    <value>File has been created remotely and locally - which is the correct one?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>El archivo local ha sido borrado pero el remoto ha sido modificado. ¿Cuál prefieres?</value>
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflicto.</value>
+    <value>Conflict: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>El archivo remoto ha sido borrado pero el local ha sido modificado. ¿Cuál prefieres?</value>
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>La sincronización de la carpeta {0} terminó con {1} cambios y {2} errores o conflictos.</value>
+    <value>Synchronisation of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>La sincronización de la carpeta {0} terminó cno {1} cambios.</value>
+    <value>Synchronisation of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>La sincronización ha finalizado</value>
+    <value>Synchronisation has been finished</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>La sincronización de la carpeta {0} se ha detenido porque la app ha sido suspendida.</value>
+    <value>Synchronisation of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Sincronización suspendida</value>
+    <value>Synchronisation suspended</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Estado de la sincronización</value>
+    <value>Synchronisation Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta local:</value>
+    <value>Local Path:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Nextcloud Path:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Escoge la carepta a donde quieres subir los archivos</value>
+    <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Carpetas</value>
+    <value>Folders</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Objetos: {0} ({1} carpetas, {2} archivos)</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Al activar el modo experto, la app proporciona algunas características e informaciones adicionales, lo que puede no interesar a todos los usuarios.</value>
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar los certificados SSL autofirmados inválidos. Esto permite usar autoridades de certificados SSL inválidos o incorrectos. Cuidado, ya no estarás protegido contra ataques de intermediario (man-in-the-middle).</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Sincronizar esta carpeta</value>
+    <value>Synchronize this folder</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Dejar de sincronizar esta carpeta</value>
+    <value>Stop synchronising this folder</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Parar de sincronizar</value>
+    <value>Stop synchronising</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Estado de la sincronización</value>
+    <value>Synchronisation status</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Sincronizar ahora</value>
+    <value>Synchronise now</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Sincronizar</value>
+    <value>Synchronise</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Sincronizar esta carpeta ahora</value>
+    <value>Synchronise this folder now</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Sincronizar esta carpeta</value>
+    <value>Synchronise this folder</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Oscuro</value>
+    <value>Dark</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Claro</value>
+    <value>Light</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>Del sistema</value>
+    <value>System</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+    <value>Theme</value>
   </data>
 </root>
