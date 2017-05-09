@@ -417,19 +417,19 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Oppdater</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Flytt filer og mapper
-• Gi nytt navn til filer og mapper
-• Manuell synkronisering av mapper
-• Last ned mapper som en ZIP- fil 
-• Velg flere filer og mapper
-• Fest filer og mapper til startskjermen
-• Bruk Windows Hello for autentisering ved applikasjonsstart
-• Tillat selvsignerte SSL sertifikater
-• Hvis mappestørrelse i listen
-• Del filer med app&apos;en (del mål)
-• Bruk PasswordVault for å lagre påloggingsinfo til brukere
-• Sikkerhetsforbedringer og feilrettinger
-• Nytt og mer stabilt WebDAV- bibliotek</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>

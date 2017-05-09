@@ -417,19 +417,19 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Mettre à jour</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Déplacer des fichiers et des dossiers
-• Renommer des fichiers et des dossiers
-• Synchronisation manuelle de dossiers
-• Télécharger des dossiers en tant que fichier zip
-• Sélectionner plusieurs fichiers et dossiers
-• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
-• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
-• Autoriser les certificats SSL auto-signés
-• Afficher la taille du fichier dans la liste
-• Partager des fichiers avec l&apos;application (partager la cible)
-• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
-• Améliorations de la sécurité &amp; corrections de bugs
-• Nouvelle bibliothèque WebDAV plus stable</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Épingler au menu Démarrer</value>

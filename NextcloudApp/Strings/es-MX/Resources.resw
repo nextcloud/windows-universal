@@ -417,19 +417,19 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas
-• Renombrar archivos y carpetas
-• Sincronización manual de carpetas
-• Descargar directorios como un arhivo .zip
-• Seleccionar multiples archivos y carpetas
-• Anclar archivos y carpetas a la pantalla de inicio
-• Usar Windows Hello para autenticar al iniciar la aplicación
-• Permitir certificados SSL auto firmados
-• Mostrar el tamañano de carpetas en la lista
-• Compartir archivos con la aplicación (comparitr el blanco)
-• Usar la Bóveda de Contraseñas para almacenar credenciales de usuario
-• Mejoras de seguridad y corrección de fallas
-• Una nueva y más estáble librería WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>

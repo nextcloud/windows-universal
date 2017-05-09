@@ -417,19 +417,19 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• Hernoemen bestanden en mappen
-• Handmatige synchronisatie van mappen
-• Downloaden mappen als zip-bestand
-• Selecteren meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan startscherm
-• Gebruiken Windows Hello om te authenticeren bij starten app
-• Toestaan van self-signed SSL certificaten
-• Tonen mapgrootte in lijst
-• Deel bestanden via de app (share doel)
-• Gebruiken PasswordVault om inloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
