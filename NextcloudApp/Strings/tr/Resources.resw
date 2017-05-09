@@ -417,19 +417,19 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dosya ve klasörleri taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Listede klasör boyutunu görüntüleme
+• Uygulama üzerinden dosya paylaşımı
+• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanımı
+• Güvenlik geliştirmeleri ve hata ayıklamaları
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
