@@ -416,19 +416,19 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover arquivos e pastas
+• Renomear arquivos e pastas
+• Sincronização manual de pastas
+• Baixar diretórios como arquivos zip
+• Selecionar múltiplos arquivos e pastas
+• Fixar arquivos e pastas na página inicial
+• Usar Windows Hello para autenticar-se no aplicativo
+• Permitir certificados SSL auto-assinados
+• Mostrar o tamanho das pastas na lista
+• Compartilhar arquivos com o aplicativo
+• Usar a carteira de senhas para armazenar credenciais de usuário
+• Melhorias na segurança &amp; correção de erros
+• Nova biblioteca WebDAV mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Destacar no niciar</value>
