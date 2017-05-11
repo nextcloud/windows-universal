@@ -169,10 +169,10 @@
     <value>按大小排序(由大到小)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>应用程序错误</value>
@@ -426,7 +426,7 @@
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
 • Show folder size in list
-• Share files with the app (share target)
+• Share files with the app
 • Use the PasswordVault to store user credentials
 • Security improvements &amp; bug fixes
 • New and more stable WebDAV library</value>
@@ -441,10 +441,10 @@
     <value>连接</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>忽略自签名的SSL证书</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>专家模式</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>同步状态</value>
@@ -479,13 +479,13 @@
     <value>注意!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>该应用需要重启</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>提示</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Beware of conflicts!</value>
@@ -513,7 +513,7 @@
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>冲突;</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -525,45 +525,72 @@
     <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>同步已完成</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>同步文件夹 {0} 已经停止, 因为该应用已被暂停。</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>同步已暂停</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>同步状态</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>本地路径</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud 路径:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>选择要上传文件的文件夹</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>文件夹</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>项目: {0} (文件夹: {1} 文件: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>当专家模式启用时，应用程序会提供一些额外的功能/信息，并不是所有的用户对此都感兴趣。</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>忽略无效的自签名 SSL 证书。这将允许使用无效或不正确的 SSL 证书做身份认证。请注意，这将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>同步此文件夹</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>停止同步此文件夹</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>停止同步</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>同步状态</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>立即同步</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>同步</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>立即同步此文件夹</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>同步此文件夹</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>暗色主题</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>亮色主题</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>主题</value>
   </data>
 </root>
