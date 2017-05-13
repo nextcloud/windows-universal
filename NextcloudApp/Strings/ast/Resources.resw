@@ -504,7 +504,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
 Please try again later.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>El ficheru camudó llocal y remotamente. ¿Qué prefieres facer?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>File has been created remotely and locally - which is the correct one?</value>
