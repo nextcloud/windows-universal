@@ -522,7 +522,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>La sincronización de la carpeta {0} finó con {1} camudancies.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Finó la sincronización</value>
@@ -531,7 +531,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Sincronización suspendida</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>Estáu de sincronización</value>
