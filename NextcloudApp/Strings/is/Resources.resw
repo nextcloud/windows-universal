@@ -444,7 +444,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Sérfræðingahamur</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Staða samstillingar</value>
@@ -531,7 +531,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Samstilling í biðstöðu</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>Staða samstillingar</value>
@@ -549,7 +549,7 @@ Please try again later.</value>
     <value>Möppur</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Atriði: {0} (möppur: {1} skrár: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
@@ -558,39 +558,39 @@ Please try again later.</value>
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Samstilla þessa möppu</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Stöðva samstillingu á þessari möppu</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Stöðva samstillingu</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Staða samstillingar</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Samstilla núna</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Samstilla</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Samstilla þessa möppu núna</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Samstilla þessa möppu</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Dökkt</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Light</value>
+    <value>Ljóst</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+    <value>Kerfi</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Þema</value>
   </data>
 </root>
