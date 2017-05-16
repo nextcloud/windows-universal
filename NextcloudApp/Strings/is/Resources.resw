@@ -417,19 +417,19 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Uppfæra</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Færa skrár og möppur
+• Endurnefna skrár og möppur
+• Handvirk samstilling á möppum
+• Sækja möppur sem ZIP-safnskrár 
+• Velja margar skrár og möppur
+• Festing skráa og mappa á upphafsskjá
+• Notkun á Windows Hello til að auðkenna forritið í ræsingu
+• Leyfa sjálfundirrituð SSL-skilríki
+• Birting á stærð á möppum í lista
+• Deiling skráa með forritinu
+• Notkun lykilorðageymslu til að geyma auðkenni notenda
+• Öryggisumbætur og villuviðgerðir
+• Nýtt og stöðugra WebDAV-aðgerðasafn</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin to start</value>
