@@ -177,6 +177,7 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
+            var test = GetDavUri(path);
             var result = await _dav.ListAsync(GetDavUri(path));
 
             var baseUri = new Uri(_url);
@@ -217,7 +218,7 @@ namespace NextcloudClient
         {
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
-            
+
             var result = await _dav.ListAsync(GetDavUri(path));
 
             if (result.Count <= 0)
@@ -249,6 +250,126 @@ namespace NextcloudClient
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        ///     Finds remote outgoing shares.
+        /// </summary>
+        /// <returns>List of shares.</returns>
+        public async Task<List<ResourceInfo>> GetSharesView(string viewname)
+        {
+            var param = new Tuple<string, string>("shared_with_me", "false");
+            if (viewname == "sharesIn") param = new Tuple<string, string>("shared_with_me", "true");
+            List<Share> shares = await GetShares(param);
+
+            List<ResourceInfo> sharesList = new List<ResourceInfo>();
+
+            foreach (var item in shares)
+            {
+                try
+                {
+                    if (viewname == "sharesLink")
+                    {
+                        var type = item.GetType().ToString();
+                        if (type == "NextcloudClient.Types.PublicShare")
+                        {
+                            ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
+                            sharesList.Add(itemShare);
+                        }
+                    }
+                    else
+                    {
+                        ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
+                        sharesList.Add(itemShare);
+                    }
+
+                }
+                catch (ResponseError e)
+                {
+                    throw e;
+                }
+            }
+
+            return sharesList;
+        }
+
+        /// <summary>
+        ///     Finds user favorites.
+        /// </summary>
+        /// <returns>List of favorites.</returns>
+        public async Task<List<ResourceInfo>> GetFavorites()
+        {
+            var url = new UrlBuilder(_url + "/remote.php/webdav");
+
+            // See: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html#listing-favorites
+            // Also, for Props see: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html
+            var content = "<?xml version=\"1.0\"?>"
+                + "<oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\">"
+                    + "<d:prop>"
+                        + "<oc:favorite />"
+                    + "</d:prop>"
+                    + "<oc:filter-rules>"
+                        + "<oc:favorite>1</oc:favorite>"
+                    + "</oc:filter-rules>"
+                + "</oc:filter-files>";
+
+            var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri())
+            {
+                Content = new HttpStringContent(content, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/xml")
+            };
+
+            var response = await _client.SendRequestAsync(request);
+
+            var xDoc = XDocument.Parse(response.Content.ToString());
+
+            List<ResourceInfo> favoritesList = new List<ResourceInfo>();
+
+            foreach (XElement element in xDoc.Descendants())
+            {
+                if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
+                {
+                    var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/remote.php/webdav", "").Replace("</d:href>", "");
+
+                    try
+                    {
+                        var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
+
+                        favoritesList.Add(itemFav);
+                    }
+                    catch (ResponseError e)
+                    {
+                        throw e;
+                    }
+                }
+            }
+
+            return favoritesList;
+        }
+
+        /// <summary>
+        ///     Finds resource info for item by searching its parent.
+        /// </summary>
+        /// <returns>Resource Info if given item.</returns>
+        /// <param name="Path">Path to the Item.</param>
+        private async Task<ResourceInfo> GetResourceInfoByPath(string Path)
+        {
+
+            var targetPath = "/" + Path.Split('/')[Path.Split('/').Length - 1];
+            var parentPath = Path.Replace(targetPath, "/");
+            var itemName = targetPath.Replace("/", "");
+
+            var parentResource = await List(parentPath);
+            var itemResource = new ResourceInfo();
+
+            foreach (var item in parentResource)
+            {
+                if (item.Name == itemName)
+                {
+                    itemResource = item;
+                }
+            }
+
+            return itemResource;
         }
 
         /// <summary>
@@ -564,6 +685,23 @@ namespace NextcloudClient
         }
 
         /// <summary>
+        ///     List all remote shares.
+        /// </summary>
+        /// <returns>List of remote shares.</returns>
+        public async Task<object> ListShare()
+        {
+            var response = await DoApiRequest(
+                "GET",
+                "/" + GetOcsPath(OcsServiceShare, "shares")
+                );
+
+            //Debug.Assert(response.StatusCode == HttpStatusCode.OK);
+
+            // TODO: Parse response
+            return response;
+        }
+
+        /// <summary>
         ///     Accepts a remote share
         /// </summary>
         /// <returns><c>true</c>, if remote share was accepted, <c>false</c> otherwise.</returns>
@@ -864,7 +1002,7 @@ namespace NextcloudClient
         /// <param name="path">path to the share to be checked.</param>
         public async Task<bool> IsShared(string path)
         {
-            var result = await GetShares(path);
+            var result = await GetShares(new Tuple<string, string>("path", path));
             return result.Count > 0;
         }
 
@@ -876,15 +1014,16 @@ namespace NextcloudClient
         /// <param name="path">(optional) path to the share to be checked.</param>
         /// <param name="reshares">(optional) returns not only the shares from	the current user but all shares from the given file.</param>
         /// <param name="subfiles">(optional) returns all shares within	a folder, given that path defines a folder.</param>
-        public async Task<List<Share>> GetShares(string path, OcsBoolParam reshares = OcsBoolParam.None,
+        public async Task<List<Share>> GetShares(Tuple<string, string> tParam, OcsBoolParam reshares = OcsBoolParam.None,
             OcsBoolParam subfiles = OcsBoolParam.None)
         {
             var parameters = new Dictionary<string, string>();
 
-            if (!string.IsNullOrEmpty(path))
+            if (tParam != null)
             {
-                parameters.Add("path", path);
+                parameters.Add(tParam.Item1, tParam.Item2);
             }
+
             switch (reshares)
             {
                 case OcsBoolParam.True:
@@ -1652,7 +1791,7 @@ namespace NextcloudClient
                     {
                         foreach (var parameter in parameters)
                         {
-                            url.AddQueryParameter(parameter.Value, parameter.Value);
+                            url.AddQueryParameter(parameter.Key, parameter.Value);
                         }
                     }
                     _client.DefaultRequestHeaders["OCS-APIREQUEST"] = "true";
@@ -1825,6 +1964,12 @@ namespace NextcloudClient
                 if (node != null)
                 {
                     share.TargetPath = node.Value;
+                }
+
+                node = data.Element(XName.Get("path"));
+                if (node != null)
+                {
+                    share.Path = node.Value;
                 }
 
                 node = data.Element(XName.Get("permissions"));

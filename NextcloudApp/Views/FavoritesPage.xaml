@@ -1,0 +1,432 @@
+﻿<prismMvvm:SessionStateAwarePage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    xmlns:actions="using:NextcloudApp.Actions"
+    x:Class="NextcloudApp.Views.FavoritesPage"
+    x:Name="Page"
+    mc:Ignorable="d"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True"
+    NavigationCacheMode="Enabled">
+
+    <Page.Resources>
+        <CollectionViewSource 
+            x:Key="GroupedFilesAndFolders" 
+            Source="{Binding Directory.GroupedFilesAndFolders}" 
+            IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListBox 
+            x:Name="PathList" 
+            ItemsSource="{Binding Directory.PathStack}"
+            SelectionMode="Single"
+            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
+            Margin="48,0,0,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
+                        <ItemsPresenter/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </ListBox.Template>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ResourceInfo.Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <StackPanel 
+                                    Orientation="Horizontal" 
+                                    Height="48">
+                                    <FontIcon 
+                                        Glyph="&#xE26B;"
+                                        FontSize="8"
+                                        Margin="0,0,8,0"
+                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
+                                    <FontIcon 
+                                        Glyph="{StaticResource NextclousLogo}"
+                                        FontFamily="{StaticResource NextcloudIcons}"
+                                        Margin="8,0,8,0"
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                    <ContentPresenter 
+                                        VerticalAlignment="Center" 
+                                        Margin="0,0,8,0"
+                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+            <interactivity:Interaction.Behaviors>
+                <behaviors:ScrollListBoxToEndBehavior/>
+            </interactivity:Interaction.Behaviors>
+        </ListBox>
+
+        <SemanticZoom 
+            Grid.Row="1"
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <SemanticZoom.ZoomedInView>
+                <ListView
+                    Name="FileOrFolderListView"
+                    SelectedIndex="-1"
+                    IsHoldingEnabled="True" 
+                    ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
+                    SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    SelectionMode="{Binding Directory.SelectionMode}" 
+                    Padding="0,2,0,2"
+                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    <ListView.Resources>
+                        <Style x:Key="FileOrFolderHeaderItemStyle" TargetType="ListViewHeaderItem">
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewHeaderItem">
+                                        <ContentPresenter 
+                                            x:Name="ContentPresenter" 
+                                            ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                            ContentTransitions="{TemplateBinding ContentTransitions}" 
+                                            Content="{TemplateBinding Content}"
+                                            Background="#00000000"
+                                            HorizontalContentAlignment="Left" 
+                                            VerticalContentAlignment="Center"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Padding" Value="4,2,4,2"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.GroupStyle>
+                        <GroupStyle HeaderContainerStyle="{StaticResource FileOrFolderHeaderItemStyle}">
+                            <GroupStyle.ContainerStyle>
+                                <Style TargetType="GroupItem">
+                                    <Setter Property="IsTabStop" Value="False"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="GroupItem">
+                                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="*"/>
+                                                        </Grid.RowDefinitions>
+                                                        <ContentControl 
+                                                            x:Name="HeaderContent" 
+                                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                            HorizontalContentAlignment="Stretch"
+                                                            ContentTransitions="{TemplateBinding ContentTransitions}" 
+                                                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" 
+                                                            Content="{TemplateBinding Content}" 
+                                                            IsTabStop="False" 
+                                                            Margin="0" 
+                                                            TabIndex="0"/>
+                                                        <ItemsControl x:Name="ItemsControl" IsTabStop="False" ItemsSource="{Binding GroupItems}" Grid.Row="1" TabIndex="1" TabNavigation="Once">
+                                                            <ItemsControl.ItemContainerTransitions>
+                                                                <TransitionCollection>
+                                                                    <AddDeleteThemeTransition/>
+                                                                    <ContentThemeTransition/>
+                                                                    <ReorderThemeTransition/>
+                                                                    <EntranceThemeTransition IsStaggeringEnabled="False"/>
+                                                                </TransitionCollection>
+                                                            </ItemsControl.ItemContainerTransitions>
+                                                        </ItemsControl>
+                                                    </Grid>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </GroupStyle.ContainerStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock 
+                                        Style="{StaticResource TitleTextBlockStyle}"
+                                        HorizontalAlignment="Stretch"
+                                        Padding="4,0,0,0"
+                                        TextWrapping="NoWrap"
+                                        TextTrimming="CharacterEllipsis"
+                                        Text="{Binding Key}"/>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ListView.GroupStyle>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid
+                                    Grid.RowSpan="2"
+                                    Height="40" 
+                                    Width="40"
+                                    Margin="0,0,4,0"
+                                    Background="{StaticResource SystemControlHighlightAccentBrush}">
+                                    <FontIcon 
+                                        Glyph="{Binding Converter={StaticResource ContentTypeToIconConverter}}" 
+                                        FontFamily="Segoe MDL2 Assets"
+                                        FontSize="28"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Foreground="White"/>
+                                    <Border
+                                        Background="#808080"
+                                        Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
+                                        <Image
+                                            Source="{Binding Thumbnail}"
+                                            Stretch="UniformToFill"/>
+                                    </Border>
+                                </Grid>
+
+                                <TextBlock
+                                    Grid.Row="0" 
+                                    Grid.Column="1"
+                                    Text="{Binding Name}" 
+                                    TextWrapping="NoWrap" 
+                                    TextTrimming="CharacterEllipsis" />
+                                <StackPanel 
+                                    Grid.Row="1" 
+                                    Grid.Column="1"
+                                    Orientation="Horizontal">
+                                    <TextBlock 
+                                        Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
+                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                        Margin="0,0,8,0"/>
+                                    <TextBlock 
+                                        Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
+                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                </StackPanel>
+
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Holding">
+                                        <actions:OpenMenuFlyoutAction />
+                                    </core:EventTriggerBehavior>
+                                    <core:EventTriggerBehavior EventName="RightTapped">
+                                        <actions:OpenMenuFlyoutAction />
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                                <FlyoutBase.AttachedFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem 
+                                            Tag="Rename"
+                                            x:Uid="Rename_Text"
+                                            Text="Rename"
+                                            Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="MoveToFolder"
+                                            x:Uid="MoveTo_Text"
+                                            Text="Move to"
+                                            Command="{Binding DataContext.MoveResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Delete"
+                                            x:Uid="Delete_Text"
+                                            Text="Delete"
+                                            Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Download"
+                                            x:Uid="DownloadAsZip"
+                                            Text="Download as ZIP file"
+                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Download"
+                                            x:Uid="Download"
+                                            Text="Download"
+                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="SyncFolder"
+                                            x:Uid="Synchronize"
+                                            Text="Synchronize"
+                                            Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="UnSyncFolder"
+                                            x:Uid="StopSynchronize"
+                                            Text="Stop Synchronizing"
+                                            Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                            Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
+                                        <MenuFlyoutItem 
+                                            Tag="Pin"
+                                            x:Uid="PinToStart"
+                                            Text="Pin to start"
+                                            Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                    </MenuFlyout>
+                                </FlyoutBase.AttachedFlyout>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <GridView 
+                    ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}, Path=CollectionGroups}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Border 
+                                Background="Transparent" 
+                                MinWidth="52" 
+                                MinHeight="52" 
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                                <TextBlock 
+                                    Text="{Binding Group.Key}" 
+                                    Style="{StaticResource TitleTextBlockStyle}"
+                                    TextWrapping="NoWrap"
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"
+                                    Margin="8"
+                                    Padding="8"/>
+                            </Border>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+
+        <StackPanel Orientation="Horizontal" Height="25" Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}">
+            <TextBlock Margin="25,0,0,0" Text="{Binding StatusBarText, Mode=OneWay}" />
+        </StackPanel>
+
+        <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton 
+                Icon="Sync" 
+                Label="Refresh" 
+                x:Uid="AppBarRefresh"
+                Command="{Binding RefreshCommand}"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton 
+                x:Uid="AppBarSelect" 
+                Icon="Bullets" 
+                Label="Select" 
+                Command="{Binding SelectToggleCommand}"/>
+            <AppBarButton
+                x:Uid="AppBarSort"
+                Icon="Sort" 
+                Label="Sort" 
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}, ConverterParameter=true}">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByNameASC" 
+                            Text="Name (A nach oben)"
+                            Command="{Binding GroupByNameAscendingCommand}"/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByNameDESC" 
+                            Text="Name (Z nach oben)"
+                            Command="{Binding GroupByNameDescendingCommand}"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByDateDESC" 
+                            Text="Datum (Neueste nach oben)"
+                            Command="{Binding GroupByDateDescendingCommand}"/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByDateASC" 
+                            Text="Datum (Älteste nach oben)"
+                            Command="{Binding GroupByDateAscendingCommand}"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_BySizeASC" 
+                            Text="Größe (Kleinste nach oben)"
+                            Command="{Binding GroupBySizeAscendingCommand}"/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_BySizeDESC" 
+                            Text="Größe (Größte nach oben)"
+                            Command="{Binding GroupBySizeDescendingCommand}"/>
+                        <MenuFlyoutSeparator/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByTypeASC" 
+                            Text="Typ (aufsteigend)"
+                            Command="{Binding GroupByTypeAscendingCommand}"/>
+                        <MenuFlyoutItem 
+                            x:Uid="AppBarSort_Flyout_ByTypeDESC" 
+                            Text="Typ (absteigend)"
+                            Command="{Binding GroupByTypeDescendingCommand}"/>
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton
+                Icon="MoveToFolder"
+                x:Uid="MoveTo_Label"
+                Label="Move to"
+                Command="{Binding DataContext.MoveSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <AppBarButton
+                Icon="Delete"
+                x:Uid="Delete_Label"
+                Label="Delete"
+                Command="{Binding DataContext.DeleteSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+            <AppBarButton
+                Icon="Download"
+                x:Uid="AppBarDownload"
+                Label="AppBarDownload"
+                Command="{Binding DataContext.DownloadSelectedCommand, ElementName=Page}"
+                CommandParameter="{Binding ElementName=FileOrFolderListView}"
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+        </CommandBar>
+    </Grid>
+
+</prismMvvm:SessionStateAwarePage>

@@ -203,6 +203,10 @@
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="Utils\Theme.cs" />
+    <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
+    <Compile Include="ViewModels\SharesInPageViewModel.cs" />
+    <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesPageViewModel.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\FileDownloadPageViewModel.cs" />
@@ -212,6 +216,18 @@
     <Compile Include="ViewModels\SyncStatusPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="Views\SharesLinkPage.xaml.cs">
+      <DependentUpon>SharesLinkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharesInPage.xaml.cs">
+      <DependentUpon>SharesInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharesOutPage.xaml.cs">
+      <DependentUpon>SharesOutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
     </Compile>
@@ -300,6 +316,22 @@
     <Page Include="Views\MoveFileOrFolder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SharesLinkPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SharesInPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SharesOutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FavoritesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\FileDownloadPage.xaml">
       <Generator>MSBuild:Compile</Generator>

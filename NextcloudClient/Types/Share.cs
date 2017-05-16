@@ -14,6 +14,10 @@
         /// </summary>
         public string TargetPath { get; set; }
         /// <summary>
+        /// The path to the actual path
+        /// </summary>
+        public string Path { get; set; }
+        /// <summary>
         /// The permissions granted on the share
         /// </summary>
         public int Perms { get; set; }
