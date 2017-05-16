@@ -169,10 +169,10 @@
     <value>Размер (по убыванию)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Тип (по возрастанию)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Тип (по убыванию)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Ошибка приложения</value>
@@ -422,13 +422,13 @@
 • Ручная сихнронизация каталогов
 • Загрузка каталогов в виде zip-файла 
 • Выбор множества файлов и каталогов
-• Закрепление файлоы или каталогов на начальном экране
+• Закрепление файлов или каталогов на начальном экране
 • Использование Windows Hello для аутентификации при запуске приложения
 • Поддержка самоподписанных сертификатов SSL
 • Показ размера каталога в списке
 • Открытие общего доступа при помощи приложения
 • Использование PasswordVault для хранения пользовательских реквизитов
-• Улушения безопасности и исправления ошибок
+• Улучшения безопасности и исправления ошибок
 • Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -441,10 +441,10 @@
     <value>Подключиться</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Игнорирование недейстаительности самоподписанных SSL-сертификатов.</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Экспертный режим</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Состояние синхронизации</value>
@@ -479,13 +479,13 @@
     <value>Внимание!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Чтобы эти настройки вступили в силу, приложение необходимо перезапустить.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Список ошибок синхронизации. Скорее всего, это временные проблемы (например, файл был открыт в другом приложении) и они не должны повториться при следующем запуске синхронизации.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Остерегайтесь конфликтов!</value>
@@ -549,48 +549,48 @@
     <value>Каталоги</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Элементов: {0} (каталогов: {1} файлов: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Когда экспертный режим включен, приложение предоставляет некоторые дополнительные функции / сведения, которые могут быть не интересны для всех пользователей.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Синхронизировать этот каталог</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Остановить синхронизацию этого каталога</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Остановить синхронизацию</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Состояние синхронизации</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Синхронизировать сейчас</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Синхронизировать</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Синхронизировать этот каталог сейчас</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Синхронизировать этот каталог</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Тёмная</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Light</value>
+    <value>Светлая</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+    <value>Системная</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Тема</value>
   </data>
 </root>
