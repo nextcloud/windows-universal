@@ -444,7 +444,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Ekspertmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synkroniseringsstatus</value>
@@ -582,15 +582,27 @@ Vennligst prøv igjen senere.</value>
     <value>Synchronize this folder</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Mørk</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Light</value>
+    <value>Lys</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
     <value>System</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Drakt</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Shared with others</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Shared with me</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared over a Link</value>
   </data>
 </root>

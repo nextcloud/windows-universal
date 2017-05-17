@@ -593,4 +593,16 @@ Bitte später noch einmal versuchen.</value>
   <data name="Theme" xml:space="preserve">
     <value>Theme</value>
   </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Shared with others</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Shared with me</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared over a Link</value>
+  </data>
 </root>
