@@ -567,13 +567,13 @@ Vennligst prøv igjen senere.</value>
     <value>Stop synchronizing</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Synkroniseringsstatus</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
     <value>Synchronize now</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Synkroniser</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
     <value>Synchronize this folder now</value>
@@ -594,13 +594,13 @@ Vennligst prøv igjen senere.</value>
     <value>Drakt</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Delt med andre</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Favoritter</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Delt med meg</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Shared over a Link</value>

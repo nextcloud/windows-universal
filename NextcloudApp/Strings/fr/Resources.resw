@@ -594,15 +594,15 @@ Veuillez réessayer plus tard.</value>
     <value>Thème</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Partagés avec d&apos;autres</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Favoris</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Partagés avec moi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared over a Link</value>
+    <value>Partagé par lien</value>
   </data>
 </root>

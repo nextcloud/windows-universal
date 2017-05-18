@@ -595,15 +595,15 @@ Proszę spróbować ponownie później,</value>
     <value>Temat</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Współdzielone z innymi</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Ulubione</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Współdzielone ze mną</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared over a Link</value>
+    <value>Współdzielony linkiem</value>
   </data>
 </root>

@@ -593,15 +593,15 @@ Descargar directorios como un arhivo .zip
     <value>Tema</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Compartido con otros</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Favoritos</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Compartido conmigo</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared over a Link</value>
+    <value>Compartido mediante una liga</value>
   </data>
 </root>
