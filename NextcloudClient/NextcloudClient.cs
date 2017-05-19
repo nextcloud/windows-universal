@@ -15,6 +15,10 @@ using NextcloudClient.Types;
 using DecaTec.WebDav;
 using Windows.Security.Credentials;
 using Windows.Security.Cryptography.Certificates;
+using DecaTec.WebDav.WebDavArtifacts;
+using NextcloudClient.WebDav;
+using NextcloudClient.Extensions;
+using DecaTec.WebDav.Tools;
 
 namespace NextcloudClient
 {
@@ -67,6 +71,8 @@ namespace NextcloudClient
         /// </summary>
         private const string OcsServiceCloud = "cloud";
 
+        private readonly PropFind nextcloudPropFind;
+
         #endregion
 
         #region CONSTRUCTORS
@@ -109,6 +115,40 @@ namespace NextcloudClient
             {
                 url = url.TrimEnd('/');
             }
+
+            // Create PropFind which contains all NC specific properties.
+            var propFind = PropFind.CreatePropFindWithEmptyPropertiesAll();
+            var prop = (Prop)propFind.Item;
+
+            XNamespace nsOc = "http://owncloud.org/ns";
+
+            var xElementList = new List<XElement>();
+            var xElement = new XElement(nsOc + NextcloudPropNameConstants.Checksums);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsCount);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsHref);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsUnread);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Favorite);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.FileId);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.HasPreview);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Id);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.OwnerDisplayName);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.OwnerId);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.ShareTypes);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Size);
+            xElementList.Add(xElement);
+            prop.AdditionalProperties = xElementList.ToArray();
+            nextcloudPropFind = propFind;
 
             _url = url;
             _httpBaseProtocolFilter = httpBaseProtocolFilter;
@@ -178,25 +218,15 @@ namespace NextcloudClient
         {
             var resources = new List<ResourceInfo>();
             var test = GetDavUri(path);
-            var result = await _dav.ListAsync(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
             foreach (var item in result)
             {
-                var res = new ResourceInfo
-                {
-                    ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                    Created = item.CreationDate,
-                    ETag = item.ETag,
-                    LastModified = item.LastModified,
-                    Name = System.Net.WebUtility.UrlDecode(item.Name),
-                    QuotaAvailable = item.QuotaAvailableBytes,
-                    QuotaUsed = item.QuotaUsedBytes,
-                    Size = item.ContentLength != 0 ? item.ContentLength : item.QuotaUsedBytes,
-                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
-                };
+                var res = item.ToResourceInfo(baseUri);
+
                 if (!res.ContentType.Equals("dav/directory"))
                 {
                     // if resource not a directory, remove the file name from remote path.
@@ -219,7 +249,7 @@ namespace NextcloudClient
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
-            var result = await _dav.ListAsync(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
             if (result.Count <= 0)
             {
@@ -229,18 +259,8 @@ namespace NextcloudClient
             {
                 if (item.Name.Equals(name))
                 {
-                    var res = new ResourceInfo
-                    {
-                        ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                        Created = item.CreationDate,
-                        ETag = item.ETag,
-                        LastModified = item.LastModified,
-                        Name = System.Net.WebUtility.UrlDecode(item.Name),
-                        QuotaAvailable = item.QuotaAvailableBytes,
-                        QuotaUsed = item.QuotaUsedBytes,
-                        Size = item.ContentLength,
-                        Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
-                    };
+                    var res = item.ToResourceInfo(baseUri);
+
                     if (!res.ContentType.Equals("dav/directory"))
                     {
                         // if resource not a directory, remove the file name from remote path.
@@ -320,28 +340,47 @@ namespace NextcloudClient
 
             var response = await _client.SendRequestAsync(request);
 
-            var xDoc = XDocument.Parse(response.Content.ToString());
+            var contentString = await response.Content.ReadAsStringAsync();
+            var multistatus = WebDavResponseContentParser.ParseMultistatusResponseContentString(contentString);
+            var favoritesList = new List<ResourceInfo>();
 
-            List<ResourceInfo> favoritesList = new List<ResourceInfo>();
-
-            foreach (XElement element in xDoc.Descendants())
+            foreach (var msResponse in multistatus.Response)
             {
-                if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
+                foreach (var item in msResponse.Items)
                 {
-                    var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/remote.php/webdav", "").Replace("</d:href>", "");
+                    var href = item as string;
 
-                    try
-                    {
-                        var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
+                    if (string.IsNullOrEmpty(href) || !href.Contains(Davpath))
+                        continue;
 
-                        favoritesList.Add(itemFav);
-                    }
-                    catch (ResponseError e)
-                    {
-                        throw e;
-                    }
+                    var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(href));
+
+                    favoritesList.Add(itemFav);
                 }
             }
+
+            //var xDoc = XDocument.Parse(response.Content.ToString());
+
+            //List<ResourceInfo> favoritesList = new List<ResourceInfo>();
+
+            //foreach (XElement element in xDoc.Descendants())
+            //{
+            //    if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
+            //    {
+            //        var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/", "").Replace("</d:href>", "");
+
+            //        try
+            //        {
+            //            var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
+
+            //            favoritesList.Add(itemFav);
+            //        }
+            //        catch (ResponseError e)
+            //        {
+            //            throw e;
+            //        }
+            //    }
+            //}
 
             return favoritesList;
         }

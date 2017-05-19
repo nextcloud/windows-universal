@@ -105,6 +105,68 @@ namespace NextcloudClient.Types
             return JsonConvert.SerializeObject(this);
         }
 
+        #region Nextcloud specific
+
+        // See https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html for a list of all NC specific WebDAV properties.
+
+        /// <summary>
+        /// Gets or sets the ID (the fileid namespaced by the instance id, globally unique).
+        /// </summary>
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the FileID (the unique id for the file within the instance).
+        /// </summary>
+        public string FileId { get; set; }
+
+        /// <summary>
+        /// Gets or sets IsFavorite.
+        /// </summary>
+        public bool IsFavorite { get; set; }
+
+        /// <summary>
+        /// Gets or sets CommentsHref (link to comments).
+        /// </summary>
+        public Uri CommentsHref { get; set; }
+
+        /// <summary>
+        /// Gets or sets the count of comments.
+        /// </summary>
+        public long CommentsCount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the number of comments unread.
+        /// </summary>
+        public long CommentsUnread { get; set; }
+
+        /// <summary>
+        /// Gets or sets the OwnerId (the user id of the owner of a shared file).
+        /// </summary>
+        public string OwnderId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the owner display name (the display name of the owner of a shared file).
+        /// </summary>
+        public string OwnerDisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the NextcloudShareTypes.
+        /// </summary>
+        public string ShareTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Checksums.
+        /// </summary>
+        public string Checksums { get; set; }
+
+        /// <summary>
+        /// Gets or sets HasPreview.
+        /// </summary>
+        public bool HasPreview { get; set; }
+
+
+        #endregion Nextcloud specific
+
         #region Equals
 
         public override bool Equals(object obj)
@@ -148,6 +210,14 @@ namespace NextcloudClient.Types
             // Is null on directories
             if (this.ETag != null)
                 hashCode ^= this.ETag.GetHashCode();
+
+            if (!string.IsNullOrEmpty(this.Id))
+                hashCode ^= this.Id.GetHashCode();
+
+            // #TODO
+
+            if (!string.IsNullOrEmpty(this.Id))
+                hashCode ^= this.Id.GetHashCode();
 
             return hashCode;
         }
