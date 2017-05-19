@@ -3,6 +3,7 @@ using DecaTec.WebDav.Tools;
 using NextcloudClient.Types;
 using NextcloudClient.WebDav;
 using System;
+using System.Xml.Linq;
 
 namespace NextcloudClient.Extensions
 {
@@ -33,91 +34,94 @@ namespace NextcloudClient.Extensions
 
             if(ncProps != null)
             {
-                var key = NsOc + ":" + NextcloudPropNameConstants.Checksums;
+                var key = XName.Get(NextcloudPropNameConstants.Checksums, NsOc);
 
                 if (ncProps.ContainsKey(key))
-                    res.Checksums = ncProps[NsOc + ":" + NextcloudPropNameConstants.Checksums];
+                    res.Checksums = ncProps[key];
 
-                key = NsOc + ":" + NextcloudPropNameConstants.CommentsCount;
+                key = XName.Get(NextcloudPropNameConstants.CommentsCount, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var commentsCount = ncProps[NsOc + ":" + NextcloudPropNameConstants.CommentsCount];
+                    var commentsCount = ncProps[key];
                     res.CommentsCount = string.IsNullOrEmpty(commentsCount) ? 0 : long.Parse(commentsCount);
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.CommentsHref;
+                key = XName.Get(NextcloudPropNameConstants.CommentsHref, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var commentsHref = ncProps[NsOc + ":" + NextcloudPropNameConstants.CommentsHref];
+                    var commentsHref = ncProps[key];
                     res.CommentsHref = string.IsNullOrEmpty(commentsHref) ? null : UriHelper.CombineUri(baseUri, new Uri(commentsHref, UriKind.Relative));
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.CommentsUnread;
+                key = XName.Get(NextcloudPropNameConstants.CommentsUnread, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var commentsUnread = ncProps[NsOc + ":" + NextcloudPropNameConstants.CommentsUnread];
+                    var commentsUnread = ncProps[key];
                     res.CommentsUnread = string.IsNullOrEmpty(commentsUnread) ? 0 : long.Parse(commentsUnread);
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.Favorite;
+                key = XName.Get(NextcloudPropNameConstants.Favorite, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var favorite = ncProps[NsOc + ":" + NextcloudPropNameConstants.Favorite];
+                    var favorite = ncProps[key];
                     res.IsFavorite = string.IsNullOrEmpty(favorite) ? false : string.CompareOrdinal(favorite, "1") == 0 ? true : false;
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.FileId;
+                key = XName.Get(NextcloudPropNameConstants.FileId, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    res.FileId = ncProps[NsOc + ":" + NextcloudPropNameConstants.FileId];
+                    res.FileId = ncProps[key];
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.HasPreview;
+                key = XName.Get(NextcloudPropNameConstants.HasPreview, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var hasPreview = ncProps[NsOc + ":" + NextcloudPropNameConstants.HasPreview];
+                    var hasPreview = ncProps[key];
                     res.HasPreview = string.IsNullOrEmpty(hasPreview) ? false : string.CompareOrdinal(hasPreview, "1") == 0 ? true : false;
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.Id;
+                key = XName.Get(NextcloudPropNameConstants.Id, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    res.Id = ncProps[NsOc + ":" + NextcloudPropNameConstants.Id];
+                    res.Id = ncProps[key];
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.OwnerDisplayName;
+                key = XName.Get(NextcloudPropNameConstants.OwnerDisplayName, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    res.OwnerDisplayName = ncProps[NsOc + ":" + NextcloudPropNameConstants.OwnerDisplayName];
+                    res.OwnerDisplayName = ncProps[key];
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.OwnerId;
+                key = XName.Get(NextcloudPropNameConstants.OwnerId, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    res.OwnderId = ncProps[NsOc + ":" + NextcloudPropNameConstants.OwnerId];
+                    res.OwnderId = ncProps[key];
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.ShareTypes;
+                key = XName.Get(NextcloudPropNameConstants.ShareTypes, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    res.ShareTypes = ncProps[NsOc + ":" + NextcloudPropNameConstants.ShareTypes];
+                    var shareType = ncProps[key];
+
+                    if(!string.IsNullOrEmpty(shareType))
+                        res.ShareTypes = (OcsShareType)int.Parse(ncProps[key]);
                 }
 
-                key = NsOc + ":" + NextcloudPropNameConstants.Size;
+                key = XName.Get(NextcloudPropNameConstants.Size, NsOc);
 
                 if (ncProps.ContainsKey(key))
                 {
-                    var size = ncProps[NsOc + ":" + NextcloudPropNameConstants.Size];
+                    var size = ncProps[key];
                     res.Size = string.IsNullOrEmpty(size) ? 0 : long.Parse(size);
                 }
             }

@@ -217,7 +217,6 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var test = GetDavUri(path);
             var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
             var baseUri = new Uri(_url);
@@ -353,34 +352,12 @@ namespace NextcloudClient
                     if (string.IsNullOrEmpty(href) || !href.Contains(Davpath))
                         continue;
 
+                    href = href.TrimEnd('/');
                     var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(href));
 
                     favoritesList.Add(itemFav);
                 }
-            }
-
-            //var xDoc = XDocument.Parse(response.Content.ToString());
-
-            //List<ResourceInfo> favoritesList = new List<ResourceInfo>();
-
-            //foreach (XElement element in xDoc.Descendants())
-            //{
-            //    if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
-            //    {
-            //        var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/", "").Replace("</d:href>", "");
-
-            //        try
-            //        {
-            //            var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
-
-            //            favoritesList.Add(itemFav);
-            //        }
-            //        catch (ResponseError e)
-            //        {
-            //            throw e;
-            //        }
-            //    }
-            //}
+            }           
 
             return favoritesList;
         }
@@ -392,7 +369,6 @@ namespace NextcloudClient
         /// <param name="Path">Path to the Item.</param>
         private async Task<ResourceInfo> GetResourceInfoByPath(string Path)
         {
-
             var targetPath = "/" + Path.Split('/')[Path.Split('/').Length - 1];
             var parentPath = Path.Replace(targetPath, "/");
             var itemName = targetPath.Replace("/", "");
@@ -1857,7 +1833,7 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         private Uri GetDavUri(string path)
         {
-            return new Uri(_url + "/" + Davpath + Uri.EscapeDataString(path).Replace("%2F", "/"));
+            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), path, true));
         }
 
         /// <summary>

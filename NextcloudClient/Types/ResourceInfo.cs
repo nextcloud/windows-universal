@@ -152,7 +152,7 @@ namespace NextcloudClient.Types
         /// <summary>
         /// Gets or sets the NextcloudShareTypes.
         /// </summary>
-        public string ShareTypes { get; set; }
+        public OcsShareType ShareTypes { get; set; }
 
         /// <summary>
         /// Gets or sets the Checksums.

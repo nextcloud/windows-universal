@@ -388,7 +388,8 @@
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DecaTec.WebDav">
+    <Reference Include="DecaTec.WebDav, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Portable-WebDAV-Library\Build\Debug\netstandard1.1\DecaTec.WebDav.dll</HintPath>
     </Reference>
   </ItemGroup>
