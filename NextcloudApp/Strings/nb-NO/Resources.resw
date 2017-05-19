@@ -169,10 +169,10 @@
     <value>Størrelse (største først)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Type (A først)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Type (Å først)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Programfeil</value>
@@ -345,13 +345,13 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Vennligst velg et nytt navn</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>Flytt til</value>
@@ -417,19 +417,19 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Oppdater</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Flytt filer og mapper
+• Gi filer og mapper nye navn
+• Manuell synkronisering av mapper
+• Last ned mapper som ZIP-fil 
+• Velg flere filer og mapper
+• Fest filer og mapper til startskjermen
+• Vis Windows Hello for å autentisere ved programstart
+• Tillat selvsignerte SSL-sertifikater
+• Vis mappestørrelse i liste
+• Del filer med programmet
+• Bruk PasswordVault for å lagre brukeridentifikasjon
+• Sikkerhetsforbedringer og feilrettinger
+• Nytt og mer stabilt WebDAV-bibliotek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>
@@ -441,7 +441,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Koble til</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorer ugyldige selvsignerte SSL-sertifikater</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Ekspertmodus</value>
@@ -479,13 +479,13 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>OBS!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>For at endringer skal tre i effekt, må programmet startes på nytt.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Liste over feil som inntraff under synkronisering. Disse bør være midlertidige (f.eks. når ei fil har blitt åpnet av et annet program) og burde ha blitt borte ved neste synkronisering.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Se opp for konflikter!</value>
@@ -549,37 +549,37 @@ Vennligst prøv igjen senere.</value>
     <value>Mapper</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elementer: {0} (mapper: {1} filer: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Når eksportmodus er påskrudd, gir programmet noen ytterligere funksjoner/informasjon, som kanskje ikke er så interessant for alle brukere.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignorer selvsignerte SSL-sertifikater. Dette tillater bruk av ugyldige eller uriktige SSL-sertifikatsmyndigheter. Vær forsiktet, du vil ikke være beskyttet mot mann-i-midten (MITM) -angrep lenger.</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synkroniser denne mappen</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Stopp synkronisering av denne mappen</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Stopp synkronisering</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
     <value>Synkroniseringsstatus</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Synkroniser nå</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
     <value>Synkroniser</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Synkroniser denne mappen nå</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synkroniser denne mappen</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
     <value>Mørk</value>
@@ -603,6 +603,6 @@ Vennligst prøv igjen senere.</value>
     <value>Delt med meg</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared over a Link</value>
+    <value>Delt via lenke</value>
   </data>
 </root>
