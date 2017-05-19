@@ -1833,7 +1833,8 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         private Uri GetDavUri(string path)
         {
-            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), path, true));
+            var escaped = Uri.EscapeDataString(path).Replace("%2F", "/");
+            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), escaped, true));
         }
 
         /// <summary>

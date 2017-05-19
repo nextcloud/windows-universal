@@ -223,6 +223,7 @@
                                     Text="{Binding Name}" 
                                     TextWrapping="NoWrap" 
                                     TextTrimming="CharacterEllipsis" />
+                                
                                 <StackPanel 
                                     Grid.Row="1" 
                                     Grid.Column="1"
