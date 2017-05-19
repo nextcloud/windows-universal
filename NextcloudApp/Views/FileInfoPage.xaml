@@ -59,7 +59,7 @@
                                         VerticalAlignment="Center"
                                         Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
                                     <FontIcon 
-                                        Glyph="{StaticResource NextclousLogo}"
+                                        Glyph="{StaticResource NextcloudLogo}"
                                         FontFamily="{StaticResource NextcloudIcons}"
                                         Margin="8,0,8,0"
                                         VerticalAlignment="Center"

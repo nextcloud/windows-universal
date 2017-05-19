@@ -24,7 +24,7 @@
                 Margin="20">
 
                 <FontIcon 
-                    Glyph="{StaticResource NextclousLogo}"
+                    Glyph="{StaticResource NextcloudLogo}"
                     FontFamily="{StaticResource NextcloudIcons}"
                     FontSize="88"
                     Margin="0,0,0,20" />
