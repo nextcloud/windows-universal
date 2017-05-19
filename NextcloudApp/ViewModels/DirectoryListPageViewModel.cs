@@ -124,6 +124,7 @@ namespace NextcloudApp.ViewModels
                 ShowProgressIndicator();
                 await Directory.Refresh();
                 HideProgressIndicator();
+                this.SelectedFileOrFolder = null;
             });
 
             SelectToggleCommand = new DelegateCommand(() =>

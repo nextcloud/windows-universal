@@ -344,21 +344,24 @@ namespace NextcloudClient
             var multistatus = WebDavResponseContentParser.ParseMultistatusResponseContentString(contentString);
             var favoritesList = new List<ResourceInfo>();
 
-            foreach (var msResponse in multistatus.Response)
+            if (multistatus.Response != null)
             {
-                foreach (var item in msResponse.Items)
+                foreach (var msResponse in multistatus.Response)
                 {
-                    var href = item as string;
+                    foreach (var item in msResponse.Items)
+                    {
+                        var href = item as string;
 
-                    if (string.IsNullOrEmpty(href) || !href.Contains(Davpath))
-                        continue;
+                        if (string.IsNullOrEmpty(href) || !href.Contains(Davpath))
+                            continue;
 
-                    href = href.TrimEnd('/');
-                    var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(href));
+                        href = href.TrimEnd('/');
+                        var itemFav = await GetResourceInfoByPath(href);
 
-                    favoritesList.Add(itemFav);
-                }
-            }           
+                        favoritesList.Add(itemFav);
+                    }
+                }            
+            }
 
             return favoritesList;
         }
