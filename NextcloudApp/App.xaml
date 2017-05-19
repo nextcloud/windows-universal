@@ -31,6 +31,7 @@
             <converter:ConflictTypeToForegroundConverter x:Key="ConflictTypeToForegroundConverter"/>
             <converter:SynchronizeFolderToTextConverter x:Key="SynchronizeFolderToTextConverter"/>
             <converter:SynchronizeThisFolderToTextConverter x:Key="SynchronizeThisFolderToTextConverter"/>
+            <converter:FavoriteToIconConverter x:Key="FavoriteToIconConverter"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="ms-appx:///Themes/Fonts.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />

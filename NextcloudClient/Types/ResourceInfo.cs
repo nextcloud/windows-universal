@@ -205,7 +205,8 @@ namespace NextcloudClient.Types
         public override int GetHashCode()
         {
             var hashCode = this.ContentType.GetHashCode() ^ this.Created.GetHashCode() ^ this.LastModified.GetHashCode() ^ this.Name.GetHashCode()
-                ^ this.Path.GetHashCode() ^ this.Size.GetHashCode();
+                 ^ this.Path.GetHashCode() ^ this.Size.GetHashCode() ^ this.IsFavorite.GetHashCode() ^ this.CommentsHref.GetHashCode() ^ this.CommentsCount.GetHashCode()
+                 ^ this.CommentsUnread.GetHashCode() ^ this.ShareTypes.GetHashCode() ^ this.HasPreview.GetHashCode();
 
             // Is null on directories
             if (this.ETag != null)
@@ -214,10 +215,17 @@ namespace NextcloudClient.Types
             if (!string.IsNullOrEmpty(this.Id))
                 hashCode ^= this.Id.GetHashCode();
 
-            // #TODO
+            if (!string.IsNullOrEmpty(this.FileId))
+                hashCode ^= this.FileId.GetHashCode();
 
-            if (!string.IsNullOrEmpty(this.Id))
-                hashCode ^= this.Id.GetHashCode();
+            if (!string.IsNullOrEmpty(this.OwnderId))
+                hashCode ^= this.OwnderId.GetHashCode();
+
+            if (!string.IsNullOrEmpty(this.OwnerDisplayName))
+                hashCode ^= this.OwnerDisplayName.GetHashCode();
+
+            if (!string.IsNullOrEmpty(this.Checksums))
+                hashCode ^= this.Checksums.GetHashCode();
 
             return hashCode;
         }

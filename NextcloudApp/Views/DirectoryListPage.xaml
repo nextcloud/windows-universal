@@ -127,6 +127,7 @@
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="Padding" Value="4,2,4,2"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                         </Style>
                     </ListView.ItemContainerStyle>
                     <ListView.GroupStyle>
@@ -192,7 +193,9 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
                                 <Grid
@@ -236,6 +239,18 @@
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                                 </StackPanel>
+
+                                <FontIcon 
+                                    Grid.Column="3"
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
+                                    Margin="0,0,10,0"
+                                    FontFamily="Segoe MDL2 Assets"
+                                    FontSize="16"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Holding">

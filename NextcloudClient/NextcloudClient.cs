@@ -231,6 +231,7 @@ namespace NextcloudClient
                     // if resource not a directory, remove the file name from remote path.
                     res.Path = res.Path.Replace("/" + res.Name, "");
                 }
+
                 resources.Add(res);
             }
 
@@ -250,7 +251,7 @@ namespace NextcloudClient
 
             var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
-            if (result.Count <= 0)
+            if (!result.Any())
             {
                 return null;
             }
