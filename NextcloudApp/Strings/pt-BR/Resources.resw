@@ -593,15 +593,15 @@ Por favor tente mais tarde.</value>
     <value>Tema</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Compartilhar com outros</value>
+    <value>Compartilhado com outros</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favoritos</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Compartilhar comigo</value>
+    <value>Compartilhado comigo</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Compartilhar com um link</value>
+    <value>Compartilhado com um link</value>
   </data>
 </root>
