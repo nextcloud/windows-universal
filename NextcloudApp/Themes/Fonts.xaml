@@ -3,7 +3,7 @@
                     xmlns:local="using:NextcloudApp">
 
     <FontFamily x:Key="NextcloudIcons">/Assets/Fonts/nextcloud.ttf#nextcloud</FontFamily>
-    <x:String x:Key="NextclousLogoWithSlogan">&#xE900;</x:String>
-    <x:String x:Key="NextclousLogo">&#xE901;</x:String>
+    <x:String x:Key="NextcloudLogoWithSlogan">&#xE900;</x:String>
+    <x:String x:Key="NextcloudLogo">&#xE901;</x:String>
     
 </ResourceDictionary>

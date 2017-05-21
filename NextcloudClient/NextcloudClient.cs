@@ -15,6 +15,10 @@ using NextcloudClient.Types;
 using DecaTec.WebDav;
 using Windows.Security.Credentials;
 using Windows.Security.Cryptography.Certificates;
+using DecaTec.WebDav.WebDavArtifacts;
+using NextcloudClient.WebDav;
+using NextcloudClient.Extensions;
+using DecaTec.WebDav.Tools;
 
 namespace NextcloudClient
 {
@@ -67,6 +71,8 @@ namespace NextcloudClient
         /// </summary>
         private const string OcsServiceCloud = "cloud";
 
+        private readonly PropFind nextcloudPropFind;
+
         #endregion
 
         #region CONSTRUCTORS
@@ -110,6 +116,40 @@ namespace NextcloudClient
                 url = url.TrimEnd('/');
             }
 
+            // Create PropFind which contains all NC specific properties.
+            var propFind = PropFind.CreatePropFindWithEmptyPropertiesAll();
+            var prop = (Prop)propFind.Item;
+
+            XNamespace nsOc = "http://owncloud.org/ns";
+
+            var xElementList = new List<XElement>();
+            var xElement = new XElement(nsOc + NextcloudPropNameConstants.Checksums);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsCount);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsHref);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.CommentsUnread);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Favorite);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.FileId);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.HasPreview);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Id);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.OwnerDisplayName);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.OwnerId);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.ShareTypes);
+            xElementList.Add(xElement);
+            xElement = new XElement(nsOc + NextcloudPropNameConstants.Size);
+            xElementList.Add(xElement);
+            prop.AdditionalProperties = xElementList.ToArray();
+            nextcloudPropFind = propFind;
+
             _url = url;
             _httpBaseProtocolFilter = httpBaseProtocolFilter;
 
@@ -133,9 +173,9 @@ namespace NextcloudClient
             };
         }
 
-        #endregion
+#endregion
 
-        #region Settings
+#region Settings
 
         /// <summary>
         /// Gets or sets a value indicating whether to ignore server certificate errors.
@@ -165,9 +205,9 @@ namespace NextcloudClient
             }
         }
 
-        #endregion
+#endregion
 
-        #region DAV
+#region DAV
 
         /// <summary>
         ///     List the specified remote path.
@@ -177,31 +217,21 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var test = GetDavUri(path);
-            var result = await _dav.ListAsync(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
             foreach (var item in result)
             {
-                var res = new ResourceInfo
-                {
-                    ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                    Created = item.CreationDate,
-                    ETag = item.ETag,
-                    LastModified = item.LastModified,
-                    Name = System.Net.WebUtility.UrlDecode(item.Name),
-                    QuotaAvailable = item.QuotaAvailableBytes,
-                    QuotaUsed = item.QuotaUsedBytes,
-                    Size = item.ContentLength != 0 ? item.ContentLength : item.QuotaUsedBytes,
-                    Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
-                };
+                var res = item.ToResourceInfo(baseUri);
+
                 if (!res.ContentType.Equals("dav/directory"))
                 {
                     // if resource not a directory, remove the file name from remote path.
                     res.Path = res.Path.Replace("/" + res.Name, "");
                 }
+
                 resources.Add(res);
             }
 
@@ -219,9 +249,9 @@ namespace NextcloudClient
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
-            var result = await _dav.ListAsync(GetDavUri(path));
+            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
 
-            if (result.Count <= 0)
+            if (!result.Any())
             {
                 return null;
             }
@@ -229,18 +259,8 @@ namespace NextcloudClient
             {
                 if (item.Name.Equals(name))
                 {
-                    var res = new ResourceInfo
-                    {
-                        ContentType = item.IsCollection ? "dav/directory" : item.ContentType,
-                        Created = item.CreationDate,
-                        ETag = item.ETag,
-                        LastModified = item.LastModified,
-                        Name = System.Net.WebUtility.UrlDecode(item.Name),
-                        QuotaAvailable = item.QuotaAvailableBytes,
-                        QuotaUsed = item.QuotaUsedBytes,
-                        Size = item.ContentLength,
-                        Path = item.Uri.AbsolutePath.Replace(baseUri.AbsolutePath, "")
-                    };
+                    var res = item.ToResourceInfo(baseUri);
+
                     if (!res.ContentType.Equals("dav/directory"))
                     {
                         // if resource not a directory, remove the file name from remote path.
@@ -320,27 +340,27 @@ namespace NextcloudClient
 
             var response = await _client.SendRequestAsync(request);
 
-            var xDoc = XDocument.Parse(response.Content.ToString());
+            var contentString = await response.Content.ReadAsStringAsync();
+            var multistatus = WebDavResponseContentParser.ParseMultistatusResponseContentString(contentString);
+            var favoritesList = new List<ResourceInfo>();
 
-            List<ResourceInfo> favoritesList = new List<ResourceInfo>();
-
-            foreach (XElement element in xDoc.Descendants())
+            if (multistatus.Response != null)
             {
-                if (element.ToString().IndexOf("d:href") > -1 && element.ToString().IndexOf("d:response") < 0 )
+                foreach (var msResponse in multistatus.Response)
                 {
-                    var favoritePath = element.ToString().Replace("<d:href xmlns:d=\"DAV:\">/remote.php/webdav", "").Replace("</d:href>", "");
-
-                    try
+                    foreach (var item in msResponse.Items)
                     {
-                        var itemFav = await GetResourceInfoByPath(Uri.UnescapeDataString(favoritePath));
+                        var href = item as string;
+
+                        if (string.IsNullOrEmpty(href) || !href.Contains(Davpath))
+                            continue;
+
+                        href = href.TrimEnd('/');
+                        var itemFav = await GetResourceInfoByPath(href);
 
                         favoritesList.Add(itemFav);
                     }
-                    catch (ResponseError e)
-                    {
-                        throw e;
-                    }
-                }
+                }            
             }
 
             return favoritesList;
@@ -353,7 +373,6 @@ namespace NextcloudClient
         /// <param name="Path">Path to the Item.</param>
         private async Task<ResourceInfo> GetResourceInfoByPath(string Path)
         {
-
             var targetPath = "/" + Path.Split('/')[Path.Split('/').Length - 1];
             var parentPath = Path.Replace(targetPath, "/");
             var itemName = targetPath.Replace("/", "");
@@ -499,11 +518,11 @@ namespace NextcloudClient
             return await _dav.DownloadFileWithProgressAsync(GetDavUriZip(path), localStream, progress, cancellationToken);
         }
 
-        #endregion
+#endregion
 
-        #region Nextcloud
+#region Nextcloud
 
-        #region Remote Shares
+#region Remote Shares
 
         /// <summary>
         /// Gets the server status.
@@ -752,9 +771,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Shares
+#region Shares
 
         /// <summary>
         ///     Unshares a file or directory.
@@ -1062,9 +1081,9 @@ namespace NextcloudClient
             return GetShareList(responseStr);
         }
 
-        #endregion
+#endregion
 
-        #region Users
+#region Users
 
         /// <summary>
         ///     Create a new user with an initial password via provisioning API.
@@ -1465,9 +1484,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Groups
+#region Groups
 
         /// <summary>
         ///     Create a new group via provisioning API.
@@ -1559,9 +1578,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Config
+#region Config
 
         /// <summary>
         ///     Returns Nextcloud config information.
@@ -1588,9 +1607,9 @@ namespace NextcloudClient
             return cfg;
         }
 
-        #endregion
+#endregion
 
-        #region Application attributes
+#region Application attributes
 
         /// <summary>
         ///     Returns an application attribute
@@ -1685,9 +1704,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Apps
+#region Apps
 
         /// <summary>
         ///     List all enabled apps through the provisioning api.
@@ -1774,11 +1793,11 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region Url Handling
+#region Url Handling
 
         private async Task<string> DoApiRequest(string method, string path, Dictionary<string, string> parameters = null)
         {
@@ -1818,7 +1837,8 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         private Uri GetDavUri(string path)
         {
-            return new Uri(_url + "/" + Davpath + Uri.EscapeDataString(path).Replace("%2F", "/"));
+            var escaped = Uri.EscapeDataString(path).Replace("%2F", "/");
+            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), escaped, true));
         }
 
         /// <summary>
@@ -1857,9 +1877,9 @@ namespace NextcloudClient
             return service + slash + action;
         }
 
-        #endregion
+#endregion
 
-        #region OCS Response parsing
+#region OCS Response parsing
 
         /// <summary>
         ///     Get element value from OCS Meta.
@@ -1928,7 +1948,7 @@ namespace NextcloudClient
                     continue;
                 }
 
-                #region Share Type
+#region Share Type
 
                 var shareType = Convert.ToInt32(node.Value);
                 Share share;
@@ -1950,9 +1970,9 @@ namespace NextcloudClient
                 }
                 share.AdvancedProperties = new AdvancedShareProperties();
 
-                #endregion
+#endregion
 
-                #region General Properties
+#region General Properties
 
                 node = data.Element(XName.Get("id"));
                 if (node != null)
@@ -1978,9 +1998,9 @@ namespace NextcloudClient
                     share.Perms = Convert.ToInt32(node.Value);
                 }
 
-                #endregion
+#endregion
 
-                #region Advanced Properties
+#region Advanced Properties
 
                 node = data.Element(XName.Get("item_type"));
                 if (node != null)
@@ -2060,9 +2080,9 @@ namespace NextcloudClient
                     share.AdvancedProperties.DisplaynameOwner = node.Value;
                 }
 
-                #endregion
+#endregion
 
-                #region ShareType specific
+#region ShareType specific
 
                 if (shareType == Convert.ToInt32(OcsShareType.Link))
                 {
@@ -2095,7 +2115,7 @@ namespace NextcloudClient
                     }
                 }
 
-                #endregion
+#endregion
 
                 shares.Add(share);
             }
@@ -2362,9 +2382,9 @@ namespace NextcloudClient
             return element.Descendants().ToDictionary(node => node.Name.ToString(), node => node.Value);
         }
 
-        #endregion
+#endregion
 
-        #region IDisposable
+#region IDisposable
 
         public void Dispose()
         {
@@ -2380,6 +2400,6 @@ namespace NextcloudClient
             }
         }
 
-        #endregion IDisposable
+#endregion IDisposable
     }
 }

@@ -8,11 +8,7 @@ namespace NextcloudApp.Actions
     {
         public object Execute(object sender, object parameter)
         {
-            var senderElement = sender as FrameworkElement;
-            var flyoutBase = FlyoutBase.GetAttachedFlyout(senderElement);
-
-            flyoutBase.ShowAt(senderElement);
-
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
             return null;
         }
     }
