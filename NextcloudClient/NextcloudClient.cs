@@ -173,9 +173,9 @@ namespace NextcloudClient
             };
         }
 
-        #endregion
+#endregion
 
-        #region Settings
+#region Settings
 
         /// <summary>
         /// Gets or sets a value indicating whether to ignore server certificate errors.
@@ -205,9 +205,9 @@ namespace NextcloudClient
             }
         }
 
-        #endregion
+#endregion
 
-        #region DAV
+#region DAV
 
         /// <summary>
         ///     List the specified remote path.
@@ -518,11 +518,11 @@ namespace NextcloudClient
             return await _dav.DownloadFileWithProgressAsync(GetDavUriZip(path), localStream, progress, cancellationToken);
         }
 
-        #endregion
+#endregion
 
-        #region Nextcloud
+#region Nextcloud
 
-        #region Remote Shares
+#region Remote Shares
 
         /// <summary>
         /// Gets the server status.
@@ -771,9 +771,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Shares
+#region Shares
 
         /// <summary>
         ///     Unshares a file or directory.
@@ -1081,9 +1081,9 @@ namespace NextcloudClient
             return GetShareList(responseStr);
         }
 
-        #endregion
+#endregion
 
-        #region Users
+#region Users
 
         /// <summary>
         ///     Create a new user with an initial password via provisioning API.
@@ -1484,9 +1484,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Groups
+#region Groups
 
         /// <summary>
         ///     Create a new group via provisioning API.
@@ -1578,9 +1578,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Config
+#region Config
 
         /// <summary>
         ///     Returns Nextcloud config information.
@@ -1607,9 +1607,9 @@ namespace NextcloudClient
             return cfg;
         }
 
-        #endregion
+#endregion
 
-        #region Application attributes
+#region Application attributes
 
         /// <summary>
         ///     Returns an application attribute
@@ -1704,9 +1704,9 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #region Apps
+#region Apps
 
         /// <summary>
         ///     List all enabled apps through the provisioning api.
@@ -1793,11 +1793,11 @@ namespace NextcloudClient
             throw new OcsResponseError(responseObj.Meta.Message, responseObj.Meta.StatusCode.ToString());
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region Url Handling
+#region Url Handling
 
         private async Task<string> DoApiRequest(string method, string path, Dictionary<string, string> parameters = null)
         {
@@ -1877,9 +1877,9 @@ namespace NextcloudClient
             return service + slash + action;
         }
 
-        #endregion
+#endregion
 
-        #region OCS Response parsing
+#region OCS Response parsing
 
         /// <summary>
         ///     Get element value from OCS Meta.
@@ -1948,7 +1948,7 @@ namespace NextcloudClient
                     continue;
                 }
 
-                #region Share Type
+#region Share Type
 
                 var shareType = Convert.ToInt32(node.Value);
                 Share share;
@@ -1970,9 +1970,9 @@ namespace NextcloudClient
                 }
                 share.AdvancedProperties = new AdvancedShareProperties();
 
-                #endregion
+#endregion
 
-                #region General Properties
+#region General Properties
 
                 node = data.Element(XName.Get("id"));
                 if (node != null)
@@ -1998,9 +1998,9 @@ namespace NextcloudClient
                     share.Perms = Convert.ToInt32(node.Value);
                 }
 
-                #endregion
+#endregion
 
-                #region Advanced Properties
+#region Advanced Properties
 
                 node = data.Element(XName.Get("item_type"));
                 if (node != null)
@@ -2080,9 +2080,9 @@ namespace NextcloudClient
                     share.AdvancedProperties.DisplaynameOwner = node.Value;
                 }
 
-                #endregion
+#endregion
 
-                #region ShareType specific
+#region ShareType specific
 
                 if (shareType == Convert.ToInt32(OcsShareType.Link))
                 {
@@ -2115,7 +2115,7 @@ namespace NextcloudClient
                     }
                 }
 
-                #endregion
+#endregion
 
                 shares.Add(share);
             }
@@ -2382,9 +2382,9 @@ namespace NextcloudClient
             return element.Descendants().ToDictionary(node => node.Name.ToString(), node => node.Value);
         }
 
-        #endregion
+#endregion
 
-        #region IDisposable
+#region IDisposable
 
         public void Dispose()
         {
@@ -2400,6 +2400,6 @@ namespace NextcloudClient
             }
         }
 
-        #endregion IDisposable
+#endregion IDisposable
     }
 }

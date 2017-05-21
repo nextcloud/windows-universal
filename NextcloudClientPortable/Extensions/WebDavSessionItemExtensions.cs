@@ -22,7 +22,7 @@ namespace NextcloudClient.Extensions
                 Created = item.CreationDate ?? DateTime.MinValue,
                 ETag = item.ETag,
                 LastModified = item.LastModified ?? DateTime.MinValue,
-                Name = System.Net.WebUtility.UrlDecode(item.Name),
+                Name = item.Name,
                 QuotaAvailable = item.QuotaAvailableBytes ?? 0,
                 QuotaUsed = item.QuotaUsedBytes ?? 0,
                 Size = item.ContentLength.HasValue && item.ContentLength.Value != 0 ? item.ContentLength.Value : item.QuotaUsedBytes ?? 0,
