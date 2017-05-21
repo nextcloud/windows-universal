@@ -186,104 +186,96 @@
                     </ListView.GroupStyle>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                            <Grid HorizontalAlignment="Stretch">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
+                                </Grid.ColumnDefinitions>                               
+                                
+                                <Grid Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <Grid
+                                    <Grid
                                     Grid.RowSpan="2"
                                     Height="40" 
                                     Width="40"
                                     Margin="0,0,4,0"
                                     Background="{StaticResource SystemControlHighlightAccentBrush}">
-                                    <FontIcon 
+                                        <FontIcon 
                                         Glyph="{Binding Converter={StaticResource ContentTypeToIconConverter}}" 
                                         FontFamily="Segoe MDL2 Assets"
                                         FontSize="28"
                                         VerticalAlignment="Center"
                                         HorizontalAlignment="Center"
                                         Foreground="White"/>
-                                    <Border
+                                        <Border
                                         Background="#808080"
                                         Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
-                                        <Image
+                                            <Image
                                             Source="{Binding Thumbnail}"
                                             Stretch="UniformToFill"/>
-                                    </Border>
-                                </Grid>
+                                        </Border>
+                                    </Grid>
 
-                                <TextBlock
+                                    <TextBlock
                                     Grid.Row="0" 
                                     Grid.Column="1"
                                     Text="{Binding Name}" 
                                     TextWrapping="NoWrap" 
                                     TextTrimming="CharacterEllipsis" />
-                                
-                                <StackPanel 
+
+                                    <StackPanel 
                                     Grid.Row="1" 
                                     Grid.Column="1"
                                     Orientation="Horizontal">
-                                    <TextBlock 
+                                        <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
                                         Margin="0,0,8,0"/>
-                                    <TextBlock 
+                                        <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
-                                </StackPanel>
+                                    </StackPanel>                                  
 
-                                <FontIcon 
-                                    Grid.Column="3"
-                                    Grid.Row="0"
-                                    Grid.RowSpan="2"
-                                    Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
-                                    Margin="0,0,10,0"
-                                    FontFamily="Segoe MDL2 Assets"
-                                    FontSize="16"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
-
-                                <interactivity:Interaction.Behaviors>
-                                    <core:EventTriggerBehavior EventName="Holding">
-                                        <actions:OpenMenuFlyoutAction />
-                                    </core:EventTriggerBehavior>
-                                    <core:EventTriggerBehavior EventName="RightTapped">
-                                        <actions:OpenMenuFlyoutAction />
-                                    </core:EventTriggerBehavior>
-                                </interactivity:Interaction.Behaviors>
-                                <FlyoutBase.AttachedFlyout>
-                                    <MenuFlyout>
-                                        <MenuFlyoutItem 
+                                    <interactivity:Interaction.Behaviors>
+                                        <core:EventTriggerBehavior EventName="Holding">
+                                            <actions:OpenMenuFlyoutAction />
+                                        </core:EventTriggerBehavior>
+                                        <core:EventTriggerBehavior EventName="RightTapped">
+                                            <actions:OpenMenuFlyoutAction />
+                                        </core:EventTriggerBehavior>
+                                    </interactivity:Interaction.Behaviors>
+                                    <FlyoutBase.AttachedFlyout>
+                                        <MenuFlyout>
+                                            <MenuFlyoutItem 
                                             Tag="Rename"
                                             x:Uid="Rename_Text"
                                             Text="Rename"
                                             Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="MoveToFolder"
                                             x:Uid="MoveTo_Text"
                                             Text="Move to"
                                             Command="{Binding DataContext.MoveResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="Delete"
                                             x:Uid="Delete_Text"
                                             Text="Delete"
                                             Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="Download"
                                             x:Uid="DownloadAsZip"
                                             Text="Download as ZIP file"
@@ -291,7 +283,7 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="Download"
                                             x:Uid="Download"
                                             Text="Download"
@@ -299,7 +291,7 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="SyncFolder"
                                             x:Uid="Synchronize"
                                             Text="{Binding Converter={StaticResource SynchronizeFolderToTextConverter}}"
@@ -307,7 +299,7 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="UnSyncFolder"
                                             x:Uid="StopSynchronize"
                                             Text="Stop synchronizing"
@@ -315,15 +307,33 @@
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                                             Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
-                                        <MenuFlyoutItem 
+                                            <MenuFlyoutItem 
                                             Tag="Pin"
                                             x:Uid="PinToStart"
                                             Text="Pin to start"
                                             Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource MenuFlyoutIconItemStyle}"/>
-                                    </MenuFlyout>
-                                </FlyoutBase.AttachedFlyout>
+                                        </MenuFlyout>
+                                    </FlyoutBase.AttachedFlyout>
+                                </Grid>
+                                
+                                <Grid Grid.Column="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <FontIcon 
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
+                                    Margin="0,0,10,0"
+                                    FontFamily="Segoe MDL2 Assets"
+                                    FontSize="16"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
+                                </Grid>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -362,7 +372,7 @@
         <StackPanel Orientation="Horizontal" Height="25" Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}">
             <TextBlock Margin="25,0,0,0" Text="{Binding StatusBarText, Mode=OneWay}" />
         </StackPanel>
-        
+
         <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
