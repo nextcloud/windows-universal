@@ -178,9 +178,9 @@
     <value>Błąd aplikacji</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Aplikacja napotkała problem. Przepraszamy za niedogodności. Jeśli byłeś w trakcie jakiejś pracy informacje, nad którymi pracowałeś są stracone.
+    <value>Aplikacja napotkała problem. Przepraszamy za niedogodności. Jeśli byłeś w trakcie jakiejś pracy, informacje nad którymi pracowałeś zostały utracone.
 
-Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o błędzie? Pomoże to szybciej wyeliminować problem w przyszłości.</value>
+Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany raport o błędzie? Pomoże to szybciej wyeliminować problem.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Anuluj</value>
@@ -213,8 +213,7 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} bajtów)
-</value>
+    <value>{0} ({1} bajtów)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
     <value>Nazwa folderu</value>
@@ -370,7 +369,7 @@ Czy chcesz poinformować autorów aplikacji i wysłać im przygotowany raport o 
     <value>Wybierz folder</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Serwer o adresie {0} nie jest dostępny</value>
+    <value>Serwer o adresie {0} nie jest dostępny.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Ściągnij jako plik ZIP</value>
