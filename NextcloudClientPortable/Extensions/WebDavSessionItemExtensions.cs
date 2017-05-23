@@ -26,7 +26,7 @@ namespace NextcloudClient.Extensions
                 QuotaAvailable = item.QuotaAvailableBytes ?? 0,
                 QuotaUsed = item.QuotaUsedBytes ?? 0,
                 Size = item.ContentLength.HasValue && item.ContentLength.Value != 0 ? item.ContentLength.Value : item.QuotaUsedBytes ?? 0,
-                Path = System.Net.WebUtility.UrlDecode(item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, ""))
+                Path = item.Uri.AbsoluteUri.Replace(baseUri.AbsoluteUri, "")
             };
 
             // NC specific properties.
