@@ -485,19 +485,19 @@ Farðu varlega, þú verður ekki varinn fyrir Maður-í-miðjunni (mitm) árás
     <value>Ábending</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Listi yfir villur sem komu upp á meðan samstilling fór fram. Þetta ættu að vera tímabundin vandamál (t.d. skrá var opnuð af öðru forriti) og ættu yfirleytt að hverfa við næstu samstillingu.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Varaðu þig á árekstrum!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Hvorki staðværa né fjartengda mappan eru tómar. Þetta gæti valdið fjölda árekstra, því ómögulegt er að vita hvaða skrár eru þær réttu.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Samstilling hefur verið ræst!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Samstilling mun fara fram í bakgrunni. Þú munt fá tilkynningu þegar henni er lokið.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Þjónustan er tímabundið ekki tiltæk (venjulega vegna skammtíma viðhaldsvinnu).
@@ -507,7 +507,7 @@ Prófaðu aftur síðar.</value>
     <value>Skrá breyttist bæði staðvært og fjartengt. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Skrá var útbúin bæði staðvært og fjartengt. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Eyddi skrá staðvært en fjartengda útgáfan breyttist. Hvora útgáfuna viltu?</value>
@@ -528,7 +528,7 @@ Prófaðu aftur síðar.</value>
     <value>Samstillingu er lokið</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Samstilling möppunnar {0} hefur verið sett í bið, því forritið hefur stöðvast.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Samstilling í biðstöðu</value>
@@ -552,7 +552,7 @@ Prófaðu aftur síðar.</value>
     <value>Atriði: {0} (möppur: {1} skrár: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Þegar sérfræðihamur er virkur, birtir forritið ýmsa aukaeiginleike/aukaupplýsingar, sem eru ekki endilega áhugaverðir fyrir alla notendur.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Hunsa ógild sjálfundirrituð SSL-skilríki. Þetta gerir kleift að nota ógilda eða ekki rétta vottunaraðila skilríkja (CA). Farðu varlega, þú verður ekki lengur varinn fyrir Maður-í-miðjunni (mitm) árásum!</value>
