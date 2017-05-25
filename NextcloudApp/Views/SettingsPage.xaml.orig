@@ -81,7 +81,7 @@
 
                     <ToggleSwitch 
                         x:Uid="IgnoreInvalidSelfSignedSslCertificates"
-                        Header="Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!"
+                        Header="Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!"
                         Margin="0,12"
                         IsOn="{Binding IgnoreServerCertificateErrors, Mode=TwoWay}">
                         <interactivity:Interaction.Behaviors>
