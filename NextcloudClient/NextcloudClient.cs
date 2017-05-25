@@ -217,7 +217,7 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
+            var result = await _dav.ListAsync(GetDavUri(path, true), nextcloudPropFind);
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
@@ -249,7 +249,7 @@ namespace NextcloudClient
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
-            var result = await _dav.ListAsync(GetDavUri(path), nextcloudPropFind);
+            var result = await _dav.ListAsync(GetDavUri(path, false), nextcloudPropFind);
 
             if (!result.Any())
             {
@@ -401,7 +401,7 @@ namespace NextcloudClient
         /// <returns>File contents.</returns>
         public async Task<bool> Download(string path, Stream localStream, IProgress<WebDavProgress> progress, CancellationToken cancellationToken)
         {
-            return await _dav.DownloadFileWithProgressAsync(GetDavUri(path), localStream, progress, cancellationToken);
+            return await _dav.DownloadFileWithProgressAsync(GetDavUri(path, false), localStream, progress, cancellationToken);
         }
 
         /// <summary>
@@ -449,7 +449,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if upload successful, <c>false</c> otherwise.</returns>
         public async Task<bool> Upload(string path, Stream stream, string contentType, IProgress<WebDavProgress> progress, CancellationToken cancellationToken)
         {
-            return await _dav.UploadFileWithProgressAsync(GetDavUri(path), stream, contentType, progress, cancellationToken);
+            return await _dav.UploadFileWithProgressAsync(GetDavUri(path, false), stream, contentType, progress, cancellationToken);
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if remote path exists, <c>false</c> otherwise.</returns>
         public async Task<bool> Exists(string path)
         {
-            return await _dav.ExistsAsync(GetDavUri(path));
+            return await _dav.ExistsAsync(GetDavUri(path, false));
         }
 
         /// <summary>
@@ -469,7 +469,7 @@ namespace NextcloudClient
         /// <param name="path">remote Path.</param>
         public async Task<bool> CreateDirectory(string path)
         {
-            return await _dav.CreateDirectoryAsync(GetDavUri(path));
+            return await _dav.CreateDirectoryAsync(GetDavUri(path, false));
         }
 
         /// <summary>
@@ -479,7 +479,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was deleted, <c>false</c> otherwise.</returns>
         public async Task<bool> Delete(string path)
         {
-            return await _dav.DeleteAsync(GetDavUri(path));
+            return await _dav.DeleteAsync(GetDavUri(path, true));
         }
 
         /// <summary>
@@ -490,7 +490,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was copied, <c>false</c> otherwise.</returns>
         public async Task<bool> Copy(string source, string destination)
         {
-            return await _dav.CopyAsync(GetDavUri(source), GetDavUri(destination));
+            return await _dav.CopyAsync(GetDavUri(source, false), GetDavUri(destination, false));
         }
 
         /// <summary>
@@ -501,7 +501,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was moved, <c>false</c> otherwise.</returns>
         public async Task<bool> Move(string source, string destination)
         {
-            return await _dav.MoveAsync(GetDavUri(source), GetDavUri(destination));
+            return await _dav.MoveAsync(GetDavUri(source, false), GetDavUri(destination, false));
         }
 
         /// <summary>
@@ -1835,10 +1835,13 @@ namespace NextcloudClient
         /// </summary>
         /// <returns>The DAV URI.</returns>
         /// <param name="path">remote Path.</param>
-        private Uri GetDavUri(string path)
+        /// <param name="escaped">Determines if the path should be escaped or not.</param>
+        private Uri GetDavUri(string path, bool escaped)
         {
-            var escaped = Uri.EscapeDataString(path).Replace("%2F", "/");
-            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), escaped, true));
+            if(escaped)
+                path = Uri.EscapeDataString(path).Replace("%2F", "/");
+
+            return new Uri(UriHelper.CombineUrl(UriHelper.CombineUrl(_url, Davpath, true), path, true));
         }
 
         /// <summary>
