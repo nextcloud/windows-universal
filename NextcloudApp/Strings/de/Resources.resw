@@ -178,7 +178,7 @@
     <value>Anwendungsfehler</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>In der Anwendung ist ein Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten. Wenn Sie in der Mitte von etwas waren, sind die Informationen, an denen Sie gearbeitet haben, verloren.
+    <value>In der Anwendung ist ein Problem aufgetreten. Nicht gespeicherte Informationen gehen dabei leider verloren. Wir entschuldigen uns für die Unannehmlichkeiten.
 
 Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
   </data>

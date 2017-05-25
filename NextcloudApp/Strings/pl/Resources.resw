@@ -417,19 +417,19 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Przenieś pliki i foldery
+• Zmień nazwę plików i folderów
+• Ręczna synchronizacja folderów
+• Pobierz katalogi jako pliki ZIP
+• Wybierz wiele plików i folderów
+• Przypnij pliki  i foldery do ekranu startowego
+• Autoryzuj się za pomocą Windows Hello w trakcie uruchamiania aplikacji
+• Dopuść samopodpisane certyfikaty SSL
+• Pokaż rozmiary folderów na liście
+• Współdziel pliki za pomocą aplikacji
+• Użyj sejfów do przechowywania danych uwierzytelniających
+• Poprawki bezpieczeństwa oraz naprawienie błędów
+• Nowa i bardziej stabilna biblioteka WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
