@@ -212,10 +212,10 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
-            await StartDirectoryListing(null);
+            await StartDirectoryListing(null, null);
         }
 
-        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude)
+        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, String viewName = null)
         {
             var client = await ClientService.GetClient();
 
@@ -226,12 +226,38 @@ namespace NextcloudApp.Services
 
             _continueListing = true;
 
+            if (PathStack.Count == 0)
+            {
+                PathStack.Add(new PathInfo
+                {
+                    ResourceInfo = new ResourceInfo()
+                    {
+                        Name = "Nextcloud",
+                        Path = "/"
+                    },
+                    IsRoot = true
+                });
+            }
+
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
             List<ResourceInfo> list = null;
 
             try
             {
-                list = await client.List(path);
+                if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
+                {
+                    PathStack.Clear();
+                    list = await client.GetSharesView(viewName);
+                }
+                else if (viewName == "favorites")
+                {
+                    PathStack.Clear();
+                    list = await client.GetFavorites();
+                }
+                else
+                {
+                    list = await client.List(path);
+                }
             }
             catch (ResponseError e)
             {

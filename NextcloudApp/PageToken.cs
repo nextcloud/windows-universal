@@ -4,6 +4,10 @@
     {
         Login,
         DirectoryList,
+        Favorites,
+        SharesIn,
+        SharesOut,
+        SharesLink,
         FileInfo,
         Settings,
         FileDownload,

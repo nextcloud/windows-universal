@@ -168,13 +168,19 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Stærð (stærsta efst)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Tegund (A efst)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Tegund (Ö efst)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Villa í forriti</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Forritið rakst á vandamál. Við biðjumst afsökunar á óþægindunum. Ef þú varst í miðju kafi í einhverju verkefni, er líklegt að þú hafir tapað einhverjum gögnum.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna villuskýrslu? Það gæti flýtt fyrir að komist verði fyrir vandamálið.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Hætta við</value>
@@ -186,7 +192,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Tengjast</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Efnis-Tegund</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Búa til</value>
@@ -234,7 +240,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ekki heimilt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
+    <value>Þjónninn skilaði villukóðanum 401 (Óheimilaður). Skráðu þig inn aftur.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>Í lagi</value>
@@ -264,13 +270,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Stillingar</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Show file and folder list grouping</value>
+    <value>Birta hópaða skráa- og möppulista</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Stærð</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>There is already an element with this name. Specify a different name.</value>
+    <value>Nú þegar er eining með þessu heiti. Gefðu upp eitthvað annað nafn.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Tegund</value>
@@ -315,7 +321,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} af {1} sótt</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>Viðhaldshamur er virkjaður á þjóninum</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>Rangt notandanafn eða lykilorð.</value>
@@ -324,7 +330,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Útgáfa forrits {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>Ekki var hægt að leysa nafn eða vistfang þjónsins</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Útgáfa þjóns {0}</value>
@@ -363,7 +369,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Veldu möppu</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>The server with the address {0} is not reachable.</value>
+    <value>Ekki næst í þjóninn með vistfangið {0}.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Sækja sem ZIP-skrá</value>
@@ -372,13 +378,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} sótt</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Til að fá aðgang að Nextcloud-skýinu þínu, gefðu upp innskráningarupplýsingar tækisins þíns.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Auðkenning í Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Ekkert PIN-númer er stillt fyrir þetta tæki. Til að nota Windows Hello, verður að skilgreina PIN-númer.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Sækja</value>
@@ -390,7 +396,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Innskráningar krafist</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Við getum ekki opnað Nextcloud-skýið fyrr en þú gefur upp innskráningarupplýsingar tækisins þíns.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Reyndu aftur</value>
@@ -402,7 +408,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Forritið þitt var uppfært í útgáfu {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Nýir eiginleikar og endurbætur í þessari útgáfu:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Mæla með</value>
@@ -411,31 +417,34 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Uppfæra</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Færa skrár og möppur
+• Endurnefna skrár og möppur
+• Handvirk samstilling á möppum
+• Sækja möppur sem ZIP-safnskrár 
+• Velja margar skrár og möppur
+• Festing skráa og mappa á upphafsskjá
+• Notkun á Windows Hello til að auðkenna forritið í ræsingu
+• Leyfa sjálfundirrituð SSL-skilríki
+• Birting á stærð á möppum í lista
+• Deiling skráa með forritinu
+• Notkun lykilorðageymslu til að geyma auðkenni notenda
+• Öryggisumbætur og villuviðgerðir
+• Nýtt og stöðugra WebDAV-aðgerðasafn</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Tengja á ræsispjald</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Tengja á ræsispjald</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Tengjast</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Hunsa ógild sjálfundirrituð SSL-skilríki</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Sérfræðingahamur</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Staða samstillingar</value>
@@ -462,67 +471,67 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Velja frekar fjartengda skrá</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Vottunaraðili skilríkis (CA) er ógildur eða ekki réttur. Tengjast samt?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Farðu varlega, þú verður ekki varinn fyrir Maður-í-miðjunni (mitm) árásum!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Aðvörun!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Það verður að endurræsa forritið</value>
+    <value>Til að þessar stillingar taki gildi, verður að endurræes forritið.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Ábending</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Listi yfir villur sem komu upp á meðan samstilling fór fram. Þetta ættu að vera tímabundin vandamál (t.d. skrá var opnuð af öðru forriti) og ættu yfirleytt að hverfa við næstu samstillingu.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Varaðu þig á árekstrum!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Hvorki staðværa né fjartengda mappan eru tómar. Þetta gæti valdið fjölda árekstra, því ómögulegt er að vita hvaða skrár eru þær réttu.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Samstilling hefur verið ræst!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Samstilling mun fara fram í bakgrunni. Þú munt fá tilkynningu þegar henni er lokið.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Þjónustan er tímabundið ekki tiltæk (venjulega vegna skammtíma viðhaldsvinnu).
+Prófaðu aftur síðar.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>Skrá breyttist bæði staðvært og fjartengt. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Skrá var útbúin bæði staðvært og fjartengt. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Eyddi skrá staðvært en fjartengda útgáfan breyttist. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Árekstur:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Eyddi fjartengdri skrá en staðværa útgáfan breyttist. Hvora útgáfuna viltu?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Samstillingu möppunnar {0} lauk með {1} breytingum og {2} villum eða árekstrum.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Samstillingu möppunnar {0} lauk með {1} breytingum.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Samstillingu er lokið</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Samstilling möppunnar {0} hefur verið sett í bið, því forritið hefur stöðvast.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Samstilling í biðstöðu</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>Staða samstillingar</value>
@@ -540,6 +549,60 @@ Please try again later.</value>
     <value>Möppur</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Atriði: {0} (möppur: {1} skrár: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Þegar sérfræðihamur er virkur, birtir forritið ýmsa aukaeiginleike/aukaupplýsingar, sem eru ekki endilega áhugaverðir fyrir alla notendur.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Hunsa ógild sjálfundirrituð SSL-skilríki. Þetta gerir kleift að nota ógilda eða ekki rétta vottunaraðila skilríkja (CA). Farðu varlega, þú verður ekki lengur varinn fyrir Maður-í-miðjunni (mitm) árásum!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Samstilla þessa möppu</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stöðva samstillingu á þessari möppu</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stöðva samstillingu</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Staða samstillingar</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Samstilla núna</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Samstilla</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Samstilla þessa möppu núna</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Samstilla þessa möppu</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dökkt</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Ljóst</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Kerfi</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Þema</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Deilt með öðrum</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Eftirlæti</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Deilt með mér</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
   </data>
 </root>

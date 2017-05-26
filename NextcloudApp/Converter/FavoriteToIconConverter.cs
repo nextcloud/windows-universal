@@ -1,20 +1,20 @@
-﻿using NextcloudApp.Services;
+﻿using NextcloudClient.Types;
 using System;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
 namespace NextcloudApp.Converter
 {
-    public class DeveloperModeToVisibilityConverter : IValueConverter
+    public class FavoriteToIconConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return SettingsService.Instance.LocalSettings.DeveloperMode ? Visibility.Visible : Visibility.Collapsed;
+            var item = (ResourceInfo)value;
+            return item.IsFavorite ? "\uE735" : "\uE734";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            return null;
+            return new ResourceInfo();
         }
     }
 }

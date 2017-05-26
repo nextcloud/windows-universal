@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Tamanho (maior no topo)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Tipo (A no topo)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Tipo (Z no topo)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erro de aplicativo</value>
   </data>
@@ -412,16 +418,16 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Mover arquivos e pastas
 • Renomear arquivos e pastas
-• Sincronizar pastas manualmente
-• Baixar diretórios como arquivos zip 
+• Sincronização manual de pastas
+• Baixar diretórios como arquivos zip
 • Selecionar múltiplos arquivos e pastas
-• Destacar arquivos e pastas na tela inicial
-• Usar autenticação Hello Windows ao iniciar o aplicativo
-• Permitir certificados SSL auto assinados
-• Mostrar tamanho de pastas na lista
-• Compartilhar arquivos com o aplicativo (compartilhar alvo)
-• Usar o PasswordVault para armazenar as credenciais do usuário
-• Melhoria na segurança &amp; correção de erros
+• Fixar arquivos e pastas na página inicial
+• Usar Windows Hello para autenticar-se no aplicativo
+• Permitir certificados SSL auto-assinados
+• Mostrar o tamanho das pastas na lista
+• Compartilhar arquivos com o aplicativo
+• Usar a carteira de senhas para armazenar credenciais de usuário
+• Melhorias na segurança &amp; correção de erros
 • Nova biblioteca WebDAV mais estável</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -434,7 +440,10 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Conectar</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificados SSL inválidas ou incorretas sejam usadas. Tenha cuidado, você não estará mais protegido dos ataques Man-in-the-middle (mitm)!</value>
+    <value>Ignore certificados SSL auto-assinados inválidos</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Modo avançado</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Status da sincronização</value>
@@ -469,13 +478,13 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Atenção!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>O aplicativo tem que ser reinicializado</value>
+    <value>Para esta configuração funcionar, o aplicativo deve ser reiniciado.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Deve ser problemas temporários (por ex. um arquivo sendo aberto por outro aplicativo) e isso deve ser resolvido após a próxima sincronização.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Devem ser problemas temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -539,6 +548,60 @@ Por favor tente mais tarde.</value>
     <value>Pastas</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Itens: {0} (pastas: {1} arquivos: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Quando o modo avançado está habilitado, o aplicativo fornece alguns recursos/informações adicionais os quais podem não ser interessantes a todos os usuários.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore certificados SSL auto-assinados inválidos. Isso permite que certificados SSL incorretos ou  inválidos sejam usados. Seja cuidadoso pois você não estará mais protegido de ataques Man-in-the-middle (mitm)!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sincronizar esta pasta</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Parar de sincronizar esta pasta</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Parar de sincronizar</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Status da sincronização</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Sincronizar agora</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Sincronizar esta pasta agora</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Sincronizar esta pasta</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Compartilhado com outros</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Compartilhado comigo</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
   </data>
 </root>

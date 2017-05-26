@@ -29,6 +29,17 @@ namespace NextcloudApp.Models
             Created = item.Created;
             QuotaUsed = item.QuotaUsed;
             QuotaAvailable = item.QuotaAvailable;
+            Id = item.Id;
+            FileId = item.FileId;
+            IsFavorite = item.IsFavorite;
+            CommentsHref = item.CommentsHref;
+            CommentsCount = item.CommentsCount;
+            CommentsUnread = item.CommentsUnread;
+            OwnderId = item.OwnderId;
+            OwnerDisplayName = item.OwnerDisplayName;
+            ShareTypes = item.ShareTypes;
+            Checksums = item.Checksums;
+            HasPreview = item.HasPreview;
         }
 
         public BitmapImage Thumbnail

@@ -213,6 +213,17 @@ namespace NextcloudApp
             ActivatedEventArgs = args;
             await base.OnActivateApplicationAsync(args);
 
+            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            switch (theme)
+            {
+                case Theme.Dark:
+                    RequestedTheme = ApplicationTheme.Dark;
+                    break;
+                case Theme.Light:
+                    RequestedTheme = ApplicationTheme.Light;
+                    break;
+            }
+
             // Remove unnecessary notifications whenever the app is used.
             ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
 

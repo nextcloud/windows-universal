@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Taille (ordre décroissant)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (ordre croissant)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (ordre décroissant)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erreur d&apos;application</value>
   </data>
@@ -420,7 +426,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
 • Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
 • Autoriser les certificats SSL auto-signés
 • Afficher la taille du fichier dans la liste
-• Partager des fichiers avec l&apos;application (partager la cible)
+• Partager des fichiers avec l&apos;application
 • Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
 • Améliorations de la sécurité &amp; corrections de bugs
 • Nouvelle bibliothèque WebDAV plus stable</value>
@@ -435,7 +441,10 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Connecter</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
+    <value>Ignorer les certificats SSL auto-signés non valides</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Mode Expert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Statut de synchronisation</value>
@@ -470,7 +479,7 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
     <value>Attention !</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>L&apos;application doit être redémarrée</value>
+    <value>Pour que ces paramètres prennent effet, l&apos;application doit être redémarrée.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indice</value>
@@ -540,6 +549,60 @@ Veuillez réessayer plus tard.</value>
     <value>Dossiers</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Eléments: {0} (dossiers: {1} fichiers: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Quand le mode expert est activé, l&apos;application fournit quelques fonctionnalités/informations supplémentaires, ce qui peut ne pas interesser tous les utilisateurs.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorer les certificats SSL auto-signés non valides. Cela permet d&apos;utiliser des autorités de certificat SSL invalides ou incorrectes. Soyez prudent, vous ne serez plus protégé des attaques Man-in-the-middle (mitm) !</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronisation ce dossier</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Arrêter de synchroniser ce dossier</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Arrêter la synchronisation</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Statut de synchronisation</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchroniser maintenant</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchroniser</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronisation ce dossier maintenant</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronisation ce dossier</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Clair</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Système</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Partagés avec d&apos;autres</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoris</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Partagés avec moi</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
   </data>
 </root>

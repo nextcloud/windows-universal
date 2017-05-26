@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Όλα τα αρχεία</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Πάντα</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Παρουσιάστηκε σφάλμα</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Προσθήκη</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Δημιουργία φακέλου</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Λήψη φωογραφίας</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Αποστολή αρχείων</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Αποστολή φωτογραφιών</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Λήψη</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Ανανέωση</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Ταξινόμηση</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Ημερομηνία (τα παλαιότερα στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Ημερομηνία (τα νεότερα στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Όνομα (Α στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Όνομα (Ω στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Μέγεθος (το μικρότερο στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Μέγεθος (το μεγαλύτερο στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Τύπος (Α στην κορυφή)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Τύπος (Ω στην κορυφή)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Σφάλμα εφαρμογής</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Άκυρο</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Αδυναμία δημιουργίας φακέλου</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Content-Type</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Δημιουργία</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Δημιουργήθηκε</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Δημιουργία νέου φακέλου</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Γίνεται λήψη του αρχείου...</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Λήψη προεπισκόπισης φωτογραφιών</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} byte)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Όνομα φακέλου</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Τελευταία τροποποίηση</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Όνομα</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Ποτέ</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Νέος φάκελος</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Δεν πιστοποιήθηκε</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Συνθηματικό</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Διαδρομή</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} of {1} used</value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Δοκιμή ξανά</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Διεύθυνση διακομιστή</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ρυθμίσεις</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Ρυθμίσεις</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Show file and folder list grouping</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Μέγεθος</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>There is already an element with this name. Specify a different name.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Τύπος</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Όνομα χρήστη</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Έκδοση {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Μόνο όταν έχω δίκτυο Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ναι</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Διαγραφή αρχείου</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Σίγουρα θέλετε να διαγράψετε το αρχείο {0} ;</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Διαγραφή φακέλου</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the folder {0}</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{0} από {1} μεταφορτώθηκαν </value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Μεταφόρτωση αρχείου {0} από {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Μεταφόρτωση του αρχείου...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>Λήφθησαν {0} από {1}</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Ενεργοποιήθηκε η κατάσταση συντήρησης σε αυτόν τον διακομιστή.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Εσφαλμένο όνομα χρήστη ή συνθηματικό.</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Έκδοση πελάτη {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>The server name or address could not be resolved.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Έκδοση διακομιστή {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Διαγραφή</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>αναμονή απάντησης διακομιστή</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Παρακαλούμε επιλέξτε νέο όνομα</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Μετονομασία</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Μετονομασία</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Μετονομασία</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Μετακίνηση σε</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Μετακίνηση σε</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Άκυρο</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Ολοκληρώθηκε</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Επιλογή φακέλου</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>The server with the address {0} is not reachable.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Λήψη ως αρχείο ZIP</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} λήφθηκαν</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello authentication</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Λήψη</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Απαιτείται είσοδος</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Δοκιμή ξανά</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud για Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Η εφαρμογή σας ενημερώθηκε στην έκδοση {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>New features and improvements in this version:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Recommend</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Ενημέρωση</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Καρφίτσωμα στην αρχή</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Σύνδεση</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Κατάσταση συγχρονισμού</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Ιστορικό</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Διενέξεις</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Σφάλματα</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Συγχρονισμός</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Προτιμώμενο τοπικό αρχείο</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Εκκαθάριση ιστορικού συγχρονισμού</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Προτιμώμενο απομαρυσμένο αρχείο</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Προσοχή!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>For this settings to take effect, the app needs to be restarted.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Συμβουλή</value>
+  </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Προσοχή στις διενέξεις!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Το αρχείο διαγράφηκε τοπικά αλλά αλλάχτηκε απομακρυσμένα. Ποιο προτιμάτε;</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Διένεξη:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Ολοκληρώθηκε ο συγχρονισμός του φακέλου {0} με {1} αλλαγές και {2} σφάλματα ή διενέξεις.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Ο συγχρονισμός του φακέλου {0} τελείωσε με {1} αλλαγές.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Ο συγχρονισμός τελείωσε</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Κατάσταση συγχρονισμού</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Τοπική διαδρομή:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Διαδρομή Nextcloud:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Φάκελοι</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Αντικείμενα: {0} (φάκελοι: {1} αρχεία: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Συγχρονισμός αυτού του φακέλου</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Διακοπή συγχρονισμού αυτού του φακέλου</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Διακοπή συγχρονισμού</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Κατάσταση συγχρονισμού</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Συγχρονισμός τώρα</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Συγχρονισμός</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Συγχρονισμός αυτού του φακέλου τώρα</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Συγχρονισμός φακέλου</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Σκούρο</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Φωτεινό</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Σύστημα</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Θέμα</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Διαμοιρασμένα με άλλους</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Αγαπημένα</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Διαμοιρασμένα με εμένα</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
+  </data>
+</root>
