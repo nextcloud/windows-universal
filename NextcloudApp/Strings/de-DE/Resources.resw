@@ -603,6 +603,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Geteilt mit mir</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Geteilt über einen Link</value>
+    <value>Shared via link</value>
   </data>
 </root>

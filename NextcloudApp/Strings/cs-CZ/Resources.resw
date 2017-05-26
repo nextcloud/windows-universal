@@ -169,10 +169,10 @@
     <value>Velikost (největší nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Typ (A nahoru)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Typ (Z nahoru)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Chyba aplikace</value>
@@ -477,13 +477,13 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
     <value>Pozor!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Aby se toto nastavení projevilo, aplikace musí být restartována.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Nápověda</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Seznam chyb, které vznikly při synchronizaci. Mělo by se jednat o dočasné problémy (např. soubor byl otevřen jinou aplikací), které by měli zmizet při příští synchronizaci.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Pozor na konflikty!</value>
@@ -553,7 +553,7 @@ Prosím zkuste to znovu později.</value>
     <value>Pokud je povolen režim pro experty, aplikace poskytuje některé vlastnosti a informace, které nemusí být zajímavé pro všechny uživatele.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignoovat neplatné SSL certifikáty podepsané sám sebou. To dovolí použití neplatných, nebo nekoretních SSL certifikačních autorit. Upozornění, poté nebudete chráněni proti MITM útokům!</value>
+    <value>Ignorovat neplatné SSL certifikáty podepsané sám sebou. To dovolí použití neplatných, nebo nekorektních SSL certifikačních autorit. Upozornění, poté nebudete chráněni proti Man-in-the-middle (MITM) útokům!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizovat tuto složku</value>
@@ -565,42 +565,42 @@ Prosím zkuste to znovu později.</value>
     <value>Zastavit synchronizaci</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Stav synchronizace</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Synchronizovat nyní</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Synchronizovat</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Synchronizovat tuto složku nyní</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synchronizovat tuto složku</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Dark</value>
+    <value>Tmavé</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Light</value>
+    <value>Svétlé</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+    <value>Systém</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Vzhled</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Sdíleno s ostatními</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Oblíbené</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Sdíleno s vámi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared over a Link</value>
+    <value>Shared via link</value>
   </data>
 </root>

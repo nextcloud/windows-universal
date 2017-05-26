@@ -603,6 +603,6 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Benimle paylaşılmış</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Bağlantı ile paylaşılmış</value>
+    <value>Shared via link</value>
   </data>
 </root>
