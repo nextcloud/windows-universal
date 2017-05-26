@@ -168,6 +168,9 @@
     <Compile Include="Services\ToastNotificationService.cs" />
     <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
+    <Compile Include="ShareTarget.xaml.cs">
+      <DependentUpon>ShareTarget.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DebugTraceListener.cs" />
     <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
     <Compile Include="Utils\GroupMode.cs" />
@@ -278,6 +281,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShareTarget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
