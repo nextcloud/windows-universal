@@ -602,6 +602,6 @@ Descargar directorios como un arhivo .zip
     <value>Compartido conmigo</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Compartido por liga</value>
   </data>
 </root>

@@ -602,6 +602,6 @@ Por favor tente mais tarde.</value>
     <value>Compartilhado comigo</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Compartilhado via link</value>
   </data>
 </root>
