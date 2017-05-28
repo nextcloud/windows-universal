@@ -23,7 +23,7 @@ namespace NextcloudApp.ViewModels
     {
         private LocalSettings _settings;
         private DirectoryService _directoryService;
-        private TileService _tileService;
+        private readonly TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
         private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;

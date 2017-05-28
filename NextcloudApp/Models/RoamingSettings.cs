@@ -48,12 +48,12 @@ namespace NextcloudApp.Models
         public void Reset()
         {
             // Do not raise PropertyChanged event when resetting.
-            this.enableRaisePropertyChanged = false;
+            EnableRaisePropertyChanged = false;
 
             //  Assign default values to your settings here.
             Theme = Theme.System;
 
-            this.enableRaisePropertyChanged = true;
+            EnableRaisePropertyChanged = true;
         }
     }
 }

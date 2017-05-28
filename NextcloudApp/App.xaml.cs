@@ -10,6 +10,7 @@ using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.Security.Credentials;
+using Windows.Storage.AccessCache;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
@@ -21,7 +22,9 @@ using NextcloudClient.Types;
 using Prism.Windows.Mvvm;
 using Microsoft.QueryStringDotNET;
 using Windows.UI.Notifications;
-using System.Diagnostics;
+using Windows.Foundation.Collections;
+using Windows.System;
+using Windows.Storage;
 
 namespace NextcloudApp
 {
@@ -36,15 +39,23 @@ namespace NextcloudApp
         /// </summary>
         public App()
         {
-            InitializeComponent();
             UnhandledException += OnUnhandledException;
+            TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+            InitializeComponent();
+        }
 
-            var theme = SettingsService.Instance.RoamingSettings.Theme;
+        public IActivatedEventArgs ActivatedEventArgs { get; private set; }
 
-            if (theme == Theme.Dark)
-                RequestedTheme = ApplicationTheme.Dark;
-            else if (theme == Theme.Light)
-                RequestedTheme = ApplicationTheme.Light;
+        private async void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs args)
+        {
+            var exceptionStackTrace = args.Exception.StackTrace;
+            var
+                exceptionHashCode = string.IsNullOrEmpty(exceptionStackTrace)
+                    ? args.Exception.GetHashCode().ToString()
+                    : exceptionStackTrace.GetHashCode().ToString();
+            await
+                ExceptionReportService.Handle(args.Exception.GetType().ToString(), args.Exception.Message,
+                    exceptionStackTrace, args.Exception.InnerException.GetType().ToString(), exceptionHashCode);
         }
 
         private async void OnUnhandledException(object sender, UnhandledExceptionEventArgs args)
@@ -56,12 +67,10 @@ namespace NextcloudApp
             }
             // ReSharper disable once EmptyGeneralCatchClause
             catch { }
-
             var exceptionMessage = args.Message;
             var exceptionType = string.Empty;
             var innerExceptionType = string.Empty;
             var exceptionHashCode = string.Empty;
-
             if (args.Exception != null)
             {
                 // Tasks will throw a canceled exception if they get canceled
@@ -93,14 +102,12 @@ namespace NextcloudApp
                     ResponseErrorHandlerService.HandleException((ResponseError)args.Exception);
                     return;
                 }
-
                 // 0x8000000B, E_BOUNDS, System.Exception, OutOfBoundsException
                 if ((uint)args.Exception.HResult == 0x80004004)
                 {
                     args.Handled = true;
                     return;
                 }
-
                 // 0x80072EE7, ERROR_WINHTTP_NAME_NOT_RESOLVED, The server name or address could not be resolved
                 if ((uint)args.Exception.HResult == 0x80072EE7)
                 {
@@ -121,7 +128,6 @@ namespace NextcloudApp
                     await dialogService.ShowAsync(dialog);
                     return;
                 }
-
                 exceptionType = args.Exception.GetType().ToString();
                 if (args.Exception.InnerException != null)
                 {
@@ -131,7 +137,6 @@ namespace NextcloudApp
                     ? args.Exception.GetHashCode().ToString()
                     : exceptionStackTrace.GetHashCode().ToString();
             }
-
             if (args.Handled)
             {
                 return;
@@ -149,12 +154,160 @@ namespace NextcloudApp
             return shell;
         }
 
+        protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
+        {
+            base.OnShareTargetActivated(args);
+
+            OnShareTargetActivatedsyncAsync(args);
+        }
+
+        private async void OnShareTargetActivatedsyncAsync(ShareTargetActivatedEventArgs args)
+        {
+            var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
+            StorageApplicationPermissions.FutureAccessList.Clear();
+            args.ShareOperation.ReportDataRetrieved();
+
+            var frame = new Frame();
+            frame.Navigate(typeof(ShareTarget), null);
+            Window.Current.Content = frame;
+            Window.Current.Activate();
+
+            var options = new LauncherOptions()
+            {
+                TargetApplicationPackageFamilyName = Package.Current.Id.FamilyName,
+                DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseNone
+            };
+
+            var inputData = new ValueSet
+            {
+                { "FileTokens", (from storageItem in sorageItems where storageItem.IsOfType(StorageItemTypes.File) select StorageApplicationPermissions.FutureAccessList.Add(storageItem)).ToArray() }
+            };
+            var uri = new Uri("nextcloud:///share");
+
+            await Launcher.LaunchUriAsync(uri, options, inputData);
+
+            args.ShareOperation.ReportCompleted();
+        }
+
+        //TODO: Find out, why this is not working on WP10
+        //SEE: https://github.com/nextcloud/windows-universal/issues/32
+        //protected override void OnFileSavePickerActivated(FileSavePickerActivatedEventArgs args)
+        //{
+        //    base.OnFileSavePickerActivated(args);
+        //    OnActivated(args);
+        //}
+        //protected override void OnCachedFileUpdaterActivated(CachedFileUpdaterActivatedEventArgs args)
+        //{
+        //    base.OnCachedFileUpdaterActivated(args);
+        //    OnActivated(args);
+        //}
+
+        protected override void OnFileActivated(FileActivatedEventArgs args)
+        {
+            base.OnFileActivated(args);
+            OnActivated(args);
+        }
+
+        protected override async Task OnActivateApplicationAsync(IActivatedEventArgs args)
+        {
+            ActivatedEventArgs = args;
+            await base.OnActivateApplicationAsync(args);
+
+            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            switch (theme)
+            {
+                case Theme.Dark:
+                    RequestedTheme = ApplicationTheme.Dark;
+                    break;
+                case Theme.Light:
+                    RequestedTheme = ApplicationTheme.Light;
+                    break;
+            }
+
+            // Remove unnecessary notifications whenever the app is used.
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+
+            // Handle toast activation
+            var eventArgs = args as ToastNotificationActivatedEventArgs;
+            if (eventArgs != null)
+            {
+                var toastActivationArgs = eventArgs;
+                // Parse the query string
+                var query = QueryString.Parse(toastActivationArgs.Argument);
+                // See what action is being requested 
+                switch (query["action"])
+                {
+                    // Nothing to do here
+                    case ToastNotificationService.SYNCACTION:
+                        NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
+                        break;
+                    // Open Conflict Page
+                    case ToastNotificationService.SYNCONFLICTACTION:
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
+                        NavigationService.Navigate(PageToken.SyncConflict.ToString(), null);
+                        break;
+                }
+            }
+            else switch (args.Kind)
+            {
+                case ActivationKind.Protocol:
+                    var protocolArgs = args as ProtocolActivatedEventArgs;
+
+                    if (protocolArgs != null && protocolArgs.Uri.AbsolutePath == "/share")
+                    {
+                        var pageParameters = new ShareTargetPageParameters()
+                        {
+                            ActivationKind = ActivationKind.ShareTarget,
+                            FileTokens = new List<string>()
+                        };
+
+                        if (protocolArgs.Data.ContainsKey("FileTokens"))
+                        {
+                            var tokens = protocolArgs.Data["FileTokens"] as string[];
+                            if (tokens != null)
+                            {
+                                foreach (var token in tokens)
+                                {
+                                    pageParameters.FileTokens.Add(token);
+                                }
+                            }
+                        }
+
+                        CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
+                    }
+                    break;
+                case ActivationKind.FileSavePicker:
+                case ActivationKind.CachedFileUpdater:
+                    CheckSettingsAndContinue(PageToken.FileSavePicker, null);
+                    break;
+                case ActivationKind.File:
+                    if (args is FileActivatedEventArgs activatedEventArgs)
+                    {
+                        var sorageItems = activatedEventArgs.Files;
+                        var pageParameters = new ShareTargetPageParameters()
+                        {
+                            //ShareOperation = activatedEventArgs.ShareOperation,
+                            ActivationKind = ActivationKind.ShareTarget,
+                            FileTokens = new List<string>()
+                        };
+                        StorageApplicationPermissions.FutureAccessList.Clear();
+                        foreach (var storageItem in sorageItems)
+                        {
+                            var token = StorageApplicationPermissions.FutureAccessList.Add(storageItem);
+                            pageParameters.FileTokens.Add(token);
+                        }
+                        CheckSettingsAndContinue(PageToken.ShareTarget, pageParameters);
+                    }
+                    break;
+            }
+        }
+
         protected override Task OnSuspendingApplicationAsync()
         {
             var task = base.OnSuspendingApplicationAsync();
             // Stop Background Sync Tasks
             List<FolderSyncInfo> activeSyncs = SyncDbUtils.GetActiveSyncInfos();
-            foreach(var fsi in activeSyncs)
+            foreach (var fsi in activeSyncs)
             {
                 ToastNotificationService.ShowSyncSuspendedNotification(fsi);
                 SyncDbUtils.UnlockFolderSyncInfo(fsi);
@@ -166,14 +319,10 @@ namespace NextcloudApp
         {
             Container.RegisterInstance(new DialogService());
             Container.RegisterInstance<IResourceLoader>(new ResourceLoaderAdapter(new ResourceLoader()));
-
             var task = base.OnInitializeAsync(args);
-
             DeviceGestureService.GoBackRequested += DeviceGestureServiceOnGoBackRequested;
-
             // Just count total app starts
             SettingsService.Instance.LocalSettings.AppTotalRuns = SettingsService.Instance.LocalSettings.AppTotalRuns + 1;
-
             // Count app starts after last update
             var currentVersion =
                 $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
@@ -187,13 +336,41 @@ namespace NextcloudApp
                 SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
                 SettingsService.Instance.LocalSettings.ShowUpdateMessage = true;
             }
-
             MigrationService.Instance.StartMigration();
-
             return task;
         }
 
         protected override Task OnLaunchApplicationAsync(LaunchActivatedEventArgs args)
+        {
+            // Ensure the current window is active
+            Window.Current.Activate();
+            // Remove unnecessary notifications whenever the app is used.
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            PinStartPageParameters pageParameters = null;
+            if (!string.IsNullOrEmpty(args?.Arguments))
+            {
+                var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
+                if (tmpResourceInfo != null)
+                {
+                    pageParameters = new PinStartPageParameters()
+                    {
+                        ResourceInfo = tmpResourceInfo,
+                        PageTarget = tmpResourceInfo.IsDirectory ? PageToken.DirectoryList : PageToken.FileInfo
+                    };
+                }
+            }
+            if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+            {
+                CheckSettingsAndContinue(PageToken.Verification, pageParameters);
+            }
+            else
+            {
+                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, pageParameters);
+            }
+            return Task.FromResult(true);
+        }
+
+        private void CheckSettingsAndContinue(PageToken requestedPage, IPageParameters pageParameters)
         {
             if (
                 string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
@@ -205,7 +382,6 @@ namespace NextcloudApp
             else
             {
                 var vault = new PasswordVault();
-
                 IReadOnlyList<PasswordCredential> credentialList = null;
                 try
                 {
@@ -215,91 +391,30 @@ namespace NextcloudApp
                 {
                     // ignored
                 }
-                var credential = credentialList.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
-
+                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
                 if (credential != null)
                 {
                     credential.RetrievePassword();
                     if (!string.IsNullOrEmpty(credential.Password))
                     {
-                        // Remove unnecessary notifications whenever the app is used.
-                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
-                        PinStartPageParameters pageParameters = null;
-                        if (!string.IsNullOrEmpty(args.Arguments))
-                        {
-                            var tmpResourceInfo = JsonConvert.DeserializeObject<ResourceInfo>(args.Arguments);
-                            if (tmpResourceInfo != null)
-                            {
-                                pageParameters = new PinStartPageParameters()
-                                {
-                                    ResourceInfo = tmpResourceInfo,
-                                    PageTarget = tmpResourceInfo.IsDirectory ? PageToken.DirectoryList : PageToken.FileInfo
-                                };
-
-                            }
-                        }
-
-                        if (SettingsService.Instance.LocalSettings.UseWindowsHello)
-                        {
-                            NavigationService.Navigate(
-                                PageToken.Verification.ToString(),
-                                pageParameters?.Serialize());
-                        }
-                        else
-                        {
-                            NavigationService.Navigate(
-                                pageParameters != null ? pageParameters.PageTarget.ToString() : PageToken.DirectoryList.ToString(), 
-                                pageParameters?.Serialize());
-                        }
+                        NavigationService.Navigate(requestedPage.ToString(), pageParameters?.Serialize());
                     }
                     else
                     {
                         NavigationService.Navigate(
-                            PageToken.Login.ToString(), 
+                            PageToken.Login.ToString(),
                             null);
                     }
                 }
                 else
                 {
                     NavigationService.Navigate(
-                        PageToken.Login.ToString(), 
+                        PageToken.Login.ToString(),
                         null);
                 }
             }
-
             // Ensure the current window is active
             Window.Current.Activate();
-            
-            return Task.FromResult(true);
-        }
-
-        protected override Task OnActivateApplicationAsync(IActivatedEventArgs e)
-        {
-            // Remove unnecessary notifications whenever the app is used.
-            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
-            // Handle toast activation
-            if (e is ToastNotificationActivatedEventArgs)
-            {
-                var toastActivationArgs = e as ToastNotificationActivatedEventArgs;
-                // Parse the query string
-                QueryString args = QueryString.Parse(toastActivationArgs.Argument);
-                // See what action is being requested 
-                switch (args["action"])
-                {
-                    // Nothing to do here
-                    case ToastNotificationService.SYNCACTION:
-                        NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
-                        break;
-                    // Open Status Page
-                    case ToastNotificationService.SYNCONFLICTACTION:
-                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
-                        NavigationService.Navigate(PageToken.SyncStatus.ToString(), null);
-                        break;
-                }
-            }
-            // Ensure the current window is active
-            Window.Current.Activate();
-            return Task.FromResult(true);
         }
 
         private void DeviceGestureServiceOnGoBackRequested(object sender, DeviceGestureEventArgs e)

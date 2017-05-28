@@ -101,7 +101,6 @@
     <None Include="Strings\.tx\config" />
     <PRIResource Include="Strings\cs-CZ\Resources.resw" />
     <PRIResource Include="Strings\ca\Resources.resw" />
-    <PRIResource Include="Strings\bg-BG\Resources.resw" />
     <PRIResource Include="Strings\zh-CN\Resources.resw" />
     <PRIResource Include="Strings\tr\Resources.resw" />
     <PRIResource Include="Strings\pt-BR\Resources.resw" />
@@ -150,6 +149,7 @@
     <Compile Include="Converter\SyncInfoStoragePathConverter.cs" />
     <Compile Include="Models\ConflictSolution.cs" />
     <Compile Include="Models\FolderSyncInfo.cs" />
+    <Compile Include="Models\IPageParameters.cs" />
     <Compile Include="Models\MoveFileOrFolderPageParameters.cs" />
     <Compile Include="Models\PageParameters.cs" />
     <Compile Include="Models\PinStartPageParameters.cs" />
@@ -158,6 +158,7 @@
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
     <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
+    <Compile Include="Models\ShareTargetPageParameters.cs" />
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
@@ -172,9 +173,13 @@
     <Compile Include="Services\ToastNotificationService.cs" />
     <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
-    <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
-    <Compile Include="Utils\ObservableSettings.cs" />
+    <Compile Include="ShareTarget.xaml.cs">
+      <DependentUpon>ShareTarget.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\DebugTraceListener.cs" />
+    <Compile Include="Utils\DefaultSettingValueAttribute.cs" />
+    <Compile Include="Utils\GroupMode.cs" />
+    <Compile Include="Utils\ObservableSettings.cs" />
     <Compile Include="Services\TileService.cs" />
     <Compile Include="Utils\PreviewImageDownloadMode.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
@@ -187,8 +192,8 @@
     <Compile Include="Converter\ContentTypeToIconConverter.cs" />
     <Compile Include="Converter\DateTimeToStringConverter.cs" />
     <Compile Include="Models\FileOrFolder.cs" />
-    <Compile Include="Models\LocalSettings.cs" />
     <Compile Include="Models\PathInfo.cs" />
+    <Compile Include="Models\LocalSettings.cs" />
     <Compile Include="PageToken.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Services\LocalizationService.cs" />
@@ -199,8 +204,6 @@
     <Compile Include="Utils\DateSorter.cs" />
     <Compile Include="Utils\NameSorter.cs" />
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
-    <Compile Include="Utils\SyncDbUtils.cs" />
-    <Compile Include="Utils\GroupMode.cs" />
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="Utils\Theme.cs" />
@@ -208,12 +211,15 @@
     <Compile Include="ViewModels\SharesInPageViewModel.cs" />
     <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
     <Compile Include="ViewModels\FavoritesPageViewModel.cs" />
+    <Compile Include="Utils\SyncDbUtils.cs" />
+    <Compile Include="ViewModels\FileSavePickerPageViewModel.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\FileDownloadPageViewModel.cs" />
     <Compile Include="ViewModels\FileInfoPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\DirectoryListPageViewModel.cs" />
+    <Compile Include="ViewModels\ShareTargetPageViewModel.cs" />
     <Compile Include="ViewModels\SyncStatusPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
@@ -228,6 +234,9 @@
     </Compile>
     <Compile Include="Views\FavoritesPage.xaml.cs">
       <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FileSavePickerPage.xaml.cs">
+      <DependentUpon>FileSavePickerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
@@ -257,6 +266,9 @@
     <Compile Include="Views\MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ShareTargetPage.xaml.cs">
+      <DependentUpon>ShareTargetPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SyncStatusPage.xaml.cs">
       <DependentUpon>SyncStatusPage.xaml</DependentUpon>
     </Compile>
@@ -275,6 +287,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\Square44x44Logo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -290,6 +303,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShareTarget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -309,6 +326,10 @@
     <Page Include="Themes\SplitViewStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileSavePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\FileUploadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -358,6 +379,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ShareTargetPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\SyncStatusPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -375,6 +400,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="SampleData\" />
+    <Folder Include="Strings\bg-BG\" />
     <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>
@@ -388,10 +415,20 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
   <PropertyGroup>
     <SkipValidatePackageReferences>true</SkipValidatePackageReferences>
   </PropertyGroup>

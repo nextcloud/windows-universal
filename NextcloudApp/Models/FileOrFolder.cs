@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Imaging;
 using NextcloudApp.Annotations;
 using NextcloudClient.Types;
@@ -9,6 +11,12 @@ namespace NextcloudApp.Models
     public class FileOrFolder : ResourceInfo, INotifyPropertyChanged
     {
         private BitmapImage _thumbnail;
+        //private CoreDispatcher _dispatcher;
+
+        public FileOrFolder()
+        {
+            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+        }
 
         public FileOrFolder(ResourceInfo item)
         {
@@ -54,6 +62,21 @@ namespace NextcloudApp.Models
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+            //await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            //{
+            //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //});
+
+            //await Task.Factory.StartNew(
+            //    () =>
+            //    {
+            //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            //    }, 
+            //    CancellationToken.None, 
+            //    TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+            //    TaskScheduler.Default
+            //).ConfigureAwait(false);
         }
     }
 }

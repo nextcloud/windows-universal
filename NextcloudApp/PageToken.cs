@@ -14,6 +14,9 @@
         FileUpload,
         MoveFileOrFolder,
         Verification,
+        ShareTarget,
+        FileSavePicker,
+        SyncConflict,
         SyncStatus
     }
 }

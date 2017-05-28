@@ -605,4 +605,7 @@ Please try again later.</value>
   <data name="SharingLink" xml:space="preserve">
     <value>Shared via link</value>
   </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
+  </data>
 </root>

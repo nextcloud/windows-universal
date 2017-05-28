@@ -2,7 +2,7 @@
 
 namespace NextcloudApp.Models
 {
-    public class PageParameters<T> where T : class
+    public class PageParameters<T> : IPageParameters where T : class
     {
         public string Serialize()
         {

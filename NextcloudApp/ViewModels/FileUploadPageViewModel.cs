@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
-using Windows.ApplicationModel.Core;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Activation;
 using Windows.Storage;
+using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
+using Windows.System.Display;
 using Windows.UI.Core;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
@@ -12,6 +16,7 @@ using NextcloudApp.Services;
 using NextcloudClient.Exceptions;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
+using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using DecaTec.WebDav;
 using System.IO;
@@ -33,6 +38,8 @@ namespace NextcloudApp.ViewModels
         private CancellationTokenSource _cts;
         private StorageFile _currentFile;
         private bool _waitingForServerResponse;
+        private readonly CoreDispatcher _dispatcher;
+        private DisplayRequest _displayRequest;
 
         public FileUploadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -40,6 +47,13 @@ namespace NextcloudApp.ViewModels
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
             _converter = new BytesToHumanReadableConverter();
+
+            // See: http://csharperimage.jeremylikness.com/2013/06/mvvm-and-accessing-ui-thread-in-windows.html
+            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+            {
+                return;
+            }
+            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public string UploadingFilesTitle
@@ -57,23 +71,33 @@ namespace NextcloudApp.ViewModels
         public override async void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
             base.OnNavigatingFrom(e, viewModelState, suspending);
-            if (!suspending)
-            {
-                // Let Windows know that we're finished changing the file so
-                // the other app can update the remote version of the file.
-                // Completing updates may require Windows to ask for user input.
-                if (_currentFile != null)
-                {
-                    await CachedFileManager.CompleteUpdatesAsync(_currentFile);
-                }
 
-                _cts?.Cancel();
+            // release the disblay keep active lock
+            _displayRequest.RequestRelease();
+
+            if (suspending)
+            {
+                return;
             }
+
+            // Let Windows know that we're finished changing the file so
+            // the other app can update the remote version of the file.
+            // Completing updates may require Windows to ask for user input.
+            if (_currentFile != null)
+            {
+                await CachedFileManager.CompleteUpdatesAsync(_currentFile);
+            }
+
+            _cts?.Cancel();
         }
 
         public override async void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
+
+            // keep the display enabled while uploading
+            _displayRequest = new DisplayRequest();
+            _displayRequest.RequestActive();
 
             var client = await ClientService.GetClient();
             if (client == null)
@@ -89,37 +113,75 @@ namespace NextcloudApp.ViewModels
                 return;
             }
             ResourceInfo = resourceInfo;
-            SuggestedStartLocation = parameters.PickerLocationId;
-            UploadingFilesTitle = null;
-            UploadingFileProgressText = null;
-            var i = 0;
 
-            var openPicker = new FileOpenPicker
+            IReadOnlyList<StorageFile> storageFiles = null;
+
+            ActivationKind = parameters.ActivationKind;
+
+            if (parameters.FileTokens != null && parameters.FileTokens.Any())
             {
-                SuggestedStartLocation = SuggestedStartLocation
-            };
-            openPicker.FileTypeFilter.Add("*");
-            var storageFiles = await openPicker.PickMultipleFilesAsync();
+                storageFiles = new List<StorageFile>();
+                foreach (var token in parameters.FileTokens)
+                {
+                    ((List<StorageFile>) storageFiles).Add(
+                        await StorageApplicationPermissions.FutureAccessList.GetFileAsync(token));
+                }
+                StorageApplicationPermissions.FutureAccessList.Clear();
+            }
 
+            if (storageFiles == null || !storageFiles.Any())
+            {
+                SuggestedStartLocation = parameters.PickerLocationId;
+
+                var openPicker = new FileOpenPicker
+                {
+                    SuggestedStartLocation = SuggestedStartLocation
+                };
+                openPicker.FileTypeFilter.Add("*");
+                storageFiles = await openPicker.PickMultipleFilesAsync();
+            }
+            
+            await OnUiThread(() =>
+            {
+                UploadingFilesTitle = null;
+                UploadingFileProgressText = null;
+            });
+
+            var i = 0;
             foreach (var localFile in storageFiles)
             {
                 _currentFile = localFile;
 
-                // Prevent updates to the remote version of the file until
-                // we finish making changes and call CompleteUpdatesAsync.
-                CachedFileManager.DeferUpdates(localFile);
-
                 if (storageFiles.Count > 1)
                 {
-                    UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i, storageFiles.Count);
+                    await OnUiThread(() =>
+                    {
+                        UploadingFilesTitle = string.Format(_resourceLoader.GetString("UploadingFiles"), ++i,
+                            storageFiles.Count);
+                    });
                 }
 
                 try
                 {
                     var properties = await localFile.GetBasicPropertiesAsync();
-                    BytesTotal = (long) properties.Size;
 
-                    using (var stream = await localFile.OpenAsync(FileAccessMode.Read))
+                    await OnUiThread(() =>
+                    {
+                        BytesSend = 0;
+                        BytesTotal = (long) properties.Size;
+                    });
+
+                    // this moves the OpenReadAsync off of the UI thread and works fine...
+                    using (
+                        var stream = (
+                            await Task.Factory.StartNew(
+                                async () => await localFile.OpenReadAsync(),
+                                CancellationToken.None,
+                                TaskCreationOptions.DenyChildAttach | TaskCreationOptions.HideScheduler,
+                                TaskScheduler.Default
+                            ).ConfigureAwait(false)
+                        ).Result
+                    )
                     {
                         var targetStream = stream.AsStreamForRead();
 
@@ -131,23 +193,40 @@ namespace NextcloudApp.ViewModels
                 {
                     ResponseErrorHandlerService.HandleException(e2);
                 }
-
-                // Let Windows know that we're finished changing the file so
-                // the other app can update the remote version of the file.
-                // Completing updates may require Windows to ask for user input.
-                await CachedFileManager.CompleteUpdatesAsync(localFile);
-
-                UploadingFileProgressText = null;
+                
+                await OnUiThread(() =>
+                {
+                    UploadingFileProgressText = null;
+                });
 
             }
-            _navigationService.GoBack();
+
+            // release the disblay keep active lock
+            await OnUiThread(() =>
+            {
+                _displayRequest.RequestRelease();
+            });
+
+            if (ActivationKind == ActivationKind.ShareTarget)
+            {
+                PrismUnityApplication.Current.Exit();
+            }
+            else
+            {
+                await OnUiThread(() =>
+                {
+                    _navigationService.GoBack();
+                });
+            }
         }
+        
+        public ActivationKind ActivationKind { get; private set; }
 
         private PickerLocationId SuggestedStartLocation { get; set; }
 
         private async void ProgressHandler(WebDavProgress progressInfo)
         {
-            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            await OnUiThread(() =>
             {
                 BytesTotal = (long)progressInfo.TotalBytes;
                 BytesSend = (int)progressInfo.Bytes;
@@ -199,16 +278,21 @@ namespace NextcloudApp.ViewModels
 
         private void Update()
         {
-            var percentage = (double)BytesSend / BytesTotal;
-            PercentageUploaded = (int)(percentage * 100);
+            var percentage = (double) BytesSend/BytesTotal;
+            PercentageUploaded = (int) (percentage*100);
 
             UploadingFileProgressText = string.Format(
-            _resourceLoader.GetString("UploadingFileProgress"),
-            _converter.Convert((long)BytesSend, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString()),
-            _converter.Convert(BytesTotal, typeof(string), null,
-                CultureInfo.CurrentCulture.ToString())
-            );
+                _resourceLoader.GetString("UploadingFileProgress"),
+                _converter.Convert((long) BytesSend, typeof(string), null,
+                    CultureInfo.CurrentCulture.ToString()),
+                _converter.Convert(BytesTotal, typeof(string), null,
+                    CultureInfo.CurrentCulture.ToString())
+                );
+        }
+
+        private async Task OnUiThread(Action action)
+        {
+            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
         }
     }
 }
