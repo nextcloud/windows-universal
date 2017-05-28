@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Размер (по убыванию)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Тип (по возрастанию)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Тип (по убыванию)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Ошибка приложения</value>
   </data>
@@ -416,13 +422,13 @@
 • Ручная сихнронизация каталогов
 • Загрузка каталогов в виде zip-файла 
 • Выбор множества файлов и каталогов
-• Закрепление файлоы или каталогов на начальном экране
+• Закрепление файлов или каталогов на начальном экране
 • Использование Windows Hello для аутентификации при запуске приложения
 • Поддержка самоподписанных сертификатов SSL
 • Показ размера каталога в списке
 • Открытие общего доступа при помощи приложения
 • Использование PasswordVault для хранения пользовательских реквизитов
-• Улушения безопасности и исправления ошибок
+• Улучшения безопасности и исправления ошибок
 • Новая и более стабильная библиотека WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -435,7 +441,10 @@
     <value>Подключиться</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
+    <value>Игнорирование недейстаительности самоподписанных SSL-сертификатов.</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Экспертный режим</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Состояние синхронизации</value>
@@ -470,7 +479,7 @@
     <value>Внимание!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Приложение должно быть перезапущено</value>
+    <value>Чтобы эти настройки вступили в силу, приложение необходимо перезапустить.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
@@ -540,6 +549,60 @@
     <value>Каталоги</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Элементов: {0} (каталогов: {1} файлов: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Когда экспертный режим включен, приложение предоставляет некоторые дополнительные функции / сведения, которые могут быть не интересны для всех пользователей.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Игноририрование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Синхронизировать этот каталог</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Остановить синхронизацию этого каталога</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Остановить синхронизацию</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Состояние синхронизации</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Синхронизировать сейчас</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Синхронизировать</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Синхронизировать этот каталог сейчас</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Синхронизировать этот каталог</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Тёмная</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Системная</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Доступные для других</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Избранное</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Поделились с вами</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Доступ по ссылке</value>
   </data>
 </root>

@@ -38,6 +38,13 @@ namespace NextcloudApp
         {
             InitializeComponent();
             UnhandledException += OnUnhandledException;
+
+            var theme = SettingsService.Instance.RoamingSettings.Theme;
+
+            if (theme == Theme.Dark)
+                RequestedTheme = ApplicationTheme.Dark;
+            else if (theme == Theme.Light)
+                RequestedTheme = ApplicationTheme.Light;
         }
 
         private async void OnUnhandledException(object sender, UnhandledExceptionEventArgs args)

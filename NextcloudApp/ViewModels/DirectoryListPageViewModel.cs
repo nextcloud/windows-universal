@@ -50,7 +50,9 @@ namespace NextcloudApp.ViewModels
         public ICommand RenameResourceCommand { get; private set; }
         public ICommand MoveResourceCommand { get; private set; }
         public ICommand SynchronizeFolderCommand { get; private set; }
+        public ICommand SynchronizeThisFolderCommand { get; private set; }
         public ICommand StopSynchronizeFolderCommand { get; private set; }
+        public ICommand StopSynchronizeThisFolderCommand { get; private set; }
         public ICommand MoveSelectedCommand { get; private set; }
         public ICommand PinToStartCommand { get; private set; }
         public ICommand SelectToggleCommand { get; private set; }
@@ -62,46 +64,57 @@ namespace NextcloudApp.ViewModels
             _dialogService = dialogService;
             _tileService = TileService.Instance;
 
+            /**
+             * Contains the User Settings ie. Server-Address and Username
+             */
             Settings = SettingsService.Instance.LocalSettings;
 
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
+                SelectedFileOrFolder = null;
             });
 
             GroupByNameDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameDescending();
+                SelectedFileOrFolder = null;
             });
 
             GroupByDateAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateAscending();
+                SelectedFileOrFolder = null;
             });
 
             GroupByDateDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByDateDescending();
+                SelectedFileOrFolder = null;
             });
 
             GroupBySizeAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeAscending();
+                SelectedFileOrFolder = null;
             });
 
             GroupBySizeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupBySizeDescending();
+                SelectedFileOrFolder = null;
             });
 
             GroupByTypeAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByTypeAscending();
+                SelectedFileOrFolder = null;
             });
 
             GroupByTypeDescendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByTypeDescending();
+                SelectedFileOrFolder = null;
             });
 
             SelectedFileOrFolder = null;
@@ -111,6 +124,7 @@ namespace NextcloudApp.ViewModels
                 ShowProgressIndicator();
                 await Directory.Refresh();
                 HideProgressIndicator();
+                this.SelectedFileOrFolder = null;
             });
 
             SelectToggleCommand = new DelegateCommand(() =>
@@ -128,7 +142,9 @@ namespace NextcloudApp.ViewModels
             RenameResourceCommand = new RelayCommand(RenameResource);
             MoveResourceCommand = new RelayCommand(MoveResource);
             SynchronizeFolderCommand = new RelayCommand(SynchronizeFolder);
+            SynchronizeThisFolderCommand = new RelayCommand(SynchronizeThisFolder);
             StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
+            StopSynchronizeThisFolderCommand = new RelayCommand(StopSynchronizeThisFolder);
             MoveSelectedCommand = new RelayCommand(MoveSelected);
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             PinToStartCommand = new DelegateCommand<object>(PinToStart);
@@ -140,12 +156,6 @@ namespace NextcloudApp.ViewModels
             Directory = DirectoryService.Instance;
             StartDirectoryListing();
             _isNavigatingBack = false;
-
-            if (e.Parameter != null)
-            {
-                var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
-                SelectedFileOrFolder = parameter?.ResourceInfo;
-            }
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -155,7 +165,7 @@ namespace NextcloudApp.ViewModels
             if (!suspending)
             {
                 _isNavigatingBack = true;
-                Directory.StopDirectoryListing();
+                if (Directory != null) Directory.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }
@@ -235,6 +245,30 @@ namespace NextcloudApp.ViewModels
         {
             var resourceInfo = parameter as ResourceInfo;
 
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            await SychronizeFolder(resourceInfo);
+        }
+
+        private async void SynchronizeThisFolder(object parameter)
+        {
+            var resourceInfo = Directory.PathStack.Count > 0 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo : null;
+
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            await SychronizeFolder(resourceInfo);
+            await Directory.StartDirectoryListing();
+            SelectedFileOrFolder = null;
+        }
+
+        private async Task SychronizeFolder(ResourceInfo resourceInfo)
+        {
             if (resourceInfo == null)
             {
                 return;
@@ -349,10 +383,33 @@ namespace NextcloudApp.ViewModels
                 Debug.WriteLine(e.Message);
             }
         }
+
         private void StopSynchronizeFolder(object parameter)
         {
             var resourceInfo = parameter as ResourceInfo;
 
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            StopSynchronizeFolder(resourceInfo);
+        }
+
+        private void StopSynchronizeThisFolder(object parameter)
+        {
+            var resourceInfo = Directory.PathStack.Count > 0 ? Directory.PathStack[Directory.PathStack.Count - 1].ResourceInfo : null;
+
+            if (resourceInfo == null)
+            {
+                return;
+            }
+
+            StopSynchronizeFolder(resourceInfo);
+        }      
+
+        private void StopSynchronizeFolder(ResourceInfo resourceInfo)
+        {
             if (resourceInfo == null)
             {
                 return;
@@ -645,7 +702,7 @@ namespace NextcloudApp.ViewModels
         public DirectoryService Directory
         {
             get { return _directoryService; }
-            private set { SetProperty(ref _directoryService, value); }
+            set { SetProperty(ref _directoryService, value); }
         }
 
         public LocalSettings Settings
@@ -654,7 +711,7 @@ namespace NextcloudApp.ViewModels
             private set { SetProperty(ref _settings, value); }
         }
 
-        public ResourceInfo SelectedFileOrFolder
+        public virtual ResourceInfo SelectedFileOrFolder
         {
             get { return _selectedFileOrFolder; }
             set

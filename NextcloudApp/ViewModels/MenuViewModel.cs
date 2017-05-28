@@ -48,6 +48,43 @@ namespace NextcloudApp.ViewModels
                         () => CanNavigateToPage(PageToken.DirectoryList)
                     )
                 },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("Favorites"),
+                    FontIcon = "\uE734",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.Favorites),
+                        () => CanNavigateToPage(PageToken.Favorites)
+                    )
+                },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SharingIn"),
+                    FontIcon = "\uF003",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.SharesIn),
+                        () => CanNavigateToPage(PageToken.SharesIn)
+                    )
+                },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SharingOut"),
+                    FontIcon = "\uF003",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.SharesOut),
+                        () => CanNavigateToPage(PageToken.SharesOut)
+                    )
+                },
+                new MenuItem
+                {
+                    DisplayName = resourceLoader.GetString("SharingLink"),
+                    FontIcon = "\uE167",
+                    Command = new DelegateCommand(
+                        () => NavigateToPage(PageToken.SharesLink),
+                        () => CanNavigateToPage(PageToken.SharesLink)
+                    )
+                },
+
             };
 
             ExtraCommands = new ObservableCollection<MenuItem>

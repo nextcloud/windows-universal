@@ -156,7 +156,7 @@ namespace NextcloudApp.Models
         }
 
         [DefaultSettingValue(Value = false)]
-        public bool DeveloperMode
+        public bool ExpertMode
         {
             get
             {
@@ -199,7 +199,7 @@ namespace NextcloudApp.Models
             PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
             UseWindowsHello = false;
             GroupMode = GroupMode.GroupByNameAscending;
-            DeveloperMode = false;
+            ExpertMode = false;
 
             enableRaisePropertyChanged = true;
         }

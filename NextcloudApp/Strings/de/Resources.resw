@@ -168,11 +168,17 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Größe (Größte nach oben)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Typ (A nach oben)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Typ (Z nach oben)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Anwendungsfehler</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>In der Anwendung ist ein Problem aufgetreten. Wir entschuldigen uns für die Unannehmlichkeiten. Wenn Sie in der Mitte von etwas waren, sind die Informationen, an denen Sie gearbeitet haben, verloren.
+    <value>In der Anwendung ist ein Problem aufgetreten. Nicht gespeicherte Informationen gehen dabei leider verloren. Wir entschuldigen uns für die Unannehmlichkeiten.
 
 Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
   </data>
@@ -180,7 +186,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Abbrechen</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Ordnererstellung nicht möglich</value>
+    <value>Ordner kann nicht erstellt werden</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Verbinden</value>
@@ -372,13 +378,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} heruntergeladen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Dein  Gerät eingeben.</value>
+    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Ihr  Gerät eingeben.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
+    <value>Für Ihr Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
@@ -399,7 +405,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Deine App wurde aktualisiert auf Version {0}</value>
+    <value>Deine App wurde auf Version {0} aktualisiert</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
@@ -411,18 +417,18 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben 
-• Dateien und Ordner umbenennen 
-• Manuelle Ordner-Synchronisation 
-• Ordner als ZIP-Datei herunterladen 
-• Mehrere Dateien und Ordner auswählen 
-• Dateien und Ordner am Startbildschirm anheften 
-• Nutze Windows Hello zur Authentifizierung beim App-Start 
-• Erlaube selbst signierte Zertifikate
-• Zeige die Ordgröße in der Liste an 
-• Teile dateien mit der App (Freigabeziel)
-• Benutze den PasswortVault um Benutzerberechtigungen zu speichern 
-• Sicherheits-Verbesserungen &amp; Fehler-Beseitigung 
+    <value>• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Manuelle Ordner-synchronisation
+• Ordner als Zip-Dateien herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Dateien und Ordner auf dem Startbildschirm ablegen
+• Windows Hello für die Anmeldung beim App-Start benutzen
+• Selbst-signierte SSL-Zertifikate erlauben
+• Ordnrergrüßen-Anzeige in der Listenasicht
+• Dateien mit der App teilen
+• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
+• Sicherheits-Verbesserungen und Fehlerbehebung
 • Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
@@ -435,7 +441,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ungültige selbst-signierte SSL-Zertifikate agnorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expertenmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronisations-Status</value>
@@ -470,13 +479,13 @@ Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Die App muss neu gestartet werden</value>
+    <value>Um die Einstellungen zu übernehmen muss die App neu gestartet werden.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value> Liste der bei der Synchronisation aufgetretenen Fehler. Es sollte sich um vorübergehende Fehler handeln (z.B. weil die Datei in einem anderen Programm geöffnet war) und mit der nächsten Synchronisation behoben sein.</value>
+    <value>Liste der Fehler die während der Synchronisierung passierte. Dies sollten temporäre Fehler sein (z.B. die Datei wurde von einer anderen App geöffnet) und sollten nach der nächsten Synchronisierung verschwinden.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
@@ -540,6 +549,60 @@ Bitte später noch einmal versuchen.</value>
     <value>Ordner</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Elemente: {0} (Ordner: {1} Dateien: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Wenn der Expertenmodus aktiv ist, bietet die App zusätzliche Features/Informationen, die nicht für alle Benutzer relevant sind.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt ist!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synchronisiere diesen Ordner</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stoppe die Synchronisation dieses Ordners</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Synchronisation stoppen</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronisierungsstatus</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Jetzt synchronisieren</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synchronisieren</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Diesen Ordner jetzt synchronisieren</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Diesen Ordner synchronisieren</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Dunkel</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Hell</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Von dir geteilt</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Mit mir geteilt</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Über einen Link geteilt</value>
   </data>
 </root>

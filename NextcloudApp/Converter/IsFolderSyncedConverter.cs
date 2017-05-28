@@ -1,10 +1,6 @@
 ﻿using NextcloudApp.Utils;
 using NextcloudClient.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
@@ -20,11 +16,12 @@ namespace NextcloudApp.Converter
         {
             var invert = parameter != null;
             var item = (ResourceInfo)value;
-            if (!item.ContentType.Equals("dav/directory"))
+
+            if (item.ContentType== null || !item.ContentType.Equals("dav/directory"))
             {
                 return Visibility.Collapsed;
             }
-            ResourceLoader loader = new ResourceLoader();
+
             if (SyncDbUtils.IsSynced(item))
             {
                 return Visibility.Visible;

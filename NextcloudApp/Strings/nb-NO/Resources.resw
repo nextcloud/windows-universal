@@ -168,6 +168,12 @@
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
     <value>Størrelse (største først)</value>
   </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Type (A først)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Å først)</value>
+  </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Programfeil</value>
   </data>
@@ -339,13 +345,13 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Vennligst velg et nytt navn</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Endre navn</value>
+    <value>Gi nytt navn</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>Flytt til</value>
@@ -412,18 +418,18 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Flytt filer og mapper
-• Gi nytt navn til filer og mapper
+• Gi filer og mapper nye navn
 • Manuell synkronisering av mapper
-• Last ned mapper som en ZIP- fil 
+• Last ned mapper som ZIP-fil 
 • Velg flere filer og mapper
 • Fest filer og mapper til startskjermen
-• Bruk Windows Hello for autentisering ved applikasjonsstart
-• Tillat selvsignerte SSL sertifikater
-• Hvis mappestørrelse i listen
-• Del filer med app&apos;en (del mål)
-• Bruk PasswordVault for å lagre påloggingsinfo til brukere
+• Vis Windows Hello for å autentisere ved programstart
+• Tillat selvsignerte SSL-sertifikater
+• Vis mappestørrelse i liste
+• Del filer med programmet
+• Bruk PasswordVault for å lagre brukeridentifikasjon
 • Sikkerhetsforbedringer og feilrettinger
-• Nytt og mer stabilt WebDAV- bibliotek</value>
+• Nytt og mer stabilt WebDAV-bibliotek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>
@@ -435,7 +441,10 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Koble til</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorer ugyldig selv-signert SSL sertifikater. Dette tillater bruk av ugyldige eller feil SSL sertifikater. Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep heretter.</value>
+    <value>Ignorer ugyldige selvsignerte SSL-sertifikater</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Ekspertmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synkroniseringsstatus</value>
@@ -470,13 +479,13 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>OBS!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Appen må startes på nytt</value>
+    <value>For at endringer skal tre i effekt, må programmet startes på nytt.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>En liste med feil som oppsto under synkronisering. Disse er sannsynligvis midlertidige problemstillinger (f.eks. fil har blitt åpnet av en annen applikasjon) og bør være i orden etter neste synkronisering.</value>
+    <value>Liste over feil som inntraff under synkronisering. Disse bør være midlertidige (f.eks. når ei fil har blitt åpnet av et annet program) og burde ha blitt borte ved neste synkronisering.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Se opp for konflikter!</value>
@@ -540,6 +549,60 @@ Vennligst prøv igjen senere.</value>
     <value>Mapper</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>{0} items (folders: {1} files: {2})</value>
+    <value>Elementer: {0} (mapper: {1} filer: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Når eksportmodus er påskrudd, gir programmet noen ytterligere funksjoner/informasjon, som kanskje ikke er så interessant for alle brukere.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorer selvsignerte SSL-sertifikater. Dette tillater bruk av ugyldige eller uriktige SSL-sertifikatsmyndigheter. Vær forsiktet, du vil ikke være beskyttet mot mann-i-midten (MITM) -angrep lenger.</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synkroniser denne mappen</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stopp synkronisering av denne mappen</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stopp synkronisering</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synkroniseringsstatus</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synkroniser nå</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synkroniser</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synkroniser denne mappen nå</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synkroniser denne mappen</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Mørk</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Lys</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Drakt</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Delt med andre</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritter</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Delt med meg</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Del via lenke</value>
   </data>
 </root>

@@ -136,13 +136,17 @@
     <Compile Include="Converter\ConflictTypeToForegroundConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
-    <Compile Include="Converter\DeveloperModeToVisibilityConverter.cs" />
+    <Compile Include="Converter\ExpertModeToVisibilityConverter.cs" />
+    <Compile Include="Converter\FavoriteToIconConverter.cs" />
     <Compile Include="Converter\IsFolderSyncedConverter.cs" />
     <Compile Include="Converter\FirstCharFromStringConverter.cs" />
     <Compile Include="Converter\AddSlashToPathConverter.cs" />
     <Compile Include="Converter\IsGlyphToVisibilityConverter.cs" />
     <Compile Include="Converter\IsSelectingToVisibilityConverter.cs" />
     <Compile Include="Converter\EmptyPathToSlashConverter.cs" />
+    <Compile Include="Converter\IsThisFolderSyncedToIsEnabledConverter.cs" />
+    <Compile Include="Converter\SynchronizeFolderToTextConverter.cs" />
+    <Compile Include="Converter\SynchronizeThisFolderToTextConverter.cs" />
     <Compile Include="Converter\SyncInfoStoragePathConverter.cs" />
     <Compile Include="Models\ConflictSolution.cs" />
     <Compile Include="Models\FolderSyncInfo.cs" />
@@ -157,6 +161,7 @@
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
+    <Compile Include="Models\ThemeItem.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\DirectoryService.cs" />
@@ -198,6 +203,11 @@
     <Compile Include="Utils\GroupMode.cs" />
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\Theme.cs" />
+    <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
+    <Compile Include="ViewModels\SharesInPageViewModel.cs" />
+    <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesPageViewModel.cs" />
     <Compile Include="ViewModels\FileUploadPageViewModel.cs" />
     <Compile Include="ViewModels\MoveFileOrFolderPageViewModel.cs" />
     <Compile Include="ViewModels\FileDownloadPageViewModel.cs" />
@@ -207,6 +217,18 @@
     <Compile Include="ViewModels\SyncStatusPageViewModel.cs" />
     <Compile Include="ViewModels\VerificationPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="Views\SharesLinkPage.xaml.cs">
+      <DependentUpon>SharesLinkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharesInPage.xaml.cs">
+      <DependentUpon>SharesInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SharesOutPage.xaml.cs">
+      <DependentUpon>SharesOutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FileUploadPage.xaml.cs">
       <DependentUpon>FileUploadPage.xaml</DependentUpon>
     </Compile>
@@ -275,6 +297,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\HelpButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Themes\MenuFlyoutIconItemStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -290,6 +317,22 @@
     <Page Include="Views\MoveFileOrFolder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SharesLinkPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SharesInPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SharesOutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FavoritesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\FileDownloadPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -335,9 +378,6 @@
     <Folder Include="Strings\ru\" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
-      <Name>Behaviors SDK %28XAML%29</Name>
-    </SDKReference>
     <SDKReference Include="Microsoft.VCLibs, Version=14.0">
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
