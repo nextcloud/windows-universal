@@ -169,7 +169,7 @@ namespace NextcloudApp
              * we will get a lot of thread conflicts, because some classes are marshalled
              * for a different thread.
              * 
-             * To avoid this, we have to escape from the from the share pane view (see below)
+             * To avoid this, we have to escape from the share pane view (see below)
              */
 
             // get the shared items and create a token for later access
