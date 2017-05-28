@@ -600,9 +600,9 @@ Bitte später noch einmal versuchen.</value>
     <value>Favoriten</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Geteilt mit mir</value>
+    <value>Mit mir geteilt</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Über einen Link geteilt</value>
   </data>
 </root>

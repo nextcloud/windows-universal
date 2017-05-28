@@ -3,22 +3,22 @@
 
 This is the Nextcloud app allowing you to access all your files on Windows Mobile (...and UWP coming soon).
 
-## Why is this so awesome?
+## Why is this so useful?
 
 * Easy, modern interface
-* Upload your files to your Nextcloud server
-* Download files from your Nextcloud server
+* Upload your files to your Nextcloud
+* Download files from your Nextcloud
 
 And in the [coming versions](https://github.com/nextcloud/windows-universal/milestones):
 
 * Move and rename files and folders
 * Share your files and folders with others
-* Managing shares
-* Download directories as zip file
+* Manage shares
+* Download directories as ZIP files
 * Upload whole directories
 * Monitor selected directories and upload new files in the background
 * Synchronize selected directories in the background
-* Instant Upload for photos and videos taken by your device
+* Instantly upload photos and videos taken by your device
 * Managing more than one user account / Nextcloud server (Multi-account support)
 
 ## Issues
@@ -27,13 +27,13 @@ Please report all issues over here: https://github.com/nextcloud/windows-univers
 
 ## Translation / Localization
 
-Do you want the Nextcloud app in your native language?    
+Do you want the Nextcloud app in your language?    
 Help translating the app on [Transifex](https://www.transifex.com/nextcloud/nextcloud/windows-universal/)    
-Make sure you are logged in to your Transifex account, otherwise you will get a 403 error page asking you to login first. :smirk:
+Make sure you are logged in to your Transifex account, otherwise you will get a 403 error page asking you to log in first. :smirk:
 
 ### :exclamation: We kindly ask you to only change the English strings `/Strings/en/Resources.resw` within the repository  :exclamation:
 All other languages are translated on [Transifex](https://www.transifex.com/nextcloud/nextcloud/windows-universal/). 
-The translated files will be merge automatically by our [tx-robot] every night.
+The translated files are merged automatically by our [tx-robot] every night.
 
 ## Screenshots
 

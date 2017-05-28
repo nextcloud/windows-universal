@@ -415,19 +415,19 @@
     <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Přesouvání souborů a adresářů
+• Přejmenovávání souborů a adresářů
+• Ruční synchronizace adresářů
+• Stažení adresářů jako ZIP soubor
+• Vícenásobný výběr souborů a adresářů
+• Připínání souborů a adresářů na startovací obrazovku
+• Použití Windows Hello k přihlášení při spuštění aplikace
+• Umožnění použití SSL certifikátů s vlastním podpisem
+• Zobrazení velikosti adresáře v seznamu
+• Sdílení pomocí aplikace
+• Použití klíčenky k uložení uživatelských pověření
+• Bezpečnostní vylepšení a opravy chyb
+• Nová a stabilnější WebDAV knihovna</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Připnout na start</value>
@@ -601,6 +601,6 @@ Prosím zkuste to znovu později.</value>
     <value>Sdíleno s vámi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Sdíleno jako odkaz</value>
   </data>
 </root>

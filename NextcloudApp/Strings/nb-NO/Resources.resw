@@ -603,6 +603,6 @@ Vennligst prøv igjen senere.</value>
     <value>Delt med meg</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Del via lenke</value>
   </data>
 </root>
