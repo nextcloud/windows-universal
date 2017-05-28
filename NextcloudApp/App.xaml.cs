@@ -163,15 +163,27 @@ namespace NextcloudApp
 
         private async void OnShareTargetActivatedsyncAsync(ShareTargetActivatedEventArgs args)
         {
+            /*
+             * If the app get's launched in a share pane, Window.Current will be null,
+             * even if the app is suspended. If we "just" initialize the windows again, 
+             * we will get a lot of thread conflicts, because some classes are marshalled
+             * for a different thread.
+             * 
+             * To avoid this, we have to escape from the from the share pane view (see below)
+             */
+
+            // get the shared items and create a token for later access
             var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
             StorageApplicationPermissions.FutureAccessList.Clear();
             args.ShareOperation.ReportDataRetrieved();
 
+            // show a simple loading page without any dependencies, to avoid te system killing our app
             var frame = new Frame();
             frame.Navigate(typeof(ShareTarget), null);
             Window.Current.Content = frame;
             Window.Current.Activate();
 
+            // launch the app again via protocol link, this will avoid the issue explained above
             var options = new LauncherOptions()
             {
                 TargetApplicationPackageFamilyName = Package.Current.Id.FamilyName,
@@ -186,6 +198,7 @@ namespace NextcloudApp
 
             await Launcher.LaunchUriAsync(uri, options, inputData);
 
+            // we are done, report back
             args.ShareOperation.ReportCompleted();
         }
 
