@@ -203,24 +203,24 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Grid
-                                    Grid.RowSpan="2"
-                                    Height="40" 
-                                    Width="40"
-                                    Margin="0,0,4,0"
-                                    Background="{StaticResource SystemControlHighlightAccentBrush}">
+                                        Grid.RowSpan="2"
+                                        Height="40" 
+                                        Width="40"
+                                        Margin="0,0,4,0"
+                                        Background="{StaticResource SystemControlHighlightAccentBrush}">
                                         <FontIcon 
-                                        Glyph="{Binding Converter={StaticResource ContentTypeToIconConverter}}" 
-                                        FontFamily="Segoe MDL2 Assets"
-                                        FontSize="28"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        Foreground="White"/>
+                                            Glyph="{Binding Converter={StaticResource ContentTypeToIconConverter}}" 
+                                            FontFamily="Segoe MDL2 Assets"
+                                            FontSize="28"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
                                         <Border
-                                        Background="#808080"
-                                        Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
+                                            Background="#808080"
+                                            Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
                                             <Image
-                                            Source="{Binding Thumbnail}"
-                                            Stretch="UniformToFill"/>
+                                                Source="{Binding Thumbnail}"
+                                                Stretch="UniformToFill"/>
                                         </Border>
                                     </Grid>
 
@@ -232,16 +232,16 @@
                                     TextTrimming="CharacterEllipsis" />
 
                                     <StackPanel 
-                                    Grid.Row="1" 
-                                    Grid.Column="1"
-                                    Orientation="Horizontal">
+                                        Grid.Row="1" 
+                                        Grid.Column="1"
+                                        Orientation="Horizontal">
                                         <TextBlock 
-                                        Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
-                                        Margin="0,0,8,0"/>
+                                            Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
+                                            Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                            Margin="0,0,8,0"/>
                                         <TextBlock 
-                                        Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                            Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
+                                            Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                                     </StackPanel>                                  
 
                                     <interactivity:Interaction.Behaviors>
@@ -255,65 +255,65 @@
                                     <FlyoutBase.AttachedFlyout>
                                         <MenuFlyout>
                                             <MenuFlyoutItem 
-                                            Tag="Rename"
-                                            x:Uid="Rename_Text"
-                                            Text="Rename"
-                                            Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                                Tag="Rename"
+                                                x:Uid="Rename_Text"
+                                                Text="Rename"
+                                                Command="{Binding DataContext.RenameResourceCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                             <MenuFlyoutItem 
-                                            Tag="MoveToFolder"
-                                            x:Uid="MoveTo_Text"
-                                            Text="Move to"
-                                            Command="{Binding DataContext.MoveResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                                Tag="MoveToFolder"
+                                                x:Uid="MoveTo_Text"
+                                                Text="Move to"
+                                                Command="{Binding DataContext.MoveResourceCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                             <MenuFlyoutItem 
-                                            Tag="Delete"
-                                            x:Uid="Delete_Text"
-                                            Text="Delete"
-                                            Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                                Tag="Delete"
+                                                x:Uid="Delete_Text"
+                                                Text="Delete"
+                                                Command="{Binding DataContext.DeleteResourceCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                             <MenuFlyoutItem 
-                                            Tag="Download"
-                                            x:Uid="DownloadAsZip"
-                                            Text="Download as ZIP file"
-                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                                Tag="Download"
+                                                x:Uid="DownloadAsZip"
+                                                Text="Download as ZIP file"
+                                                Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                                Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
                                             <MenuFlyoutItem 
-                                            Tag="Download"
-                                            x:Uid="Download"
-                                            Text="Download"
-                                            Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
+                                                Tag="Download"
+                                                x:Uid="Download"
+                                                Text="Download"
+                                                Command="{Binding DataContext.DownloadResourceCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                                Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                             <MenuFlyoutItem 
-                                            Tag="SyncFolder"
-                                            x:Uid="Synchronize"
-                                            Text="{Binding Converter={StaticResource SynchronizeFolderToTextConverter}}"
-                                            Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                                            Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
+                                                Tag="SyncFolder"
+                                                x:Uid="Synchronize"
+                                                Text="{Binding Converter={StaticResource SynchronizeFolderToTextConverter}}"
+                                                Command="{Binding DataContext.SynchronizeFolderCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                                Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}, ConverterParameter=true}"/>
                                             <MenuFlyoutItem 
-                                            Tag="UnSyncFolder"
-                                            x:Uid="StopSynchronize"
-                                            Text="Stop synchronizing"
-                                            Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"
-                                            Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
+                                                Tag="UnSyncFolder"
+                                                x:Uid="StopSynchronize"
+                                                Text="Stop synchronizing"
+                                                Command="{Binding DataContext.StopSynchronizeFolderCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"
+                                                Visibility="{Binding Converter={StaticResource IsFolderSyncedConverter}}"/>
                                             <MenuFlyoutItem 
-                                            Tag="Pin"
-                                            x:Uid="PinToStart"
-                                            Text="Pin to start"
-                                            Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
-                                            CommandParameter="{Binding}"
-                                            Style="{StaticResource MenuFlyoutIconItemStyle}"/>
+                                                Tag="Pin"
+                                                x:Uid="PinToStart"
+                                                Text="Pin to start"
+                                                Command="{Binding DataContext.PinToStartCommand, ElementName=Page}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource MenuFlyoutIconItemStyle}"/>
                                         </MenuFlyout>
                                     </FlyoutBase.AttachedFlyout>
                                 </Grid>
@@ -324,15 +324,15 @@
                                         <ColumnDefinition Width="Auto"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <FontIcon 
-                                    Grid.Column="1"
-                                    Grid.Row="0"
-                                    Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
-                                    Margin="0,0,10,0"
-                                    FontFamily="Segoe MDL2 Assets"
-                                    FontSize="16"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
+                                        Grid.Column="1"
+                                        Grid.Row="0"
+                                        Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
+                                        Margin="0,0,10,0"
+                                        FontFamily="Segoe MDL2 Assets"
+                                        FontSize="16"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
                                 </Grid>
                             </Grid>
                         </DataTemplate>
@@ -369,28 +369,38 @@
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
 
-        <StackPanel Orientation="Horizontal" Height="25" Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}">
-            <TextBlock Margin="25,0,0,0" Text="{Binding StatusBarText, Mode=OneWay}" />
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="2"
+            Background="{ThemeResource SystemControlHighlightListLowBrush}">
+            <!--
+            BorderThickness="0,1,0,0"
+            BorderBrush="{ThemeResource SystemControlForegroundBaseMediumBrush}">
+            -->
+            <TextBlock 
+                Margin="10,3,10,5" 
+                FontSize="12"
+                Text="{Binding StatusBarText, Mode=OneWay}" />
         </StackPanel>
 
         <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
-                Icon="Sync" 
-                Label="Refresh" 
-                x:Uid="AppBarRefresh"
-                Command="{Binding RefreshCommand}"/>
+                    Icon="Sync" 
+                    Label="Refresh" 
+                    x:Uid="AppBarRefresh"
+                    Command="{Binding RefreshCommand}"/>
                 <AppBarButton 
-                Icon="SyncFolder" 
-                x:Uid="SyncFolder"
-                Label="{Binding SelectedFileOrFolder, Converter={StaticResource SynchronizeThisFolderToTextConverter}}"
-                Command="{Binding SynchronizeThisFolderCommand}"/>
+                    Icon="SyncFolder" 
+                    x:Uid="SyncFolder"
+                    Label="{Binding SelectedFileOrFolder, Converter={StaticResource SynchronizeThisFolderToTextConverter}}"
+                    Command="{Binding SynchronizeThisFolderCommand}"/>
                 <AppBarButton 
-                Icon="UnsyncFolder" 
-                Label="Stop synchronizing this folder" 
-                x:Uid="AppBarUnSyncThisFolder"
-                Command="{Binding StopSynchronizeThisFolderCommand}"
-                IsEnabled="{Binding SelectedFileOrFolder, Converter={StaticResource IsThisFolderSyncedToIsEnabledConverter}}"/>
+                    Icon="UnsyncFolder" 
+                    Label="Stop synchronizing this folder" 
+                    x:Uid="AppBarUnSyncThisFolder"
+                    Command="{Binding StopSynchronizeThisFolderCommand}"
+                    IsEnabled="{Binding SelectedFileOrFolder, Converter={StaticResource IsThisFolderSyncedToIsEnabledConverter}}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton 
                 x:Uid="AppBarSelect" 
