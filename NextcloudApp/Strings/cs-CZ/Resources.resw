@@ -553,7 +553,7 @@ Prosím zkuste to znovu později.</value>
     <value>Pokud je povolen režim pro experty, aplikace poskytuje některé vlastnosti a informace, které nemusí být zajímavé pro všechny uživatele.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorovat neplatné SSL certifikáty podepsané sám sebou. To dovolí použití neplatných, nebo nekorektních SSL certifikačních autorit. Upozornění, poté nebudete chráněni proti Man-in-the-middle (MITM) útokům!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizovat tuto složku</value>
@@ -602,5 +602,8 @@ Prosím zkuste to znovu později.</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Sdíleno jako odkaz</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

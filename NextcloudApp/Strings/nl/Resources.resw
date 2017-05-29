@@ -555,7 +555,7 @@ Probeer het later opnieuw.</value>
     <value>Als de expert-modus is ingeschakeld, heeft de app extra mogelijkheden en informatie, die niet voor anderen relevant zijn.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;Man-in-the-middle (mitm)&apos;  aanvallen!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchroniseer deze map</value>
@@ -604,5 +604,8 @@ Probeer het later opnieuw.</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Gedeeld via een link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

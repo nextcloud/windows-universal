@@ -555,7 +555,7 @@ Vennligst prøv igjen senere.</value>
     <value>Når eksportmodus er påskrudd, gir programmet noen ytterligere funksjoner/informasjon, som kanskje ikke er så interessant for alle brukere.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorer selvsignerte SSL-sertifikater. Dette tillater bruk av ugyldige eller uriktige SSL-sertifikatsmyndigheter. Vær forsiktet, du vil ikke være beskyttet mot mann-i-midten (MITM) -angrep lenger.</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synkroniser denne mappen</value>
@@ -604,5 +604,8 @@ Vennligst prøv igjen senere.</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Del via lenke</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>
