@@ -9,7 +9,7 @@ namespace NextcloudApp.Converter
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var item = (ResourceInfo)value;
-            return item.IsFavorite ? "\uE735" : "\uE734";
+            return item.IsFavorite ? "\uE735" : "";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
