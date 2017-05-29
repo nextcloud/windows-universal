@@ -555,7 +555,7 @@ Proszę spróbować ponownie później,</value>
     <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignoruj błędny samopodpisany certyfikat SSL. Umożliwia to na użycie błędnych lub niepoprawnych wystawców certfyfikatów SSL. Uważaj, nie będziesz już chroniony przed atakamie Man-in-the-middle (mitm).</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizuj ten folder</value>
@@ -604,5 +604,8 @@ Proszę spróbować ponownie później,</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Współdzielony linkiem</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

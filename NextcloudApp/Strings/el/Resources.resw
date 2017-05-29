@@ -555,7 +555,7 @@ Please try again later.</value>
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Συγχρονισμός αυτού του φακέλου</value>
@@ -604,5 +604,8 @@ Please try again later.</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Shared via link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

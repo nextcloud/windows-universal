@@ -554,7 +554,7 @@ Descargar directorios como un arhivo .zip
     <value>Cuando el modo experto está habilitado, la aplicación proporciona información/funcionalidades adicionales, que pueden no ser del interés de todos los usuarios. </value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar los certificados SSL auto firmados inválidos. Esto permite que autoridades certificadoras de SSL inválidas o incorrectas sean usadas. ¡Tenga cuidado ya que no estará protegido contra ataques de Hombre-En-Medio (mitm)!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
@@ -603,5 +603,8 @@ Descargar directorios como un arhivo .zip
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Compartido por liga</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

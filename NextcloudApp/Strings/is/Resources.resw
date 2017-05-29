@@ -555,7 +555,7 @@ Prófaðu aftur síðar.</value>
     <value>Þegar sérfræðihamur er virkur, birtir forritið ýmsa aukaeiginleike/aukaupplýsingar, sem eru ekki endilega áhugaverðir fyrir alla notendur.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Hunsa ógild sjálfundirrituð SSL-skilríki. Þetta gerir kleift að nota ógilda eða ekki rétta vottunaraðila skilríkja (CA). Farðu varlega, þú verður ekki lengur varinn fyrir Maður-í-miðjunni (mitm) árásum!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Samstilla þessa möppu</value>
@@ -603,6 +603,9 @@ Prófaðu aftur síðar.</value>
     <value>Deilt með mér</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Deilt með tengli</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>
