@@ -240,9 +240,13 @@
                                         Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
                                 </StackPanel>
 
-                                <FontIcon 
+                                <Button 
                                     Grid.Column="2"
                                     Grid.RowSpan="2"
+                                    Style="{StaticResource FavoriteButtonStyle}"
+                                    Command="{Binding DataContext.ToggleFavoriteCommand, ElementName=Page, Mode=OneTime}"
+                                    CommandParameter="{Binding}">
+                                    <FontIcon 
                                     Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
                                     Margin="10,0,10,0"
                                     FontFamily="Segoe MDL2 Assets"
@@ -250,6 +254,7 @@
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center"
                                     Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
+                                </Button>
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Holding">
