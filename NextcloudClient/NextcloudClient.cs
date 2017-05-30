@@ -518,11 +518,44 @@ namespace NextcloudClient
             return await _dav.DownloadFileWithProgressAsync(GetDavUriZip(path), localStream, progress, cancellationToken);
         }
 
-#endregion
+        public async Task<bool> ToggleFavorite(ResourceInfo res)
+        {
+            var path = GetParentPath(res);
 
-#region Nextcloud
+            var items = await _dav.ListAsync(GetDavUri(path, true), nextcloudPropFind);
+            var item = items.Where(x => x.Name == res.Name).FirstOrDefault();
 
-#region Remote Shares
+            if (item == null)
+                return false;
+
+            var favString = item.AdditionalProperties[NextcloudPropNameConstants.Favorite];
+
+            if (string.IsNullOrEmpty(favString) || string.CompareOrdinal(favString, "0") == 0)
+                item.AdditionalProperties[NextcloudPropNameConstants.Favorite] = "1";
+            else
+                item.AdditionalProperties[NextcloudPropNameConstants.Favorite] = "0";
+
+            return await _dav.UpdateItemAsync(item);
+        }
+
+        private static string GetParentPath(ResourceInfo resourceInfo)
+        {
+            var path = resourceInfo.Path.TrimEnd('/');
+            var split = path.Split('/');
+
+            if (resourceInfo.IsDirectory)
+                path = "/" + split[split.Length - 2];
+            else
+                path = "/" + split[split.Length - 1];
+
+            return path;
+        }
+
+        #endregion
+
+        #region Nextcloud
+
+        #region Remote Shares
 
         /// <summary>
         /// Gets the server status.

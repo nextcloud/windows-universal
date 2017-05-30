@@ -28,7 +28,7 @@ namespace NextcloudApp.Utils
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected async Task<bool> Set<T>(T value, [CallerMemberName] string propertyName = null)
+        protected bool Set<T>(T value, [CallerMemberName] string propertyName = null)
         {
             if (_applicationDataContainer.Values.ContainsKey(propertyName))
             {
