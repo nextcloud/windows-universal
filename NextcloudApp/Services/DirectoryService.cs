@@ -84,7 +84,7 @@ namespace NextcloudApp.Services
                     GroupBySizeDescending();
                     break;
                 case GroupMode.GroupByTypeAscending:
-                    GroupByTypeAscending();                    
+                    GroupByTypeAscending();
                     break;
                 case GroupMode.GroupByTypeDescending:
                     GroupByTypeDescending();
@@ -578,6 +578,16 @@ namespace NextcloudApp.Services
                 await StartDirectoryListing();
             }
             return success;
+        }
+
+        public async Task ToggleFavorite(ResourceInfo resourceInfo)
+        {
+            var client = await ClientService.GetClient();
+
+            if (client == null)
+                return;
+
+            await client.ToggleFavorite(resourceInfo);
         }
     }
 }

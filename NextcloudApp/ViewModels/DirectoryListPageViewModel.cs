@@ -56,6 +56,7 @@ namespace NextcloudApp.ViewModels
         public ICommand MoveSelectedCommand { get; private set; }
         public ICommand PinToStartCommand { get; private set; }
         public ICommand SelectToggleCommand { get; private set; }
+        public ICommand ToggleFavoriteCommand { get; private set; }
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -148,6 +149,7 @@ namespace NextcloudApp.ViewModels
             MoveSelectedCommand = new RelayCommand(MoveSelected);
             //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             PinToStartCommand = new DelegateCommand<object>(PinToStart);
+            ToggleFavoriteCommand = new RelayCommand(ToggleFavorite);
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -576,6 +578,20 @@ namespace NextcloudApp.ViewModels
             };
 
             _navigationService.Navigate(PageToken.FileUpload.ToString(), parameters.Serialize());
+        }
+
+        private async void ToggleFavorite(object parameter)
+        {
+            var res = parameter as ResourceInfo;
+
+            if (res == null)
+                return;
+
+            ShowProgressIndicator();
+            await Directory.ToggleFavorite(res);            
+            await Directory.Refresh();
+            HideProgressIndicator();
+            SelectedFileOrFolder = null;
         }
 
         private async void CreateDirectory()

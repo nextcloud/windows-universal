@@ -555,7 +555,7 @@
     <value>Когда экспертный режим включен, приложение предоставляет некоторые дополнительные функции / сведения, которые могут быть не интересны для всех пользователей.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Игнорирование недействительности самоподписанных SSL-сертификатов. Это позволяет использовать недействительные или неправильные SSL-сертификаты. Будьте осторожны, вы больше не будете защищены от атак типа «Человек-в-середине» (mitm)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Синхронизировать этот каталог</value>
@@ -606,6 +606,6 @@
     <value>Доступ по ссылке</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Подготовка общего доступа…</value>
   </data>
 </root>

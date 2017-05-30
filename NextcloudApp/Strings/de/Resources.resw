@@ -555,7 +555,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Wenn der Expertenmodus aktiv ist, bietet die App zusätzliche Features/Informationen, die nicht für alle Benutzer relevant sind.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor man-in-the-middle (MITM) Angriffen geschützt ist!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronisiere diesen Ordner</value>
@@ -606,6 +606,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Über einen Link geteilt</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Das Teilen wird vorbereitet...</value>
   </data>
 </root>
