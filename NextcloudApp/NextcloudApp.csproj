@@ -99,6 +99,8 @@
     <None Include="NextcloudApp_StoreKey.pfx" />
     <None Include="project.json" />
     <None Include="Strings\.tx\config" />
+    <PRIResource Include="Strings\el\Resources.resw" />
+    <PRIResource Include="Strings\ast\Resources.resw" />
     <PRIResource Include="Strings\cs-CZ\Resources.resw" />
     <PRIResource Include="Strings\ca\Resources.resw" />
     <PRIResource Include="Strings\zh-CN\Resources.resw" />
