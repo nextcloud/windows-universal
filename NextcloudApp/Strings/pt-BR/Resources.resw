@@ -554,7 +554,7 @@ Por favor tente mais tarde.</value>
     <value>Quando o modo avançado está habilitado, o aplicativo fornece alguns recursos/informações adicionais os quais podem não ser interessantes a todos os usuários.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorar certificados SSL auto-assinados inválidos. Isso permite que autoridades de certificação SSL incorretas ou inválidas sejam usadas. Seja cuidadoso pois você não estará mais protegido contra ataques MITM (man-in-the-middle)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta pasta</value>
@@ -605,6 +605,6 @@ Por favor tente mais tarde.</value>
     <value>Compartilhado via link</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Preparar para compartilhar...</value>
   </data>
 </root>
