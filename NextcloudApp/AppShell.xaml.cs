@@ -4,7 +4,7 @@ using NextcloudApp.Services;
 
 namespace NextcloudApp
 {
-    public sealed partial class AppShell : Page
+    public sealed partial class AppShell
     {
         public AppShell()
         {
