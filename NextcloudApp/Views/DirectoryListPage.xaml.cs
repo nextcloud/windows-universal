@@ -1,8 +1,8 @@
-﻿using Prism.Windows.Mvvm;
+﻿using NextcloudApp.Controls;
 
 namespace NextcloudApp.Views
 {
-    public sealed partial class DirectoryListPage : SessionStateAwarePage
+    public sealed partial class DirectoryListPage
     {
         public DirectoryListPage()
         {

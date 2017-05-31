@@ -9,16 +9,7 @@ namespace NextcloudApp.Models
     /// </summary>
     public class RoamingSettings : ObservableSettings
     {
-        private static RoamingSettings settings = new RoamingSettings();
-        private const string DefaultValueEmptyString = "";
-
-        public static RoamingSettings Default
-        {
-            get
-            {
-                return settings;
-            }
-        }
+        public static RoamingSettings Default { get; } = new RoamingSettings();
 
         public RoamingSettings()
             : base(ApplicationData.Current.RoamingSettings)
@@ -33,10 +24,7 @@ namespace NextcloudApp.Models
             {
                 var strVal = Get<string>();
 
-                if (string.IsNullOrEmpty(strVal))
-                    return Theme.System;
-                else
-                    return JsonConvert.DeserializeObject<Theme>(strVal);
+                return string.IsNullOrEmpty(strVal) ? Theme.System : JsonConvert.DeserializeObject<Theme>(strVal);
             }
             set
             {

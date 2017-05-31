@@ -132,20 +132,20 @@ namespace NextcloudApp.ViewModels
 
         public string ServerVersion
         {
-            get { return _serverVersion; }
-            private set { SetProperty(ref _serverVersion, value); }
+            get => _serverVersion;
+            private set => SetProperty(ref _serverVersion, value);
         }
 
         public LocalSettings SettingsLocal
         {
-            get { return _settingsLocal; }
-            private set { SetProperty(ref _settingsLocal, value); }
+            get => _settingsLocal;
+            private set => SetProperty(ref _settingsLocal, value);
         }
 
         public RoamingSettings SettingsRoaming
         {
-            get { return _settingsRoaming; }
-            private set { SetProperty(ref _settingsRoaming, value); }
+            get => _settingsRoaming;
+            private set => SetProperty(ref _settingsRoaming, value);
         }
 
         public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } = new List<PreviewImageDownloadModeItem>();
@@ -155,7 +155,7 @@ namespace NextcloudApp.ViewModels
 
         public int PreviewImageDownloadModesSelectedIndex
         {
-            get { return _previewImageDownloadModesSelectedIndex; }
+            get => _previewImageDownloadModesSelectedIndex;
             set
             {
                 if (!SetProperty(ref _previewImageDownloadModesSelectedIndex, value))
@@ -180,7 +180,7 @@ namespace NextcloudApp.ViewModels
 
         public int ThemeModeSelectedIndex
         {
-            get { return _themeModesSelectedIndex; }
+            get => _themeModesSelectedIndex;
             set
             {
                 if (!SetProperty(ref _themeModesSelectedIndex, value))
@@ -205,7 +205,7 @@ namespace NextcloudApp.ViewModels
 
         public bool IgnoreServerCertificateErrors
         {
-            get { return _ignoreServerCertificateErrors; }
+            get => _ignoreServerCertificateErrors;
             set
             {
                 if (!SetProperty(ref _ignoreServerCertificateErrors, value))
@@ -235,29 +235,9 @@ namespace NextcloudApp.ViewModels
             PrismUnityApplication.Current.Exit();
         }
 
-        public async void ThemeChanged()
-        {
-            ClientService.Reset();
-
-            var dialog = new ContentDialog
-            {
-                Title = _resourceLoader.GetString("Hint"),
-                Content = new TextBlock
-                {
-                    Text = _resourceLoader.GetString("AppMustBeRestarted"),
-                    TextWrapping = TextWrapping.WrapWholeWords,
-                    Margin = new Thickness(0, 20, 0, 0)
-                },
-                PrimaryButtonText = _resourceLoader.GetString("OK")
-            };
-
-            await _dialogService.ShowAsync(dialog);
-            PrismUnityApplication.Current.Exit();
-        }
-
         public bool ExpertMode
         {
-            get { return _expertMode; }
+            get => _expertMode;
             set
             {
                 if (!SetProperty(ref _expertMode, value))
@@ -269,7 +249,7 @@ namespace NextcloudApp.ViewModels
 
         public bool UseWindowsHello
         {
-            get { return _useWindowsHello; }
+            get => _useWindowsHello;
             set
             {
                 if (!SetProperty(ref _useWindowsHello, value))
@@ -281,28 +261,30 @@ namespace NextcloudApp.ViewModels
 
         public async void UseWindowsHelloToggled()
         {
-            if (UseWindowsHello)
+            if (!UseWindowsHello)
             {
-                var available = await VerificationService.CheckAvailabilityAsync();
-
-                if (!available)
-                {
-                    var dialog = new ContentDialog
-                    {
-                        Title = _resourceLoader.GetString(ResourceConstants.DialogTitle_GeneralNextCloudApp),
-                        Content = new TextBlock
-                        {
-                            Text = _resourceLoader.GetString(ResourceConstants.WindowsHelloNotAvailable),
-                            TextWrapping = TextWrapping.WrapWholeWords,
-                            Margin = new Thickness(0, 20, 0, 0)
-                        },
-                        PrimaryButtonText = _resourceLoader.GetString("OK")
-                    };
-                    await _dialogService.ShowAsync(dialog);
-
-                    UseWindowsHello = false;
-                }
+                return;
             }
+            var available = await VerificationService.CheckAvailabilityAsync();
+
+            if (available)
+            {
+                return;
+            }
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString(ResourceConstants.DialogTitle_GeneralNextCloudApp),
+                Content = new TextBlock
+                {
+                    Text = _resourceLoader.GetString(ResourceConstants.WindowsHelloNotAvailable),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("OK")
+            };
+            await _dialogService.ShowAsync(dialog);
+
+            UseWindowsHello = false;
         }
 
         public string AppVersion
