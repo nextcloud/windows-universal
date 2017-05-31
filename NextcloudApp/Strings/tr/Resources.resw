@@ -555,7 +555,7 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Uzman kipinde, uygulama çoğu kullanıcının ilgilenmeyebileceği bazı ek özellik ve bilgiler sunar.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Geçersiz kendinden imzalı SSL sertifikaları görmezden gelinir. Bu seçenek geçersiz ya da hatalı SSL sertifika yayıncılarının kullanılmasını sağlar. Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız için dikkatli olun!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Bu klasörü eşitle</value>
@@ -606,6 +606,6 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Bağlantı ile paylaşılmış</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Paylaşılmaya hazırlanılıyor...</value>
   </data>
 </root>

@@ -118,96 +118,96 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Alle bestanden</value>
+    <value>All files</value>
   </data>
   <data name="Always" xml:space="preserve">
-    <value>Altijd</value>
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Er heeft zich een fout voorgedaan.</value>
+    <value>An error has occurred</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Toevoegen</value>
+    <value>Add</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Aanmaken nieuwe map</value>
+    <value>Create folder</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Maak een foto</value>
+    <value>Take picture</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Uploaden bestanden</value>
+    <value>Upload files</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Uploaden foto&apos;s</value>
+    <value>Upload photos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Download</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Vernieuwen</value>
+    <value>Refresh</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Sorteren</value>
+    <value>Sort</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (oudste bovenaan)</value>
+    <value>Date (oldest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (nieuwste bovenaan)</value>
+    <value>Date (newest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Naam (A bovenaan)</value>
+    <value>Name (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Naam (Z bovenaan)</value>
+    <value>Name (Z to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Omvang (kleinste bovenaan)</value>
+    <value>Size (smallest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Omvang (grootste bovenaan)</value>
+    <value>Size (largest to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A bovenaan)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z bovenaan)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Applicatiefout</value>
+    <value>Application error</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>De applicatie vond een probleem. Excuus voor dit ongemak. Als je ergens mee bezig was, dan is de informatie waar je aan werkte verloren.
+    <value>The application has encountered a problem. We apologise for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
 
-Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmelding doorsturen? Dit kan wellicht helpen om het probleem sneller op te lossen.</value>
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Annuleren</value>
+    <value>Cancel</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Kan map niet aanmaken</value>
+    <value>Can not create folder</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Connect</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
     <value>Content-Type</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Creëren</value>
+    <value>Create</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Aangemaakt</value>
+    <value>Created</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Creëer een nieuwe map</value>
+    <value>Create a new folder</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Downloaden bestand...</value>
+    <value>Downloading the file…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Downloaden voorbeeldafbeeldingen</value>
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -216,394 +216,394 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Mapnaam</value>
+    <value>Folder name</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informatie</value>
+    <value>Information</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Laatst gewijzigd</value>
+    <value>Last modified</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Naam</value>
+    <value>Name</value>
   </data>
   <data name="Never" xml:space="preserve">
-    <value>Nooit</value>
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Nieuwe map</value>
+    <value>New folder</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nee</value>
+    <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Niet geautoriseerd</value>
+    <value>Not authorised</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>De server meldde een fout met code 401 (Ongeautoriseerd). Meld je opnieuw aan.</value>
+    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Wachtwoord</value>
+    <value>Password</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pad</value>
+    <value>Path</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} van {1} gebruikt</value>
+    <value>{0} of {1} used</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reset deze app</value>
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Opnieuw</value>
+    <value>Retry</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Serveradres</value>
+    <value>Server address</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Instellingen</value>
+    <value>Settings</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Instellingen</value>
+    <value>Settings</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Tonen bestand- en mappenlijst groepering</value>
+    <value>Show file and folder list grouping</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Grootte</value>
+    <value>Size</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Er bestaat al een element met deze naam. Geef een andere op.</value>
+    <value>There is already an element with this name. Specify a different name.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Type</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Gebruikersnaam</value>
+    <value>Username</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Versie {0}</value>
+    <value>Version {0}</value>
   </data>
   <data name="WiFiOnly" xml:space="preserve">
-    <value>Alleen met Wifi verbinding</value>
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ja</value>
+    <value>Yes</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Verwijderen</value>
+    <value>Delete</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Verwijderen bestand</value>
+    <value>Delete file</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Weet je zeker dat je bestand {0} wilt verwijderen</value>
+    <value>Are you sure, you want to delete the file {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Verwijder map</value>
+    <value>Delete folder</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Weet je zeker dat je map {0} wilt verwijderen?</value>
+    <value>Are you sure, you want to delete the folder {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} van {1} geüpload</value>
+    <value>{0} of {1} uploaded</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploaden bestand {0} van {1}…</value>
+    <value>Uploading file {0} of {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Uploaden bestand...</value>
+    <value>Uploading the file…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} van {1} gedownload</value>
+    <value>{0} of {1} downloaded</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>De onderhoudsmodus is op de server ingeschakeld.</value>
+    <value>The maintenance mode is enabled on the server.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Verkeerde gebruikersnaam of wachtwoord.</value>
+    <value>Wrong username or password.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Clientversie {0}</value>
+    <value>Client version {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>De servernaam of adres kon niet worden gevonden.</value>
+    <value>The server name or address could not be resolved.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Serverversie {0}</value>
+    <value>Server version {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Verwijderen</value>
+    <value>Delete</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>wachter op de serverreactie</value>
+    <value>waiting for server response</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Kies een nieuwe naam</value>
+    <value>Please choose a new name</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Hernoemen</value>
+    <value>Rename</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Verplaatsen naar</value>
+    <value>Move to</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Verplaatsen naar</value>
+    <value>Move to</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Annuleren</value>
+    <value>Cancel</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Gedaan</value>
+    <value>Done</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Kies map</value>
+    <value>Choose folder</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>De server met adres {0} is niet te bereiken.</value>
+    <value>The server with the address {0} is not reachable.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Downloaden als ZIP bestand</value>
+    <value>Download as ZIP file</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} gedownload</value>
+    <value>{0} downloaded</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Om toegang te krijgen tot je Nextcloud moet je de inloginfo voor je apparaat opgeven.</value>
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authenticatie</value>
+    <value>Windows Hello authentication</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Er is geen PIN ingesteld voor dit apparaat. Om Windows Hello te kunnen gebruiken, moet een PIN worden ingesteld.</value>
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Download</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Inloggen vereist</value>
+    <value>Sign-in required</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We kunnen Nextcloud niet openen totdat je apparaat inloginfo hebt opgegeven.</value>
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Probeer het opnieuw</value>
+    <value>Try again</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud voor Windows Mobile</value>
+    <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Je app werd geüpdated naar versie {0}</value>
+    <value>Your app was updated to version {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nieuwe functies en verbeteringen in deze versie:</value>
+    <value>New features and improvements in this version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Aanbevelen</value>
+    <value>Recommend</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Bijwerken</value>
+    <value>Update</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• Hernoemen bestanden en mappen
-• Handmatig synchroniseren van mappen
-• Downloaden mappen als zip-bestand
-• Selecteren meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan startscherm
-• Gebruiken Windows Hello om bij starten app te authenticeren
-• Toestaan self-signed SSL certificaten
-• Tonen mapgrootte in overzocht
-• Delen bestanden met de app
-• Gebruiken PasswordVault om inloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronisation of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin om te starten</value>
+    <value>Pin to start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin om te starten</value>
+    <value>Pin to start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Verbinden</value>
+    <value>Connect</value>
   </data>
   <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten.</value>
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expertmodus</value>
+    <value>Expert mode</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronisatiestatus</value>
+    <value>Synchronisation status</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>Geschiedenis</value>
+    <value>History</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicten</value>
+    <value>Conflicts</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Fouten</value>
+    <value>Errors</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchroniseren</value>
+    <value>Synchronise</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Voorkeur lokaal bestand</value>
+    <value>Prefer local file</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Leegmaken sync geschiedenis</value>
+    <value>Clear sync history</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Voorkeur extern bestand</value>
+    <value>Prefer remote file</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
 
-Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attentie!</value>
+    <value>Attention!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Deze instellingen worden actief na opnieuw opstarten van de app.</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lijst met synchronisatiefouten. Dit zouden tijdelijke problemen moet zijn (bijv. bestand was geopend door een andere app) en die zouden dan ook verdwenen moeten zijn na de volgende synchronisatie.</value>
+    <value>List of errors that occurred during synchronisation. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronisation run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Let op conflicten!</value>
+    <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Zowel de externe als de lokale map is niet leeg. Dat kan leiden tot veel conflicten, omdat we niet weten welke bestanden de juiste zijn.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronisatie is getriggerd!</value>
+    <value>Synchronisation has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronisatie vindt plaats in de achtergrond. Je krijgt een melding als die klaar is.</value>
+    <value>Synchronisation will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service tijdelijk niet beschikbaar (gewoonlijk wegens korte termijn onderhoud)
-Probeer het later opnieuw.</value>
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Bestand zowel lokaal als extern gewijzigd. Welke heeft je voorkeur?</value>
+    <value>File changed locally and remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Bestand zowel lokaal als extern aangemaakt - wat is het juiste?</value>
+    <value>File has been created remotely and locally - which is the correct one?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Bestand lokaal verwijderd, maar extern gewijzigd. Wat heeft je voorkeur?</value>
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Conflict: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Bestand extern verwijderd, maar lokaal gewijzigd. Wat heeft je voorkeur?</value>
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronisatie van map {0} geëindigd met {1} wijziginen en {2} fouten of conflicten.</value>
+    <value>Synchronisation of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronisatie van map {0} geëindigd met {1} wijzigingen.</value>
+    <value>Synchronisation of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronisatie is beëindigd</value>
+    <value>Synchronisation has been finished</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronisatie van map {0} werd gestopt door dat de app is afgebroken.</value>
+    <value>Synchronisation of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronisatie onderbroken</value>
+    <value>Synchronisation suspended</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronisatiestatus</value>
+    <value>Synchronisation Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokaal pad:</value>
+    <value>Local Path:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud pad:</value>
+    <value>Nextcloud Path:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Kies de map waar je de bestanden naar wilt uploaden</value>
+    <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Mappen</value>
+    <value>Folders</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Objecten: {0} (mappen: {1} bestanden: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Als de expert-modus is ingeschakeld, heeft de app extra mogelijkheden en informatie, die niet voor anderen relevant zijn.</value>
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;man-in-the-middle (mitm)&apos;  aanvallen!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchroniseer deze map</value>
+    <value>Synchronize this folder</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop met synchroniseren van deze map</value>
+    <value>Stop synchronising this folder</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchroniseren</value>
+    <value>Stop synchronising</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronisatiestatus</value>
+    <value>Synchronisation status</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Nu synchroniseren</value>
+    <value>Synchronise now</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Synchroniseren</value>
+    <value>Synchronise</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Nu deze map synchroniseer</value>
+    <value>Synchronise this folder now</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchroniseer deze map</value>
+    <value>Synchronise this folder</value>
   </data>
   <data name="ThemeDark" xml:space="preserve">
-    <value>Donker</value>
+    <value>Dark</value>
   </data>
   <data name="ThemeLight" xml:space="preserve">
-    <value>Licht</value>
+    <value>Light</value>
   </data>
   <data name="ThemeSystem" xml:space="preserve">
-    <value>Systeem</value>
+    <value>System</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Thema</value>
+    <value>Theme</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Gedeeld met anderen</value>
+    <value>Shared with others</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorieten</value>
+    <value>Favourites</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Deelde met jou</value>
+    <value>Shared with me</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Gedeeld via een link</value>
+    <value>Shared via link</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Prepare for sharing...</value>
