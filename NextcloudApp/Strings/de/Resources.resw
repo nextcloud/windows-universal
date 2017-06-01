@@ -606,6 +606,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Über einen Link geteilt</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Das Teilen wird vorbereitet...</value>
+    <value>Das Teilen wird vorbereitet…</value>
   </data>
 </root>
