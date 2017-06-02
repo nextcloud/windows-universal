@@ -510,13 +510,13 @@ Vennligst prøv igjen senere.</value>
     <value>Fil har blitt opprettet både sentralt og lokalt - hvilken er den korrekte?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Slettet fil lokalt, men endret sentralt - hvilken foretrekker du?</value>
+    <value>Slettet fil lokalt, men endret sentralt - hva foretrekker du?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Slettet fil sentralt, men endret lokalt. Hvilken foretrekker du?</value>
+    <value>Slettet fil sentralt, men endret lokalt. Hva foretrekker du?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Synkronisering av mappe {0} ferdig med {1} endringer og {2} feil eller konflikter.</value>

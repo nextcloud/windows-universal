@@ -264,10 +264,10 @@
     <value>Dirección del servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Ajustes</value>
+    <value>Configuraciones </value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Ajustes</value>
+    <value>Configuraciones </value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Mostrar agrupación de archivos y carpetas</value>
@@ -479,7 +479,7 @@ Descargar directorios como un arhivo .zip
     <value>¡Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>La aplicación debe ser reiniciada para que este ajuste tome efecto.</value>
+    <value>La aplicación debe ser reiniciada para que esta configuración tome efecto.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
