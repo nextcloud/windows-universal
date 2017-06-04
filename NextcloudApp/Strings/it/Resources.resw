@@ -169,10 +169,10 @@
     <value>Dimensione (più grande in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Errore dell&apos;applicazione</value>
@@ -426,7 +426,7 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
 • Show folder size in list
-• Share files with the app (share target)
+• Share files with the app
 • Use the PasswordVault to store user credentials
 • Security improvements &amp; bug fixes
 • New and more stable WebDAV library</value>
@@ -444,7 +444,7 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Modalità esperta</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
@@ -453,10 +453,10 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>History</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Conflitti</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Errors</value>
+    <value>Errori</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
     <value>Sincronizza</value>
@@ -479,13 +479,13 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Attenzione!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>L&apos;applicazione deve essere riavviata</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Suggerimento</value>
   </data>
   <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Attenzione ai conflitti!</value>
@@ -537,16 +537,16 @@ Riprova più tardi.</value>
     <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Percorso locale:</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Percorso di Nextcloud:</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Cartelle</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
     <value>Items: {0} (folders: {1} files: {2})</value>
@@ -555,15 +555,57 @@ Riprova più tardi.</value>
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Sincronizza questa cartella</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
     <value>Stop synchronizing this folder</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
     <value>Stop synchronizing</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Stato di sincronizzazione</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Sincronizza ora</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sincronizza</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Sincronizza questa cartella</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Scuro</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Chiaro</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Shared with others</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Preferiti</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Shared with me</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
   </data>
 </root>

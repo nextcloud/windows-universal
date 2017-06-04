@@ -606,6 +606,6 @@ Proszę spróbować ponownie później,</value>
     <value>Współdzielony linkiem</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Przygotowywanie do współdzielenia...</value>
   </data>
 </root>

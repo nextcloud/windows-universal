@@ -133,7 +133,7 @@
     <value>Klasör ekle</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Resim çek</value>
+    <value>Fotoğraf çek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Dosya yükle</value>
