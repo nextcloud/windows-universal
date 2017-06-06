@@ -371,7 +371,7 @@ namespace NextcloudApp.ViewModels
                     // TODO catch exceptions
                 }
 
-                SyncService service = new SyncService(folder, resourceInfo, syncInfo);
+                SyncService service = new SyncService(folder, resourceInfo, syncInfo, _resourceLoader);
                 await service.StartSync();
 
                 if (firstRunDialog != null)
