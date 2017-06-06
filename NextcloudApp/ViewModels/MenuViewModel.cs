@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
-using System.Net;
 using Windows.Networking.Connectivity;
-using Windows.Storage;
 using NextcloudApp.Converter;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -186,20 +184,20 @@ namespace NextcloudApp.ViewModels
 
         public string QuotaUsedOfTotalString
         {
-            get { return _quotaUsedOfTotalString; }
-            set { SetProperty(ref _quotaUsedOfTotalString, value); }
+            get => _quotaUsedOfTotalString;
+            set => SetProperty(ref _quotaUsedOfTotalString, value);
         }
 
         public User User
         {
-            get { return _user; }
-            set { SetProperty(ref _user, value); }
+            get => _user;
+            set => SetProperty(ref _user, value);
         }
 
         public Uri UserAvatarUrl
         {
-            get { return _userAvatarUrl; }
-            set { SetProperty(ref _userAvatarUrl, value); }
+            get => _userAvatarUrl;
+            set => SetProperty(ref _userAvatarUrl, value);
         }
         
         public ObservableCollection<MenuItem> Commands { get; set; }
@@ -255,14 +253,14 @@ namespace NextcloudApp.ViewModels
 
         public bool ShowMenuButton
         {
-            get { return _showMenuButton; }
-            set { SetProperty(ref _showMenuButton, value); }
+            get => _showMenuButton;
+            set => SetProperty(ref _showMenuButton, value);
         }
 
         public bool IsMenuOpen
         {
-            get { return _isMenuOpen; }
-            set { SetProperty(ref _isMenuOpen, value); }
+            get => _isMenuOpen;
+            set => SetProperty(ref _isMenuOpen, value);
         }
 
         private void RaiseCanExecuteChanged()

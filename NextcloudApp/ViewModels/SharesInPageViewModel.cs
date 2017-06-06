@@ -1,14 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Windows.Input;
-using Windows.Storage.Pickers;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
-using NextcloudApp.Utils;
 using NextcloudClient.Types;
-using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
 
@@ -60,7 +53,7 @@ namespace NextcloudApp.ViewModels
 
         public override ResourceInfo SelectedFileOrFolder
         {
-            get { return _selectedFileOrFolder; }
+            get => _selectedFileOrFolder;
             set
             {
                 if (_isNavigatingBack)
