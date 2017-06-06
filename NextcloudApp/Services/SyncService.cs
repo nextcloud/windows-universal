@@ -12,6 +12,8 @@ using System.Threading;
 using System.Diagnostics;
 using DecaTec.WebDav;
 using Windows.Storage;
+using NextcloudApp.Constants;
+using Prism.Windows.AppModel;
 
 namespace NextcloudApp.Services
 {
@@ -22,12 +24,14 @@ namespace NextcloudApp.Services
         private ResourceInfo resourceInfo;
         private NextcloudClient.NextcloudClient client;
         private List<SyncInfoDetail> sidList;
+        private readonly IResourceLoader resourceLoader;
 
-        public SyncService(StorageFolder startFolder, ResourceInfo resourceInfo, FolderSyncInfo syncInfo)
+        public SyncService(StorageFolder startFolder, ResourceInfo resourceInfo, FolderSyncInfo syncInfo, IResourceLoader resourceLoader)
         {
             this.baseFolder = startFolder;
             this.folderSyncInfo = syncInfo;
             this.resourceInfo = resourceInfo;
+            this.resourceLoader = resourceLoader;
             sidList = new List<SyncInfoDetail>();
         }
 
@@ -45,7 +49,7 @@ namespace NextcloudApp.Services
                 if (client == null)
                 {
                     // ERROR
-                    throw new Exception("Error creating webdav client");
+                    throw new NullReferenceException(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_CannotCreateClient));
                 }
 
                 int changedCount = 0;
@@ -140,8 +144,9 @@ namespace NextcloudApp.Services
                 {
                     ResponseErrorHandlerService.HandleException(e);
                 }
-                //List<Task> syncTasks = new List<Task>();
+
                 List<IStorageItem> synced = new List<IStorageItem>();
+
                 if (list != null && list.Count > 0)
                 {
                     foreach (ResourceInfo subInfo in list)
@@ -163,7 +168,7 @@ namespace NextcloudApp.Services
                                     }
                                     else
                                     {
-                                        sid.Error = "Deletion of " + subInfo.Path + " on nextcloud failed.";
+                                        sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_DeleteFolderRemotely), subInfo.Path);
                                         // Error could be overridden by other errors
                                     }
                                 }
@@ -261,7 +266,7 @@ namespace NextcloudApp.Services
                             }
                             else
                             {
-                                sid.Error = "Could not create directory on nextcloud: " + newPath;
+                                sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_CreateFolderRemotely), newPath);
                             }
                         }
                     }
@@ -332,7 +337,7 @@ namespace NextcloudApp.Services
                         }
                         else
                         {
-                            sid.Error = "Error while uploading File to nextcloud.";
+                            sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_UploadFile), file.Name);
                         }
                     }
                     else if (info != null)
@@ -352,7 +357,7 @@ namespace NextcloudApp.Services
                         }
                         else
                         {
-                            sid.Error = "Error while downloading file from nextcloud";
+                            sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                         }
                     }
                 }
@@ -388,7 +393,7 @@ namespace NextcloudApp.Services
                                     }
                                     else
                                     {
-                                        sid.Error = "Error while uploading File to nextcloud.";
+                                        sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_UploadFile), file.Name);
                                     }
                                     break;
                                 case ConflictSolution.PREFER_REMOTE:
@@ -444,7 +449,7 @@ namespace NextcloudApp.Services
                                     }
                                     else
                                     {
-                                        sid.Error = "Error while downloading file from nextcloud";
+                                        sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                                     }
                                     break;
                                 default:
@@ -471,7 +476,7 @@ namespace NextcloudApp.Services
                                 }
                                 else
                                 {
-                                    sid.Error = "Error while downloading file from nextcloud";
+                                    sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                                 }
                             }
                         }
@@ -489,7 +494,7 @@ namespace NextcloudApp.Services
                             }
                             else
                             {
-                                sid.Error = "Error while uploading file to nextcloud";
+                                sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_UploadFile), info.Name);
                             }
                         }
                         else
@@ -510,7 +515,7 @@ namespace NextcloudApp.Services
                                     }
                                     else
                                     {
-                                        sid.Error = "Error while uploading file to nextcloud";
+                                        sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_UploadFile), info.Name);
                                     }
                                     break;
                                 case ConflictSolution.PREFER_REMOTE:
@@ -525,7 +530,7 @@ namespace NextcloudApp.Services
                                     }
                                     else
                                     {
-                                        sid.Error = "Error while downloading file from nextcloud";
+                                        sid.Error = String.Format(this.resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                                     }
                                     break;
                                 default:
