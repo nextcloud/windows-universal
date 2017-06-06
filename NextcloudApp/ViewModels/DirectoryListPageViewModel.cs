@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace NextcloudApp.ViewModels
 {
-    public sealed class DirectoryListPageViewModel : ViewModel
+    public class DirectoryListPageViewModel : ViewModel
     {
         private LocalSettings _settings;
         private DirectoryService _directoryService;
@@ -732,7 +732,7 @@ namespace NextcloudApp.ViewModels
             private set => SetProperty(ref _settings, value);
         }
 
-        public ResourceInfo SelectedFileOrFolder
+        public virtual ResourceInfo SelectedFileOrFolder
         {
             get => _selectedFileOrFolder;
             set

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Input;
-//using Windows.ApplicationModel.Activation;
+﻿//using Windows.ApplicationModel.Activation;
 //using Windows.Foundation;
 //using Windows.Storage;
 //using Windows.Storage.AccessCache;

@@ -34,41 +34,41 @@ namespace NextcloudApp.ViewModels
 
         public string ServerAddress
         {
-            get { return _serverAddress; }
-            set { SetProperty(ref _serverAddress, value); }
+            get => _serverAddress;
+            set => SetProperty(ref _serverAddress, value);
         }
 
         public string Username
         {
-            get { return _username; }
-            set { SetProperty(ref _username, value); }
+            get => _username;
+            set => SetProperty(ref _username, value);
         }
 
         public string Password
         {
-            get { return _password; }
-            set { SetProperty(ref _password, value); }
+            get => _password;
+            set => SetProperty(ref _password, value);
         }
 
         public double KeyboardHeight
         {
-            get { return _keyboardHeight; }
-            set { SetProperty(ref _keyboardHeight, value); }
+            get => _keyboardHeight;
+            set => SetProperty(ref _keyboardHeight, value);
         }
 
         public bool IsKeyboardVisible
         {
-            get { return _isKeyboardVisible; }
-            set { SetProperty(ref _isKeyboardVisible, value); }
+            get => _isKeyboardVisible;
+            set => SetProperty(ref _isKeyboardVisible, value);
         }
 
         public bool IsLoading
         {
-            get { return _isLoading; }
-            set { SetProperty(ref _isLoading, value); }
+            get => _isLoading;
+            set => SetProperty(ref _isLoading, value);
         }
 
-        public ICommand SaveSettingsCommand { get; private set; }
+        public ICommand SaveSettingsCommand { get; }
 
         public LoginPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -83,13 +83,9 @@ namespace NextcloudApp.ViewModels
         private void LoginPageViewModel_KeyDown(CoreWindow sender, KeyEventArgs args)
         {
             // Login in on 'Enter'.
-            switch (args.VirtualKey)
+            if (args.VirtualKey == VirtualKey.Enter)
             {
-                case VirtualKey.Enter:
-                    SaveSettingsCommand.Execute(null);
-                    break;
-                default:
-                    break;
+                SaveSettingsCommand.Execute(null);
             }
         }
 

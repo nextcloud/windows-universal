@@ -23,19 +23,19 @@ namespace NextcloudApp.ViewModels
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
 
-        public ICommand GroupByNameAscendingCommand { get; private set; }
-        public ICommand GroupByNameDescendingCommand { get; private set; }
-        public ICommand GroupByDateAscendingCommand { get; private set; }
-        public ICommand GroupByDateDescendingCommand { get; private set; }
-        public ICommand GroupBySizeAscendingCommand { get; private set; }
-        public ICommand GroupBySizeDescendingCommand { get; private set; }
-        public ICommand GroupByTypeAscendingCommand { get; private set; }
-        public ICommand GroupByTypeDescendingCommand { get; private set; }
-        public ICommand RefreshCommand { get; private set; }
-        public ICommand CreateDirectoryCommand { get; private set; }
-        public ICommand SelectToggleCommand { get; private set; }
-        public object CancelFolderSelectionCommand { get; private set; }
-        public object MoveToSelectedFolderCommand { get; private set; }
+        public ICommand GroupByNameAscendingCommand { get; }
+        public ICommand GroupByNameDescendingCommand { get; }
+        public ICommand GroupByDateAscendingCommand { get; }
+        public ICommand GroupByDateDescendingCommand { get; }
+        public ICommand GroupBySizeAscendingCommand { get; }
+        public ICommand GroupBySizeDescendingCommand { get; }
+        public ICommand GroupByTypeAscendingCommand { get; }
+        public ICommand GroupByTypeDescendingCommand { get; }
+        public ICommand RefreshCommand { get; }
+        public ICommand CreateDirectoryCommand { get; }
+        public ICommand SelectToggleCommand { get; }
+        public object CancelFolderSelectionCommand { get; }
+        public object MoveToSelectedFolderCommand { get; }
 
         public MoveFileOrFolderPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -194,9 +194,7 @@ namespace NextcloudApp.ViewModels
             newPath = newPath.TrimEnd('/');
             newPath = newPath + "/" + resInfo.Name;
 
-            var success = await Directory.Move(oldPath, newPath);
-
-            return;
+            await Directory.Move(oldPath, newPath);
         }
 
         private async void CreateDirectory()
@@ -270,19 +268,19 @@ namespace NextcloudApp.ViewModels
 
         public DirectoryService Directory
         {
-            get { return _directoryService; }
-            private set { SetProperty(ref _directoryService, value); }
+            get => _directoryService;
+            private set => SetProperty(ref _directoryService, value);
         }
 
         public LocalSettings Settings
         {
-            get { return _settings; }
-            private set { SetProperty(ref _settings, value); }
+            get => _settings;
+            private set => SetProperty(ref _settings, value);
         }
 
         public ResourceInfo SelectedFileOrFolder
         {
-            get { return _selectedFileOrFolder; }
+            get => _selectedFileOrFolder;
             set
             {
                 if (_isNavigatingBack)
