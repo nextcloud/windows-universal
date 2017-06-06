@@ -116,11 +116,11 @@
                             Orientation="Horizontal">
                             <TextBlock 
                                 Text="{Binding ResourceInfo.Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"
                                 Margin="0,0,8,0"/>
                             <TextBlock 
                                 Text="{Binding ResourceInfo.LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+                                Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -131,7 +131,7 @@
                     Style="{StaticResource TitleTextBlockStyle}"
                     Margin="8"/>
 
-                <Border Margin="8,0" Background="{ThemeResource SystemControlForegroundBaseMediumBrush}" Height="1" />
+                <Border Margin="8,0" Background="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}" Height="1" />
 
                 <Grid Margin="8,0,8,8">
                     <Grid.RowDefinitions>
@@ -155,7 +155,7 @@
                         Text="Name" 
                         x:Uid="Name"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="0"
                         Grid.Column="1" 
@@ -169,7 +169,7 @@
                         Text="Path" 
                         x:Uid="Path"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="1"
                         Grid.Column="1" 
@@ -183,7 +183,7 @@
                         Text="Type" 
                         x:Uid="Type"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="2"
                         Grid.Column="1" 
@@ -197,7 +197,7 @@
                         Text="Content-Type" 
                         x:Uid="ContentType"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="3"
                         Grid.Column="1" 
@@ -211,7 +211,7 @@
                         Text="Size" 
                         x:Uid="Size"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="4"
                         Grid.Column="1" 
@@ -225,7 +225,7 @@
                         Text="Last modified" 
                         x:Uid="LastModified"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Grid.Row="5"
                         Grid.Column="1" 
@@ -240,7 +240,7 @@
                         Text="Created" 
                         x:Uid="Created"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock
                         Visibility="{Binding ResourceInfo.Created, Converter={StaticResource DateTimeToVisibilityConverter}}"
                         Grid.Row="6"
@@ -256,7 +256,7 @@
                         Text="ETag" 
                         x:Uid="ETag"
                         Margin="0,8,8,8"
-                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                     <TextBlock 
                         Visibility="{Binding Converter={StaticResource ExpertModeToVisibilityConverter}}"
                         Grid.Row="7"

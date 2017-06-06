@@ -239,12 +239,12 @@
                                     Orientation="Horizontal">
                                     <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"
                                         Margin="0,0,8,0"
                                         Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                     <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>
