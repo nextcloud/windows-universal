@@ -288,6 +288,11 @@
                     Label="Refresh" 
                     x:Uid="AppBarRefresh"
                     Command="{Binding RefreshCommand}"/>
+                <AppBarButton
+                    Icon="NewFolder" 
+                    Label="Create folder" 
+                    x:Uid="AppBarAddCreateFolder"
+                    Command="{Binding CreateDirectoryCommand}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Accept" Label="Done" x:Uid="AppBarDone" Command="{Binding StartUploadCommand}"/>
             <AppBarButton Icon="Clear" Label="Cancel" x:Uid="AppBarCancel" Command="{Binding CancelFolderSelectionCommand}"/>
