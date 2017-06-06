@@ -4,9 +4,19 @@ namespace NextcloudApp.Models
 {
     public class PreviewImageDownloadModeItem
     {
+        public PreviewImageDownloadModeItem()
+        {
+        }
+
+        public PreviewImageDownloadModeItem(string name, PreviewImageDownloadMode value)
+        {
+            Name = name;
+            Value = value;
+        }
+
         public string Name { get; set; }
         public PreviewImageDownloadMode Value { get; set; }
-        
+
         public override string ToString()
         {
             return Name;

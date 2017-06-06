@@ -9,7 +9,7 @@ namespace NextcloudApp.Models
         public int Id { get; set; }
         public string ETag { get; set; }
         public DateTimeOffset? DateModified { get; set; }
-        public int FsiID { get; set; }
+        public int FsiId { get; set; }
         public string Path { get; set; }
         public string FilePath { get; set; }
         public string Error { get; internal set; }
@@ -22,7 +22,7 @@ namespace NextcloudApp.Models
 
         public SyncInfoDetail(FolderSyncInfo fsi)
         {
-            this.FsiID = fsi.Id;
+            FsiId = fsi.Id;
         }
 
         public bool Equals(SyncInfoDetail other)
@@ -38,7 +38,7 @@ namespace NextcloudApp.Models
         /// </returns>
         public override string ToString()
         {
-            string datemodified = DateModified.HasValue ? DateModified.Value.ToString("u") : "";
+            var datemodified = DateModified.HasValue ? DateModified.Value.ToString("u") : "";
             return "Path: " + Path + " - " +
                 "FilePath: " + FilePath + " - " +
                 "ETag: " + ETag + " - " +

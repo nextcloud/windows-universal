@@ -12,7 +12,7 @@ namespace NextcloudApp.Converter
         {
             var conflictType = (ConflictType)value;
 
-            if (conflictType != ConflictType.NONE)
+            if (conflictType != ConflictType.None)
                 return new SolidColorBrush(Colors.Red);
             else
                 return null; 
