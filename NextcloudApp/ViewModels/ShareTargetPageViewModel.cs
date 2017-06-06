@@ -170,6 +170,7 @@ namespace NextcloudApp.ViewModels
                 HideProgressIndicator();
                 if (success)
                 {
+                    SelectedFileOrFolder = null;
                     return;
                 }
 

@@ -608,6 +608,9 @@ Please try again later.</value>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Prepare for sharing...</value>
   </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Create folder</value>
+  </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error while creating client for WebDAV communication</value>
   </data>
