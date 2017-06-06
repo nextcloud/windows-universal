@@ -343,8 +343,18 @@
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
 
-        <StackPanel Orientation="Horizontal" Height="25" Grid.Row="2" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}">
-            <TextBlock Margin="25,0,0,0" Text="{Binding StatusBarText, Mode=OneWay}" />
+        <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="2"
+            Background="{ThemeResource SystemControlHighlightListLowBrush}">
+            <!--
+            BorderThickness="0,1,0,0"
+            BorderBrush="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}">
+            -->
+            <TextBlock 
+                Margin="10,3,10,5" 
+                FontSize="12"
+                Text="{Binding StatusBarText, Mode=OneWay}" />
         </StackPanel>
 
         <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
