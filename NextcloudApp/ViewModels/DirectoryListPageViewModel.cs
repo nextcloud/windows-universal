@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace NextcloudApp.ViewModels
 {
-    public class DirectoryListPageViewModel : ViewModel
+    public sealed class DirectoryListPageViewModel : ViewModel
     {
         private LocalSettings _settings;
         private DirectoryService _directoryService;
@@ -31,32 +31,32 @@ namespace NextcloudApp.ViewModels
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
 
-        public ICommand GroupByNameAscendingCommand { get; private set; }
-        public ICommand GroupByNameDescendingCommand { get; private set; }
-        public ICommand GroupByDateAscendingCommand { get; private set; }
-        public ICommand GroupByDateDescendingCommand { get; private set; }
-        public ICommand GroupBySizeAscendingCommand { get; private set; }
-        public ICommand GroupBySizeDescendingCommand { get; private set; }
-        public ICommand GroupByTypeAscendingCommand { get; private set; }
-        public ICommand GroupByTypeDescendingCommand { get; private set; }
-        public ICommand RefreshCommand { get; private set; }
-        public ICommand CreateDirectoryCommand { get; private set; }
-        public ICommand UploadFilesCommand { get; private set; }
-        public ICommand UploadPhotosCommand { get; private set; }
-        public ICommand DownloadResourceCommand { get; private set; }
-        public ICommand DownloadSelectedCommand { get; private set; }
-        public ICommand DeleteResourceCommand { get; private set; }
-        public ICommand DeleteSelectedCommand { get; private set; }
-        public ICommand RenameResourceCommand { get; private set; }
-        public ICommand MoveResourceCommand { get; private set; }
-        public ICommand SynchronizeFolderCommand { get; private set; }
-        public ICommand SynchronizeThisFolderCommand { get; private set; }
-        public ICommand StopSynchronizeFolderCommand { get; private set; }
-        public ICommand StopSynchronizeThisFolderCommand { get; private set; }
-        public ICommand MoveSelectedCommand { get; private set; }
-        public ICommand PinToStartCommand { get; private set; }
-        public ICommand SelectToggleCommand { get; private set; }
-        public ICommand ToggleFavoriteCommand { get; private set; }
+        public ICommand GroupByNameAscendingCommand { get; }
+        public ICommand GroupByNameDescendingCommand { get; }
+        public ICommand GroupByDateAscendingCommand { get; }
+        public ICommand GroupByDateDescendingCommand { get; }
+        public ICommand GroupBySizeAscendingCommand { get; }
+        public ICommand GroupBySizeDescendingCommand { get; }
+        public ICommand GroupByTypeAscendingCommand { get; }
+        public ICommand GroupByTypeDescendingCommand { get; }
+        public ICommand RefreshCommand { get; }
+        public ICommand CreateDirectoryCommand { get; }
+        public ICommand UploadFilesCommand { get; }
+        public ICommand UploadPhotosCommand { get; }
+        public ICommand DownloadResourceCommand { get; }
+        public ICommand DownloadSelectedCommand { get; }
+        public ICommand DeleteResourceCommand { get; }
+        public ICommand DeleteSelectedCommand { get; }
+        public ICommand RenameResourceCommand { get; }
+        public ICommand MoveResourceCommand { get; }
+        public ICommand SynchronizeFolderCommand { get; }
+        public ICommand SynchronizeThisFolderCommand { get; }
+        public ICommand StopSynchronizeFolderCommand { get; }
+        public ICommand StopSynchronizeThisFolderCommand { get; }
+        public ICommand MoveSelectedCommand { get; }
+        public ICommand PinToStartCommand { get; }
+        public ICommand SelectToggleCommand { get; }
+        public ICommand ToggleFavoriteCommand { get; }
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -125,7 +125,7 @@ namespace NextcloudApp.ViewModels
                 ShowProgressIndicator();
                 await Directory.Refresh();
                 HideProgressIndicator();
-                this.SelectedFileOrFolder = null;
+                SelectedFileOrFolder = null;
             });
 
             SelectToggleCommand = new DelegateCommand(() =>
@@ -167,7 +167,7 @@ namespace NextcloudApp.ViewModels
             if (!suspending)
             {
                 _isNavigatingBack = true;
-                if (Directory != null) Directory.StopDirectoryListing();
+                Directory?.StopDirectoryListing();
                 Directory = null;
                 _selectedFileOrFolder = null;
             }
@@ -277,11 +277,11 @@ namespace NextcloudApp.ViewModels
             }
 
             var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
-            StorageFolder folder;
 
             try
             {
                 Task<ContentDialogResult> firstRunDialog = null;
+                StorageFolder folder;
                 if (syncInfo == null)
                 {
                     // try to Get parent or initialize
@@ -301,7 +301,7 @@ namespace NextcloudApp.ViewModels
                         };
 
                         folderPicker.FileTypeFilter.Add(".txt");
-                        StorageFolder newFolder = await folderPicker.PickSingleFolderAsync();
+                        var newFolder = await folderPicker.PickSingleFolderAsync();
 
                         if (newFolder == null)
                         {
@@ -309,8 +309,8 @@ namespace NextcloudApp.ViewModels
                         }
 
                         StorageApplicationPermissions.FutureAccessList.AddOrReplace(syncInfo.AccessListKey, newFolder);
-                        IReadOnlyList<IStorageItem> subElements = await newFolder.GetItemsAsync();
-                        NextcloudClient.NextcloudClient client = await ClientService.GetClient();
+                        var subElements = await newFolder.GetItemsAsync();
+                        var client = await ClientService.GetClient();
                         var remoteElements = await client.List(resourceInfo.Path);
 
                         if (subElements.Count > 0 && remoteElements.Count > 0)
@@ -343,7 +343,7 @@ namespace NextcloudApp.ViewModels
                         var dialog = new ContentDialog
                         {
                             Title = _resourceLoader.GetString("SyncStarted"),
-                            Content = new TextBlock()
+                            Content = new TextBlock
                             {
                                 Text = _resourceLoader.GetString("SyncStartedDetail"),
                                 TextWrapping = TextWrapping.WrapWholeWords,
@@ -355,9 +355,9 @@ namespace NextcloudApp.ViewModels
                     }
                     else
                     {
-                        string subPath = resourceInfo.Path.Substring(syncInfo.Path.Length);
-                        StorageFolder tempFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
-                        foreach (string foldername in subPath.Split('/'))
+                        var subPath = resourceInfo.Path.Substring(syncInfo.Path.Length);
+                        var tempFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(syncInfo.AccessListKey);
+                        foreach (var foldername in subPath.Split('/'))
                         {
                             if (foldername.Length > 0)
                                 tempFolder = await tempFolder.GetFolderAsync(foldername);
@@ -371,7 +371,7 @@ namespace NextcloudApp.ViewModels
                     // TODO catch exceptions
                 }
 
-                SyncService service = new SyncService(folder, resourceInfo, syncInfo, _resourceLoader);
+                var service = new SyncService(folder, resourceInfo, syncInfo, _resourceLoader);
                 await service.StartSync();
 
                 if (firstRunDialog != null)
@@ -419,59 +419,61 @@ namespace NextcloudApp.ViewModels
 
             var syncInfo = SyncDbUtils.GetFolderSyncInfoByPath(resourceInfo.Path);
 
-            if (syncInfo != null)
+            if (syncInfo == null)
             {
-                // If there exists an entry for this path - stop sync command has been triggered.
-                SyncDbUtils.DeleteFolderSyncInfo(syncInfo);
-                StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
+                return;
             }
+            // If there exists an entry for this path - stop sync command has been triggered.
+            SyncDbUtils.DeleteFolderSyncInfo(syncInfo);
+            StartDirectoryListing(); // This is just to update the menu flyout - maybe there is a better way
         }
 
         private void MoveSelected(object parameter)
         {
-            if (parameter is ListView listView)
+            if (!(parameter is ListView listView))
             {
-                var selectedItems = new List<ResourceInfo>();
-
-                foreach (var selectedItem in listView.SelectedItems)
-                {
-                    if (selectedItem is ResourceInfo resourceInfo)
-                    {
-                        selectedItems.Add(resourceInfo);
-                    }
-                }
-
-                var parameters = new MoveFileOrFolderPageParameters
-                {
-                    ResourceInfos = selectedItems
-                };
-
-                if (selectedItems.Count == 1)
-                {
-                    parameters = new MoveFileOrFolderPageParameters
-                    {
-                        ResourceInfo = selectedItems[0]
-                    };
-                }
-
-                Directory.ToggleSelectionMode();
-                _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
+                return;
             }
+            var selectedItems = new List<ResourceInfo>();
+
+            foreach (var selectedItem in listView.SelectedItems)
+            {
+                if (selectedItem is ResourceInfo resourceInfo)
+                {
+                    selectedItems.Add(resourceInfo);
+                }
+            }
+
+            var parameters = new MoveFileOrFolderPageParameters
+            {
+                ResourceInfos = selectedItems
+            };
+
+            if (selectedItems.Count == 1)
+            {
+                parameters = new MoveFileOrFolderPageParameters
+                {
+                    ResourceInfo = selectedItems[0]
+                };
+            }
+
+            Directory.ToggleSelectionMode();
+            _navigationService.Navigate(PageToken.MoveFileOrFolder.ToString(), parameters.Serialize());
         }
 
         private async void DeleteResource(object parameter)
         {
-            if (parameter as ResourceInfo == null)
+            if (!(parameter is ResourceInfo))
             {
                 return;
             }
 
             var dialog = new ContentDialog
             {
-                Title = _resourceLoader.GetString((parameter as ResourceInfo).ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
-                Content = new TextBlock()
+                Title = _resourceLoader.GetString(((ResourceInfo) parameter).ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
+                Content = new TextBlock
                 {
-                    Text = string.Format(_resourceLoader.GetString((parameter as ResourceInfo).ContentType.Equals("dav/directory") ? "DeleteFolder_Description" : "DeleteFile_Description"), (parameter as ResourceInfo).Name),
+                    Text = string.Format(_resourceLoader.GetString(((ResourceInfo) parameter).ContentType.Equals("dav/directory") ? "DeleteFolder_Description" : "DeleteFile_Description"), ((ResourceInfo) parameter).Name),
                     TextWrapping = TextWrapping.WrapWholeWords,
                     Margin = new Thickness(0, 20, 0, 0)
                 },
@@ -487,7 +489,7 @@ namespace NextcloudApp.ViewModels
             }
 
             ShowProgressIndicator();
-            await Directory.DeleteResource(parameter as ResourceInfo);
+            await Directory.DeleteResource((ResourceInfo) parameter);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
             RaisePropertyChanged(nameof(StatusBarText));
@@ -495,43 +497,44 @@ namespace NextcloudApp.ViewModels
 
         private async void DeleteSelected(object parameter)
         {
-            if (parameter is ListView listView)
+            if (!(parameter is ListView listView))
             {
-                var selectedItems = new List<ResourceInfo>();
-                foreach (var selectedItem in listView.SelectedItems)
-                {
-                    if (selectedItem is ResourceInfo resourceInfo)
-                    {
-                        selectedItems.Add(resourceInfo);
-                    }
-                }
-                var dialog = new ContentDialog
-                {
-                    Title = _resourceLoader.GetString("DeleteFiles"),
-                    Content = new TextBlock()
-                    {
-                        Text = string.Format(_resourceLoader.GetString("DeleteFiles_Description"), selectedItems.Count),
-                        TextWrapping = TextWrapping.WrapWholeWords,
-                        Margin = new Thickness(0, 20, 0, 0)
-                    },
-                    PrimaryButtonText = _resourceLoader.GetString("Yes"),
-                    SecondaryButtonText = _resourceLoader.GetString("No")
-                };
-
-                var dialogResult = await _dialogService.ShowAsync(dialog);
-
-                if (dialogResult != ContentDialogResult.Primary)
-                {
-                    return;
-                }
-
-                Directory.ToggleSelectionMode();
-                ShowProgressIndicator();
-                await Directory.DeleteSelected(selectedItems);
-                HideProgressIndicator();
-                SelectedFileOrFolder = null;
-                RaisePropertyChanged(nameof(StatusBarText));
+                return;
             }
+            var selectedItems = new List<ResourceInfo>();
+            foreach (var selectedItem in listView.SelectedItems)
+            {
+                if (selectedItem is ResourceInfo resourceInfo)
+                {
+                    selectedItems.Add(resourceInfo);
+                }
+            }
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("DeleteFiles"),
+                Content = new TextBlock()
+                {
+                    Text = string.Format(_resourceLoader.GetString("DeleteFiles_Description"), selectedItems.Count),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("Yes"),
+                SecondaryButtonText = _resourceLoader.GetString("No")
+            };
+
+            var dialogResult = await _dialogService.ShowAsync(dialog);
+
+            if (dialogResult != ContentDialogResult.Primary)
+            {
+                return;
+            }
+
+            Directory.ToggleSelectionMode();
+            ShowProgressIndicator();
+            await Directory.DeleteSelected(selectedItems);
+            HideProgressIndicator();
+            SelectedFileOrFolder = null;
+            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private void PinToStart(object parameter)
@@ -539,20 +542,19 @@ namespace NextcloudApp.ViewModels
             if (!(parameter is ResourceInfo))
                 return;
 
-            var resourceInfo = parameter as ResourceInfo;
+            var resourceInfo = (ResourceInfo) parameter;
             _tileService.CreatePinnedObject(resourceInfo);
             SelectedFileOrFolder = null;
         }
 
         private bool CanPinToStart(object parameter)
         {
-            if (parameter is ResourceInfo)
+            if (!(parameter is ResourceInfo))
             {
-                var resourceInfo = parameter as ResourceInfo;
-                return _tileService.IsTilePinned(resourceInfo);
+                return false;
             }
-
-            return false;
+            var resourceInfo = (ResourceInfo) parameter;
+            return _tileService.IsTilePinned(resourceInfo);
         }
 
         private void UploadFiles()
@@ -585,7 +587,9 @@ namespace NextcloudApp.ViewModels
             var res = parameter as ResourceInfo;
 
             if (res == null)
+            {
                 return;
+            }
 
             ShowProgressIndicator();
             await Directory.ToggleFavorite(res);            
@@ -601,7 +605,7 @@ namespace NextcloudApp.ViewModels
                 var dialog = new ContentDialog
                 {
                     Title = _resourceLoader.GetString("CreateNewFolder"),
-                    Content = new TextBox()
+                    Content = new TextBox
                     {
                         Header = _resourceLoader.GetString("FolderName"),
                         PlaceholderText = _resourceLoader.GetString("NewFolder"),
@@ -658,12 +662,13 @@ namespace NextcloudApp.ViewModels
 
                 dialogResult = await _dialogService.ShowAsync(dialog);
 
-                if (dialogResult != ContentDialogResult.Primary)
+                if (dialogResult == ContentDialogResult.Primary)
                 {
-                    SelectedFileOrFolder = null;
-                    RaisePropertyChanged(nameof(StatusBarText));
-                    return;
+                    continue;
                 }
+                SelectedFileOrFolder = null;
+                RaisePropertyChanged(nameof(StatusBarText));
+                return;
             }
         }
 
@@ -679,7 +684,7 @@ namespace NextcloudApp.ViewModels
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString("Rename"),
-                Content = new TextBox()
+                Content = new TextBox
                 {
                     Header = _resourceLoader.GetString("ChooseANewName"),
                     Text = resourceInfo.Name,
@@ -708,28 +713,28 @@ namespace NextcloudApp.ViewModels
             var success = await Directory.Rename(resourceInfo.Name, newName);
             HideProgressIndicator();
 
-            if (success)
+            if (!success)
             {
-                SelectedFileOrFolder = null;
                 return;
             }
+            SelectedFileOrFolder = null;
         }
 
         public DirectoryService Directory
         {
-            get { return _directoryService; }
-            set { SetProperty(ref _directoryService, value); }
+            get => _directoryService;
+            set => SetProperty(ref _directoryService, value);
         }
 
         public LocalSettings Settings
         {
-            get { return _settings; }
-            private set { SetProperty(ref _settings, value); }
+            get => _settings;
+            private set => SetProperty(ref _settings, value);
         }
 
-        public virtual ResourceInfo SelectedFileOrFolder
+        public ResourceInfo SelectedFileOrFolder
         {
-            get { return _selectedFileOrFolder; }
+            get => _selectedFileOrFolder;
             set
             {
                 if (Directory != null && Directory.IsSelecting)
@@ -790,7 +795,7 @@ namespace NextcloudApp.ViewModels
 
         public int SelectedPathIndex
         {
-            get { return _selectedPathIndex; }
+            get => _selectedPathIndex;
             set
             {
                 try
@@ -846,9 +851,9 @@ namespace NextcloudApp.ViewModels
         {
             get
             {
-                var folderCount = Directory.FilesAndFolders.Where(x => x.IsDirectory).Count();
-                var fileCount = Directory.FilesAndFolders.Where(x => !x.IsDirectory).Count();
-                return String.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                
+                var folderCount = Directory.FilesAndFolders.Count(x => x.IsDirectory);
+                var fileCount = Directory.FilesAndFolders.Count(x => !x.IsDirectory);
+                return string.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                
             }
         }
     }

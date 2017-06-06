@@ -1,5 +1,4 @@
-﻿using System.Net;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Microsoft.Practices.Unity;
 using NextcloudClient.Exceptions;

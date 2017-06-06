@@ -28,8 +28,8 @@ namespace NextcloudApp.ViewModels
 
         public SyncStatusPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
-            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
-            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncAction);
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncConflictAction);
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
@@ -69,7 +69,7 @@ namespace NextcloudApp.ViewModels
 
             foreach (SyncInfoDetail detail in listView.SelectedItems)
             {
-                detail.ConflictSolution = ConflictSolution.PREFER_LOCAL;
+                detail.ConflictSolution = ConflictSolution.PreferLocal;
                 SyncDbUtils.SaveSyncInfoDetail(detail);
                 selectedList.Add(detail);
             }
@@ -90,7 +90,7 @@ namespace NextcloudApp.ViewModels
 
             foreach (SyncInfoDetail detail in listView.SelectedItems)
             {
-                detail.ConflictSolution = ConflictSolution.PREFER_REMOTE;
+                detail.ConflictSolution = ConflictSolution.PreferRemote;
                 SyncDbUtils.SaveSyncInfoDetail(detail);
                 selectedList.Add(detail);
             }

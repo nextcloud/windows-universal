@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Windows.ApplicationModel.Activation;
-using Windows.ApplicationModel.DataTransfer.ShareTarget;
 
 namespace NextcloudApp.Models
 {
