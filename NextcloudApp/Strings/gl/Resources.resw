@@ -1,0 +1,611 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Todos os ficheiros</value>
+  </data>
+  <data name="Always" xml:space="preserve">
+    <value>Sempre</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Produciuse un erro</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Engadir</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Crear un cartafol</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Tirar unha foto</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Enviar ficheiros</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Enviar fotos</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Ordenar</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+    <value>Data (máis antigo ao principio)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+    <value>Data (máis recente ao principio)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+    <value>Nome (A - Z)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+    <value>Nome (Z -A)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+    <value>Tamaño (de menor a maior)</value>
+  </data>
+  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+    <value>Tamaño (de maior a menor)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Tipo (A arriba)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Tipo (Z arriba)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Produciuse un erro da aplicación</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>A  aplicación atopou un problema. Pedímoslle desculpas polos inconvenientes. Se estaba a traballar en algo, a información na que estaba traballando perdeuse.
+
+Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos preparado? Isto axuda a solucionar máis rapidamente o problema.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Non é posíbel crear o cartafol</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Conectar</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Tipo de contido</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Creado</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Crear un cartafol novo</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Descargando o ficheiro</value>
+  </data>
+  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+    <value>Descargando vistas previas das imaxes</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} byte)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Nome do cartafol</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Última modificación</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Nunca</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Novo cartafol</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Non autorizado</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>O servidor devolveu un código de erro 401 (Non autorizado). Acceda de novo.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} de {1} usados</value>
+  </data>
+  <data name="ReseTthisApp.Content" xml:space="preserve">
+    <value>Restabelecer esta aplicación</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Tentar de novo</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Enderezo do servidor</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Axustes</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Axustes</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Amosar agrupada a lista de ficheiros e cartafoles</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Xa existe un elemento con este nome. Especifique un nome diferente.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Nome de usuario</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versión {0}</value>
+  </data>
+  <data name="WiFiOnly" xml:space="preserve">
+    <value>Só cando estea conectado por WiFi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Eliminar ficheiro</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Confirma que quere eliminar o ficheiro {0}?</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Eliminar o cartafol</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Confirma que quere eliminar o cartafol {0}?</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{0} de {1} enviados</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Enviando o ficheiro {0} de {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Enviando o ficheiro…</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{0} de {1} descargados</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Activouse o modo de mantemento no servidor.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Nome de usuario ou contrasinal incorrecto</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Versión do cliente {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Non puido resolverse o nome do servidor ou o enderezo.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Versión do servidor {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>agardando resposta do servidor</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Escolla un nome novo</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Renomear</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Renomear</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Renomear</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Mover a</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Mover a</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Feito</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Escoller cartafol</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Non é posíbel acadar o servidor co enderezo {0}.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Descargar como ficheiro ZIP</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} descargado</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>Para acceder ao seu Nextcloud, forneza a información de autenticaión do seu dispositivo.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Autenticación de Windows Hello</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>Non foi establecido un PIN para este dispositivo. Para poder usar Windows Hello, necesitase un PIN definido.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Requírese autenticación</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>Non é posíbel abrir o Nextcloud ata que forneza a información de autenticación do seu dispositivo.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Ténteo de novo</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud para Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>A súa aplicación foi actualizada á versión {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Novas funcionalidades e melloras nesta versión:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Recomendado</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Mover ficheiros e cartafoles 
+• Renomear ficheiros e cartafoles 
+• Sincronización manual dos cartafoles 
+• Descargar directorios como un arquivo .zip 
+• Seleccionar múltiples ficheiros e cartafoles 
+• Ancorar ficheiros e cartafoles á pantalla de inicio 
+• Usar Windows Hello para autenticar ao acceder á aplicación 
+• Permitir certificados SSL auto asinados 
+• Amosar o tamaño dos cartafoles en lista 
+• Compartir ficheiros coa aplicación 
+• Usar a bóveda de contrasinais para almacenar credenciais de usuario 
+• Melloras de seguridade e corrección de fallas 
+• Unha nova e máis estábel biblioteca WebDAV</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Ancorar ao inicio</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Ancorar ao inicio</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Conectar</value>
+  </data>
+  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorar os certificados SSL auto asinados incorrectos</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Modo experto</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Estado da sincronización</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Conflitos</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Erros</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Preferir o ficheiro local</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Limpar o historial de sincronización</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Preferir o ficheiro remoto</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>A entidade de certificación é nula ou incorrecta. Aínda así quere conectar?
+
+Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-the-middle -mitm)!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Atención!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>Para que estes axustes teñan efecto é necesario reiniciar a aplicación.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Consello</value>
+  </data>
+  <data name="SyncErrorHint.Text" xml:space="preserve">
+    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser problemas temporais (p. ex., o ficheiro abriuse noutra aplicación) e deberían desaparecer trala próxima sincronización.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Coidado cos conflitos!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Tanto o cartafol local como o remoto non están baleiros. Isto pode xerar conflitos, porque non sabemos que ficheiros son os correctos.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Iniciouse a sincronización!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>A sincronización farase en segundo plano. Cando remate recibirá unha notificación.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Servizo temporalmente non dispoñíbel (xeralmente por mor de traballos de mantemento de corto prazo).
+Ténteo nun chisco.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>O ficheiro cambiou local e remotamente. Cal prefire?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>O ficheiro foi creado local e remotamente, cal é o correcto?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>O ficheiro local foi eliminado mais o remoto foi modificado. Cal prefire?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Conflito</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>O ficheiro remoto foi eliminado mais o local foi modificado. Cal prefire?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>A sincronización do cartafol {0} rematou con {1} cambios e {2} erros ou conflctos.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>A sincronización do cartafol {0} rematou con {1} cambios.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Rematou a sincronización</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>A sincronización do cartafol {0} detívose, por mor de que a aplicación foi suspendida.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>A sincronización foi suspendida</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Estado da sincronización</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Ruta local:</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Ruta do Nexcloud:</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Escolla o cartafol car o que quere enviar os ficheiros</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Cartafoles</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Elementos: {0} (cartafoles: {1} ficheiros: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Ao activar o modo experto, a aplicación fornece algunhas funcionalidades e  informacións adicionais, isto pode interesarlle a todos os usuarios.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignorar os certificados SSL auto asinados. Isto permite o uso de entidades de certificación SSL nulas ou incorrectas.  Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-the-middle -mitm)!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sincronizar este cartafol</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Deter a sincronización deste cartafol</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Deter a sincronización</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Estado da sincronización</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Sincronizar agora</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sincronizar</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Sincronizar agora este cartafol</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Sincronizar este cartafol</value>
+  </data>
+  <data name="ThemeDark" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="ThemeLight" xml:space="preserve">
+    <value>Craro</value>
+  </data>
+  <data name="ThemeSystem" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Compartido con outros</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Compartido comigo</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Compartido por ligazón</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Preparando para compartir</value>
+  </data>
+</root>
