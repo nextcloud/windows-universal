@@ -38,5 +38,19 @@
         public static string ThemeDark = "ThemeDark";
 
         public static string ThemeLight = "ThemeLight";
+
+        #region SyncService
+
+        public static string SyncService_Error_CannotCreateClient = "SyncService_Error_CannotCreateClient";
+
+        public static string SyncService_Error_DeleteFolderRemotely = "SyncService_Error_DeleteFolderRemotely";
+
+        public static string SyncService_Error_CreateFolderRemotely = "SyncService_Error_CreateFolderRemotely";
+
+        public static string SyncService_Error_UploadFile = "SyncService_Error_UploadFile";
+
+        public static string SyncService_Error_DownloadFile = "SyncService_Error_DownloadFile";
+
+        #endregion SyncService
     }
 }

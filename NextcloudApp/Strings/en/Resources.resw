@@ -608,4 +608,23 @@ Please try again later.</value>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Prepare for sharing...</value>
   </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
 </root>
