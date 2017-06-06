@@ -4,6 +4,16 @@ namespace NextcloudApp.Models
 {
     public class ThemeItem
     {
+        public ThemeItem()
+        {
+        }
+
+        public ThemeItem(string name, Theme value)
+        {
+            Name = name;
+            Value = value;
+        }
+
         public string Name { get; set; }
         public Theme Value { get; set; }
 

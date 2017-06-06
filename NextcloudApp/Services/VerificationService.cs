@@ -20,7 +20,7 @@ namespace NextcloudApp.Services
         public static async Task<bool> CheckAvailabilityAsync()
         {
             var available = await UserConsentVerifier.CheckAvailabilityAsync();
-            return available == Windows.Security.Credentials.UI.UserConsentVerifierAvailability.Available;
+            return available == UserConsentVerifierAvailability.Available;
         }
 
         /// <summary>
@@ -50,8 +50,10 @@ namespace NextcloudApp.Services
 
             var resourceLoader = app.Container.Resolve<IResourceLoader>();
 
-            if (String.IsNullOrEmpty(prompt))
+            if (string.IsNullOrEmpty(prompt))
+            {
                 prompt = resourceLoader.GetString(ResourceConstants.VerificationService_Prompt);
+            }
 
             try
             {

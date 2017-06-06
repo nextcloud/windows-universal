@@ -14,7 +14,6 @@ using NextcloudApp.Models;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
-using Windows.UI.Core;
 
 namespace NextcloudApp.Services
 {
@@ -22,7 +21,7 @@ namespace NextcloudApp.Services
     {
         private static DirectoryService _instance;
         private readonly ObservableGroupingCollection<string, FileOrFolder> _groupedFilesAndFolders;
-        private ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
+        private readonly ObservableGroupingCollection<string, FileOrFolder> _groupedFolders;
         private bool _isSorting;
         private bool _continueListing;
         private bool _isSelecting;
@@ -88,8 +87,6 @@ namespace NextcloudApp.Services
                     break;
                 case GroupMode.GroupByTypeDescending:
                     GroupByTypeDescending();
-                    break;
-                default:
                     break;
             }
         }
@@ -182,7 +179,7 @@ namespace NextcloudApp.Services
 
         public void ToggleSelectionMode()
         {
-            IsSelecting = IsSelecting ? false : true;
+            IsSelecting = !IsSelecting;
         }
 
         private static string GetSizeHeader(ResourceInfo fileOrFolder)
@@ -194,12 +191,16 @@ namespace NextcloudApp.Services
 
             var index = 0;
 
-            for (int i = 0; i < sizesValuesMb.Length; i++)
+            foreach (var t in sizesValuesMb)
             {
-                if (sizeMb > sizesValuesMb[i])
+                if (sizeMb > t)
+                {
                     index++;
+                }
                 else
+                {
                     break;
+                }
             }
 
             return sizesDisplay[index];
@@ -212,7 +213,7 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing()
         {
-            await StartDirectoryListing(null, null);
+            await StartDirectoryListing(null);
         }
 
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, String viewName = null)
@@ -272,28 +273,27 @@ namespace NextcloudApp.Services
                 foreach (var item in list)
                 {
                     if (resourceInfoToExclude != null && item == resourceInfoToExclude)
+                    {
                         continue;
+                    }
 
                     FilesAndFolders.Add(new FileOrFolder(item));
 
-                    if (item.IsDirectory)
+                    if (!item.IsDirectory)
                     {
-                        if (RemoveResourceInfos != null)
-                        {
-                            int index = RemoveResourceInfos.FindIndex(
-                                delegate (ResourceInfo res)
-                                {
-                                    return res.Path.Equals(item.Path, StringComparison.Ordinal);
-                                });
-                            if (index == -1)
-                            {
-                                Folders.Add(new FileOrFolder(item));
-                            }
-                        }
-                        else
+                        continue;
+                    }
+                    if (RemoveResourceInfos != null)
+                    {
+                        var index = RemoveResourceInfos.FindIndex(res => res.Path.Equals(item.Path, StringComparison.Ordinal));
+                        if (index == -1)
                         {
                             Folders.Add(new FileOrFolder(item));
                         }
+                    }
+                    else
+                    {
+                        Folders.Add(new FileOrFolder(item));
                     }
                 }
             }
@@ -372,7 +372,7 @@ namespace NextcloudApp.Services
 
         public bool IsSorting
         {
-            get { return _isSorting; }
+            get => _isSorting;
             set
             {
                 if (_isSorting == value)
@@ -387,7 +387,7 @@ namespace NextcloudApp.Services
 
         public string SelectionMode
         {
-            get { return _selectionMode; }
+            get => _selectionMode;
             set
             {
                 if (_selectionMode == value)
@@ -401,7 +401,7 @@ namespace NextcloudApp.Services
 
         public bool IsSelecting
         {
-            get { return _isSelecting; }
+            get => _isSelecting;
             set
             {
                 if (_isSelecting == value)
@@ -511,7 +511,7 @@ namespace NextcloudApp.Services
                 var success = await client.Delete(path);
                 if (!success)
                 {
-                    return success;
+                    return false;
                 }
             }
 

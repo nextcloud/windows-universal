@@ -1,20 +1,16 @@
-﻿using Microsoft.QueryStringDotNET;
-using Microsoft.Toolkit.Uwp.Notifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Windows.ApplicationModel.Resources;
 using Windows.UI.Notifications;
+using Microsoft.QueryStringDotNET;
+using Microsoft.Toolkit.Uwp.Notifications;
 using NextcloudApp.Models;
 
 namespace NextcloudApp.Services
 {
-    class ToastNotificationService
+    internal class ToastNotificationService
     {
-        public const string SYNCACTION = "syncAction";
-        public const string SYNCONFLICTACTION = "syncConflict";
+        public const string SyncAction = "syncAction";
+        public const string SyncConflictAction = "syncConflict";
 
         public static void ShowSyncFinishedNotification(string folder, int changes, int errors)
         {
@@ -23,50 +19,55 @@ namespace NextcloudApp.Services
                 // Don't spam the people when nothing happened.
                 return;
             }
-            ResourceLoader loader = new ResourceLoader();
-            string title = loader.GetString("SyncFinishedTitle");
+            var loader = new ResourceLoader();
+            var title = loader.GetString("SyncFinishedTitle");
             string content;
             string action;
             if (errors == 0)
             {
-                action = SYNCACTION;
-                content = String.Format(loader.GetString("SyncFinishedSuccessful"), folder, changes);
-            } else {
-                action = SYNCONFLICTACTION;
-                content = String.Format(loader.GetString("SyncFinishedConflicts"), folder, changes, errors);
+                action = SyncAction;
+                content = string.Format(loader.GetString("SyncFinishedSuccessful"), folder, changes);
+            }
+            else
+            {
+                action = SyncConflictAction;
+                content = string.Format(loader.GetString("SyncFinishedConflicts"), folder, changes, errors);
             }
             // Construct the visuals of the toast
-            ToastVisual visual = new ToastVisual()
+            var visual = new ToastVisual
             {
-                BindingGeneric = new ToastBindingGeneric()
+                BindingGeneric = new ToastBindingGeneric
                 {
                     Children =
                     {
-                        new AdaptiveText()
+                        new AdaptiveText
                         {
                             Text = title
                         },
-                        new AdaptiveText()
+                        new AdaptiveText
                         {
                             Text = content
                         }
                     }
                 }
             };
-            ToastContent toastContent = new ToastContent()
+            var toastContent = new ToastContent
             {
                 Visual = visual,
 
                 // Arguments when the user taps body of toast
-                Launch = new QueryString()
+                Launch = new QueryString
                 {
                     { "action", action }
                 }.ToString()
             };
-            var toast = new ToastNotification(toastContent.GetXml());
-            toast.ExpirationTime = DateTime.Now.AddMinutes(30); // TODO Replace with syncinterval from settings.
+            var toast = new ToastNotification(toastContent.GetXml())
+            {
+                ExpirationTime = DateTime.Now.AddMinutes(30),
+                Group = action
+            };
+            // TODO Replace with syncinterval from settings.
             // TODO groups/tags?
-            toast.Group = action;
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
 
@@ -76,43 +77,46 @@ namespace NextcloudApp.Services
             {
                 return;
             }
-            ResourceLoader loader = new ResourceLoader();
-            string title = loader.GetString("SyncSuspendedTitle");
-            string content = String.Format(loader.GetString("SyncSuspendedDescription"), fsi.Path);
-            string action = SYNCACTION;
+            var loader = new ResourceLoader();
+            var title = loader.GetString("SyncSuspendedTitle");
+            var content = string.Format(loader.GetString("SyncSuspendedDescription"), fsi.Path);
+            const string action = SyncAction;
              
             // Construct the visuals of the toast
-            ToastVisual visual = new ToastVisual()
+            var visual = new ToastVisual
             {
-                BindingGeneric = new ToastBindingGeneric()
+                BindingGeneric = new ToastBindingGeneric
                 {
                     Children =
                     {
-                        new AdaptiveText()
+                        new AdaptiveText
                         {
                             Text = title
                         },
-                        new AdaptiveText()
+                        new AdaptiveText
                         {
                             Text = content
                         }
                     }
                 }
             };
-            ToastContent toastContent = new ToastContent()
+            var toastContent = new ToastContent
             {
                 Visual = visual,
 
                 // Arguments when the user taps body of toast
-                Launch = new QueryString()
+                Launch = new QueryString
                 {
                     { "action", action }
                 }.ToString()
             };
-            var toast = new ToastNotification(toastContent.GetXml());
-            toast.ExpirationTime = DateTime.Now.AddMinutes(30); // TODO Replace with syncinterval from settings.
+            var toast = new ToastNotification(toastContent.GetXml())
+            {
+                ExpirationTime = DateTime.Now.AddMinutes(30),
+                Group = action
+            };
+            // TODO Replace with syncinterval from settings.
             // TODO groups/tags?
-            toast.Group = action;
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
     }

@@ -21,40 +21,22 @@ namespace NextcloudApp.Models
         [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string ServerAddress
         {
-            get
-            {
-                return Get<string>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<string>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string Username
         {
-            get
-            {
-                return Get<string>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<string>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = true)]
         public bool ShowFileAndFolderGroupingHeader
         {
-            get
-            {
-                return Get<bool>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         // As only serializable objects can be stored in the LocalSettings, we use a string internally.
@@ -65,10 +47,7 @@ namespace NextcloudApp.Models
             {
                 var strVal = Get<string>();
 
-                if (string.IsNullOrEmpty(strVal))
-                    return PreviewImageDownloadMode.Always;
-                else
-                    return JsonConvert.DeserializeObject<PreviewImageDownloadMode>(strVal);
+                return string.IsNullOrEmpty(strVal) ? PreviewImageDownloadMode.Always : JsonConvert.DeserializeObject<PreviewImageDownloadMode>(strVal);
             }
             set
             {
@@ -80,92 +59,50 @@ namespace NextcloudApp.Models
         [DefaultSettingValue(Value = 0)]
         public int AppTotalRuns
         {
-            get
-            {
-                return Get<int>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = DefaultValueEmptyString)]
         public string AppRunsAfterLastUpdateVersion
         {
-            get
-            {
-                return Get<string>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<string>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = 0)]
         public int AppRunsAfterLastUpdate
         {
-            get
-            {
-                return Get<int>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<int>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = false)]
         public bool UseWindowsHello
         {
-            get
-            {
-                return Get<bool>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = false)]
         public bool ShowUpdateMessage
         {
-            get
-            {
-                return Get<bool>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = false)]
         public bool IgnoreServerCertificateErrors
         {
-            get
-            {
-                return Get<bool>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         [DefaultSettingValue(Value = false)]
         public bool ExpertMode
         {
-            get
-            {
-                return Get<bool>();
-            }
-            set
-            {
-                Set(value);
-            }
+            get => Get<bool>();
+            set => Set(value);
         }
 
         // As only serializable objects can be stored in the LocalSettings, we use a string internally.
@@ -176,10 +113,7 @@ namespace NextcloudApp.Models
             {
                 var strVal = Get<string>();
 
-                if (string.IsNullOrEmpty(strVal))
-                    return GroupMode.GroupByNameAscending;
-                else
-                    return JsonConvert.DeserializeObject<GroupMode>(strVal);
+                return string.IsNullOrEmpty(strVal) ? GroupMode.GroupByNameAscending : JsonConvert.DeserializeObject<GroupMode>(strVal);
             }
             set
             {

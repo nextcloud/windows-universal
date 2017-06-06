@@ -227,7 +227,7 @@ namespace NextcloudApp
             await base.OnActivateApplicationAsync(args);
 
             // Remove unnecessary notifications whenever the app is used.
-            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncAction);
 
             // Handle toast activation
             var eventArgs = args as ToastNotificationActivatedEventArgs;
@@ -240,12 +240,12 @@ namespace NextcloudApp
                 switch (query["action"])
                 {
                     // Nothing to do here
-                    case ToastNotificationService.SYNCACTION:
+                    case ToastNotificationService.SyncAction:
                         NavigationService.Navigate(PageToken.DirectoryList.ToString(), null);
                         break;
                     // Open Conflict Page
-                    case ToastNotificationService.SYNCONFLICTACTION:
-                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCONFLICTACTION);
+                    case ToastNotificationService.SyncConflictAction:
+                        ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncConflictAction);
                         NavigationService.Navigate(PageToken.SyncConflict.ToString(), null);
                         break;
                 }
@@ -347,7 +347,7 @@ namespace NextcloudApp
             // Ensure the current window is active
             Window.Current.Activate();
             // Remove unnecessary notifications whenever the app is used.
-            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SYNCACTION);
+            ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncAction);
             PinStartPageParameters pageParameters = null;
             if (!string.IsNullOrEmpty(args?.Arguments))
             {
