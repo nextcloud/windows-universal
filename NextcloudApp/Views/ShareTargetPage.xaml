@@ -104,7 +104,7 @@
                     ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.SelectionMode}"
-                    Padding="0,2,0,2"
+                    Padding="0"
                     ContinuumNavigationTransitionInfo.ExitElementContainer="True"
                     Header="Choose the folder where you want to upload the files">
                     <ListView.HeaderTemplate>
