@@ -20,6 +20,8 @@ using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using DecaTec.WebDav;
 using System.IO;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace NextcloudApp.ViewModels
 {
@@ -171,6 +173,32 @@ namespace NextcloudApp.ViewModels
                         BytesTotal = (long) properties.Size;
                     });
 
+                    var filePath = ResourceInfo.Path + localFile.Name;
+
+                    var canUploadFile = true;
+                    if (await client.Exists(filePath))
+                    {
+                        var dialog = new ContentDialog
+                        {
+                            Title = _resourceLoader.GetString("FileAlreadyExists"),
+                            Content =_resourceLoader.GetString("DoYouWantToOverwriteIt"),
+                            PrimaryButtonText = _resourceLoader.GetString("Overwrite"),
+                            SecondaryButtonText = _resourceLoader.GetString("Cancel")
+                        };
+
+                        var dialogResult = await _dialogService.ShowAsync(dialog);
+
+                        if (dialogResult != ContentDialogResult.Primary)
+                        {
+                            canUploadFile = false;
+                        }
+                    }
+
+                    if (!canUploadFile)
+                    {
+                        continue;
+                    }
+
                     // this moves the OpenReadAsync off of the UI thread and works fine...
                     using (
                         var stream = (
@@ -186,7 +214,7 @@ namespace NextcloudApp.ViewModels
                         var targetStream = stream.AsStreamForRead();
 
                         IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
-                        await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                        await client.Upload(filePath, targetStream, localFile.ContentType, progress, _cts.Token);
                     }
                 }
                 catch (ResponseError e2)
