@@ -37,6 +37,7 @@
                 <ResourceDictionary Source="ms-appx:///Themes/SplitViewStyles.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/MenuFlyoutIconItemStyle.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/HelpButtonStyle.xaml" />
+                <ResourceDictionary Source="ms-appx:///Themes/PivotStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </prismUnity:PrismUnityApplication.Resources>
