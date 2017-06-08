@@ -483,8 +483,8 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Devem ser problemas temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -608,34 +608,34 @@ Por favor tente mais tarde.</value>
     <value>Preparar para compartilhar...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Criar pasta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Erro ao criar cliente para comunicação WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Não foi possível criar o diretório &apos;{0}&apos; no Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Exclusão de &apos;{0}&apos; no Nextcloud falhou.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Erro ao baixar o arquivo &apos;{0}&apos; do Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Erro ao enviar o arquivo &apos;{0}&apos; para o Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Quer sobrescrever?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Arquivo já existe</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Sobrescrever</value>
   </data>
 </root>

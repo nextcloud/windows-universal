@@ -484,8 +484,8 @@ Descargar directorios como un arhivo .zip
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de los errores que ocurrieron durante la sincronización. Estos pueden ser temas temporales (ejem. el archvio ha sido abierto por otra aplicación) y puede que no se presenten en la siguiente ejecución de sincronización. </value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Tenga cuidado con los conflictos!</value>

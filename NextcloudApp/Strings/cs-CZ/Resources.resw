@@ -482,8 +482,8 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
   <data name="Hint" xml:space="preserve">
     <value>Nápověda</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Seznam chyb, které vznikly při synchronizaci. Mělo by se jednat o dočasné problémy (např. soubor byl otevřen jinou aplikací), které by měli zmizet při příští synchronizaci.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Pozor na konflikty!</value>

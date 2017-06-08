@@ -484,8 +484,8 @@ Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de los errores que ocurrieron durante la sincronización. Estos deberían ser problemas temporales (p. ej., el archivo se ha abierto en otra app) y deberían desaparecer tras la próxima sincronización.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Cuidado con los conflictos!</value>
