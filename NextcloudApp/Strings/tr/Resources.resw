@@ -484,8 +484,8 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
   <data name="Hint" xml:space="preserve">
     <value>İpucu</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Çakışmalara dikkat edin!</value>
@@ -609,34 +609,34 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Paylaşılmaya hazırlanılıyor...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Klasör ekle</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>WebDAV iletişimi için istemci oluşturulurken sorun çıktı</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Nextcloud üzerinde &apos;{0}&apos; klasörü oluşturulamadı.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>&apos;{0}&apos; klasörü Nextcloud üzerinden silinemedi.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>&apos;{0}&apos; dosyası Nextcloud üzerinden indirilemedi</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>&apos;{0}&apos; dosyası Nextcloud üzerine yüklenemedi.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Üzerine yazmak ister misiniz?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Dosya zaten var</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Üzerine Yaz</value>
   </data>
 </root>
