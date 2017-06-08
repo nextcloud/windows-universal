@@ -112,7 +112,9 @@
                             <Border Background="{ThemeResource SystemControlHighlightAccentBrush}">
                                 <TextBlock 
                                     Text="{Binding}"
-                                    Padding="14,8,14,8"/>
+                                    TextWrapping="WrapWholeWords"
+                                    Padding="14,8,14,8"
+                                    Foreground="White"/>
                             </Border>
                         </DataTemplate>
                     </ListView.HeaderTemplate>
