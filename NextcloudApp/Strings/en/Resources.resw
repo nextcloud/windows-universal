@@ -537,10 +537,10 @@ Please try again later.</value>
     <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>

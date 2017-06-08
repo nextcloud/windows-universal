@@ -137,7 +137,7 @@
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
     <Compile Include="Constants\ResourceConstants.cs" />
     <Compile Include="Controls\ThemeablePage.cs" />
-    <Compile Include="Converter\ConflictTypeToForegroundConverter.cs" />
+    <Compile Include="Converter\ConflictTypeNoneToVisibilityConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
     <Compile Include="Converter\ExpertModeToVisibilityConverter.cs" />

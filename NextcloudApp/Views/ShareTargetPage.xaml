@@ -113,7 +113,8 @@
                                 <TextBlock 
                                     Text="{Binding}"
                                     TextWrapping="WrapWholeWords"
-                                    Padding="14,8,14,8"/>
+                                    Padding="14,8,14,8"
+                                    Foreground="White"/>
                             </Border>
                         </DataTemplate>
                     </ListView.HeaderTemplate>

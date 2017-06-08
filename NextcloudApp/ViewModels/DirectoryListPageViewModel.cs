@@ -851,6 +851,10 @@ namespace NextcloudApp.ViewModels
         {
             get
             {
+                if (Directory == null)
+                {
+                    return string.Empty;
+                }
                 var folderCount = Directory.FilesAndFolders.Count(x => x.IsDirectory);
                 var fileCount = Directory.FilesAndFolders.Count(x => !x.IsDirectory);
                 return string.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                

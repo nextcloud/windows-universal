@@ -28,7 +28,7 @@
             <converter:IsGlyphToVisibilityConverter x:Key="IsGlyphToVisibilityConverter"/>
             <converter:ConflictTypeToStringConverter x:Key="ConflictTypeToStringConverter"/>
             <converter:SyncInfoStoragePathConverter x:Key="SyncInfoStoragePathConverter" />
-            <converter:ConflictTypeToForegroundConverter x:Key="ConflictTypeToForegroundConverter"/>
+            <converter:ConflictTypeNoneToVisibilityConverter x:Key="ConflictTypeNoneToVisibilityConverter"/>
             <converter:SynchronizeFolderToTextConverter x:Key="SynchronizeFolderToTextConverter"/>
             <converter:SynchronizeThisFolderToTextConverter x:Key="SynchronizeThisFolderToTextConverter"/>
             <converter:FavoriteToIconConverter x:Key="FavoriteToIconConverter"/>
