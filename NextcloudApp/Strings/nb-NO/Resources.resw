@@ -537,10 +537,10 @@ Vennligst prøv igjen senere.</value>
     <value>Synkroniseringsstatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokal sti:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-sti:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Velg mappen der du vil laste opp filene</value>

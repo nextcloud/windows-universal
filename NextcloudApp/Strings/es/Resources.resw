@@ -417,19 +417,19 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Mover archivos y carpetas
+• Renombrar archivos y carpetas
+• Sincronización manual de carpetas
+• Descargar directorios como archivos zip 
+• Seleccionar múltiples archivos y carpetas
+• Fijar archivos y carpetas en la pantalla de inicio
+• Usar Windows Hello para autenticarse al inicio de la app
+• Permitir certificados SSL autofirmados
+• Mostrar el tamaño de la carpeta en la lista
+• Compartir archivos con la app
+• Use la bóveda de contraseñas (PasswordVault) para almacenar credenciales del usuario
+• Mejoras de seguridad y corrección de errores
+• Librería WebDAV nueva y más estable</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin para iniciar</value>
@@ -485,7 +485,7 @@ Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm
     <value>Pista</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista de errores que sucedieron durante la sincronización. Deberían ser problemas temporales (p. ej., otra app abrió el archivo) y deberían desaparecer tras la siguiente sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Cuidado con los conflictos!</value>
@@ -537,10 +537,10 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Estado de la sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta local:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escoge la carepta a donde quieres subir los archivos</value>
@@ -555,7 +555,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Al activar el modo experto, la app proporciona algunas características e informaciones adicionales, lo que puede no interesar a todos los usuarios.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorar certificados SSL autofirmados inválidos. Esto permite usar autoridades de certificados SSL inválidos o incorrectos. Cuidado, dejarás de estar protegido contra ataques de hombre en el medio (MITM).</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
@@ -609,34 +609,34 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Preparado para compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Error al crear cliente para la comunicación WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>No se pudo crear el directorio &apos;{0}&apos; en Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Falló el borrado de &apos;{0}&apos; en Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Error al descargar el archivo &apos;{0}&apos; de Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Error al subir el archivo &apos;{0}&apos; a Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>¿Deseas sobreescribirlo?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>El archivo ya existe</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Sobreescribir</value>
   </data>
 </root>

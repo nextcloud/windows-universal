@@ -536,10 +536,10 @@ Descargar directorios como un arhivo .zip
     <value>Estatus de Sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta Local:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Favor de elegir la carpeta donde prefiera cargar los archivos</value>

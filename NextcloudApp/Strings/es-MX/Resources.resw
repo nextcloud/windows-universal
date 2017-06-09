@@ -485,7 +485,7 @@ Descargar directorios como un arhivo .zip
     <value>Pista</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Listado de los errores que se presentaron durante la sincronización. Estos deberían ser temas temporales (ejem. el archivo ha sido abierto por otra aplicación) y debería dejar de presentarse la siguiente vez que se vuelva a ejecutar una sincronización. </value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Tenga cuidado con los conflictos!</value>
@@ -536,10 +536,10 @@ Descargar directorios como un arhivo .zip
     <value>Estatus de Sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta Local:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Favor de elegir la carpeta donde prefiera cargar los archivos</value>

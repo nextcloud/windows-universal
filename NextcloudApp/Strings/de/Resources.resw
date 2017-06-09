@@ -485,7 +485,7 @@ Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Liste der Fehler die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
@@ -537,10 +537,10 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisations-Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokaler Pfad:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-Pfad:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>

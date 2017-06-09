@@ -537,10 +537,10 @@ Proszę spróbować ponownie później,</value>
     <value>Status synchronizacji</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ścieżka lokalna:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Scieżka Nextclouda:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Wybierz folder, do którego chcesz wysłać pliki</value>

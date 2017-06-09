@@ -537,10 +537,10 @@ Prófaðu aftur síðar.</value>
     <value>Staða samstillingar</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Staðvær slóð:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-slóð:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Veldu möppuna sem þú vilt senda skrár inn í</value>
