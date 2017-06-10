@@ -537,10 +537,10 @@ Veuillez réessayer plus tard.</value>
     <value>Statut de synchronisation</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Chemin local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Chemin Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choisissez le dossier où vous souhaitez téléverser les fichiers</value>

@@ -329,7 +329,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Versão do cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
+    <value>Não foi possível encontrar o nome ou o endereço do servidor.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Versão do servidor {0}</value>
@@ -536,10 +536,10 @@ Por favor tente mais tarde.</value>
     <value>Status da sincronização</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Caminho Local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Caminho Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escolha a pasta para onde você quer enviar arquivos</value>
