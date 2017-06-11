@@ -97,10 +97,7 @@ namespace NextcloudApp.Services
                 }
                 catch (Exception e)
                 {
-                    if (sid != null)
-                    {
-                        sid.Error = e.Message;
-                    }
+                    sid.Error = string.Format(_resourceLoader.GetString("UnexpectedException"), e.Message);
                     errorCount++;
                 }
 
@@ -279,7 +276,7 @@ namespace NextcloudApp.Services
             }
             catch (Exception e)
             {
-                sid.Error = e.Message;
+                sid.Error = string.Format(_resourceLoader.GetString("UnexpectedException"), e.Message);
             }
             _sidList.Add(sid);
             SyncDbUtils.SaveSyncInfoDetail(sid);
@@ -573,7 +570,7 @@ namespace NextcloudApp.Services
             catch (Exception e)
             {
                 // TODO: do not write only the raw exception message in the sid.Error.
-                sid.Error = e.Message;
+                sid.Error = string.Format(_resourceLoader.GetString("UnexpectedException"), e.Message);
             }
             Debug.WriteLine("Synced file " + sid);
             _sidList.Add(sid);
