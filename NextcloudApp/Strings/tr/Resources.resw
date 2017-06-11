@@ -485,7 +485,7 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
     <value>İpucu</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Çakışmalara dikkat edin!</value>
@@ -537,10 +537,10 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Eşitleme Durumu</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Yerel Yol</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud Yolu</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Dosyaların yüklenmesini istediğiniz klasörü seçin.</value>

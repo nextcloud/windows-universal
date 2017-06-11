@@ -485,7 +485,7 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
     <value>Wskazówka</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista błędów, które wystąpiły podczas synchronizacji. Powinny to być problemy tymczasowe (np. plik został otwarty przez inną aplikację) i powinny zostać usunięte po następnej synchronizacji.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Uważaj na konflikty!</value>
@@ -537,10 +537,10 @@ Proszę spróbować ponownie później,</value>
     <value>Status synchronizacji</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Ścieżka lokalna</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Ścieżka Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Wybierz folder, do którego chcesz wysłać pliki</value>
@@ -555,7 +555,7 @@ Proszę spróbować ponownie później,</value>
     <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Zignoruj niepoprawnie podpisane certyfikaty SSL. Pozwala to na użycie błędnych lub nieprawidłowych urzędów certyfikacji SSL. Uważaj, nie będziesz już chroniony przed atakami typu &quot;man-in-the-middle&quot; (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizuj ten folder</value>
@@ -612,7 +612,7 @@ Proszę spróbować ponownie później,</value>
     <value>Utwórz folder</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Wystąpił błąd w trakcie tworzenia klienta komunikacji WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
     <value>Nie można utworzyć katalogu &apos;{0}&apos; na Nextcloud.</value>
