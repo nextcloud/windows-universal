@@ -639,4 +639,8 @@ Veuillez réessayer plus tard.</value>
   <data name="Overwrite" xml:space="preserve">
     <value>Écraser</value>
   </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
 </root>
