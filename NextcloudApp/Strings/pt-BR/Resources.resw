@@ -639,7 +639,7 @@ Por favor tente mais tarde.</value>
     <value>Sobrescrever</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Exceção Inesperada: {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>

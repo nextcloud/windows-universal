@@ -640,7 +640,7 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Üzerine Yaz</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Beklenmeyen Sorun: {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>
