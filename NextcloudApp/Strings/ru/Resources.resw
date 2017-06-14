@@ -640,7 +640,7 @@
     <value>Перезаписать</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Неожиданное исключение: {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>
