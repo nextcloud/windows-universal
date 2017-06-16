@@ -485,7 +485,7 @@ Farðu varlega, þú verður ekki varinn fyrir Maður-í-miðjunni (mitm) árás
     <value>Ábending</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Listi yfir villur sem komu upp á meðan samstilling fór fram. Þetta ættu að vera tímabundin vandamál (t.d. skrá var opnuð af öðru forriti) og ættu yfirleytt að hverfa við næstu samstillingu.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Varaðu þig á árekstrum!</value>
@@ -537,10 +537,10 @@ Prófaðu aftur síðar.</value>
     <value>Staða samstillingar</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Staðvær slóð</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud slóð</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Veldu möppuna sem þú vilt senda skrár inn í</value>
@@ -606,41 +606,41 @@ Prófaðu aftur síðar.</value>
     <value>Deilt með tengli</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Undirbúa fyrir deilingu...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Búa til möppu</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Villa kom upp við að búa til möppuna &apos;{0}&apos; á Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Eyðing &apos;{0}&apos; á Nextcloud mistókst.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Villa kom upp við að sækja skrána &apos;{0}&apos; af Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Villa kom upp við að senda skrána &apos;{0}&apos; inn á Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Viltu skrifa yfir það?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Skrá er þegar til</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Skrifa yfir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Óvænt undantekning: {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>

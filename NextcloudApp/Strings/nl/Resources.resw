@@ -537,10 +537,10 @@ Probeer het later opnieuw.</value>
     <value>Synchronisatiestatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Lokaal pad</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud pad</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Kies de map waar je de bestanden naar wilt uploaden</value>

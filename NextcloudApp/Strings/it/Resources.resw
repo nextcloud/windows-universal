@@ -169,10 +169,10 @@
     <value>Dimensione (più grande in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Tipo (A in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Tipo (Z in alto)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Errore dell&apos;applicazione</value>
@@ -447,7 +447,7 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Modalità esperta</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Stato di sincronizzazione</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Cronologia</value>
@@ -531,10 +531,10 @@ Riprova più tardi.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Sincronizzazione sospesa</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Stato di sincronizzazione</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
     <value>Percorso locale</value>
@@ -549,7 +549,7 @@ Riprova più tardi.</value>
     <value>Cartelle</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elementi: {0} (cartelle: {1} file: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
@@ -564,7 +564,7 @@ Riprova più tardi.</value>
     <value>Stop synchronizing this folder</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Ferma sincronizzazione</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
     <value>Stato di sincronizzazione</value>
@@ -594,13 +594,13 @@ Riprova più tardi.</value>
     <value>Tema</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Condivisi con altri</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Preferiti</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Condivisi con me</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Condivisi tramite collegamento</value>
@@ -631,10 +631,10 @@ Riprova più tardi.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Vuoi sovrascriverlo?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Il file esiste già</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Sovrascrivi</value>

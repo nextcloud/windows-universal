@@ -640,7 +640,7 @@ Veuillez réessayer plus tard.</value>
     <value>Écraser</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Exception inattendue : {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>

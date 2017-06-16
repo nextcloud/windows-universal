@@ -209,7 +209,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Baixar imagens de visualização</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETiqueta</value>
+    <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
     <value>{0} ({1} byte)</value>
@@ -506,7 +506,7 @@ Por favor tente mais tarde.</value>
     <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Arquivo criado local e remotamente. Qual o correto?</value>
+    <value>Arquivo criado local e remotamente. Qual é o correto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
