@@ -537,10 +537,10 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Estado de la sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Ruta local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Ruta de Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escoge la carepta a donde quieres subir los archivos</value>
@@ -640,7 +640,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Sobreescribir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Excepción inesperada: {0}</value>
     <comment>{0} exception details</comment>
   </data>
 </root>
