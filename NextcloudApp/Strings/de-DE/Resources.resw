@@ -133,7 +133,7 @@
     <value>Ordner erstellen</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Bild aufnehmen</value>
+    <value>Foto aufnehmen</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Dateien hochladen</value>
@@ -151,22 +151,22 @@
     <value>Sortieren</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datum (Ältestestes oben)</value>
+    <value>Datum (Älteste nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datum (Neuestes oben)</value>
+    <value>Datum (Neueste nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
     <value>Name (A nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Name (Z oben)</value>
+    <value>Name (Z nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Größe (Kleinste oben)</value>
+    <value>Größe (Kleinste nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Größe (Größte oben)</value>
+    <value>Größe (Größte nach oben)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
     <value>Typ (A nach oben)</value>
@@ -204,7 +204,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Neuen Ordner erstellen</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Herunterladen der Datei…</value>
+    <value>Datei wird heruntergeladen…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
     <value>Bildvorschau herunterladen</value>
@@ -330,7 +330,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Client-Version {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Der Servername oder die Adresse konnten nicht aufgelöst werden.</value>
+    <value>Der Servername oder die Adresse konnte nicht aufgelöst werden.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Server-Version {0}</value>
@@ -396,7 +396,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Zugangsdaten erforderlich</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nextcloud kann nicht geöffnet werden, ohne dass Sie die Zugangsdaten eingeben.</value>
+    <value>Nextcloud kann ohne die Zugangsdaten nicht geöffnet werden.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Nochmals versuchen</value>
@@ -408,7 +408,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ihre App wurde auf Version {0} aktualisiert </value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
+    <value>Neue Features und Verbesserungen in dieser Version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Empfehlen</value>
@@ -479,7 +479,7 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
     <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Zum Aktivieren der Einstellungen, muss die App neu gestartet werden.</value>
+    <value>Zum Aktivieren dieser Einstellung muss die App neu gestartet werden.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
@@ -494,7 +494,7 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
     <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu diversen Problemen führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronisation wurde ausgelöst!</value>
+    <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie erhalten eine Benachrichtigung wenn sie beendet ist.</value>
@@ -606,20 +606,20 @@ Bitte später noch einmal versuchen.</value>
     <value>Über einen Link geteilt</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Das Teilen wird vorbereitet…</value>
+    <value>Teilen wird vorbereitet…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Ordner erstellen</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Fehler beim Erstellen eines Klienten für die WebDAV-Kommunikation</value>
+    <value>Fehler beim Erstellen der Komponente für die WebDAV-Kommunikation</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Konnte Verzeichnis {0} nicht auf Nextcloud erstellen.</value>
+    <value>Das Verzeichnis {0} konnte auf Nextcloud nicht erstellt werden.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Konnte Verzeichnis {0} nicht auf Nextcloud erstellen.</value>
+    <value>Löschen von {0} auf Nextcloud fehlgeschlagen.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
@@ -627,7 +627,7 @@ Bitte später noch einmal versuchen.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Fehler beim Hochladen der Datei &apos;{0}&apos; zur Nextcloud.</value>
+    <value>Fehler beim Hochladen der Datei &apos;{0}&apos; zu Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -640,7 +640,10 @@ Bitte später noch einmal versuchen.</value>
     <value>Überschreiben</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unerwartete Ausnahme: {0}</value>
+    <value>Unerwarteter Fehler: {0}</value>
     <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
 </root>

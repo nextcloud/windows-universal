@@ -641,4 +641,7 @@ Prosím zkuste to znovu později.</value>
     <value>Unexpected Exception: {0}</value>
     <comment>{0} exception details</comment>
   </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
 </root>
