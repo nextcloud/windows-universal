@@ -468,7 +468,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Lösche Synchronisations-Verlauf</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Bevorzuge entfernte Datei</value>
+    <value>Bevorzuge Datei auf dem Server</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
@@ -528,7 +528,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisation beendet</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronisation von Ordner {0} wurde angehalten, da die App unterbrochen wurde.</value>
+    <value>Synchronisation von Ordner {0} wurde angehalten, da die App geschlossen wurde.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronisation unterbrochen</value>
@@ -644,6 +644,6 @@ Bitte später noch einmal versuchen.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Es wurde keine URL angegeben. Bitte geben Sie die URL Ihrer Nextcloud an.</value>
   </data>
 </root>

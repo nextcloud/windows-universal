@@ -644,6 +644,6 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Herhangi bir sunucu adresi belirtilmemiş. Lütfen Nextcloud kopyanızın adresini yazın.</value>
   </data>
 </root>

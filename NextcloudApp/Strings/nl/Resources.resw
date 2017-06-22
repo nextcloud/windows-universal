@@ -609,7 +609,7 @@ Probeer het later opnieuw.</value>
     <value>Prepare for sharing...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Aanmaken map</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error while creating client for WebDAV communication</value>
@@ -634,13 +634,13 @@ Probeer het later opnieuw.</value>
     <value>Do you want to overwrite it?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Bestand bestaat al</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Overschrijven</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Onverwachte uitzondering: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
