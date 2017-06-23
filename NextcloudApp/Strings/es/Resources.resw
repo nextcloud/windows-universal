@@ -644,6 +644,6 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>No se ha especificado la URL del servidor. Por favor, introduce la dirección de tu instancia de Nextcloud.</value>
   </data>
 </root>

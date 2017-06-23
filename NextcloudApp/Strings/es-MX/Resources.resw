@@ -643,6 +643,6 @@ Descargar directorios como un arhivo .zip
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>No se ha especificado el URL del servidor. Por favor ingresa el URL de tu instancia de Nextcloud.</value>
   </data>
 </root>

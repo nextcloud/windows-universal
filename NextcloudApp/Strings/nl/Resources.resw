@@ -606,7 +606,7 @@ Probeer het later opnieuw.</value>
     <value>Gedeeld via een link</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Klaarmaken voor delen...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Aanmaken map</value>
@@ -615,23 +615,23 @@ Probeer het later opnieuw.</value>
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Kon directory &apos;{0}&apos; op Nextcloud niet aanmaken.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Verwijderen van &apos;{0}&apos; op Nextcloud mislukte.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Fout bij downloaden bestand &apos;{0}&apos; vanaf Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Fout bij uploaden bestand &apos;{0}&apos; naar Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Wil je het overschrijven?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>Bestand bestaat al</value>
@@ -644,6 +644,6 @@ Probeer het later opnieuw.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
   </data>
 </root>
