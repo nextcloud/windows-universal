@@ -497,7 +497,7 @@ Seien Sie bitte vorsichtig, Sie werden nicht mehr vor Man-in-the-Middle (mitm) A
     <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie erhalten eine Benachrichtigung wenn sie beendet ist.</value>
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie werden benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
@@ -507,7 +507,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Datei wurde lokal und auf dem Server erstellt - welche ist die richtige?</value>
+    <value>Datei wurde lokal und auf dem Server erstellt. Welche ist die richtige?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugen Sie?</value>

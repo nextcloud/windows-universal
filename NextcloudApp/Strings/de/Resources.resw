@@ -180,7 +180,7 @@
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>In der Anwendung ist ein Problem aufgetreten. Nicht gespeicherte Informationen gehen dabei leider verloren. Wir entschuldigen uns für die Unannehmlichkeiten.
 
-Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
@@ -240,7 +240,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nicht berechtigt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melde Dich erneut an.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -378,7 +378,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} heruntergeladen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Ihr  Gerät eingeben.</value>
+    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Dein Gerät eingeben.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello Authentifizierung</value>
@@ -473,7 +473,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Achtung!</value>
@@ -497,7 +497,7 @@ Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronisation wird im Hintergrund durchgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
@@ -507,7 +507,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugst Du?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Datei wurde lokal und auf dem Server erstellt - welche ist die richtige?</value>
+    <value>Datei wurde lokal und auf dem Server erstellt. Welche ist die richtige?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugst Du?</value>
@@ -594,7 +594,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Theme</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Von dir geteilt</value>
+    <value>Mit anderen geteilt</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favoriten</value>
