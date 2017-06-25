@@ -417,19 +417,19 @@
     <value>更新</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>移动文件和文件夹
+重命名文件和文件夹
+手动同步文件夹
+打包下载文件夹(Zip)
+选择多个文件或文件夹
+将文件和文件夹固定到开始屏幕
+开启应用时使用Windows Hello来验证登录
+允许自签名的安全证书
+在列表中显示文件夹大小
+允许应用的文件共享
+使用PasswordVault来存储用户登录信息
+安全性优化和错误修正
+全新的，更稳定的WebDAV库</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin 启动</value>
@@ -494,7 +494,7 @@
     <value>远程和本地文件夹都不为空。 这可能会导致很多冲突，因为我们不知道哪些文件是正确的。</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>已开始同步</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>同步将在后台进行。 完成后您会收到通知。</value>
@@ -507,22 +507,22 @@
     <value>文件在本地和远程更改。你更喜欢哪个？</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>文件在本地和云端同时存在，您要保留哪一份？</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>您删除的本地文件在云端已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>冲突;</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>您删除的云端文件在本地已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动和{2}处冲突或错误</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>同步已完成</value>
@@ -555,7 +555,7 @@
     <value>当专家模式启用时，应用程序会提供一些额外的功能/信息，并不是所有的用户对此都感兴趣。</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>忽略无效的自签名安全证书。此举会允许系统接纳无效或错误的安全证书颁布单位，您也会因此失去针对‘中间人攻击’入侵方式的保护。</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>同步此文件夹</value>
@@ -606,7 +606,7 @@
     <value>通过链接共享</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>正在准备共享...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>创建文件夹</value>
@@ -615,19 +615,19 @@
     <value>创建客户端WebDAV通信时出错</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>无法在Nextcloud上创建文件夹’{0}‘</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>在Nextcloud上删除‘{0}’的操作失败</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>从Nextcloud上下载‘{0}’时发生错误</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>向Nextcloud上上传‘{0}’时发生错误</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -644,6 +644,6 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>未注明服务器链接地址(URL)。请输入您Nextcloud的链接地址(URL)</value>
   </data>
 </root>
