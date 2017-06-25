@@ -66,6 +66,7 @@
                     </interactivity:Interaction.Behaviors>
                 </ToggleSwitch>
                 <HyperlinkButton
+                    x:Uid="WhatsTheMeaningOfThis"
                     Content="What's the meaning of this?"
                     Margin="0,0,0,12"
                     Command="{Binding ShowHelpIgnoreInvalidSslCertificatesCommand, Mode=OneTime}" 
@@ -99,6 +100,7 @@
                     IsOn="{Binding ExpertMode, Mode=TwoWay}">
                 </ToggleSwitch>
                 <HyperlinkButton
+                    x:Uid="HowDoesTheExpertModeWork"
                     Content="How does the expert mode work?"
                     Margin="0,0,0,12"
                     Command="{Binding ShowHelpExpertModeCommand, Mode=OneTime}"
