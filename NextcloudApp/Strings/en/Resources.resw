@@ -647,4 +647,10 @@ Please try again later.</value>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What's the meaning of this?</value>
+  </data>
 </root>
