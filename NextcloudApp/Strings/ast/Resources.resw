@@ -537,10 +537,10 @@ Please try again later.</value>
     <value>Estáu de sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Camín llocal:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Camín de Nextcloud:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escueyi la carpeta u quies xubir los ficheros</value>
@@ -638,5 +638,12 @@ Please try again later.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Overwrite</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
 </root>

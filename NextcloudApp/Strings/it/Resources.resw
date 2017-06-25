@@ -169,10 +169,10 @@
     <value>Dimensione (più grande in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Tipo (A in alto)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Tipo (Z in alto)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Errore dell&apos;applicazione</value>
@@ -447,10 +447,10 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Modalità esperta</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Stato di sincronizzazione</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Cronologia</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
     <value>Conflitti</value>
@@ -484,7 +484,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
   <data name="Hint" xml:space="preserve">
     <value>Suggerimento</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
@@ -531,16 +531,16 @@ Riprova più tardi.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Sincronizzazione sospesa</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Stato di sincronizzazione</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Percorso locale:</value>
+    <value>Percorso locale</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Percorso di Nextcloud:</value>
+    <value>Percorso Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
@@ -549,7 +549,7 @@ Riprova più tardi.</value>
     <value>Cartelle</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elementi: {0} (cartelle: {1} file: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
@@ -564,7 +564,7 @@ Riprova più tardi.</value>
     <value>Stop synchronizing this folder</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Ferma sincronizzazione</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
     <value>Stato di sincronizzazione</value>
@@ -594,18 +594,56 @@ Riprova più tardi.</value>
     <value>Tema</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Condivisi con altri</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Preferiti</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Shared with me</value>
+    <value>Condivisi con me</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Condivisi tramite collegamento</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Prepare for sharing...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Crea cartella</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Vuoi sovrascriverlo?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Il file esiste già</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sovrascrivi</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
 </root>

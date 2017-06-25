@@ -209,7 +209,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Baixar imagens de visualização</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETiqueta</value>
+    <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
     <value>{0} ({1} byte)</value>
@@ -329,7 +329,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Versão do cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
+    <value>Não foi possível encontrar o nome ou o endereço do servidor.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Versão do servidor {0}</value>
@@ -426,7 +426,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
 • Permitir certificados SSL auto-assinados
 • Mostrar o tamanho das pastas na lista
 • Compartilhar arquivos com o aplicativo
-• Usar a carteira de senhas para armazenar credenciais de usuário
+• Usar a cofre de senhas para armazenar credenciais de usuário
 • Melhorias na segurança &amp; correção de erros
 • Nova biblioteca WebDAV mais estável</value>
   </data>
@@ -484,7 +484,7 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
     <value>Dica</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista de erros ocorridos durante a sincronização. Podem ser erros temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
@@ -506,7 +506,7 @@ Por favor tente mais tarde.</value>
     <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Arquivo criado local e remotamente. Qual o correto?</value>
+    <value>Arquivo criado local e remotamente. Qual é o correto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
@@ -536,10 +536,10 @@ Por favor tente mais tarde.</value>
     <value>Status da sincronização</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Caminho local:</value>
+    <value>Caminho Local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Caminho Nexcloud:</value>
+    <value>Caminho Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escolha a pasta para onde você quer enviar arquivos</value>
@@ -637,5 +637,12 @@ Por favor tente mais tarde.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Sobrescrever</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Exceção Inesperada: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Nenhuma URL de servidor especificada. Entre a URL de seu Nextcloud.</value>
   </data>
 </root>

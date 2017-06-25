@@ -485,7 +485,7 @@
     <value>Подсказка</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Список ошибок синхронизации. Скорее всего, это временные проблемы (например, файл был открыт в другом приложении) и они не должны повториться при следующем запуске синхронизации.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Остерегайтесь конфликтов!</value>
@@ -537,10 +537,10 @@
     <value>Состояние синхронизации</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Местный путь:</value>
+    <value>Локальный путь</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Путь Nextcloud:</value>
+    <value>Путь Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Выберите каталог для загрузки файлов</value>
@@ -638,5 +638,12 @@
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Перезаписать</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Неожиданное исключение: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Не указан URL сервера. Введите URL вашего сервера Nextcloud.</value>
   </data>
 </root>

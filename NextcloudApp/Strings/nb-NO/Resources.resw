@@ -485,7 +485,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Liste over feil som inntraff under synkronisering. Disse bør være midlertidige (f.eks. når ei fil har blitt åpnet av et annet program) og burde ha blitt borte ved neste synkronisering.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Se opp for konflikter!</value>
@@ -537,10 +537,10 @@ Vennligst prøv igjen senere.</value>
     <value>Synkroniseringsstatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokal sti:</value>
+    <value>Lokal sti</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-sti:</value>
+    <value>Nextcloud-sti</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Velg mappen der du vil laste opp filene</value>
@@ -609,25 +609,25 @@ Vennligst prøv igjen senere.</value>
     <value>Forbered for deling…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Opprett mappe</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Feil under opprettelse av klient for WebDAV-kommunikasjon</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Kunne ikke opprette mappen &apos;{0}&apos; på Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Sletting av &apos;{0}&apos; på Nextcloud mislyktes.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Feil under nedlasting av &apos;{0}&apos; fra Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Feil under opplasting av &apos;{0}&apos; til Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -638,5 +638,12 @@ Vennligst prøv igjen senere.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Overskriv</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Uventet unntak: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Ingen tjeneradresse er angitt. Vennligst skriv inn adressen til Nextcloud tjeneren.</value>
   </data>
 </root>

@@ -14,6 +14,7 @@ using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
 using Windows.UI.Core;
 using Windows.System;
+using NextcloudApp.Constants;
 
 namespace NextcloudApp.ViewModels
 {
@@ -203,6 +204,12 @@ namespace NextcloudApp.ViewModels
 
         private async Task<bool> CheckAndFixServerAddress()
         {
+            if (string.IsNullOrEmpty(ServerAddress))
+            {
+                await ShowEmptyServerAddressMessage();
+                return false;
+            }
+
             if (!ServerAddress.StartsWith("http"))
             {
                 ServerAddress = string.Format("https://{0}", ServerAddress);
@@ -293,6 +300,22 @@ namespace NextcloudApp.ViewModels
                 Content = new TextBlock
                 {
                     Text = string.Format(_resourceLoader.GetString("ServerWithGivenAddressIsNotReachable"), _serverAddressGivenByUser),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("OK")
+            };
+            await _dialogService.ShowAsync(dialog);
+        }
+
+        private async Task ShowEmptyServerAddressMessage()
+        {
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("AnErrorHasOccurred"),
+                Content = new TextBlock
+                {
+                    Text = _resourceLoader.GetString(ResourceConstants.NoServerGiven),
                     TextWrapping = TextWrapping.WrapWholeWords,
                     Margin = new Thickness(0, 20, 0, 0)
                 },

@@ -485,7 +485,7 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
     <value>Indice</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Liste des erreurs qui ont survenues lors de la synchronisation. Ceux-ci devraient être des problèmes temporaires (par exemple un fichier qui a été ouvert par une autre application) et devraient disparaître après la prochaine synchronisation.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Attention aux conflits !</value>
@@ -537,10 +537,10 @@ Veuillez réessayer plus tard.</value>
     <value>Statut de synchronisation</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Chemin local :</value>
+    <value>Chemin local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Chemin Nextcloud :</value>
+    <value>Chemin Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choisissez le dossier où vous souhaitez téléverser les fichiers</value>
@@ -638,5 +638,12 @@ Veuillez réessayer plus tard.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Écraser</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Exception inattendue : {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Aucun URL de serveur spécifié. Veuillez entrer l&apos;URL de votre instance Nextcloud.</value>
   </data>
 </root>

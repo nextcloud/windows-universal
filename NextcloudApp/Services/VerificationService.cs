@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Windows.Security.Credentials.UI;
-using Windows.UI.Xaml;
 using Microsoft.Practices.Unity;
 using Prism.Windows.AppModel;
 using NextcloudApp.Constants;
+using Windows.UI.Xaml;
 
 namespace NextcloudApp.Services
 {

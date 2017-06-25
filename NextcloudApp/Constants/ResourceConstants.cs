@@ -39,6 +39,8 @@
 
         public static string ThemeLight = "ThemeLight";
 
+        public static string NoServerGiven = "NoServerGiven";
+
         #region SyncService
 
         public static string SyncService_Error_CannotCreateClient = "SyncService_Error_CannotCreateClient";

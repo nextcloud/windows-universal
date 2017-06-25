@@ -476,7 +476,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attentie!</value>
+    <value>Let op!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
     <value>Deze instellingen worden actief na opnieuw opstarten van de app.</value>
@@ -485,7 +485,7 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lijst van fouten die optraden tijdens het synchroniseren. Dit zou slechts een tijdelijk probleem moeten zijn (bijvoorbeeld omdat het bestand geopend is in een andere app) en zou vanzelf opgelost moeten zijn na de volgende synchronisatie.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Let op conflicten!</value>
@@ -537,10 +537,10 @@ Probeer het later opnieuw.</value>
     <value>Synchronisatiestatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokaal pad:</value>
+    <value>Lokaal pad</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud pad:</value>
+    <value>Nextcloud pad</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Kies de map waar je de bestanden naar wilt uploaden</value>
@@ -606,37 +606,44 @@ Probeer het later opnieuw.</value>
     <value>Gedeeld via een link</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Klaarmaken voor delen...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Aanmaken map</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Kon directory &apos;{0}&apos; op Nextcloud niet aanmaken.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Verwijderen van &apos;{0}&apos; op Nextcloud mislukte.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Fout bij downloaden bestand &apos;{0}&apos; vanaf Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Fout bij uploaden bestand &apos;{0}&apos; naar Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Wil je het overschrijven?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Bestand bestaat al</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Overschrijven</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Onverwachte uitzondering: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
   </data>
 </root>
