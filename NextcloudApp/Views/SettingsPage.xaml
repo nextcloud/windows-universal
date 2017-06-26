@@ -124,11 +124,13 @@
 
                 <TextBlock
                     Text="{Binding ServerVersion}"
+                    Foreground="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}" 
                     Visibility="{Binding ServerVersion, Converter={StaticResource NullToVisibilityConverter}}"
                     Margin="0,0,0,12"/>
 
                 <TextBlock 
                     Text="{Binding AppVersion}"
+                    Foreground="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}" 
                     Margin="0,0,0,12"/>
             </StackPanel>
         </ScrollViewer>
