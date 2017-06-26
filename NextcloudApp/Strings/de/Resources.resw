@@ -276,7 +276,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Größe</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Es gibt bereits ein Element mit diesem Namen. Gebe einen anderen Namen an.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
@@ -300,13 +300,13 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei löschen</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du die Datei {0} löschen möchtest?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du den Ordner {0} löschen möchtest?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -342,7 +342,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>auf Antwort des Servers warten</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Wähle einen neuen Namen aus</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Umbenennen</value>
@@ -384,7 +384,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Für Ihr Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
+    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
@@ -405,7 +405,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Deine App wurde auf Version {0} aktualisiert</value>
+    <value>Die App wurde auf Version {0} aktualisiert</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Features und Verbesserungen in dieser Version:</value>
@@ -417,19 +417,20 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben
-• Dateien und Ordner umbenennen
-• Manuelle Ordner-synchronisation
-• Ordner als Zip-Dateien herunterladen
-• Mehrere Dateien und Ordner auswählen
-• Dateien und Ordner auf dem Startbildschirm ablegen
-• Windows Hello für die Anmeldung beim App-Start benutzen
-• Selbst-signierte SSL-Zertifikate erlauben
-• Ordnrergrüßen-Anzeige in der Listenasicht
-• Dateien mit der App teilen
-• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
-• Sicherheits-Verbesserungen und Fehlerbehebung
-• Neue und stabilere WebDAV-Bibliothek</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>An Start anheften</value>
@@ -485,13 +486,13 @@ Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Liste der Fehler die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
+    <value>Liste der Fehler, die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu diversen Problemen führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisation wurde gestartet!</value>
@@ -645,5 +646,11 @@ Bitte später noch einmal versuchen.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

@@ -417,19 +417,20 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Oppdater</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Flytt filer og mapper
-• Gi filer og mapper nye navn
-• Manuell synkronisering av mapper
-• Last ned mapper som ZIP-fil 
-• Velg flere filer og mapper
-• Fest filer og mapper til startskjermen
-• Vis Windows Hello for å autentisere ved programstart
-• Tillat selvsignerte SSL-sertifikater
-• Vis mappestørrelse i liste
-• Del filer med programmet
-• Bruk PasswordVault for å lagre brukeridentifikasjon
-• Sikkerhetsforbedringer og feilrettinger
-• Nytt og mer stabilt WebDAV-bibliotek</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>
@@ -491,7 +492,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>Se opp for konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Både sentral og lokal mappe er ikke tom. Dette kan føre til konflikter, siden vi ikke vet hvilke filer som er de korrekte.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synkronisering har blitt startet!</value>
@@ -645,5 +646,11 @@ Vennligst prøv igjen senere.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Ingen tjeneradresse er angitt. Vennligst skriv inn adressen til Nextcloud tjeneren.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

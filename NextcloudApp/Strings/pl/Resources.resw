@@ -417,19 +417,20 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Przenieś pliki i foldery
-• Zmień nazwę plików i folderów
-• Ręczna synchronizacja folderów
-• Pobierz katalogi jako pliki ZIP
-• Wybierz wiele plików i folderów
-• Przypnij pliki  i foldery do ekranu startowego
-• Autoryzuj się za pomocą Windows Hello w trakcie uruchamiania aplikacji
-• Dopuść samopodpisane certyfikaty SSL
-• Pokaż rozmiary folderów na liście
-• Współdziel pliki za pomocą aplikacji
-• Użyj sejfów do przechowywania danych uwierzytelniających
-• Poprawki bezpieczeństwa oraz naprawienie błędów
-• Nowa i bardziej stabilna biblioteka WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
@@ -491,7 +492,7 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
     <value>Uważaj na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Lokalny i zdalny folder nie sa puste. Może to skutkowwać wieloma konfliktami, ponieważ nie wiemy które pliki są właściwymi plikami.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronizacja została włączona!</value>
@@ -645,5 +646,11 @@ Proszę spróbować ponownie później,</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Brak adresu URL serwera. Proszę wprowadzić adres URL twojego serwera Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

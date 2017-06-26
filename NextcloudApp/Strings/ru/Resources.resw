@@ -417,19 +417,20 @@
     <value>Обновить</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Перемещение файлов и каталогов
-• Переименовывание файлов и каталогов
-• Ручная сихнронизация каталогов
-• Загрузка каталогов в виде zip-файла 
-• Выбор множества файлов и каталогов
-• Закрепление файлов или каталогов на начальном экране
-• Использование Windows Hello для аутентификации при запуске приложения
-• Поддержка самоподписанных сертификатов SSL
-• Показ размера каталога в списке
-• Открытие общего доступа при помощи приложения
-• Использование PasswordVault для хранения пользовательских реквизитов
-• Улучшения безопасности и исправления ошибок
-• Новая и более стабильная библиотека WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Введите PIN чтобы начать</value>
@@ -491,7 +492,7 @@
     <value>Остерегайтесь конфликтов!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Как локальный, так и каталог на серверере не пустые. Такая ситуация может привести к большому количеству конфликтов, потому что неизвестно какие из файлов правильные.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Синхроонизация была активирована!</value>
@@ -645,5 +646,11 @@
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Не указан URL сервера. Введите URL вашего сервера Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

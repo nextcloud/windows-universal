@@ -417,19 +417,20 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Mettre à jour</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Déplacer des fichiers et des dossiers
-• Renommer des fichiers et des dossiers
-• Synchronisation manuelle de dossiers
-• Télécharger des dossiers en tant que fichier zip
-• Sélectionner plusieurs fichiers et dossiers
-• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
-• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
-• Autoriser les certificats SSL auto-signés
-• Afficher la taille du fichier dans la liste
-• Partager des fichiers avec l&apos;application
-• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
-• Améliorations de la sécurité &amp; corrections de bugs
-• Nouvelle bibliothèque WebDAV plus stable</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Épingler au menu Démarrer</value>
@@ -491,7 +492,7 @@ Soyez prudent, vous ne serez pas protégé en cas d&apos;attaques Man-in-the-mid
     <value>Attention aux conflits !</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Le dossier local et à distance ne sont pas vides. Cela peut causer beaucoup de conflits car nous ne pouvons pas savoir quels fichiers sont les bons.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>La synchronisation a été déclenchée !</value>
@@ -645,5 +646,11 @@ Veuillez réessayer plus tard.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Aucun URL de serveur spécifié. Veuillez entrer l&apos;URL de votre instance Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

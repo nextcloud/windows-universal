@@ -417,19 +417,20 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• Hernoemen bestanden en mappen
-• Handmatig synchroniseren van mappen
-• Downloaden mappen als zip-bestand
-• Selecteren meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan startscherm
-• Gebruiken Windows Hello om bij starten app te authenticeren
-• Toestaan self-signed SSL certificaten
-• Tonen mapgrootte in overzocht
-• Delen bestanden met de app
-• Gebruiken PasswordVault om inloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
@@ -491,7 +492,7 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
     <value>Let op conflicten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Zowel de externe als de lokale map is niet leeg. Dat kan leiden tot veel conflicten, omdat we niet weten welke bestanden de juiste zijn.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisatie is getriggerd!</value>
@@ -645,5 +646,11 @@ Probeer het later opnieuw.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

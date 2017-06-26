@@ -417,19 +417,20 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas 
-• Renombrar archivos y carpetas 
-• Sincronización manual de carpetas • 
-Descargar directorios como un arhivo .zip 
-• Seleccionar multiples archivos y carpetas 
-• Anclar archivos y carpetas a la pantalla de inicio 
-• Usar Windows Hello para autenticar al iniciar la aplicación 
-• Permitir certificados SSL auto firmados 
-• Mostrar el tamañano de carpetas en la lista 
-• Compartir archivos con la aplicación 
-• Usar la Bóveda de Contraseñas para almacenar credenciales de usuario 
-• Mejoras de seguridad y corrección de fallas 
-• Una nueva y más estáble librería WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -491,7 +492,7 @@ Descargar directorios como un arhivo .zip
     <value>¡Tenga cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Tanto la carpeta local como la remota no se encuentran vaciías. Esto puede generar conflictos, porque no sabemos cuáles archivos son los correctos. </value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha disparado la sincronización!</value>
@@ -644,5 +645,11 @@ Descargar directorios como un arhivo .zip
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>
