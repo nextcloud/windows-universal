@@ -45,11 +45,16 @@ namespace NextcloudApp.Services
             var dialog = new ContentDialog
             {
                 Title = resourceLoader.GetString("Changes_Title"),
-                Content = new TextBlock
+                Content = new ScrollViewer
                 {
-                    Text = string.Format("{0}\n\n{1}\n\n{2}", line1, line2, changelog),
-                    TextWrapping = TextWrapping.WrapWholeWords,
-                    Margin = new Thickness(0, 20, 0, 0)
+                    HorizontalScrollMode = ScrollMode.Disabled,
+                    VerticalScrollMode = ScrollMode.Auto,
+                    Content = new TextBlock
+                    {
+                        Text = string.Format("{0}\n\n{1}\n\n{2}", line1, line2, changelog),
+                        TextWrapping = TextWrapping.WrapWholeWords,
+                        Margin = new Thickness(0, 20, 0, 0)
+                    }
                 },
                 PrimaryButtonText = resourceLoader.GetString("OK"),
                 SecondaryButtonText = resourceLoader.GetString("Changes_Recommend"),

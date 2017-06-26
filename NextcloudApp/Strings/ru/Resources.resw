@@ -417,19 +417,20 @@
     <value>Обновить</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Перемещение файлов и каталогов
-• Переименовывание файлов и каталогов
-• Ручная сихнронизация каталогов
-• Загрузка каталогов в виде zip-файла 
-• Выбор множества файлов и каталогов
-• Закрепление файлов или каталогов на начальном экране
-• Использование Windows Hello для аутентификации при запуске приложения
-• Поддержка самоподписанных сертификатов SSL
-• Показ размера каталога в списке
-• Открытие общего доступа при помощи приложения
-• Использование PasswordVault для хранения пользовательских реквизитов
-• Улучшения безопасности и исправления ошибок
-• Новая и более стабильная библиотека WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Введите PIN чтобы начать</value>
@@ -484,14 +485,14 @@
   <data name="Hint" xml:space="preserve">
     <value>Подсказка</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>Список ошибок синхронизации. Скорее всего, это временные проблемы (например, файл был открыт в другом приложении) и они не должны повториться при следующем запуске синхронизации.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Остерегайтесь конфликтов!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Как локальный, так и каталог на серверере не пустые. Такая ситуация может привести к большому количеству конфликтов, потому что неизвестно какие из файлов правильные.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Синхроонизация была активирована!</value>
@@ -537,10 +538,10 @@
     <value>Состояние синхронизации</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Местный путь:</value>
+    <value>Локальный путь</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Путь Nextcloud:</value>
+    <value>Путь Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Выберите каталог для загрузки файлов</value>
@@ -607,5 +608,49 @@
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Подготовка общего доступа…</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Создать каталог</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Ошибка создания соединения клиента с WebDAV</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Ошибка создания каталога «{0}» в Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Ошибка удаления каталога «{0}» в Nextcloud.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Ошибка загрузки файла «{0}» с Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Ошибка загрузки файла «{0}» в Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Перезаписать?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Файл уже существует</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Перезаписать</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Неожиданное исключение: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Не указан URL сервера. Введите URL вашего сервера Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

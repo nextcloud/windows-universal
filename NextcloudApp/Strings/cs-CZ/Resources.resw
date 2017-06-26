@@ -415,19 +415,20 @@
     <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Přesouvání souborů a adresářů
-• Přejmenovávání souborů a adresářů
-• Ruční synchronizace adresářů
-• Stažení adresářů jako ZIP soubor
-• Vícenásobný výběr souborů a adresářů
-• Připínání souborů a adresářů na startovací obrazovku
-• Použití Windows Hello k přihlášení při spuštění aplikace
-• Umožnění použití SSL certifikátů s vlastním podpisem
-• Zobrazení velikosti adresáře v seznamu
-• Sdílení pomocí aplikace
-• Použití klíčenky k uložení uživatelských pověření
-• Bezpečnostní vylepšení a opravy chyb
-• Nová a stabilnější WebDAV knihovna</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Připnout na start</value>
@@ -482,14 +483,14 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
   <data name="Hint" xml:space="preserve">
     <value>Nápověda</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>Seznam chyb, které vznikly při synchronizaci. Mělo by se jednat o dočasné problémy (např. soubor byl otevřen jinou aplikací), které by měli zmizet při příští synchronizaci.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Pozor na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Jak vzdálená tak místní složka není prázdná. To může způsobit spoustu konfliktů, protože nevíme, které soubory jsou správné.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronizace byla spuštěna!</value>
@@ -535,10 +536,10 @@ Prosím zkuste to znovu později.</value>
     <value>Stav synchronizace</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Místní cesta:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Cesta Nextcloudu:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Zvolte složku, kam chcete soubory nahrát</value>
@@ -605,5 +606,49 @@ Prosím zkuste to znovu později.</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Příprava sdílení...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Vytvořit složku</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Chyba při vytváření klienta pro WebDAV komunikaci</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Adresář {0} nemohl být v Nextcloudu vytvořen.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Mazání adresáře {0} v Nexcloudu selhalo.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Chyba při stahování souboru {0} z Nextcloudu.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Chyba při nahrávání souboru {0} do Nextcloudu.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Chcete položku přepsat?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Soubor již existuje</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Přepsat</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

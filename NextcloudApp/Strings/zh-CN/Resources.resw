@@ -169,10 +169,10 @@
     <value>按大小排序(由大到小)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>类型(A-Z)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>类型(Z-A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>应用程序错误</value>
@@ -422,6 +422,7 @@
 • Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
@@ -462,13 +463,13 @@
     <value>同步</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>偏好本地文件</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
     <value>清除同步历史</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>偏好远程文件</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>证书认证机构无效或不正确，是否继续连接？
@@ -479,50 +480,50 @@
     <value>注意!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>要使此设置生效，需要重新启动应用程序。</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>提示</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>同步期间发生的错误列表。 这些应该是临时问题（例如，文件已被另一个应用程序打开），并且应该在下一次同步运行后恢复了。</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>当心冲突！</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>已开始同步</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>同步将在后台进行。 完成后您会收到通知。</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>服务临时不可用 (通常由于短时间的维护工作).
 请稍后重试.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>文件在本地和远程更改。你更喜欢哪个？</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>文件在本地和云端同时存在，您要保留哪一份？</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>您删除的本地文件在云端已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>冲突;</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>您删除的云端文件在本地已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动和{2}处冲突或错误</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>同步已完成</value>
@@ -540,7 +541,7 @@
     <value>本地路径</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud 路径:</value>
+    <value>Nextcloud 路径</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>选择要上传文件的文件夹</value>
@@ -555,7 +556,7 @@
     <value>当专家模式启用时，应用程序会提供一些额外的功能/信息，并不是所有的用户对此都感兴趣。</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>忽略无效的自签名安全证书。此举会允许系统接纳无效或错误的安全证书颁布单位，您也会因此失去针对‘中间人攻击’入侵方式的保护。</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>同步此文件夹</value>
@@ -603,9 +604,53 @@
     <value>分享给您的文件</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>通过链接共享</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>正在准备共享...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>创建文件夹</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>创建客户端WebDAV通信时出错</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>无法在Nextcloud上创建文件夹’{0}‘</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>在Nextcloud上删除‘{0}’的操作失败</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>从Nextcloud上下载‘{0}’时发生错误</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>向Nextcloud上上传‘{0}’时发生错误</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>你要覆盖吗？</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>文件已经存在</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>覆盖</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>意外异常: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>未注明服务器链接地址(URL)。请输入您Nextcloud的链接地址(URL)</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

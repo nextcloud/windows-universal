@@ -1,7 +1,5 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Imaging;
 using NextcloudApp.Annotations;
 using NextcloudClient.Types;
@@ -44,7 +42,7 @@ namespace NextcloudApp.Models
 
         public BitmapImage Thumbnail
         {
-            get { return _thumbnail; }
+            get => _thumbnail;
             set
             {
                 if (_thumbnail == value)

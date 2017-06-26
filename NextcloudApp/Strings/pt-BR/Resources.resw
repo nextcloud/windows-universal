@@ -209,7 +209,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Baixar imagens de visualização</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETiqueta</value>
+    <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
     <value>{0} ({1} byte)</value>
@@ -329,7 +329,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Versão do cliente {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Não foi possível descobrir o nome ou o endereço do servidor.</value>
+    <value>Não foi possível encontrar o nome ou o endereço do servidor.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Versão do servidor {0}</value>
@@ -416,19 +416,20 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover arquivos e pastas
-• Renomear arquivos e pastas
-• Sincronização manual de pastas
-• Baixar diretórios como arquivos zip
-• Selecionar múltiplos arquivos e pastas
-• Fixar arquivos e pastas na página inicial
-• Usar Windows Hello para autenticar-se no aplicativo
-• Permitir certificados SSL auto-assinados
-• Mostrar o tamanho das pastas na lista
-• Compartilhar arquivos com o aplicativo
-• Usar a carteira de senhas para armazenar credenciais de usuário
-• Melhorias na segurança &amp; correção de erros
-• Nova biblioteca WebDAV mais estável</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Destacar no niciar</value>
@@ -483,14 +484,14 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   <data name="Hint" xml:space="preserve">
     <value>Dica</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronização. Devem ser problemas temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>Lista de erros ocorridos durante a sincronização. Podem ser erros temporários (por ex. arquivo aberto por outro aplicativo) e devem desaparecer após a próxima sincronização.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Cuidado com os conflitos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>As pastas locais e remotas não estão vazias. Isso pode resultar em muitos conflitos pois não sabemos quais arquivos são os corretos.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>A sincronização foi acionada!</value>
@@ -506,7 +507,7 @@ Por favor tente mais tarde.</value>
     <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Arquivo criado local e remotamente. Qual o correto?</value>
+    <value>Arquivo criado local e remotamente. Qual é o correto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Arquivo excluído local e remotamente. Qual deles você prefere?</value>
@@ -536,10 +537,10 @@ Por favor tente mais tarde.</value>
     <value>Status da sincronização</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Caminho local:</value>
+    <value>Caminho Local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Caminho Nexcloud:</value>
+    <value>Caminho Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escolha a pasta para onde você quer enviar arquivos</value>
@@ -606,5 +607,49 @@ Por favor tente mais tarde.</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Preparar para compartilhar...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Criar pasta</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Erro ao criar cliente para comunicação WebDAV</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Não foi possível criar o diretório &apos;{0}&apos; no Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Exclusão de &apos;{0}&apos; no Nextcloud falhou.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Erro ao baixar o arquivo &apos;{0}&apos; do Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Erro ao enviar o arquivo &apos;{0}&apos; para o Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Quer sobrescrever?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Arquivo já existe</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sobrescrever</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Exceção Inesperada: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Nenhuma URL de servidor especificada. Entre a URL de seu Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

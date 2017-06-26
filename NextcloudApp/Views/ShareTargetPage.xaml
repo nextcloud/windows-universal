@@ -104,16 +104,17 @@
                     ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.SelectionMode}"
-                    Padding="0,2,0,2"
                     ContinuumNavigationTransitionInfo.ExitElementContainer="True"
-                    Header="Choose the folder where you want to upload the files">
+                    Header="Choose the folder where you want to upload the files"
+                    Padding="0,0,0,2">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{ThemeResource SystemControlHighlightAccentBrush}">
                                 <TextBlock 
                                     Text="{Binding}"
                                     TextWrapping="WrapWholeWords"
-                                    Padding="14,8,14,8"/>
+                                    Padding="14,8,14,8"
+                                    Foreground="White"/>
                             </Border>
                         </DataTemplate>
                     </ListView.HeaderTemplate>
@@ -241,12 +242,12 @@
                                     Orientation="Horizontal">
                                     <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"
                                         Margin="0,0,8,0"
                                         Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                     <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>
@@ -288,6 +289,11 @@
                     Label="Refresh" 
                     x:Uid="AppBarRefresh"
                     Command="{Binding RefreshCommand}"/>
+                <AppBarButton
+                    Icon="NewFolder" 
+                    Label="Create folder" 
+                    x:Uid="AppBarAddCreateFolder"
+                    Command="{Binding CreateDirectoryCommand}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Accept" Label="Done" x:Uid="AppBarDone" Command="{Binding StartUploadCommand}"/>
             <AppBarButton Icon="Clear" Label="Cancel" x:Uid="AppBarCancel" Command="{Binding CancelFolderSelectionCommand}"/>

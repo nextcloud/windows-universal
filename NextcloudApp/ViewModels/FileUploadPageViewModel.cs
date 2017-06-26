@@ -20,6 +20,7 @@ using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using DecaTec.WebDav;
 using System.IO;
+using Windows.UI.Xaml.Controls;
 
 namespace NextcloudApp.ViewModels
 {
@@ -58,14 +59,14 @@ namespace NextcloudApp.ViewModels
 
         public string UploadingFilesTitle
         {
-            get { return _uploadingFilesTitle; }
-            private set { SetProperty(ref _uploadingFilesTitle, value); }
+            get => _uploadingFilesTitle;
+            private set => SetProperty(ref _uploadingFilesTitle, value);
         }
 
         public string UploadingFileProgressText
         {
-            get { return _uploadingFileProgressText; }
-            private set { SetProperty(ref _uploadingFileProgressText, value); }
+            get => _uploadingFileProgressText;
+            private set => SetProperty(ref _uploadingFileProgressText, value);
         }
 
         public override async void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -171,6 +172,32 @@ namespace NextcloudApp.ViewModels
                         BytesTotal = (long) properties.Size;
                     });
 
+                    var filePath = ResourceInfo.Path + localFile.Name;
+
+                    var canUploadFile = true;
+                    if (await client.Exists(filePath))
+                    {
+                        var dialog = new ContentDialog
+                        {
+                            Title = _resourceLoader.GetString("FileAlreadyExists"),
+                            Content =_resourceLoader.GetString("DoYouWantToOverwriteIt"),
+                            PrimaryButtonText = _resourceLoader.GetString("Overwrite"),
+                            SecondaryButtonText = _resourceLoader.GetString("Cancel")
+                        };
+
+                        var dialogResult = await _dialogService.ShowAsync(dialog);
+
+                        if (dialogResult != ContentDialogResult.Primary)
+                        {
+                            canUploadFile = false;
+                        }
+                    }
+
+                    if (!canUploadFile)
+                    {
+                        continue;
+                    }
+
                     // this moves the OpenReadAsync off of the UI thread and works fine...
                     using (
                         var stream = (
@@ -186,7 +213,7 @@ namespace NextcloudApp.ViewModels
                         var targetStream = stream.AsStreamForRead();
 
                         IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
-                        await client.Upload(ResourceInfo.Path + localFile.Name, targetStream, localFile.ContentType, progress, _cts.Token);
+                        await client.Upload(filePath, targetStream, localFile.ContentType, progress, _cts.Token);
                     }
                 }
                 catch (ResponseError e2)
@@ -228,7 +255,7 @@ namespace NextcloudApp.ViewModels
         {
             await OnUiThread(() =>
             {
-                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesTotal = progressInfo.TotalBytes;
                 BytesSend = (int)progressInfo.Bytes;
 
                 WaitingForServerResponse = BytesSend == BytesTotal;
@@ -237,19 +264,19 @@ namespace NextcloudApp.ViewModels
 
         public bool WaitingForServerResponse
         {
-            get { return _waitingForServerResponse; }
-            private set { SetProperty(ref _waitingForServerResponse, value); }
+            get => _waitingForServerResponse;
+            private set => SetProperty(ref _waitingForServerResponse, value);
         }
 
         public int PercentageUploaded
         {
-            get { return _percentageUploaded; }
-            private set { SetProperty(ref _percentageUploaded, value); }
+            get => _percentageUploaded;
+            private set => SetProperty(ref _percentageUploaded, value);
         }
 
         public int BytesSend
         {
-            get { return _bytesSend; }
+            get => _bytesSend;
             private set {
                 if (SetProperty(ref _bytesSend, value))
                 {
@@ -260,7 +287,7 @@ namespace NextcloudApp.ViewModels
 
         public long BytesTotal
         {
-            get { return _bytesTotal; }
+            get => _bytesTotal;
             private set
             {
                 if (SetProperty(ref _bytesTotal, value))
@@ -272,8 +299,8 @@ namespace NextcloudApp.ViewModels
 
         public ResourceInfo ResourceInfo
         {
-            get { return _resourceInfo; }
-            private set { SetProperty(ref _resourceInfo, value); }
+            get => _resourceInfo;
+            private set => SetProperty(ref _resourceInfo, value);
         }
 
         private void Update()

@@ -483,9 +483,6 @@ Tinguis cura, no estaràs protegit davant d&apos;atacs Man-in-the-middle (mitm).
   <data name="Hint" xml:space="preserve">
     <value>Indicació</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>List of errors that occured during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
-  </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Beware of conflicts!</value>
   </data>

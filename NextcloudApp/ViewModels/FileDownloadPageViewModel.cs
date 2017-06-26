@@ -84,10 +84,12 @@ namespace NextcloudApp.ViewModels
             {
                 ResourceInfos = resourceInfos;
 
-                FolderPicker folderPicker = new FolderPicker();
-                folderPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+                var folderPicker = new FolderPicker
+                {
+                    SuggestedStartLocation = PickerLocationId.Desktop
+                };
                 folderPicker.FileTypeFilter.Add(".zip");
-                StorageFolder folder = await folderPicker.PickSingleFolderAsync();
+                var folder = await folderPicker.PickSingleFolderAsync();
                 if (folder != null)
                 {
                     // Application now has read/write access to all contents in the picked folder (including other sub-folder contents)
@@ -198,33 +200,32 @@ namespace NextcloudApp.ViewModels
             {
                 //this.textBlock.Text = "Path " + file.Name + " couldn't be saved.";
             }
-            return;
         }
 
         private async void ProgressHandler(WebDavProgress progressInfo)
         {
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                BytesTotal = (long)progressInfo.TotalBytes;
+                BytesTotal = progressInfo.TotalBytes;
                 BytesDownloaded = (int)progressInfo.Bytes;
             });
         }
 
         public bool IsIndeterminate
         {
-            get { return _isIndeterminate; }
-            private set { SetProperty(ref _isIndeterminate, value); }
+            get => _isIndeterminate;
+            private set => SetProperty(ref _isIndeterminate, value);
         }
 
         public int PercentageDownloaded
         {
-            get { return _percentageDownloaded; }
-            private set { SetProperty(ref _percentageDownloaded, value); }
+            get => _percentageDownloaded;
+            private set => SetProperty(ref _percentageDownloaded, value);
         }
 
         public int BytesDownloaded
         {
-            get { return _bytesDownloaded; }
+            get => _bytesDownloaded;
             private set
             {
                 if (SetProperty(ref _bytesDownloaded, value))
@@ -236,7 +237,7 @@ namespace NextcloudApp.ViewModels
 
         public long BytesTotal
         {
-            get { return _bytesTotal; }
+            get => _bytesTotal;
             private set
             {
                 if (SetProperty(ref _bytesTotal, value))
@@ -248,20 +249,20 @@ namespace NextcloudApp.ViewModels
 
         public ResourceInfo ResourceInfo
         {
-            get { return _resourceInfo; }
-            private set { SetProperty(ref _resourceInfo, value); }
+            get => _resourceInfo;
+            private set => SetProperty(ref _resourceInfo, value);
         }
 
         public List<ResourceInfo> ResourceInfos
         {
-            get { return _resourceInfos; }
-            private set { SetProperty(ref _resourceInfos, value); }
+            get => _resourceInfos;
+            private set => SetProperty(ref _resourceInfos, value);
         }
 
         public string DownloadingFileProgressText
         {
-            get { return _downloadingFileProgressText; }
-            private set { SetProperty(ref _downloadingFileProgressText, value); }
+            get => _downloadingFileProgressText;
+            private set => SetProperty(ref _downloadingFileProgressText, value);
         }
 
         private void Update()

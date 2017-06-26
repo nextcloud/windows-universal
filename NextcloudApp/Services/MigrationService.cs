@@ -16,16 +16,17 @@ namespace NextcloudApp.Services
         public void StartMigration()
         {
             var localSettings = ApplicationData.Current.LocalSettings;
-            if (localSettings.Values.ContainsKey("Password"))
+            if (!localSettings.Values.ContainsKey("Password"))
             {
-                var vault = new PasswordVault();
-                vault.Add(new PasswordCredential(
-                    SettingsService.Instance.LocalSettings.ServerAddress,
-                    SettingsService.Instance.LocalSettings.Username,
-                    (string)localSettings.Values["Password"]
-                ));
-                localSettings.Values.Remove("Password");
+                return;
             }
+            var vault = new PasswordVault();
+            vault.Add(new PasswordCredential(
+                SettingsService.Instance.LocalSettings.ServerAddress,
+                SettingsService.Instance.LocalSettings.Username,
+                (string)localSettings.Values["Password"]
+            ));
+            localSettings.Values.Remove("Password");
         }
     }
 }

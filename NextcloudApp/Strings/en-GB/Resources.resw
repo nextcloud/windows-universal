@@ -419,9 +419,10 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
 • Rename files and folders
-• Manual synchronisation of folders
+• Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
@@ -484,14 +485,14 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>List of errors that occurred during synchronisation. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronisation run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisation has been triggered!</value>
@@ -537,10 +538,10 @@ Please try again later.</value>
     <value>Synchronisation Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
@@ -607,5 +608,49 @@ Please try again later.</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Prepare for sharing...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Create folder</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Do you want to overwrite it?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>File already exists</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

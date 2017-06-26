@@ -422,6 +422,7 @@
 • Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
@@ -484,14 +485,14 @@ Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de los errores que ocurrieron durante la sincronización. Estos deberían ser problemas temporales (p. ej., el archivo se ha abierto en otra app) y deberían desaparecer tras la próxima sincronización.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>Lista de errores que sucedieron durante la sincronización. Deberían ser problemas temporales (p. ej., otra app abrió el archivo) y deberían desaparecer tras la siguiente sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Ni la carpeta local ni la remota están vacías. Esto puede provocar muchos conflictos, porque no sabemos qué archivos son los correctos.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha iniciado la sincronización!</value>
@@ -537,10 +538,10 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Estado de la sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta local:</value>
+    <value>Ruta local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Ruta de Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escoge la carepta a donde quieres subir los archivos</value>
@@ -555,7 +556,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Al activar el modo experto, la app proporciona algunas características e informaciones adicionales, lo que puede no interesar a todos los usuarios.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorar certificados SSL autofirmados inválidos. Esto permite usar autoridades de certificados SSL inválidos o incorrectos. Cuidado, dejarás de estar protegido contra ataques de hombre en el medio (MITM).</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
@@ -607,5 +608,49 @@ Por favor, inténtelo de nuevo más tarde.</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Preparado para compartir...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Crear carpeta</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error al crear cliente para la comunicación WebDAV</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>No se pudo crear el directorio &apos;{0}&apos; en Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Falló el borrado de &apos;{0}&apos; en Nextcloud.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error al descargar el archivo &apos;{0}&apos; de Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error al subir el archivo &apos;{0}&apos; a Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>¿Deseas sobreescribirlo?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>El archivo ya existe</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sobreescribir</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Excepción inesperada: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No se ha especificado la URL del servidor. Por favor, introduce la dirección de tu instancia de Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

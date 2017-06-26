@@ -12,6 +12,7 @@ using Prism.Windows.Navigation;
 using System.Threading.Tasks;
 using System;
 using Windows.UI.Core;
+using Prism.Unity.Windows;
 
 namespace NextcloudApp.ViewModels
 {
@@ -118,7 +119,7 @@ namespace NextcloudApp.ViewModels
 
         private void CancelFolderSelection()
         {
-            _navigationService.GoBack();
+            PrismUnityApplication.Current.Exit();
         }
 
         private void StartUpload()
@@ -170,6 +171,7 @@ namespace NextcloudApp.ViewModels
                 HideProgressIndicator();
                 if (success)
                 {
+                    SelectedFileOrFolder = null;
                     return;
                 }
 

@@ -104,15 +104,17 @@
                     ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.SelectionMode}"
-                    Padding="0,2,0,2"
                     ContinuumNavigationTransitionInfo.ExitElementContainer="True"
-                    Header="Choose folder">
+                    Header="Choose folder"
+                    Padding="0,0,0,2">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{ThemeResource SystemControlHighlightAccentBrush}">
                                 <TextBlock 
                                     Text="{Binding}"
-                                    Padding="14,8,14,8"/>
+                                    TextWrapping="WrapWholeWords"
+                                    Padding="14,8,14,8"
+                                    Foreground="White"/>
                             </Border>
                         </DataTemplate>
                     </ListView.HeaderTemplate>
@@ -240,12 +242,12 @@
                                     Orientation="Horizontal">
                                     <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"
                                         Margin="0,0,8,0"
                                         Visibility="{Binding Converter={StaticResource IsFileAndNotFolderToVisibilityConverter}}"/>
                                     <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>

@@ -417,19 +417,20 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dosya ve klasörleri taşıma
-• Dosya ve klasörleri yeniden adlandırma
-• Klasörleri el ile eşitleme
-• Klasörleri zip dosyası olarak indirme
-• Birden çok dosya ve klasör seçme
-• Dosya ve klasörleri başlangıç sayfasına sabitleme
-• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
-• Kendinden imzalı SSL sertifikalarına izin verme
-• Listede klasör boyutunu görüntüleme
-• Uygulama üzerinden dosya paylaşımı
-• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanımı
-• Güvenlik geliştirmeleri ve hata ayıklamaları
-• Yeni ve daha kararlı WebDAV kitaplığı</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
@@ -484,14 +485,14 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
   <data name="Hint" xml:space="preserve">
     <value>İpucu</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>Eşitleme sırasında çıkan sorunların listesi. Bu sorunlar geçici olmalı (dosyanın başka bir uygulama tarafından kullanılıyor olması gibi) ve sonraki eşitlemede görülmemelidir.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Çakışmalara dikkat edin!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Uzak ve yerel klasörler boş değil. Bu durum hangi dosyaların doğru olduğu bilinemeyeceğinden pek çok çakışmaya yol açabilir.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Eşitleme başlatıldı!</value>
@@ -537,10 +538,10 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Eşitleme Durumu</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Yerel Yol:</value>
+    <value>Yerel Yol</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Yolu:</value>
+    <value>Nextcloud Yolu</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Dosyaların yüklenmesini istediğiniz klasörü seçin.</value>
@@ -607,5 +608,49 @@ Lütfen bir süre sonra yeniden deneyin.</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Paylaşılmaya hazırlanılıyor...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Klasör ekle</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>WebDAV iletişimi için istemci oluşturulurken sorun çıktı</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nextcloud üzerinde &apos;{0}&apos; klasörü oluşturulamadı.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>&apos;{0}&apos; klasörü Nextcloud üzerinden silinemedi.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>&apos;{0}&apos; dosyası Nextcloud üzerinden indirilemedi</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>&apos;{0}&apos; dosyası Nextcloud üzerine yüklenemedi.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Üzerine yazmak ister misiniz?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Dosya zaten var</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Üzerine Yaz</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Beklenmeyen Sorun: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Herhangi bir sunucu adresi belirtilmemiş. Lütfen Nextcloud kopyanızın adresini yazın.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

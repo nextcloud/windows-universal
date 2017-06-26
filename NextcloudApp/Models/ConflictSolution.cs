@@ -2,6 +2,8 @@
 {
     public enum ConflictSolution
     {
-        NONE, PREFER_LOCAL, PREFER_REMOTE
+        None,
+        PreferLocal,
+        PreferRemote
     }
 }

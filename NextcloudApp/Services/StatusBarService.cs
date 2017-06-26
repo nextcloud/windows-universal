@@ -14,45 +14,47 @@ namespace NextcloudApp.Services
 
         private StatusBarService()
         {
-            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+            if (!ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
-                var statusBar = StatusBar.GetForCurrentView();
-                statusBar.BackgroundOpacity = 1;
-                var theme = SettingsService.Instance.RoamingSettings.Theme;
-                switch (theme)
-                {
-                    case Theme.Dark:
-                        statusBar.BackgroundColor = Colors.Black;
-                        statusBar.ForegroundColor = Colors.White;
-                        break;
-                    case Theme.Light:
-                        statusBar.BackgroundColor = Colors.White;
-                        statusBar.ForegroundColor = Colors.Black;
-                        break;
-                }
-
-                SettingsService.Instance.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
+                return;
             }
+            var statusBar = StatusBar.GetForCurrentView();
+            statusBar.BackgroundOpacity = 1;
+            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            switch (theme)
+            {
+                case Theme.Dark:
+                    statusBar.BackgroundColor = Colors.Black;
+                    statusBar.ForegroundColor = Colors.White;
+                    break;
+                case Theme.Light:
+                    statusBar.BackgroundColor = Colors.White;
+                    statusBar.ForegroundColor = Colors.Black;
+                    break;
+            }
+
+            SettingsService.Instance.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
         }
 
         private void RoamingSettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName.Equals("Theme"))
+            if (!e.PropertyName.Equals("Theme"))
             {
-                var statusBar = StatusBar.GetForCurrentView();
-                statusBar.BackgroundOpacity = 1;
-                var theme = SettingsService.Instance.RoamingSettings.Theme;
-                switch (theme)
-                {
-                    case Theme.Dark:
-                        statusBar.BackgroundColor = Colors.Black;
-                        statusBar.ForegroundColor = Colors.White;
-                        break;
-                    case Theme.Light:
-                        statusBar.BackgroundColor = Colors.White;
-                        statusBar.ForegroundColor = Colors.Black;
-                        break;
-                }
+                return;
+            }
+            var statusBar = StatusBar.GetForCurrentView();
+            statusBar.BackgroundOpacity = 1;
+            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            switch (theme)
+            {
+                case Theme.Dark:
+                    statusBar.BackgroundColor = Colors.Black;
+                    statusBar.ForegroundColor = Colors.White;
+                    break;
+                case Theme.Light:
+                    statusBar.BackgroundColor = Colors.White;
+                    statusBar.ForegroundColor = Colors.Black;
+                    break;
             }
         }
 

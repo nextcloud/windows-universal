@@ -233,11 +233,11 @@
                                     Orientation="Horizontal">
                                     <TextBlock 
                                         Text="{Binding Size, Converter={StaticResource BytesToHumanReadableConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"
                                         Margin="0,0,8,0"/>
                                     <TextBlock 
                                         Text="{Binding LastModified, Converter={StaticResource DateTimeToStringConverter}}"
-                                        Foreground="{StaticResource SystemControlForegroundBaseMediumBrush}"/>
+                                        Foreground="{StaticResource SystemControlForegroundChromeDisabledLowBrush}"/>
                                 </StackPanel>
 
                                 <Button 
@@ -370,7 +370,7 @@
             Background="{ThemeResource SystemControlHighlightListLowBrush}">
             <!--
             BorderThickness="0,1,0,0"
-            BorderBrush="{ThemeResource SystemControlForegroundBaseMediumBrush}">
+            BorderBrush="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}">
             -->
             <TextBlock 
                 Margin="10,3,10,5" 

@@ -12,10 +12,6 @@ namespace NextcloudApp.Models
         public DateTime SyncDate { get; set; }
         public ConflictType ConflictType { get; set; }
 
-        public SyncHistory()
-        {
-        }
-
         public bool Equals(SyncHistory other)
         {
             return Id != 0 && other.Id == Id;

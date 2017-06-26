@@ -133,7 +133,7 @@
     <value>Ordner erstellen</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Bild aufnehmen</value>
+    <value>Foto aufnehmen</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Dateien hochladen</value>
@@ -180,7 +180,7 @@
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>In der Anwendung ist ein Problem aufgetreten. Nicht gespeicherte Informationen gehen dabei leider verloren. Wir entschuldigen uns für die Unannehmlichkeiten.
 
-Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
@@ -204,7 +204,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Neuen Ordner erstellen</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Herunterladen der Datei…</value>
+    <value>Datei wird heruntergeladen…</value>
   </data>
   <data name="DownloadPreviewImages.Header" xml:space="preserve">
     <value>Bildvorschau herunterladen</value>
@@ -240,7 +240,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nicht berechtigt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat einen Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
+    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melde Dich erneut an.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -276,7 +276,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Größe</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Es gibt bereits ein Element mit diesem Namen. Gebe einen anderen Namen an.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
@@ -300,13 +300,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei löschen</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du die Datei {0} löschen möchtest?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du den Ordner {0} löschen möchtest?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -330,7 +330,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Client-Version {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Der Servername oder die Adresse konnten nicht aufgelöst werden.</value>
+    <value>Der Servername oder die Adresse konnte nicht aufgelöst werden.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Server-Version {0}</value>
@@ -342,7 +342,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>auf Antwort des Servers warten</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Wähle einen neuen Namen aus</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Umbenennen</value>
@@ -378,13 +378,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} heruntergeladen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Ihr  Gerät eingeben.</value>
+    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Dein Gerät eingeben.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Für Ihr Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
+    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
@@ -396,7 +396,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Zugangsdaten erforderlich</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nextcloud kann nicht geöffnet werden, ohne dass die Zugangsdaten eingegeben werden.</value>
+    <value>Nextcloud kann ohne die Zugangsdaten nicht geöffnet werden.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Nochmals versuchen</value>
@@ -405,10 +405,10 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Deine App wurde auf Version {0} aktualisiert</value>
+    <value>Die App wurde auf Version {0} aktualisiert</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Neue Eigenschaften und Verbesserungen in dieser Version:</value>
+    <value>Neue Features und Verbesserungen in dieser Version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Empfehlen</value>
@@ -417,19 +417,20 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben
-• Dateien und Ordner umbenennen
-• Manuelle Ordner-synchronisation
-• Ordner als Zip-Dateien herunterladen
-• Mehrere Dateien und Ordner auswählen
-• Dateien und Ordner auf dem Startbildschirm ablegen
-• Windows Hello für die Anmeldung beim App-Start benutzen
-• Selbst-signierte SSL-Zertifikate erlauben
-• Ordnrergrüßen-Anzeige in der Listenasicht
-• Dateien mit der App teilen
-• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
-• Sicherheits-Verbesserungen und Fehlerbehebung
-• Neue und stabilere WebDAV-Bibliothek</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>An Start anheften</value>
@@ -459,7 +460,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Fehler</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronisation</value>
+    <value>Synchronisieren</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Bevorzuge lokale Datei</value>
@@ -468,36 +469,36 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Lösche Synchronisations-Verlauf</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Bevorzuge entfernte Datei</value>
+    <value>Bevorzuge Datei auf dem Server</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Sei bitte vorsichtig, du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Achtung!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Um die Einstellungen zu übernehmen muss die App neu gestartet werden.</value>
+    <value>Zum Aktivieren dieser Einstellung muss die App neu gestartet werden.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hinweis</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Liste der Fehler die während der Synchronisierung passierte. Dies sollten temporäre Fehler sein (z.B. die Datei wurde von einer anderen App geöffnet) und sollten nach der nächsten Synchronisierung verschwinden.</value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>Liste der Fehler, die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu diversen Problemen führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronisation wurde ausgelöst!</value>
+    <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronisation wird im Hintergrund durchgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
@@ -507,7 +508,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugst Du?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Datei wurde lokal und auf dem Server erstellt - welche ist die richtige?</value>
+    <value>Datei wurde lokal und auf dem Server erstellt. Welche ist die richtige?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugst Du?</value>
@@ -528,7 +529,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisation beendet</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronisation von Ordner {0} wurde angehalten, da die App unterbrochen wurde.</value>
+    <value>Synchronisation von Ordner {0} wurde angehalten, da die App geschlossen wurde.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synchronisation unterbrochen</value>
@@ -537,10 +538,10 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisations-Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokaler Pfad:</value>
+    <value>Lokaler Pfad</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-Pfad:</value>
+    <value>Nextcloud Pfad</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>
@@ -594,7 +595,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Theme</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Von dir geteilt</value>
+    <value>Mit anderen geteilt</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favoriten</value>
@@ -606,6 +607,50 @@ Bitte später noch einmal versuchen.</value>
     <value>Über einen Link geteilt</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Das Teilen wird vorbereitet…</value>
+    <value>Teilen wird vorbereitet…</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Ordner erstellen</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Fehler beim Erstellen der Komponente für die WebDAV-Kommunikation</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Das Verzeichnis {0} konnte auf Nextcloud nicht erstellt werden.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Löschen von {0} auf Nextcloud fehlgeschlagen.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Fehler beim Herunterladen von {0} von Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Fehler beim Hochladen der Datei &apos;{0}&apos; zu Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Soll überschrieben werden?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Datei existiert bereits</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Überschreiben</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unerwarteter Fehler: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

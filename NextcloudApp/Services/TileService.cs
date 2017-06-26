@@ -23,14 +23,6 @@ namespace NextcloudApp.Services
         public static TileService Instance => _instance ?? (_instance = new TileService());
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TileService"/> class.
-        /// </summary>
-        public TileService()
-        {
-
-        }
-
-        /// <summary>
         /// Determines whether [is tile pinned] [the specified identifier].
         /// </summary>
         /// <param name="id">The identifier.</param>

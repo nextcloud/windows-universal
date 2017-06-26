@@ -26,18 +26,18 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private DirectoryService _directoryService;
-        private TileService _tileService;
+        private readonly TileService _tileService;
         private ResourceInfo _resourceInfo;
         private string _fileExtension;
         private string _fileName;
         private string _fileSizeString;
         private int _selectedPathIndex = -1;
         private BitmapImage _thumbnail;
-        public ICommand DownloadCommand { get; private set; }
-        public ICommand DeleteResourceCommand { get; private set; }
-        public ICommand RenameResourceCommand { get; private set; }
-        public ICommand MoveResourceCommand { get; private set; }
-        public ICommand PinToStartCommand { get; private set; }
+        public ICommand DownloadCommand { get; }
+        public ICommand DeleteResourceCommand { get; }
+        public ICommand RenameResourceCommand { get; }
+        public ICommand MoveResourceCommand { get; }
+        public ICommand PinToStartCommand { get; }
 
 
         public FileInfoPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
@@ -175,7 +175,7 @@ namespace NextcloudApp.ViewModels
 
         public BitmapImage Thumbnail
         {
-            get { return _thumbnail; }
+            get => _thumbnail;
             set
             {
                 if (_thumbnail == value)
@@ -183,45 +183,46 @@ namespace NextcloudApp.ViewModels
                     return;
                 }
                 _thumbnail = value;
+                // ReSharper disable once ExplicitCallerInfoArgument
                 RaisePropertyChanged(nameof(Thumbnail));
             }
         }
 
         public string FileSizeString
         {
-            get { return _fileSizeString; }
-            private set { SetProperty(ref _fileSizeString, value); }
+            get => _fileSizeString;
+            private set => SetProperty(ref _fileSizeString, value);
         }
 
         public string FileExtension
         {
-            get { return _fileExtension; }
-            private set { SetProperty(ref _fileExtension, value); }
+            get => _fileExtension;
+            private set => SetProperty(ref _fileExtension, value);
         }
 
         public string FileName
         {
-            get { return _fileName; }
-            private set { SetProperty(ref _fileName, value); }
+            get => _fileName;
+            private set => SetProperty(ref _fileName, value);
         }
 
         public ResourceInfo ResourceInfo
         {
-            get { return _resourceInfo; }
-            private set { SetProperty(ref _resourceInfo, value); }
+            get => _resourceInfo;
+            private set => SetProperty(ref _resourceInfo, value);
         }
 
         public DirectoryService Directory
         {
-            get { return _directoryService; }
-            private set { SetProperty(ref _directoryService, value); }
+            get => _directoryService;
+            private set => SetProperty(ref _directoryService, value);
         }
 
         public ObservableCollection<PathInfo> PathStack { get; } = new ObservableCollection<PathInfo>();
 
         public int SelectedPathIndex
         {
-            get { return _selectedPathIndex; }
+            get => _selectedPathIndex;
             set
             {
                 if (!SetProperty(ref _selectedPathIndex, value))
@@ -254,7 +255,7 @@ namespace NextcloudApp.ViewModels
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString(ResourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder" : "DeleteFile"),
-                Content = new TextBlock()
+                Content = new TextBlock
                 {
                     Text = string.Format(_resourceLoader.GetString(ResourceInfo.ContentType.Equals("dav/directory") ? "DeleteFolder_Description" : "DeleteFile_Description"), ResourceInfo.Name),
                     TextWrapping = TextWrapping.WrapWholeWords,
@@ -288,7 +289,7 @@ namespace NextcloudApp.ViewModels
             var dialog = new ContentDialog
             {
                 Title = _resourceLoader.GetString("Rename"),
-                Content = new TextBox()
+                Content = new TextBox
                 {
                     Header = _resourceLoader.GetString("ChooseANewName"),
                     Text = ResourceInfo.Name,
@@ -334,18 +335,18 @@ namespace NextcloudApp.ViewModels
         private void PinToStart(object parameter)
         {
             if(!(parameter is ResourceInfo)) return;
-            var resourceInfo = parameter as ResourceInfo;
+            var resourceInfo = (ResourceInfo) parameter;
             _tileService.CreatePinnedObject(resourceInfo);
         }
 
         private bool CanPinToStart(object parameter)
         {
-            if (parameter is ResourceInfo)
+            if (!(parameter is ResourceInfo))
             {
-                var resourceInfo = parameter as ResourceInfo;
-                return _tileService.IsTilePinned(resourceInfo);
+                return false;
             }
-            return false;
+            var resourceInfo = (ResourceInfo) parameter;
+            return _tileService.IsTilePinned(resourceInfo);
         }
     }
 }

@@ -417,19 +417,20 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas 
-• Renombrar archivos y carpetas 
-• Sincronización manual de carpetas • 
-Descargar directorios como un arhivo .zip 
-• Seleccionar multiples archivos y carpetas 
-• Anclar archivos y carpetas a la pantalla de inicio 
-• Usar Windows Hello para autenticar al iniciar la aplicación 
-• Permitir certificados SSL auto firmados 
-• Mostrar el tamañano de carpetas en la lista 
-• Compartir archivos con la aplicación 
-• Usar la Bóveda de Contraseñas para almacenar credenciales de usuario 
-• Mejoras de seguridad y corrección de fallas 
-• Una nueva y más estáble librería WebDAV</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -484,14 +485,14 @@ Descargar directorios como un arhivo .zip
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
   </data>
-  <data name="SyncErrorHint.Text" xml:space="preserve">
-    <value>Lista de los errores que ocurrieron durante la sincronización. Estos pueden ser temas temporales (ejem. el archvio ha sido abierto por otra aplicación) y puede que no se presenten en la siguiente ejecución de sincronización. </value>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>Listado de los errores que se presentaron durante la sincronización. Estos deberían ser temas temporales (ejem. el archivo ha sido abierto por otra aplicación) y debería dejar de presentarse la siguiente vez que se vuelva a ejecutar una sincronización. </value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Tenga cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Tanto la carpeta local como la remota no se encuentran vaciías. Esto puede generar conflictos, porque no sabemos cuáles archivos son los correctos. </value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha disparado la sincronización!</value>
@@ -536,10 +537,10 @@ Descargar directorios como un arhivo .zip
     <value>Estatus de Sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Ruta Local:</value>
+    <value>Ruta local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Ruta de Nextcloud:</value>
+    <value>Ruta Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Favor de elegir la carpeta donde prefiera cargar los archivos</value>
@@ -606,5 +607,49 @@ Descargar directorios como un arhivo .zip
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Preparando para compartir...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Crear carpeta</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Se presentó un error al crear el cliente para comunicación WebDAV</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>No fue posible crear el directorio &apos;{0}&apos; en Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Se presentó una falla al borrar &apos;{0}&apos; en Nextcloud.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Se presentó un error al descargar el archivo &apos;{0}&apos; desde Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Se presentó un error al cargar el archivo &apos;{0}&apos; a Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>¿Desea sobre escribirlo?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>El archivo ya existe</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sobre escribir</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Excepción inesperada:{0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No se ha especificado el URL del servidor. Por favor ingresa el URL de tu instancia de Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>
