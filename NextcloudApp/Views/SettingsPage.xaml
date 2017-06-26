@@ -35,12 +35,26 @@
         <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Margin="12">
 
-                <ComboBox
-                    Header="Download preview images"
-                    x:Uid="DownloadPreviewImages"
-                    ItemsSource="{Binding PreviewImageDownloadModes}"
-                    SelectedIndex="{Binding PreviewImageDownloadModesSelectedIndex, Mode=TwoWay}"
-                    Margin="0,12"/>
+                <TextBlock
+                    x:Uid="SetingsDownloadPreviewImages"
+                    Text="Download preview images"
+                    Margin="0,12,0,6"/>
+                <RadioButton
+                    x:Uid="PreviewImageDownloadModeAlways"
+                    Content="Always"
+                    IsChecked="{Binding PreviewImageDownloadModeAsAlways, Mode=TwoWay}"
+                    GroupName="PreviewImageDownloadModeAlways"/>
+                <RadioButton
+                    x:Uid="PreviewImageDownloadModeWiFiOnly"
+                    Content="Only when I'm on Wi-Fi"
+                    IsChecked="{Binding PreviewImageDownloadModeAsWiFiOnly, Mode=TwoWay}"
+                    GroupName="PreviewImageDownloadModeWiFiOnly"/>
+                <RadioButton
+                    x:Uid="PreviewImageDownloadModeNever"
+                    Content="Never"
+                    IsChecked="{Binding PreviewImageDownloadModeAsNever, Mode=TwoWay}"
+                    GroupName="PreviewImageDownloadModeNever"
+                    Margin="0,0,0,12"/>
 
                 <ToggleSwitch 
                     x:Uid="UseWindowsHello"
@@ -79,20 +93,33 @@
                     Margin="0,12"
                     IsOn="{Binding Settings.ShowFileAndFolderGroupingHeader, Mode=TwoWay}"/>
                 -->
-                
-                <ComboBox 
-                    Header="Theme"
-                    x:Uid="Theme"
-                    ItemsSource="{Binding ThemeItems}"
-                    SelectedIndex="{Binding ThemeModeSelectedIndex, Mode=TwoWay}"
-                    Margin="0,12">
-                    <interactivity:Interaction.Behaviors>
-                        <Core:EventTriggerBehavior EventName="SelectionChanged">
-                            <Core:CallMethodAction TargetObject="{Binding}" MethodName="ThemeChanged"></Core:CallMethodAction>
-                        </Core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                </ComboBox>
-                    
+
+                <TextBlock
+                    x:Uid="SettingsThemeSelectMode"
+                    Text="Select a mode"
+                    Margin="0,12,0,6"/>
+                <RadioButton
+                    x:Uid="SettingsThemeLight"
+                    Content="Light"
+                    IsChecked="{Binding ThemeAsLight, Mode=TwoWay}"
+                    GroupName="SettingsThemeLight"/>
+                <RadioButton
+                    x:Uid="SettingsThemeDark"
+                    Content="Dark"
+                    IsChecked="{Binding ThemeAsDark, Mode=TwoWay}"
+                    GroupName="SettingsThemeDark"/>
+                <RadioButton
+                    x:Uid="SettingsThemeSystem"
+                    Content="Use the system settings"
+                    IsChecked="{Binding ThemeAsSystem, Mode=TwoWay}"
+                    GroupName="SettingsThemeSystem"/>
+                <HyperlinkButton
+                    x:Uid="WindowsColorSettings"
+                    Content="Windows color settings"
+                    Margin="0,0,0,12"
+                    NavigateUri="ms-settings:personalization-colors"
+                    Style="{StaticResource HelpButtonStyle}"/>
+
                 <ToggleSwitch 
                     x:Uid="ExpertMode"
                     Header="Expert mode"
