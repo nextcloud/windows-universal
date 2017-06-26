@@ -24,16 +24,15 @@ namespace NextcloudApp.ViewModels
         private LocalSettings _settingsLocal;
         private RoamingSettings _settingsRoaming;
         private int _previewImageDownloadModesSelectedIndex;
-        private int _themeModesSelectedIndex;
         private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
         private bool _ignoreServerCertificateErrors;
         private bool _expertMode;
 
-        public ICommand ResetCommand { get; private set; }
-        public ICommand ShowHelpExpertModeCommand { get; private set; }
-        public ICommand ShowHelpIgnoreInvalidSslCertificatesCommand { get; private set; }
+        public ICommand ResetCommand { get; }
+        public ICommand ShowHelpExpertModeCommand { get; }
+        public ICommand ShowHelpIgnoreInvalidSslCertificatesCommand { get; }
 
         public SettingsPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -43,39 +42,6 @@ namespace NextcloudApp.ViewModels
             SettingsLocal = SettingsService.Instance.LocalSettings;
             SettingsRoaming = SettingsService.Instance.RoamingSettings;
 
-            PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
-            {
-                Name = resourceLoader.GetString("Always"),
-                Value = PreviewImageDownloadMode.Always
-            });
-
-            PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
-            {
-                Name = resourceLoader.GetString("WiFiOnly"),
-                Value = PreviewImageDownloadMode.WiFiOnly
-            });
-
-            PreviewImageDownloadModes.Add(new PreviewImageDownloadModeItem
-            {
-                Name = resourceLoader.GetString("Never"),
-                Value = PreviewImageDownloadMode.Never
-            });
-
-            switch (SettingsLocal.PreviewImageDownloadMode)
-            {
-                case PreviewImageDownloadMode.Always:
-                    PreviewImageDownloadModesSelectedIndex = 0;
-                    break;
-                case PreviewImageDownloadMode.WiFiOnly:
-                    PreviewImageDownloadModesSelectedIndex = 1;
-                    break;
-                case PreviewImageDownloadMode.Never:
-                    PreviewImageDownloadModesSelectedIndex = 2;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
             UseWindowsHello = SettingsLocal.UseWindowsHello;
             IgnoreServerCertificateErrors = SettingsLocal.IgnoreServerCertificateErrors;
             ExpertMode = SettingsLocal.ExpertMode;
@@ -84,38 +50,8 @@ namespace NextcloudApp.ViewModels
             ShowHelpExpertModeCommand = new DelegateCommand(ShowHelpExpertMode);
             ShowHelpIgnoreInvalidSslCertificatesCommand = new DelegateCommand(ShowHelpInvalidSslCertificates);
 
-            ThemeItems.Add(new ThemeItem
-            {
-                Name = resourceLoader.GetString(ResourceConstants.ThemeSystem),
-                Value = Theme.System
-            });
-
-            ThemeItems.Add(new ThemeItem
-            {
-                Name = resourceLoader.GetString(ResourceConstants.ThemeDark),
-                Value = Theme.Dark
-            });
-
-            ThemeItems.Add(new ThemeItem
-            {
-                Name = resourceLoader.GetString(ResourceConstants.ThemeLight),
-                Value = Theme.Light
-            });
-
-            switch (SettingsRoaming.Theme)
-            {
-                case Theme.System:
-                   ThemeModeSelectedIndex = 0;
-                    break;
-                case Theme.Dark:
-                    ThemeModeSelectedIndex = 1;
-                    break;
-                case Theme.Light:
-                    ThemeModeSelectedIndex = 2;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            PreviewImageDownloadMode = SettingsLocal.PreviewImageDownloadMode;
+            Theme = SettingsRoaming.Theme;
 
             GetServerVersion();
         }
@@ -173,31 +109,6 @@ namespace NextcloudApp.ViewModels
                         break;
                     case 2:
                         SettingsLocal.PreviewImageDownloadMode = PreviewImageDownloadMode.Never;
-                        break;
-                }
-            }
-        }
-
-        public int ThemeModeSelectedIndex
-        {
-            get => _themeModesSelectedIndex;
-            set
-            {
-                if (!SetProperty(ref _themeModesSelectedIndex, value))
-                {
-                    return;
-                }
-
-                switch (value)
-                {
-                    case 0:
-                        SettingsRoaming.Theme = Theme.System;
-                        break;
-                    case 1:
-                        SettingsRoaming.Theme = Theme.Dark;
-                        break;
-                    case 2:
-                        SettingsRoaming.Theme = Theme.Light;
                         break;
                 }
             }
@@ -314,6 +225,113 @@ namespace NextcloudApp.ViewModels
         {
             var messageDialog = new MessageDialog(message, string.Empty);
             await _dialogService.ShowAsync(messageDialog);
+        }
+
+        public PreviewImageDownloadMode PreviewImageDownloadMode
+        {
+            get => SettingsLocal.PreviewImageDownloadMode;
+            set
+            {
+                if (SettingsLocal.PreviewImageDownloadMode.Equals(value))
+                {
+                    return;
+                }
+
+                SettingsLocal.PreviewImageDownloadMode = value;
+
+                OnPropertyChanged("PreviewImageDownloadModeAsAlways");
+                OnPropertyChanged("PreviewImageDownloadModeAsWiFiOnly");
+                OnPropertyChanged("PreviewImageDownloadModeAsNever");
+            }
+        }
+
+        public bool PreviewImageDownloadModeAsAlways
+        {
+            get => PreviewImageDownloadMode.Equals(PreviewImageDownloadMode.Always);
+            set
+            {
+                if (value)
+                {
+                    PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
+                }
+            }
+        }
+
+        public bool PreviewImageDownloadModeAsWiFiOnly
+        {
+            get => PreviewImageDownloadMode.Equals(PreviewImageDownloadMode.WiFiOnly);
+            set
+            {
+                if (value)
+                {
+                    PreviewImageDownloadMode = PreviewImageDownloadMode.WiFiOnly;
+                }
+            }
+        }
+
+        public bool PreviewImageDownloadModeAsNever
+        {
+            get => PreviewImageDownloadMode.Equals(PreviewImageDownloadMode.Never);
+            set
+            {
+                if (value)
+                {
+                    PreviewImageDownloadMode = PreviewImageDownloadMode.Never;
+                }
+            }
+        }
+
+        public Theme Theme
+        {
+            get => SettingsRoaming.Theme;
+            set
+            {
+                if (SettingsRoaming.Theme.Equals(value))
+                {
+                    return;
+                }
+
+                SettingsRoaming.Theme = value;
+                
+                OnPropertyChanged("ThemeAsLight");
+                OnPropertyChanged("ThemeAsDark");
+                OnPropertyChanged("ThemeAsSystem");
+            }
+        }
+
+        public bool ThemeAsLight
+        {
+            get => Theme.Equals(Theme.Light);
+            set {
+                if (value)
+                {
+                    Theme = Theme.Light;
+                }
+            }
+        }
+
+        public bool ThemeAsDark
+        {
+            get => Theme.Equals(Theme.Dark);
+            set
+            {
+                if (value)
+                {
+                    Theme = Theme.Dark;
+                }
+            }
+        }
+
+        public bool ThemeAsSystem
+        {
+            get => Theme.Equals(Theme.System);
+            set
+            {
+                if (value)
+                {
+                    Theme = Theme.System;
+                }
+            }
         }
     }
 }
