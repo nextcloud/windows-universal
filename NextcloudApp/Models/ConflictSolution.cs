@@ -4,6 +4,7 @@
     {
         None,
         PreferLocal,
-        PreferRemote
+        PreferRemote,
+        KeepAsIs
     }
 }

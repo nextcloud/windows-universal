@@ -268,6 +268,12 @@
                             x:Uid="SyncFixConflictPreferRemote"
                             CommandParameter="{Binding ElementName=ConflictListView}"
                             Command="{Binding FixConflictByRemoteCommand}"/>
+                        <AppBarButton 
+                            Icon="Accept" 
+                            Label="Keep As Is" 
+                            x:Uid="SyncFixConflictKeepAsIs"
+                            CommandParameter="{Binding ElementName=ConflictListView}"
+                            Command="{Binding FixConflictByKeepAsIsCommand}"/>
                     </CommandBar>
                 </Grid>
             </PivotItem>

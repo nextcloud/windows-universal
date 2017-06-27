@@ -414,8 +414,6 @@ namespace NextcloudApp.Services
                                     deleted = true;
                                     changed = true;
                                     break;
-                                case ConflictSolution.None:
-                                    break;
                                 default:
                                     Debug.WriteLine("Sync file: Conflict (Deleted remotely, but changed locally) " + sid.Path);
                                     sid.ConflictType = ConflictType.RemoteDelLocalChange;
@@ -463,8 +461,6 @@ namespace NextcloudApp.Services
                                     {
                                         sid.Error = string.Format(_resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                                     }
-                                    break;
-                                case ConflictSolution.None:
                                     break;
                                 default:
                                     // Conflict
@@ -547,7 +543,10 @@ namespace NextcloudApp.Services
                                         sid.Error = string.Format(_resourceLoader.GetString(ResourceConstants.SyncService_Error_DownloadFile), info.Name);
                                     }
                                     break;
-                                case ConflictSolution.None:
+                                case ConflictSolution.KeepAsIs:
+                                    sid.ETag = info.ETag;
+                                    sid.DateModified = currentModified;
+                                    sid.ConflictSolution = ConflictSolution.None;                                    
                                     break;
                                 default:
                                     // Conflict
