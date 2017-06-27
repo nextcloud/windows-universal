@@ -13,6 +13,9 @@ namespace NextcloudApp.Controls
             var theme = SettingsService.Instance.RoamingSettings.Theme;
             switch (theme)
             {
+                case Theme.System:
+                    RequestedTheme = ElementTheme.Default;
+                    break;
                 case Theme.Dark:
                     RequestedTheme = ElementTheme.Dark;
                     break;
@@ -31,6 +34,9 @@ namespace NextcloudApp.Controls
                 var theme = SettingsService.Instance.RoamingSettings.Theme;
                 switch (theme)
                 {
+                    case Theme.System:
+                        RequestedTheme = ElementTheme.Default;
+                        break;
                     case Theme.Dark:
                         RequestedTheme = ElementTheme.Dark;
                         break;
