@@ -356,6 +356,7 @@ namespace NextcloudClient
                             continue;
 
                         href = href.TrimEnd('/');
+                        href = href.Replace("/remote.php/webdav", "");
                         var itemFav = await GetResourceInfoByPath(href);
 
                         favoritesList.Add(itemFav);
