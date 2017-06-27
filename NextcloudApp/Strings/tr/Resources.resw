@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Tüm dosyalar</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Herzaman</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Bir sorun çıktı</value>
@@ -206,8 +206,8 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Dosya indiriliyor...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Önizleme görselleri indirilsin</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   <data name="Name.Text" xml:space="preserve">
     <value>Ad</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Asla</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Yeni klasör</value>
@@ -287,8 +287,8 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
   <data name="Version" xml:space="preserve">
     <value>Sürüm {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Yalnız Wi-Fi bağlantısı ile</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Evet</value>
@@ -417,20 +417,20 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Dosya ve klasörleri taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Ögeleri uygulama için sık kullanılan olarak işaretleme
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Listede klasör boyutunu görüntüleme
+• Uygulama üzerinden dosya paylaşımı
+• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanımı
+• Güvenlik geliştirmeleri ve hata ayıklamaları
+• Yeni ve daha kararlı WebDAV kitaplığı</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
@@ -492,7 +492,7 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
     <value>Çakışmalara dikkat edin!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Uzak ve yerel klasörler boş değil. Bu durum uygulama tarafından hangi dosyaların doğru olduğunun bilinmesini engelleyeceğinden pek çok çakışmaya yol açabilir.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Eşitleme başlatıldı!</value>
@@ -582,17 +582,17 @@ Lütfen bir süre sonra yeniden deneyin.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Bu klasörü eşitle</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Koyu</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Açık</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Sistem</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Başkaları ile paylaşılmış</value>
@@ -648,9 +648,12 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Herhangi bir sunucu adresi belirtilmemiş. Lütfen Nextcloud kopyanızın adresini yazın.</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Uzman kipi nasıl çalışır?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Bunun anlamı nedir?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

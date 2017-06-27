@@ -14,7 +14,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="HyperlinkButton">
-                        <Grid Background="{TemplateBinding Background}">
+                    <Grid Background="{TemplateBinding Background}">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
@@ -70,8 +70,8 @@
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             Margin="{TemplateBinding Padding}"/>
                     </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
+                </ControlTemplate>
+            </Setter.Value>
         </Setter>
     </Style>
 

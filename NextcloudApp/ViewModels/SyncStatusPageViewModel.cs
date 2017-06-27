@@ -9,6 +9,7 @@ using Prism.Windows.AppModel;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Notifications;
 using System.Linq;
+using Windows.UI.Xaml;
 
 namespace NextcloudApp.ViewModels
 {
@@ -24,6 +25,7 @@ namespace NextcloudApp.ViewModels
         
         public ICommand FixConflictByLocalCommand { get; private set; }
         public ICommand FixConflictByRemoteCommand { get; private set; }
+        public ICommand FixConflictByKeepAsIsCommand { get; private set; }
         public ICommand ClearSyncHistoryCommand { get; private set; }
 
         public SyncStatusPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
@@ -36,6 +38,7 @@ namespace NextcloudApp.ViewModels
 
             FixConflictByLocalCommand = new RelayCommand(FixConflictByLocal, CanExecuteFixConflict);
             FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote, CanExecuteFixConflict);
+            FixConflictByKeepAsIsCommand = new RelayCommand(FixConflictByKeepAsIs, CanExecuteFixConflict);
             ClearSyncHistoryCommand = new RelayCommand(ClearSyncHistory);
 
             SyncHistoryList = new ObservableCollection<SyncHistory>();
@@ -96,6 +99,49 @@ namespace NextcloudApp.ViewModels
             }
 
             selectedList.ForEach(x => ConflictList.Remove(x));
+        }
+
+        private async void FixConflictByKeepAsIs(object parameter)
+        {
+            ListView listView = parameter as ListView;
+
+            if (listView == null)
+            {
+                return;
+            }
+
+            var selectedList = new List<SyncInfoDetail>();
+            bool usageHint = false;
+            foreach (SyncInfoDetail detail in listView.SelectedItems)
+            {
+                if (detail.ConflictType == ConflictType.BothChanged ||
+                    detail.ConflictType == ConflictType.BothNew)
+                {
+                    detail.ConflictSolution = ConflictSolution.KeepAsIs;
+                    SyncDbUtils.SaveSyncInfoDetail(detail);
+                    selectedList.Add(detail);
+                } else
+                {
+                    usageHint = true;
+                }
+            }
+
+            selectedList.ForEach(x => ConflictList.Remove(x));
+            if(usageHint)
+            {
+                var dialog = new ContentDialog
+                {
+                    Title = _resourceLoader.GetString("SyncKeepAsIsHintTitle"),
+                    Content = new TextBlock
+                    {
+                        Text = _resourceLoader.GetString("SyncKeepAsIsHintDesc"),
+                        TextWrapping = TextWrapping.WrapWholeWords,
+                        Margin = new Thickness(0, 20, 0, 0)
+                    },
+                    PrimaryButtonText = _resourceLoader.GetString("OK")
+                };
+                await _dialogService.ShowAsync(dialog);
+            }
         }
 
         private bool CanExecuteFixConflict()
