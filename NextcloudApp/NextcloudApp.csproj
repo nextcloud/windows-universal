@@ -163,12 +163,10 @@
     <Compile Include="Models\FileDownloadPageParameters.cs" />
     <Compile Include="Models\FileUploadPageParameters.cs" />
     <Compile Include="Models\FileInfoPageParameters.cs" />
-    <Compile Include="Models\PreviewImageDownloadModeItem.cs" />
     <Compile Include="Models\ShareTargetPageParameters.cs" />
     <Compile Include="Models\SyncConflict.cs" />
     <Compile Include="Models\SyncHistory.cs" />
     <Compile Include="Models\SyncInfoDetail.cs" />
-    <Compile Include="Models\ThemeItem.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\DirectoryService.cs" />

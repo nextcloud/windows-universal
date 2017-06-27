@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Windows.ApplicationModel;
 using NextcloudApp.Models;
 using NextcloudApp.Services;
@@ -23,7 +21,6 @@ namespace NextcloudApp.ViewModels
         private readonly DialogService _dialogService;
         private LocalSettings _settingsLocal;
         private RoamingSettings _settingsRoaming;
-        private int _previewImageDownloadModesSelectedIndex;
         private bool _useWindowsHello;
         private readonly IResourceLoader _resourceLoader;
         private string _serverVersion;
@@ -82,36 +79,6 @@ namespace NextcloudApp.ViewModels
         {
             get => _settingsRoaming;
             private set => SetProperty(ref _settingsRoaming, value);
-        }
-
-        public List<PreviewImageDownloadModeItem> PreviewImageDownloadModes { get; } = new List<PreviewImageDownloadModeItem>();
-
-        public List<ThemeItem> ThemeItems { get; } = new List<ThemeItem>();
-
-
-        public int PreviewImageDownloadModesSelectedIndex
-        {
-            get => _previewImageDownloadModesSelectedIndex;
-            set
-            {
-                if (!SetProperty(ref _previewImageDownloadModesSelectedIndex, value))
-                {
-                    return;
-                }
-
-                switch (value)
-                {
-                    case 0:
-                        SettingsLocal.PreviewImageDownloadMode = PreviewImageDownloadMode.Always;
-                        break;
-                    case 1:
-                        SettingsLocal.PreviewImageDownloadMode = PreviewImageDownloadMode.WiFiOnly;
-                        break;
-                    case 2:
-                        SettingsLocal.PreviewImageDownloadMode = PreviewImageDownloadMode.Never;
-                        break;
-                }
-            }
         }
 
         public bool IgnoreServerCertificateErrors
@@ -239,9 +206,12 @@ namespace NextcloudApp.ViewModels
 
                 SettingsLocal.PreviewImageDownloadMode = value;
 
-                OnPropertyChanged("PreviewImageDownloadModeAsAlways");
-                OnPropertyChanged("PreviewImageDownloadModeAsWiFiOnly");
-                OnPropertyChanged("PreviewImageDownloadModeAsNever");
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(PreviewImageDownloadModeAsAlways));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(PreviewImageDownloadModeAsWiFiOnly));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(PreviewImageDownloadModeAsNever));
             }
         }
 
@@ -292,10 +262,13 @@ namespace NextcloudApp.ViewModels
                 }
 
                 SettingsRoaming.Theme = value;
-                
-                OnPropertyChanged("ThemeAsLight");
-                OnPropertyChanged("ThemeAsDark");
-                OnPropertyChanged("ThemeAsSystem");
+
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(ThemeAsLight));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(ThemeAsDark));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(ThemeAsSystem));
             }
         }
 
