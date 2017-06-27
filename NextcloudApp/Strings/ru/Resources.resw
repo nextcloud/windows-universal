@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Все файлы</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Всегда</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Произошла ошибка.</value>
@@ -206,8 +206,8 @@
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Скачивание файла...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Скачать миниатюры изображений</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@
   <data name="Name.Text" xml:space="preserve">
     <value>Имя</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Никогда</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Новый каталог</value>
@@ -287,8 +287,8 @@
   <data name="Version" xml:space="preserve">
     <value>Версия {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Только при подключенном Wi-Fi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Да</value>
@@ -582,17 +582,17 @@
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Синхронизировать этот каталог</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Тёмная</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Светлая</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Системная</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Тема</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Доступные для других</value>
@@ -652,5 +652,8 @@
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
     <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

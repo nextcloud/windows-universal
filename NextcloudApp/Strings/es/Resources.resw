@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Todos los archivos</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Siempre</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ha ocurrido un error</value>
@@ -206,8 +206,8 @@
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Descargando el archivo...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargar imágenes de previsualizacóin</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@
   <data name="Name.Text" xml:space="preserve">
     <value>Nombre</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nueva carpeta</value>
@@ -287,8 +287,8 @@
   <data name="Version" xml:space="preserve">
     <value>Verión {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Solo al estar conectado a Wi-Fi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -582,17 +582,17 @@ Por favor, inténtelo de nuevo más tarde.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Oscuro</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Claro</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Del sistema</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con otros</value>
@@ -652,5 +652,8 @@ Por favor, inténtelo de nuevo más tarde.</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
     <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>
