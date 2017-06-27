@@ -441,7 +441,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Connect2" xml:space="preserve">
     <value>Connect</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+  <data name="IgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
@@ -655,7 +655,7 @@ Please try again later.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Attention</value>
-    </data>
+  </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>How does the expert mode work?</value>
   </data>
