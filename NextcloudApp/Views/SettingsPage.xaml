@@ -69,7 +69,7 @@
                 </ToggleSwitch>
 
                 <ToggleSwitch 
-                    x:Uid="IgnoreInvalidSelfSignedSslCertificates"
+                    x:Uid="SettingsIgnoreInvalidSelfSignedSslCertificates"
                     Header="Ignore invalid self-signed SSL certificates"
                     Margin="0,12,0,0"
                     IsOn="{Binding IgnoreServerCertificateErrors, Mode=TwoWay}">
