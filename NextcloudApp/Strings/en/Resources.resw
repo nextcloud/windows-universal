@@ -655,6 +655,7 @@ Please try again later.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Attention</value>
+    </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>How does the expert mode work?</value>
   </data>
