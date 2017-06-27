@@ -216,8 +216,12 @@ namespace NextcloudApp.Services
             await StartDirectoryListing(null);
         }
 
-        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, String viewName = null)
+        public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, string viewName = null)
         {
+            // clear instantly, so the user will not see invalid listings
+            FilesAndFolders.Clear();
+            Folders.Clear();
+
             var client = await ClientService.GetClient();
 
             if (client == null || IsSelecting)
@@ -264,9 +268,6 @@ namespace NextcloudApp.Services
             {
                 ResponseErrorHandlerService.HandleException(e);
             }
-
-            FilesAndFolders.Clear();
-            Folders.Clear();
 
             if (list != null)
             {

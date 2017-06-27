@@ -9,21 +9,14 @@ namespace NextcloudApp.ViewModels
 {
     public class FavoritesPageViewModel : DirectoryListPageViewModel
     {
-        private TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
         private readonly INavigationService _navigationService;
-        private readonly IResourceLoader _resourceLoader;
-        private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
 
         public FavoritesPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
             : base(navigationService, resourceLoader, dialogService)
         {
             _navigationService = navigationService;
-            _resourceLoader = resourceLoader;
-            _dialogService = dialogService;
-            _tileService = TileService.Instance;
-
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -32,11 +25,12 @@ namespace NextcloudApp.ViewModels
             StartDirectoryListing();
             _isNavigatingBack = false;
 
-            if (e.Parameter != null)
+            if (e.Parameter == null)
             {
-                var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
-                SelectedFileOrFolder = parameter?.ResourceInfo;
+                return;
             }
+            var parameter = FileInfoPageParameters.Deserialize(e.Parameter);
+            SelectedFileOrFolder = parameter?.ResourceInfo;
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
@@ -53,7 +47,7 @@ namespace NextcloudApp.ViewModels
 
         public override ResourceInfo SelectedFileOrFolder
         {
-            get { return _selectedFileOrFolder; }
+            get => _selectedFileOrFolder;
             set
             {
                 if (_isNavigatingBack)
@@ -145,7 +139,8 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(DirectoryListPageViewModel.StatusBarText));
+            // ReSharper disable once ExplicitCallerInfoArgument
+            RaisePropertyChanged(nameof(StatusBarText));
         }
     }
 }
