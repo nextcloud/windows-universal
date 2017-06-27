@@ -23,24 +23,24 @@ using DecaTec.WebDav.Tools;
 namespace NextcloudClient
 {
     /// <summary>
-    ///     Nextcloud OCS and DAV access client
+    /// Nextcloud OCS and DAV access client
     /// </summary>
     public class NextcloudClient : IDisposable
     {
         #region PRIVATE PROPERTIES
 
         /// <summary>
-        ///     WebDavNet instance.
+        /// WebDavNet instance.
         /// </summary>
         private readonly WebDavSession _dav;
 
         /// <summary>
-        ///     Nextcloud Base URL.
+        /// Nextcloud Base URL.
         /// </summary>
         private readonly string _url;
 
         /// <summary>
-        ///     The client
+        /// The client
         /// </summary>
         private readonly HttpClient _client;
 
@@ -50,24 +50,24 @@ namespace NextcloudClient
         private readonly HttpBaseProtocolFilter _httpBaseProtocolFilter;
 
         /// <summary>
-        ///     Nextcloud WebDAV access path.
+        /// Nextcloud WebDAV access path.
         /// </summary>
         private const string Davpath = "remote.php/webdav";
 
         /// <summary>
-        ///     Nextcloud OCS API access path.
+        /// Nextcloud OCS API access path.
         /// </summary>
         private const string Ocspath = "ocs/v1.php";
 
         /// <summary>
-        ///     OCS Share API path.
+        /// OCS Share API path.
         /// </summary>
         private const string OcsServiceShare = "apps/files_sharing/api/v1";
 
         private const string OcsServiceData = "privatedata";
 
         /// <summary>
-        ///     OCS Provisioning API path.
+        /// OCS Provisioning API path.
         /// </summary>
         private const string OcsServiceCloud = "cloud";
 
@@ -78,7 +78,7 @@ namespace NextcloudClient
         #region CONSTRUCTORS
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="NextcloudClient" /> class.
+        /// Initializes a new instance of the <see cref="NextcloudClient" /> class.
         /// </summary>
         /// <param name="url">Nextcloud instance URL.</param>
         /// <param name="userId">User identifier.</param>
@@ -210,7 +210,7 @@ namespace NextcloudClient
 #region DAV
 
         /// <summary>
-        ///     List the specified remote path.
+        /// List the specified remote path.
         /// </summary>
         /// <param name="path">remote Path.</param>
         /// <returns>List of Resources.</returns>
@@ -239,7 +239,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the resource info for the remote path.
+        /// Gets the resource info for the remote path.
         /// </summary>
         /// <returns>The resource info.</returns>
         /// <param name="path">remote Path.</param>
@@ -273,7 +273,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Finds remote outgoing shares.
+        /// Finds remote outgoing shares.
         /// </summary>
         /// <returns>List of shares.</returns>
         public async Task<List<ResourceInfo>> GetSharesView(string viewname)
@@ -314,7 +314,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Finds user favorites.
+        /// Finds user favorites.
         /// </summary>
         /// <returns>List of favorites.</returns>
         public async Task<List<ResourceInfo>> GetFavorites()
@@ -367,14 +367,15 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Finds resource info for item by searching its parent.
+        /// Finds resource info for item by searching its parent.
         /// </summary>
         /// <returns>Resource Info if given item.</returns>
-        /// <param name="Path">Path to the Item.</param>
-        private async Task<ResourceInfo> GetResourceInfoByPath(string Path)
+        /// <param name="path">Path to the Item.</param>
+        private async Task<ResourceInfo> GetResourceInfoByPath(string path)
         {
-            var targetPath = "/" + Path.Split('/')[Path.Split('/').Length - 1];
-            var parentPath = Path.Replace(targetPath, "/");
+            path = Uri.UnescapeDataString(path);
+            var targetPath = "/" + path.Split('/')[path.Split('/').Length - 1];
+            var parentPath = path.Replace(targetPath, "/");
             var itemName = targetPath.Replace("/", "");
 
             var parentResource = await List(parentPath);
@@ -392,7 +393,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Download the specified file.
+        /// Download the specified file.
         /// </summary>
         /// <param name="path">File remote Path.</param>
         /// <param name="localStream"></param>
@@ -439,7 +440,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Upload the specified file to the specified path.
+        /// Upload the specified file to the specified path.
         /// </summary>
         /// <param name="path">remote Path.</param>
         /// <param name="stream"></param>
@@ -453,7 +454,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Checks if the specified remote path exists.
+        /// Checks if the specified remote path exists.
         /// </summary>
         /// <param name="path">remote Path.</param>
         /// <returns><c>true</c>, if remote path exists, <c>false</c> otherwise.</returns>
@@ -463,7 +464,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Creates a new directory at remote path.
+        /// Creates a new directory at remote path.
         /// </summary>
         /// <returns><c>true</c>, if directory was created, <c>false</c> otherwise.</returns>
         /// <param name="path">remote Path.</param>
@@ -483,7 +484,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Copy the specified source to destination.
+        /// Copy the specified source to destination.
         /// </summary>
         /// <param name="source">Source resoure path.</param>
         /// <param name="destination">Destination resource path.</param>
@@ -494,7 +495,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Move the specified source and destination.
+        /// Move the specified source and destination.
         /// </summary>
         /// <param name="source">Source resource path.</param>
         /// <param name="destination">Destination resource path.</param>
@@ -505,7 +506,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Downloads a remote directory as zip.
+        /// Downloads a remote directory as zip.
         /// </summary>
         /// <param name="path">File remote Path.</param>
         /// <param name="localStream"></param>
@@ -720,7 +721,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     List all remote shares.
+        /// List all remote shares.
         /// </summary>
         /// <returns>List of remote shares.</returns>
         public async Task<object> ListOpenRemoteShare()
@@ -737,7 +738,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     List all remote shares.
+        /// List all remote shares.
         /// </summary>
         /// <returns>List of remote shares.</returns>
         public async Task<object> ListShare()
@@ -754,7 +755,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Accepts a remote share
+        /// Accepts a remote share
         /// </summary>
         /// <returns><c>true</c>, if remote share was accepted, <c>false</c> otherwise.</returns>
         /// <param name="shareId">Share identifier.</param>
@@ -779,7 +780,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Declines a remote share.
+        /// Declines a remote share.
         /// </summary>
         /// <returns><c>true</c>, if remote share was declined, <c>false</c> otherwise.</returns>
         /// <param name="shareId">Share identifier.</param>
@@ -809,7 +810,7 @@ namespace NextcloudClient
 #region Shares
 
         /// <summary>
-        ///     Unshares a file or directory.
+        /// Unshares a file or directory.
         /// </summary>
         /// <returns><c>true</c>, if share was deleted, <c>false</c> otherwise.</returns>
         /// <param name="shareId">Share identifier.</param>
@@ -835,7 +836,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Updates a given share. NOTE: Only one of the update parameters can be specified at once.
+        /// Updates a given share. NOTE: Only one of the update parameters can be specified at once.
         /// </summary>
         /// <returns><c>true</c>, if share was updated, <c>false</c> otherwise.</returns>
         /// <param name="shareId">Share identifier.</param>
@@ -897,7 +898,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Shares a remote file with link.
+        /// Shares a remote file with link.
         /// </summary>
         /// <returns>instance of PublicShare with the share info.</returns>
         /// <param name="path">path to the remote file to share.</param>
@@ -952,7 +953,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Shares a remote file with specified user.
+        /// Shares a remote file with specified user.
         /// </summary>
         /// <returns>instance of UserShare with the share info.</returns>
         /// <param name="path">path to the remote file to share.</param>
@@ -1003,7 +1004,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Shares a remote file with specified group.
+        /// Shares a remote file with specified group.
         /// </summary>
         /// <returns>instance of GroupShare with the share info.</returns>
         /// <param name="path">path to the remote file to share.</param>
@@ -1048,7 +1049,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Checks whether a path is already shared.
+        /// Checks whether a path is already shared.
         /// </summary>
         /// <returns><c>true</c> if this instance is shared the specified path; otherwise, <c>false</c>.</returns>
         /// <param name="path">path to the share to be checked.</param>
@@ -1059,8 +1060,8 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets all shares for the current user when <c>path</c> is not set, otherwise it gets shares for the specific file or
-        ///     folder
+        /// Gets all shares for the current user when <c>path</c> is not set, otherwise it gets shares for the specific file or
+        /// folder
         /// </summary>
         /// <returns>array of shares or empty array if the operation failed.</returns>
         /// <param name="path">(optional) path to the share to be checked.</param>
@@ -1119,7 +1120,7 @@ namespace NextcloudClient
 #region Users
 
         /// <summary>
-        ///     Create a new user with an initial password via provisioning API.
+        /// Create a new user with an initial password via provisioning API.
         /// </summary>
         /// <returns><c>true</c>, if user was created, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be created.</param>
@@ -1153,7 +1154,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Deletes a user via provisioning API.
+        /// Deletes a user via provisioning API.
         /// </summary>
         /// <returns><c>true</c>, if user was deleted, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be deleted.</param>
@@ -1176,7 +1177,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Checks a user via provisioning API.
+        /// Checks a user via provisioning API.
         /// </summary>
         /// <returns><c>true</c>, if exists was usered, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be checked.</param>
@@ -1187,7 +1188,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Searches for users via provisioning API.
+        /// Searches for users via provisioning API.
         /// </summary>
         /// <returns>list of users.</returns>
         /// <param name="username">name of user to be searched for.</param>
@@ -1210,7 +1211,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the user's attributes.
+        /// Gets the user's attributes.
         /// </summary>
         /// <returns>The user attributes.</returns>
         /// <param name="username">Username.</param>
@@ -1227,7 +1228,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the user's avatar.
+        /// Gets the user's avatar.
         /// </summary>
         /// <param name="username"></param>
         /// <param name="size"></param>
@@ -1279,9 +1280,9 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Sets a user attribute. See
-        ///     https://doc.Nextcloud.com/server/7.0EE/admin_manual/configuration_auth_backends/user_provisioning_api.html#users-edituser
-        ///     for reference.
+        /// Sets a user attribute. See
+        /// https://doc.Nextcloud.com/server/7.0EE/admin_manual/configuration_auth_backends/user_provisioning_api.html#users-edituser
+        /// for reference.
         /// </summary>
         /// <returns><c>true</c>, if user attribute was set, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to modify.</param>
@@ -1316,7 +1317,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Adds a user to a group.
+        /// Adds a user to a group.
         /// </summary>
         /// <returns><c>true</c>, if user was added to group, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be added.</param>
@@ -1349,7 +1350,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Get a list of groups associated to a user.
+        /// Get a list of groups associated to a user.
         /// </summary>
         /// <returns>list of groups.</returns>
         /// <param name="username">name of user to list groups.</param>
@@ -1366,7 +1367,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Check if a user is in a group.
+        /// Check if a user is in a group.
         /// </summary>
         /// <returns><c>true</c>, if user is in group, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user.</param>
@@ -1378,7 +1379,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Removes a user from a group.
+        /// Removes a user from a group.
         /// </summary>
         /// <returns><c>true</c>, if user was removed from group, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be removed.</param>
@@ -1411,7 +1412,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Adds a user to a subadmin group.
+        /// Adds a user to a subadmin group.
         /// </summary>
         /// <returns><c>true</c>, if user was added to sub admin group, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user to be added to subadmin group.</param>
@@ -1444,7 +1445,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Get a list of subadmin groups associated to a user.
+        /// Get a list of subadmin groups associated to a user.
         /// </summary>
         /// <returns>list of subadmin groups.</returns>
         /// <param name="username">name of user.</param>
@@ -1473,7 +1474,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Check if a user is in a subadmin group.
+        /// Check if a user is in a subadmin group.
         /// </summary>
         /// <returns><c>true</c>, if user is in sub admin group, <c>false</c> otherwise.</returns>
         /// <param name="username">name of user.</param>
@@ -1485,7 +1486,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Removes the user from sub admin group.
+        /// Removes the user from sub admin group.
         /// </summary>
         /// <returns><c>true</c>, if user from sub admin group was removed, <c>false</c> otherwise.</returns>
         /// <param name="username">Username.</param>
@@ -1522,7 +1523,7 @@ namespace NextcloudClient
 #region Groups
 
         /// <summary>
-        ///     Create a new group via provisioning API.
+        /// Create a new group via provisioning API.
         /// </summary>
         /// <returns><c>true</c>, if group was created, <c>false</c> otherwise.</returns>
         /// <param name="groupName">name of group to be created.</param>
@@ -1554,7 +1555,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Deletes the group.
+        /// Deletes the group.
         /// </summary>
         /// <returns><c>true</c>, if group was deleted, <c>false</c> otherwise.</returns>
         /// <param name="groupName">Group name.</param>
@@ -1580,7 +1581,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Checks a group via provisioning API.
+        /// Checks a group via provisioning API.
         /// </summary>
         /// <returns><c>true</c>, if group exists, <c>false</c> otherwise.</returns>
         /// <param name="groupName">name of group to be checked.</param>
@@ -1616,7 +1617,7 @@ namespace NextcloudClient
 #region Config
 
         /// <summary>
-        ///     Returns Nextcloud config information.
+        /// Returns Nextcloud config information.
         /// </summary>
         /// <returns>The config.</returns>
         public async Task<Config> GetConfig()
@@ -1645,7 +1646,7 @@ namespace NextcloudClient
 #region Application attributes
 
         /// <summary>
-        ///     Returns an application attribute
+        /// Returns an application attribute
         /// </summary>
         /// <returns>App Attribute List.</returns>
         /// <param name="app">application id.</param>
@@ -1673,7 +1674,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Sets an application attribute.
+        /// Sets an application attribute.
         /// </summary>
         /// <returns><c>true</c>, if attribute was set, <c>false</c> otherwise.</returns>
         /// <param name="app">application id.</param>
@@ -1709,7 +1710,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Deletes an application attribute.
+        /// Deletes an application attribute.
         /// </summary>
         /// <returns><c>true</c>, if attribute was deleted, <c>false</c> otherwise.</returns>
         /// <param name="app">application id.</param>
@@ -1742,7 +1743,7 @@ namespace NextcloudClient
 #region Apps
 
         /// <summary>
-        ///     List all enabled apps through the provisioning api.
+        /// List all enabled apps through the provisioning api.
         /// </summary>
         /// <returns>a list of apps and their enabled state.</returns>
         public async Task<List<string>> GetApps()
@@ -1758,7 +1759,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets information about the specified app.
+        /// Gets information about the specified app.
         /// </summary>
         /// <returns>App information.</returns>
         /// <param name="appName">App name.</param>
@@ -1775,7 +1776,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Enable an app through provisioning_api.
+        /// Enable an app through provisioning_api.
         /// </summary>
         /// <returns><c>true</c>, if app was enabled, <c>false</c> otherwise.</returns>
         /// <param name="appName">Name of app to be enabled.</param>
@@ -1801,7 +1802,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Disable an app through provisioning_api
+        /// Disable an app through provisioning_api
         /// </summary>
         /// <returns><c>true</c>, if app was disabled, <c>false</c> otherwise.</returns>
         /// <param name="appName">Name of app to be disabled.</param>
@@ -1864,7 +1865,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the DAV request URI.
+        /// Gets the DAV request URI.
         /// </summary>
         /// <returns>The DAV URI.</returns>
         /// <param name="path">remote Path.</param>
@@ -1878,7 +1879,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the DAV request URI.
+        /// Gets the DAV request URI.
         /// </summary>
         /// <returns>The DAV URI.</returns>
         /// <param name="path">remote Path.</param>
@@ -1902,7 +1903,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the remote path for OCS API.
+        /// Gets the remote path for OCS API.
         /// </summary>
         /// <returns>The ocs path.</returns>
         /// <param name="service">Service.</param>
@@ -1918,7 +1919,7 @@ namespace NextcloudClient
 #region OCS Response parsing
 
         /// <summary>
-        ///     Get element value from OCS Meta.
+        /// Get element value from OCS Meta.
         /// </summary>
         /// <returns>Element value.</returns>
         /// <param name="response">XML OCS response.</param>
@@ -1935,7 +1936,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Get element value from OCS Data.
+        /// Get element value from OCS Data.
         /// </summary>
         /// <returns>Element value.</returns>
         /// <param name="response">XML OCS response.</param>
@@ -1952,7 +1953,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the data element values.
+        /// Gets the data element values.
         /// </summary>
         /// <returns>The data elements.</returns>
         /// <param name="response">XML OCS Response.</param>
@@ -1967,7 +1968,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the share list from a OCS Data response.
+        /// Gets the share list from a OCS Data response.
         /// </summary>
         /// <returns>The share list.</returns>
         /// <param name="response">XML OCS Response.</param>
@@ -2160,7 +2161,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Checks the validity of the OCS Request. If invalid a exception is thrown.
+        /// Checks the validity of the OCS Request. If invalid a exception is thrown.
         /// </summary>
         /// <param name="response">OCS Response.</param>
         /// <exception cref="ResponseError">Empty response</exception>
@@ -2187,11 +2188,11 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Returns a list of application attributes.
+        /// Returns a list of application attributes.
         /// </summary>
         /// <param name="response">XML OCS Response.</param>
         /// <returns>
-        ///     List of application attributes.
+        /// List of application attributes.
         /// </returns>
         private List<AppAttribute> GetAttributeList(string response)
         {
@@ -2230,7 +2231,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Gets the user attributes from a OCS XML Response.
+        /// Gets the user attributes from a OCS XML Response.
         /// </summary>
         /// <returns>The user attributes.</returns>
         /// <param name="response">OCS XML Response.</param>
@@ -2399,7 +2400,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Returns the elements of a XML Element as a List.
+        /// Returns the elements of a XML Element as a List.
         /// </summary>
         /// <returns>The elements as list.</returns>
         /// <param name="element">XML Element.</param>
@@ -2409,7 +2410,7 @@ namespace NextcloudClient
         }
 
         /// <summary>
-        ///     Returns the elements of a XML Element as a Dictionary.
+        /// Returns the elements of a XML Element as a Dictionary.
         /// </summary>
         /// <returns>The elements as dictionary.</returns>
         /// <param name="element">XML Element.</param>
