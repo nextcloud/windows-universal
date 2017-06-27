@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Allar skrár</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Alltaf</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Villa átti sér stað</value>
@@ -206,8 +206,8 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Sæki skrána…</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Sækja forskoðunarmyndir</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
   <data name="Name.Text" xml:space="preserve">
     <value>Heiti</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Aldrei</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Ný mappa</value>
@@ -287,8 +287,8 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
   <data name="Version" xml:space="preserve">
     <value>Útgáfa {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Aðeins þegar ég er á þráðlausu WiFi-neti</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Já</value>
@@ -417,19 +417,20 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
     <value>Uppfæra</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Færa skrár og möppur
-• Endurnefna skrár og möppur
-• Handvirk samstilling á möppum
-• Sækja möppur sem ZIP-safnskrár 
-• Velja margar skrár og möppur
-• Festing skráa og mappa á upphafsskjá
-• Notkun á Windows Hello til að auðkenna forritið í ræsingu
-• Leyfa sjálfundirrituð SSL-skilríki
-• Birting á stærð á möppum í lista
-• Deiling skráa með forritinu
-• Notkun lykilorðageymslu til að geyma auðkenni notenda
-• Öryggisumbætur og villuviðgerðir
-• Nýtt og stöðugra WebDAV-aðgerðasafn</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Tengja á ræsispjald</value>
@@ -491,7 +492,7 @@ Farðu varlega, þú verður ekki varinn fyrir Maður-í-miðjunni (mitm) árás
     <value>Varaðu þig á árekstrum!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Hvorki staðværa né fjartengda mappan eru tómar. Þetta gæti valdið fjölda árekstra, því ómögulegt er að vita hvaða skrár eru þær réttu.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Samstilling hefur verið ræst!</value>
@@ -581,17 +582,17 @@ Prófaðu aftur síðar.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Samstilla þessa möppu</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Dökkt</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Ljóst</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Kerfi</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Þema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Deilt með öðrum</value>
@@ -645,5 +646,14 @@ Prófaðu aftur síðar.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

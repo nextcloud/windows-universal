@@ -156,8 +156,9 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
             Directory = DirectoryService.Instance;
-            StartDirectoryListing();
+            _selectedPathIndex = Directory.PathStack.Count - 1;
             _isNavigatingBack = false;
+            StartDirectoryListing();
         }
 
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)

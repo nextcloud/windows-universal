@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Todos los archivos</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Siempre</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ha ocurrido un error</value>
@@ -206,8 +206,8 @@
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Descargando el archivo...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargar imágenes de previsualizacóin</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@
   <data name="Name.Text" xml:space="preserve">
     <value>Nombre</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nueva carpeta</value>
@@ -287,8 +287,8 @@
   <data name="Version" xml:space="preserve">
     <value>Verión {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Solo al estar conectado a Wi-Fi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -417,19 +417,20 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover archivos y carpetas
-• Renombrar archivos y carpetas
-• Sincronización manual de carpetas
-• Descargar directorios como archivos zip 
-• Seleccionar múltiples archivos y carpetas
-• Fijar archivos y carpetas en la pantalla de inicio
-• Usar Windows Hello para autenticarse al inicio de la app
-• Permitir certificados SSL autofirmados
-• Mostrar el tamaño de la carpeta en la lista
-• Compartir archivos con la app
-• Use la bóveda de contraseñas (PasswordVault) para almacenar credenciales del usuario
-• Mejoras de seguridad y corrección de errores
-• Librería WebDAV nueva y más estable</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin para iniciar</value>
@@ -491,7 +492,7 @@ Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm
     <value>¡Cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Ni la carpeta local ni la remota están vacías. Esto puede provocar muchos conflictos, porque no sabemos qué archivos son los correctos.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha iniciado la sincronización!</value>
@@ -581,17 +582,17 @@ Por favor, inténtelo de nuevo más tarde.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Oscuro</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Claro</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Del sistema</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con otros</value>
@@ -645,5 +646,14 @@ Por favor, inténtelo de nuevo más tarde.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No se ha especificado la URL del servidor. Por favor, introduce la dirección de tu instancia de Nextcloud.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

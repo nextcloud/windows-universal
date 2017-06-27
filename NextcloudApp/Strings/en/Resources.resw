@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>All files</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -206,7 +206,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Downloading the file…</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
@@ -227,7 +227,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Name.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -287,7 +287,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Version" xml:space="preserve">
     <value>Version {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
     <value>Only when I'm on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
@@ -422,6 +422,7 @@ Would you like to inform the application developers and submit the prepared erro
 • Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
@@ -491,7 +492,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don't know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronization has been triggered!</value>
@@ -581,17 +582,17 @@ Please try again later.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Synchronize this folder</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
     <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Shared with others</value>
@@ -654,5 +655,13 @@ Please try again later.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Attention</value>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What's the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

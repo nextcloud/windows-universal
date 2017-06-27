@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Alle Dateien</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Immer</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten</value>
@@ -206,8 +206,8 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Datei wird heruntergeladen…</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Bildvorschau herunterladen</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Name.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Nie</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Neuer Ordner</value>
@@ -276,7 +276,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Größe</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Es gibt bereits ein Element mit diesem Namen. Geben Sie einen anderen Namen an.</value>
+    <value>Es gibt bereits ein Element mit diesem Namen. Gebe einen anderen Namen an.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
@@ -287,8 +287,8 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Version" xml:space="preserve">
     <value>Version {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Nur über WLAN</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
@@ -300,13 +300,13 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei löschen</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du die Datei {0} löschen möchtest?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Bist Du sicher, dass Du den Ordner {0} löschen möchtest?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -342,7 +342,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>auf Antwort des Servers warten</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Wählen Sie einen neuen Namen aus</value>
+    <value>Wähle einen neuen Namen aus</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Umbenennen</value>
@@ -384,7 +384,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Für Ihr Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
+    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
@@ -405,7 +405,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Deine App wurde auf Version {0} aktualisiert</value>
+    <value>Die App wurde auf Version {0} aktualisiert</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Features und Verbesserungen in dieser Version:</value>
@@ -417,19 +417,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben
-• Dateien und Ordner umbenennen
-• Manuelle Ordner-synchronisation
-• Ordner als Zip-Dateien herunterladen
-• Mehrere Dateien und Ordner auswählen
-• Dateien und Ordner auf dem Startbildschirm ablegen
-• Windows Hello für die Anmeldung beim App-Start benutzen
-• Selbst-signierte SSL-Zertifikate erlauben
-• Ordnrergrüßen-Anzeige in der Listenasicht
-• Dateien mit der App teilen
-• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
-• Sicherheits-Verbesserungen und Fehlerbehebung
-• Neue und stabilere WebDAV-Bibliothek</value>
+    <value>• Dateien und Ordner verschieben• Dateien und Ordner umbenennen• Manuelle Ordner-Synchronisation• Ordner als Zip-Dateien herunterladen• Mehrere Dateien und Ordner auswählen• Elemente können als Favoriten in der App markiert werden• Dateien und Ordner auf dem Startbildschirm ablegen• Windows Hello für die Anmeldung beim App-Start benutzen• Selbst-signierte SSL-Zertifikate erlauben• Ordnrergrößen in der Listenasicht anzeigen• Dateien mit der App teilen• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden• Sicherheits-Verbesserungen und Fehlerbehebung• Neue und stabilere WebDAV-Bibliothek</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>An Start anheften</value>
@@ -485,13 +473,13 @@ Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Hinweis</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Liste der Fehler die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
+    <value>Liste der Fehler, die bei der Synchronisierung aufgetreten sind. Es dürfte sich hierbei um vorübergehende Probleme handeln (z.B. weil eine Datei in einer anderen App geöffnet war) und sollte nach der nächsten Synchronisierung behoben sein.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vorsicht vor Konflikten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu diversen Problemen führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
+    <value>Sowohl der entfernte als auch der lokale Ordner sind nicht leer. Dies kann zu vielen Konflikten führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisation wurde gestartet!</value>
@@ -581,17 +569,17 @@ Bitte später noch einmal versuchen.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Diesen Ordner synchronisieren</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Dunkel</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Hell</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>System</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Mit anderen geteilt</value>
@@ -645,5 +633,14 @@ Bitte später noch einmal versuchen.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>Wie funktioniert der Expertenmodus?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>Was bedeutet dies hier?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

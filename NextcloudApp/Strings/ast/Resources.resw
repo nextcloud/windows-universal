@@ -422,6 +422,7 @@
 • Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Allow self signed SSL certificates
@@ -491,7 +492,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Aicionóse la sincronización!</value>
@@ -645,5 +646,11 @@ Please try again later.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
   </data>
 </root>

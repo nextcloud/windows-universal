@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Alle bestanden</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Altijd</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Er heeft zich een fout voorgedaan.</value>
@@ -206,8 +206,8 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Downloaden bestand...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Downloaden voorbeeldafbeeldingen</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="Name.Text" xml:space="preserve">
     <value>Naam</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Nooit</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nieuwe map</value>
@@ -287,8 +287,8 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="Version" xml:space="preserve">
     <value>Versie {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Alleen met Wifi verbinding</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
@@ -417,19 +417,20 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Verplaatsen bestanden en mappen
-• Hernoemen bestanden en mappen
-• Handmatig synchroniseren van mappen
-• Downloaden mappen als zip-bestand
-• Selecteren meerdere bestanden en mappen
-• Vastprikken bestanden en mappen aan startscherm
-• Gebruiken Windows Hello om bij starten app te authenticeren
-• Toestaan self-signed SSL certificaten
-• Tonen mapgrootte in overzocht
-• Delen bestanden met de app
-• Gebruiken PasswordVault om inloggegevens op te slaan
-• Security verbeteringen &amp; bug fixes
-• Nieuwe en meer stabiele WebDAV library</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Allow self signed SSL certificates
+• Show folder size in list
+• Share files with the app
+• Use the PasswordVault to store user credentials
+• Security improvements &amp; bug fixes
+• New and more stable WebDAV library</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
@@ -476,7 +477,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attentie!</value>
+    <value>Let op!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
     <value>Deze instellingen worden actief na opnieuw opstarten van de app.</value>
@@ -485,13 +486,13 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
     <value>Hint</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lijst van fouten die optraden tijdens het synchroniseren. Dit zou slechts een tijdelijk probleem moeten zijn (bijvoorbeeld omdat het bestand geopend is in een andere app) en zou vanzelf opgelost moeten zijn na de volgende synchronisatie.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Let op conflicten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Zowel de externe als de lokale map is niet leeg. Dat kan leiden tot veel conflicten, omdat we niet weten welke bestanden de juiste zijn.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisatie is getriggerd!</value>
@@ -581,17 +582,17 @@ Probeer het later opnieuw.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Synchroniseer deze map</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Donker</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Licht</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Systeem</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Thema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Gedeeld met anderen</value>
@@ -645,5 +646,14 @@ Probeer het later opnieuw.</value>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>
