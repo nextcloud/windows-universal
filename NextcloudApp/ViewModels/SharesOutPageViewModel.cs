@@ -56,6 +56,10 @@ namespace NextcloudApp.ViewModels
             get { return _selectedFileOrFolder; }
             set
             {
+                if (Directory != null && Directory.IsSelecting)
+                {
+                    return;
+                }
                 if (_isNavigatingBack)
                 {
                     return;
