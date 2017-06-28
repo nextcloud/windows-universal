@@ -121,7 +121,7 @@
     <value>Alle Dateien</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Immer</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten</value>
@@ -207,7 +207,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei wird heruntergeladen…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Bildvorschauen herunterladen</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Name</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nie</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Neuer Ordner</value>
@@ -288,7 +288,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Version {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Nur über WLAN</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
@@ -441,8 +441,8 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Connect2" xml:space="preserve">
     <value>Verbinden</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertenmodus</value>
@@ -583,16 +583,16 @@ Bitte später noch einmal versuchen.</value>
     <value>Diesen Ordner synchronisieren</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Dunkel</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Hell</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Die Systemeinstellungen verwenden</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Einen Modus auswählen</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Mit anderen geteilt</value>
@@ -647,6 +647,15 @@ Bitte später noch einmal versuchen.</value>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
   </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Wie funktioniert der Expertenmodus?</value>
   </data>
@@ -654,6 +663,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Was bedeutet dies hier?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Einstellungen der Windows-Farben</value>
   </data>
 </root>

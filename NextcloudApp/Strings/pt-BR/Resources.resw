@@ -121,7 +121,7 @@
     <value>Todos os arquivos</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ocorreu um erro</value>
@@ -206,7 +206,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Baixando o arquivo...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Baixar preview de imagens</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,7 +227,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Nome</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nova pasta</value>
@@ -287,7 +287,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Versão {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Somente quando estiver no Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sim</value>
@@ -440,8 +440,8 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore certificados SSL auto-assinados inválidos</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo avançado</value>
@@ -582,16 +582,16 @@ Por favor tente mais tarde.</value>
     <value>Sincronizar esta pasta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Escuro</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Usar configurações do sistema</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Selecionar um modo</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartilhado com outros</value>
@@ -646,6 +646,15 @@ Por favor tente mais tarde.</value>
   <data name="NoServerGiven" xml:space="preserve">
     <value>Nenhuma URL de servidor especificada. Entre a URL de seu Nextcloud.</value>
   </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Como o modo expert funciona?</value>
   </data>
@@ -653,6 +662,6 @@ Por favor tente mais tarde.</value>
     <value>Qual o significado disso?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Configurações da cor da janela</value>
   </data>
 </root>

@@ -121,7 +121,7 @@
     <value>Všechny soubory</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Vždy</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Došlo k chybě</value>
@@ -205,7 +205,7 @@
     <value>Stahování souboru…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Stáhnout náhledy obrázků</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -226,7 +226,7 @@
     <value>Jméno</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nikdy</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nová složka</value>
@@ -286,7 +286,7 @@
     <value>Verze {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Pouze, když jsem na Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ano</value>
@@ -415,20 +415,20 @@
     <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app
-• Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+    <value>• Přesun souborů a složek
+• Přejmenování souborů a složek
+• Ruční synchronizace složek
+• Stáhnutí adresáře jako zip souboru
+• Výběr více souborů a složek
+• Položky mohou být v aplikaci označeny jako oblíbené
+• Připojení souborů a složek na startovací obrazovku
+• Použití Windows Hello k ověření při startu aplikace
+• Povolení vlastních SSL certifikátů
+• Zobrazení velikosti složky v seznamu
+• Sdílení souborů s aplikací
+• Pro ukládání pověření uživatele použít PasswordVault
+• Vylepšení zabezpečení a opravy chyb
+• Nová a stabilnější knihovna WebDAV</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Připnout na start</value>
@@ -439,8 +439,8 @@
   <data name="Connect2" xml:space="preserve">
     <value>Připojit</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorovat neplatné SSL certifikáty podepsané sám sebou</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Režim pro experty</value>
@@ -490,7 +490,7 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
     <value>Pozor na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Vzdálená i místní složka není prázdná. To může mít za následek spoustu konfliktů, protože aplikace neví, které soubory jsou správné.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronizace byla spuštěna!</value>
@@ -536,10 +536,10 @@ Prosím zkuste to znovu později.</value>
     <value>Stav synchronizace</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Místní cesta</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud cesta</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Zvolte složku, kam chcete soubory nahrát</value>
@@ -581,16 +581,16 @@ Prosím zkuste to znovu později.</value>
     <value>Synchronizovat tuto složku</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Tmavé</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Svétlé</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Použít systémová nastavení</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Vyberat režim</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Sdíleno s ostatními</value>
@@ -639,19 +639,28 @@ Prosím zkuste to znovu později.</value>
     <value>Přepsat</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Neočekávaná výjimka: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Není zadána žádná URL adresa serveru. Zadejte prosím URL adresu vaší instance Nextcloud.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Jak funguje expertní režim?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Jaký má smysl?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Nastavení barev systému Windows</value>
   </data>
 </root>

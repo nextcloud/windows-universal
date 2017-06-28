@@ -121,7 +121,7 @@
     <value>Todos los archivos</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Se ha presentado un error</value>
@@ -207,7 +207,7 @@
     <value>Descargando el archivo...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Descargar vista previa de imágenes</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@
     <value>Nombre</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Carpeta nueva</value>
@@ -288,7 +288,7 @@
     <value>Versión {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Sólo cuando estoy en una red Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -441,8 +441,8 @@
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto firmados inválidos</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -582,16 +582,16 @@
     <value>Sincronizar esta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Obscuro</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Usar las configuraciones del sistema</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Seleccionar el modo</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con otros</value>
@@ -645,6 +645,15 @@
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No se ha especificado el URL del servidor. Por favor ingresa el URL de tu instancia de Nextcloud.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>¿Cómo funciona el modo experto?</value>
