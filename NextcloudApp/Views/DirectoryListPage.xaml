@@ -15,7 +15,7 @@
     NavigationCacheMode="Enabled">
 
     <Page.Resources>
-        <CollectionViewSource 
+        <CollectionViewSource
             x:Key="GroupedFilesAndFolders" 
             Source="{Binding Directory.GroupedFilesAndFolders}" 
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
@@ -242,18 +242,19 @@
 
                                 <Button 
                                     Grid.Column="2"
+                                    Grid.Row="0" 
                                     Grid.RowSpan="2"
                                     Style="{StaticResource FavoriteButtonStyle}"
                                     Command="{Binding DataContext.ToggleFavoriteCommand, ElementName=Page, Mode=OneTime}"
                                     CommandParameter="{Binding}">
                                     <FontIcon 
-                                    Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
-                                    Margin="10,0,10,0"
-                                    FontFamily="Segoe MDL2 Assets"
-                                    FontSize="16"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
+                                        Glyph="{Binding Converter={StaticResource FavoriteToIconConverter}}" 
+                                        Margin="10,0,10,0"
+                                        FontFamily="Segoe MDL2 Assets"
+                                        FontSize="16"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"/>
                                 </Button>
 
                                 <interactivity:Interaction.Behaviors>

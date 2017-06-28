@@ -1,18 +1,17 @@
-﻿<UserControl x:Class="NextcloudApp.Views.MenuView"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="using:NextcloudApp.Views"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:prismMvvm="using:Prism.Windows.Mvvm"
-      xmlns:viewModels="using:NextcloudApp.ViewModels"
-      xmlns:models="using:NextcloudApp.Models"
-      prismMvvm:ViewModelLocator.AutoWireViewModel="True"
-      mc:Ignorable="d">
+﻿<UserControl 
+    x:Class="NextcloudApp.Views.MenuView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:models="using:NextcloudApp.Models"
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
     <UserControl.Resources>
         <DataTemplate x:Key="MenuItemTemplate" x:DataType="models:MenuItem">
             <Grid>
-                <Button 
+                <Button
                     AutomationProperties.Name="{Binding DisplayName}"
                     Command="{Binding Command}"
                     Style="{StaticResource SplitViewMenuButtonStyle}"
@@ -29,117 +28,120 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundBaseLowBrush}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="MenuStates">
-                <VisualState x:Name="Wide">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1280" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="menuItemsControl.Margin" Value="0" />
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Medium">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="800" />
-                    </VisualState.StateTriggers>
-                </VisualState>
-                <VisualState x:Name="Narrow" />
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="1" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <Grid Margin="12,60,12,12" Height="52">
+    <ScrollViewer Background="{ThemeResource SystemControlBackgroundBaseLowBrush}" Padding="0,48,12,0">
+        <Grid Margin="0,12,0,0">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="MenuStates">
+                    <VisualState x:Name="Wide">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="1280" />
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="menuItemsControl.Margin" Value="0" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Medium">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="800" />
+                        </VisualState.StateTriggers>
+                    </VisualState>
+                    <VisualState x:Name="Narrow" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+            <Grid Height="52" Margin="12,0,12,24">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Ellipse 
-                Grid.Row="0" 
-                Grid.Column="0"
-                Grid.RowSpan="4"
-                Height="52" 
-                Width="52" 
-                Margin="0,0,8,0"
-                Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}}">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="{Binding UserAvatarUrl}"/>
-                </Ellipse.Fill>
-            </Ellipse>
-            <Grid
-                Grid.Row="0" 
-                Grid.Column="0"
-                Grid.RowSpan="4"
-                Height="52" 
-                Width="52" 
-                Margin="0,0,8,0"
-                Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
-                <Ellipse Fill="{ThemeResource SystemControlHighlightAccentBrush}" />
+                <Ellipse 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Grid.RowSpan="4"
+                    Height="52" 
+                    Width="52" 
+                    Margin="0,0,8,0"
+                    Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding UserAvatarUrl}"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Grid
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Grid.RowSpan="4"
+                    Height="52" 
+                    Width="52" 
+                    Margin="0,0,8,0"
+                    Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
+                    <Ellipse Fill="{ThemeResource SystemControlHighlightAccentBrush}" />
+                    <TextBlock 
+                        Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center"
+                        FontSize="30"
+                        LineHeight="47"/>
+                </Grid>
+                <TextBlock
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    Text="{Binding User.DisplayName}"
+                    FontSize="12"
+                    TextTrimming="CharacterEllipsis"/>
                 <TextBlock 
-                    Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"
-                    FontSize="30"
-                    LineHeight="47"/>
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    Text="{Binding User.EMail}" 
+                    FontSize="8"
+                    Foreground="{ThemeResource SystemControlDisabledBaseLowBrush}"
+                    TextTrimming="CharacterEllipsis"/>
+                <ProgressBar 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Minimum="0"
+                    Value="{Binding User.Quota.Used}"
+                    Maximum="{Binding User.Quota.Total}"/>
+                <TextBlock 
+                    Grid.Row="3" 
+                    Grid.Column="1"
+                    Text="{Binding QuotaUsedOfTotalString}"
+                    FontSize="12"
+                    TextTrimming="CharacterEllipsis"/>
             </Grid>
-            <TextBlock
-                Grid.Row="0" 
-                Grid.Column="1" 
-                Text="{Binding User.DisplayName}"
-                FontSize="12"
-                TextTrimming="CharacterEllipsis"/>
-            <TextBlock 
+
+            <ItemsControl
                 Grid.Row="1" 
-                Grid.Column="1"
-                Text="{Binding User.EMail}" 
-                FontSize="8"
-                Foreground="{ThemeResource SystemControlDisabledBaseLowBrush}"
-                TextTrimming="CharacterEllipsis"/>
-            <ProgressBar 
+                IsTabStop="False"
+                ItemTemplate="{StaticResource MenuItemTemplate}"
+                ItemsSource="{Binding Commands}"/>
+
+            <Border
                 Grid.Row="2" 
-                Grid.Column="1"
-                Minimum="0"
-                Value="{Binding User.Quota.Used}"
-                Maximum="{Binding User.Quota.Total}"/>
-            <TextBlock 
+                BorderThickness="1"
+                Height="1"
+                Margin="12"
+                BorderBrush="{ThemeResource SystemControlDisabledBaseLowBrush}"
+                Name="Separator" 
+                x:FieldModifier="public" />
+
+            <ItemsControl
                 Grid.Row="3" 
-                Grid.Column="1"
-                Text="{Binding QuotaUsedOfTotalString}"
-                FontSize="12"
-                TextTrimming="CharacterEllipsis"/>
+                Margin="0,0,0,6"
+                IsTabStop="False"
+                ItemTemplate="{StaticResource MenuItemTemplate}"
+                ItemsSource="{Binding ExtraCommands}" />
         </Grid>
-
-        <ItemsControl
-            Grid.Row="1" 
-            IsTabStop="False"
-            ItemTemplate="{StaticResource MenuItemTemplate}"
-            ItemsSource="{Binding Commands}" />
-
-        <Border
-            Grid.Row="2" 
-            BorderThickness="1"
-            Margin="12,0,12,0"
-            BorderBrush="{ThemeResource SystemControlBackgroundBaseMediumBrush}"
-            Name="Separator"/>
-
-        <ItemsControl
-            Grid.Row="3" 
-            Margin="0"
-            IsTabStop="False"
-            ItemTemplate="{StaticResource MenuItemTemplate}"
-            ItemsSource="{Binding ExtraCommands}" />
-    </Grid>
+    </ScrollViewer>
 </UserControl>

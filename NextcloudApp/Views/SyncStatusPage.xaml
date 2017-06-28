@@ -4,9 +4,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
+    xmlns:viewModels="using:NextcloudApp.ViewModels"
     x:Class="NextcloudApp.Views.SyncStatusPage"
     mc:Ignorable="d"
-    prismMvvm:ViewModelLocator.AutoWireViewModel="True">
+    prismMvvm:ViewModelLocator.AutoWireViewModel="True"
+    d:DataContext="{d:DesignInstance viewModels:SyncStatusPageViewModel, d:IsDesignTimeCreatable=True}">
 
     <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
         <Grid.RowDefinitions>
@@ -128,13 +130,33 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Grid 
+                                        Grid.Row="0"
                                         Grid.RowSpan="2"
                                         Background="{StaticResource SystemControlHighlightAccentBrush}" 
                                         Height="40" 
                                         Width="40" 
                                         Margin="0,0,4,0" 
                                         HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center">
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}}">
+                                        <FontIcon 
+                                            Glyph="&#xE81C;"
+                                            FontFamily="Segoe MDL2 Assets"
+                                            FontSize="28"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White" />
+                                    </Grid>
+                                    <Grid
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Background="DarkRed" 
+                                        Height="40" 
+                                        Width="40" 
+                                        Margin="0,0,4,0" 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}, ConverterParameter=true}">
                                         <FontIcon 
                                             Glyph="&#xE81C;"
                                             FontFamily="Segoe MDL2 Assets"
@@ -145,38 +167,19 @@
                                     </Grid>
 
                                     <TextBlock
-                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}}"
                                         Grid.Row="0" 
                                         Grid.Column="1"
                                         Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" 
                                         Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
                                         TextWrapping="NoWrap" 
                                         TextTrimming="CharacterEllipsis" />
-                                    <TextBlock
-                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}, ConverterParameter=true}"
-                                        Grid.Row="0" 
-                                        Grid.Column="1"
-                                        Text="{Binding SyncDate, Converter={StaticResource DateTimeToStringConverter}}" 
-                                        Foreground="Red"
-                                        TextWrapping="NoWrap" 
-                                        TextTrimming="CharacterEllipsis" />
 
                                     <TextBlock 
-                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}}"
                                         Grid.Row="1" 
                                         Grid.Column="1"
                                         Text="{Binding Path}"
                                         FontSize="12"
                                         Foreground="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}"
-                                        TextWrapping="NoWrap" 
-                                        TextTrimming="CharacterEllipsis"/>
-                                    <TextBlock 
-                                        Visibility="{Binding ConflictType, Converter={StaticResource ConflictTypeNoneToVisibilityConverter}, ConverterParameter=true}"
-                                        Grid.Row="1" 
-                                        Grid.Column="1"
-                                        Text="{Binding Path}"
-                                        FontSize="12"
-                                        Foreground="Red"
                                         TextWrapping="NoWrap" 
                                         TextTrimming="CharacterEllipsis"/>
 
@@ -202,57 +205,83 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                        <ListView Name="ConflictListView" ItemsSource="{Binding ConflictList}" SelectionMode="Multiple">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
+                    <ListView 
+                        Name="ConflictListView" 
+                        Grid.Row="0" 
+                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        ItemsSource="{Binding ConflictList}" 
+                        SelectionMode="Multiple"
+                        Padding="0,2,0,2"
+                        HorizontalContentAlignment="Stretch">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Padding" Value="12,2,4,2"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                        <Grid 
-                                            Background="{StaticResource SystemControlHighlightAccentBrush}" 
-                                            Height="40"
-                                            Width="40" 
-                                            Margin="0,0,4,0" 
-                                            HorizontalAlignment="Center" 
-                                            VerticalAlignment="Center">
-                                            <FontIcon 
-                                                Glyph="&#xE783;"
-                                                FontFamily="Segoe MDL2 Assets"
-                                                FontSize="28"
-                                                VerticalAlignment="Center"
-                                                HorizontalAlignment="Center"
-                                                Foreground="White" />
-                                        </Grid>
-
-                                        <TextBlock
-                                            Grid.Row="0" 
-                                            Grid.Column="1"
-                                            Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}"
-                                            Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
-                                            TextWrapping="NoWrap" 
-                                            TextTrimming="CharacterEllipsis" />
-
-                                        <TextBlock 
-                                            Grid.Row="1" 
-                                            Grid.Column="1"
-                                            Text="{Binding Path}"
-                                            FontSize="12"
-                                            Foreground="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}"
-                                            TextWrapping="NoWrap" 
-                                            TextTrimming="CharacterEllipsis"/>
+                                    <Grid 
+                                        Grid.Row="0" 
+                                        Grid.Column="0"
+                                        Background="{StaticResource SystemControlHighlightAccentBrush}" 
+                                        Height="40"
+                                        Width="40" 
+                                        Margin="0,08,4,4"
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center">
+                                        <FontIcon 
+                                            Glyph="&#xE783;"
+                                            FontFamily="Segoe MDL2 Assets"
+                                            FontSize="30"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Margin="2,1,0,0"
+                                            Foreground="White" />
                                     </Grid>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </ScrollViewer>
+
+                                    <TextBlock 
+                                        Grid.Row="0" 
+                                        Grid.Column="1"
+                                        Text="{Binding Path}"
+                                        Foreground="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}"
+                                        FontSize="12"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap" />
+
+                                    <TextBlock
+                                        Grid.Row="1" 
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Text="{Binding ConflictType, Converter={StaticResource ConflictTypeToStringConverter}}"
+                                        Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
+                                        TextWrapping="Wrap" 
+                                        VerticalAlignment="Top"/>
+
+
+                                    <Border 
+                                        Grid.Row="2" 
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Margin="0,12,0,2"
+                                        Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                                        Height="1"
+                                        HorizontalAlignment="Stretch"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
                     <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
                         <!-- Buttons for fix options -->
@@ -287,7 +316,9 @@
                     Padding="0,0,0,2">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
-                            <Border Background="{ThemeResource SystemControlHighlightAccentBrush}">
+                            <Border 
+                                Background="{ThemeResource SystemControlHighlightAccentBrush}"
+                                Margin="0,0,0,2">
                                 <TextBlock 
                                     Text="{Binding}"
                                     TextWrapping="WrapWholeWords"
@@ -314,6 +345,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Grid 
+                                    Grid.RowSpan="2"
                                     Background="{StaticResource SystemControlHighlightAccentBrush}" 
                                     Height="40"
                                     Width="40" 
@@ -323,7 +355,8 @@
                                     <FontIcon 
                                         Glyph="&#xE783;"
                                         FontFamily="Segoe MDL2 Assets"
-                                        FontSize="28"
+                                        FontSize="30"
+                                        Margin="2,1,0,0"
                                         VerticalAlignment="Center"
                                         HorizontalAlignment="Center"
                                         Foreground="White" />
