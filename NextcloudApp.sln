@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Blend for Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudApp", "NextcloudApp\NextcloudApp.csproj", "{99EFB7EA-88A3-4FCF-9289-22734215B5CF}"
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudClientPortable", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Unity.Windows", "Prism\Source\Windows10\Prism.Unity.Windows\Prism.Unity.Windows.csproj", "{B4060AD6-7A34-479C-B5EB-4C542A681F42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prism", "Prism\Source\Prism\Prism.csproj", "{E9D9A366-83B7-4036-89A1-5A09C84081C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism", "Prism\Source\Prism\Prism.csproj", "{E9D9A366-83B7-4036-89A1-5A09C84081C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism.Windows", "Prism\Source\Windows10\Prism.Windows\Prism.Windows.csproj", "{3B7C3599-A336-4DB2-8678-710E3B36203B}"
 EndProject

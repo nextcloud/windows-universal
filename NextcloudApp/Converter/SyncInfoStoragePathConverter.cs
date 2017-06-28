@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.UI.Xaml.Data;
 
@@ -19,7 +16,7 @@ namespace NextcloudApp.Converter
             throw new NotImplementedException();
         }
 
-        public class AsyncTask : INotifyPropertyChanged
+        public class AsyncTask
         {
             public AsyncTask(object value)
             {
@@ -27,15 +24,12 @@ namespace NextcloudApp.Converter
                 LoadValue(value);
             }
 
-            private async Task LoadValue(object value)
+            private async void LoadValue(object value)
             {
-                string accessListKey = value.ToString();
-                StorageFolder tempFolder = 
-                    await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(accessListKey);
+                var accessListKey = value.ToString();
+                var tempFolder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync(accessListKey);
                 AsyncValue = tempFolder.Path;
             }
-
-            public event PropertyChangedEventHandler PropertyChanged;
 
             public string AsyncValue { get; set; }
         }

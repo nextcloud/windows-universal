@@ -1,30 +1,30 @@
-﻿namespace NextcloudApp.Utils
-{
-    using Models;
-    using NextcloudClient.Types;
-    using SQLite.Net;
-    using SQLite.Net.Platform.WinRT;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using Windows.Storage;
-    using System;
+﻿using NextcloudClient.Types;
+using SQLite.Net;
+using SQLite.Net.Platform.WinRT;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Windows.Storage;
+using System;
+using NextcloudApp.Models;
 
+namespace NextcloudApp.Utils
+{
     internal static class SyncDbUtils
     {
-        private static string dbPath = string.Empty;
-        private static Object fsiLock = new Object();
+        private static string _dbPath = string.Empty;
+        private static readonly object FsiLock = new object();
 
         private static string DbPath
         {
             get
             {
-                if (string.IsNullOrEmpty(dbPath))
+                if (string.IsNullOrEmpty(_dbPath))
                 {
-                    dbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "SyncStorage.sqlite");
+                    _dbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "SyncStorage.sqlite");
                 }
 
-                return dbPath;
+                return _dbPath;
             }
         }
 
@@ -64,8 +64,7 @@
             // Create a new connection
             using (var db = DbConnection)
             {
-                models = (from p in db.Table<FolderSyncInfo>()
-                          select p).ToList();
+                models = (from p in db.Table<FolderSyncInfo>() select p).ToList();
             }
 
             return models;
@@ -75,22 +74,17 @@
         {
             using (var db = DbConnection)
             {
-                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
-                                                       where detail.Error != null
-                                                       select detail);
+                IEnumerable<SyncInfoDetail> sidList = from detail in db.Table<SyncInfoDetail>() where detail.Error != null select detail;
                 return sidList.ToList();
             }
         }
 
-        public static FolderSyncInfo GetFolderSyncInfoByPath(string Path)
+        public static FolderSyncInfo GetFolderSyncInfoByPath(string path)
         {
             // Create a new connection
             using (var db = DbConnection)
             {
-                FolderSyncInfo m = (from fsi in db.Table<FolderSyncInfo>()
-                            where fsi.Path == Path
-                                    select fsi).FirstOrDefault();
-                return m;
+                return (from fsi in db.Table<FolderSyncInfo>() where fsi.Path == path select fsi).FirstOrDefault();
             }
         }
 
@@ -100,68 +94,53 @@
             using (var db = DbConnection)
             {
                 return (from sid in db.Table<SyncInfoDetail>()
-                                    where sid.FsiId == folderSyncInfo.Id 
-                                    && (sid.ConflictType != ConflictType.None 
-                                    || sid.Error != null)
+                        where sid.FsiId == folderSyncInfo.Id
+                        && (sid.ConflictType != ConflictType.None
+                        || sid.Error != null)
                         select sid).Count();
             }
         }
 
-        public static FolderSyncInfo GetFolderSyncInfoBySubPath(string Path)
+        public static FolderSyncInfo GetFolderSyncInfoBySubPath(string path)
         {
             // Create a new connection
             using (var db = DbConnection)
             {
-                IEnumerable<FolderSyncInfo> infos = from fsi in db.Table<FolderSyncInfo>()
-                                    select fsi;
-                foreach(var info in infos)
-                {
-                    int index = Path.IndexOf(info.Path);
-                    if(index == 0 && Path.Substring(info.Path.Length-1, 1).Equals("/"))
-                    {
-                        return info;
-                    }
-                }
-                return null;
+                var infos = from fsi in db.Table<FolderSyncInfo>()
+                                                    select fsi;
+                return (from info in infos let index = path.IndexOf(info.Path, StringComparison.Ordinal) where index == 0 && path.Substring(info.Path.Length - 1, 1).Equals("/") select info).FirstOrDefault();
             }
         }
 
         internal static void UnlockFolderSyncInfo(FolderSyncInfo folderSyncInfo)
         {
-            lock(fsiLock)
+            lock (FsiLock)
             {
                 using (var db = DbConnection)
                 {
-                    FolderSyncInfo m = (from fsi in db.Table<FolderSyncInfo>()
-                                        where fsi.Id == folderSyncInfo.Id
-                                        select fsi).FirstOrDefault();
+                    var m = (from fsi in db.Table<FolderSyncInfo>() where fsi.Id == folderSyncInfo.Id select fsi).FirstOrDefault();
                     if (m == null || !m.Active)
                     {
                         return;
                     }
-                    else
-                    {
-                        m.Active = false;
-                        db.Update(m);
-                        return;
-                    }
+                    m.Active = false;
+                    db.Update(m);
                 }
             }
         }
 
         internal static bool LockFolderSyncInfo(FolderSyncInfo folderSyncInfo)
         {
-            lock (fsiLock)
+            lock (FsiLock)
             {
                 using (var db = DbConnection)
                 {
-                    FolderSyncInfo m = (from fsi in db.Table<FolderSyncInfo>()
-                                        where fsi.Id == folderSyncInfo.Id
-                                        select fsi).FirstOrDefault();
-                    if(m == null || m.Active)
+                    var m = (from fsi in db.Table<FolderSyncInfo>() where fsi.Id == folderSyncInfo.Id select fsi).FirstOrDefault();
+                    if (m == null || m.Active)
                     {
                         return false;
-                    } else
+                    }
+                    else
                     {
                         m.Active = true;
                         db.Update(m);
@@ -175,8 +154,7 @@
         {
             using (var db = DbConnection)
             {
-                IEnumerable<FolderSyncInfo> list = (from fsi in db.Table<FolderSyncInfo>()
-                                    where fsi.Active select fsi);
+                IEnumerable<FolderSyncInfo> list = from fsi in db.Table<FolderSyncInfo>() where fsi.Active select fsi;
                 return list.ToList();
             }
         }
@@ -204,16 +182,14 @@
             // Create a new connection
             string fullPath = info.Path;
 
-            if(!info.IsDirectory)
+            if (!info.IsDirectory)
             {
                 fullPath = info.Path + "/" + info.Name;
             }
 
             using (var db = DbConnection)
             {
-                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
-                                      where detail.Path == fullPath && detail.FsiId == fsi.Id
-                                      select detail).FirstOrDefault();
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>() where detail.Path == fullPath && detail.FsiId == fsi.Id select detail).FirstOrDefault();
                 return sid;
             }
         }
@@ -230,9 +206,7 @@
 
             using (var db = DbConnection)
             {
-                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
-                                      where detail.Path == fullPath
-                                      select detail).FirstOrDefault();
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>() where detail.Path == fullPath select detail).FirstOrDefault();
                 return sid;
             }
         }
@@ -242,9 +216,7 @@
             // Create a new connection
             using (var db = DbConnection)
             {
-                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>()
-                                      where detail.FilePath == file.Path && detail.FsiId == fsi.Id
-                                      select detail).FirstOrDefault();
+                SyncInfoDetail sid = (from detail in db.Table<SyncInfoDetail>() where detail.FilePath == file.Path && detail.FsiId == fsi.Id select detail).FirstOrDefault();
                 return sid;
             }
         }
@@ -253,9 +225,7 @@
         {
             using (var db = DbConnection)
             {
-                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
-                                      where detail.FsiId == fsi.Id
-                                      select detail);
+                IEnumerable<SyncInfoDetail> sidList = from detail in db.Table<SyncInfoDetail>() where detail.FsiId == fsi.Id select detail;
                 return sidList.ToList();
             }
         }
@@ -264,9 +234,7 @@
         {
             using (var db = DbConnection)
             {
-                IEnumerable<SyncInfoDetail> sidList = (from detail in db.Table<SyncInfoDetail>()
-                                                       where detail.ConflictType != ConflictType.None
-                                                       select detail);
+                IEnumerable<SyncInfoDetail> sidList = from detail in db.Table<SyncInfoDetail>() where detail.ConflictType != ConflictType.None select detail;
                 return sidList.ToList();
             }
         }
@@ -279,7 +247,8 @@
                 {
                     // Including subpaths
                     db.Execute("DELETE FROM SyncInfoDetail WHERE Path LIKE '?%' AND FsiID = ?", sid.Path, sid.FsiId);
-                } else
+                }
+                else
                 {
                     db.Delete(sid);
                 }
@@ -293,7 +262,7 @@
                 if (sid.Id == 0)
                 {
                     // New
-                    db.Insert(sid);                   
+                    db.Insert(sid);
                 }
                 else
                 {
@@ -332,7 +301,7 @@
                     SyncDate = DateTime.Now
                 };
 
-                db.Insert(syncHistory);                
+                db.Insert(syncHistory);
             }
         }
 
@@ -350,7 +319,7 @@
             {
                 // Only first 500 entries
                 IEnumerable<SyncHistory> historyList = (from detail in db.Table<SyncHistory>()
-                                                       select detail).Take(500);
+                                                        select detail).Take(500);
                 return historyList.OrderByDescending(x => x.SyncDate).ToList();
             }
         }

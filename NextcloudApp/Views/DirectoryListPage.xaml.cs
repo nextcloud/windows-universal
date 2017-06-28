@@ -1,6 +1,4 @@
-﻿using NextcloudApp.Controls;
-
-namespace NextcloudApp.Views
+﻿namespace NextcloudApp.Views
 {
     public sealed partial class DirectoryListPage
     {
