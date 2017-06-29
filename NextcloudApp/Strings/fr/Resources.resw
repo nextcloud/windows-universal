@@ -121,7 +121,7 @@
     <value>Tous les fichiers</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Toujours</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Une erreur est survenue</value>
@@ -207,7 +207,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Téléchargement du fichier en cours...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Télécharger les aperçus des images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Nom</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Jamais</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nouveau dossier</value>
@@ -288,7 +288,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Version {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Seulement quand je suis connecté en Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Oui</value>
@@ -417,20 +417,25 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Mettre à jour</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Déplacer des fichiers et des dossiers
-• Renommer des fichiers et des dossiers
-• Synchronisation manuelle de dossiers
-• Télécharger des dossiers en tant que fichier zip
-• Sélectionner plusieurs fichiers et dossiers
-• Des items peuvent être marqués comme favoris depuis l&apos;application
-• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
-• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
-• Autoriser les certificats SSL auto-signés
-• Afficher la taille du dossier dans la liste
-• Partager des fichiers avec l&apos;application
-• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
-• Améliorations de la sécurité &amp; corrections de bugs
-• Nouvelle bibliothèque WebDAV plus stable</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Épingler au menu Démarrer</value>
@@ -442,7 +447,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Connecter</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorer les certificats SSL auto-signés non valides</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Mode Expert</value>
@@ -583,16 +588,16 @@ Veuillez réessayer plus tard.</value>
     <value>Synchronisation ce dossier</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Sombre</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Clair</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Utiliser les paramètres du système</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Sélectionner un mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Partagés avec d&apos;autres</value>
@@ -648,10 +653,10 @@ Veuillez réessayer plus tard.</value>
     <value>Aucun URL de serveur spécifié. Veuillez entrer l&apos;URL de votre instance Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Garder tel quel</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Cette solution peut seulement être appliquée si les fichiers existent à la fois à distance et localement</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Attention</value>
@@ -663,6 +668,6 @@ Veuillez réessayer plus tard.</value>
     <value>Qu&apos;elle est la signification de cela ?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Paramètres de couleur Windows</value>
   </data>
 </root>

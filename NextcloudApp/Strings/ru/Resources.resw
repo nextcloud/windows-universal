@@ -121,7 +121,7 @@
     <value>Все файлы</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Всегда</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Произошла ошибка.</value>
@@ -207,7 +207,7 @@
     <value>Скачивание файла...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Скачать миниатюры изображений</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@
     <value>Имя</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Никогда</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Новый каталог</value>
@@ -288,7 +288,7 @@
     <value>Версия {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Только при подключенном Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Да</value>
@@ -423,14 +423,19 @@
 • Download directories as zip file 
 • Select multiple files and folders
 • Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
 • Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Введите PIN чтобы начать</value>
@@ -442,7 +447,7 @@
     <value>Подключиться</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Игнорирование недействительности самоподписанных SSL-сертификатов.</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Экспертный режим</value>
@@ -492,7 +497,7 @@
     <value>Остерегайтесь конфликтов!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Как локальный, так и каталог на сервере не пустые. Такая ситуация может привести к большому количеству конфликтов, потому что неизвестно какие из файлов правильные.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Синхроонизация была активирована!</value>
@@ -583,16 +588,16 @@
     <value>Синхронизировать этот каталог</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Тёмная</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Светлая</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Использовать системные настройки</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Выберите режим</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Доступные для других</value>
@@ -648,21 +653,21 @@
     <value>Не указан URL сервера. Введите URL вашего сервера Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Оставлять как есть</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Это решение можно использовать когда файлы существуют и локально и на сервере</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Внимание</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Как работает экспертный режим?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Что это означает?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Настройки цветов Windows</value>
   </data>
 </root>

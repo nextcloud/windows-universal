@@ -423,14 +423,19 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
 • Download directories as zip file 
 • Select multiple files and folders
 • Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
 • Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>

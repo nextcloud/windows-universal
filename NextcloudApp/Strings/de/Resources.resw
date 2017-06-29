@@ -417,7 +417,25 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben• Dateien und Ordner umbenennen• Manuelle Ordner-Synchronisation• Ordner als Zip-Dateien herunterladen• Mehrere Dateien und Ordner auswählen• Elemente können als Favoriten in der App markiert werden• Dateien und Ordner auf dem Startbildschirm ablegen• Windows Hello für die Anmeldung beim App-Start benutzen• Selbst-signierte SSL-Zertifikate erlauben• Ordnrergrößen in der Listenasicht anzeigen• Dateien mit der App teilen• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden• Sicherheits-Verbesserungen und Fehlerbehebung• Neue und stabilere WebDAV-Bibliothek</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>An Start anheften</value>
@@ -635,13 +653,13 @@ Bitte später noch einmal versuchen.</value>
     <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>So beibehalten</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Diese Lösung kann nur angewendet werden, wenn Dateien sowohl remote als auch lokal vorhanden sind</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Achtung</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Wie funktioniert der Expertenmodus?</value>
@@ -650,6 +668,6 @@ Bitte später noch einmal versuchen.</value>
     <value>Was bedeutet dies hier?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Einstellungen der Windows-Farben</value>
+    <value>Windows-Farbeinstellungen</value>
   </data>
 </root>

@@ -416,20 +416,25 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Atualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover arquivos e pastas
-• Renomear arquivos e pastas
-• Sincronização manual de pastas
-• Baixar arquivos como arquivos zip
-• Selecionar múltiplos arquivos e pastas
-• Itens podem ser marcados como favoritos a partir do aplicativo
-• Arquivos e pastas marcadas podem ficar na página inicial
-• Usar Windows Hello para autenticação ao iniciar aplicativo
-• Permitir certificador SSL auto assinados
-• Mostrar tamanho da pasta na lista
-• Compartilhar arquivos pelo aplicativo
-• Usar o PasswordVault para armazenar credenciais de usuário
-• Melhoria de segurança &amp; correção de erros
-• Biblioteca WebDAV nova e mais estável</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as zip file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Destacar no niciar</value>
@@ -441,7 +446,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Conectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignore certificados SSL auto-assinados inválidos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo avançado</value>
@@ -647,13 +652,13 @@ Por favor tente mais tarde.</value>
     <value>Nenhuma URL de servidor especificada. Entre a URL de seu Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Manter como está</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Esta solução só pode ser aplicada se os arquivos existirem remota e localmente</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Atenção</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Como o modo expert funciona?</value>
