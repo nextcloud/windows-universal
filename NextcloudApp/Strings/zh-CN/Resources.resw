@@ -121,7 +121,7 @@
     <value>全部文件</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>一直</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>发生错误</value>

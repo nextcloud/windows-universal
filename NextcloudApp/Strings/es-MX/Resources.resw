@@ -447,7 +447,7 @@
     <value>Conectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorar certificados SSL auto-firmados inválidos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -652,13 +652,13 @@
     <value>No se ha especificado el URL del servidor. Por favor ingresa el URL de tu instancia de Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Mantener como está</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Esta solución solo se puede aplicar si los archivos existen tanto local como remotamente</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Atención</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>¿Cómo funciona el modo experto?</value>

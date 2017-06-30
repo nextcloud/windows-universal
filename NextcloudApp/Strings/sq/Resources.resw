@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Të gjitha dosjet</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Gjithmonë</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -139,7 +139,7 @@
     <value>Ngarko skedarët</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Ngarko foto</value>
+    <value>Ngarko fotot</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
     <value>Shkarko</value>
@@ -151,22 +151,28 @@
     <value>Rendit</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Data (me e vjetra ne krye)</value>
+    <value>Data (nga më e vjetra në krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Data (me e reja ne krye)</value>
+    <value>Data (nga më e reja deri në krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Emri (A-ja ne krye)</value>
+    <value>Emri (nga A-ja ne krye)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Emri (Z-ja ne Krye)</value>
+    <value>Emri (nga nga Z-ja në Krye)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Madhësia (me e vogla ne krye)</value>
+    <value>Madhësia (nga më e vogla në krye)</value>
   </data>
   <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Madhësia (me e madhja ne krye)</value>
+    <value>Madhësia (nga më e madhja në krye)</value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+    <value>Shtyp (nga A dhe më sipër) </value>
+  </data>
+  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Gabim ne Aplikacion</value>
@@ -200,8 +206,8 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Duke shkarkuar dosjen...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Parapamja e imazhit te shkarkuar</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -213,7 +219,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Emri i dosjes</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Të dhëna</value>
+    <value>Informacion</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
     <value>Ndryshuar së fundmi</value>
@@ -221,8 +227,8 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
   <data name="Name.Text" xml:space="preserve">
     <value>Emri</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Asnjëherë</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Kurrë</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Dosje e re</value>
@@ -234,7 +240,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>E pa autorizuar</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Ky shërbyes kthehu nje kode gabimi 401 (I Paautorizuar). Ju lutem identifikohuni dhe njëherë.</value>
+    <value>Serveri kthehu nje kode gabimi 401 (I Paautorizuar). Ju lutem identifikohuni dhe njëherë.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -243,7 +249,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Fjalëkalimi</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Rrugë</value>
+    <value>Adresa</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>Përdorur {0} nga {1} </value>
@@ -258,10 +264,10 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Adresa e serverit</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Konfigurime</value>
+    <value>Konfigurimet</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Konfigurime</value>
+    <value>Konfigurimet</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Shfaq listën e grupimit të skedarëve dhe dosjeve</value>
@@ -281,7 +287,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
   <data name="Version" xml:space="preserve">
     <value>Versioni {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
     <value>Vetëm kur jam në Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
@@ -372,69 +378,103 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Sharkuar {0} </value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Për të aksesuar Nextcloud-in tënd, mundësoni informacionin për tu kyçur për pajisjen tuaj.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Autentifikimi i Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Nuk është vendosur një PIN për këtë pajisje. Në mënyrë që të përdoni Windows Hello, një PIN duhet të përcaktohet.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>Shkarko</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Sign-in required</value>
+    <value>Kërkohet të kyçeni</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Nuk mund ta hapim Nextcloud derisa të mundësoni informacionet e kyçjes për pajisjen tuaj.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Try again</value>
+    <value>Provojeni përsëri</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud për Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Aplikacioni juaj u përditësua në versionin {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Cilësitë e reja dhe përmirësimet në këtë version:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Recommend</value>
+    <value>Rekomanduar</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Update</value>
+    <value>Përditësim</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
 • Rename files and folders
+• Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
+• Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin për të filluar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin për të filluar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connect</value>
+    <value>Lidh</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Expert mode</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Statusi i sinkronizimit</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Konfliktet</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Gabimet</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Sinkronizim</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Clear sync history</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>The certificate authority is invalid or incorrect. Connect anyway?
@@ -442,16 +482,192 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
 Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Attention!</value>
+    <value>Vëmendje!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>The app must be restarted</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Hint</value>
+    <value>Informatë</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>Lista e gabimeve të cilat ndodhën gjatë sinkronizimit. Këto duhet të jenë çështje të përkohshme (p.sh një skedar është hapur nga një aplikacion tjetër) dhe duhet të zhduken pas ekzekutimit të radhës të sinkronizimit.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Ruhuni nga konfliktet!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Të dyja skedari lokal dhe i largët nuk janë bosh. Kjo mund të rezultojë në një numër të madh konfliktesh sepse aplikacioni nuk e di cili nga filet është i sakti.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service temporarily unavailable (usually due to short-term maintenance work).
 Please try again later.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Konflikt:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Sinkronizimi i dosjes 1{0} u përfundua me 2{1} ndryshime dhe 3{2} gabime ose konflikte.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Sinkronizimi i dosjes 1{0} u përfundua me 2{1} ndryshime.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Sinkronizimi ka përfunduar</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Sinkronizimi i dosjes {0} ka ndaluar sepse aplikacioni është pezulluar.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Sinkronizimi u pezullua</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Statusi i sinkronizmit</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Local Path</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Path</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Zgjidhni dosjen ku doni ta ngarkoni skedarin</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Dosjet</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Artikujt: {0} (dosjet: {1}skedarët: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sinkronizoni këtë dosje</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Ndaloni së sinkronizuari kësaj dosje</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Ndaloni sinkronizimin</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Statusi i sinkronizimit</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Sinkronizohuni tani</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sinkronizim</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Sinkronizoni këtë dosje tani</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Sinkronizoni këtë dosje</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Ndarë me të tjerët</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Ndarë me mua</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Krijoni dosje</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nuk mund të krijonte direktorinë &apos;{0}&apos; në Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Fshirja e &apos;{0}&apos; në Nextcloud dështoi.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Gabim gjatë shkarkimit të skedarit &apos;{0}&apos; nga Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Gabim gjatë ngarkimit të skedarit &apos;{0}&apos; në Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Doni ta rishkruani atë?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Skedari ekziston tashmë</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Mbishkrim</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Mbajeni si është</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>Kjo zgjidhje mund të aplikohet vetëm nëse skedari ekziston edhe lokalisht edhe në distancë</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Vëmendje</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>Cili është kuptimi i kësaj?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

@@ -121,7 +121,7 @@
     <value>Todos los archivos</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ha ocurrido un error</value>
@@ -145,16 +145,16 @@
     <value>Descargar</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Volver a cargar</value>
+    <value>Recargar</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordenar</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Fecha (de antiguo a nuevo)</value>
+    <value>Fecha (más antiguo arriba)</value>
   </data>
   <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Fecha (de nuevo a antiguo)</value>
+    <value>Fecha (más nuevo arriba)</value>
   </data>
   <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
     <value>Nombre (A-Z)</value>
@@ -169,18 +169,18 @@
     <value>Tamaño (de mayor a menor)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Tipo (A arriba)</value>
+    <value>Tipo (A-Z)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Tipo (Z arriba)</value>
+    <value>Tipo (Z-A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Error de la aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>La aplicación ha encontrado un problema. Pedimos disculpas por los inconvenientes. Si estabas en medio de algo, la información en la que estabas trabajando se ha perdido.
+    <value>La aplicación ha encontrado un problema. Pedimos disculpas por los inconvenientes. Si estaba en medio de algo, la información en la que estaba trabajando se ha perdido.
 
-¿Quiéres informar a los desarrolladores de la aplicación y enviar el informe de error preparado? Estoy ayuda a eliminar más rápidamente el problema.</value>
+¿Quiere informar a los desarrolladores de la aplicación y enviar el informe de error preparado? Esto ayudará a eliminar el problema más rápidamente.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
@@ -207,7 +207,7 @@
     <value>Descargando el archivo...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Descargar imágenes de previsualización</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@
     <value>Nombre</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nueva carpeta</value>
@@ -240,10 +240,10 @@
     <value>No autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor devolvió un código de error 401 (No autorizad). Por favor, vuelve a registrarte.</value>
+    <value>El servidor devolvió un código de error 401 (no autorizado). Por favor, vuelva a registrarse.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>Aceptar</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>Contraseña</value>
@@ -255,10 +255,10 @@
     <value>{0} de {1} usados</value>
   </data>
   <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Resetear esta aplicación</value>
+    <value>Restablecer esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Volver a intentar</value>
+    <value>Reintentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Dirección del servidor</value>
@@ -285,10 +285,10 @@
     <value>Nombre de usuario</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Verión {0}</value>
+    <value>Versión {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Solo al estar conectado a Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -333,16 +333,16 @@
     <value>No se ha podido resolver la dirección o el nombre del servidor</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Version del servidor {0}</value>
+    <value>Versión del servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
     <value>Eliminar</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>espernado la respuesta del servidor</value>
+    <value>esperando la respuesta del servidor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Por favor, escoge un nombre nuevo</value>
+    <value>Por favor, escoja un nombre nuevo</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Renombrar</value>
@@ -447,7 +447,7 @@
     <value>Conectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorar certificados SSL autofirmados no válidos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -479,62 +479,62 @@
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>La autoridad del certificado es inválida o incorrecta. ¿Conectar de cualquier manera?
 
-Sea cuidadoso, ¡de usarlo no será protegido de ataques Man-in-the-middle (mitm)!</value>
+Sea cuidadoso, ¡no estará protegido de ataques de tipo Man-in-the-middle (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>¡Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Para aque esta configuración tenga efecto, la app necesita reiniciar</value>
+    <value>Para que esta configuración tenga efecto, la aplicación debe reiniciarse.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Lista de errores que sucedieron durante la sincronización. Deberían ser problemas temporales (p. ej., otra app abrió el archivo) y deberían desaparecer tras la siguiente sincronización.</value>
+    <value>Lista de errores que sucedieron durante la sincronización. Deberían ser problemas temporales (p. ej., otra aplicación abrió el archivo) y deberían desaparecer tras la siguiente sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>La carpeta remota y la local no están vacías. Esto puede resultar en muchos conflictos, porque la aplicación no sabe cuáles archivos son los correctos.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha iniciado la sincronización!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>La sincronización tendrá lugar en segundo plan. Recibirás una notificación cuando termine.</value>
+    <value>La sincronización tendrá lugar en segundo plano. Recibirás una notificación cuando termine.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Servicio temporalmente no disponible (normalmente debido a trabajos de mantenimiento de corto plazo).
 Por favor, inténtelo de nuevo más tarde.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>El archivo ha cambiado local y localmente. ¿Cuál prefieres?</value>
+    <value>El archivo ha cambiado local y remotamente. ¿Cuál versión prefieres?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>El archivo ha sido creado remota y localmente. ¿Cuál es el correcto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>El archivo local ha sido borrado pero el remoto ha sido modificado. ¿Cuál prefieres?</value>
+    <value>El archivo local ha sido borrado pero el remoto ha sido modificado. ¿Cuál versión prefieres?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflicto.</value>
+    <value>Conflicto:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>El archivo remoto ha sido borrado pero el local ha sido modificado. ¿Cuál prefieres?</value>
+    <value>El archivo remoto ha sido borrado pero el local ha sido modificado. ¿Cuál versión prefieres?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>La sincronización de la carpeta {0} terminó con {1} cambios y {2} errores o conflictos.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>La sincronización de la carpeta {0} terminó cno {1} cambios.</value>
+    <value>La sincronización de la carpeta {0} terminó con {1} cambios.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>La sincronización ha finalizado</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>La sincronización de la carpeta {0} se ha detenido porque la app ha sido suspendida.</value>
+    <value>La sincronización de la carpeta {0} se ha detenido porque la aplicación ha sido suspendida.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Sincronización suspendida</value>
@@ -549,7 +549,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Ruta de Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Escoge la carepta a donde quieres subir los archivos</value>
+    <value>Escoja la carpeta a donde quiera subir los archivos</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Carpetas</value>
@@ -558,10 +558,10 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Objetos: {0} ({1} carpetas, {2} archivos)</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Al activar el modo experto, la app proporciona algunas características e informaciones adicionales, lo que puede no interesar a todos los usuarios.</value>
+    <value>Al activar el modo experto, la aplicación proporciona algunas características e informaciones adicionales, lo que puede no interesar a todos los usuarios.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL autofirmados inválidos. Esto permite usar autoridades de certificados SSL inválidos o incorrectos. Cuidado, dejarás de estar protegido contra ataques de hombre en el medio (MITM).</value>
+    <value>Ignorar certificados SSL autofirmados inválidos. Esto permite usar autoridades de certificados SSL inválidos o incorrectos. Sea cuidadoso, ¡no estará protegido de ataques de tipo Man-in-the-middle (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
@@ -588,16 +588,16 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Sincronizar esta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Oscuro</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Usar la configuración del sistema</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Seleccionar modo</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con otros</value>
@@ -612,7 +612,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Compartidos vía enlace</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Preparado para compartir...</value>
+    <value>Preparando para compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Crear carpeta</value>
@@ -637,7 +637,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>¿Deseas sobreescribirlo?</value>
+    <value>¿Desea sobreescribirlo?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>El archivo ya existe</value>
@@ -650,24 +650,24 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No se ha especificado la URL del servidor. Por favor, introduce la dirección de tu instancia de Nextcloud.</value>
+    <value>No se ha especificado la URL del servidor. Por favor, introduzca la dirección de su instancia de Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Mantener así</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Esta solución solo se puede aplicar si los archivos existen remota y localmente.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Atención</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>¿Cómo funciona el modo experto?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>¿Cuál es el significado de esto?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Ajustes de color de Windows</value>
   </data>
 </root>

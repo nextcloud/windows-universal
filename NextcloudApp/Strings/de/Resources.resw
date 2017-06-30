@@ -447,7 +447,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertenmodus</value>
@@ -665,7 +665,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Wie funktioniert der Expertenmodus?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>Was bedeutet dies hier?</value>
+    <value>Was bedeutet das?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows-Farbeinstellungen</value>

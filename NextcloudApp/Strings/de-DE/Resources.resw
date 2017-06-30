@@ -447,7 +447,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Verbinden</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertenmodus</value>
@@ -653,21 +653,21 @@ Bitte später noch einmal versuchen.</value>
     <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>So beibehalten</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Diese Lösung kann nur angewendet werden, wenn Dateien sowohl remote als auch lokal vorhanden sind 171</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Achtung</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Wie funktioniert der Expertenmodus?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>Was bedeutet dies hier?</value>
+    <value>Was bedeutet das?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Einstellungen der Windows-Farben</value>
+    <value>Windows-Farbeinstellungen</value>
   </data>
 </root>

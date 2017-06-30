@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Tots els fitxers</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -169,10 +169,10 @@
     <value>Mida (més gran a sobre)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Type (A to the top)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Error en l\&apos;aplicació</value>
@@ -206,8 +206,8 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Descarregar l\&apos;arxiu...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descarrega la previsualització de les imatges</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,7 +227,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="Name.Text" xml:space="preserve">
     <value>Nom</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Mai</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -287,8 +287,8 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="Version" xml:space="preserve">
     <value>Versió {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Només quan estigui connectat a una xarxa Wi-Fi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I&apos;m on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -422,14 +422,20 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
 • Manual synchronization of folders
 • Download directories as zip file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
+• Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Clica per començar</value>
@@ -440,35 +446,35 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="Connect2" xml:space="preserve">
     <value>Connectar</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignora certificats SSL autosignats incorrectes. Aixó permet autoritzar per a l\&apos;ús certificats SSL invàlids o incorrectes. Tinguis cura, no estàs protegit davant atacs de tipus Man-in-the-middle(mitm)</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Mode expert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Estat de sincronització</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>History</value>
+    <value>Història</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Conflicts</value>
+    <value>Conflictes</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
     <value>Errors</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Sincronitza</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Prefereix el fitxer local</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Neteja l&apos;historial de sincronització</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Prefereix el fitxer remot</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>El certificat d\&apos;autorització  es invàlid o incorrecte. Connectar de totes formes?
@@ -478,19 +484,22 @@ Tinguis cura, no estaràs protegit davant d&apos;atacs Man-in-the-middle (mitm).
     <value>Atenció!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>L\&apos;aplicació ha de ser reiniciada</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indicació</value>
   </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Estigues al cas dels conflictes!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>S&apos;ha activat la sincronització!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
@@ -509,7 +518,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Conflicte:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -521,30 +530,143 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>S&apos;ha acabat la sincronització</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>S&apos;ha suspès la sincronització</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Estat de sincronització</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path:</value>
+    <value>Ruta local</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path:</value>
+    <value>Ruta Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Folders</value>
+    <value>Carpetes</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
     <value>Items: {0} (folders: {1} files: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sincronitza aquesta carpeta</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Deixa de sincronitzar aquesta carpeta</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Atura la sincronització</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sincronitza</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synchronize this folder</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Fosc</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Clar</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Escull un mode</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Shared with others</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Preferits</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Compartit amb mi</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Shared via link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Prepare for sharing...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Crear un directori</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Do you want to overwrite it?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>El fitxer ja existeix</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sobreescriu</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>
