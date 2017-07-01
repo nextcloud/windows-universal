@@ -51,6 +51,88 @@
             IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
             Style="{StaticResource SplitViewTogglePaneButtonStyle}"
             TabIndex="1" />
+
+        <Grid 
+            x:Name="UpdateDialogContainer" 
+            VerticalAlignment="Stretch"
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+            Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ScrollViewer 
+                x:Name="UpdateDialogContentScrollViewer"
+                HorizontalScrollBarVisibility="Disabled"
+                VerticalScrollBarVisibility="Auto"
+                VerticalAlignment="Stretch"
+                ZoomMode="Disabled"
+                Margin="{ThemeResource ContentDialogContentScrollViewerMargin}"
+                IsTabStop="False">
+                <StackPanel>
+                    <ContentControl 
+                        x:Name="UpdateDialogTitle"
+                        Margin="{ThemeResource ContentDialogTitleMargin}"
+                        FontSize="20"
+                        FontFamily="XamlAutoFontFamily"
+                        FontWeight="Normal"
+                        Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        IsTabStop="False"
+                        MaxHeight="{ThemeResource ContentDialogTitleMaxHeight}" >
+                        <ContentControl.Template>
+                            <ControlTemplate TargetType="ContentControl">
+                                <ContentPresenter
+                                    Content="{TemplateBinding Content}"
+                                    MaxLines="2"
+                                    TextWrapping="Wrap"
+                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                    Margin="{TemplateBinding Padding}"
+                                    ContentTransitions="{TemplateBinding ContentTransitions}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </ControlTemplate>
+                        </ContentControl.Template>
+                    </ContentControl>
+                    <TextBlock 
+                        x:Name="UpdateDialogContent" 
+                        TextWrapping="WrapWholeWords" 
+                        Margin="0,20,0,0"
+                        FontSize="{ThemeResource ControlContentThemeFontSize}"
+                        FontFamily="{ThemeResource ContentControlThemeFontFamily}"
+                        Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                        Grid.Row="1"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid x:Name="UpdateDialogCommandSpace" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border 
+                    x:Name="UpdateDialogButton1Host"
+                    Margin="{ThemeResource ContentDialogButton1HostMargin}"
+                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
+                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
+                    Height="{ThemeResource ContentDialogButtonHeight}"
+                    HorizontalAlignment="Stretch">
+                    <Button x:Name="UpdateDialogButton1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                </Border>
+                <Border 
+                    x:Name="UpdateDialogButton2Host"
+                    Margin="{ThemeResource ContentDialogButton2HostMargin}"
+                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
+                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
+                    Height="{ThemeResource ContentDialogButtonHeight}"
+                    Grid.Column="1"
+                    HorizontalAlignment="Stretch">
+                    <Button x:Name="UpdateDialogButton2" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </Grid>
+        
     </Grid>
+    
 </controls:ThemeablePage>
 

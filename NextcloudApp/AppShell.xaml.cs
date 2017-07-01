@@ -12,19 +12,20 @@ namespace NextcloudApp
             ShowUpdateMessage();
         }
 
-        private async void ShowUpdateMessage()
+        private void ShowUpdateMessage()
         {
+            UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
             if (SettingsService.Instance.LocalSettings.ShowUpdateMessage)
             {
-                await UpdateNotificationService.NotifyUser();
+                UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
             }
             else
             {
-                SettingsService.Instance.LocalSettings.PropertyChanged += async (sender, args) =>
+                SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>
                 {
                     if (args.PropertyName.Equals("ShowUpdateMessage") && SettingsService.Instance.LocalSettings.ShowUpdateMessage)
                     {
-                        await UpdateNotificationService.NotifyUser();
+                        UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
                     }
                 };
             }
