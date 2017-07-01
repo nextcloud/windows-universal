@@ -417,25 +417,25 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Güncelle</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as zip file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Dosya ve klasörleri taşıma
+• Dosya ve klasörleri yeniden adlandırma
+• Klasörleri el ile eşitleme
+• Klasörleri zip dosyası olarak indirme
+• Birden çok dosya ve klasör seçme
+• Ögeleri uygulama içinde sık kullanılan olarak işaretleme
+• Klasör listesinde klasör boyutlarını görüntüleme
+• Klasör listesi durum çubuğunda seçilmiş/toplam dosya sayısını görüntüleme
+• Veri türüne göre sıralama
+• Sık kullanılanlar ve paylaşımlar için yeni görünümler
+• Dosya ve klasörleri başlangıç sayfasına sabitleme
+• Uygulama başlangıcında kimlik doğrulaması için Windows Hello kullanımı
+• Uygulamada ayrıntılı bilgileri görüntüleyen uzman kipi
+• Kendinden imzalı SSL sertifikalarına izin verme
+• Uygulama içinden dosya paylaşımı
+• Temalar (koyu/açık/sistem)
+• Kullanıcı kimlik doğrulama bilgilerini saklamak için PasswordVault kullanımı
+• Yeni ve daha kararlı WebDAV kitaplığı
+• Güvenlik geliştirmeleri ve hata ayıklamaları</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Açılışa ekle</value>
