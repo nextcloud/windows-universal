@@ -56,7 +56,8 @@
             x:Name="UpdateDialogContainer" 
             VerticalAlignment="Stretch"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-            Padding="20">
+            Padding="20"
+            Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
