@@ -14,7 +14,6 @@ namespace NextcloudApp
 
         private void ShowUpdateMessage()
         {
-            UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
             if (SettingsService.Instance.LocalSettings.ShowUpdateMessage)
             {
                 UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
