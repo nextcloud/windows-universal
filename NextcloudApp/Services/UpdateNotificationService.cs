@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Windows.ApplicationModel;
+﻿using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -14,7 +13,7 @@ namespace NextcloudApp.Services
         /// <summary>
         /// Notifies the user.
         /// </summary>
-        public static async Task NotifyUser()
+        public static void NotifyUser(Grid updateDialogContainer, ContentControl updateDialogTitle, TextBlock updateDialogContent, Button updateDialogButton1, Button updateDialogButton2)
         {
             SettingsService.Instance.LocalSettings.ShowUpdateMessage = false;
 
@@ -24,7 +23,7 @@ namespace NextcloudApp.Services
                 return;
             }
             var resourceLoader = app.Container.Resolve<IResourceLoader>();
-            var dialogService = app.Container.Resolve<DialogService>();
+            //var dialogService = app.Container.Resolve<DialogService>();
 
             var currentVersion =
                 $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}";
@@ -41,7 +40,8 @@ namespace NextcloudApp.Services
 
             var line1 = string.Format(resourceLoader.GetString("Changes_Intro_Line_1"), currentVersion);
             var line2 = resourceLoader.GetString("Changes_Intro_Line_2");
-
+            
+            /*
             var dialog = new ContentDialog
             {
                 Title = resourceLoader.GetString("Changes_Title"),
@@ -61,6 +61,18 @@ namespace NextcloudApp.Services
                 SecondaryButtonCommand = new DelegateCommand(RecommendChanges)
             };
             await dialogService.ShowAsync(dialog);
+            */
+
+            updateDialogTitle.Content = resourceLoader.GetString("Changes_Title");
+            updateDialogButton1.Content = resourceLoader.GetString("OK");
+            updateDialogButton1.Command = new DelegateCommand(() =>
+            {
+                updateDialogContainer.Visibility = Visibility.Collapsed;
+            });
+            updateDialogButton2.Content = resourceLoader.GetString("Changes_Recommend");
+            updateDialogButton2.Command = new DelegateCommand(RecommendChanges);
+            updateDialogContent.Text = string.Format("{0}\n\n{1}\n\n{2}", line1, line2, changelog);
+            updateDialogContainer.Visibility = Visibility.Visible;
         }
 
         private static void RecommendChanges()

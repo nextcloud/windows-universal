@@ -27,6 +27,12 @@
         </uap:InitialRotationPreference>
       </uap:VisualElements>
       <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="nextcloud">
+            <uap:Logo>Assets\StoreLogo.png</uap:Logo>
+            <uap:DisplayName>Nextcloud</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
         <uap:Extension Category="windows.shareTarget" EntryPoint="NextcloudApp.ShareTarget">
           <uap:ShareTarget>
             <uap:SupportedFileTypes>
@@ -39,12 +45,6 @@
             <uap:DataFormat>StorageItems</uap:DataFormat>
             <uap:DataFormat>RTF</uap:DataFormat>
           </uap:ShareTarget>
-        </uap:Extension>
-        <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="nextcloud">
-            <uap:Logo>Assets\StoreLogo.png</uap:Logo>
-            <uap:DisplayName>Nextcloud</uap:DisplayName>
-          </uap:Protocol>
         </uap:Extension>
       </Extensions>
     </Application>
