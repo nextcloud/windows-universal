@@ -414,28 +414,28 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Empfehlen</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Aktualisieren</value>
+    <value>Aktualisierung</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Dateien und Ordner verschieben
-• Dateien und Ordner umbenennen
-• Manuelle Ordner-Synchronisation
-• Ordner als ZIP-Dateien herunterladen
-• Mehrere Dateien und Ordner auswählen
-• Elemente können als Favoriten in der App markiert werden
-• Ordnrergrößen in der Listenasicht anzeigen
-• Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewählt/gesamt)
-• Sortierung nach Datentyp
-• Neue Ansichten Favoriten/Shares
-• Dateien und Ordner auf dem Startbildschirm ablegen
-• Windows Hello für die Anmeldung beim App-Start benutzen
-• Experten-Modus zur Anzeige erweiterter Informationen
-• Selbst-signierte SSL-Zertifikate erlauben
-• Dateien mit der App teilen
-• Theming (dunkel/hell/System)
-• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
-• Neue und stabilere WebDAV-Bibliothek
-• Sicherheits-Verbesserungen und Fehlerbehebung</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>An Start anheften</value>

@@ -419,14 +419,14 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
 • Rename files and folders
-• Manual synchronisation of folders
-• Download directories as zip file 
+• Manual synchronization of folders
+• Download directories as ZIP file 
 • Select multiple files and folders
-• Items can be marked as favourite from within the app
+• Items can be marked as favorite from within the app
 • The size of folders is shown in the directory list
 • Status bar in directory list showing the number of selected/total files
 • Sorting for data type
-• New views for favourites/shares
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
 • Expert mode showing advanced information in the app

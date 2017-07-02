@@ -207,7 +207,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Last ned filen...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Last ned forhåndsvisningsbilder</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -420,7 +420,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>• Move files and folders
 • Rename files and folders
 • Manual synchronization of folders
-• Download directories as zip file 
+• Download directories as ZIP file 
 • Select multiple files and folders
 • Items can be marked as favorite from within the app
 • The size of folders is shown in the directory list
@@ -497,7 +497,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>Se opp for konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Både lokal og mappe annensteds hen er ikke tomme. Dette kan skape konflikter, fordi programmet ikke vet hvilke filer som er de riktige.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synkronisering har blitt startet!</value>
@@ -594,7 +594,7 @@ Vennligst prøv igjen senere.</value>
     <value>Lys</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Bruk systeminnstillingene</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Velg et modus</value>
@@ -653,21 +653,21 @@ Vennligst prøv igjen senere.</value>
     <value>Ingen tjeneradresse er angitt. Vennligst skriv inn adressen til Nextcloud tjeneren.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Behold slik den er</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Denne løsningen fungerer bare hvis filene finnes både her og annensteds hen</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Merk</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Hvordan virker ekspert-modus?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
     <value>Hva betyr dette?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Vindusfargeinnstillinger</value>
   </data>
 </root>
