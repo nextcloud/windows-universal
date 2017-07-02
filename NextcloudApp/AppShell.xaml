@@ -1,4 +1,4 @@
-﻿<controls:ThemeablePage
+﻿<controls:ThemeablePage x:Name="themeablePage"
     x:Class="NextcloudApp.AppShell"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -61,6 +61,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="{ThemeResource ContentDialogButtonHeight}" />
             </Grid.RowDefinitions>
             <ScrollViewer 
                 x:Name="UpdateDialogContentScrollViewer"
@@ -132,8 +133,8 @@
                 </Border>
             </Grid>
         </Grid>
-        
+
     </Grid>
-    
+
 </controls:ThemeablePage>
 
