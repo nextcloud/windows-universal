@@ -417,25 +417,25 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Mettre à jour</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Déplacer des fichiers et des dossiers
+• Renommer des fichiers et des dossiers
+• Synchronisation manuelle de dossiers
+• Télécharger des dossiers en tant que fichier zip
+• Sélectionner plusieurs fichiers et dossiers
+• Des items peuvent être marqués comme favoris depuis l&apos;application
+• La taille des dossiers est montrée dans la liste des dossiers
+• La barre de statut dans la liste de dossiers montre le nombre de fichiers sélectionnés/total
+• Trier par type de données
+• Nouvel affichage pour les favoris/partages
+• Épingler des fichiers et des dossiers à l&apos;écran de démarrage
+• Utiliser Windows Hello pour vous authentifier au démarrage de l&apos;application
+• Mode expert montrant des informations avancées dans l&apos;application
+• Autoriser les certificats SSL auto-signés
+• Partager des fichiers avec l&apos;application
+• Thème (sombre / clair / système)
+• Utiliser le PasswordVault pour stocker les informations d&apos;identification de l&apos;utilisateur
+• Nouvelle bibliothèque WebDAV plus stable
+• Améliorations de la sécurité &amp; corrections de bugs</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Épingler au menu Démarrer</value>

@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Kaikki tiedostot</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Aina</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -169,10 +169,10 @@
     <value>Koko (suurin ensin)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ascending)</value>
+    <value>Tyyppi (aakkosjärjestys)</value>
   </data>
   <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (descending)</value>
+    <value>Tyyppi (käänteinen aakkosjärjestys)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Sovellusvirhe</value>
@@ -206,14 +206,14 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Ladataan tiedostoa...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Lataa esikatselukuvat</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0} ({1} tavu)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
     <value>Kansion nimi</value>
@@ -227,7 +227,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Name.Text" xml:space="preserve">
     <value>Nimi</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Ei koskaan</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -287,7 +287,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Version" xml:space="preserve">
     <value>Versio {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
     <value>Vain Wi-Fi-yhteydellä</value>
   </data>
   <data name="Yes" xml:space="preserve">
@@ -420,16 +420,22 @@ Would you like to inform the application developers and submit the prepared erro
     <value>• Move files and folders
 • Rename files and folders
 • Manual synchronization of folders
-• Download directories as zip file 
+• Download directories as ZIP file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
-• Share files with the app (share target)
+• Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin to start</value>
@@ -440,7 +446,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Connect2" xml:space="preserve">
     <value>Yhdistä</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
@@ -479,16 +485,19 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Huomio!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Sovellus pitää käynnistää uudelleen</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Vihje</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronization has been triggered!</value>
@@ -534,10 +543,10 @@ Yritä myöhemmin uudelleen.</value>
     <value>Synkronoinnin tila</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Paikallinen polku:</value>
+    <value>Paikallinen polku</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud-polku:</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Valitse kansio, mihin haluat lähettää tiedostot</value>
@@ -552,15 +561,113 @@ Yritä myöhemmin uudelleen.</value>
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Synkronoi tämä kansio</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stop synchronizing this folder</value>
+    <value>Lopeta tämän kansion synkronointi</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Stop synchronizing</value>
+    <value>Lopeta synkronointi</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synkronoinnin tila</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synkronoi nyt</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synkronoi</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synkronoi tämä kansio</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Tumma</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Vaalea</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Jaettu muiden kanssa</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Suosikit</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Jaettu minulle</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Jaettu linkin kautta</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Valmistellaan jaettavaksi...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Luo kansio</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Haluatko ylikirjoittaa sen?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Tiedosto on jo olemassa</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Ylikirjoita</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Huomio</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What&apos;s the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
   </data>
 </root>

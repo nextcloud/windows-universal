@@ -240,7 +240,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Uautorisert</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Tjeneren returnerte an feilkode 401 (Uautorisert). Vennligst logg inn på nytt.</value>
+    <value>Tjeneren returnerte an feilkode 401 (Uautorisert). Logg inn på nytt.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -342,7 +342,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>venter på svar fra tjener</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Vennligst velg et nytt navn</value>
+    <value>Velg et nytt navn</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Gi nytt navn</value>
@@ -417,25 +417,25 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Oppdater</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Flytt filer og mapper
+• Gi filer og mapper nye navn
+• Manuell synkronisering av mapper
+• Last ned mapper som ZIP-fil 
+• Velg flere filer og mapper
+• Elementer kan favorittmarkeres fra programmet
+• Størrelsen på mapper vises i mappelisten
+• Statusfelt i mappevisning viser antallet valgte/totalt antall filer
+• Sortering for datatype
+• Nye visninger for favoritter/lager
+• Fest filer og mapper til startskjermen
+• Vis Windows Hello for å autentisere ved programstart
+• Ekspertmodus viser avansert informasjon i programmet
+• Tillat selvsignerte SSL-sertifikater
+• Del filer med programmet
+• Draktvalg (mørk/lys/system)
+• Bruk PasswordVault for å lagre brukeridentifikasjon
+• Nytt og mer stabilt WebDAV-bibliotek
+• Sikkerhetsforbedringer og feilrettinger</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fest til start</value>
@@ -507,7 +507,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Tjenesten er midlertidig utilgjengelig (vanligvis på grunn av litt vedlikehold).
-Vennligst prøv igjen senere.</value>
+Prøv igjen senere.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Fil endret seg både sentralt og lokalt - hvilken er den korrekte?</value>
@@ -650,7 +650,7 @@ Vennligst prøv igjen senere.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Ingen tjeneradresse er angitt. Vennligst skriv inn adressen til Nextcloud tjeneren.</value>
+    <value>Ingen tjeneradresse er angitt. Skriv inn adressen til Nextcloud-tjeneren.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Behold slik den er</value>
@@ -668,6 +668,6 @@ Vennligst prøv igjen senere.</value>
     <value>Hva betyr dette?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Vindusfargeinnstillinger</value>
+    <value>Fargeinnstillinger i Windows</value>
   </data>
 </root>
