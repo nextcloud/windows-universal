@@ -284,6 +284,26 @@
                     </ListView>
 
                     <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
+                        <CommandBar.SecondaryCommands>
+                            <AppBarButton
+                                Label="Check all"
+                                x:Uid="AppBar_CheckAll"
+                                CommandParameter="{Binding ElementName=ConflictListView}"
+                                Command="{Binding CheckAllCommand}">
+                                <AppBarButton.Icon>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE73A;"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton
+                                Label="Uncheck all"
+                                x:Uid="AppBar_UncheckAll"
+                                CommandParameter="{Binding ElementName=ConflictListView}"
+                                Command="{Binding UncheckAllCommand}">
+                                <AppBarButton.Icon>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE739;"/>
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                        </CommandBar.SecondaryCommands>
                         <!-- Buttons for fix options -->
                         <AppBarButton 
                             Icon="CellPhone" 

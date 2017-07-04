@@ -670,4 +670,10 @@ Please try again later.</value>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows color settings</value>
   </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
 </root>

@@ -27,6 +27,8 @@ namespace NextcloudApp.ViewModels
         public ICommand FixConflictByRemoteCommand { get; }
         public ICommand FixConflictByKeepAsIsCommand { get; }
         public ICommand ClearSyncHistoryCommand { get; }
+        public ICommand CheckAllCommand { get; }
+        public ICommand UncheckAllCommand { get; }
 
         public SyncStatusPageViewModel()
         {
@@ -61,6 +63,8 @@ namespace NextcloudApp.ViewModels
             FixConflictByRemoteCommand = new RelayCommand(FixConflictByRemote, CanExecuteFixConflict);
             FixConflictByKeepAsIsCommand = new RelayCommand(FixConflictByKeepAsIs, CanExecuteFixConflict);
             ClearSyncHistoryCommand = new RelayCommand(ClearSyncHistory);
+            CheckAllCommand = new RelayCommand(CheckAll);
+            UncheckAllCommand = new RelayCommand(UncheckAll);
 
             SyncHistoryList = new ObservableCollection<SyncHistory>();
             ConflictList = new ObservableCollection<SyncInfoDetail>();
@@ -78,7 +82,7 @@ namespace NextcloudApp.ViewModels
             var fsis = SyncDbUtils.GetAllFolderSyncInfos();
             fsis.ForEach(x => FolderSyncList.Add(x));
         }
-        
+
         private void FixConflictByLocal(object parameter)
         {
             var listView = parameter as ListView;
@@ -176,6 +180,20 @@ namespace NextcloudApp.ViewModels
             SyncHistoryList.Clear();
             // ReSharper disable once ExplicitCallerInfoArgument
             RaisePropertyChanged(nameof(SyncHistoryList));
+        }
+
+        private void UncheckAll(object parameter)
+        {
+            var listView = parameter as ListView;
+
+            listView?.SelectedItems.Clear();
+        }
+
+        private void CheckAll(object parameter)
+        {
+            var listView = parameter as ListView;
+
+            listView?.SelectAll();
         }
     }
 }
