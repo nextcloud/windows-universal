@@ -143,7 +143,7 @@ namespace NextcloudApp.ViewModels
 
         private void OnShowing(InputPane sender, InputPaneVisibilityEventArgs args)
         {
-            KeyboardHeight = args.OccludedRect.Height;
+            KeyboardHeight = args.OccludedRect.Height + 48;
             IsKeyboardVisible = true;
         }
 
