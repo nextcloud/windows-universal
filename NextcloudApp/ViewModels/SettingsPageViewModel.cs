@@ -170,8 +170,29 @@ namespace NextcloudApp.ViewModels
                 string.Format(_resourceLoader.GetString("ClientVersion"),
                     $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}");
 
-        private void Reset()
+        private async void Reset()
         {
+            var dialog = new ContentDialog
+            {
+                Title = _resourceLoader.GetString("ResetThisApp_Title"),
+                Content = new TextBlock
+                {
+                    Text = _resourceLoader.GetString("ResetThisApp_Description"),
+                    TextWrapping = TextWrapping.WrapWholeWords,
+                    Margin = new Thickness(0, 20, 0, 0)
+                },
+                PrimaryButtonText = _resourceLoader.GetString("Yes"),
+                SecondaryButtonText = _resourceLoader.GetString("No")
+            };
+            dialog.IsPrimaryButtonEnabled = dialog.IsSecondaryButtonEnabled = true;
+            
+            var result = await _dialogService.ShowAsync(dialog);
+
+            if (result != ContentDialogResult.Primary)
+            {
+                return;
+            }
+
             SettingsService.Instance.Reset();
             SyncDbUtils.Reset();
             _navigationService.Navigate(PageToken.Login.ToString(), null);

@@ -254,7 +254,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} of {1} used</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
     <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
@@ -675,5 +675,11 @@ Please try again later.</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
     <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
 </root>
