@@ -173,6 +173,7 @@ namespace NextcloudApp.ViewModels
         private void Reset()
         {
             SettingsService.Instance.Reset();
+            SyncDbUtils.Reset();
             _navigationService.Navigate(PageToken.Login.ToString(), null);
         }
 

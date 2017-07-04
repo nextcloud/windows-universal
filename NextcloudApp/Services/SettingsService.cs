@@ -28,11 +28,6 @@ namespace NextcloudApp.Services
             get;
         } = new RoamingSettings();
 
-        private SettingsService()
-        {
-            
-        }     
-
         public void Reset()
         {
             var vault = new PasswordVault();
@@ -46,6 +41,8 @@ namespace NextcloudApp.Services
             LocalSettings.Reset();
 
             // Should we reset the roaming settings here, these would be reset on all devices?
+            // afiedler: We should ask the user if he also wants to reset the roaming settings
+            //TODO
         }
     }
 }
