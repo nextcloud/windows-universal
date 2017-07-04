@@ -417,25 +417,26 @@
     <value>Обновить</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Перемещение файлов и каталогов
+• Переименовывание файлов и каталогов
+• Ручная синхронизация каталогов
+• Загрузка каталогов в виде zip-файла 
+• Выбор множества файлов и каталогов
+• Возможность помечать элементы избранными из приложения
+• Показ размера каталогов в списке
+• Показ общего и выделенного количеств файлов каталога в статусной строке
+• Сортировка по типу данных
+• Новые режимы просмотра избранного и опубликованного
+• Закрепление файлов или каталогов на начальном экране
+• Использование Windows Hello для аутентификации при запуске приложения
+• Экспертный режим приложения для просмотра дополнительных сведений
+• Поддержка самоподписанных сертификатов SSL
+• Показ размера каталога в списке
+• Открытие общего доступа при помощи приложения
+• Поддержка тем (тёмная/светлая/системная)
+• Использование PasswordVault для хранения пользовательских реквизитов
+• Новая и более стабильная библиотека WebDAV
+• Улучшения безопасности и исправления ошибок</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Введите PIN чтобы начать</value>
