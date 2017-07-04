@@ -152,7 +152,7 @@
                     Height="1" />
 
                 <Button 
-                    x:Uid="ReseTthisApp"
+                    x:Uid="Button_ResetThisApp"
                     Content="Reset this app" 
                     Margin="0,12,0,12"
                     Command="{Binding ResetCommand}"/>
