@@ -121,7 +121,7 @@
     <value>Alle bestanden</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Altijd</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Er heeft zich een fout voorgedaan.</value>
@@ -207,7 +207,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Downloaden bestand...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Downloaden voorbeeldafbeeldingen</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Naam</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nooit</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Nieuwe map</value>
@@ -254,8 +254,8 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} van {1} gebruikt</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reset deze app</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Opnieuw</value>
@@ -288,7 +288,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Versie {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Alleen met Wifi verbinding</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
@@ -417,25 +417,25 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Bijwerken</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Verplaatsen bestanden en mappen
+• Hernoemen bestanden en mappen
+• Handmatig synchroniseren van mappen
+• Downloaden mappen als zip-bestand
+• Selecteren meerdere bestanden en mappen
+• Objecten kunnen vanuit de app als favoriet worden gemarkeerd
+• Tonen mapgrootte in directoryoverzicht
+• Statusbalk in directoryoverzicht toont geselecteerde/totaal aantal bestanden
+• Sorteren op data type
+• Nieuwe overzichten voor favorieten/shares
+• Vastprikken bestanden en mappen aan startscherm
+• Gebruiken Windows Hello om bij starten app te authenticeren
+• Expert modus toont geavanceerde informatie in de app
+• Toestaan self-signed SSL certificaten
+• Delen bestanden met de app
+• Thema&apos;s (donker/licht/systeem)
+• Gebruiken PasswordVault om inloggegevens op te slaan
+• Nieuwe en meer stabiele WebDAV library
+• Security verbeteringen &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
@@ -447,7 +447,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Verbinden</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Negeer ongeldige self-signed certificaten</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Expertmodus</value>
@@ -588,16 +588,16 @@ Probeer het later opnieuw.</value>
     <value>Synchroniseer deze map</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Donker</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Licht</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Gebruik de systeeminstellingen</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Kies een modus</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Gedeeld met anderen</value>
@@ -653,21 +653,33 @@ Probeer het later opnieuw.</value>
     <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Houden zoals nu</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
     <value>This solution can only be applied, if files exist both remotely and locally</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Opgelet</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Hoe werkt de expertmodus?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Wat betekent dit?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Windows kleurinstellingen</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
 </root>

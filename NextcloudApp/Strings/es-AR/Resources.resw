@@ -254,8 +254,8 @@
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} de {1} usado</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reiniciar esta aplicación</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintentar</value>
@@ -668,5 +668,17 @@
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows color settings</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
 </root>

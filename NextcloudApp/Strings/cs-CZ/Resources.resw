@@ -252,8 +252,8 @@
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>Využito {0} z {1}</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Resetovat tuto aplikaci</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Zkusit znovu</value>
@@ -667,5 +667,17 @@ Prosím zkuste to znovu později.</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Nastavení barev systému Windows</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
 </root>

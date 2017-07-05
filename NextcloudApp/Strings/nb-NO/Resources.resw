@@ -254,8 +254,8 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} av {1} brukt</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Nullstill denne appen</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Prøv igjen</value>
@@ -669,5 +669,17 @@ Prøv igjen senere.</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Fargeinnstillinger i Windows</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
 </root>
