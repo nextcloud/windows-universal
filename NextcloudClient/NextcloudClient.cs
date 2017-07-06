@@ -461,7 +461,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if remote path exists, <c>false</c> otherwise.</returns>
         public async Task<bool> Exists(string path)
         {
-            return await _dav.ExistsAsync(GetDavUri(path, false));
+            return await _dav.ExistsAsync(GetDavUri(path, true));
         }
 
         /// <summary>
@@ -492,7 +492,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was copied, <c>false</c> otherwise.</returns>
         public async Task<bool> Copy(string source, string destination)
         {
-            return await _dav.CopyAsync(GetDavUri(source, false), GetDavUri(destination, false));
+            return await _dav.CopyAsync(GetDavUri(source, true), GetDavUri(destination, true));
         }
 
         /// <summary>
@@ -503,7 +503,7 @@ namespace NextcloudClient
         /// <returns><c>true</c>, if resource was moved, <c>false</c> otherwise.</returns>
         public async Task<bool> Move(string source, string destination)
         {
-            return await _dav.MoveAsync(GetDavUri(source, false), GetDavUri(destination, false));
+            return await _dav.MoveAsync(GetDavUri(source, true), GetDavUri(destination, true));
         }
 
         /// <summary>
