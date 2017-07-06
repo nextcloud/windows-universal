@@ -254,7 +254,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>{0} de {1} usado</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Redefinir esta aplicação</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Tentar novamente</value>
@@ -670,15 +670,15 @@ Por favor tente mais tarde.</value>
     <value>Configurações da cor da janela</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Marcar todos</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Desmarcar todos</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Quer mesmo redefinir este aplicativo? Isso irá redefini-lo e também suas configurações de sincronização.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Redefinir este aplicativo</value>
   </data>
 </root>

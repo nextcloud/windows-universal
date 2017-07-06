@@ -255,7 +255,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>{0} / {1} kullanılmış</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Bu uygulamayı sıfırla</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Yeniden Dene</value>
@@ -671,15 +671,15 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Windows renk ayarları</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Tümünü seç</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Tümünü bırak</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Bu uygulamayı sıfırlamak istediğinize emin misiniz? Bu işlem uygulamayı ve tüm eşitleme ayarlarınızı sıfırlayacak.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Bu uygulamayı sıfırla</value>
   </data>
 </root>

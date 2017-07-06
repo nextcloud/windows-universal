@@ -255,7 +255,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>{0} de {1} utilisé</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>réinitialiser cette application</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Réessayer</value>
@@ -671,7 +671,7 @@ Veuillez réessayer plus tard.</value>
     <value>Paramètres de couleur Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Tout sélectionner</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
     <value>Uncheck all</value>
@@ -680,6 +680,6 @@ Veuillez réessayer plus tard.</value>
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Réinitialiser cette application</value>
   </data>
 </root>

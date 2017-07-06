@@ -255,7 +255,7 @@
     <value>{0} de {1} usados</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Resetear esta app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintentar</value>
@@ -670,15 +670,15 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Ajustes de color de Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Marcar todo</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Desmarcar todo</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>¿Estás seguro de que quieres resetear esta app? Esto reseteará toda la aplicación y todas tus configuraciones de sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Resetear esta app</value>
   </data>
 </root>

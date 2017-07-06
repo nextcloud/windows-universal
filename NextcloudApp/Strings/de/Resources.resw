@@ -255,7 +255,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} von {1} verwendet</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Diese App zurücksetzen</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Wiederholen</value>
@@ -671,15 +671,15 @@ Bitte später noch einmal versuchen.</value>
     <value>Windows-Farbeinstellungen</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Alle auswählen</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Auswahl aufheben</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Bist Du sicher, dass Du die App zurücksetzen möchtest? Dadurch werden alle Anwendungs- und alle Synchronisierungseinstellungen zurückgesetzt.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Diese App zurücksetzen</value>
   </data>
 </root>
