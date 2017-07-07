@@ -255,7 +255,7 @@
     <value>использовано {0} из {1}</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Сбросить настройки приложения</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Повторить</value>
@@ -672,15 +672,15 @@
     <value>Настройки цветов Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Отметить всё</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Снять все отметки</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Действительно сбросить настройки приложения? Это действие так же сбросит все настройки синхнронизации.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Сбросить настройки приложения</value>
   </data>
 </root>

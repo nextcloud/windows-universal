@@ -674,7 +674,7 @@ Veuillez réessayer plus tard.</value>
     <value>Tout sélectionner</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Désélectionner tout</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
