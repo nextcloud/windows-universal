@@ -255,7 +255,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>{0} av {1} brukt</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Nullstill denne appen</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Prøv igjen</value>
@@ -671,15 +671,15 @@ Prøv igjen senere.</value>
     <value>Fargeinnstillinger i Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Merk alle</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Fjern alle</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Er du sikker på at du vil nullstille denne appen? Dette vil nullstille appen og alle dine synkroniseringsinnstillinger.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Nullstill denne appen</value>
   </data>
 </root>

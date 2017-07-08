@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Wszystkie pliki</value>
+    <value>Wszystkie plikipert</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Zawsze</value>
@@ -255,7 +255,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>{0} z {1} użytych</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Zresetuj ustawienia</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Ponów</value>
@@ -447,10 +447,10 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Połącz</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignoruj błędne samopodpisane certyfikaty SSL</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Tryb eksperta</value>
+    <value>Tryb zaawansowany</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Status synchronizacji</value>
@@ -594,7 +594,7 @@ Proszę spróbować ponownie później,</value>
     <value>Jasny</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Użyj ustawień systemowych</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Wybierz tryb</value>
@@ -662,24 +662,24 @@ Proszę spróbować ponownie później,</value>
     <value>Uwaga</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Jak działa tryb zaawansowany?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Co to oznacza?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Ustawienia kolorów Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Zaznacz wszystko</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Odznacz wszystko</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Zresetuj ustawienia</value>
   </data>
 </root>
