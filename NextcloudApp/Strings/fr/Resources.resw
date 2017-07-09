@@ -677,7 +677,7 @@ Veuillez réessayer plus tard.</value>
     <value>Désélectionner tout</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Êtes-vous sûr de vouloir réinitialiser cette application ? Cela va réinitialiser toute l&apos;application et tous vos paramètres de synchronisation.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Réinitialiser cette application</value>
