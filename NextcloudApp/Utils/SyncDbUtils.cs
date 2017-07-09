@@ -40,8 +40,10 @@ namespace NextcloudApp.Utils
 
                 _dbConnection = new SQLiteConnection(new SQLitePlatformWinRT(), DbPath)
                 {
+#if DEBUG
                     // Activate Tracing
                     TraceListener = new DebugTraceListener()
+#endif
                 };
 
                 // Init tables
