@@ -1,9 +1,8 @@
-﻿namespace NextcloudApp.Utils
+﻿using SQLite.Net;
+using System.Diagnostics;
+
+namespace NextcloudApp.Utils
 {
-    using SQLite.Net;
-    using System.Diagnostics;
-
-
     /// <summary>
     /// Writes SQLite.NET trace to the debug window.
     /// </summary>
@@ -11,7 +10,7 @@
     {
         public void Receive(string message)
         {
-            //Debug.WriteLine(message);
+            Debug.WriteLine(message);
         }
     }
 }
