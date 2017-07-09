@@ -64,37 +64,34 @@ namespace NextcloudApp.Utils
 
         public static List<FolderSyncInfo> GetAllFolderSyncInfos()
         {
-            var models = (from p in DbConnection.Table<FolderSyncInfo>() select p).ToList();
-            return models;
+            return DbConnection.Table<FolderSyncInfo>().ToList();
         }
 
         public static List<SyncInfoDetail> GetErrors()
         {
-            IEnumerable<SyncInfoDetail> sidList = from detail in DbConnection.Table<SyncInfoDetail>() where detail.Error != null select detail;
-            return sidList.ToList();
+            return DbConnection.Table<SyncInfoDetail>().Where(detail => detail.Error != null).ToList();
         }
 
         public static FolderSyncInfo GetFolderSyncInfoByPath(string path)
         {
-            return (from fsi in DbConnection.Table<FolderSyncInfo>() where fsi.Path == path select fsi).FirstOrDefault();
+            return DbConnection.Table<FolderSyncInfo>().FirstOrDefault(fsi => fsi.Path == path);
         }
 
         public static int GetErrorConflictCount(FolderSyncInfo folderSyncInfo)
         {
-            return (from sid in DbConnection.Table<SyncInfoDetail>() where sid.FsiId == folderSyncInfo.Id && (sid.ConflictType != ConflictType.None || sid.Error != null) select sid).Count();
+            return DbConnection.Table<SyncInfoDetail>().Count(sid => sid.FsiId == folderSyncInfo.Id && (sid.ConflictType != ConflictType.None || sid.Error != null));
         }
 
         public static FolderSyncInfo GetFolderSyncInfoBySubPath(string path)
         {
-            var infos = from fsi in DbConnection.Table<FolderSyncInfo>() select fsi;
-            return (from info in infos let index = path.IndexOf(info.Path, StringComparison.Ordinal) where index == 0 && path.Substring(info.Path.Length - 1, 1).Equals("/") select info).FirstOrDefault();
+            return DbConnection.Table<FolderSyncInfo>().FirstOrDefault(info => path.IndexOf(info.Path, StringComparison.Ordinal) == 0 && path.Substring(info.Path.Length - 1, 1).Equals("/"));
         }
 
         internal static void UnlockFolderSyncInfo(FolderSyncInfo folderSyncInfo)
         {
             lock (FsiLock)
             {
-                var m = (from fsi in DbConnection.Table<FolderSyncInfo>() where fsi.Id == folderSyncInfo.Id select fsi).FirstOrDefault();
+                var m = DbConnection.Table<FolderSyncInfo>().FirstOrDefault(fsi => fsi.Id == folderSyncInfo.Id);
                 if (m == null || !m.Active)
                 {
                     return;
@@ -108,7 +105,7 @@ namespace NextcloudApp.Utils
         {
             lock (FsiLock)
             {
-                var m = (from fsi in DbConnection.Table<FolderSyncInfo>() where fsi.Id == folderSyncInfo.Id select fsi).FirstOrDefault();
+                var m = DbConnection.Table<FolderSyncInfo>().FirstOrDefault(fsi => fsi.Id == folderSyncInfo.Id);
                 if (m == null || m.Active)
                 {
                     return false;
@@ -121,8 +118,7 @@ namespace NextcloudApp.Utils
 
         internal static List<FolderSyncInfo> GetActiveSyncInfos()
         {
-            IEnumerable<FolderSyncInfo> list = from fsi in DbConnection.Table<FolderSyncInfo>() where fsi.Active select fsi;
-            return list.ToList();
+            return DbConnection.Table<FolderSyncInfo>().Where(fsi => fsi.Active).ToList();
         }
 
         public static void SaveFolderSyncInfo(FolderSyncInfo fsi)
@@ -148,8 +144,7 @@ namespace NextcloudApp.Utils
                 fullPath = $"{info.Path}/{info.Name}";
             }
 
-            var sid = (from detail in DbConnection.Table<SyncInfoDetail>() where detail.Path == fullPath && detail.FsiId == fsi.Id select detail).FirstOrDefault();
-            return sid;
+            return DbConnection.Table<SyncInfoDetail>().FirstOrDefault(detail => detail.Path == fullPath && detail.FsiId == fsi.Id);
         }
 
         public static SyncInfoDetail IsResourceInfoSynced(ResourceInfo info)
@@ -160,27 +155,23 @@ namespace NextcloudApp.Utils
             {
                 fullPath = $"{info.Path}/{info.Name}";
             }
-
-            var sid = (from detail in DbConnection.Table<SyncInfoDetail>() where detail.Path == fullPath select detail).FirstOrDefault();
-            return sid;
+            
+            return DbConnection.Table<SyncInfoDetail>().FirstOrDefault(detail => detail.Path == fullPath);
         }
 
         public static SyncInfoDetail GetSyncInfoDetail(IStorageItem file, FolderSyncInfo fsi)
         {
-            var sid = (from detail in DbConnection.Table<SyncInfoDetail>() where detail.FilePath == file.Path && detail.FsiId == fsi.Id select detail).FirstOrDefault();
-            return sid;
+            return DbConnection.Table<SyncInfoDetail>().FirstOrDefault(detail => detail.FilePath == file.Path && detail.FsiId == fsi.Id);
         }
 
         public static List<SyncInfoDetail> GetAllSyncInfoDetails(FolderSyncInfo fsi)
         {
-            IEnumerable<SyncInfoDetail> sidList = from detail in DbConnection.Table<SyncInfoDetail>() where detail.FsiId == fsi.Id select detail;
-            return sidList.ToList();
+            return DbConnection.Table<SyncInfoDetail>().Where(detail => detail.FsiId == fsi.Id).ToList();
         }
 
         public static List<SyncInfoDetail> GetConflicts()
         {
-            IEnumerable<SyncInfoDetail> sidList = from detail in DbConnection.Table<SyncInfoDetail>() where detail.ConflictType != ConflictType.None select detail;
-            return sidList.ToList();
+            return DbConnection.Table<SyncInfoDetail>().Where(detail => detail.ConflictType != ConflictType.None).ToList();
         }
 
         public static void DeleteSyncInfoDetail(SyncInfoDetail sid, bool isFolder)
@@ -245,8 +236,7 @@ namespace NextcloudApp.Utils
         public static List<SyncHistory> GetSyncHistory()
         {
             // Only first 500 entries
-            var historyList = (from detail in DbConnection.Table<SyncHistory>() select detail).Take(500);
-            return historyList.OrderByDescending(x => x.SyncDate).ToList();
+            return DbConnection.Table<SyncHistory>().Take(500).OrderByDescending(x => x.SyncDate).ToList();
         }
 
         #endregion SyncHistory
