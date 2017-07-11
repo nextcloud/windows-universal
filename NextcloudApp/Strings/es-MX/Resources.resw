@@ -124,7 +124,7 @@
     <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Se ha presentado un error</value>
+    <value>Se presentó un error</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
     <value>Agregar</value>
@@ -207,7 +207,7 @@
     <value>Descargando el archivo...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Descargar vista previa de imágenes</value>
+    <value>Descargar la vista previa de imágenes</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -399,7 +399,7 @@
     <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de su dispositivo. </value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Vuelva a intentar</value>
+    <value>Vuelve a intentar</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud para Windows Mobile</value>
@@ -521,7 +521,7 @@
     <value>Conflicto:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>El archivo remoto fue borrado pero el local fue modificado. ¿Cuál prefiere?</value>
+    <value>El archivo remoto fue borrado pero el local fue modificado. ¿Cuál prefieres?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>La sincronización de la carpeta {0} terminó con {1} cambios y {2} errores o conflictos.</value>
@@ -548,7 +548,7 @@
     <value>Ruta Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Favor de elegir la carpeta donde prefiera cargar los archivos</value>
+    <value>Elige la carpeta a donde prefieras cargar los archivos</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Carpetas</value>
