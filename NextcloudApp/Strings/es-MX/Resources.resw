@@ -255,7 +255,7 @@
     <value>{0} de {1} usado</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reiniciar esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintentar</value>
@@ -342,7 +342,7 @@
     <value>esperando respuesta del servidor</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Favor de elegir un nuevo nombre</value>
+    <value>Por favor selecciona un nuevo nombre</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Renombrar</value>
@@ -363,13 +363,13 @@
     <value>Cancelar</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Hecho</value>
+    <value>Terminado</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Elegir carpeta</value>
+    <value>Seleccioanr carpeta</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>El servidor en la dirección {0} no puede ser alcanzado.</value>
+    <value>El servidor con la dirección {0} no puede ser alcanzado.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Descargar como un archivo ZIP</value>
@@ -378,7 +378,7 @@
     <value>{0} descargado</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Para acceder a su Nextcloud, proporcione la información de autenticación de su dispositivo.</value>
+    <value>Para acceder a tu Nextcloud, proporciona la información de autenticación de tu dispositivo.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Autenticación Windows Hello</value>
@@ -405,7 +405,7 @@
     <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Su aplicación se actualizó a la versión {0}</value>
+    <value>Tu aplicación se actualizó a la versión {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Nuevas funcionalidades y mejoras en esta versión:</value>
@@ -636,7 +636,7 @@
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>¿Desea sobre escribirlo?</value>
+    <value>¿Deseas sobre escribirlo?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>El archivo ya existe</value>
@@ -667,18 +667,18 @@
     <value>¿Qué significa esto?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Configuraciones de colores de ventanas</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Marcar todos</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Desmarcar todos</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reiniciar esta aplicación</value>
   </data>
 </root>
