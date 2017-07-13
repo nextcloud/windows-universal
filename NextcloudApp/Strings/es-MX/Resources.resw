@@ -178,9 +178,9 @@
     <value>Error de la aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Se ha presentado un problema con la aplicación. Sentimos los inconvenientes. Si estaba trabajando en algo, esta información pudo haberse perdido.
+    <value>Se ha presentado un problema con la aplicación. Sentimos los inconvenientes. Si estabas trabajando en algo, esta información pudo haberse perdido.
 
-¿Le gustaría informarle a los desarrolladores de la aplicación y enviar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente.</value>
+¿Te gustaría informarle a los desarrolladores de la aplicación y enviar el reporte de error preparado? Esto ayudará a eliminar el problema más rápidamente.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
@@ -240,7 +240,7 @@
     <value>No autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor regresó un código de error 401 (No autorizado). Favor de iniciar sesión de nuevo.</value>
+    <value>El servidor regresó un código de error 401 (No autorizado). Por favor inicia sesión de nuevo.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -276,13 +276,13 @@
     <value>Tamaño</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Ya existe un elemento con este nombre. Especifique un nombre diferente</value>
+    <value>Ya existe un elemento con este nombre. Especifica un nombre diferente</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nombre del usuario</value>
+    <value>Usuario</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
@@ -300,7 +300,7 @@
     <value>Borrar archivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Está seguro que quiere borrar este archivo {0}</value>
+    <value>Estás seguro que quieres borrar este archivo {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Borrar carpeta</value>
@@ -324,7 +324,7 @@
     <value>El modo mantenimiento está habilitado en el servidor</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nombre de usuario o contraseña equivocado. </value>
+    <value>Usuario o contraseña equivocado. </value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Versión del cliente {0}</value>
@@ -494,10 +494,10 @@
     <value>Listado de los errores que se presentaron durante la sincronización. Estos deberían ser temas temporales (ejem. el archivo ha sido abierto por otra aplicación) y debería dejar de presentarse la siguiente vez que se vuelva a ejecutar una sincronización. </value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>¡Tenga cuidado con los conflictos!</value>
+    <value>¡Ten cuidado con los conflictos!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Tanto la carpeta local y remota no están vacías. Esto puede generar muchos conflictos, porque la aplilcación no sabe cuales son los archivos correctos. </value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>¡Se ha disparado la sincronización!</value>
@@ -676,7 +676,7 @@
     <value>Desmarcar todos</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>¿Estas seguro que deseas reiniciar esta aplicación? Esto reiniciará todas las configuraciones de la aplicación y sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Reiniciar esta aplicación</value>
