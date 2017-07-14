@@ -396,7 +396,7 @@
     <value>Se requiere autenticación</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de su dispositivo. </value>
+    <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de tu dispositivo. </value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Vuelve a intentar</value>
@@ -417,25 +417,25 @@
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Mover archivos y carpetas
+• Renombrar archivos y carpetas
+• Sincronización manual de carpetas
+• Descargar directorios como archivos ZIP
+• Seleccionar múltples archivos y carpetas
+• Marcar elementos como favoritos dentro de la aplicación
+• Mostrar el tamaño de carpetas en el listado del directorio
+• Barra de estado en el listado del directorio mostrando el número total de archivos seleccionados / totales
+• Ordenamiento por tipo de dato
+• Nuevas vistas para favoritos / compartidos
+• Anclar archivos y carpetas a la pantalla de inicio
+• Uso de Windows Hello para autenticación al iniciar la aplicación
+• Modo experto que muestra información avanzada de la aplicación
+• Permitir certificados SSL auto firmados
+• Compartir archivos con la aplicación
+• Temas (claro/obscuro/sistema)
+• Usar la Bóveda de contraseñas para almacenar credenciales de usuario
+• Nueva y más estable libería de WebDAV
+• Mejoras de seguridad y corrección de errores </value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Anclar al inicio</value>
@@ -479,7 +479,7 @@
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>La autoridad del certificado es inválida o incorrecta. ¿Conectarse de cualquier modo?
 
-¡Tenga cuidado, no estará protegido de ataques de Hombre-En-Medio (mitm)!</value>
+¡Ten cuidado, no estarás protegido de ataques de Hombre-En-Medio (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>¡Atención!</value>
@@ -503,19 +503,19 @@
     <value>¡Se ha disparado la sincronización!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>La sincronización se llevará a cabo en el fondo. Recibirá una notificación cuando termine.</value>
+    <value>La sincronización se llevará a cabo en el fondo. Recibirás una notificación cuando termine.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>El servicio está temporalmente no disponible (generalmente debido a trabajo de manteimiento de corto plazo). Favor de intentar más tarde. </value>
+    <value>El servicio no está disponible temporalmente (generalmente debido a trabajo de manteimiento de corto plazo). Por favor intenta más tarde. </value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>El archivo ha cambiado local y remotamente. ¿Cuál prefiere?</value>
+    <value>El archivo ha cambiado local y remotamente. ¿Cuál prefieres?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>El archivo ha sido creado local y remotamente - ¿Cuál es el correto?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>El archivo local fue borrado pero el remoto fue modificado. ¿Cuál prefiere?</value>
+    <value>El archivo local fue borrado pero el remoto fue modificado. ¿Cuál prefieres?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Conflicto:</value>
@@ -560,7 +560,7 @@
     <value>Cuando el modo experto está habilitado, la aplicación proporciona información/funcionalidades adicionales, que pueden no ser del interés de todos los usuarios. </value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de autoridades de certificados SSL incorrectas o inválidas. ¡Tenga cuidado, no estará más protegido contra ataques de hombre-en-medio (MITM)!</value>
+    <value>Ignorar certificados SSL auto-firmados. Esto permite el uso de autoridades de certificados SSL incorrectas o inválidas. ¡Ten cuidado, no estarás más protegido contra ataques de hombre-en-medio (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
