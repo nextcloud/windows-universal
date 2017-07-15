@@ -479,7 +479,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+Sei bitte vorsichtig, Du wirst nicht vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Achtung!</value>
