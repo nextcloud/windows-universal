@@ -543,7 +543,7 @@ Please try again later.</value>
     <value>Statusi i sinkronizmit</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Shteg lokal</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
     <value>Nextcloud Path</value>
@@ -588,7 +588,7 @@ Please try again later.</value>
     <value>Sinkronizoni këtë dosje</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>E errët</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
     <value>Light</value>

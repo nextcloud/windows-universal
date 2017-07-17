@@ -300,13 +300,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei löschen</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Bist du sicher, dass Du die Datei {0} löschen möchtest?</value>
+    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du den Ordner {0} löschen möchtest?</value>
+    <value>Sind Sie sicher. dass Sie den Ordner {0} löschen möchten?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -479,7 +479,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+Sei bitte vorsichtig, Sie sind nicht vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Achtung!</value>
@@ -503,26 +503,26 @@ Sei bitte vorsichtig, Du wirst nicht mehr vor Man-in-the-Middle (mitm) Angriffen
     <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Die Synchronisation wird im Hintergrund ausgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie werden benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
 Bitte später noch einmal versuchen.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugst Du?</value>
+    <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>Datei wurde lokal und auf dem Server erstellt. Welche ist die richtige?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugst Du?</value>
+    <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugst Du?</value>
+    <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Synchronisation von Ordner {0} führte zu {1} Änderungen und {2} Fehlern oder Konflikten.</value>
@@ -549,7 +549,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Nextcloud Pfad</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>
+    <value>Wählen Sie den Ordner, in den Sie die Dateien hochladen möchten.</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Ordner</value>
@@ -677,7 +677,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Auswahl aufheben</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du die App zurücksetzen möchtest? Dadurch werden alle Anwendungs- und alle Synchronisierungseinstellungen zurückgesetzt.</value>
+    <value>Sind Sie sicher, dass Sie die App zurücksetzen möchten? Dadurch werden alle Anwendungs- und alle Synchronisierungseinstellungen zurückgesetzt.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Diese App zurücksetzen</value>

@@ -255,7 +255,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>{0} van {1} gebruikt</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reset deze app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Opnieuw</value>
@@ -671,10 +671,10 @@ Probeer het later opnieuw.</value>
     <value>Windows kleurinstellingen</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Alles selecteren</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Alles deselecteren</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>

@@ -255,7 +255,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>{0} av {1} brukt</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Nullstill denne appen</value>
+    <value>Nullstill dette programmet</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Prøv igjen</value>
@@ -405,7 +405,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Appen din ble oppdatert til versjon {0}</value>
+    <value>Programmet ditt ble oppdatert til versjon {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Nye funksjoner og forbedringer i denne versjonen:</value>
@@ -534,7 +534,7 @@ Prøv igjen senere.</value>
     <value>Synkronisering har blitt avsluttet.</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synkronisering av mappe {0} har blitt stoppet, fordi applikasjonen har blitt suspendert.</value>
+    <value>Synkronisering av mappe {0} har blitt stoppet, fordi programmet har blitt suspendert.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synkronisering utsatt</value>
@@ -677,9 +677,9 @@ Prøv igjen senere.</value>
     <value>Fjern alle</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Er du sikker på at du vil nullstille denne appen? Dette vil nullstille appen og alle dine synkroniseringsinnstillinger.</value>
+    <value>Er du sikker på at du vil nullstille dette programmet? Dette vil nullstille programmet og alle dine synkroniseringsinnstillinger.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Nullstill denne appen</value>
+    <value>Nullstill dette programmet</value>
   </data>
 </root>
