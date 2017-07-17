@@ -97,11 +97,11 @@ namespace NextcloudApp.Services
                     }
 
                     stringBuilder.AppendFormat("[AppTotalRuns]:[{0}]",
-                        SettingsService.Instance.LocalSettings.AppTotalRuns);
+                        SettingsService.Default.Value.LocalSettings.AppTotalRuns);
                     stringBuilder.AppendLine();
 
                     stringBuilder.AppendFormat("[AppRunsAfterLastUpdate]:[{0}]",
-                        SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate);
+                        SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdate);
                     stringBuilder.AppendLine();
 
                     stringBuilder.Append(

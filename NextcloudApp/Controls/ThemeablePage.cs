@@ -10,7 +10,7 @@ namespace NextcloudApp.Controls
     {
         public ThemeablePage()
         {
-            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            var theme = SettingsService.Default.Value.RoamingSettings.Theme;
             switch (theme)
             {
                 case Theme.System:
@@ -24,14 +24,14 @@ namespace NextcloudApp.Controls
                     break;
             }
 
-            SettingsService.Instance.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
+            SettingsService.Default.Value.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
         }
 
         private void RoamingSettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName.Equals("Theme"))
             {
-                var theme = SettingsService.Instance.RoamingSettings.Theme;
+                var theme = SettingsService.Default.Value.RoamingSettings.Theme;
                 switch (theme)
                 {
                     case Theme.System:

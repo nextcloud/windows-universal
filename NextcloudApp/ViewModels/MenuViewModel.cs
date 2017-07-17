@@ -107,7 +107,7 @@ namespace NextcloudApp.ViewModels
                 },               
             };
             
-            SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>
+            SettingsService.Default.Value.LocalSettings.PropertyChanged += (sender, args) =>
             {
                 GetUserInformation();
             };
@@ -142,7 +142,7 @@ namespace NextcloudApp.ViewModels
                 return;
             }
 
-            var username = SettingsService.Instance.LocalSettings.Username;
+            var username = SettingsService.Default.Value.LocalSettings.Username;
 
             if (string.IsNullOrEmpty(username))
                 return;
@@ -157,7 +157,7 @@ namespace NextcloudApp.ViewModels
                     converter.Convert(User.Quota.Total, typeof(string), null, CultureInfo.CurrentCulture.ToString())
                 );
 
-                switch (SettingsService.Instance.LocalSettings.PreviewImageDownloadMode)
+                switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
                 {
                     case PreviewImageDownloadMode.Always:
                         UserAvatarUrl = await client.GetUserAvatarUrl(username, 120);

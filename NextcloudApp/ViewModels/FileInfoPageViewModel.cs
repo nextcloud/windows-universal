@@ -121,7 +121,7 @@ namespace NextcloudApp.ViewModels
                 return;
             }
 
-            switch (SettingsService.Instance.LocalSettings.PreviewImageDownloadMode)
+            switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
             {
                 case PreviewImageDownloadMode.Always:
                     break;

@@ -62,7 +62,7 @@ namespace NextcloudApp.Services
 
         private void SortList()
         {
-            switch (SettingsService.Instance.LocalSettings.GroupMode)
+            switch (SettingsService.Default.Value.LocalSettings.GroupMode)
             {
                 case GroupMode.GroupByNameAscending:
                     GroupByNameAscending();
@@ -104,7 +104,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
         }
 
         public void GroupByNameDescending()
@@ -114,7 +114,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
         }
 
         public void GroupByDateAscending()
@@ -124,7 +124,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
         }
 
         public void GroupByDateDescending()
@@ -134,7 +134,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
         }
 
         public void GroupBySizeAscending()
@@ -144,7 +144,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
         }
 
         public void GroupBySizeDescending()
@@ -154,7 +154,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
         public void GroupByTypeAscending()
@@ -164,7 +164,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.ContentType);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByTypeAscending;
         }
 
         public void GroupByTypeDescending()
@@ -174,7 +174,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.ContentType);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByTypeDescending;
         }
 
         public void ToggleSelectionMode()
@@ -299,7 +299,7 @@ namespace NextcloudApp.Services
                 }
             }
 
-            switch (SettingsService.Instance.LocalSettings.PreviewImageDownloadMode)
+            switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
             {
                 case PreviewImageDownloadMode.Always:
                     DownloadPreviewImages();

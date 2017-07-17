@@ -68,7 +68,7 @@ namespace NextcloudApp.ViewModels
             /**
              * Contains the User Settings ie. Server-Address and Username
              */
-            Settings = SettingsService.Instance.LocalSettings;
+            Settings = SettingsService.Default.Value.LocalSettings;
 
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {

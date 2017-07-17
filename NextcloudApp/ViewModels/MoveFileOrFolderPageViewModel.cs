@@ -42,7 +42,7 @@ namespace NextcloudApp.ViewModels
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            Settings = SettingsService.Instance.LocalSettings;
+            Settings = SettingsService.Default.Value.LocalSettings;
 
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {

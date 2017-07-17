@@ -193,8 +193,8 @@ namespace NextcloudApp.ViewModels
                 return;
             }
 
-            SettingsService.Instance.LocalSettings.ServerAddress = ServerAddress;
-            SettingsService.Instance.LocalSettings.Username = Username;
+            SettingsService.Default.Value.LocalSettings.ServerAddress = ServerAddress;
+            SettingsService.Default.Value.LocalSettings.Username = Username;
             
             var vault = new PasswordVault();
             vault.Add(new PasswordCredential(ServerAddress, Username, Password));
@@ -257,7 +257,7 @@ namespace NextcloudApp.ViewModels
                 return false;
             }
 
-            if (SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors)
+            if (SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors)
             {
                 var response = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress, true);
                 if (response == null)
@@ -289,7 +289,7 @@ namespace NextcloudApp.ViewModels
 
         private void IgnoreServerCertificateErrors()
         {
-            SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors = true;
+            SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors = true;
         }
 
         private async Task ShowServerAddressNotFoundMessage()
@@ -328,7 +328,7 @@ namespace NextcloudApp.ViewModels
         {
             try
             {
-                var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+                var status = await NextcloudClient.NextcloudClient.GetServerStatus(ServerAddress, SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors);
                 if (status == null)
                 {
                     await ShowServerAddressNotFoundMessage();
@@ -379,7 +379,7 @@ namespace NextcloudApp.ViewModels
         {
             try
             {
-                return await NextcloudClient.NextcloudClient.CheckUserLogin(ServerAddress, Username, Password, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+                return await NextcloudClient.NextcloudClient.CheckUserLogin(ServerAddress, Username, Password, SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors);
             }
             catch (ResponseError)
             {

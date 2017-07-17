@@ -36,8 +36,8 @@ namespace NextcloudApp.ViewModels
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            SettingsLocal = SettingsService.Instance.LocalSettings;
-            SettingsRoaming = SettingsService.Instance.RoamingSettings;
+            SettingsLocal = SettingsService.Default.Value.LocalSettings;
+            SettingsRoaming = SettingsService.Default.Value.RoamingSettings;
 
             UseWindowsHello = SettingsLocal.UseWindowsHello;
             IgnoreServerCertificateErrors = SettingsLocal.IgnoreServerCertificateErrors;
@@ -55,7 +55,7 @@ namespace NextcloudApp.ViewModels
 
         private async void GetServerVersion()
         {
-            var status = await NextcloudClient.NextcloudClient.GetServerStatus(SettingsLocal.ServerAddress, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+            var status = await NextcloudClient.NextcloudClient.GetServerStatus(SettingsLocal.ServerAddress, SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors);
 
             if (!string.IsNullOrEmpty(status.VersionString))
             {
@@ -193,7 +193,7 @@ namespace NextcloudApp.ViewModels
                 return;
             }
 
-            SettingsService.Instance.Reset();
+            SettingsService.Default.Value.Reset();
             SyncDbUtils.Reset();
             _navigationService.Navigate(PageToken.Login.ToString(), null);
         }

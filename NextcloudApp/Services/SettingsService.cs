@@ -1,4 +1,6 @@
-﻿using NextcloudApp.Models;
+﻿using System;
+using System.Threading;
+using NextcloudApp.Models;
 using Windows.Security.Credentials;
 
 namespace NextcloudApp.Services
@@ -7,26 +9,18 @@ namespace NextcloudApp.Services
     /// Service for accessing the app's settings.
     /// </summary>
     public class SettingsService
-    {        
-        private static SettingsService _instance;
-
-        public static SettingsService Instance => _instance ?? (_instance = new SettingsService());
+    {
+        public static Lazy<SettingsService> Default = new Lazy<SettingsService>(() => new SettingsService(), LazyThreadSafetyMode.ExecutionAndPublication);
 
         /// <summary>
         /// Gets the settings which are stored on the local device only.
         /// </summary>
-        public LocalSettings LocalSettings
-        {
-            get;
-        } = new LocalSettings();
+        public LocalSettings LocalSettings => LocalSettings.Default.Value;
 
         /// <summary>
         /// Gets the settings which are stored in the roaming profile and are synchronized between devices.
         /// </summary>
-        public RoamingSettings RoamingSettings
-        {
-            get;
-        } = new RoamingSettings();
+        public RoamingSettings RoamingSettings => RoamingSettings.Default.Value;
 
         public void Reset()
         {
@@ -43,6 +37,19 @@ namespace NextcloudApp.Services
             // Should we reset the roaming settings here, these would be reset on all devices?
             // afiedler: We should ask the user if he also wants to reset the roaming settings
             //TODO
+        }
+
+        /// <summary>
+        /// Disposeds this instance.
+        /// </summary>
+        public void Disposed()
+        {
+            LocalSettings.Dispose();
+            RoamingSettings.Dispose();
+            if (Default.IsValueCreated)
+            {
+                Default = new Lazy<SettingsService>(() => new SettingsService(), LazyThreadSafetyMode.ExecutionAndPublication);
+            }
         }
     }
 }

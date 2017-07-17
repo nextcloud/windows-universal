@@ -14,15 +14,15 @@ namespace NextcloudApp
 
         private void ShowUpdateMessage()
         {
-            if (SettingsService.Instance.LocalSettings.ShowUpdateMessage)
+            if (SettingsService.Default.Value.LocalSettings.ShowUpdateMessage)
             {
                 UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
             }
             else
             {
-                SettingsService.Instance.LocalSettings.PropertyChanged += (sender, args) =>
+                SettingsService.Default.Value.LocalSettings.PropertyChanged += (sender, args) =>
                 {
-                    if (args.PropertyName.Equals("ShowUpdateMessage") && SettingsService.Instance.LocalSettings.ShowUpdateMessage)
+                    if (args.PropertyName.Equals("ShowUpdateMessage") && SettingsService.Default.Value.LocalSettings.ShowUpdateMessage)
                     {
                         UpdateNotificationService.NotifyUser(UpdateDialogContainer, UpdateDialogTitle, UpdateDialogContent, UpdateDialogButton1, UpdateDialogButton2);
                     }

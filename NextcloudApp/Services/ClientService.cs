@@ -21,22 +21,22 @@ namespace NextcloudApp.Services
                 return _client;
             }
 
-            if (!string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) &&
-                !string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username))
+            if (!string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.ServerAddress) &&
+                !string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.Username))
             {
                 var vault = new PasswordVault();
 
                 IReadOnlyList<PasswordCredential> credentialList = null;
                 try
                 {
-                    credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                    credentialList = vault.FindAllByResource(SettingsService.Default.Value.LocalSettings.ServerAddress);
                 }
                 catch
                 {
                     // ignored
                 }
 
-                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
+                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Default.Value.LocalSettings.Username));
 
                 if (credential == null)
                 {
@@ -47,7 +47,7 @@ namespace NextcloudApp.Services
 
                 try
                 {
-                    var response = await NextcloudClient.NextcloudClient.GetServerStatus(credential.Resource, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+                    var response = await NextcloudClient.NextcloudClient.GetServerStatus(credential.Resource, SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors);
                     if (response == null)
                     {
                         await ShowServerAddressNotFoundMessage(credential.Resource);
@@ -66,21 +66,21 @@ namespace NextcloudApp.Services
                     credential.Password
                 ) {
                     IgnoreServerCertificateErrors =
-                        SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors
+                        SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors
                 };
             }
 
-            SettingsService.Instance.LocalSettings.PropertyChanged += async (sender, args) =>
+            SettingsService.Default.Value.LocalSettings.PropertyChanged += async (sender, args) =>
             {
                 if (_client != null && args.PropertyName == "IgnoreServerCertificateErrors")
                 {
                     _client.IgnoreServerCertificateErrors =
-                        SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors;
+                        SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors;
                 }
 
                 if (
-                    string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
-                    string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
+                    string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.ServerAddress) ||
+                    string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.Username)
                     )
                 {
                     _client = null;
@@ -92,14 +92,14 @@ namespace NextcloudApp.Services
                 IReadOnlyList<PasswordCredential> credentialList = null;
                 try
                 {
-                    credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                    credentialList = vault.FindAllByResource(SettingsService.Default.Value.LocalSettings.ServerAddress);
                 }
                 catch
                 {
                     // ignored
                 }
 
-                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
+                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Default.Value.LocalSettings.Username));
 
                 if (credential == null)
                 {
@@ -111,7 +111,7 @@ namespace NextcloudApp.Services
 
                 try
                 {
-                    var response = await NextcloudClient.NextcloudClient.GetServerStatus(credential.Resource, SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors);
+                    var response = await NextcloudClient.NextcloudClient.GetServerStatus(credential.Resource, SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors);
                     if (response == null)
                     {
                         _client = null;
@@ -132,7 +132,7 @@ namespace NextcloudApp.Services
                     credential.Password
                 ) {
                     IgnoreServerCertificateErrors =
-                            SettingsService.Instance.LocalSettings.IgnoreServerCertificateErrors
+                            SettingsService.Default.Value.LocalSettings.IgnoreServerCertificateErrors
                 };
             };
 
@@ -162,7 +162,7 @@ namespace NextcloudApp.Services
                 PrimaryButtonText = resourceLoader.GetString("OK")
             };
             await dialogService.ShowAsync(dialog);
-            SettingsService.Instance.Reset();
+            SettingsService.Default.Value.Reset();
             navigationService.Navigate(PageToken.Login.ToString(), null);
         }
 
