@@ -22,8 +22,8 @@ namespace NextcloudApp.Services
             }
             var vault = new PasswordVault();
             vault.Add(new PasswordCredential(
-                SettingsService.Instance.LocalSettings.ServerAddress,
-                SettingsService.Instance.LocalSettings.Username,
+                SettingsService.Default.Value.LocalSettings.ServerAddress,
+                SettingsService.Default.Value.LocalSettings.Username,
                 (string)localSettings.Values["Password"]
             ));
             localSettings.Values.Remove("Password");

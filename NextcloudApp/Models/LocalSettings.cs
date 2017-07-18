@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Threading;
+using Newtonsoft.Json;
 using NextcloudApp.Utils;
 using Windows.Storage;
 
@@ -11,8 +13,8 @@ namespace NextcloudApp.Models
     {
         private const string DefaultValueEmptyString = "";
 
-        public static LocalSettings Default { get; } = new LocalSettings();
-
+        public static Lazy<LocalSettings> Default = new Lazy<LocalSettings>(() => new LocalSettings(), LazyThreadSafetyMode.ExecutionAndPublication);
+        
         public LocalSettings()
             : base(ApplicationData.Current.LocalSettings)
         {
@@ -136,6 +138,17 @@ namespace NextcloudApp.Models
             ExpertMode = false;
 
             EnableRaisePropertyChanged = true;
+        }
+
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        public void Dispose()
+        {
+            if (Default.IsValueCreated)
+            {
+                Default = new Lazy<LocalSettings>(() => new LocalSettings(), LazyThreadSafetyMode.ExecutionAndPublication);
+            }
         }
     }
 }

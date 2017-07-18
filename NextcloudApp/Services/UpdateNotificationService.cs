@@ -15,7 +15,7 @@ namespace NextcloudApp.Services
         /// </summary>
         public static void NotifyUser(Grid updateDialogContainer, ContentControl updateDialogTitle, TextBlock updateDialogContent, Button updateDialogButton1, Button updateDialogButton2)
         {
-            SettingsService.Instance.LocalSettings.ShowUpdateMessage = false;
+            SettingsService.Default.Value.LocalSettings.ShowUpdateMessage = false;
 
             var app = Application.Current as App;
             if (app == null)

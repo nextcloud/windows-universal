@@ -34,7 +34,6 @@
             SelectionMode="Single"
             SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
             Margin="48,0,0,0">
-
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal"/>
@@ -71,7 +70,7 @@
                                         VerticalAlignment="Center"
                                         Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
                                     <FontIcon 
-                                        Glyph="{StaticResource NextcloudLogo}" 
+                                        Glyph="{StaticResource NextcloudLogo}"
                                         FontFamily="{StaticResource NextcloudIcons}"
                                         Margin="8,0,8,0"
                                         VerticalAlignment="Center"
@@ -282,6 +281,7 @@
                 </GridView>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
+        
         <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 

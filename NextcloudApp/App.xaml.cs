@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Microsoft.Practices.Unity;
-using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
@@ -31,7 +30,7 @@ namespace NextcloudApp
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : PrismUnityApplication
+    sealed partial class App
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -156,6 +155,14 @@ namespace NextcloudApp
 
         protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
+            SettingsService.Default.Value.Disposed();
+
+            // show a simple loading page without any dependencies, to avoid te system killing our app
+            var frame = new Frame();
+            frame.Navigate(typeof(ShareTarget), null);
+            Window.Current.Content = frame;
+            Window.Current.Activate();
+
             base.OnShareTargetActivated(args);
 
             OnShareTargetActivatedsyncAsync(args);
@@ -175,13 +182,6 @@ namespace NextcloudApp
             // get the shared items and create a token for later access
             var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
             StorageApplicationPermissions.FutureAccessList.Clear();
-            args.ShareOperation.ReportDataRetrieved();
-
-            // show a simple loading page without any dependencies, to avoid te system killing our app
-            var frame = new Frame();
-            frame.Navigate(typeof(ShareTarget), null);
-            Window.Current.Content = frame;
-            Window.Current.Activate();
 
             // launch the app again via protocol link, this will avoid the issue explained above
             var options = new LauncherOptions()
@@ -190,14 +190,21 @@ namespace NextcloudApp
                 DesiredRemainingView = Windows.UI.ViewManagement.ViewSizePreference.UseNone
             };
 
+            var storageFiles = sorageItems.Where(storageItem => storageItem.IsOfType(StorageItemTypes.File));
+
             var inputData = new ValueSet
             {
-                { "FileTokens", (from storageItem in sorageItems where storageItem.IsOfType(StorageItemTypes.File) select StorageApplicationPermissions.FutureAccessList.Add(storageItem)).ToArray() }
+                { "FileTokens", storageFiles.Select(storageFile => StorageApplicationPermissions.FutureAccessList.Add(storageFile)).ToArray() }
             };
             var uri = new Uri("nextcloud:///share");
 
-            await Launcher.LaunchUriAsync(uri, options, inputData);
+            // we processed all files, so we are redy to release them
+            args.ShareOperation.ReportDataRetrieved();
 
+#pragma warning disable 4014
+            Task.Delay(300).ContinueWith(async t => await Launcher.LaunchUriAsync(uri, options, inputData));
+#pragma warning restore 4014
+            
             // we are done, report back
             args.ShareOperation.ReportCompleted();
         }
@@ -324,19 +331,19 @@ namespace NextcloudApp
             var task = base.OnInitializeAsync(args);
             DeviceGestureService.GoBackRequested += DeviceGestureServiceOnGoBackRequested;
             // Just count total app starts
-            SettingsService.Instance.LocalSettings.AppTotalRuns = SettingsService.Instance.LocalSettings.AppTotalRuns + 1;
+            SettingsService.Default.Value.LocalSettings.AppTotalRuns = SettingsService.Default.Value.LocalSettings.AppTotalRuns + 1;
             // Count app starts after last update
             var currentVersion =
                 $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
-            if (currentVersion == SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion)
+            if (currentVersion == SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdateVersion)
             {
-                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate + 1;
+                SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdate = SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdate + 1;
             }
             else
             {
-                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
-                SettingsService.Instance.LocalSettings.AppRunsAfterLastUpdate = 1;
-                SettingsService.Instance.LocalSettings.ShowUpdateMessage = true;
+                SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdateVersion = currentVersion;
+                SettingsService.Default.Value.LocalSettings.AppRunsAfterLastUpdate = 1;
+                SettingsService.Default.Value.LocalSettings.ShowUpdateMessage = true;
             }
             MigrationService.Instance.StartMigration();
             return task;
@@ -361,7 +368,7 @@ namespace NextcloudApp
                     };
                 }
             }
-            if (SettingsService.Instance.LocalSettings.UseWindowsHello)
+            if (SettingsService.Default.Value.LocalSettings.UseWindowsHello)
             {
                 CheckSettingsAndContinue(PageToken.Verification, pageParameters);
             }
@@ -375,8 +382,8 @@ namespace NextcloudApp
         private void CheckSettingsAndContinue(PageToken requestedPage, IPageParameters pageParameters)
         {
             if (
-                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.ServerAddress) ||
-                string.IsNullOrEmpty(SettingsService.Instance.LocalSettings.Username)
+                string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.ServerAddress) ||
+                string.IsNullOrEmpty(SettingsService.Default.Value.LocalSettings.Username)
             )
             {
                 NavigationService.Navigate(PageToken.Login.ToString(), null);
@@ -387,13 +394,13 @@ namespace NextcloudApp
                 IReadOnlyList<PasswordCredential> credentialList = null;
                 try
                 {
-                    credentialList = vault.FindAllByResource(SettingsService.Instance.LocalSettings.ServerAddress);
+                    credentialList = vault.FindAllByResource(SettingsService.Default.Value.LocalSettings.ServerAddress);
                 }
                 catch
                 {
                     // ignored
                 }
-                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Instance.LocalSettings.Username));
+                var credential = credentialList?.FirstOrDefault(item => item.UserName.Equals(SettingsService.Default.Value.LocalSettings.Username));
                 if (credential != null)
                 {
                     credential.RetrievePassword();
