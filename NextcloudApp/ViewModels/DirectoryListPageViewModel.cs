@@ -834,6 +834,7 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
+
             RaisePropertyChanged(nameof(StatusBarText));
         }
 

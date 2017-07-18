@@ -5,6 +5,7 @@ using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Microsoft.Practices.Unity;
+using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
 
@@ -141,14 +142,9 @@ namespace NextcloudApp.Services
 
         private static async Task ShowServerAddressNotFoundMessage(string serverAddress)
         {
-            var app = Application.Current as App;
-            if (app == null)
-            {
-                return;
-            }
-            var navigationService = app.Container.Resolve<INavigationService>();
-            var resourceLoader = app.Container.Resolve<IResourceLoader>();
-            var dialogService = app.Container.Resolve<DialogService>();
+            var navigationService = PrismUnityApplication.Current.Container.Resolve<INavigationService>();
+            var resourceLoader = PrismUnityApplication.Current.Container.Resolve<IResourceLoader>();
+            var dialogService = PrismUnityApplication.Current.Container.Resolve<DialogService>();
 
             var dialog = new ContentDialog
             {

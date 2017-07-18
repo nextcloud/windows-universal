@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Microsoft.Practices.Unity;
-using Prism.Unity.Windows;
 using Prism.Windows.AppModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
@@ -31,7 +30,7 @@ namespace NextcloudApp
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : PrismUnityApplication
+    sealed partial class App
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -96,12 +95,6 @@ namespace NextcloudApp
                     args.Handled = true;
                     return;
                 }
-                // Ignore exceptions comming from multithreading (cast exceptions)
-                if (args.Exception.GetType() == typeof(System.Runtime.InteropServices.COMException) || args.Exception.GetType() == typeof(InvalidCastException))
-                {
-                    args.Handled = true;
-                    return;
-                }
                 if (args.Exception.GetType() == typeof(ResponseError))
                 {
                     args.Handled = true;
@@ -162,8 +155,13 @@ namespace NextcloudApp
 
         protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
         {
-            Window.Current.Content = null;
             SettingsService.Default.Value.Disposed();
+
+            // show a simple loading page without any dependencies, to avoid te system killing our app
+            var frame = new Frame();
+            frame.Navigate(typeof(ShareTarget), null);
+            Window.Current.Content = frame;
+            Window.Current.Activate();
 
             base.OnShareTargetActivated(args);
 
@@ -185,12 +183,6 @@ namespace NextcloudApp
             var sorageItems = await args.ShareOperation.Data.GetStorageItemsAsync();
             StorageApplicationPermissions.FutureAccessList.Clear();
 
-            // show a simple loading page without any dependencies, to avoid te system killing our app
-            var frame = new Frame();
-            frame.Navigate(typeof(ShareTarget), null);
-            Window.Current.Content = frame;
-            Window.Current.Activate();
-
             // launch the app again via protocol link, this will avoid the issue explained above
             var options = new LauncherOptions()
             {
@@ -209,8 +201,10 @@ namespace NextcloudApp
             // we processed all files, so we are redy to release them
             args.ShareOperation.ReportDataRetrieved();
 
-            await Launcher.LaunchUriAsync(uri, options, inputData);
-
+#pragma warning disable 4014
+            Task.Delay(300).ContinueWith(async t => await Launcher.LaunchUriAsync(uri, options, inputData));
+#pragma warning restore 4014
+            
             // we are done, report back
             args.ShareOperation.ReportCompleted();
         }

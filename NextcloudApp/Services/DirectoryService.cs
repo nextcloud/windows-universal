@@ -26,7 +26,7 @@ namespace NextcloudApp.Services
         private bool _continueListing;
         private bool _isSelecting;
         private string _selectionMode;
-        //private CoreDispatcher _dispatcher;
+        private Task<List<ResourceInfo>> _listingTask;
 
         private DirectoryService()
         {
@@ -36,8 +36,6 @@ namespace NextcloudApp.Services
             // Arrange for the first time, so that the collections get filled.
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
-
-            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -218,6 +216,13 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, string viewName = null)
         {
+            // cancel a current running listing
+            if (_listingTask != null)
+            {
+                _listingTask.AsAsyncAction().Cancel();
+                _listingTask = null;
+            }
+
             // clear instantly, so the user will not see invalid listings
             FilesAndFolders.Clear();
             Folders.Clear();
@@ -228,7 +233,7 @@ namespace NextcloudApp.Services
             {
                 return;
             }
-
+            
             _continueListing = true;
 
             if (PathStack.Count == 0)
@@ -252,17 +257,18 @@ namespace NextcloudApp.Services
                 if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
                 {
                     PathStack.Clear();
-                    list = await client.GetSharesView(viewName);
+                    _listingTask = client.GetSharesView(viewName);
                 }
                 else if (viewName == "favorites")
                 {
                     PathStack.Clear();
-                    list = await client.GetFavorites();
+                    _listingTask = client.GetFavorites();
                 }
                 else
                 {
-                    list = await client.List(path);
+                    _listingTask = client.List(path);
                 }
+                list = await _listingTask;
             }
             catch (ResponseError e)
             {
@@ -286,7 +292,8 @@ namespace NextcloudApp.Services
                     }
                     if (RemoveResourceInfos != null)
                     {
-                        var index = RemoveResourceInfos.FindIndex(res => res.Path.Equals(item.Path, StringComparison.Ordinal));
+                        var index = RemoveResourceInfos.FindIndex(
+                            res => res.Path.Equals(item.Path, StringComparison.Ordinal));
                         if (index == -1)
                         {
                             Folders.Add(new FileOrFolder(item));
@@ -586,7 +593,9 @@ namespace NextcloudApp.Services
             var client = await ClientService.GetClient();
 
             if (client == null)
+            {
                 return;
+            }
 
             await client.ToggleFavorite(resourceInfo);
         }
