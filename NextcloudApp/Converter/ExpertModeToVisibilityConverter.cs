@@ -9,7 +9,7 @@ namespace NextcloudApp.Converter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return SettingsService.Instance.LocalSettings.ExpertMode ? Visibility.Visible : Visibility.Collapsed;
+            return SettingsService.Default.Value.LocalSettings.ExpertMode ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

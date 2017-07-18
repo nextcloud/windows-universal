@@ -74,7 +74,11 @@ namespace NextcloudApp.ViewModels
             base.OnNavigatingFrom(e, viewModelState, suspending);
 
             // release the disblay keep active lock
-            _displayRequest.RequestRelease();
+            if (_displayRequest != null)
+            {
+                _displayRequest.RequestRelease();
+                _displayRequest = null;
+            }
 
             if (suspending)
             {
@@ -97,6 +101,11 @@ namespace NextcloudApp.ViewModels
             base.OnNavigatedTo(e, viewModelState);
 
             // keep the display enabled while uploading
+            if (_displayRequest != null)
+            {
+                _displayRequest.RequestRelease();
+                _displayRequest = null;
+            }
             _displayRequest = new DisplayRequest();
             _displayRequest.RequestActive();
 
@@ -231,7 +240,12 @@ namespace NextcloudApp.ViewModels
             // release the disblay keep active lock
             await OnUiThread(() =>
             {
+                if (_displayRequest == null)
+                {
+                    return;
+                }
                 _displayRequest.RequestRelease();
+                _displayRequest = null;
             });
 
             if (ActivationKind == ActivationKind.ShareTarget)

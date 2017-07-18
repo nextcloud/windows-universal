@@ -20,7 +20,7 @@ namespace NextcloudApp.Services
             }
             var statusBar = StatusBar.GetForCurrentView();
             statusBar.BackgroundOpacity = 1;
-            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            var theme = SettingsService.Default.Value.RoamingSettings.Theme;
             switch (theme)
             {
                 case Theme.Dark:
@@ -33,7 +33,7 @@ namespace NextcloudApp.Services
                     break;
             }
 
-            SettingsService.Instance.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
+            SettingsService.Default.Value.RoamingSettings.PropertyChanged += RoamingSettingsOnPropertyChanged;
         }
 
         private void RoamingSettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -44,7 +44,7 @@ namespace NextcloudApp.Services
             }
             var statusBar = StatusBar.GetForCurrentView();
             statusBar.BackgroundOpacity = 1;
-            var theme = SettingsService.Instance.RoamingSettings.Theme;
+            var theme = SettingsService.Default.Value.RoamingSettings.Theme;
             switch (theme)
             {
                 case Theme.Dark:

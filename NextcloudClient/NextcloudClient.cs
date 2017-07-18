@@ -71,7 +71,7 @@ namespace NextcloudClient
         /// </summary>
         private const string OcsServiceCloud = "cloud";
 
-        private readonly PropFind nextcloudPropFind;
+        private readonly PropFind _nextcloudPropFind;
 
         #endregion
 
@@ -148,7 +148,7 @@ namespace NextcloudClient
             xElement = new XElement(nsOc + NextcloudPropNameConstants.Size);
             xElementList.Add(xElement);
             prop.AdditionalProperties = xElementList.ToArray();
-            nextcloudPropFind = propFind;
+            _nextcloudPropFind = propFind;
 
             _url = url;
             _httpBaseProtocolFilter = httpBaseProtocolFilter;
@@ -186,7 +186,7 @@ namespace NextcloudClient
         /// </value>
         public bool IgnoreServerCertificateErrors
         {
-            get { return _httpBaseProtocolFilter.IgnorableServerCertificateErrors.Count > 0; }
+            get => _httpBaseProtocolFilter.IgnorableServerCertificateErrors.Count > 0;
             set {
                 if (value)
                 {
@@ -217,7 +217,7 @@ namespace NextcloudClient
         public async Task<List<ResourceInfo>> List(string path)
         {
             var resources = new List<ResourceInfo>();
-            var result = await _dav.ListAsync(GetDavUri(path, true), nextcloudPropFind);
+            var result = await _dav.ListAsync(GetDavUri(path, true), _nextcloudPropFind);
 
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
@@ -249,7 +249,7 @@ namespace NextcloudClient
             var baseUri = new Uri(_url);
             baseUri = new Uri(baseUri, baseUri.AbsolutePath + (baseUri.AbsolutePath.EndsWith("/") ? "" : "/") + Davpath);
 
-            var result = await _dav.ListAsync(GetDavUri(path, false), nextcloudPropFind);
+            var result = await _dav.ListAsync(GetDavUri(path, false), _nextcloudPropFind);
 
             if (!result.Any())
             {
@@ -280,33 +280,26 @@ namespace NextcloudClient
         {
             var param = new Tuple<string, string>("shared_with_me", "false");
             if (viewname == "sharesIn") param = new Tuple<string, string>("shared_with_me", "true");
-            List<Share> shares = await GetShares(param);
+            var shares = await GetShares(param);
 
-            List<ResourceInfo> sharesList = new List<ResourceInfo>();
+            var sharesList = new List<ResourceInfo>();
 
             foreach (var item in shares)
             {
-                try
+                if (viewname == "sharesLink")
                 {
-                    if (viewname == "sharesLink")
+                    var type = item.GetType().ToString();
+                    if (type != "NextcloudClient.Types.PublicShare")
                     {
-                        var type = item.GetType().ToString();
-                        if (type == "NextcloudClient.Types.PublicShare")
-                        {
-                            ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
-                            sharesList.Add(itemShare);
-                        }
+                        continue;
                     }
-                    else
-                    {
-                        ResourceInfo itemShare = await GetResourceInfoByPath(item.Path);
-                        sharesList.Add(itemShare);
-                    }
-
+                    var itemShare = await GetResourceInfoByPath(item.Path);
+                    sharesList.Add(itemShare);
                 }
-                catch (ResponseError e)
+                else
                 {
-                    throw e;
+                    var itemShare = await GetResourceInfoByPath(item.Path);
+                    sharesList.Add(itemShare);
                 }
             }
 
@@ -323,14 +316,14 @@ namespace NextcloudClient
 
             // See: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html#listing-favorites
             // Also, for Props see: https://docs.nextcloud.com/server/12/developer_manual/client_apis/WebDAV/index.html
-            var content = "<?xml version=\"1.0\"?>"
+            const string content = "<?xml version=\"1.0\"?>"
                 + "<oc:filter-files  xmlns:d=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\" xmlns:nc=\"http://nextcloud.org/ns\">"
-                    + "<d:prop>"
-                        + "<oc:favorite />"
-                    + "</d:prop>"
-                    + "<oc:filter-rules>"
-                        + "<oc:favorite>1</oc:favorite>"
-                    + "</oc:filter-rules>"
+                + "<d:prop>"
+                + "<oc:favorite />"
+                + "</d:prop>"
+                + "<oc:filter-rules>"
+                + "<oc:favorite>1</oc:favorite>"
+                + "</oc:filter-rules>"
                 + "</oc:filter-files>";
 
             var request = new HttpRequestMessage(new HttpMethod("REPORT"), url.ToUri())
@@ -524,18 +517,24 @@ namespace NextcloudClient
         {
             var path = GetParentPath(res);
 
-            var items = await _dav.ListAsync(GetDavUri(path, true), nextcloudPropFind);
-            var item = items.Where(x => x.Name == res.Name).FirstOrDefault();
+            var items = await _dav.ListAsync(GetDavUri(path, true), _nextcloudPropFind);
+            var item = items.FirstOrDefault(x => x.Name == res.Name);
 
             if (item == null)
+            {
                 return false;
+            }
 
             var favString = item.AdditionalProperties[NextcloudPropNameConstants.Favorite];
 
             if (string.IsNullOrEmpty(favString) || string.CompareOrdinal(favString, "0") == 0)
+            {
                 item.AdditionalProperties[NextcloudPropNameConstants.Favorite] = "1";
+            }
             else
+            {
                 item.AdditionalProperties[NextcloudPropNameConstants.Favorite] = "0";
+            }
 
             return await _dav.UpdateItemAsync(item);
         }
@@ -1064,10 +1063,17 @@ namespace NextcloudClient
         /// Gets all shares for the current user when <c>path</c> is not set, otherwise it gets shares for the specific file or
         /// folder
         /// </summary>
-        /// <returns>array of shares or empty array if the operation failed.</returns>
-        /// <param name="path">(optional) path to the share to be checked.</param>
+        /// <param name="tParam">The t parameter.</param>
         /// <param name="reshares">(optional) returns not only the shares from	the current user but all shares from the given file.</param>
         /// <param name="subfiles">(optional) returns all shares within	a folder, given that path defines a folder.</param>
+        /// <returns>
+        /// array of shares or empty array if the operation failed.
+        /// </returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// reshares - null
+        /// or
+        /// subfiles - null
+        /// </exception>
         public async Task<List<Share>> GetShares(Tuple<string, string> tParam, OcsBoolParam reshares = OcsBoolParam.None,
             OcsBoolParam subfiles = OcsBoolParam.None)
         {

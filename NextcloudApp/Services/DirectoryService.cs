@@ -26,7 +26,7 @@ namespace NextcloudApp.Services
         private bool _continueListing;
         private bool _isSelecting;
         private string _selectionMode;
-        //private CoreDispatcher _dispatcher;
+        private Task<List<ResourceInfo>> _listingTask;
 
         private DirectoryService()
         {
@@ -36,8 +36,6 @@ namespace NextcloudApp.Services
             // Arrange for the first time, so that the collections get filled.
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
-
-            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -62,7 +60,7 @@ namespace NextcloudApp.Services
 
         private void SortList()
         {
-            switch (SettingsService.Instance.LocalSettings.GroupMode)
+            switch (SettingsService.Default.Value.LocalSettings.GroupMode)
             {
                 case GroupMode.GroupByNameAscending:
                     GroupByNameAscending();
@@ -104,7 +102,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
         }
 
         public void GroupByNameDescending()
@@ -114,7 +112,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.Name.First().ToString().ToUpper());
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByNameDescending;
         }
 
         public void GroupByDateAscending()
@@ -124,7 +122,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Asc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByDateAscending;
         }
 
         public void GroupByDateDescending()
@@ -134,7 +132,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new DateSorter(SortSequence.Desc), x => x.LastModified.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern));
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByDateDescending;
         }
 
         public void GroupBySizeAscending()
@@ -144,7 +142,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Asc), GetSizeHeader);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupBySizeAscending;
         }
 
         public void GroupBySizeDescending()
@@ -154,7 +152,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new SizeSorter(SortSequence.Desc), GetSizeHeader);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupBySizeDescending;
         }
 
         public void GroupByTypeAscending()
@@ -164,7 +162,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.ContentType);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeAscending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByTypeAscending;
         }
 
         public void GroupByTypeDescending()
@@ -174,7 +172,7 @@ namespace NextcloudApp.Services
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Desc), x => x.ContentType);
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
-            SettingsService.Instance.LocalSettings.GroupMode = GroupMode.GroupByTypeDescending;
+            SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByTypeDescending;
         }
 
         public void ToggleSelectionMode()
@@ -218,6 +216,13 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, string viewName = null)
         {
+            // cancel a current running listing
+            if (_listingTask != null)
+            {
+                _listingTask.AsAsyncAction().Cancel();
+                _listingTask = null;
+            }
+
             // clear instantly, so the user will not see invalid listings
             FilesAndFolders.Clear();
             Folders.Clear();
@@ -228,7 +233,7 @@ namespace NextcloudApp.Services
             {
                 return;
             }
-
+            
             _continueListing = true;
 
             if (PathStack.Count == 0)
@@ -252,17 +257,18 @@ namespace NextcloudApp.Services
                 if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
                 {
                     PathStack.Clear();
-                    list = await client.GetSharesView(viewName);
+                    _listingTask = client.GetSharesView(viewName);
                 }
                 else if (viewName == "favorites")
                 {
                     PathStack.Clear();
-                    list = await client.GetFavorites();
+                    _listingTask = client.GetFavorites();
                 }
                 else
                 {
-                    list = await client.List(path);
+                    _listingTask = client.List(path);
                 }
+                list = await _listingTask;
             }
             catch (ResponseError e)
             {
@@ -286,7 +292,8 @@ namespace NextcloudApp.Services
                     }
                     if (RemoveResourceInfos != null)
                     {
-                        var index = RemoveResourceInfos.FindIndex(res => res.Path.Equals(item.Path, StringComparison.Ordinal));
+                        var index = RemoveResourceInfos.FindIndex(
+                            res => res.Path.Equals(item.Path, StringComparison.Ordinal));
                         if (index == -1)
                         {
                             Folders.Add(new FileOrFolder(item));
@@ -299,7 +306,7 @@ namespace NextcloudApp.Services
                 }
             }
 
-            switch (SettingsService.Instance.LocalSettings.PreviewImageDownloadMode)
+            switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
             {
                 case PreviewImageDownloadMode.Always:
                     DownloadPreviewImages();
@@ -586,7 +593,9 @@ namespace NextcloudApp.Services
             var client = await ClientService.GetClient();
 
             if (client == null)
+            {
                 return;
+            }
 
             await client.ToggleFavorite(resourceInfo);
         }

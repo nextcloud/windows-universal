@@ -9,14 +9,11 @@ using NextcloudClient.Types;
 using Prism.Commands;
 using Prism.Windows.AppModel;
 using Prism.Windows.Navigation;
-using System.Threading.Tasks;
-using System;
-using Windows.UI.Core;
 using Prism.Unity.Windows;
 
 namespace NextcloudApp.ViewModels
 {
-    public class ShareTargetPageViewModel : ViewModel
+    public sealed class ShareTargetPageViewModel : ViewModel
     {
         private LocalSettings _settngs;
         private DirectoryService _directoryService;
@@ -26,25 +23,25 @@ namespace NextcloudApp.ViewModels
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
         private bool _isNavigatingBack;
-        private CoreDispatcher _dispatcher;
+        //private readonly CoreDispatcher _dispatcher;
 
-        public ICommand GroupByNameAscendingCommand { get; private set; }
-        public ICommand GroupByNameDescendingCommand { get; private set; }
-        public ICommand GroupByDateAscendingCommand { get; private set; }
-        public ICommand GroupByDateDescendingCommand { get; private set; }
-        public ICommand GroupBySizeAscendingCommand { get; private set; }
-        public ICommand GroupBySizeDescendingCommand { get; private set; }
-        public ICommand RefreshCommand { get; private set; }
-        public ICommand CreateDirectoryCommand { get; private set; }
-        public object CancelFolderSelectionCommand { get; private set; }
-        public object StartUploadCommand { get; private set; }
+        public ICommand GroupByNameAscendingCommand { get; }
+        public ICommand GroupByNameDescendingCommand { get; }
+        public ICommand GroupByDateAscendingCommand { get; }
+        public ICommand GroupByDateDescendingCommand { get; }
+        public ICommand GroupBySizeAscendingCommand { get; }
+        public ICommand GroupBySizeDescendingCommand { get; }
+        public ICommand RefreshCommand { get; }
+        public ICommand CreateDirectoryCommand { get; }
+        public object CancelFolderSelectionCommand { get; }
+        public object StartUploadCommand { get; }
 
         public ShareTargetPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
             _resourceLoader = resourceLoader;
             _dialogService = dialogService;
-            Settings = SettingsService.Instance.LocalSettings;
+            Settings = SettingsService.Default.Value.LocalSettings;
             GroupByNameAscendingCommand = new DelegateCommand(() =>
             {
                 Directory.GroupByNameAscending();
@@ -81,7 +78,7 @@ namespace NextcloudApp.ViewModels
             CreateDirectoryCommand = new DelegateCommand(CreateDirectory);
             StartUploadCommand = new DelegateCommand(StartUpload);
             CancelFolderSelectionCommand = new DelegateCommand(CancelFolderSelection);
-            _dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
+            //_dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -96,9 +93,11 @@ namespace NextcloudApp.ViewModels
             }
             ActivationKind = parameters.ActivationKind;
             FileTokens = fileTokens;
+
             Directory = DirectoryService.Instance;
-            StartDirectoryListing();
+            _selectedPathIndex = Directory.PathStack.Count - 1;
             _isNavigatingBack = false;
+            StartDirectoryListing();
         }
 
         public ActivationKind ActivationKind { get; private set; }
@@ -197,25 +196,31 @@ namespace NextcloudApp.ViewModels
 
         public DirectoryService Directory
         {
-            get { return _directoryService; }
-            private set { SetProperty(ref _directoryService, value); }
+            get => _directoryService;
+            private set => SetProperty(ref _directoryService, value);
         }
 
         public LocalSettings Settings
         {
-            get { return _settngs; }
-            private set { SetProperty(ref _settngs, value); }
+            get => _settngs;
+            private set => SetProperty(ref _settngs, value);
         }
 
         public ResourceInfo SelectedFileOrFolder
         {
-            get { return _selectedFileOrFolder; }
+            get => _selectedFileOrFolder;
             set
             {
+                if (Directory != null && Directory.IsSelecting)
+                {
+                    return;
+                }
+
                 if (_isNavigatingBack)
                 {
                     return;
                 }
+
                 try
                 {
                     if (!SetProperty(ref _selectedFileOrFolder, value))
@@ -251,12 +256,20 @@ namespace NextcloudApp.ViewModels
                     });
                     SelectedPathIndex = Directory.PathStack.Count - 1;
                 }
+                else
+                {
+                    var parameters = new FileInfoPageParameters
+                    {
+                        ResourceInfo = value
+                    };
+                    _navigationService.Navigate(PageToken.FileInfo.ToString(), parameters.Serialize());
+                }
             }
         }
 
         public int SelectedPathIndex
         {
-            get { return _selectedPathIndex; }
+            get => _selectedPathIndex;
             set
             {
                 try
@@ -293,7 +306,6 @@ namespace NextcloudApp.ViewModels
             await Directory.StartDirectoryListing();
 
             HideProgressIndicator();
-
             SelectedFileOrFolder = null;
         }
 
@@ -306,9 +318,10 @@ namespace NextcloudApp.ViewModels
         {
             SelectedPathIndex--;
         }
-        private async Task OnUiThread(Action action)
-        {
-            await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
-        }
+
+        //private async Task OnUiThread(Action action)
+        //{
+        //    await _dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => action());
+        //}
     }
 }

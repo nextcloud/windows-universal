@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Threading;
+using Newtonsoft.Json;
 using NextcloudApp.Utils;
 using Windows.Storage;
 
@@ -9,7 +11,7 @@ namespace NextcloudApp.Models
     /// </summary>
     public class RoamingSettings : ObservableSettings
     {
-        public static RoamingSettings Default { get; } = new RoamingSettings();
+        public static Lazy<RoamingSettings> Default = new Lazy<RoamingSettings>(() => new RoamingSettings(), LazyThreadSafetyMode.ExecutionAndPublication);
 
         public RoamingSettings()
             : base(ApplicationData.Current.RoamingSettings)
@@ -42,6 +44,17 @@ namespace NextcloudApp.Models
             Theme = Theme.System;
 
             EnableRaisePropertyChanged = true;
+        }
+
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        public void Dispose()
+        {
+            if (Default.IsValueCreated)
+            {
+                Default = new Lazy<RoamingSettings>(() => new RoamingSettings(), LazyThreadSafetyMode.ExecutionAndPublication);
+            }
         }
     }
 }
