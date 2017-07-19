@@ -306,7 +306,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Sind Sie sicher. dass Sie den Ordner {0} löschen möchten?</value>
+    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -681,5 +681,11 @@ Bitte später noch einmal versuchen.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Diese App zurücksetzen</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Delete files</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the selected files?</value>
   </data>
 </root>
