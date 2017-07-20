@@ -683,9 +683,9 @@ Prøv igjen senere.</value>
     <value>Nullstill dette programmet</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Slett filer</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Er du sikker på at du vil slette de valgte filene?</value>
   </data>
 </root>

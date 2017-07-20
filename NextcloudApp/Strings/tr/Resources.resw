@@ -683,9 +683,9 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Bu uygulamayı sıfırla</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Dosyaları Sil</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Seçilmiş dosyaları silmek istediğinize emin misiniz?</value>
   </data>
 </root>

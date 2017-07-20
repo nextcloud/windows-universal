@@ -682,9 +682,9 @@ Por favor tente mais tarde.</value>
     <value>Redefinir este aplicativo</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Excluir arquivos</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Quer realmente excluir os arquivos selecionados?</value>
   </data>
 </root>
