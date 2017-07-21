@@ -73,6 +73,8 @@ namespace NextcloudClient
 
         private readonly PropFind _nextcloudPropFind;
 
+        private readonly Version HttpVersion = new Version(2, 0);
+
         #endregion
 
         #region CONSTRUCTORS
@@ -167,7 +169,7 @@ namespace NextcloudClient
                     ));
             _client.DefaultRequestHeaders["Authorization"] = "Basic " + encoded;
 
-            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password))
+            _dav = new WebDavSession(_url, new System.Net.NetworkCredential(_httpBaseProtocolFilter.ServerCredential.UserName, _httpBaseProtocolFilter.ServerCredential.Password), HttpVersion)
             {
                 Timeout = Timeout.InfiniteTimeSpan
             };
