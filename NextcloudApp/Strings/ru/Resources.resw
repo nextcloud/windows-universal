@@ -683,4 +683,10 @@
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Сбросить настройки приложения</value>
   </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Удалить файлы</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Действительно удалить выбранные файлы?</value>
+  </data>
 </root>

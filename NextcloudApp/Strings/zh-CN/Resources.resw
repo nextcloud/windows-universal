@@ -588,16 +588,16 @@
     <value>同步此文件夹</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>暗色主题</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>亮色主题</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Use the system settings</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>选择一个模式</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>您分享的文件</value>
@@ -671,15 +671,21 @@
     <value>Windows color settings</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>全部选择</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>取消所有</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Reset this app</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>删除文件</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the selected files?</value>
   </data>
 </root>

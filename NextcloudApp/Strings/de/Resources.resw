@@ -682,4 +682,10 @@ Bitte später noch einmal versuchen.</value>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Diese App zurücksetzen</value>
   </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value> Dateien löschen </value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Bist Du sicher, dass Du die ausgewählten Dateien löschen möchtest?</value>
+  </data>
 </root>

@@ -681,4 +681,10 @@
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Reiniciar esta aplicación</value>
   </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Borrar archivos</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>¿Estas seguro que deseas borrar los archivos seleccionados?</value>
+  </data>
 </root>

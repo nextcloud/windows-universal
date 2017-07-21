@@ -681,4 +681,10 @@ Por favor tente mais tarde.</value>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Redefinir este aplicativo</value>
   </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Excluir arquivos</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Quer realmente excluir os arquivos selecionados?</value>
+  </data>
 </root>

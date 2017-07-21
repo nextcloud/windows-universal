@@ -253,7 +253,7 @@
     <value>Využito {0} z {1}</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Resetovat tuto aplikaci</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Zkusit znovu</value>
@@ -415,25 +415,22 @@
     <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Přesun souborů a adresářů
+• Přejmenovávání souborů a adresářů
+• Ruční synchronizace adresářů
+• Stažení adresářů jako ZIP soubor
+• Vícenásobný výběr souborů a adresářů
+• Označování oblíbených položek v aplikaci
+• Připínání souborů a adresářů na startovací obrazovku
+• Použití Windows Hello k přihlášení při spuštění aplikace
+• Pokročilý mód zobrazující rozšířené informace v aplikaci
+• Umožnění použití SSL certifikátů s vlastním podpisem
+• Zobrazení velikosti adresáře v seznamu
+• Sdílení pomocí aplikace
+• Témata (tmavé/světlé/systémové)
+• Použití klíčenky k uložení uživatelských pověření
+• Bezpečnostní vylepšení a opravy chyb
+• Nová a stabilnější WebDAV knihovna</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Připnout na start</value>
@@ -445,7 +442,7 @@
     <value>Připojit</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorovat neplatné certifikáty s vlastním podpisem</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Režim pro experty</value>
@@ -651,7 +648,7 @@ Prosím zkuste to znovu později.</value>
     <value>Není zadána žádná URL adresa serveru. Zadejte prosím URL adresu vaší instance Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Zachovat</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
     <value>This solution can only be applied, if files exist both remotely and locally</value>
@@ -669,15 +666,21 @@ Prosím zkuste to znovu později.</value>
     <value>Nastavení barev systému Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Zatrhnout vše</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Zrušit zatržení</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Resetovat tuto aplikaci</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Smazat soubory</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Skutečně chcete smazat vybrané soubory?</value>
   </data>
 </root>

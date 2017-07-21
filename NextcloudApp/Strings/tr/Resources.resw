@@ -682,4 +682,10 @@ Lütfen bir süre sonra yeniden deneyin.</value>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Bu uygulamayı sıfırla</value>
   </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Dosyaları Sil</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Seçilmiş dosyaları silmek istediğinize emin misiniz?</value>
+  </data>
 </root>
