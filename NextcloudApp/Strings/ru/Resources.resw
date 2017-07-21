@@ -684,9 +684,9 @@
     <value>Сбросить настройки приложения</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Удалить файлы</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Действительно удалить выбранные файлы?</value>
   </data>
 </root>

@@ -682,9 +682,9 @@
     <value>Reiniciar esta aplicación</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Borrar archivos</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>¿Estas seguro que deseas borrar los archivos seleccionados?</value>
   </data>
 </root>
