@@ -421,16 +421,19 @@
 • Stažení adresářů jako ZIP soubor
 • Vícenásobný výběr souborů a adresářů
 • Označování oblíbených položek v aplikaci
-• Připínání souborů a adresářů na startovací obrazovku
+• Zobrazení velikosti adresářů v seznamu
+• Zobrazení počtu vybraných/všech souborů ve stavovém řádku
+• Řazení dle typu souboru
+• Nový vzhled oblíbených/sdílených položek
+• Připnutí souborů a adresářů na startovací obrazovku
 • Použití Windows Hello k přihlášení při spuštění aplikace
 • Pokročilý mód zobrazující rozšířené informace v aplikaci
 • Umožnění použití SSL certifikátů s vlastním podpisem
-• Zobrazení velikosti adresáře v seznamu
 • Sdílení pomocí aplikace
 • Témata (tmavé/světlé/systémové)
 • Použití klíčenky k uložení uživatelských pověření
-• Bezpečnostní vylepšení a opravy chyb
-• Nová a stabilnější WebDAV knihovna</value>
+• Nová a stabilnější WebDAV knihovna
+• Bezpečnostní vylepšení a opravy chyb</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Připnout na start</value>
@@ -651,10 +654,10 @@ Prosím zkuste to znovu později.</value>
     <value>Zachovat</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Toto řešení může být aplikováno pouze pokud soubor existuje zároveň v místním i vzdáleném úložišti</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Pozor</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>Jak funguje expertní režim?</value>
@@ -672,7 +675,7 @@ Prosím zkuste to znovu později.</value>
     <value>Zrušit zatržení</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Skutečně chcete tuto aplikaci resetovat? Vaše nastavení synchronizace bude smazáno.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Resetovat tuto aplikaci</value>

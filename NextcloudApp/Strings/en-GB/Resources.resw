@@ -686,6 +686,6 @@ Please try again later.</value>
     <value>Delete files</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Are you sure you want to delete the selected files?</value>
   </data>
 </root>

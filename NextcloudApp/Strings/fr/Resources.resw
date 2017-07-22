@@ -686,6 +686,6 @@ Veuillez réessayer plus tard.</value>
     <value>Effacer les fichiers</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Êtes-vous sûr de vouloir supprimer les fichiers sélectionnés ?</value>
   </data>
 </root>
