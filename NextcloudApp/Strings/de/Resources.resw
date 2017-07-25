@@ -180,7 +180,7 @@
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>In der Anwendung ist ein Problem aufgetreten. Nicht gespeicherte Informationen gehen dabei leider verloren. Wir entschuldigen uns für die Unannehmlichkeiten.
 
-Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
+Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbericht übermitteln? Dies hilft das Problem schneller zu beseitigen.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
@@ -240,7 +240,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nicht berechtigt</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melde Dich erneut an.</value>
+    <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -300,13 +300,13 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Datei löschen</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du die Datei {0} löschen möchtest?</value>
+    <value>Sind Sie sicher, dass Sie die Datei {0} löschen möchten?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ordner löschen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du den Ordner {0} löschen möchtest?</value>
+    <value>Sind Sie sicher, dass Sie den Ordner {0} löschen möchten?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} von {1} hochgeladen</value>
@@ -372,7 +372,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Der Server unter {0} ist nicht erreichbar.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Herunterladen als ZIP Datei</value>
+    <value>Herunterladen als ZIP-Datei</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
     <value>{0} heruntergeladen</value>
@@ -405,7 +405,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nexcloud für Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Die App wurde auf Version {0} aktualisiert</value>
+    <value>Die App wurde auf Version {0} aktualisiert </value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Neue Features und Verbesserungen in dieser Version:</value>
@@ -479,7 +479,7 @@ Möchtest Du die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Die Zertifizierungsstelle ist ungültig oder nicht korrekt. Trotzdem verbinden?
 
-Sei bitte vorsichtig, Du wirst nicht vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
+Sei bitte vorsichtig, Sie sind nicht vor Man-in-the-Middle (mitm) Angriffen geschützt!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Achtung!</value>
@@ -503,26 +503,26 @@ Sei bitte vorsichtig, Du wirst nicht vor Man-in-the-Middle (mitm) Angriffen gesc
     <value>Synchronisation wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Die Synchronisation wird im Hintergrund ausgeführt. Du wirst benachrichtigt wenn sie beendet ist.</value>
+    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie werden benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
 Bitte später noch einmal versuchen.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugst Du?</value>
+    <value>Datei wurde sowohl lokal als auch auf dem Server verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>Datei wurde lokal und auf dem Server erstellt. Welche ist die richtige?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugst Du?</value>
+    <value>Die Datei wurde lokal gelöscht, jedoch auf dem Server verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugst Du?</value>
+    <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Synchronisation von Ordner {0} führte zu {1} Änderungen und {2} Fehlern oder Konflikten.</value>
@@ -549,7 +549,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Nextcloud Pfad</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Wähle den Ordner, in den Du die Dateien hochladen möchten.</value>
+    <value>Wählen Sie den Ordner, in den Sie die Dateien hochladen möchten.</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Ordner</value>
@@ -573,7 +573,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisation stoppen</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronisierungsstatus</value>
+    <value>Synchronisations-Status</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
     <value>Jetzt synchronisieren</value>
@@ -677,7 +677,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Auswahl aufheben</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du die App zurücksetzen möchtest? Dadurch werden alle Anwendungs- und alle Synchronisierungseinstellungen zurückgesetzt.</value>
+    <value>Sind Sie sicher, dass Sie die App zurücksetzen möchten? Dadurch werden alle Anwendungs- und alle Synchronisierungseinstellungen zurückgesetzt.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Diese App zurücksetzen</value>
@@ -686,6 +686,6 @@ Bitte später noch einmal versuchen.</value>
     <value> Dateien löschen </value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Bist Du sicher, dass Du die ausgewählten Dateien löschen möchtest?</value>
+    <value>Sind Sie sicher, dass Sie die ausgewählten Dateien löschen möchten?</value>
   </data>
 </root>
