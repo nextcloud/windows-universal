@@ -374,7 +374,11 @@ namespace NextcloudApp
             }
             else
             {
-                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, pageParameters);
+                var fileInfoPageParameters = new FileInfoPageParameters
+                {
+                    ResourceInfo = pageParameters?.ResourceInfo
+                };
+                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, fileInfoPageParameters);
             }
             return Task.FromResult(true);
         }

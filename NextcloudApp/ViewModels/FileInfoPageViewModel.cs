@@ -39,7 +39,6 @@ namespace NextcloudApp.ViewModels
         public ICommand MoveResourceCommand { get; }
         public ICommand PinToStartCommand { get; }
 
-
         public FileInfoPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
             _navigationService = navigationService;
@@ -334,19 +333,13 @@ namespace NextcloudApp.ViewModels
 
         private void PinToStart(object parameter)
         {
-            if(!(parameter is ResourceInfo)) return;
-            var resourceInfo = (ResourceInfo) parameter;
-            _tileService.CreatePinnedObject(resourceInfo);
+            if(ResourceInfo == null) return;
+            _tileService.CreatePinnedObject(ResourceInfo);
         }
 
         private bool CanPinToStart(object parameter)
         {
-            if (!(parameter is ResourceInfo))
-            {
-                return false;
-            }
-            var resourceInfo = (ResourceInfo) parameter;
-            return _tileService.IsTilePinned(resourceInfo);
+            return ResourceInfo != null && _tileService.IsTilePinned(ResourceInfo);
         }
     }
 }
