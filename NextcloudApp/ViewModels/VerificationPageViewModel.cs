@@ -1,41 +1,42 @@
-﻿using NextcloudApp.Services;
-using Prism.Windows.AppModel;
-using Prism.Windows.Navigation;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NextcloudApp.Models;
+using NextcloudApp.Services;
+using Prism.Unity.Windows;
+using Prism.Windows.Navigation;
 
 namespace NextcloudApp.ViewModels
 {
     public class VerificationPageViewModel : ViewModel
     {
         private readonly INavigationService _navigationSerive;
-        private readonly IResourceLoader _resourceLoader;
-        private readonly DialogService _dialogService;
-        private string nextPage;
+        private string _nextPage;
+        private string _nextPageParameters;
 
-        public VerificationPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
+        public VerificationPageViewModel(INavigationService navigationService)
         {
             _navigationSerive = navigationService;
-            _resourceLoader = resourceLoader;
-            _dialogService = dialogService;
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
 
-            if (PinStartPageParameters.Deserialize(e.Parameter) is PinStartPageParameters pageParameters)
+            var pinStartPageParameters = PinStartPageParameters.Deserialize(e.Parameter);
+            if (pinStartPageParameters is PinStartPageParameters)
             {
-                this.nextPage = pageParameters.PageTarget.ToString();
+                _nextPage = pinStartPageParameters.PageTarget.ToString();
+                _nextPageParameters = new FileInfoPageParameters
+                {
+                    ResourceInfo = pinStartPageParameters.ResourceInfo
+                }.Serialize();
             }
             else if (e.Parameter is string)
             {
-                this.nextPage = e.Parameter as string;
+                _nextPage = (string) e.Parameter;
             }
             else
             {
-                this.nextPage = PageToken.DirectoryList.ToString();
+                _nextPage = PageToken.DirectoryList.ToString();
             }
         }
 
@@ -48,20 +49,26 @@ namespace NextcloudApp.ViewModels
             // For now, we do the verification in a loop to "jump over" failed first verification.
             var verificationResult = false;
 
-            for (int i = 0; i < 2; i++)
+            for (var i = 0; i < 2; i++)
             {
                 verificationResult = await VerificationService.RequestUserConsent();
 
                 if (verificationResult)
                     break;
-            }           
+            }
 
             if (!verificationResult)
-                App.Current.Exit();
-            else if (!string.IsNullOrEmpty(this.nextPage))
-                _navigationSerive.Navigate(this.nextPage, null);
+            {
+                PrismUnityApplication.Current.Exit();
+            }
+            else if (!string.IsNullOrEmpty(_nextPage))
+            {
+                _navigationSerive.Navigate(_nextPage, _nextPageParameters);
+            }
             else
-                App.Current.Exit();
+            {
+                PrismUnityApplication.Current.Exit();
+            }
         }
     }
 }

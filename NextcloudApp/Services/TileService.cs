@@ -43,7 +43,7 @@ namespace NextcloudApp.Services
         /// </returns>
         public bool IsTilePinned(ResourceInfo resourceInfo)
         {
-            var id = resourceInfo.Path.ToBase64();
+            var id = (resourceInfo.Path + "/" + resourceInfo.Name).ToBase64();
             return IsTilePinned(id);
         }
 
@@ -54,16 +54,14 @@ namespace NextcloudApp.Services
         public async void CreatePinnedObject(ResourceInfo resourceInfo)
         {
             var id = (resourceInfo.Path + "/" + resourceInfo.Name).ToBase64();
-            if (!IsTilePinned(id))
-            {
-                var arguments = resourceInfo.Serialize();
-                var displayName = resourceInfo.Name;
+            if (IsTilePinned(id)) return;
+            var arguments = resourceInfo.Serialize();
+            var displayName = resourceInfo.Name;
 
-                var tile = new SecondaryTile(id, displayName, arguments, new Uri("ms-appx:///Assets/Square150x150Logo.png"), TileSize.Default);
-                tile.VisualElements.ShowNameOnSquare150x150Logo = true;
+            var tile = new SecondaryTile(id, displayName, arguments, new Uri("ms-appx:///Assets/Square150x150Logo.png"), TileSize.Default);
+            tile.VisualElements.ShowNameOnSquare150x150Logo = true;
 
-                await tile.RequestCreateAsync();
-            }
+            await tile.RequestCreateAsync();
         }
 
         /// <summary>
@@ -73,7 +71,7 @@ namespace NextcloudApp.Services
         /// <returns></returns>
         public async Task RemovePinnedObject(ResourceInfo resourceInfo)
         {
-            var id = resourceInfo.Path.ToBase64();
+            var id = (resourceInfo.Path + "/" + resourceInfo.Name).ToBase64();
             if (IsTilePinned(id))
             {
                 var tile = (await GetAllPinnedTiles()).FirstOrDefault(t => t.TileId == id);

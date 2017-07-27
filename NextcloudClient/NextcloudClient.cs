@@ -1924,7 +1924,7 @@ namespace NextcloudClient
         }
 
 #endregion
-
+    
 #region OCS Response parsing
 
         /// <summary>
