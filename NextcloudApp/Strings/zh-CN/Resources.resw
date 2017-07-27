@@ -207,7 +207,7 @@
     <value>文件下载中…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>下载预览图片</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@
     <value>名称</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>永不</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>新建文件夹</value>
@@ -255,7 +255,7 @@
     <value>已使用{0} (总计{1})</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>重置此应用</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>重试</value>
@@ -288,7 +288,7 @@
     <value>版本 {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>只有在使用Wi-Fi时</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>是</value>
@@ -417,25 +417,25 @@
     <value>更新</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>移动文件和文件夹
+重命名文件和文件夹
+手动同步
+以ZIP格式打包下载文件夹
+选择多文件和文件夹
+项目可以在应用内标记为喜欢
+文件夹大小显示在文件夹列表中
+文件夹列表的状态条中显示被选文件数/总文件数
+按类型排序
+为喜欢/共享文件建立新视图
+在起始页中显示文件和文件夹
+应用启动时使用Hello窗口进行验证
+专家模式显示应用内的高级信息
+允许自签名的数字证书
+通过应用分享文件
+主题（黑色/发亮/系统)
+私用密码保险箱保存用户密码
+更稳定的WebDAV库
+安全更新和系统补丁</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin 启动</value>
@@ -447,7 +447,7 @@
     <value>连接</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>忽略无效的自签名的SSL证书</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>专家模式</value>
@@ -497,7 +497,7 @@
     <value>当心冲突！</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>远程和本地文件夹都不为空，将会导致文件冲突，系统将无法判断到底哪个文件是正确的。</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>已开始同步</value>
@@ -594,7 +594,7 @@
     <value>亮色主题</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>使用系统设置</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>选择一个模式</value>
@@ -653,22 +653,22 @@
     <value>未注明服务器链接地址(URL)。请输入您Nextcloud的链接地址(URL)</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>保持原状</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>仅在文件同时存在于远程和本地时采用本方案</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>注意!</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>专家模式是如何工作的？</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>这是什么意思呢？</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>窗口颜色设置</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
     <value>全部选择</value>
@@ -677,10 +677,16 @@
     <value>取消所有</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>确实要重置本应用吗？本操作将重置所有应用设置以及同步设置。</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>重置此应用</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>删除文件</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>您确定要删除被选文件?</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>删除文件</value>
