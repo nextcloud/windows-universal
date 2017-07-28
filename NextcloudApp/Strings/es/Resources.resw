@@ -682,9 +682,9 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Resetear esta app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Eliminar archivos</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>¿Estás seguro de que quieres eliminar los archivos seleccionados?</value>
   </data>
 </root>
