@@ -688,10 +688,4 @@
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>您确定要删除被选文件?</value>
   </data>
-  <data name="DeleteFiles" xml:space="preserve">
-    <value>删除文件</value>
-  </data>
-  <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
-  </data>
 </root>
