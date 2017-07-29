@@ -506,8 +506,8 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Shërbimi përkohësisht i padisponueshëm (zakonisht për shkak të punës së mirëmbajtjes afatshkurtër)
+Ju lutem provoni përsëri më vonë.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>File changed locally and remotely. Which do you prefer?</value>
@@ -591,28 +591,28 @@ Please try again later.</value>
     <value>E errët</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Dritë</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Përdor konfigurimet e sistemit</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Zgjidh një mënyrë</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Ndarë me të tjerët</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Favoritet</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Ndarë me mua</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Shpërndarë me anë të lidhjes</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Përgatitu për shpërndarje</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Krijoni dosje</value>
@@ -646,7 +646,7 @@ Please try again later.</value>
     <value>Mbishkrim</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Përjashtim i Papritur: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
@@ -662,7 +662,7 @@ Please try again later.</value>
     <value>Vëmendje</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Si funksionon modaliteti i ekspertit?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
     <value>Cili është kuptimi i kësaj?</value>
@@ -671,7 +671,7 @@ Please try again later.</value>
     <value>Windows color settings</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Kontrollo të gjitha</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
     <value>Uncheck all</value>
@@ -683,7 +683,7 @@ Please try again later.</value>
     <value>Reset this app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Fshi skedarët</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the selected files?</value>
