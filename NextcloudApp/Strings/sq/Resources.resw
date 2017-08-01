@@ -207,7 +207,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Duke shkarkuar dosjen...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Parapamja e imazhit te shkarkuar</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -417,25 +417,25 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Përditësim</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Lëviz skedarët dhe dosjet
+• Riemërto skedarët dhe dosjet
+• Sinkronizim manual i dosjeve
+• Shkarko direktoritë si skedarë ZIP
+• Përzgjidh skedarë dhe dosje të shumëfishta
+• Artikujt mund të shënohen si të preferuar nga brenda aplikacionit
+• Madhësia e dosjeve shfaqet në direktorinë e listave
+• Shiriti i gjendjes në listën e dosjeve tregon numrin e skedarëve të zgjedhur/të përgjithshme
+• Renditja për llojin e të dhënave
+• Shikime të reja për preferencat/ndarjet
+• Kryeso skedarët dhe dosjet në ekranin e parë
+• Përdorni Windows Përshëndetje për të vërtetuar fillimin e aplikacionit
+• Modaliteti ekspert që tregon informacione të avancuara në aplikacion
+• Lejo çertifikatat SSL të vetë nënshkruara
+• Nda skedarët me aplikacionin
+• Theming (errësirë/dritë/sistem)
+• Përdorni PasswordVault për të ruajtur kredencialet e përdoruesit
+• Biblioteka WebDAV e re dhe më e qëndrueshme
+• Përmirësimet e sigurisë dhe rregullimet e gabimeve</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin për të filluar</value>
@@ -447,10 +447,10 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Lidh</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Injoro çertifikatat e pavlefshme të vetë-firmosura SSL</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Moda ekspert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Statusi i sinkronizimit</value>
@@ -468,24 +468,24 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Sinkronizim</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Prefero skedar lokal</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Pastro historinë e sinkronizimit</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Prefero skedar në distancë</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Autoriteti i certifikatës është i pavlefshëm ose i pasaktë. Lidhu gjithsesi?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Jini të kujdesshëm, nuk do të jeni të mbrojtur nga sulmet Njeriu-në-mes (mitm)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Vëmendje!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Që këto konfigurime të hyjnë në fuqi, aplikacioni duhet të riniset.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Informatë</value>
@@ -500,29 +500,29 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Të dyja skedari lokal dhe i largët nuk janë bosh. Kjo mund të rezultojë në një numër të madh konfliktesh sepse aplikacioni nuk e di cili nga filet është i sakti.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Sinkronizimi u shkaktua!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Sinkronizimi do të zhvillohet në sfond. Ju do të merrni një njoftim kur të përfundojë.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Shërbimi përkohësisht i padisponueshëm (zakonisht për shkak të punës së mirëmbajtjes afatshkurtër)
+Ju lutem provoni përsëri më vonë.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>Skedari të ndryshohet në vend dhe në distancë. Cilën preferoni ju?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Skedari është krijuar në distancë dhe në nivel lokal - cili është ai i sakti?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Fshi skedarin lokalisht por ndryshoje nga distanca. Cilën preferoni ju?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Fshi skedarin nga distanca por ndryshoje lokalisht. Cilën preferoni ju?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Sinkronizimi i dosjes 1{0} u përfundua me 2{1} ndryshime dhe 3{2} gabime ose konflikte.</value>
@@ -546,7 +546,7 @@ Please try again later.</value>
     <value>Shteg lokal</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Rruga Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Zgjidhni dosjen ku doni ta ngarkoni skedarin</value>
@@ -558,10 +558,10 @@ Please try again later.</value>
     <value>Artikujt: {0} (dosjet: {1}skedarët: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Kur modaliteti ekspert është aktivizuar, aplikacioni ofron disa veçori/informacione shtesë, të cilat mund të mos jenë interesante për të gjithë përdoruesit.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Injoro çertifikatat e pavlefshme SSL të vetë-nënshkruara. Kjo lejon autoritetet e çertifikatave SSL të pavlefshme ose jo korrekte të përdoren. Jini të kujdesshëm, nuk do të jeni të mbrojtur më nga sulmet njeriu-në-mes (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sinkronizoni këtë dosje</value>
@@ -591,34 +591,34 @@ Please try again later.</value>
     <value>E errët</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Dritë</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Përdor konfigurimet e sistemit</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Zgjidh një mënyrë</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Ndarë me të tjerët</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorites</value>
+    <value>Favoritet</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Ndarë me mua</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Shpërndarë me anë të lidhjes</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Përgatitu për shpërndarje</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Krijoni dosje</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Problem gjatë krijimit të klientit për komunikimin WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
     <value>Nuk mund të krijonte direktorinë &apos;{0}&apos; në Nextcloud.</value>
@@ -646,11 +646,11 @@ Please try again later.</value>
     <value>Mbishkrim</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Përjashtim i Papritur: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Asnjë URL server nuk është specifikuar. Ju lutemi shkruani URL-në e instancës tuaj Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Mbajeni si është</value>
@@ -662,30 +662,30 @@ Please try again later.</value>
     <value>Vëmendje</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Si funksionon modaliteti i ekspertit?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
     <value>Cili është kuptimi i kësaj?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Konfigurimet e ngjyrës së Windows-it</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Kontrollo të gjitha</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Hiq të gjitha</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Jeni i sigurt se doni ta rifreskoni këtë aplikacion? Kjo do të rifreskojë të gjitha aplikacionet dhe të gjitha konfigurimet tuaja të sinkronizuara.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Rifresko këtë aplikacion</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Fshi skedarët</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>A jeni të sigurt që doni ta fshini skedarin e zgjedhur?</value>
   </data>
 </root>
