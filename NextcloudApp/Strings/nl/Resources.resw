@@ -683,7 +683,7 @@ Probeer het later opnieuw.</value>
     <value>Reset this app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Verwijderen bestanden</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the selected files?</value>
