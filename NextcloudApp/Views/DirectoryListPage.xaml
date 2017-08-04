@@ -368,7 +368,7 @@
         <StackPanel 
             Orientation="Horizontal"
             Grid.Row="2"
-            Background="{ThemeResource SystemControlHighlightListLowBrush}">
+            Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
             <!--
             BorderThickness="0,1,0,0"
             BorderBrush="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}">
