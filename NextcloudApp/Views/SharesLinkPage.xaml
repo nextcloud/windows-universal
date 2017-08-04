@@ -346,7 +346,7 @@
         <StackPanel 
             Orientation="Horizontal"
             Grid.Row="2"
-            Background="{ThemeResource SystemControlHighlightListLowBrush}">
+            Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
             <!--
             BorderThickness="0,1,0,0"
             BorderBrush="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}">
@@ -378,39 +378,39 @@
                 <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByNameASC" 
-                            Text="Name (A nach oben)"
+                            x:Uid="AppBarSort_ByNameASC" 
+                            Text="Name (A to the top)"
                             Command="{Binding GroupByNameAscendingCommand}"/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByNameDESC" 
-                            Text="Name (Z nach oben)"
+                            x:Uid="AppBarSort_ByNameDESC" 
+                            Text="Name (Z to the top)"
                             Command="{Binding GroupByNameDescendingCommand}"/>
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByDateDESC" 
-                            Text="Datum (Neueste nach oben)"
+                            x:Uid="AppBarSort_ByDateDESC" 
+                            Text="Date (newest to the top)"
                             Command="{Binding GroupByDateDescendingCommand}"/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByDateASC" 
-                            Text="Datum (Älteste nach oben)"
+                            x:Uid="AppBarSort_ByDateASC" 
+                            Text="Date (oldest to the top)"
                             Command="{Binding GroupByDateAscendingCommand}"/>
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_BySizeASC" 
-                            Text="Größe (Kleinste nach oben)"
+                            x:Uid="AppBarSort_BySizeASC" 
+                            Text="Size (smallest to the top)"
                             Command="{Binding GroupBySizeAscendingCommand}"/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_BySizeDESC" 
-                            Text="Größe (Größte nach oben)"
+                            x:Uid="AppBarSort_BySizeDESC" 
+                            Text="Size (largest to the top)"
                             Command="{Binding GroupBySizeDescendingCommand}"/>
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByTypeASC" 
-                            Text="Typ (aufsteigend)"
+                            x:Uid="AppBarSort_ByTypeASC" 
+                            Text="Type (A to the top)"
                             Command="{Binding GroupByTypeAscendingCommand}"/>
                         <MenuFlyoutItem 
-                            x:Uid="AppBarSort_Flyout_ByTypeDESC" 
-                            Text="Typ (absteigend)"
+                            x:Uid="AppBarSort_ByTypeDESC" 
+                            Text="Type (Z to the top)"
                             Command="{Binding GroupByTypeDescendingCommand}"/>
                     </MenuFlyout>
                 </AppBarButton.Flyout>
