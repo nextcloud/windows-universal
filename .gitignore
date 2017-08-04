@@ -268,3 +268,5 @@ project.lock.json
 *.nuget.props
 
 /NextcloudApp/NextcloudApp.nuget.targets
+
+/NextcloudApp/_language*.appx
