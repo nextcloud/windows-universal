@@ -457,26 +457,26 @@
                     <MenuFlyout>
                         <MenuFlyoutItem 
                             Tag="NewFolder" 
-                            x:Uid="AppBarAdd_CreateFolder" 
+                            x:Uid="AppBarAdd_Flyout_CreateFolder" 
                             Text="Create folder" 
                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                             Command="{Binding CreateDirectoryCommand}"/>
                         <MenuFlyoutSeparator/>
                         <MenuFlyoutItem 
                             Tag="Add" 
-                            x:Uid="AppBarAdd_UploadFiles" 
+                            x:Uid="AppBarAdd_Flyout_UploadFiles" 
                             Text="Upload files" 
                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                             Command="{Binding UploadFilesCommand}" />
                         <MenuFlyoutItem 
                             Tag="Street" 
-                            x:Uid="AppBarAdd_UploadPhotos" 
+                            x:Uid="AppBarAdd_Flyout_UploadPhotos" 
                             Text="Upload photos" 
                             Style="{StaticResource MenuFlyoutIconItemStyle}"
                             Command="{Binding UploadPhotosCommand}" />
                         <!--MenuFlyoutItem 
                             Tag="Camera" 
-                            x:Uid="AppBarAdd_TakePicture" 
+                            x:Uid="AppBarAdd_Flyout_TakePicture" 
                             Text="Take picture" 
                             Style="{StaticResource MenuFlyoutIconItemStyle}" /-->
                     </MenuFlyout>
