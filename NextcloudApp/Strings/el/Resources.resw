@@ -150,29 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ταξινόμηση</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Ημερομηνία (τα παλαιότερα στην κορυφή)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Date (oldest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Ημερομηνία (τα νεότερα στην κορυφή)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Date (newest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Όνομα (Α στην κορυφή)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Name (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Όνομα (Ω στην κορυφή)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Name (Z to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Μέγεθος (το μικρότερο στην κορυφή)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Size (smallest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Μέγεθος (το μεγαλύτερο στην κορυφή)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Size (largest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Τύπος (Α στην κορυφή)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Τύπος (Ω στην κορυφή)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Σφάλμα εφαρμογής</value>
