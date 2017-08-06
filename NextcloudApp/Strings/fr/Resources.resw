@@ -150,29 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Trier</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Date (ordre croissant)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Date (plus ancien en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Date (ordre décroissant)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Date (plus récent en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nom (ordre croissant)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Nom (A en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nom (ordre décroissant)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Nom (Z en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Taille (ordre croissant)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Taille (plus petit en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Taille (ordre décroissant)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Taille (plus gros en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (ordre croissant)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A en premier)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (ordre décroissant)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z en premier)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Erreur d&apos;application</value>

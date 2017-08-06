@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Visi faili</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Vienmēr</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -150,23 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Kārtot</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Datums (vecākais uz augšu)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Date (oldest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Datums (jaunākais uz augšu)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Date (newest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nosaukums (A uz augšu)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Name (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nosaukums (Z uz augšu)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Name (Z to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Izmērs (mazākais augšpusē)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Size (smallest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Izmērs (lielākais augšpusē)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Size (largest to the top)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A to the top)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Lietojumprogrammas kļūda</value>
@@ -186,7 +192,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Savienoties</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Content-Type</value>
+    <value>Satura tips</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Izveidot</value>
@@ -200,7 +206,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Lejupielādē failu...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Lejupielādēt priekšskatījuma attēlus</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
@@ -221,7 +227,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
   <data name="Name.Text" xml:space="preserve">
     <value>Nosaukums</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Nekad</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -248,7 +254,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} no {1} izmantots</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
     <value>Atiestatīt šo programmu</value>
   </data>
   <data name="Retry" xml:space="preserve">
@@ -281,7 +287,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
   <data name="Version" xml:space="preserve">
     <value>Versija {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
     <value>Tikai kad izmantoju WiFi</value>
   </data>
   <data name="Yes" xml:space="preserve">
@@ -324,7 +330,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Klienta versija {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>The server name or address could not be resolved.</value>
+    <value>Servera nosaukums vai adrese nav sasniedzama.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Servera versija {0}</value>
@@ -390,7 +396,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Nepieciešama pierakstīšanās</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>Mēs nevaram atvērt Nextcloud līdz tu nodrošini savas ierīces ieejas informāciju.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Mēģiniet vēlreiz</value>
@@ -414,16 +420,22 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>• Move files and folders
 • Rename files and folders
 • Manual synchronization of folders
-• Download directories as zip file 
+• Download directories as ZIP file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
+• Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Piespraust sākumam</value>
@@ -434,14 +446,32 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
   <data name="Connect2" xml:space="preserve">
     <value>Savienoties</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignorēt pašrakstītus SSL certifikātus</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Eksperta režīms</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Sinhronizācijas status</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Vēsture</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Konflikti</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Kļūdas</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Synchronize</value>
+    <value>Sinhronizēt</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Prefer local file</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Notīrīt sinhronizēšanas vēsturi</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Prefer remote file</value>
@@ -455,58 +485,207 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Uzmanību!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Šī programma ir jārestartē.</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Atgādinājums</value>
   </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Uzmanies no konfliktiem!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, cause we don&apos;t know which files are the correct ones.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Sinhronizācija uzsākta!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Sinhronizācija notiks fonā. Tu saņemsi paziņojumu kad tā būs beigusies.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Pakalpojums īslaicīgi nav pieejams (parasti, īstermiņa tehniskās apkopes darbu dēļ).
 Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>Fails pārmainīts vietēji un attāli. Kuram tu dod priekšroku?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>Fails ir izveidots attāli un vietēji - kurš ir īstais?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Fails izdzēsts vietēji bet pārmainīts attāli. Kuram tu dod priekšroku?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Konflikts:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Fails izdzēsts attāli bet pārmainīts vietēji. Kuram tu dod priekšroku?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Mapes {0} sinhronizācija beidzās ar {1} izmaiņām un {2} kļūdām vai konfliktiem.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Mapes {0} sinhronizācija beidzās ar {1} izmaiņām.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>Sinhronizācija pabeigta</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Mapes {0} sinhronizācija apturēta, jo lietotne tikusi apturēta.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Sinhronizācija apturēta</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Sinhronizācijas Status</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Lokālais ceļš</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud ceļš</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Izvēlies mapi kurā tu gribi augšupielādēt failus</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Mapes</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Vienības: {0} (mapes: {1} faili: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>Kad eksperta režīms ir ieslēgts, aplikācija parāda papildus iespējas/informāciju, kas var neintresēt visiem lietotājiem.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Sinhronizēt šo mapi</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Beigt šīs mapes sinhronizāciju</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Beigt sinhronizāciju</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Sinhronizācijas status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Sinhronizēt tagad</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Sinhronizēt</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Sinhronizēt šo mapi tagad</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Sinhronizēt šo mapi</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Tumšs</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Gaišs</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Izmantot sistēmas iestatījumus</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Izvēlēties režīmu</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Koplietots ar citiem</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favorīti</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Koplietots ar mani</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Koplietots ar saiti</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Sagatovojas koplietošanai...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Izveidot mapi</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Kļūda izveidojot klientu WebDAV komunikācijai.</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nevarēja izveidot mapi &apos;{0}&apos; Nextcloudā.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Kļūda lejupielādējot failu &apos;{0}&apos; no Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Kļūda augšupielādējot failu &apos;{0}&apos; no Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Vai tu gribi pārrakstīt to?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Fails jau pastāv.</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Pārrakstīt</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Negaidīts izņēmums: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>Nav ierakstīts servera URL. Lūdzu ievadi savas Nextcloud instances URL.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Saglabāt kā ir</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Uzmanību!</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>Kā eksperta režīms strādā?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>Kāda ir šī nozīme?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows krāsu iestatījumi</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Izvēlēties visu</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Noņemt atzīmi visam</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Vai tu tiešām gribi atiestatīt šo aplikāciju? Tas atiestatīs visas aplikācijas un sinhronizācijas iestatījumus.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Atiestatīt šo programmu</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Dzēst failus</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Vai tiešām vēlies izdzēst izvēlētos?</value>
   </data>
 </root>
