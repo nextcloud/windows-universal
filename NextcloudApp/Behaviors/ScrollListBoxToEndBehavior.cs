@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -12,6 +13,7 @@ namespace NextcloudApp.Behaviors
         private FrameworkElement _element;
         private ListBox _listBox;
         private ObservableCollection<Models.PathInfo> _observable;
+        private ScrollViewer _scrollViewer;
         public DependencyObject AssociatedObject => _element;
 
         public void Attach(DependencyObject associatedObject)
@@ -27,34 +29,32 @@ namespace NextcloudApp.Behaviors
                 AttachToItemSource();
             };
         }
-
+        
         private void AttachToItemSource()
         {
             _observable = _listBox.ItemsSource as ObservableCollection<Models.PathInfo>;
             if (_observable != null)
             {
-                _observable.CollectionChanged += ObservableOnCollectionChanged;
+                _observable.CollectionChanged += ObservableOnCollectionChangedAsync;
             }
-            var scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(_listBox, 0);
-            scrollViewer?.ChangeView(scrollViewer.ExtentWidth, 0, 1);
+            _scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(_listBox, 0);
+            _scrollViewer?.ChangeView(_scrollViewer.ExtentWidth, null, null);
         }
 
-        private void ObservableOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
+        private async void ObservableOnCollectionChangedAsync(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
         {
             // always scroll path to end
-            if (VisualTreeHelper.GetChildrenCount(_listBox) <= 0)
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
             {
-                return;
-            }
-            var scrollViewer = (ScrollViewer)VisualTreeHelper.GetChild(_listBox, 0);
-            scrollViewer.ChangeView(scrollViewer.ExtentWidth, 0, 1);
+                _scrollViewer?.ChangeView(int.MaxValue - 1, null, null);
+            });
         }
 
         public void Detach()
         {
             if (_observable != null)
             {
-                _observable.CollectionChanged -= ObservableOnCollectionChanged;
+                _observable.CollectionChanged -= ObservableOnCollectionChangedAsync;
             }
         }
     }
