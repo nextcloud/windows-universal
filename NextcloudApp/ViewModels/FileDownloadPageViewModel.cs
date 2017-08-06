@@ -34,6 +34,7 @@ namespace NextcloudApp.ViewModels
         private string _downloadingFileProgressText;
         private StorageFile _currentFile;
         private bool _isIndeterminate;
+        private bool _interactionStarted;
 
         public FileDownloadPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader)
         {
@@ -62,6 +63,12 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
 
+            if (_interactionStarted)
+            {
+                return;
+            }
+            _interactionStarted = true;
+
             var client = await ClientService.GetClient();
             if (client == null)
             {
@@ -89,6 +96,7 @@ namespace NextcloudApp.ViewModels
                     SuggestedStartLocation = PickerLocationId.Desktop
                 };
                 folderPicker.FileTypeFilter.Add(".zip");
+                
                 var folder = await folderPicker.PickSingleFolderAsync();
                 if (folder != null)
                 {
@@ -97,6 +105,7 @@ namespace NextcloudApp.ViewModels
                 }
                 else
                 {
+                    _interactionStarted = false;
                     return;
                 }
 
@@ -104,9 +113,11 @@ namespace NextcloudApp.ViewModels
                 {
                     await Download(resInfo, client, folder);
                 }
+                _interactionStarted = false;
             }
             else
             {
+                _interactionStarted = false;
                 return;
             }
 
@@ -170,7 +181,7 @@ namespace NextcloudApp.ViewModels
 
                 using (var randomAccessStream = await localFile.OpenAsync(FileAccessMode.ReadWrite))
                 {
-                    Stream targetStream = randomAccessStream.AsStreamForWrite();
+                    var targetStream = randomAccessStream.AsStreamForWrite();
 
                     switch (resourceInfo.ContentType)
                     {
