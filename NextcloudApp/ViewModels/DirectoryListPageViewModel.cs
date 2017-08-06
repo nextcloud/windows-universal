@@ -837,8 +837,7 @@ namespace NextcloudApp.ViewModels
 
             RaisePropertyChanged(nameof(StatusBarText));
         }
-
-
+        
         public override bool CanRevertState()
         {
             return SelectedPathIndex > 0;
