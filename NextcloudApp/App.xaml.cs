@@ -315,7 +315,7 @@ namespace NextcloudApp
         {
             var task = base.OnSuspendingApplicationAsync();
             // Stop Background Sync Tasks
-            List<FolderSyncInfo> activeSyncs = SyncDbUtils.GetActiveSyncInfos();
+            var activeSyncs = SyncDbUtils.GetActiveSyncInfos();
             foreach (var fsi in activeSyncs)
             {
                 ToastNotificationService.ShowSyncSuspendedNotification(fsi);
@@ -374,11 +374,22 @@ namespace NextcloudApp
             }
             else
             {
-                var fileInfoPageParameters = new FileInfoPageParameters
+                IPageParameters resourceInfoPageParameters = null;
+                if (pageParameters?.PageTarget == PageToken.DirectoryList)
                 {
-                    ResourceInfo = pageParameters?.ResourceInfo
-                };
-                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, fileInfoPageParameters);
+                    resourceInfoPageParameters = new DirectoryListPageParameters
+                    {
+                        ResourceInfo = pageParameters?.ResourceInfo
+                    };
+                }
+                else if (pageParameters?.PageTarget == PageToken.FileInfo)
+                {
+                    resourceInfoPageParameters = new FileInfoPageParameters
+                    {
+                        ResourceInfo = pageParameters?.ResourceInfo
+                    };
+                }
+                CheckSettingsAndContinue(pageParameters?.PageTarget ?? PageToken.DirectoryList, resourceInfoPageParameters);
             }
             return Task.FromResult(true);
         }

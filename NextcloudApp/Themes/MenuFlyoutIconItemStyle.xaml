@@ -1,6 +1,6 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="using:NextcloudApp">
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="MenuFlyoutIconItemStyle" TargetType="MenuFlyoutItem">
         <Setter Property="Background" Value="Transparent"/>
@@ -45,6 +45,12 @@
                                 </VisualState>
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="SymbolIcon">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="FontIcon">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="TextBlock">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
@@ -74,20 +80,22 @@
                         </VisualStateManager.VisualStateGroups>
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon 
-                            Margin="0,0,12,0" 
-                            Symbol="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                            Visibility="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource IsGlyphToVisibilityConverter}, ConverterParameter=true}"/>
+                                x:Name="SymbolIcon" 
+                                Margin="0,0,12,0" 
+                                Symbol="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                Visibility="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource IsGlyphToVisibilityConverter}, ConverterParameter=true}"/>
                             <FontIcon
-                            Margin="0,0,12,0" 
-                            Glyph="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                            Visibility="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource IsGlyphToVisibilityConverter}}"/>
+                                x:Name="FontIcon" 
+                                Margin="0,0,12,0" 
+                                Glyph="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                Visibility="{Binding Tag, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource IsGlyphToVisibilityConverter}}"/>
                             <TextBlock 
-                            x:Name="TextBlock" 
-                            Foreground="{TemplateBinding Foreground}" 
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                            Text="{TemplateBinding Text}" 
-                            TextTrimming="Clip" 
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                x:Name="TextBlock" 
+                                Foreground="{TemplateBinding Foreground}" 
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                Text="{TemplateBinding Text}" 
+                                TextTrimming="Clip" 
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </StackPanel>
                     </Grid>
                 </ControlTemplate>
