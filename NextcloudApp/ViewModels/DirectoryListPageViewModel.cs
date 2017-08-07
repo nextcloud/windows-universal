@@ -147,8 +147,7 @@ namespace NextcloudApp.ViewModels
             StopSynchronizeFolderCommand = new RelayCommand(StopSynchronizeFolder);
             StopSynchronizeThisFolderCommand = new RelayCommand(StopSynchronizeThisFolder);
             MoveSelectedCommand = new RelayCommand(MoveSelected);
-            //PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
-            PinToStartCommand = new DelegateCommand<object>(PinToStart);
+            PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             ToggleFavoriteCommand = new RelayCommand(ToggleFavorite);
         }
 
@@ -156,6 +155,15 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
             Directory = DirectoryService.Instance;
+
+            var parameters = DirectoryListPageParameters.Deserialize(e.Parameter);
+            var resourceInfo = parameters?.ResourceInfo;
+
+            if (resourceInfo != null)
+            {
+                Directory.RebuildPathStackFromResourceInfo(resourceInfo);
+            }
+
             _selectedPathIndex = Directory.PathStack.Count - 1;
             _isNavigatingBack = false;
             StartDirectoryListing();
@@ -555,7 +563,7 @@ namespace NextcloudApp.ViewModels
                 return false;
             }
             var resourceInfo = (ResourceInfo) parameter;
-            return _tileService.IsTilePinned(resourceInfo);
+            return !_tileService.IsTilePinned(resourceInfo);
         }
 
         private void UploadFiles()
