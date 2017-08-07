@@ -70,17 +70,19 @@ namespace NextcloudApp.ViewModels
         {
             base.OnNavigatedTo(e, viewModelState);
 
-            foreach(var path in Directory.PathStack)
-            {
-                PathStack.Add(path);
-            }
-
             var parameters = FileInfoPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
 
             if (resourceInfo == null)
             {
                 return;
+            }
+
+            Directory.RebuildPathStackFromResourceInfo(resourceInfo);
+
+            foreach (var path in Directory.PathStack)
+            {
+                PathStack.Add(path);
             }
 
             PathStack.Add(new PathInfo
@@ -339,7 +341,7 @@ namespace NextcloudApp.ViewModels
 
         private bool CanPinToStart(object parameter)
         {
-            return ResourceInfo != null && _tileService.IsTilePinned(ResourceInfo);
+            return ResourceInfo != null && !_tileService.IsTilePinned(ResourceInfo);
         }
     }
 }

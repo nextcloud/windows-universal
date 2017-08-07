@@ -599,5 +599,36 @@ namespace NextcloudApp.Services
 
             await client.ToggleFavorite(resourceInfo);
         }
+
+        public void RebuildPathStackFromResourceInfo(ResourceInfo resourceInfo)
+        {
+            // remove all except root node
+            while (PathStack.Count > 1)
+            {
+                PathStack.RemoveAt(PathStack.Count - 1);
+            }
+
+            // get path array from resource info
+            var path = resourceInfo.Path.Split('/');
+            var newPath = string.Empty;
+
+            // register path
+            foreach (var p in path)
+            {
+                if (string.IsNullOrEmpty(p))
+                {
+                    continue;
+                }
+                newPath += "/" + p;
+                PathStack.Add(new PathInfo
+                {
+                    ResourceInfo = new ResourceInfo()
+                    {
+                        Name = p,
+                        Path = newPath + "/"
+                    }
+                });
+            }
+        }
     }
 }
