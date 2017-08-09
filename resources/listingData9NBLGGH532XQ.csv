@@ -1,0 +1,317 @@
+﻿Field;ID;Type (Typ);default;en-us;de-de;en;en-gb;ca;cs-cz;de;el;es;es-ar;es-es;es-mx;fi-fi;fr;fr-fr;gl;hu-hu;is;it;it-it;lv;nb-no;nl;pl;pt-br;sq;sv;tr;zh-cn
+Description;2;Text;"This is the Nextcloud app allowing you to access all your files on Windows Mobile (...and UWP coming soon).
+
+This app is available as an unlimited test version, but anyone who wants to support the project can do so with a donation of 99 cents.
+
+Features already implemented: 
+• Easy, modern interface 
+• Upload your files to your Nextcloud server 
+• Download files from your Nextcloud server
+• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates?
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+
+Feature plans for next releases: 
+• Share your files and folders with others 
+• Managing shares 
+• Synchronize selected directories in the background 
+• Instant Upload for photos and videos taken by your device 
+• Managing more than one user account / Nextcloud server (Multi-account support)
+
+Issues
+
+Please report all issues at https://github.com/nextcloud/windows-universal/issues
+
+New to Nextcloud?
+
+Nextcloud is a private file sync & share and communication server.
+
+It is fully open source and you can host it yourself or pay a company to do it for you.
+
+That way, you are in control of your photos, your calendar and contact data, your documents and everything else.
+
+Check out Nextcloud at https://nextcloud.com";;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in Kürze auch UWP) zugreifen können.
+
+Diese App ist als uneingeschränkt Testversion verfügbar, wer aber das Projekt unterstützen möchte, kann dies mit einer Spende von 99 Cent tun.
+
+Bereits implementierte Funktionen: 
+• Einfache, moderne Benutzeroberfläche 
+• Dateien auf Ihrem Nextcloud Server hochladen 
+• Dateien von Ihrem Nextcloud Server herunterladen
+• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Manuelle Ordner-Synchronisation
+• Ordner als ZIP-Dateien herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Elemente können als Favoriten in der App markiert werden
+• Ordnrergrößen in der Listenasicht anzeigen
+• Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewählt/gesamt)
+• Sortierung nach Datentyp
+• Neue Ansichten Favoriten/Shares
+• Dateien und Ordner auf dem Startbildschirm ablegen
+• Windows Hello für die Anmeldung beim App-Start benutzen
+• Experten-Modus zur Anzeige erweiterter Informationen
+• Selbst-signierte SSL-Zertifikate erlauben
+• Dateien mit der App teilen
+• Theming (dunkel/hell/System)
+• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
+
+Geplant für nächste Versionen: 
+• Teilen Ihrer Dateien und Ordner mit anderen 
+• Verwaltung von Shares 
+• Synchronisieren von ausgewählten Verzeichnissen im Hintergrund 
+• Sofortiger Upload für Fotos und Videos, die von Ihrem Gerät aufgenommen wurden 
+• Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-Unterstützung)
+
+Probleme
+
+Bitte melden Sie alle Probleme unter https://github.com/nextcloud/windows-universal/issues
+
+Neu bei Nextcloud?
+
+Nextcloud ist ein privater Dateisynchronisierungs-, Dateifreigabe- und Kommunikationsserver. 
+Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle über Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
+
+Schauen Sie sich Nextcloud unter https://nextcloud.com an";;;;;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in Kürze auch UWP) zugreifen können.
+
+Diese App ist als uneingeschränkt Testversion verfügbar, wer aber das Projekt unterstützen möchte, kann dies mit einer Spende von 99 Cent tun.
+
+Bereits implementierte Funktionen: 
+• Einfache, moderne Benutzeroberfläche 
+• Dateien auf Ihrem Nextcloud Server hochladen 
+• Dateien von Ihrem Nextcloud Server herunterladen
+• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Manuelle Ordner-Synchronisation
+• Ordner als ZIP-Dateien herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Elemente können als Favoriten in der App markiert werden
+• Ordnrergrößen in der Listenasicht anzeigen
+• Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewählt/gesamt)
+• Sortierung nach Datentyp
+• Neue Ansichten Favoriten/Shares
+• Dateien und Ordner auf dem Startbildschirm ablegen
+• Windows Hello für die Anmeldung beim App-Start benutzen
+• Experten-Modus zur Anzeige erweiterter Informationen
+• Selbst-signierte SSL-Zertifikate erlauben
+• Dateien mit der App teilen
+• Theming (dunkel/hell/System)
+• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
+
+Geplant für nächste Versionen: 
+• Teilen Ihrer Dateien und Ordner mit anderen 
+• Verwaltung von Shares 
+• Synchronisieren von ausgewählten Verzeichnissen im Hintergrund 
+• Sofortiger Upload für Fotos und Videos, die von Ihrem Gerät aufgenommen wurden 
+• Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-Unterstützung)
+
+Probleme
+
+Bitte melden Sie alle Probleme unter https://github.com/nextcloud/windows-universal/issues
+
+Neu bei Nextcloud?
+
+Nextcloud ist ein privater Dateisynchronisierungs-, Dateifreigabe- und Kommunikationsserver. 
+Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle über Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
+
+Schauen Sie sich Nextcloud unter https://nextcloud.com an";;;;;;;;;;;;;;;;;;;;;;
+ReleaseNotes;3;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Title;4;Text;Nextcloud;;Nextcloud;;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud
+ShortTitle;5;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SortTitle;6;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+VoiceTitle;7;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ShortDescription;8;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DevStudio;9;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SupportContactInfo;10;URL oder E-Mail-Adresse;https://github.com/nextcloud/windows-universal/issues;;https://github.com/nextcloud/windows-universal/issues;;;;;https://github.com/nextcloud/windows-universal/issues;;;;;;;;;;;;;;;;;;;;;;
+PrivacyPolicyUrl;11;URL;https://nextcloud.com/privacy/;;https://nextcloud.com/privacy/;;;;;https://nextcloud.com/privacy/;;;;;;;;;;;;;;;;;;;;;;
+CopyrightTrademarkInformation;12;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+AdditionalLicenseTerms;13;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Website;14;URL;https://github.com/nextcloud/windows-universal;;https://github.com/nextcloud/windows-universal;;;;;https://github.com/nextcloud/windows-universal;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot1;100;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot2;101;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot3;102;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot4;103;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot5;104;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot6;105;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot7;106;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot8;107;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshot9;108;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption1;150;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption2;151;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption3;152;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption4;153;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption5;154;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption6;155;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption7;156;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption8;157;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DesktopScreenshotCaption9;158;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot1;200;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885281;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734884772;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734884772;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot2;201;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885436;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885075;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885075;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot3;202;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885407;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885062;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885062;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot4;203;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885408;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885171;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885171;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot5;204;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885285;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885184;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885184;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot6;205;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885411;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885261;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885261;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot7;206;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504734885498;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885590;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504734885590;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshot8;207;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption1;250;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption2;251;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption3;252;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption4;253;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption5;254;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption6;255;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption7;256;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MobileScreenshotCaption8;257;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot1;300;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot2;301;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot3;302;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot4;303;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot5;304;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot6;305;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot7;306;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshot8;307;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption1;350;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption2;351;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption3;352;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption4;353;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption5;354;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption6;355;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption7;356;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxScreenshotCaption8;357;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot1;400;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot2;401;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot3;402;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot4;403;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot5;404;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot6;405;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot7;406;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshot8;407;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption1;450;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption2;451;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption3;452;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption4;453;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption5;454;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption6;455;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption7;456;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HolographicScreenshotCaption8;457;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+StoreLogo720x1080;600;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+StoreLogo1080x1080;601;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+StoreLogo300x300;602;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647272;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762573;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762573;;;;;;;;;;;;;;;;;;;;;;
+OverrideLogosForWin10;603;True/False;False;;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False
+StoreLogoOverride150x150;604;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+StoreLogoOverride71x71;605;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PromoImage1920x1080;606;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+PromoImage2400x1200;607;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712649111;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762585;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762585;;;;;;;;;;;;;;;;;;;;;;
+XboxBrandedKeyArt584x800;608;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxTitledHero1920x1080;609;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+XboxFeaturedPromo1080x1080;610;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+OptionalPromo358x358;611;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647334;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762576;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762576;;;;;;;;;;;;;;;;;;;;;;
+OptionalPromo1000x800;612;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647996;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762578;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762578;;;;;;;;;;;;;;;;;;;;;;
+OptionalPromo414x180;613;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647664;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762579;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762579;;;;;;;;;;;;;;;;;;;;;;
+Feature1;700;Text;Easy, modern interface;;Einfache, moderne Benutzeroberfläche;;;;;Einfache, moderne Benutzeroberfläche;;;;;;;;;;;;;;;;;;;;;;
+Feature2;701;Text;Upload your files to your Nextcloud server;;Laden Sie Ihre Dateien auf Ihren Nextcloud Server;;;;;Laden Sie Ihre Dateien auf Ihren Nextcloud Server;;;;;;;;;;;;;;;;;;;;;;
+Feature3;702;Text;Download files from your Nextcloud server;;Dateien von Ihrem Nextcloud Server herunterladen;;;;;Dateien von Ihrem Nextcloud Server herunterladen;;;;;;;;;;;;;;;;;;;;;;
+Feature4;703;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature5;704;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature6;705;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature7;706;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature8;707;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature9;708;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature10;709;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature11;710;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature12;711;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature13;712;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature14;713;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature15;714;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature16;715;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature17;716;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature18;717;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature19;718;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Feature20;719;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq1;800;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq2;801;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq3;802;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq4;803;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq5;804;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq6;805;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq7;806;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq8;807;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq9;808;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq10;809;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MinimumHardwareReq11;810;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq1;850;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq2;851;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq3;852;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq4;853;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq5;854;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq6;855;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq7;856;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq8;857;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq9;858;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq10;859;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+RecommendedHardwareReq11;860;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm1;900;Text;Nextcloud;;Nextcloud;;;;;Nextcloud;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm2;901;Text;ownCloud;;ownCloud;;;;;ownCloud;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm3;902;Text;productivity;;Produktivität;;;;;Produktivität;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm4;903;Text;utility;;Dienstprogramm;;;;;Dienstprogramm;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm5;904;Text;file sharing;;file sharing;;;;;file sharing;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm6;905;Text;app;;App;;;;;App;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm7;906;Text;Dropbox;;Dropbox;;;;;Dropbox;;;;;;;;;;;;;;;;;;;;;;
+Trailer1;1000;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer2;1001;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer3;1002;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer4;1003;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer5;1004;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer6;1005;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer7;1006;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer8;1007;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer9;1008;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer10;1009;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer11;1010;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer12;1011;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer13;1012;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer14;1013;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Trailer15;1014;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle1;1020;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle2;1021;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle3;1022;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle4;1023;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle5;1024;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle6;1025;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle7;1026;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle8;1027;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle9;1028;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle10;1029;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle11;1030;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle12;1031;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle13;1032;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle14;1033;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerTitle15;1034;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail1;1040;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail2;1041;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail3;1042;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail4;1043;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail5;1044;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail6;1045;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail7;1046;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail8;1047;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail9;1048;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail10;1049;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail11;1050;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail12;1051;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail13;1052;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail14;1053;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TrailerThumbnail15;1054;Relativer Pfad (oder URL zur Datei in Dev Center);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
