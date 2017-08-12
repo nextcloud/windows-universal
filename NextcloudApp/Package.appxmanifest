@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="36131AndrFiedler.NextcloudApp" Publisher="CN=917F995D-B866-486B-AAD5-A2B63E22FF51" Version="1.1.0.0" />
+  <Identity Name="36131AndrFiedler.NextcloudApp" Publisher="CN=917F995D-B866-486B-AAD5-A2B63E22FF51" Version="1.2.0.0" />
   <mp:PhoneIdentity PhoneProductId="6cfb0110-8cde-4e3f-9aab-0c54e98b3b3d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Nextcloud</DisplayName>
@@ -30,12 +30,6 @@
         </uap:InitialRotationPreference>
       </uap:VisualElements>
       <Extensions>
-        <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="nextcloud">
-            <uap:Logo>Assets\StoreLogo.png</uap:Logo>
-            <uap:DisplayName>Nextcloud</uap:DisplayName>
-          </uap:Protocol>
-        </uap:Extension>
         <uap:Extension Category="windows.shareTarget" EntryPoint="NextcloudApp.ShareTarget">
           <uap:ShareTarget>
             <uap:SupportedFileTypes>
@@ -48,6 +42,12 @@
             <uap:DataFormat>StorageItems</uap:DataFormat>
             <uap:DataFormat>RTF</uap:DataFormat>
           </uap:ShareTarget>
+        </uap:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="nextcloud">
+            <uap:Logo>Assets\StoreLogo.png</uap:Logo>
+            <uap:DisplayName>Nextcloud</uap:DisplayName>
+          </uap:Protocol>
         </uap:Extension>
       </Extensions>
     </Application>
