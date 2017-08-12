@@ -88,13 +88,7 @@ namespace NextcloudClient.Types
         /// 
         /// </summary>
         /// <returns></returns>
-        public bool IsDirectory
-        {
-            get
-            {
-                return ContentType == null ? false : ContentType.Equals("dav/directory");
-            }
-        }
+        public bool IsDirectory => ContentType?.Equals("dav/directory") ?? false;
 
         /// <summary>
         /// Serializes this instance.
@@ -172,27 +166,35 @@ namespace NextcloudClient.Types
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
+            {
                 return false;
+            }
 
             var other = obj as ResourceInfo;
-            return this.Equals(other);
+            return Equals(other);
         }
 
         public bool Equals(ResourceInfo other)
         {
             if (other == null)
+            {
                 return false;
+            }
 
-            return this.GetHashCode() == other.GetHashCode();
+            return GetHashCode() == other.GetHashCode();
         }
 
         public static bool operator ==(ResourceInfo a, ResourceInfo b)
         {
-            if (System.Object.ReferenceEquals(a, b))
+            if (ReferenceEquals(a, b))
+            {
                 return true;
+            }
 
-            if (((object)a == null) || ((object)b == null))
+            if ((object) a == null || ((object) b == null))
+            {
                 return false;
+            }
 
             return a.GetHashCode() == b.GetHashCode();
         }
@@ -204,28 +206,66 @@ namespace NextcloudClient.Types
 
         public override int GetHashCode()
         {
-            var hashCode = this.ContentType.GetHashCode() ^ this.Created.GetHashCode() ^ this.LastModified.GetHashCode() ^ this.Name.GetHashCode()
-                 ^ this.Path.GetHashCode() ^ this.Size.GetHashCode() ^ this.IsFavorite.GetHashCode() ^ this.CommentsHref.GetHashCode() ^ this.CommentsCount.GetHashCode()
-                 ^ this.CommentsUnread.GetHashCode() ^ this.ShareTypes.GetHashCode() ^ this.HasPreview.GetHashCode();
+            var hashCode =
+                Created.GetHashCode() ^
+                LastModified.GetHashCode() ^
+                Size.GetHashCode() ^
+                IsFavorite.GetHashCode() ^
+                CommentsCount.GetHashCode() ^
+                CommentsUnread.GetHashCode() ^
+                ShareTypes.GetHashCode() ^
+                HasPreview.GetHashCode();
+
+            if (ContentType != null)
+            {
+                hashCode ^= ContentType.GetHashCode();
+            }
+
+            if (Name != null)
+            {
+                hashCode ^= Name.GetHashCode();
+            }
+
+            if (Path != null)
+            {
+                hashCode ^= Path.GetHashCode();
+            }
+
+            if (CommentsHref != null)
+            {
+                hashCode ^= CommentsHref.GetHashCode();
+            }
 
             // Is null on directories
-            if (this.ETag != null)
-                hashCode ^= this.ETag.GetHashCode();
+            if (ETag != null)
+            {
+                hashCode ^= ETag.GetHashCode();
+            }
 
-            if (!string.IsNullOrEmpty(this.Id))
-                hashCode ^= this.Id.GetHashCode();
+            if (!string.IsNullOrEmpty(Id))
+            {
+                hashCode ^= Id.GetHashCode();
+            }
 
-            if (!string.IsNullOrEmpty(this.FileId))
-                hashCode ^= this.FileId.GetHashCode();
+            if (!string.IsNullOrEmpty(FileId))
+            {
+                hashCode ^= FileId.GetHashCode();
+            }
 
-            if (!string.IsNullOrEmpty(this.OwnderId))
-                hashCode ^= this.OwnderId.GetHashCode();
+            if (!string.IsNullOrEmpty(OwnderId))
+            {
+                hashCode ^= OwnderId.GetHashCode();
+            }
 
-            if (!string.IsNullOrEmpty(this.OwnerDisplayName))
-                hashCode ^= this.OwnerDisplayName.GetHashCode();
+            if (!string.IsNullOrEmpty(OwnerDisplayName))
+            {
+                hashCode ^= OwnerDisplayName.GetHashCode();
+            }
 
-            if (!string.IsNullOrEmpty(this.Checksums))
-                hashCode ^= this.Checksums.GetHashCode();
+            if (!string.IsNullOrEmpty(Checksums))
+            {
+                hashCode ^= Checksums.GetHashCode();
+            }
 
             return hashCode;
         }
