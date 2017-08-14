@@ -471,7 +471,7 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Preferisci file locale</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Clear sync history</value>
+    <value>Cancella cronologia di sincronizzazione</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Preferisci file remoto</value>
@@ -485,7 +485,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Attenzione!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Affinché queste impostazioni abbiano effetto, l&apos;applicazione deve essere riavviata.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Suggerimento</value>
@@ -503,7 +503,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>La sincronizzazioni è stata innescata</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>La sincronizzazione avverrà sullo sfondo. Riceverai una notifica al termine.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Servizio momentaneamente non disponibile (solitamente causato da brevi lavori di manutenzione).
@@ -525,7 +525,7 @@ Riprova più tardi.</value>
     <value>File eliminato in remoto, ma modificato localmente. Quale preferisci?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Sincronizzazione della cartella {0} terminata con {1} modifiche e {2} errori o conflitti.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
     <value>Synchronization of folder {0} finished with {1} changes.</value>
@@ -612,7 +612,7 @@ Riprova più tardi.</value>
     <value>Condivisi tramite collegamento</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Preparazione della condivisione...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Crea cartella</value>
@@ -629,11 +629,11 @@ Riprova più tardi.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Errore durante lo scaricamento del file &apos;{0}&apos; da Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Errore durante il caricamento del file &apos;{0}&apos; su Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -656,7 +656,7 @@ Riprova più tardi.</value>
     <value>Mantieni come è</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Questa soluzione può essere applicata solo se i file esistono in remoto e localmente.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Attenzione</value>
@@ -668,7 +668,7 @@ Riprova più tardi.</value>
     <value>Qual è il significato?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Impostazioni dei colori di Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
     <value>Marca tutto</value>
@@ -686,6 +686,6 @@ Riprova più tardi.</value>
     <value>Elimina i file</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Sei sicuro di voler eliminare i file selezionati?</value>
   </data>
 </root>
