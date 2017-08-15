@@ -1,36 +1,36 @@
-ï»¿Field;ID;Type (Typ);default;en-us;de-de;en;en-gb;ca;cs-cz;de;el;es;es-ar;es-es;es-mx;fi-fi;fr;fr-fr;gl;hu-hu;is;it;it-it;lv;nb-no;nl;pl;pt-br;sq;sv;tr;zh-cn
+Field;ID;Type (Typ);default;en-us;de-de;en;en-gb;ca;cs-cz;de;el;es;es-ar;es-es;es-mx;fi-fi;fr;fr-fr;gl;hu-hu;is;it;it-it;lv;nb-no;nl;pl;pt-br;sq;sv;tr;zh-cn
 Description;2;Text;"This is the Nextcloud app allowing you to access all your files on Windows Mobile (...and UWP coming soon).
 
 This app is available as an unlimited test version, but anyone who wants to support the project can do so with a donation of 99 cents.
 
 Features already implemented: 
-â€¢ Easy, modern interface 
-â€¢ Upload your files to your Nextcloud server 
-â€¢ Download files from your Nextcloud server
-â€¢ Move files and folders
-â€¢ Rename files and folders
-â€¢ Manual synchronization of folders
-â€¢ Download directories as ZIP file
-â€¢ Select multiple files and folders
-â€¢ Items can be marked as favorite from within the app
-â€¢ The size of folders is shown in the directory list
-â€¢ Status bar in directory list showing the number of selected/total files
-â€¢ Sorting for data type
-â€¢ New views for favorites/shares
-â€¢ Pin files and folders to start screen
-â€¢ Use Windows Hello to authenticate on app start
-â€¢ Expert mode showing advanced information in the app
-â€¢ Allow self signed SSL certificates?
-â€¢ Share files with the app
-â€¢ Theming (dark/light/system)
-â€¢ Use the PasswordVault to store user credentials
+• Easy, modern interface 
+• Upload your files to your Nextcloud server 
+• Download files from your Nextcloud server
+• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates?
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
 
 Feature plans for next releases: 
-â€¢ Share your files and folders with others 
-â€¢ Managing shares 
-â€¢ Synchronize selected directories in the background 
-â€¢ Instant Upload for photos and videos taken by your device 
-â€¢ Managing more than one user account / Nextcloud server (Multi-account support)
+• Share your files and folders with others 
+• Managing shares 
+• Synchronize selected directories in the background 
+• Instant Upload for photos and videos taken by your device 
+• Managing more than one user account / Nextcloud server (Multi-account support)
 
 Issues
 
@@ -44,38 +44,38 @@ It is fully open source and you can host it yourself or pay a company to do it f
 
 That way, you are in control of your photos, your calendar and contact data, your documents and everything else.
 
-Check out Nextcloud at https://nextcloud.com";;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in KÃ¼rze auch UWP) zugreifen kÃ¶nnen.
+Check out Nextcloud at https://nextcloud.com";;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in Kürze auch UWP) zugreifen können.
 
-Diese App ist als uneingeschrÃ¤nkt Testversion verfÃ¼gbar, wer aber das Projekt unterstÃ¼tzen mÃ¶chte, kann dies mit einer Spende von 99 Cent tun.
+Diese App ist als uneingeschränkt Testversion verfügbar, wer aber das Projekt unterstützen möchte, kann dies mit einer Spende von 99 Cent tun.
 
 Bereits implementierte Funktionen: 
-â€¢ Einfache, moderne BenutzeroberflÃ¤che 
-â€¢ Dateien auf Ihrem Nextcloud Server hochladen 
-â€¢ Dateien von Ihrem Nextcloud Server herunterladen
-â€¢ Dateien und Ordner verschieben
-â€¢ Dateien und Ordner umbenennen
-â€¢ Manuelle Ordner-Synchronisation
-â€¢ Ordner als ZIP-Dateien herunterladen
-â€¢ Mehrere Dateien und Ordner auswÃ¤hlen
-â€¢ Elemente kÃ¶nnen als Favoriten in der App markiert werden
-â€¢ OrdnrergrÃ¶ÃŸen in der Listenasicht anzeigen
-â€¢ Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewÃ¤hlt/gesamt)
-â€¢ Sortierung nach Datentyp
-â€¢ Neue Ansichten Favoriten/Shares
-â€¢ Dateien und Ordner auf dem Startbildschirm ablegen
-â€¢ Windows Hello fÃ¼r die Anmeldung beim App-Start benutzen
-â€¢ Experten-Modus zur Anzeige erweiterter Informationen
-â€¢ Selbst-signierte SSL-Zertifikate erlauben
-â€¢ Dateien mit der App teilen
-â€¢ Theming (dunkel/hell/System)
-â€¢ Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
+• Einfache, moderne Benutzeroberfläche 
+• Dateien auf Ihrem Nextcloud Server hochladen 
+• Dateien von Ihrem Nextcloud Server herunterladen
+• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Manuelle Ordner-Synchronisation
+• Ordner als ZIP-Dateien herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Elemente können als Favoriten in der App markiert werden
+• Ordnrergrößen in der Listenasicht anzeigen
+• Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewählt/gesamt)
+• Sortierung nach Datentyp
+• Neue Ansichten Favoriten/Shares
+• Dateien und Ordner auf dem Startbildschirm ablegen
+• Windows Hello für die Anmeldung beim App-Start benutzen
+• Experten-Modus zur Anzeige erweiterter Informationen
+• Selbst-signierte SSL-Zertifikate erlauben
+• Dateien mit der App teilen
+• Theming (dunkel/hell/System)
+• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
 
-Geplant fÃ¼r nÃ¤chste Versionen: 
-â€¢ Teilen Ihrer Dateien und Ordner mit anderen 
-â€¢ Verwaltung von Shares 
-â€¢ Synchronisieren von ausgewÃ¤hlten Verzeichnissen im Hintergrund 
-â€¢ Sofortiger Upload fÃ¼r Fotos und Videos, die von Ihrem GerÃ¤t aufgenommen wurden 
-â€¢ Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-UnterstÃ¼tzung)
+Geplant für nächste Versionen: 
+• Teilen Ihrer Dateien und Ordner mit anderen 
+• Verwaltung von Shares 
+• Synchronisieren von ausgewählten Verzeichnissen im Hintergrund 
+• Sofortiger Upload für Fotos und Videos, die von Ihrem Gerät aufgenommen wurden 
+• Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-Unterstützung)
 
 Probleme
 
@@ -84,40 +84,40 @@ Bitte melden Sie alle Probleme unter https://github.com/nextcloud/windows-univer
 Neu bei Nextcloud?
 
 Nextcloud ist ein privater Dateisynchronisierungs-, Dateifreigabe- und Kommunikationsserver. 
-Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle Ã¼ber Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
+Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle über Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
 
-Schauen Sie sich Nextcloud unter https://nextcloud.com an";;;;;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in KÃ¼rze auch UWP) zugreifen kÃ¶nnen.
+Schauen Sie sich Nextcloud unter https://nextcloud.com an";;;;;"Dies ist die Nextcloud App, mit der Sie auf alle Ihre Dateien auf Windows Mobile (... und in Kürze auch UWP) zugreifen können.
 
-Diese App ist als uneingeschrÃ¤nkt Testversion verfÃ¼gbar, wer aber das Projekt unterstÃ¼tzen mÃ¶chte, kann dies mit einer Spende von 99 Cent tun.
+Diese App ist als uneingeschränkt Testversion verfügbar, wer aber das Projekt unterstützen möchte, kann dies mit einer Spende von 99 Cent tun.
 
 Bereits implementierte Funktionen: 
-â€¢ Einfache, moderne BenutzeroberflÃ¤che 
-â€¢ Dateien auf Ihrem Nextcloud Server hochladen 
-â€¢ Dateien von Ihrem Nextcloud Server herunterladen
-â€¢ Dateien und Ordner verschieben
-â€¢ Dateien und Ordner umbenennen
-â€¢ Manuelle Ordner-Synchronisation
-â€¢ Ordner als ZIP-Dateien herunterladen
-â€¢ Mehrere Dateien und Ordner auswÃ¤hlen
-â€¢ Elemente kÃ¶nnen als Favoriten in der App markiert werden
-â€¢ OrdnrergrÃ¶ÃŸen in der Listenasicht anzeigen
-â€¢ Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewÃ¤hlt/gesamt)
-â€¢ Sortierung nach Datentyp
-â€¢ Neue Ansichten Favoriten/Shares
-â€¢ Dateien und Ordner auf dem Startbildschirm ablegen
-â€¢ Windows Hello fÃ¼r die Anmeldung beim App-Start benutzen
-â€¢ Experten-Modus zur Anzeige erweiterter Informationen
-â€¢ Selbst-signierte SSL-Zertifikate erlauben
-â€¢ Dateien mit der App teilen
-â€¢ Theming (dunkel/hell/System)
-â€¢ Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
+• Einfache, moderne Benutzeroberfläche 
+• Dateien auf Ihrem Nextcloud Server hochladen 
+• Dateien von Ihrem Nextcloud Server herunterladen
+• Dateien und Ordner verschieben
+• Dateien und Ordner umbenennen
+• Manuelle Ordner-Synchronisation
+• Ordner als ZIP-Dateien herunterladen
+• Mehrere Dateien und Ordner auswählen
+• Elemente können als Favoriten in der App markiert werden
+• Ordnrergrößen in der Listenasicht anzeigen
+• Statusleiste in der Listenansicht zeigt Anzahl der Elemente (ausgewählt/gesamt)
+• Sortierung nach Datentyp
+• Neue Ansichten Favoriten/Shares
+• Dateien und Ordner auf dem Startbildschirm ablegen
+• Windows Hello für die Anmeldung beim App-Start benutzen
+• Experten-Modus zur Anzeige erweiterter Informationen
+• Selbst-signierte SSL-Zertifikate erlauben
+• Dateien mit der App teilen
+• Theming (dunkel/hell/System)
+• Passwort-Tresor zum Speichern von Anmeldeinformationen verwenden
 
-Geplant fÃ¼r nÃ¤chste Versionen: 
-â€¢ Teilen Ihrer Dateien und Ordner mit anderen 
-â€¢ Verwaltung von Shares 
-â€¢ Synchronisieren von ausgewÃ¤hlten Verzeichnissen im Hintergrund 
-â€¢ Sofortiger Upload fÃ¼r Fotos und Videos, die von Ihrem GerÃ¤t aufgenommen wurden 
-â€¢ Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-UnterstÃ¼tzung)
+Geplant für nächste Versionen: 
+• Teilen Ihrer Dateien und Ordner mit anderen 
+• Verwaltung von Shares 
+• Synchronisieren von ausgewählten Verzeichnissen im Hintergrund 
+• Sofortiger Upload für Fotos und Videos, die von Ihrem Gerät aufgenommen wurden 
+• Verwalten von mehr als einem Benutzerkonto / Nextcloud Server (Multi-Account-Unterstützung)
 
 Probleme
 
@@ -126,10 +126,19 @@ Bitte melden Sie alle Probleme unter https://github.com/nextcloud/windows-univer
 Neu bei Nextcloud?
 
 Nextcloud ist ein privater Dateisynchronisierungs-, Dateifreigabe- und Kommunikationsserver. 
-Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle Ã¼ber Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
+Die Serversoftware ist komplett Open Source und kann von Ihnen selbst oder von einer von Ihnen beauftragten Firma gehostet werden. So haben Sie die Kontrolle über Ihre Fotos, Ihren Kalender und Ihre Kontaktdaten, Ihre Dokumente und alles andere.
 
 Schauen Sie sich Nextcloud unter https://nextcloud.com an";;;;;;;;;;;;;;;;;;;;;;
-ReleaseNotes;3;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ReleaseNotes;3;Text;"Version 1.1.1
+
+• Error correction
+• Update of the language packs";;"Version 1.1.1
+
+• Fehlerkorrektur
+• Update der Sprachpakete";;;;;"Version 1.1.1
+
+• Fehlerkorrektur
+• Update der Sprachpakete";;;;;;;;;;;;;;;;;;;;;;
 Title;4;Text;Nextcloud;;Nextcloud;;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud;Nextcloud
 ShortTitle;5;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 SortTitle;6;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -221,7 +230,7 @@ XboxFeaturedPromo1080x1080;610;Relativer Pfad (oder URL zur Datei in Dev Center)
 OptionalPromo358x358;611;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647334;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762576;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762576;;;;;;;;;;;;;;;;;;;;;;
 OptionalPromo1000x800;612;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647996;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762578;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762578;;;;;;;;;;;;;;;;;;;;;;
 OptionalPromo414x180;613;Relativer Pfad (oder URL zur Datei in Dev Center);https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953639/listingassets/1152921504712647664;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762579;;;;;https://developer.microsoft.com/en-us/dashboard/apps/9NBLGGH532XQ/submissions/1152921504626829706/listings/1152921504654953640/listingassets/1152921504712762579;;;;;;;;;;;;;;;;;;;;;;
-Feature1;700;Text;Easy, modern interface;;Einfache, moderne BenutzeroberflÃ¤che;;;;;Einfache, moderne BenutzeroberflÃ¤che;;;;;;;;;;;;;;;;;;;;;;
+Feature1;700;Text;Easy, modern interface;;Einfache, moderne Benutzeroberfläche;;;;;Einfache, moderne Benutzeroberfläche;;;;;;;;;;;;;;;;;;;;;;
 Feature2;701;Text;Upload your files to your Nextcloud server;;Laden Sie Ihre Dateien auf Ihren Nextcloud Server;;;;;Laden Sie Ihre Dateien auf Ihren Nextcloud Server;;;;;;;;;;;;;;;;;;;;;;
 Feature3;702;Text;Download files from your Nextcloud server;;Dateien von Ihrem Nextcloud Server herunterladen;;;;;Dateien von Ihrem Nextcloud Server herunterladen;;;;;;;;;;;;;;;;;;;;;;
 Feature4;703;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -265,7 +274,7 @@ RecommendedHardwareReq10;859;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 RecommendedHardwareReq11;860;Text;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 SearchTerm1;900;Text;Nextcloud;;Nextcloud;;;;;Nextcloud;;;;;;;;;;;;;;;;;;;;;;
 SearchTerm2;901;Text;ownCloud;;ownCloud;;;;;ownCloud;;;;;;;;;;;;;;;;;;;;;;
-SearchTerm3;902;Text;productivity;;ProduktivitÃ¤t;;;;;ProduktivitÃ¤t;;;;;;;;;;;;;;;;;;;;;;
+SearchTerm3;902;Text;productivity;;Produktivität;;;;;Produktivität;;;;;;;;;;;;;;;;;;;;;;
 SearchTerm4;903;Text;utility;;Dienstprogramm;;;;;Dienstprogramm;;;;;;;;;;;;;;;;;;;;;;
 SearchTerm5;904;Text;file sharing;;file sharing;;;;;file sharing;;;;;;;;;;;;;;;;;;;;;;
 SearchTerm6;905;Text;app;;App;;;;;App;;;;;;;;;;;;;;;;;;;;;;
