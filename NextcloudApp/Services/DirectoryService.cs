@@ -98,8 +98,8 @@ namespace NextcloudApp.Services
         public void GroupByNameAscending()
         {
             IsSorting = true;
-            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
-            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => string.IsNullOrEmpty(x.Name) ? string.Empty : x.Name.First().ToString().ToUpper());
+            _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => string.IsNullOrEmpty(x.Name) ? string.Empty : x.Name.First().ToString().ToUpper());
             FirePropertyChangedFilesAndFolders();
             IsSorting = false;
             SettingsService.Default.Value.LocalSettings.GroupMode = GroupMode.GroupByNameAscending;
