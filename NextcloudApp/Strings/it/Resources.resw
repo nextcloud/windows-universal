@@ -491,7 +491,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Suggerimento</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>L&apos;elenco degli errori che si sono verificati durante la sincronizzazione. Potrebbero essere problemi temporanei (ad es. file aperto da un&apos;altra applicazione) e dovrebbero risolversi dopo la successiva sincronizzazione.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Attenzione ai conflitti!</value>
@@ -528,13 +528,13 @@ Riprova più tardi.</value>
     <value>Sincronizzazione della cartella {0} terminata con {1} modifiche e {2} errori o conflitti.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Sincronizzazione della cartella {0} terminata con {1} modifiche.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>La sincronizzazioni è stata completata</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>La sincronizzazione della cartella {0} è stata interrotta, poiché l&apos;applicazione è stata sospesa.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Sincronizzazione sospesa</value>
@@ -549,7 +549,7 @@ Riprova più tardi.</value>
     <value>Percorso Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Scegli la cartella dove vuoi caricare i file</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Cartelle</value>
@@ -650,7 +650,7 @@ Riprova più tardi.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Nessun URL del server specificato. Digita l&apos;URL della tua istanza di Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Mantieni come è</value>
