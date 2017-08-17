@@ -417,25 +417,25 @@ Potresti informare gli sviluppatori dell&apos;applicazione e inviare il resocont
     <value>Aggiorna</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Spostare file e cartelle
+• Rinominare file e cartelle
+• Sincronizzazione manuale delle cartelle
+• Scaricare le cartelle come file ZIP 
+• Selezionare più file e cartelle
+• Gli elementi possono essere marcati come preferiti dall&apos;applicazione
+• La dimensione delle cartelle è mostrata nell&apos;elenco delle cartelle
+• La barra di stato nell&apos;elenco delle cartelle mostra il numero dei file selezionati/totali
+• Ordinare per tipo di dati
+• Nuove viste per preferiti/condivisioni
+• Appuntare file e cartelle sulla schermata iniziale
+• Utilizzare Windows Hello per autenticare all&apos;avvio dell&apos;applicazione
+• La modalità esperta mostra informazioni avanzate nell&apos;applicazione
+• Consentiti certificati SSL auto-firmati
+• Condividere file con l&apos;applicazione
+• Temi (scuro/chiaro/sistema)
+• Utilizzare la cassaforte delle password per memorizzare le credenziali degli utenti
+• Nuova e più stabile libreria WebDAV
+• Miglioramenti di sicurezza e correzioni di bug</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Aggiungi a Start</value>
@@ -497,7 +497,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Attenzione ai conflitti!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Sia la cartella remota che quella locale sono vuote. Ciò potrebbe dar luogo a molti conflitti, poiché l&apos;applicazione non sa quali file siano quelli corretti.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>La sincronizzazioni è stata innescata</value>
@@ -558,10 +558,10 @@ Riprova più tardi.</value>
     <value>Elementi: {0} (cartelle: {1} file: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Quando la modalità esperta è abilitata, l&apos;applicazione fornisce alcune funzionalità/informazioni aggiuntive, che potrebbe non interessare tutti gli utenti.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignora certificati SSL auto-firmati non validi. Ciò consente di utilizzare autorità di certificazione non valide o non corrette. Fai attenzione, non sarai più protetto da attacchi Man-in-the-middle (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronizza questa cartella</value>
@@ -677,7 +677,7 @@ Riprova più tardi.</value>
     <value>Deseleziona tutto</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Sei sicuro di voler ripristinare questa applicazione? Ciò ripristinerà l&apos;intera applicazione e le impostazioni di sincronizzazione.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Ripristina questa applicazione</value>
