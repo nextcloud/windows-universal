@@ -118,574 +118,574 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Όλα τα αρχεία</value>
+    <value>Visi failai</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Πάντα</value>
+    <value>Visada</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Παρουσιάστηκε σφάλμα</value>
+    <value>Įvyko klaida</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Προσθήκη</value>
+    <value>Pridėti</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Δημιουργία φακέλου</value>
+    <value>Sukurti aplanką</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Λήψη φωογραφίας</value>
+    <value>Fotografuoti</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Μεταφόρτωση αρχείων</value>
+    <value>Įkelti failus</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Μεταφόρτωση φωτογραφιών</value>
+    <value>Įkelti nuotraukas</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Λήψη</value>
+    <value>Atsisiųsti</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Ανανέωση</value>
+    <value>Įkelti iš naujo</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Ταξινόμηση</value>
+    <value>Rikiuoti</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Ημερομηνία (παλαιότερη στην κορυφή)</value>
+    <value>Data (seniausi viršuje)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Ημερομηνία (νεότερη στην κορυφή)</value>
+    <value>Data (naujausi viršuje)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Pavadinimą (nuo A iki Z)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Pavadinimą (nuo Z iki A)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Dydį (mažiausi viršuje)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Dydį (didžiausi viršuje)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Tipą( nuo A iki Z)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Tipą( nuo Z iki A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Σφάλμα εφαρμογής</value>
+    <value>Programos klaida</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Η εφαρμογή αντιμετώπισε κάποιο πρόβλημα. Λυπούμαστε για την αναστάτωση. Εάν είσασταν εν μέσω κάποιας εργασίας τα δεδομένα της χάθηκαν.
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
 
-Θέλετε να ενημερώσετε τους προγραμματιστές και να παρέχεται μια αναφορά λάθους? Αυτό βοηθάει στο να εξαλειφθεί το πρόβλημα ποιο γρήγορα.</value>
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Άκυρο</value>
+    <value>Atsisakyti</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Αδυναμία δημιουργίας φακέλου</value>
+    <value>Nepavyksta sukurti aplanko</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Σύνδεση</value>
+    <value>Prisijungti</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Περιεχόμενο-Τύπος</value>
+    <value>Turinio tipas</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Δημιουργία</value>
+    <value>Sukurti</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Δημιουργήθηκε</value>
+    <value>Sukurta</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Δημιουργία νέου φακέλου</value>
+    <value>Sukurti naują aplanką</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Γίνεται λήψη του αρχείου...</value>
+    <value>Atsiunčiamas failas…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Λήψη προεπισκόπησης εικόνων</value>
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETag</value>
+    <value>Etag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0}({1} baitai)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Όνομα φακέλου</value>
+    <value>Aplanko pavadinimas</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Πληροφορίες</value>
+    <value>Informacija</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Τελευταία τροποποίηση</value>
+    <value>Paskutinis keitimas</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Όνομα</value>
+    <value>Pavadinimas</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Ποτέ</value>
+    <value>Niekada</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Νέος φάκελος</value>
+    <value>Naujas aplankas</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Όχι</value>
+    <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Δεν πιστοποιήθηκε</value>
+    <value>Neautorizuotas</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Ο διακομιστής επέστρεψε μήνυμα λάθους 401 (μη εξουσιοδοτημένη πρόσβαση). Παρακαλώ προσπαθήστε είσοδο εκ&apos;νέου.</value>
+    <value>Serveris grąžino klaidos kodą 401 (Nesankcionuota). Prašome prisijungti dar kartą.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>Gerai</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Συνθηματικό</value>
+    <value>Slaptažodis</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Διαδρομή</value>
+    <value>Kelias</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} από {1} χρησιμοποιήθηκε</value>
+    <value>panaudota {0} iš {1}</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Eπαναφορά της εφαρμογής</value>
+    <value>Atstatyti šią programėlę</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Δοκιμή ξανά</value>
+    <value>Pabandyti iš naujo</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Διεύθυνση διακομιστή</value>
+    <value>Serverio adresas</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Ρυθμίσεις</value>
+    <value>Nustatymai</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Ρυθμίσεις</value>
+    <value>Nustatymai</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Προβολή ομαδοποίησης λίστας αρχείου και φακέλου</value>
+    <value>Show file and folder list grouping</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Μέγεθος</value>
+    <value>Dydis</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Υπάρχει ήδη ένα στοιχείο με το ίδιο όνομα. Καθορίστε ένα διαφορετικό όνομα.</value>
+    <value>Elementas tokiu pavadinimu jau yra. Nurodykite kitą pavadinimą.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Τύπος</value>
+    <value>Tipas</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Όνομα χρήστη</value>
+    <value>Naudotojo vardas</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Έκδοση {0}</value>
+    <value>{0} versija</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Μόνο όταν είμαι συνδεδεμένος σε ασύρματο δίκτυο Wi-Fi</value>
+    <value>Tik prisijungus prie Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Ναι</value>
+    <value>Taip</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Διαγραφή</value>
+    <value>Ištrinti</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Διαγραφή αρχείου</value>
+    <value>Ištrinti failą</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Σίγουρα θέλετε να διαγράψετε το αρχείο {0} ;</value>
+    <value>Ar tikrai norite ištrinti failą {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Διαγραφή φακέλου</value>
+    <value>Ištrinti aplanką</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Είστε σίγουρος, για την διαγραφή του φακέλου {0}</value>
+    <value>Ar tikrai norite ištrinti katalogą{0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} από {1} μεταφορτώθηκαν </value>
+    <value>{0} iš {1} įkelta</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Μεταφόρτωση αρχείου {0} από {1}…</value>
+    <value>Įkeliamas {0} failas iš {1}</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Μεταφόρτωση του αρχείου...</value>
+    <value>Įkeliamas failas</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>Λήφθησαν {0} από {1}</value>
+    <value>{0} iš {1} atsiųsta</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Ενεργοποιήθηκε η κατάσταση συντήρησης σε αυτόν τον διακομιστή.</value>
+    <value>Serveryje yra įjungta techninės priežiūros veiksena.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Εσφαλμένο όνομα χρήστη ή συνθηματικό.</value>
+    <value>Neteisingas naudotojo vardas ar slaptažodis.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Έκδοση πελάτη {0}</value>
+    <value>Kliento versija {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Το όνομα ή η διεύθυνση του διακομιστή δεν επιλύθηκε</value>
+    <value>Nepavyko rasti serverio pagal vardą ar adresą.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Έκδοση διακομιστή {0}</value>
+    <value>Serverio versija {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Διαγραφή</value>
+    <value>Ištrinti</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>αναμονή απόκρισης διακομιστή</value>
+    <value>laukiame serverio atsako</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Παρακαλούμε επιλέξτε νέο όνομα</value>
+    <value>Pasirinkite naują pavadinimą</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Μετονομασία</value>
+    <value>Pervadinti</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Μετονομασία</value>
+    <value>Pervadinti</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Μετονομασία</value>
+    <value>Pervadinti</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Μετακίνηση σε</value>
+    <value>Perkelti į</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Μετακίνηση σε</value>
+    <value>Perkelti į</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Άκυρο</value>
+    <value>Atsisakyti</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Ολοκληρώθηκε</value>
+    <value>Atlikta</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Επιλογή φακέλου</value>
+    <value>Pasirinkti aplanką</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Ο διακομιστής με διεύθυνση {0} δεν είναι προσβάσιμος.</value>
+    <value>Serveris, kurio adresas {0} yra nepasiekiamas.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Λήψη ως αρχείο ZIP</value>
+    <value>Atsisiųsti kaip ZIP failą</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} λήφθηκαν</value>
+    <value>{0} atsiųsta</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Για πρόσβαση στο Nextcloud, δηλώστε τα στοιχεία εισόδου της συσκευής σας.</value>
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello πιστοποίηση</value>
+    <value>Windows Hello authentication</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Κανένα PIN δεν έχει δηλωθεί σε αυτή την συσκευή. Για να χρησιμοποιήσετε το Windows Hello πρέπει να οριστεί το PIN.</value>
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Λήψη</value>
+    <value>Atsisiųsti</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Απαιτείται είσοδος</value>
+    <value>Prisijungimas būtinas</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Δεν μπορεί να δοθεί πρόσβαση στο Nextcloud αν δεν παρέχεται τα στοιχεία εισόδου της συσκευής σας.</value>
+    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Δοκιμή ξανά</value>
+    <value>Pabandyti iš naujo</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud για Windows Mobile</value>
+    <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Η εφαρμογή σας ενημερώθηκε στην έκδοση {0}</value>
+    <value>Programėlė atnaujinta į {0} versiją</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Νέα χαρακτηριστικά και βελτιώσεις σε αυτή την έκδοση:</value>
+    <value>Naujos ypatybės ir patobulinimai šioje versijoje:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Προτείνεται</value>
+    <value>Rekomenduoti</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Ενημέρωση</value>
+    <value>Atnaujinti</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Μεταφορά αρχείων και φακέλων
-• Μετονομασία αρχείων και φακέλων
-• Χειροκίνητος συγχρονισμός φακέλων
-• Μεταφόρτωση αρχείων ως συμπιεσμένου φακέλου 
-• Επιλέξτε πολλαπλά αρχεία και φακέλους
-• Στοιχεία μπορούν να επισημανθούν ως αγαπημένα εσωτερικά της εφαρμογής
-• Το μέγεθος των φακέλων εμφανίζεται στη λίστα καταλόγων
-• Η γραμμή κατάστασης στη λίστα καταλόγων που δείχνει τον αριθμό των επιλεγμένων / συνολικών αρχείων
-• Ταξινόμηση για τύπο δεδομένων
-• Νέες προβολές για αγαπημένα / διαμοιρασμούς
-• Καρφιτσώστε αρχεία και φακέλους στην αρχική οθόνη
-• Χρησιμοποιήστε Windows Hello στο ξεκίνημα της εφαρμογής
-• Εξειδικευμένη λειτουργία εμφανίζει προηγμένες πληροφορίες στην εφαρμογή
-• Επιτρέψτε υπογεγραμμένα SSL πιστοποιητικά
-• Διαμοιράστε αρχεία με την εφαρμογή
-• Θέματα (dark/light/system)
-• Χρησιμοποιήστε το αποθετήριο για την αποθήκευση στοιχείων χρηστών
-• Νέα και περισσότερο σταθερή βιβλιοθήκη WebDAV
-• Βελτιώσεις σε θέματα ασφάλειας &amp; διόρθωση σφαλμάτων</value>
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Καρφίτσωμα στην έναρξη</value>
+    <value>Pin to start</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Καρφίτσωμα στην έναρξη</value>
+    <value>Pin to start</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Σύνδεση</value>
+    <value>Prisijungti</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Παραβλέψτε μη έγκυρα αυτό-υπογεγραμμένα πιστοποιητικά</value>
+    <value>Nepaisyti savarankiškai pasirašytų SSL sertifikatų</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Λειτουργία για προχωρημένους</value>
+    <value>Expert mode</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Κατάσταση συγχρονισμού</value>
+    <value>Synchronization status</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>Ιστορικό</value>
+    <value>Istorija</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Διενέξεις</value>
+    <value>Conflicts</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Σφάλματα</value>
+    <value>Klaidos</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Συγχρονισμός</value>
+    <value>Sinchronizuojama</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Προτιμώμενο τοπικό αρχείο</value>
+    <value>Prefer local file</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Εκκαθάριση ιστορικού συγχρονισμού</value>
+    <value>Ištrinti  sinchronizavimo istoriją</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Προτιμώμενο απομαρυσμένο αρχείο</value>
+    <value>Teikti pirmenybę nuotoliniam failui</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>Ο φορέας πιστοποίησης δεν είναι έγκυρος ή σωστός. Να γίνει η σύνδεση ούτως ή άλλως?
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
 
-Προσοχή, δεν προστατεύεστε από Man-in-the-middle (mitm) επιθέσεις!</value>
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Προσοχή!</value>
+    <value>Dėmėsio!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Για να εφαρμοστεί η ρύθμιση, χρειάζεται επανεκίνηση της εφαρμογής.</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Συμβουλή</value>
+    <value>Hint</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Λίστα λαθών που εμφανίστηκαν κατά την διάρκεια του συγχρονισμού. Αυτά μπορεί να αποτελούν προσωρινά λάθη (Π.χ. κάποιο αρχείο ήταν ανοικτό από άλλη εφαρμογή) και θα πρέπει να μην εμφανισθεί ξανά μετά την πραγματοποίηση συχρονισμού.</value>
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Προσοχή στις διενέξεις!</value>
+    <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Ο απομακρυσμένος και ο τοπικός φάκελος δεν είναι άδειοι. Αυτό μπορεί να προκαλέσει μια σειρά από διενέξεις, λόγω του γεγονότος ότι η εφαρμογή δεν γνωρίζει ποια αρχεία είναι τα σωστά.</value>
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Ο συγχρονισμός ξεκίνησε</value>
+    <value>Synchronization has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Ο συγχρονισμός θα εκτελεστεί στο παρασκήνιο. Θα ειδοποιηθείτε μόλις τελειώσει.</value>
+    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Η υπηρεσία είναι προσωρινά μη διαθέσιμη (συνήθως λόγω κάποιας μικρής-διάρκειας εργασίες συντήρησης).
-Παρακαλώ προσπαθήστε ξανά σε λίγο.</value>
+    <value>Paslauga laikinai neprieinama (dažniausiai dėl trumpalaikių techninės priežiūros darbų).
+Prašome vėliau bandyti dar kartą.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Τα αρχεία αλλάχθηκαν τοπικά και απομακρυσμένα. Ποιο από τα δύο προτιμάτε?</value>
+    <value>File changed locally and remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Το αρχείο έχει δημιουργηθεί απομακρυσμένα και τοπικά - ποιο είναι το σωστό?</value>
+    <value>File has been created remotely and locally - which is the correct one?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Το αρχείο διαγράφηκε τοπικά αλλά αλλάχτηκε απομακρυσμένα. Ποιο προτιμάτε;</value>
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Διένεξη:</value>
+    <value>Conflict: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Το αρχείο διαγράφθηκε απομακρυσμένα αλλά άλλαξε τοπικά. Ποιο προτιμάτε?</value>
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Ολοκληρώθηκε ο συγχρονισμός του φακέλου {0} με {1} αλλαγές και {2} σφάλματα ή διενέξεις.</value>
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Ο συγχρονισμός του φακέλου {0} τελείωσε με {1} αλλαγές.</value>
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Ο συγχρονισμός τελείωσε</value>
+    <value>Synchronization has been finished</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Ο συγχρονισμός φακέλου {0}σταμάτησε, λόγω ότι η εφαρμογή αναστάλθηκε.</value>
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Ο συγχρονισμός αναστάλθηκε</value>
+    <value>Synchronization suspended</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Κατάσταση συγχρονισμού</value>
+    <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Τοπική διαδρομή</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud διαδρομή</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Επιλέξτε τον φάκελο όπου θα μετοφορτωθούν τα αρχεία σας</value>
+    <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Φάκελοι</value>
+    <value>Aplankai</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Αντικείμενα: {0} (φάκελοι: {1} αρχεία: {2})</value>
+    <value>Items: {0} (folders: {1} files: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Όταν η λειτουργία για προχωρημένους είναι ενεργοποιημένη, η εφαρμογή παρέχει  επιπλέον χαρακτηριστικά/πληροφορίες, οι οποίες μπορεί να μην ενδιαφέρουν όλους τους χρήστες. </value>
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Παράβλεψη μη έγκυρων αυτό-υπογεγραμμένων SSL πιστοποιητικών. Αυτό επιτρέπει μη έγκυρα ή μη σωστά SSL πιστοποιητικά να χρησιμοποιηθούν. Προσοχή, δεν προστατεύεστε πλέον από man-in-the-middle (ΜΙΤΜ) επιθέσεις.</value>
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Συγχρονισμός αυτού του φακέλου</value>
+    <value>Sinchronizuoti šį aplanką</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Διακοπή συγχρονισμού αυτού του φακέλου</value>
+    <value>Nebesinchronizuoti šio aplanko</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Διακοπή συγχρονισμού</value>
+    <value>Sustabdyti sinchronizavimą</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Κατάσταση συγχρονισμού</value>
+    <value>Sinchronizavimo būsena</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Συγχρονισμός τώρα</value>
+    <value>Sinchronizuoti dabar</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Συγχρονισμός</value>
+    <value>Sinchronizuoti</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Συγχρονισμός αυτού του φακέλου τώρα</value>
+    <value>Sinchronizuoti šį aplanką</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Συγχρονισμός φακέλου</value>
+    <value>Sinchronizuoti šį aplanką</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Σκοτεινό</value>
+    <value>Tamsus</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Φωτεινό</value>
+    <value>Šviesus</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Χρησιμοποιήστε τις ρυθμίσεις συστήματος</value>
+    <value>Naudoti sisteminius nustatymus</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Επιλέξτε λειτουργία</value>
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Διαμοιρασμένα με άλλους</value>
+    <value>Dalinamasi su kitais</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Αγαπημένα</value>
+    <value>Mėgstamiausi</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Διαμοιρασμένα με εμένα</value>
+    <value>Dalinamasi su manimi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Διαμοιράστηκε μέσω συνδέσμου</value>
+    <value>Dalinamasi per nuorodą</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Προτειμασία διαμοιρασμού...</value>
+    <value>Pasiruošti dalinimuisi...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Δημιουργία φακέλου</value>
+    <value>Sukurti aplanką</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Σφάλμα κατά τη δημιουργία πελάτη για την επικοινωνία με το WebDAV</value>
+    <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Δεν πραγματοποιήθηκε η δημιουργία φακέλου &apos;{0}&apos; στο Nextcloud</value>
+    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Η διαγραφή του &apos;{0}&apos; στο Nextcloud απέτυχε.</value>
+    <value>Nepavyko ištrinti {0} Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Προέκυψε λάθος  κατά την λήψη αρχείου &apos;{0}&apos; από το Nextcloud.</value>
+    <value>Klaida atsiunčiant &apos;{0}&apos; failą iš Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Προέκυψε λάθος κατά την μεταφόρτωση του αρχείου &apos;{0}&apos; στο Nextcloud.</value>
+    <value>Klaida įkeliant &apos;{0}&apos; failą į Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Επιθυμείτε να γίνει αντικατάσταση του?</value>
+    <value>Do you want to overwrite it?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Το αρχείο υπάρχει ήδη</value>
+    <value>Failas jau yra.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Αντικατάσταση</value>
+    <value>Perrašyti</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Αναπάντεχο Σφάλμα: {0}</value>
+    <value>Netikėta klaida: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Δεν προσδιορίστηκε το URL του διακομιστή. Παρακαλώ πληκτρολογήστε το URL της Nextcloud εγκατάστασης.</value>
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Διατήρηση ως έχει</value>
+    <value>Palikti kaip yra</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>Η λύση μπορεί να εφαρμοστεί εάν το αρχείο υπάρχει απομακρυσμένα και τοπικά</value>
+    <value>Šis sprendimas pritaikomas tik tada, kai failas yra serveryje ir įrenginyje</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Προσοχή</value>
+    <value>Dėmėsio</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>Πως λειτουργεί η λειτουργία για προχωρημένους?</value>
+    <value>Kaip veikia eksperto režimas?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>Ποιο το νόημα αυτού?</value>
+    <value>Kokia to prasmė?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows ρυθμίσεις χρωμάτων</value>
+    <value>Lango spalvų nustatymai</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Επιλογή όλων</value>
+    <value>Pasirinkti viską</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Αποεπιλογή όλων</value>
+    <value>Nieko nepasirinkti</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Είστε σίγουρος για την επαναφορά της εφαρμογής? Η ενέργεια αυτή θα κάνει επαναφορά όλη την εφαρμογή και τις ρυθμίσεις συγχρονισμού.</value>
+    <value>Ar tikrai atstatyti šia programėlę? Bus atkurti visi programėlės ir sinchronizavimo nustatymai.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Επαναφορά της εφαρμογής στο αρχικό στάδιο</value>
+    <value>Atstatyti šią programėlę</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Διαγραφή αρχείων</value>
+    <value>Ištrinti failus</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Είστε σίγουρος(η), για την διαγραφή των επιλγμένων αρχείων?</value>
+    <value>Ar tikrai norite ištrinti pasirinktus failus?</value>
   </data>
 </root>
