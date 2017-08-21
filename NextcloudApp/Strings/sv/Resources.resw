@@ -500,14 +500,14 @@ Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attack
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Synkronisering har skapats!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synkronisering kommer göras i bakgrunden. Du blir meddelad när det är färdigt.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Tjänsten är tillfälligt otillgänglig (vanligtvis på grund av ett kort underhållsarbete).
+Försök igen senare.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Fil ändrades lokalt eller externt. Vilket föredrar du?</value>
@@ -525,10 +525,10 @@ Please try again later.</value>
     <value>Borttagen fil externt men ändrades lokalt. Vilket föredrar du?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Synkronisering av mapp {0} blev färdig med {1} ändringar och {2} fel och konflikter.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Synkronisering av mapp {0} färdig med {1} ändringar.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Synkronisering har blivit färdig</value>
@@ -594,13 +594,13 @@ Please try again later.</value>
     <value>Ljus</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Använd systeminställningarna</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Välj ett läge</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Delad med andra</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favoriter</value>
@@ -609,27 +609,27 @@ Please try again later.</value>
     <value>Delad med mig</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Delad via länk</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Förbered för delning...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Skapa mapp</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Fel när klienten för WebDAV-kommunikationen skulle skapas</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Kunde inte skapa mapp &apos;{0}&apos; på Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Borttagande av &apos;{0}&apos; på Nextcloud misslyckades.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Fel när filen &apos;{0}&apos; laddades ner från Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
