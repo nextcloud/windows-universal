@@ -148,7 +148,6 @@ namespace NextcloudApp.ViewModels
             await Directory.StartDirectoryListing(null, "sharesOut");
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(DirectoryListPageViewModel.StatusBarText));
         }
     }
 }

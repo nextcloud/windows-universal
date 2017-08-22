@@ -15,7 +15,6 @@ using Windows.Storage;
 using Windows.Storage.AccessCache;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using System.Linq;
 
 namespace NextcloudApp.ViewModels
 {
@@ -25,7 +24,6 @@ namespace NextcloudApp.ViewModels
         private DirectoryService _directoryService;
         private readonly TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
-        private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
@@ -164,7 +162,6 @@ namespace NextcloudApp.ViewModels
                 Directory.RebuildPathStackFromResourceInfo(resourceInfo);
             }
 
-            _selectedPathIndex = Directory.PathStack.Count - 1;
             _isNavigatingBack = false;
             StartDirectoryListing();
         }
@@ -501,7 +498,6 @@ namespace NextcloudApp.ViewModels
             await Directory.DeleteResource((ResourceInfo) parameter);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private async void DeleteSelected(object parameter)
@@ -543,7 +539,6 @@ namespace NextcloudApp.ViewModels
             await Directory.DeleteSelected(selectedItems);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private void PinToStart(object parameter)
@@ -652,7 +647,6 @@ namespace NextcloudApp.ViewModels
                 if (success)
                 {
                     SelectedFileOrFolder = null;
-                    RaisePropertyChanged(nameof(StatusBarText));
                     return;
                 }
 
@@ -676,7 +670,6 @@ namespace NextcloudApp.ViewModels
                     continue;
                 }
                 SelectedFileOrFolder = null;
-                RaisePropertyChanged(nameof(StatusBarText));
                 return;
             }
         }
@@ -765,7 +758,6 @@ namespace NextcloudApp.ViewModels
                 }
                 catch
                 {
-                    _selectedPathIndex = -1;
                     return;
                 }
 
@@ -789,7 +781,6 @@ namespace NextcloudApp.ViewModels
                     {
                         ResourceInfo = value
                     });
-                    SelectedPathIndex = Directory.PathStack.Count - 1;
                 }
                 else
                 {
@@ -802,38 +793,6 @@ namespace NextcloudApp.ViewModels
             }
         }
 
-        public int SelectedPathIndex
-        {
-            get => _selectedPathIndex;
-            set
-            {
-                try
-                {
-                    if (!SetProperty(ref _selectedPathIndex, value))
-                    {
-                        return;
-                    }
-                }
-                catch
-                {
-                    _selectedPathIndex = -1;
-                    return;
-                }
-
-                if (Directory?.PathStack == null)
-                {
-                    return;
-                }
-
-                while (Directory.PathStack.Count > 0 && Directory.PathStack.Count > _selectedPathIndex + 1)
-                {
-                    Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
-                }
-
-                StartDirectoryListing();
-            }
-        }
-
         private async void StartDirectoryListing()
         {
             ShowProgressIndicator();
@@ -842,32 +801,16 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-
-            RaisePropertyChanged(nameof(StatusBarText));
         }
         
         public override bool CanRevertState()
         {
-            return SelectedPathIndex > 0;
+            return Directory.PathStack.Count > 1;
         }
 
         public override void RevertState()
         {
-            SelectedPathIndex--;
-        }
-
-        public string StatusBarText
-        {
-            get
-            {
-                if (Directory == null)
-                {
-                    return string.Empty;
-                }
-                var folderCount = Directory.FilesAndFolders.Count(x => x.IsDirectory);
-                var fileCount = Directory.FilesAndFolders.Count(x => !x.IsDirectory);
-                return string.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                
-            }
+            Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
         }
     }
 }

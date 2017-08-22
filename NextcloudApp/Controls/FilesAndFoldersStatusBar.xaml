@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="NextcloudApp.Controls.FilesAndFoldersStatusBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="48"
+    d:DesignWidth="400"
+    x:Name="UserControl">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <Style x:Key="BorderStyle" TargetType="Border">
+                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorLight2}"/>
+                    </Style>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <Style x:Key="BorderStyle" TargetType="Border">
+                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorDark2}"/>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{ThemeResource BorderStyle}">
+        <TextBlock 
+            Margin="10,3,10,5" 
+            FontSize="12"
+            Text="{Binding StatusBarText, ElementName=UserControl, Mode=OneWay}"
+            Foreground="White"/>
+    </Border>
+    
+</UserControl>

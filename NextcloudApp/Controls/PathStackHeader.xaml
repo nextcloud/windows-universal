@@ -1,0 +1,79 @@
+﻿<UserControl
+    x:Class="NextcloudApp.Controls.PathStackHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    mc:Ignorable="d"
+    d:DesignHeight="48"
+    d:DesignWidth="400"
+    x:Name="UserControl">
+
+    <ListBox 
+        ItemsSource="{Binding Directory.PathStack, ElementName=UserControl}"
+        SelectionMode="Single"
+        SelectedIndex="{Binding SelectedPathIndex, ElementName=UserControl, Mode=TwoWay}"
+        Margin="48,0,0,0">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <VirtualizingStackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+
+        <ListBox.Template>
+            <ControlTemplate TargetType="ItemsControl">
+                <ScrollViewer
+                    HorizontalScrollBarVisibility="Hidden"
+                    VerticalScrollBarVisibility="Hidden">
+                    <ItemsPresenter/>
+                </ScrollViewer>
+            </ControlTemplate>
+        </ListBox.Template>
+
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding ResourceInfo.Name}" />
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+
+        <ListBox.ItemContainerStyle>
+            <Style TargetType="ListBoxItem">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ListBoxItem">
+                            <StackPanel 
+                                Orientation="Horizontal" 
+                                Height="48">
+                                <FontIcon 
+                                    Glyph="&#xE26B;"
+                                    FontSize="8"
+                                    Margin="0,0,8,0"
+                                    Foreground="White"
+                                    VerticalAlignment="Center"
+                                    Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
+                                <FontIcon 
+                                    Glyph="{StaticResource NextcloudLogo}"
+                                    FontFamily="{StaticResource NextcloudIcons}"
+                                    Margin="8,0,8,0"
+                                    Foreground="White"
+                                    VerticalAlignment="Center"
+                                    Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                <ContentPresenter 
+                                    VerticalAlignment="Center" 
+                                    Margin="0,0,8,0"
+                                    Foreground="White"
+                                    Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ListBox.ItemContainerStyle>
+
+        <interactivity:Interaction.Behaviors>
+            <behaviors:ScrollListBoxToEndBehavior/>
+        </interactivity:Interaction.Behaviors>
+    </ListBox>
+</UserControl>

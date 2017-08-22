@@ -136,6 +136,15 @@
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
     <Compile Include="Constants\ResourceConstants.cs" />
+    <Compile Include="Controls\FileOrFolderListZoomedOutView.xaml.cs">
+      <DependentUpon>FileOrFolderListZoomedOutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilesAndFoldersStatusBar.xaml.cs">
+      <DependentUpon>FilesAndFoldersStatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PathStackHeader.xaml.cs">
+      <DependentUpon>PathStackHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ThemeablePage.cs" />
     <Compile Include="Converter\ConflictTypeNoneToVisibilityConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
@@ -305,9 +314,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Themes\AppBarButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\CommandBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Controls\FileOrFolderListZoomedOutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FilesAndFoldersStatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PathStackHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
     </Page>
     <Page Include="SampleData\SyncConflictSampleData.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -143,8 +143,6 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            // ReSharper disable once ExplicitCallerInfoArgument
-            RaisePropertyChanged(nameof(StatusBarText));
         }
     }
 }

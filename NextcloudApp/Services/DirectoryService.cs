@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
@@ -36,6 +37,8 @@ namespace NextcloudApp.Services
             // Arrange for the first time, so that the collections get filled.
             _groupedFilesAndFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
             _groupedFolders.ArrangeItems(new NameSorter(SortSequence.Asc), x => x.Name.First().ToString().ToUpper());
+            
+            PathStack.CollectionChanged += PathStackOnCollectionChanged;
         }
 
         public static DirectoryService Instance => _instance ?? (_instance = new DirectoryService());
@@ -52,6 +55,15 @@ namespace NextcloudApp.Services
                 IsRoot = true
             }
         };
+
+        private async void PathStackOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
+        {
+            StatusBarService.Instance.ShowProgressIndicator();
+
+            await StartDirectoryListing();
+
+            StatusBarService.Instance.HideProgressIndicator();
+        }
 
         public ObservableCollection<FileOrFolder> FilesAndFolders { get; } = new ObservableCollection<FileOrFolder>();
         public ObservableCollection<FileOrFolder> Folders { get; } = new ObservableCollection<FileOrFolder>();
