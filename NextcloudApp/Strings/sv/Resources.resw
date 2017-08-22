@@ -417,25 +417,25 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Uppdatera</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Flytta filer och mappar
+• Byta namn på filer och mappar
+• Manuell synkronisering av mappar
+• Ladda ner mappar som zip-fil 
+• Markera flera filer och mappar
+• Objekt kan väljas som favorit inuti appen
+• Storleken av mappar visas i mapplistan
+• Statusfält i mapplista visar antalet valda/totala filer
+• Sortera efter datatyp
+• Nya vyer för favoriter/delningar
+• Nåla filer och mappar på startskärmen
+• Använd Windows Hello för att autentisera vid appstart
+• Expertläge visar avancerad information i appen
+• Tilllåt självsignerade SSL-certifikat
+• Dela filer med appen
+• Teman (mörk/ljus/system)
+• Använd Lösenordsvalvet för att lagra användaruppgifter
+• Nytt och mer stabilt WebDAV-bibliotek
+• Säkerhetsförbättringar &amp; buggfixar</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Nåla fast högst upp</value>
@@ -491,13 +491,13 @@ Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attack
     <value>Förslag</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista över felen som inträffade under synkroniseringen. Dessa borde vara temporära problem (t.ex. att filen öppnades av en annan app) och borde försvinna efter nästa synkronisering.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Se upp för konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Både extern och lokal mapp är inte tom. Detta kan resultera i en massa konflikter eftersom appen inte vet vilken filer som är de korrekta</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synkronisering har skapats!</value>
@@ -534,7 +534,7 @@ Försök igen senare.</value>
     <value>Synkronisering har blivit färdig</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Synkronisering av mapp {0} stoppades eftersom appen har blivit avbruten.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synkronisering uppskjuten</value>
@@ -558,10 +558,10 @@ Försök igen senare.</value>
     <value>Objekt: {0} (mappar: {1} filer: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>När expertläge är aktiverat erbjuder appen några extra funktioner/information som kanske inte är så intressanta för alla användare.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorera ogiltiga självsignerade SSL-certifikat. Detta tillåter ogiltiga eller inkorrekta SSL-certifikatbefogenheter att användas. Var försiktig, du kommer inte skyddas från man-in-the-middle (MITM)-attacker längre!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synkronisera denna mapp</value>

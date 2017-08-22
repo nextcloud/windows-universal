@@ -396,7 +396,7 @@ Souhaitez-vous informer les développeurs de l&apos;application et envoyer le ra
     <value>Identification requise</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nous ne pouvons pas lancer Nextcloud jusqu&apos;à ce que vous fournissez les informations de connexion de votre appareil.</value>
+    <value>Impossible de lancer Nextcloud sans informations de connexion.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Essayez à nouveau</value>
