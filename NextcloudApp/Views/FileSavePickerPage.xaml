@@ -16,7 +16,7 @@
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
     </Page.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />

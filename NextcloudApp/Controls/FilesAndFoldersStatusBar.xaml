@@ -14,12 +14,12 @@
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
                     <Style x:Key="BorderStyle" TargetType="Border">
-                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorLight2}"/>
+                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorLight1}"/>
                     </Style>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <Style x:Key="BorderStyle" TargetType="Border">
-                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorDark2}"/>
+                        <Setter Property="Background" Value="{ThemeResource SystemAccentColorDark1}"/>
                     </Style>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>

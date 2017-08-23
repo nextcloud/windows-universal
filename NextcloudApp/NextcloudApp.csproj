@@ -183,6 +183,7 @@
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
     <Compile Include="Services\SyncService.cs" />
+    <Compile Include="Services\ThemeManager.cs" />
     <Compile Include="Services\ToastNotificationService.cs" />
     <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="Utils\Theme.cs" />
+    <Compile Include="Utils\ThemeColor.cs" />
     <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
     <Compile Include="ViewModels\SharesInPageViewModel.cs" />
     <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
@@ -314,6 +316,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Themes\ListViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="Themes\AppBarButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

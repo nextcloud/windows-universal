@@ -328,5 +328,48 @@ namespace NextcloudApp.ViewModels
                 }
             }
         }
+        
+        public ThemeColor ThemeColor
+        {
+            get => SettingsRoaming.ThemeColor;
+            set
+            {
+                if (SettingsRoaming.ThemeColor.Equals(value))
+                {
+                    return;
+                }
+
+                SettingsRoaming.ThemeColor = value;
+
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(ThemeColorAsNextcloud));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(ThemeColorAsSystem));
+            }
+        }
+
+        public bool ThemeColorAsNextcloud
+        {
+            get => ThemeColor.Equals(ThemeColor.Nextcloud);
+            set
+            {
+                if (value)
+                {
+                    ThemeColor = ThemeColor.Nextcloud;
+                }
+            }
+        }
+
+        public bool ThemeColorAsSystem
+        {
+            get => ThemeColor.Equals(ThemeColor.System);
+            set
+            {
+                if (value)
+                {
+                    ThemeColor = ThemeColor.System;
+                }
+            }
+        }
     }
 }

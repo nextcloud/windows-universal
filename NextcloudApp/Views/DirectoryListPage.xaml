@@ -42,33 +42,9 @@
                     ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.SelectionMode}" 
-                    Padding="0,2,0,2">
-                    <ListView.Resources>
-                        <Style x:Key="FileOrFolderHeaderItemStyle" TargetType="ListViewHeaderItem">
-                            <Setter Property="HorizontalAlignment" Value="Stretch" />
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListViewHeaderItem">
-                                        <ContentPresenter 
-                                            x:Name="ContentPresenter" 
-                                            ContentTemplate="{TemplateBinding ContentTemplate}" 
-                                            ContentTransitions="{TemplateBinding ContentTransitions}" 
-                                            Content="{TemplateBinding Content}"
-                                            Background="#00000000"
-                                            HorizontalContentAlignment="Left" 
-                                            VerticalContentAlignment="Center"/>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ListView.Resources>
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="Padding" Value="4,2,4,2"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    <ListView.GroupStyle>
+                    Padding="0,4"
+                    ItemContainerStyle="{StaticResource FileOrFolderItemContainerStyle}">
+                    <ListView.GroupStyle >
                         <GroupStyle HeaderContainerStyle="{StaticResource FileOrFolderHeaderItemStyle}">
                             <GroupStyle.ContainerStyle>
                                 <Style TargetType="GroupItem">
@@ -114,7 +90,7 @@
                                     <TextBlock 
                                         Style="{StaticResource TitleTextBlockStyle}"
                                         HorizontalAlignment="Stretch"
-                                        Padding="4,0,0,0"
+                                        Padding="8,0,0,0"
                                         TextWrapping="NoWrap"
                                         TextTrimming="CharacterEllipsis"
                                         Text="{Binding Key}"/>

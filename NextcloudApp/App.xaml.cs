@@ -152,76 +152,10 @@ namespace NextcloudApp
 
         protected override UIElement CreateShell(Frame rootFrame)
         {
-            if (!new AccessibilitySettings().HighContrast)
-            {
-                var color = Color.FromArgb(255, 0, 130, 201);
-
-                Application.Current.Resources["SystemAccentColorLight3"] = ChangeColorBrightness(color, 0.3f);
-                Application.Current.Resources["SystemAccentColorLight2"] = ChangeColorBrightness(color, 0.2f);
-                Application.Current.Resources["SystemAccentColorLight1"] = ChangeColorBrightness(color, 0.1f);
-                Application.Current.Resources["SystemAccentColor"] = color;
-                Application.Current.Resources["SystemAccentColorDark1"] = ChangeColorBrightness(color, -0.1f);
-                Application.Current.Resources["SystemAccentColorDark2"] = ChangeColorBrightness(color, -0.2f);
-                Application.Current.Resources["SystemAccentColorDark3"] = ChangeColorBrightness(color, -0.3f);
-
-                // Get the instance of the Title Bar
-                var titleBar = ApplicationView.GetForCurrentView().TitleBar;
-
-                // Set the color of the Title Bar content
-                titleBar.BackgroundColor = color;
-                titleBar.ForegroundColor = Colors.White;
-
-                titleBar.InactiveBackgroundColor = color;
-                titleBar.InactiveForegroundColor = ChangeColorBrightness(color, 0.5f);
-
-                // Set the color of the Title Bar buttons
-                titleBar.ButtonBackgroundColor = color;
-                titleBar.ButtonForegroundColor = Colors.White;
-
-                titleBar.ButtonInactiveBackgroundColor = color;
-                titleBar.ButtonInactiveForegroundColor = ChangeColorBrightness(color, 0.7f);
-
-                titleBar.ButtonHoverBackgroundColor = (Color)Application.Current.Resources["SystemAccentColorLight1"];
-                titleBar.ButtonHoverForegroundColor = Colors.White;
-
-                titleBar.ButtonPressedBackgroundColor = (Color)Application.Current.Resources["SystemAccentColorLight2"];
-                titleBar.ButtonPressedForegroundColor = Colors.White;
-            }
+            ThemeManager.Instance.Initialize();
             var shell = Container.Resolve<AppShell>();
             shell.SetContentFrame(rootFrame);
             return shell;
-        }
-
-        /// <summary>
-        /// Creates color with corrected brightness.
-        /// </summary>
-        /// <param name="color">Color to correct.</param>
-        /// <param name="correctionFactor">The brightness correction factor. Must be between -1 and 1. 
-        /// Negative values produce darker colors.</param>
-        /// <returns>
-        /// Corrected <see cref="Color"/> structure.
-        /// </returns>
-        public static Color ChangeColorBrightness(Color color, float correctionFactor)
-        {
-            var red = (float)color.R;
-            var green = (float)color.G;
-            var blue = (float)color.B;
-
-            if (correctionFactor < 0)
-            {
-                correctionFactor = 1 + correctionFactor;
-                red *= correctionFactor;
-                green *= correctionFactor;
-                blue *= correctionFactor;
-            }
-            else
-            {
-                red = (255 - red) * correctionFactor + red;
-                green = (255 - green) * correctionFactor + green;
-                blue = (255 - blue) * correctionFactor + blue;
-            }
-
-            return Color.FromArgb(color.A, (byte) red, (byte) green, (byte) blue);
         }
 
         protected override void OnShareTargetActivated(ShareTargetActivatedEventArgs args)

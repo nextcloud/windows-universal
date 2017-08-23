@@ -688,4 +688,13 @@ Please try again later.</value>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the selected files?</value>
   </data>
+  <data name="SettingsThemeColorNextcloud.Content" xml:space="preserve">
+    <value>Nextcloud theme color</value>
+  </data>
+  <data name="SettingsThemeColorSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
+  </data>
+  <data name="SettingsThemeSelectColor.Text" xml:space="preserve">
+    <value>Accent color</value>
+  </data>
 </root>

@@ -3,11 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:converter="using:NextcloudApp.Converter"
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:behaviors="using:NextcloudApp.Behaviors"
     x:Class="NextcloudApp.Views.SettingsPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
@@ -24,13 +22,41 @@
         </Style>
     </prismMvvm:SessionStateAwarePage.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Settings.Margin" Value="12,0,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Medium">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Settings.Margin" Value="12,0,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Narrow" />
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-        <TextBlock Text="Settings" x:Uid="Settings2" Margin="48,0,0,0" VerticalAlignment="Center"/>
+        <TextBlock 
+            x:Name="Settings"
+            Text="Settings"
+            x:Uid="Settings2" 
+            Margin="48,0,0,0" 
+            VerticalAlignment="Center" 
+            Foreground="White"/>
 
         <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Margin="12">
@@ -124,6 +150,22 @@
                     Content="Use the system settings"
                     IsChecked="{Binding ThemeAsSystem, Mode=TwoWay}"
                     GroupName="SettingsThemeSystem"/>
+
+                <TextBlock
+                    x:Uid="SettingsThemeSelectColor"
+                    Text="Accent color"
+                    Margin="0,12,0,6"/>
+                <RadioButton
+                    x:Uid="SettingsThemeColorNextcloud"
+                    Content="Nextcloud theme color"
+                    IsChecked="{Binding ThemeColorAsNextcloud, Mode=TwoWay}"
+                    GroupName="SettingsThemeColorNextcloud"/>
+                <RadioButton
+                    x:Uid="SettingsThemeColorSystem"
+                    Content="Use the system settings"
+                    IsChecked="{Binding ThemeColorAsSystem, Mode=TwoWay}"
+                    GroupName="SettingsThemeColorSystem"/>
+                
                 <HyperlinkButton
                     x:Uid="WindowsColorSettings"
                     Content="Windows color settings"

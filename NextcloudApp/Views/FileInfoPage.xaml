@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
