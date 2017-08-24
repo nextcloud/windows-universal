@@ -264,7 +264,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Serveradress</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställingar</value>
+    <value>Inställningar</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
     <value>Inställningar</value>
@@ -474,7 +474,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Rensa synkhistoria</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Föredra fjärran fil</value>
+    <value>Föredra extern fil</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Certifikatutfärdaren är ogiltig eller felaktig. Ansluta ändå?
