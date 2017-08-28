@@ -497,7 +497,7 @@ Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanva
     <value>Let op conflicten!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Zowel de remote folder als het origineel (lokaal) zijn niet leeg. Dit resulteert in meerdere synchronisatie conflicten omdat de app niet weet wat de juiste bestanden zijn.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronisatie is getriggerd!</value>
@@ -618,7 +618,7 @@ Probeer het later opnieuw.</value>
     <value>Aanmaken map</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Een foutmelding tijdens het aanmaken van de gebruiker voor de WebDAV commmunicatie.</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
     <value>Kon directory &apos;{0}&apos; op Nextcloud niet aanmaken.</value>
@@ -656,7 +656,7 @@ Probeer het later opnieuw.</value>
     <value>Houden zoals nu</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Deze oplossing kan alleen toegepast worden als de bestanden zowel remote als lokaal beschikbaar zijn.</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Opgelet</value>
