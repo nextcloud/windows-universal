@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Wszystkie plikipert</value>
+    <value>Wszystkie pliki</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Zawsze</value>
@@ -151,28 +151,28 @@
     <value>Sortuj</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Data (najstarsze na górze)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Data (najnowsze na górze)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Nazwa (A-Z)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Nazwa (Z-A)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Rozmiar (najmniejsze na górze)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Rozmiar (najwieksze na górze)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Typ (A-Z)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Typ (Z-A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Błąd aplikacji</value>
@@ -653,10 +653,10 @@ Proszę spróbować ponownie później,</value>
     <value>Brak adresu URL serwera. Proszę wprowadzić adres URL twojego serwera Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Pozostaw bez zmian</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>To rozwiązanie może mieć zastosowanie tylko w przypadku, gdy pliki istnieją zarówno lokalnie jak i zdalnie</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Uwaga</value>
@@ -677,15 +677,15 @@ Proszę spróbować ponownie później,</value>
     <value>Odznacz wszystko</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Czy na pewno chcesz zresetować aplikację? Wszystkie ustawienia aplikacji i synchronizacji zostaną utracone.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Zresetuj ustawienia</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Usuń pliki</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Czy na pewno chcesz usunąć wybrane pliki?</value>
   </data>
 </root>
