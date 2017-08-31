@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Tolos ficheros</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Siempres</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -150,29 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordenar</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Data (lo más vieyo no cimero)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Date (oldest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Data (lo mas nuevo no cimero)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Date (newest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nome (A no cimero)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Name (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nome (Z no cimero)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Name (Z to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Tamañu (lo más pequeño no cimero)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Size (smallest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Tamañu (lo más grande no cimero)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Size (largest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Triba (A no cimero)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Triba (Z no cimero)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Fallu d&apos;aplicación</value>
@@ -206,8 +206,8 @@
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Baxando&apos;l ficheru...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Baxar imáxenes de previsualización</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,7 +227,7 @@
   <data name="Name.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Enxamás</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -254,8 +254,8 @@
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} de {1} usao</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Resfitar esta aplicación</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Retentar</value>
@@ -287,8 +287,8 @@
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Namái tando na Wi-Fi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Namái cuando tea na Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -420,17 +420,22 @@
     <value>• Move files and folders
 • Rename files and folders
 • Manual synchronization of folders
-• Download directories as zip file 
+• Download directories as ZIP file 
 • Select multiple files and folders
 • Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
 • Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
 • Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Fixar pa entamar</value>
@@ -441,7 +446,7 @@
   <data name="Connect2" xml:space="preserve">
     <value>Coneutar</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
@@ -538,10 +543,10 @@ Please try again later.</value>
     <value>Estáu de sincronización</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Camín llocal</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Camín de Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Escueyi la carpeta u quies xubir los ficheros</value>
@@ -582,17 +587,17 @@ Please try again later.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Sincronizar esta carpeta</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
     <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Sistema</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Shared with others</value>
@@ -610,47 +615,77 @@ Please try again later.</value>
     <value>Prepare for sharing...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Fallu entrín se creaba&apos;l veceru pa la comunicación WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Nun pue crease&apos;l direutoriu «{0}» en Nextcloud</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Falló&apos;l desaniciu de «{0}» en Nextcloud</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Fallu entrín se xubía&apos;l ficheru «{0}» de Nextcloud</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Fallu entrín se xubía&apos;l ficheru «{0}» a Nextcloud</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
     <value>Do you want to overwrite it?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Yá esiste&apos;l ficheru</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Sobrescribir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Esceición inesperada: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
     <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>Esta solución namái pue aplicase si esisten ficheros llocal y remotamente</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>¿Cómo funciona&apos;l mou espertu?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>¿Cuálu ye&apos;l significáu d&apos;esto?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Conseñar too</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Nun conseñar nada</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>¿De xuru que quiesa reafitar esta aplicación? Reafitaránse tamién toles axustes d&apos;esta aplicación y sincronización.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reafitar esta aplicación</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Desaniciar ficheros</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>¿De xuru que quies desaniciar los ficheros desaniciaos?</value>
   </data>
 </root>

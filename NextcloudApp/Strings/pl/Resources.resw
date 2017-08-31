@@ -497,7 +497,7 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
     <value>Uważaj na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Lokalny i zdalny folder nie są puste. Może to skutkować wieloma konfliktami, ponieważ nie wiemy które pliki są właściwymi plikami.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronizacja została włączona!</value>
