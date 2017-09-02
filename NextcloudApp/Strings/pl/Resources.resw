@@ -417,25 +417,26 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Przenoś pliki i foldery
+• Zmieniaj nazwy plików i folderów
+• Ręcznie synchronizuj pliki i foldery
+• Pobieraj katalogi jako pliki zip
+• Wybieraj wiele plików i folderów
+• Elementy mogą być oznaczone jako ulubione wprost z aplikacji
+• Rozmiar folderów pokazywany jest na ich liście
+• Pasek stanu na liście folderów pokaże ilość zaznaczonych/wszystkich plików
+• Sortowanie po typie danych
+• Nowy wygląd w widoku dla ulubionych/udostępnionych
+• Przypinaj pliki i foldery do ekranu startowego
+• Używaj Windows Hello do uwierzytelnienia na starcie aplikacji
+• Tryb eksperta pokazuje zaawansowane informacje w aplikacji
+• Zezwalaj na certyfikaty SSL podpisane we własnym zakresie
+• Współdziel pliki z aplikacją
+• Temat/skóra (ciemny/jasny/systemowy)
+• Używaj PasswordVault do przechowywania poświadczeń
+• Nowa i bardziej stabilna biblioteka WebDAV
+• Poprawki bezpieczeństwa i błędów
+</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
