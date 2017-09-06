@@ -276,7 +276,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Storlek</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Det finns redan ett element med detta namn. Ange ett annat namn.</value>
+    <value>Det finns redan ett objekt med detta namn. Ange ett annat namn.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
