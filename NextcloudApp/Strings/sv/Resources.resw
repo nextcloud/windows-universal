@@ -381,7 +381,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>För att få tillgång till servern så måste du ange korrekt inloggningsinformation i din enhet.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>&quot;Windows Hello&quot; autentisering</value>
+    <value>"Windows Hello" autentisering</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
     <value>Ingen PIN är inställd för den här enheten. För att kunna använda Windows Hello måste en PIN-kod finnas.</value>
@@ -621,19 +621,19 @@ Försök igen senare.</value>
     <value>Fel när klienten för WebDAV-kommunikationen skulle skapas</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Kunde inte skapa mapp &apos;{0}&apos; på Nextcloud.</value>
+    <value>Kunde inte skapa mapp '{0}' på Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Borttagande av &apos;{0}&apos; på Nextcloud misslyckades.</value>
+    <value>Borttagande av '{0}' på Nextcloud misslyckades.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Fel när filen &apos;{0}&apos; laddades ner från Nextcloud.</value>
+    <value>Fel när filen '{0}' laddades ner från Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Fel vid uppladdning av fil &apos;{0}&apos; till Nextcloud.</value>
+    <value>Fel vid uppladdning av fil '{0}' till Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -650,7 +650,7 @@ Försök igen senare.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Ingen server-URL specificerad. Var god ange URL&apos;n till din Nextcloud-instans</value>
+    <value>Ingen server-URL specificerad. Var god ange URL'n till din Nextcloud-instans</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Behåll som det är</value>

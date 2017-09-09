@@ -562,7 +562,7 @@ Proszę spróbować ponownie później,</value>
     <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Zignoruj niepoprawnie podpisane certyfikaty SSL. Pozwala to na użycie błędnych lub nieprawidłowych urzędów certyfikacji SSL. Uważaj, nie będziesz już chroniony przed atakami typu &quot;man-in-the-middle&quot; (MITM)!</value>
+    <value>Zignoruj niepoprawnie podpisane certyfikaty SSL. Pozwala to na użycie błędnych lub nieprawidłowych urzędów certyfikacji SSL. Uważaj, nie będziesz już chroniony przed atakami typu "man-in-the-middle" (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizuj ten folder</value>
@@ -622,19 +622,19 @@ Proszę spróbować ponownie później,</value>
     <value>Wystąpił błąd w trakcie tworzenia klienta komunikacji WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nie można utworzyć katalogu &apos;{0}&apos; na Nextcloud.</value>
+    <value>Nie można utworzyć katalogu '{0}' na Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Kasowanie pliku &apos;{0}&apos; z Nextcloud nie powiodło się.</value>
+    <value>Kasowanie pliku '{0}' z Nextcloud nie powiodło się.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Wystąpił błąd w trakcie pobierania pliku &apos;{0}&apos; z Nextcloud.</value>
+    <value>Wystąpił błąd w trakcie pobierania pliku '{0}' z Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Wystąpił błąd trakcie wysyłania pliku &apos;{0}&apos; do Nextcloud.</value>
+    <value>Wystąpił błąd trakcie wysyłania pliku '{0}' do Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

@@ -525,10 +525,10 @@
     <value>您删除的云端文件在本地已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动和{2}处冲突或错误</value>
+    <value>已完成与文件夹'{0}'的同步，共有{1}处改动和{2}处冲突或错误</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>已完成与文件夹&apos;{0}&apos;的同步，共有{1}处改动</value>
+    <value>已完成与文件夹'{0}'的同步，共有{1}处改动</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>同步已完成</value>

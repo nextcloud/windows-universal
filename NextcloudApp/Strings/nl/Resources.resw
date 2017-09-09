@@ -139,7 +139,7 @@
     <value>Uploaden bestanden</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Uploaden foto&apos;s</value>
+    <value>Uploaden foto's</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
     <value>Downloaden</value>
@@ -432,7 +432,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 • Expert modus toont geavanceerde informatie in de app
 • Toestaan self-signed SSL certificaten
 • Delen bestanden met de app
-• Thema&apos;s (donker/licht/systeem)
+• Thema's (donker/licht/systeem)
 • Gebruiken PasswordVault om inloggegevens op te slaan
 • Nieuwe en meer stabiele WebDAV library
 • Security verbeteringen &amp; bug fixes</value>
@@ -479,7 +479,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
 
-Kijk uit, u bent niet beveiligd tegen &apos;Man-in-the-middle (mitm)&apos; aanvallen!</value>
+Kijk uit, u bent niet beveiligd tegen 'Man-in-the-middle (mitm)' aanvallen!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Let op!</value>
@@ -561,7 +561,7 @@ Probeer het later opnieuw.</value>
     <value>Als de expert-modus is ingeschakeld, heeft de app extra mogelijkheden en informatie, die niet voor anderen relevant zijn.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige &apos;zelf-ontekende&apos; SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen &apos;man-in-the-middle (mitm)&apos;  aanvallen!</value>
+    <value>Negeer ongeldige 'zelf-ontekende' SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen 'man-in-the-middle (mitm)'  aanvallen!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchroniseer deze map</value>
@@ -621,19 +621,19 @@ Probeer het later opnieuw.</value>
     <value>Een foutmelding tijdens het aanmaken van de gebruiker voor de WebDAV commmunicatie.</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Kon directory &apos;{0}&apos; op Nextcloud niet aanmaken.</value>
+    <value>Kon directory '{0}' op Nextcloud niet aanmaken.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Verwijderen van &apos;{0}&apos; op Nextcloud mislukte.</value>
+    <value>Verwijderen van '{0}' op Nextcloud mislukte.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Fout bij downloaden bestand &apos;{0}&apos; vanaf Nextcloud.</value>
+    <value>Fout bij downloaden bestand '{0}' vanaf Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Fout bij uploaden bestand &apos;{0}&apos; naar Nextcloud.</value>
+    <value>Fout bij uploaden bestand '{0}' naar Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

@@ -621,19 +621,19 @@ Prófaðu aftur síðar.</value>
     <value>Villa við að búa til viðmót fyrir WebDAV-samskipti </value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Villa kom upp við að búa til möppuna &apos;{0}&apos; á Nextcloud.</value>
+    <value>Villa kom upp við að búa til möppuna '{0}' á Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Eyðing &apos;{0}&apos; á Nextcloud mistókst.</value>
+    <value>Eyðing '{0}' á Nextcloud mistókst.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Villa kom upp við að sækja skrána &apos;{0}&apos; af Nextcloud.</value>
+    <value>Villa kom upp við að sækja skrána '{0}' af Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Villa kom upp við að senda skrána &apos;{0}&apos; inn á Nextcloud.</value>
+    <value>Villa kom upp við að senda skrána '{0}' inn á Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

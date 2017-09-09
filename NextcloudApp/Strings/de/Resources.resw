@@ -633,7 +633,7 @@ Bitte später noch einmal versuchen.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Fehler beim Hochladen der Datei &apos;{0}&apos; zu Nextcloud.</value>
+    <value>Fehler beim Hochladen der Datei '{0}' zu Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

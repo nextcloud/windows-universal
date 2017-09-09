@@ -175,10 +175,10 @@
     <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Fallu d&apos;aplicación</value>
+    <value>Fallu d'aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>L&apos;aplicación alcontró un problema. Pidímoste perdón pol inconveniente pero si tabes metanes de daqué, perderáse la información na que tuvieres trabayando.
+    <value>L'aplicación alcontró un problema. Pidímoste perdón pol inconveniente pero si tabes metanes de daqué, perderáse la información na que tuvieres trabayando.
 
 ¿Prestaríate informar a los desendolcadores y unviar un informe de fallos? Esto ayudará a iguar el problema aína.</value>
   </data>
@@ -204,7 +204,7 @@
     <value>Crear una carpeta nueva</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Baxando&apos;l ficheru...</value>
+    <value>Baxando'l ficheru...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Download preview images</value>
@@ -282,7 +282,7 @@
     <value>Triba</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nome d&apos;usuariu</value>
+    <value>Nome d'usuariu</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
@@ -312,19 +312,19 @@
     <value>{0} de {1} xubíos</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Anovando&apos;l ficheru {0} de {1}...</value>
+    <value>Anovando'l ficheru {0} de {1}...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Xubiendo&apos;l ficheru...</value>
+    <value>Xubiendo'l ficheru...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} de {1} baxaos</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Habilitóse&apos;l mou caltenimientu nel sirvidor.</value>
+    <value>Habilitóse'l mou caltenimientu nel sirvidor.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nome d&apos;usuariu y contraseña incorreutos</value>
+    <value>Nome d'usuariu y contraseña incorreutos</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Versión {0} del veceru</value>
@@ -378,13 +378,13 @@
     <value>{0} baxao</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>P&apos;acceder al to Nextcloud, apurri l&apos;aniciu de sesión pal to preséu.</value>
+    <value>P'acceder al to Nextcloud, apurri l'aniciu de sesión pal to preséu.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Autenticación de Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Nun s&apos;afitó dengún PIN pa esti preséu. Pa usar Windows Hello, has afitar ún.</value>
+    <value>Nun s'afitó dengún PIN pa esti preséu. Pa usar Windows Hello, has afitar ún.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Baxar</value>
@@ -396,7 +396,7 @@
     <value>Aniciu de sesión riquíu</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nun pue abrise Nextcloud fasta qu&apos;apurras la información d&apos;aniciu de sesión pal to preséu.</value>
+    <value>Nun pue abrise Nextcloud fasta qu'apurras la información d'aniciu de sesión pal to preséu.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Tentalo de nueves</value>
@@ -485,7 +485,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>¡Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Pa qu&apos;esti axuste faiga efeutu, precises reaniciar l&apos;aplicación.</value>
+    <value>Pa qu'esti axuste faiga efeutu, precises reaniciar l'aplicación.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Pista</value>
@@ -503,7 +503,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>¡Aicionóse la sincronización!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service temporarily unavailable (usually due to short-term maintenance work).
@@ -567,7 +567,7 @@ Please try again later.</value>
     <value>Sincornizar esta carpeta</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Para sincronización d&apos;esta carpeta</value>
+    <value>Para sincronización d'esta carpeta</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
     <value>Para sincronización</value>
@@ -618,29 +618,29 @@ Please try again later.</value>
     <value>Crear carpeta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Fallu entrín se creaba&apos;l veceru pa la comunicación WebDAV</value>
+    <value>Fallu entrín se creaba'l veceru pa la comunicación WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nun pue crease&apos;l direutoriu «{0}» en Nextcloud</value>
+    <value>Nun pue crease'l direutoriu «{0}» en Nextcloud</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Falló&apos;l desaniciu de «{0}» en Nextcloud</value>
+    <value>Falló'l desaniciu de «{0}» en Nextcloud</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Fallu entrín se xubía&apos;l ficheru «{0}» de Nextcloud</value>
+    <value>Fallu entrín se xubía'l ficheru «{0}» de Nextcloud</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Fallu entrín se xubía&apos;l ficheru «{0}» a Nextcloud</value>
+    <value>Fallu entrín se xubía'l ficheru «{0}» a Nextcloud</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
     <value>Do you want to overwrite it?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Yá esiste&apos;l ficheru</value>
+    <value>Yá esiste'l ficheru</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Sobrescribir</value>
@@ -662,10 +662,10 @@ Please try again later.</value>
     <value>Attention</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>¿Cómo funciona&apos;l mou espertu?</value>
+    <value>¿Cómo funciona'l mou espertu?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>¿Cuálu ye&apos;l significáu d&apos;esto?</value>
+    <value>¿Cuálu ye'l significáu d'esto?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows color settings</value>
@@ -677,7 +677,7 @@ Please try again later.</value>
     <value>Nun conseñar nada</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>¿De xuru que quiesa reafitar esta aplicación? Reafitaránse tamién toles axustes d&apos;esta aplicación y sincronización.</value>
+    <value>¿De xuru que quiesa reafitar esta aplicación? Reafitaránse tamién toles axustes d'esta aplicación y sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Reafitar esta aplicación</value>

@@ -621,19 +621,19 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <value>Kļūda izveidojot klientu WebDAV komunikācijai.</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nevarēja izveidot mapi &apos;{0}&apos; Nextcloudā.</value>
+    <value>Nevarēja izveidot mapi '{0}' Nextcloudā.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Kļūda lejupielādējot failu &apos;{0}&apos; no Nextcloud.</value>
+    <value>Kļūda lejupielādējot failu '{0}' no Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Kļūda augšupielādējot failu &apos;{0}&apos; no Nextcloud.</value>
+    <value>Kļūda augšupielādējot failu '{0}' no Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

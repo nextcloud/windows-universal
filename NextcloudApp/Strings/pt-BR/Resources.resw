@@ -620,19 +620,19 @@ Por favor tente mais tarde.</value>
     <value>Erro ao criar cliente para comunicação WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Não foi possível criar o diretório &apos;{0}&apos; no Nextcloud.</value>
+    <value>Não foi possível criar o diretório '{0}' no Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Exclusão de &apos;{0}&apos; no Nextcloud falhou.</value>
+    <value>Exclusão de '{0}' no Nextcloud falhou.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Erro ao baixar o arquivo &apos;{0}&apos; do Nextcloud.</value>
+    <value>Erro ao baixar o arquivo '{0}' do Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Erro ao enviar o arquivo &apos;{0}&apos; para o Nextcloud.</value>
+    <value>Erro ao enviar o arquivo '{0}' para o Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

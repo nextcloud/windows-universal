@@ -240,7 +240,7 @@
     <value>Δεν πιστοποιήθηκε</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Ο διακομιστής επέστρεψε μήνυμα λάθους 401 (μη εξουσιοδοτημένη πρόσβαση). Παρακαλώ προσπαθήστε είσοδο εκ&apos;νέου.</value>
+    <value>Ο διακομιστής επέστρεψε μήνυμα λάθους 401 (μη εξουσιοδοτημένη πρόσβαση). Παρακαλώ προσπαθήστε είσοδο εκ'νέου.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -621,19 +621,19 @@
     <value>Σφάλμα κατά τη δημιουργία πελάτη για την επικοινωνία με το WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Δεν πραγματοποιήθηκε η δημιουργία φακέλου &apos;{0}&apos; στο Nextcloud</value>
+    <value>Δεν πραγματοποιήθηκε η δημιουργία φακέλου '{0}' στο Nextcloud</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Η διαγραφή του &apos;{0}&apos; στο Nextcloud απέτυχε.</value>
+    <value>Η διαγραφή του '{0}' στο Nextcloud απέτυχε.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Προέκυψε λάθος  κατά την λήψη αρχείου &apos;{0}&apos; από το Nextcloud.</value>
+    <value>Προέκυψε λάθος  κατά την λήψη αρχείου '{0}' από το Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Προέκυψε λάθος κατά την μεταφόρτωση του αρχείου &apos;{0}&apos; στο Nextcloud.</value>
+    <value>Προέκυψε λάθος κατά την μεταφόρτωση του αρχείου '{0}' στο Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

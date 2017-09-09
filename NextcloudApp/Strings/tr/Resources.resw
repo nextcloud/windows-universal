@@ -621,19 +621,19 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>WebDAV iletişimi için istemci oluşturulurken sorun çıktı</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nextcloud üzerinde &apos;{0}&apos; klasörü oluşturulamadı.</value>
+    <value>Nextcloud üzerinde '{0}' klasörü oluşturulamadı.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>&apos;{0}&apos; klasörü Nextcloud üzerinden silinemedi.</value>
+    <value>'{0}' klasörü Nextcloud üzerinden silinemedi.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>&apos;{0}&apos; dosyası Nextcloud üzerinden indirilemedi</value>
+    <value>'{0}' dosyası Nextcloud üzerinden indirilemedi</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>&apos;{0}&apos; dosyası Nextcloud üzerine yüklenemedi.</value>
+    <value>'{0}' dosyası Nextcloud üzerine yüklenemedi.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
