@@ -178,9 +178,7 @@
     <value>Programos klaida</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
-
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+    <value>Programa patyrė problemų. Atsiprašome už sutrukdymus</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Atsisakyti</value>
