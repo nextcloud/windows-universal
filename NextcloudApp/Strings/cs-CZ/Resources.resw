@@ -151,16 +151,16 @@
     <value>Řadit</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Datum (nejstarší nahoru)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Datum (nejnovější nahoru)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Jméno (A nahoru)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Jméno (Z nahoru)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
     <value>Size (smallest to the top)</value>
