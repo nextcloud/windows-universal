@@ -163,16 +163,16 @@
     <value>Jméno (Z nahoru)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Velikost (nejmenší nahoru)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Velikost (největší nahoru)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Typ (A nahoru)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Typ (Z nahoru)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Chyba aplikace</value>
