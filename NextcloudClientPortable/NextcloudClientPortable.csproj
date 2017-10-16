@@ -165,7 +165,7 @@
       <Version>10.0.3</Version>
     </PackageReference>
     <PackageReference Include="PortableWebDavLibrary">
-      <Version>1.1.3</Version>
+      <Version>1.1.4</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
