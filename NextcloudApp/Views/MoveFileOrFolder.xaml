@@ -19,15 +19,12 @@
 
     <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <controls:PathStackHeader />
-
         <SemanticZoom 
-            Grid.Row="1"
+            Grid.Row="0"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <SemanticZoom.ZoomedInView>
                 <ListView
@@ -215,7 +212,8 @@
                 </GridView>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+        
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
                 Icon="Sync" 

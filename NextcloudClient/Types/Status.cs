@@ -1,4 +1,6 @@
-﻿namespace NextcloudClient.Types
+﻿using Newtonsoft.Json;
+
+namespace NextcloudClient.Types
 {
     /// <summary>
     /// 
@@ -12,6 +14,7 @@
         /// <value>
         ///   <c>true</c> if installed; otherwise, <c>false</c>.
         /// </value>
+        [JsonProperty("installed")]
         public bool Installed { get; set; }
 
         /// <summary>
@@ -20,7 +23,11 @@
         /// <value>
         ///   <c>true</c> if maintenance; otherwise, <c>false</c>.
         /// </value>
+        [JsonProperty("maintenance")]
         public bool Maintenance { get; set; }
+
+        [JsonProperty("needsDbUpgrade")]
+        public bool NeedsDbUpgrade { get; set; }
 
         /// <summary>
         /// Gets or sets the current version number of your ownCloud installation.
@@ -28,6 +35,7 @@
         /// <value>
         /// The version.
         /// </value>
+        [JsonProperty("version")]
         public string Version { get; set; }
 
         /// <summary>
@@ -36,6 +44,7 @@
         /// <value>
         /// The version string.
         /// </value>
+        [JsonProperty("versionstring")]
         public string VersionString { get; set; }
 
         /// <summary>
@@ -44,6 +53,10 @@
         /// <value>
         /// The edition.
         /// </value>
+        [JsonProperty("edition")]
         public string Edition { get; set; }
+
+        [JsonProperty("productname")]
+        public string Productname { get; set; }
     }
 }
