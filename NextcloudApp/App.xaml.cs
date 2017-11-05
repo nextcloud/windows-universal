@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,8 +24,6 @@ using Windows.UI.Notifications;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.Storage;
-using Windows.UI;
-using Windows.UI.ViewManagement;
 
 namespace NextcloudApp
 {
@@ -41,7 +38,7 @@ namespace NextcloudApp
         /// </summary>
         public App()
         {
-            UnhandledException += OnUnhandledException;
+            UnhandledException += OnUnhandledExceptionAsync;
             TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 
             InitializeComponent();
@@ -61,7 +58,7 @@ namespace NextcloudApp
                     exceptionStackTrace, args.Exception.InnerException.GetType().ToString(), exceptionHashCode);
         }
 
-        private async void OnUnhandledException(object sender, UnhandledExceptionEventArgs args)
+        private async void OnUnhandledExceptionAsync(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs args)
         {
             var exceptionStackTrace = string.Empty;
             try
