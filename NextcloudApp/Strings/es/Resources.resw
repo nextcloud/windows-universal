@@ -620,19 +620,19 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Error al crear cliente para la comunicación WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>No se pudo crear el directorio &apos;{0}&apos; en Nextcloud.</value>
+    <value>No se pudo crear el directorio '{0}' en Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Falló el borrado de &apos;{0}&apos; en Nextcloud.</value>
+    <value>Falló el borrado de '{0}' en Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error al descargar el archivo &apos;{0}&apos; de Nextcloud.</value>
+    <value>Error al descargar el archivo '{0}' de Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error al subir el archivo &apos;{0}&apos; a Nextcloud.</value>
+    <value>Error al subir el archivo '{0}' a Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

@@ -621,19 +621,19 @@ Prøv igjen senere.</value>
     <value>Feil under opprettelse av klient for WebDAV-kommunikasjon</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Kunne ikke opprette mappen &apos;{0}&apos; på Nextcloud.</value>
+    <value>Kunne ikke opprette mappen '{0}' på Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Sletting av &apos;{0}&apos; på Nextcloud mislyktes.</value>
+    <value>Sletting av '{0}' på Nextcloud mislyktes.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Feil under nedlasting av &apos;{0}&apos; fra Nextcloud.</value>
+    <value>Feil under nedlasting av '{0}' fra Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Feil under opplasting av &apos;{0}&apos; til Nextcloud.</value>
+    <value>Feil under opplasting av '{0}' til Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

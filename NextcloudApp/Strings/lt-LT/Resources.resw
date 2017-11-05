@@ -178,9 +178,7 @@
     <value>Programos klaida</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
-
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+    <value>Programa patyrė problemų. Atsiprašome už sutrukdymus</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Atsisakyti</value>
@@ -396,7 +394,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Prisijungimas būtinas</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Pabandyti iš naujo</value>
@@ -503,7 +501,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Synchronization has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Paslauga laikinai neprieinama (dažniausiai dėl trumpalaikių techninės priežiūros darbų).
@@ -621,7 +619,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Could not create directory '{0}' on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
@@ -629,11 +627,11 @@ Prašome vėliau bandyti dar kartą.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Klaida atsiunčiant &apos;{0}&apos; failą iš Nextcloud.</value>
+    <value>Klaida atsiunčiant '{0}' failą iš Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Klaida įkeliant &apos;{0}&apos; failą į Nextcloud.</value>
+    <value>Klaida įkeliant '{0}' failą į Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

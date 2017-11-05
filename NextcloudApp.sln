@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextcloudApp", "NextcloudApp\NextcloudApp.csproj", "{99EFB7EA-88A3-4FCF-9289-22734215B5CF}"
 EndProject
@@ -164,7 +164,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {29C56C55-4696-42B6-AF9E-FF342B170EF7}
+		SolutionGuid = {721C05B4-1D71-465F-B54F-0F340D03B3BF}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		description = A portable class library to interact with ownCloud servers through WebDAV and the ownCloud OCS API.

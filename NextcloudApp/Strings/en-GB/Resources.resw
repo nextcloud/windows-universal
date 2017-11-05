@@ -288,7 +288,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Version {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Only when I'm on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
@@ -396,7 +396,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Sign-in required</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Try again</value>
@@ -503,7 +503,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Synchronisation has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronisation will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synchronisation will take place in the background. You'll get a notification when it's finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service temporarily unavailable (usually due to short-term maintenance work).
@@ -621,19 +621,19 @@ Please try again later.</value>
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Could not create directory '{0}' on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -665,7 +665,7 @@ Please try again later.</value>
     <value>How does the expert mode work?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>What's the meaning of this?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows colour settings</value>
