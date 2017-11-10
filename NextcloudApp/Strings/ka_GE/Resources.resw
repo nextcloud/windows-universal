@@ -1,0 +1,691 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>ყველა ფაილი</value>
+  </data>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>ყოველთვის</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>წარმოიშვა შეცდომა</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>დამატება</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>დირექტორიის შექმნა</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>სურათის გადაღება</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>ფაილების ატვირთვა</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>ფოტოების ატვირთვა</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>ჩამოტვირთვა</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>განახლება</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>სორტირება</value>
+  </data>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>თარიღი (ჯერ ძველი)</value>
+  </data>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>თარიღი (ჯერ ახალი)</value>
+  </data>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>სახელი (ჯერ ა)</value>
+  </data>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>სახელი (ჯერ ჰ)</value>
+  </data>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>ზომა (ჯერ მცირე)</value>
+  </data>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>ზომა (ჯერ დიდი)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>სახეობა (ჯერ ა)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>სახეობა (ჯერ ჯ)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>აპლიკაციის შეცდომა</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>აპლიკაციამ განიცადა პრობლემა. ბოდიშს ვიხდით უსიმოვნებისთვის. თუ რამეს აკეთებდით, ინფორმაცია რომელზეც მუშაობდით დაკარგულია
+
+გსურთ შეატყობინოთ აპლიკაციის დეველოპერს და გააგზავნოთ გამზადებული შეცდომის რეპორტი? ეს ხელს უწყობს პრობლემის უფრო სწრაფად მოგვარებას.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>გაუქმება</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>დირექტორია ვერ იქმნება</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>დაკავშირება</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>მოცულობის-სახეობა</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>შექმნა</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>შექმნილია</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>ახალი დირექტორიის შექმნა</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>ფაილის გადმოწერა...</value>
+  </data>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>სურათის პრევიუების გადმოწერა</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} ბაიტი)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>ფოლდერის სახელი</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>ინფორმაცია</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>ბოლო ცვლილება</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>სახელი</value>
+  </data>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>არასდროს</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>ახალი ფოლდერი</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>არა</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>არაა ავტორიზირებული</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>სერვერმა დააბრუნა შეცდომის კოდი 401 (არაავტორიზირებული). გთხოვთ შეხვიდეთ ახლიდან.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>კარგი</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>პაროლი</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>მისამართი</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>გამოყენებულია {0} სულ {1}-დან</value>
+  </data>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>ხელახლა ცდა</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>სერვერის მისამართი</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>პარამეტრები</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>პარამეტრები</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>უჩინარი ფაილების და დირექტორიების სიების ჯგუფირების ჩვენება</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>ზომა</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>ამ სახელით ელემენტი უკვე არსებობს. მიუთითეთ სხვა სახელი.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>სახეობა</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>მომხმარებლის სახელი</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>ვერსია {0}</value>
+  </data>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>მხოლოდ მაშინ როდესაც ვარ Wi-Fi-ით</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>კი</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>გაუქმება</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>ფაილის გაუქმება</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ გსურთ ფაილის {0} გაუქმება</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>დირექტორიის გაუქმება</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ გსურთ დირექტორიის {0} გაუქმება</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>ატვირთულია {0} სულ {1}-დან</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>იტვირთება ფაილი {0} სულ {1}-დან…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>მიმდინარეობს ფაილის ატვირთვა…</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>გადმოწერილია {0} სულ {1}-დან</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>სერვერზე მოქმედია სარემონტო რეჟიმი.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>არასწორი მომხმარებლის სახელი ან პაროლი.</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>კლიენტის ვერსია {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>სერვერის სახელი ან მისამართი ვერ დგინდება.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>სერვერის ვერსია {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>გაუქმება</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>ველოდებით სერვერის პასუხს</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>გთხოვთ აირჩიოთ ახალი სახელი</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>სახელის შეცვლა</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>სახელის შეცვლა</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>სახელის შეცვლა</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>გადატანა დირექტორიაში</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>გადატანა დირექტორიაში</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>უარყოფა</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>დასრულებულია</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>აირჩიეთ დირექტორია</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>სერვერი მისამართით {0} მიუწვდომელია.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>ZIP ფაილის სახით გადმოწერა</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>გადმოწერილია {0}</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>თქვენს Nextcloud-სადმი წვდომისთვის, გთხოვთ თქვენი მოწყობილობისათვის მოგვაწოდოთ ავტორიზაციის ინფორმაცია.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello აუტენტიფიკაცია</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>ამ მოწყობილობაზე PIN-ი არაა დაყენებული. Windows Hello-ს გამოყენებისთვის საჭიროა PIN-ის განსაზღვრა.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>გადმოწერა</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud-ი</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>საჭიროა ავტორიზაცია</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>Nextcloud-ს ვერ გავხსნით სანამ არ მოგაწვდით მოწყობილობის ავტორიზაციის ინფორმაციას.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>კიდევ სცადეთ</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud-ი Windows Mobile-ისთვის</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>თქვენი აპლიკაცია განახლდა {0} ვერსიაზე</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>ახალი ფუნქციები და გაუმჯობესებები ამ ვერსიაში:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>რეკომენდაცია</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>განახლება</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• ფაილების და დირექტორიების გადატანა
+• ფაილების და დირექტორიების სახელების ცვლილება
+• დირექტორიების მექანიკური სინქრონიზცია
+• დირექტორიების ZIP ფაილების სახით გადმოწერა
+• მრავალი ფაილის და დირექტორიის არჩევა
+• აპლიკაციით ელემენტები ვერ იქნება მონიშნული როგორც რჩეული
+• დირექტორიების ზომა ნაჩვენებია ჩამონათვალში
+• დირექტორიების სიაში მყოფი სტატუს ბარი, რომელიც აჩვენებს არჩეულ/სულ არსებულ ფაილებს
+• განლაგება მონაცემის სახეობით
+• ახალი ჩვენებები რჩეულზე/გაზიარებულზე
+• ფაილების და დირექტორიების საწყის მენიუში მოქცევა
+• Windows Hello აუტენტიფიკაციის გამოყენება აპლიკაციის ჩატვირთვისას
+• ექსპერტ რეჟიმი რომელიც აპლიკაციაში აჩვენებს დამატებით ინფორმაციას
+• საკუთარი თავით ხელმოწერილი SSL სერტიფიკატების დაშვება
+• ფაილების გაზიარება აპლიკაციით
+• ვიზუალური თემები (მუქი/ღია/სისტემური)
+• PasswordVault-ის გამოყენება მომხმარებლის უფლებამოსილებების შესანახად
+• ახალი და უფრო სტაბილური WebDAV ბიბლიოთეკა
+• უსაფრთხოების გაუმჯობესებები და შეცდომების მოგვარებები</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>საწყის მენიუში მოქცევა</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>საწყის მენიუში მოქცევა</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>დაკავშირება</value>
+  </data>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>არასწორი თავად-დამოწმებული SSL სერტიფიკატების იგნორირება</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>ექპერტ-რეჟიმი</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>სინქრონიზაციის სტატუსი</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>ისტორია</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>კონფლიქტები</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>შეცდომები</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>სინქრონიზაცია</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>უპირატესობის მინიჭება ლოკალურ ფაილზე</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>სინქ. ისტორიის გასუფთავება</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>უპირატესობის მინიჭება დისტანციურ ფაილზე</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>ეს სერტიფიკატის რწმუნებულება არასწორია ან არაა ვარგისი. მაინც დავკავშირდეთ?
+
+ფრთხილად იყავით, თქვენ ვერ იქნებით (mitm) შემოტევებისგან დაცული! </value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>ყურადღება!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>ამ პარამეტრის ამოქმედებისთვის, საჭიროა აპლიკაციის გადატვირთვა.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>მითითება</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>სინქრონიზაციისას გამოჩენილი შეცდომების სია. ისინი დროებითი პრობლემებია (მაგ.: ფაილი გახსნა სხვა აპლიკაციამ) და შემდეგი სინქრონიზაციისას აღარ უნდა არსებობდნენ.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>ერიდეთ კონფლიქტებს!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>არც დისტანციური და არც ლოკალური დირექტორიაა ცარიელი. ამან შეიძლება გამოიწვიოს მრავალი კონფლიქტი, აპლიკაციამ არ იცის რომელი ფაილებია სწორი.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>სინქრონიზაცია ინიცირდა!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>სინქრონიზაცია იმოქმედებს ფონურ-რეჟიმში. მისი დასრულების შემდეგ მიიღებთ შეტყობინებას.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>სერვისი დროებით ხელმიუწვდომელია (ხშირად ეს დროებითი სამუშაოების გამოა)
+გთხოვთ მოგვიანებით სცადოთ ახლიდან.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>ფაილები ლოკალურადაც შეცვლილია და დისტანციურადაც. რომელს მივანიჭოთ უპირატესობა?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>ფაილები შეიქმნა დისტანციურადაც და ლოკალურადა - რომელია სწორი?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>ფაილი ლოკალურად გამუქმდა, მაგრამ დისტანციურად შეცვალა. რომელს ანიჭნებთ უპირატესობას?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>კონფლიქტი:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>ფაილი დისტანციურად გაუქმდა, თუმცა ლოკალურად შეიცვალა. რომელს ანიჭებთ უპირატესობას?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>დირექტორიის {0} სინქრონიზაცია დასრულდა {1} ცვლილებით და {2} შეცდომით თუ კონფლიქტით.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>დირექტორიის {0} სინქრონიზაცია დასრულდა {1} ცვლილებით.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>სინქრონიზაცია დასრულდა</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>დირექტორიის {0} სინქრონიზაცია შეჩერდა, აპლიკაცია შეჩერდა.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>სინქრონიზაცია შეჩერდა</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>სინქრონიზაციის სტატუსი</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>ლოკალური მისამართი</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud მისამართი</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>აირჩიეთ დირექტორია სადაც გსურთ ფაილების ატვირთვა</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>დირექტორიები</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>ელემენტები: {0} (დირექტორიები: {1} ფაილები: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>როდესაც მოქმედია ექსპერტ-რეჟიმი, აპლიკაცია უზრუნველყოფს, ისეთ დამატებით ფუნქციებს/ინფორმაციას, რომგორიც შეიძლება არ იყოს ყველა მომხმარებლისთვის დამაინტერესებელი.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>არასწორი თვით-დამოწმებული SSL სერტიფიკატების იგნორირება. ეს საშუალებას იძლება გამოყენებულ იქნას არასწორი SSL სერტიფიკატების რწმუნებულებები. იყავით ფრთხილად. თქვენ აღარ იქნებით (MITM) შემოტევებისგან დაცული!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>ამ დირექტორიის სინქრონიზაცია</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>ამ დირექტორიის სინქრონიზაციის შეჩერება</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>სინქრონიზაციის შეჩერება</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>სინქრონიზაციის სტატუსი</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>სინქრონიზაციის დაწყება</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>სინქრონიზაცია</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>დაიწყოს ამ დირექტორიის სინქრონიზაცია ეხლა</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>ამ დირექტორიის სინქრონიზაცია</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>მუქი</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>ღია</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>სისტემის პარამეტრების გამოყენება</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>რეჟიმის არჩევა</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>გაზიარებულია სხვებთან</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>რჩეულები</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>გაზიარებულია ჩემთან</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>გაზიარებულია ბმულით</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>მოემზადეთ გაზიარებისთვის...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>ფოლდერის შექმნა</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>შეცდომა WebDAV კომუნიკაციისთვის კლიენტის შექმნისას</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nextcloud-ში დირექტორია '{0}' ვერ შეიქმნა.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>'{0}'-ს გაუქმება Nextcloud-ში ვერ მოხერხდა</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>ფაილის '{0}' Nextcloud-იდან გადმოწერისას წარმოიშვა შეცდომა</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>ფაილის '{0}' Nextcloud-ში ატვირთვისას წარმოიშვა შეცდომა</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>გსურთ მისი გადაწერა?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>ფაილი უკვე არსებობს</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>გადაწერა</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>მოულოდნელი გამონაკლისი: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>სერვერის URL მიამართი არაა მითითებული. გთხოვთ შეიყვანოთ თქვენი Nextcloud-ის ნიმუშის URL.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>დატოვეთ როგორც არის</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>პროლმების გადაწყვეტა შეიძლება, მხოლოდ იმ შემთხვევაში თუ ფაილი არსებობს ლოკალურადაც და დისტანცურადაც</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>ყურადღება</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>როგორ მუშაობს ექსპერტ-რეჟიმი?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>რას ნიშნავს ეს?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows-ის ფერების პარამეტრები</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>ყველას მონიშვნა</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>მონიშვნის მოშორება ყველაზე</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>დარწმუნებული ხართ რომ გუსრთ ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება? ეს დააბრუნებს ყველა აპლიკაციის და სინქრონიზაციის პარამეტრს საწყის მდგომარეობაში.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>ფაილების წაშლა</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>დარწმუნებული ხართ, რომ გსურთ მონიშნული ფაილების გაუქმება?</value>
+  </data>
+</root>
