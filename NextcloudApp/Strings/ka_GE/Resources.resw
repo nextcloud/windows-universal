@@ -204,7 +204,7 @@
     <value>ახალი დირექტორიის შექმნა</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>ფაილის გადმოწერა...</value>
+    <value>ფაილის გადმოწერა…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>სურათის პრევიუების გადმოწერა</value>
@@ -216,7 +216,7 @@
     <value>{0} ({1} ბაიტი)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>ფოლდერის სახელი</value>
+    <value>დირექტორიის სახელი</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>ინფორმაცია</value>
@@ -231,7 +231,7 @@
     <value>არასდროს</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>ახალი ფოლდერი</value>
+    <value>ახალი დირექტორია</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>არა</value>
@@ -240,7 +240,7 @@
     <value>არაა ავტორიზირებული</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>სერვერმა დააბრუნა შეცდომის კოდი 401 (არაავტორიზირებული). გთხოვთ შეხვიდეთ ახლიდან.</value>
+    <value>სერვერმა დააბრუნა შეცდომის კოდი 401 (არაა ავტორიზირებული). გთხოვთ შეხვიდეთ ახლიდან.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>კარგი</value>
@@ -258,7 +258,7 @@
     <value>ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>ხელახლა ცდა</value>
+    <value>ვცადოთ ახლიდან</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>სერვერის მისამართი</value>
@@ -270,7 +270,7 @@
     <value>პარამეტრები</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>უჩინარი ფაილების და დირექტორიების სიების ჯგუფირების ჩვენება</value>
+    <value>უჩინარი ფაილების და დირექტორიების ჩამონათვლის შეჯგუფების ჩვენება</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>ზომა</value>
@@ -288,7 +288,7 @@
     <value>ვერსია {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>მხოლოდ მაშინ როდესაც ვარ Wi-Fi-ით</value>
+    <value>მხოლოდ მაშინ როდესაც ვარ Wi-Fi-თ</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>კი</value>
@@ -372,10 +372,10 @@
     <value>სერვერი მისამართით {0} მიუწვდომელია.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>ZIP ფაილის სახით გადმოწერა</value>
+    <value>ჩამოტვირთვა ZIP ფაილის სახით</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>გადმოწერილია {0}</value>
+    <value>ჩამოტვირთულია {0}</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>თქვენს Nextcloud-სადმი წვდომისთვის, გთხოვთ თქვენი მოწყობილობისათვის მოგვაწოდოთ ავტორიზაციის ინფორმაცია.</value>
@@ -399,7 +399,7 @@
     <value>Nextcloud-ს ვერ გავხსნით სანამ არ მოგაწვდით მოწყობილობის ავტორიზაციის ინფორმაციას.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>კიდევ სცადეთ</value>
+    <value>სცადეთ ახლიდან</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud-ი Windows Mobile-ისთვის</value>
@@ -420,7 +420,7 @@
     <value>• ფაილების და დირექტორიების გადატანა
 • ფაილების და დირექტორიების სახელების ცვლილება
 • დირექტორიების მექანიკური სინქრონიზცია
-• დირექტორიების ZIP ფაილების სახით გადმოწერა
+• დირექტორიების ZIP ფაილების სახით ჩამოტვირთვა
 • მრავალი ფაილის და დირექტორიის არჩევა
 • აპლიკაციით ელემენტები ვერ იქნება მონიშნული როგორც რჩეული
 • დირექტორიების ზომა ნაჩვენებია ჩამონათვალში
@@ -430,7 +430,7 @@
 • ფაილების და დირექტორიების საწყის მენიუში მოქცევა
 • Windows Hello აუტენტიფიკაციის გამოყენება აპლიკაციის ჩატვირთვისას
 • ექსპერტ რეჟიმი რომელიც აპლიკაციაში აჩვენებს დამატებით ინფორმაციას
-• საკუთარი თავით ხელმოწერილი SSL სერტიფიკატების დაშვება
+• თვით-ხელმოწერილი SSL სერტიფიკატების დაშვება
 • ფაილების გაზიარება აპლიკაციით
 • ვიზუალური თემები (მუქი/ღია/სისტემური)
 • PasswordVault-ის გამოყენება მომხმარებლის უფლებამოსილებების შესანახად
@@ -447,7 +447,7 @@
     <value>დაკავშირება</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>არასწორი თავად-დამოწმებული SSL სერტიფიკატების იგნორირება</value>
+    <value>არასწორი თვით-დამოწმებული SSL სერტიფიკატების იგნორირება</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>ექპერტ-რეჟიმი</value>
@@ -513,7 +513,7 @@
     <value>ფაილები ლოკალურადაც შეცვლილია და დისტანციურადაც. რომელს მივანიჭოთ უპირატესობა?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>ფაილები შეიქმნა დისტანციურადაც და ლოკალურადა - რომელია სწორი?</value>
+    <value>ფაილები შეიქმნა დისტანციურადაც და ლოკალურადაც - რომელია სწორი?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>ფაილი ლოკალურად გამუქმდა, მაგრამ დისტანციურად შეცვალა. რომელს ანიჭნებთ უპირატესობას?</value>
@@ -582,7 +582,7 @@
     <value>სინქრონიზაცია</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>დაიწყოს ამ დირექტორიის სინქრონიზაცია ეხლა</value>
+    <value>დაიწყოს ამ დირექტორიის სინქრონიზაცია ახლა</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>ამ დირექტორიის სინქრონიზაცია</value>
@@ -612,7 +612,7 @@
     <value>გაზიარებულია ბმულით</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>მოემზადეთ გაზიარებისთვის...</value>
+    <value>მოემზადეთ გაზიარებისთვის…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>ფოლდერის შექმნა</value>
@@ -629,7 +629,7 @@
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>ფაილის '{0}' Nextcloud-იდან გადმოწერისას წარმოიშვა შეცდომა</value>
+    <value>ფაილის '{0}' Nextcloud-იდან ჩამოტვირთვისას წარმოიშვა შეცდომა</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
@@ -650,13 +650,13 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>სერვერის URL მიამართი არაა მითითებული. გთხოვთ შეიყვანოთ თქვენი Nextcloud-ის ნიმუშის URL.</value>
+    <value>სერვერის URL მიამართი არაა მითითებული. გთხოვთ შეიყვანოთ თქვენი Nextcloud ინსანციის URL.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>დატოვეთ როგორც არის</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>პროლმების გადაწყვეტა შეიძლება, მხოლოდ იმ შემთხვევაში თუ ფაილი არსებობს ლოკალურადაც და დისტანცურადაც</value>
+    <value>პროლმების გადაწყვეტა შეიძლება, მხოლოდ იმ შემთხვევაში, თუ ფაილი არსებობს ლოკალურადაც და დისტანცურადაც</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>ყურადღება</value>
@@ -677,7 +677,7 @@
     <value>მონიშვნის მოშორება ყველაზე</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>დარწმუნებული ხართ რომ გუსრთ ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება? ეს დააბრუნებს ყველა აპლიკაციის და სინქრონიზაციის პარამეტრს საწყის მდგომარეობაში.</value>
+    <value>დარწმუნებული ხართ, რომ გუსრთ ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება? ეს დააბრუნებს ყველა აპლიკაციის და სინქრონიზაციის პარამეტრს საწყის მდგომარეობაში.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება</value>

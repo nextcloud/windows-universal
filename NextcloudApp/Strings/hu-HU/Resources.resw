@@ -120,7 +120,7 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Összes fájl</value>
   </data>
-  <data name="Always" xml:space="preserve">
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Mindig</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
@@ -150,23 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Rendezés</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
     <value>Dátum (régebbiek felül)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
     <value>Dátum (újabbak felül)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
     <value>Név (A betűsek felül)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
     <value>Név (Z betűsek felül)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
     <value>Méret (kisebbek felül)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
     <value>Méret (nagyobbak felül)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Név (A betűsek felül)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Típus (Z betűsek felül)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Alkalmazás hiba</value>
@@ -200,7 +206,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>A fájl letöltése...</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Előnézeti képek letöltése</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
@@ -221,7 +227,7 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Name.Text" xml:space="preserve">
     <value>Név</value>
   </data>
-  <data name="Never" xml:space="preserve">
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Soha</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
@@ -248,8 +254,8 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} / {1} használt</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Alkalmazás visszaállítás</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>App visszaálítása</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Újra</value>
@@ -281,8 +287,8 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Version" xml:space="preserve">
     <value>Verzió {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Csak ha WiFi hálózaton vagyok</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Csak ha Wi-Fi-n vagyok</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Igen</value>
@@ -375,7 +381,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>To access your Nextcloud, provide the sign-in info for your device.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Windows Hello azonosítás</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
     <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
@@ -390,16 +396,16 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Bejelentkezés szükséges</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can&apos;t open Nextcloud until you provide your device sign-in info.</value>
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Próbáld újra</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud Windows Mobile-ra</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Appod frissítve erre a verzióra: {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>New features and improvements in this version:</value>
@@ -413,28 +419,62 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
 • Rename files and folders
-• Download directories as zip file 
+• Manual synchronization of folders
+• Download directories as ZIP file 
 • Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
 • Pin files and folders to start screen
-• Use Windows Hello to authentificate on app start
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
 • Allow self signed SSL certificates
-• Show folder size in list
-• Handle file activation
+• Share files with the app
+• Theming (dark/light/system)
 • Use the PasswordVault to store user credentials
-• Security improvements &amp; bug fixes
-• New and more stable WebDAV library</value>
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin az indításhoz</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Pin to start</value>
+    <value>Pin az indításhoz</value>
   </data>
   <data name="Connect2" xml:space="preserve">
     <value>Kapcsolódás</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from Man-in-the-middle (mitm) attacks anymore!</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Önaláíró tanúsítványok figyelmen kívül hagyása</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Szakértő mód</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Szinkronizálási állapot</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Előzmények</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Ütközések</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Hibák</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Szinkronizálás</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Helyi fájl előnyben részesítése</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Szinkronizálási történet törlése</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Távoli fájl előnyben részeítése</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>The certificate authority is invalid or incorrect. Connect anyway?
@@ -445,13 +485,207 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Figyelem!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Az alkalmazást újra kell indítani</value>
+    <value>For this settings to take effect, the app needs to be restarted.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Megjegyzés</value>
   </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Vigyázz az ütközésekkel!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Szinkronizálás kiváltva!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+  </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service temporarily unavailable (usually due to short-term maintenance work).
 Please try again later.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Ütközés:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Szinkronizálás kész</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>A(z) {0} mappa szinkronizálása leállt, mert az alkalmazás fel lett függesztve.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Szinkronizálás felfüggesztve</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Szinkronizálási állapot</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Helyi útvonal</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud útvonal</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Válaszd ki a mappát, ahova a fájlokat fel akarod tölteni</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Mappák</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Elemek: {0} (mappák: {1} fájlok: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Ezen mappa szinkronizálása</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Ezen mappa szinkronizálásának leállítása</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Szinkronizálás leállítása</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Szinkronizálási állapot</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Szinkronizálás most</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Szinkronizálás</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Ezen mapa szinkronizálás most</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Ezen mappa szinkronizálása</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Sötét</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Világos</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Használd a rendszer beállításait</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Üzemmód válsztás</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>MEgosztva másokkal</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Kedvencek</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Megosztva velem</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Megosztva linkkel</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Előkészítés megosztáshoz...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Mappa létrehozás</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Hiba a WebDAV kommunikációs kliens létrehozásakor</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>'{0}' mappa nem hozható létre a  Nextcloud-on.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>A(z) '{0}' törlése a Nextcloud-on nem sikerült.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Felülírod?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>A fájl már létezik</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Felülírás</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Váratlan kivétel: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Maradjon így</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Figyelem</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>Hogyan működik a szakértő mód?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>Ez mit jelent?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows színbeállítások</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Kijelöl mind</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Kijelölés megszüntetése</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Alkalmazás visszaállítás</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Fájlok törlése</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the selected files?</value>
   </data>
 </root>
