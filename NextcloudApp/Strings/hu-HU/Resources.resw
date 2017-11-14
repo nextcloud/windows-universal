@@ -686,6 +686,6 @@ Please try again later.</value>
     <value>Fájlok törlése</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Valóban törölni akarod a kijelölt fájlokat?</value>
   </data>
 </root>
