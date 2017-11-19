@@ -172,15 +172,15 @@
     <value>სახეობა (ჯერ ა)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>სახეობა (ჯერ ჯ)</value>
+    <value>სახეობა (ჯერ ჰ)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>აპლიკაციის შეცდომა</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>აპლიკაციამ განიცადა პრობლემა. ბოდიშს ვიხდით უსიმოვნებისთვის. თუ რამეს აკეთებდით, ინფორმაცია რომელზეც მუშაობდით დაკარგულია
+    <value>აპლიკაციამ განიცადა პრობლემა. ბოდიშს ვიხდით უსიმოვნებისთვის. თუ რამეს აკეთებდით, ინფორმაცია რომელზეც მუშაობდით დაკარგულია.
 
-გსურთ შეატყობინოთ აპლიკაციის დეველოპერს და გააგზავნოთ გამზადებული შეცდომის რეპორტი? ეს ხელს უწყობს პრობლემის უფრო სწრაფად მოგვარებას.</value>
+გსურთ შეატყობინოთ აპლიკაციის დეველოპერს და გააგზავნოთ გამზადებული შეცდომის რეპორტი? ეს ხელს უწყობს პრობლემის უფრო სწრაფ მოგვარებას.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>გაუქმება</value>
@@ -204,7 +204,7 @@
     <value>ახალი დირექტორიის შექმნა</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>ფაილის გადმოწერა…</value>
+    <value>ფაილის ჩამოტვირტვა…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>სურათის პრევიუების გადმოწერა</value>
@@ -318,7 +318,7 @@
     <value>მიმდინარეობს ფაილის ატვირთვა…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>გადმოწერილია {0} სულ {1}-დან</value>
+    <value>ჩამოტვირთულია {0} სულ {1}-დან</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
     <value>სერვერზე მოქმედია სარემონტო რეჟიმი.</value>
