@@ -378,13 +378,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} letöltve</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>A Nextcloud-odhoz való hozzáféréshez add meg az eszközödhöz tartozó bejelentkezési adataidat.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello azonosítás</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Nincs PIN megadva. A Windows Hello használatához meg kell adnod egyet.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Letöltés</value>
@@ -396,7 +396,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Bejelentkezés szükséges</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
+    <value>Nem tudjuk megnyitni a Nextcloud-ot amíg nem adod meg az eszközhöz tartozó bejelentkezési adatokat.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Próbáld újra</value>
@@ -408,7 +408,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Appod frissítve erre a verzióra: {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>New features and improvements in this version:</value>
+    <value>Új szolgáltatások és javítások ebben a verzióban:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Ajánlás</value>
@@ -477,37 +477,37 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Távoli fájl előnyben részeítése</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>A tanúsítványhoz tartozó aláíró érvénytelen. Így is kapcsolódjunk?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Vigyázz, így nem leszel védve a köztes ember támadásoktól (MITM - Man-in-the-middle)!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Figyelem!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Ezen beállítás érvényesítéséhez újra kell indítani az alkalmazást.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Megjegyzés</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Szinkronizálási hibák listája. Átmeneti problémákról van szó (p.l.: fájl meg van nyitva egy másik alkalmazásban) és a következő szinkronizálás során el kell tűnjenek.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Vigyázz az ütközésekkel!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Se a távoli se a helyi fájl nem üres. Ez konfliktus helyzethez vezethet, mert az alkalmazás nem tudhatja melyik a helyes.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Szinkronizálás kiváltva!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+    <value>A szinkronizálás a háttérben zajlik. Értesítést fogsz kapni a folyamat végén.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Szolgáltatás nem elérhető (ez általában egy rövid karbantartás miatt következik be).
+Kérlek próbáld meg később.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>A fájl helyben és távol is megváltozott. Melyiket részesíted előnyben?</value>
@@ -528,7 +528,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>A(z) {0} mappa szinkronizálása kész {1} változtatással.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Szinkronizálás kész</value>
@@ -558,10 +558,10 @@ Please try again later.</value>
     <value>Elemek: {0} (mappák: {1} fájlok: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>A szakértő mód bekapcsolásával több lehetőség és információ érhető el, melyek a legtöbb felhasználó számára érdektelenek.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Érvénytelen önaláíró SSL tanúsítványok figyelmen kívül hagyása. Ezzel az érvénytelen és szabálytalan aláírók által kiadott tanúsítványok is használhatók. Vigyázz vele, mert így a köztes ember (MITM - Man-in-the-middle) támadások ellen védtelenné válsz!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Ezen mappa szinkronizálása</value>
