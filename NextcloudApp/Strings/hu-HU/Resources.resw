@@ -178,9 +178,9 @@
     <value>Alkalmazás hiba</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+    <value>Az alkalmazás problémába ütközött. Bocsánat a kényelmetlenségért. Ha éppen valamin dolgoztál az adatok elvesztek.
 
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az előkészített jelentést? Ez segít a hiba mielőbbi javításában.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Mégsem</value>
@@ -417,25 +417,25 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Frissítés</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Fájlok és mappák mozgatása
+• Fájok és mappák átnevezése
+• Mappák kézi szinkronizálása
+• Mappák ZIP-ként letöltése 
+• Több fájl és mappa kijelölési lehetőség
+• Kedvenceknek jelölhető elemek az alkalmazásban
+• A mappaméret megjelenik a listában
+• Státuszsor a mapa listában a kijelölt elemek számának mutatására
+• Adattípus szerinti sorrendezés
+• Új nézet a kedvencekhez és megosztásokhoz
+• Mappák és fájlok rögzítése a kezdőképernyőhöz
+• Windows Hello használata az alkalmazásba való bejelentkezéshez
+• Bővített nézet részletes információkért
+• Önaláíró tanúsítványok támogatása
+• Fájlok megosztása az app-al
+• Témázás (sötét/világos/rendszer)
+• A jelszó széf használata az alkalmazás bejelentkezési adatainak tárolására
+• Új és stabilabb WebDAV könyvtár
+• Biztonsági javítások és hibajavítások</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin az indításhoz</value>
@@ -525,7 +525,7 @@ Kérlek próbáld meg később.</value>
     <value>Törlöd a távoli fájlt ami helyben megváltozott. Melyiket részesíted előnyben?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>A(z) {0} mappa szinkronizálása {1} változtatással  és {2} hibával vagy konfliktussal befejeződött.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
     <value>A(z) {0} mappa szinkronizálása kész {1} változtatással.</value>
