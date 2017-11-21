@@ -14,6 +14,6 @@
         </Grid.RowDefinitions>
         
         <ProgressRing Foreground="White" Width="100" Height="100" IsActive="True" VerticalAlignment="Bottom" Margin="10"/>
-        <TextBlock Grid.Row="1" x:Uid="PrepareForSharing" Text="Prepare for sharing..." VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
+        <TextBlock Grid.Row="1" x:Uid="PrepareForSharing" Text="Prepare for sharing…" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10"/>
     </Grid>
 </Page>
