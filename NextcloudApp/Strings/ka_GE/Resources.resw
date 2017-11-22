@@ -615,7 +615,7 @@
     <value>მოემზადეთ გაზიარებისთვის…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>ფოლდერის შექმნა</value>
+    <value>დირექტორიის შექმნა</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>შეცდომა WebDAV კომუნიკაციისთვის კლიენტის შექმნისას</value>
