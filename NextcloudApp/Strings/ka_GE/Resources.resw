@@ -178,7 +178,7 @@
     <value>აპლიკაციის შეცდომა</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>აპლიკაციამ განიცადა პრობლემა. ბოდიშს ვიხდით უსიმოვნებისთვის. თუ რამეს აკეთებდით, ინფორმაცია რომელზეც მუშაობდით დაკარგულია.
+    <value>აპლიკაციამ განიცადა პრობლემა. ბოდიშს ვიხდით უსიამოვნებისთვის. თუ რამეს აკეთებდით, ინფორმაცია რომელზეც მუშაობდით დაკარგულია.
 
 გსურთ შეატყობინოთ აპლიკაციის დეველოპერს და გააგზავნოთ გამზადებული შეცდომის რეპორტი? ეს ხელს უწყობს პრობლემის უფრო სწრაფ მოგვარებას.</value>
   </data>
@@ -207,7 +207,7 @@
     <value>ფაილის ჩამოტვირტვა…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>სურათის პრევიუების გადმოწერა</value>
+    <value>სურათის პრევიუების ჩამოტვირთვა</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -300,13 +300,13 @@
     <value>ფაილის გაუქმება</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>დარწმუნებული ხართ, რომ გსურთ ფაილის {0} გაუქმება</value>
+    <value>დარწმუნებული ხართ, რომ გსურთ {0} ფაილის გაუქმება</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>დირექტორიის გაუქმება</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>დარწმუნებული ხართ, რომ გსურთ დირექტორიის {0} გაუქმება</value>
+    <value>დარწმუნებული ხართ, რომ გსურთ {0} დირექტორიის გაუქმება</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>ატვირთულია {0} სულ {1}-დან</value>
@@ -387,7 +387,7 @@
     <value>ამ მოწყობილობაზე PIN-ი არაა დაყენებული. Windows Hello-ს გამოყენებისთვის საჭიროა PIN-ის განსაზღვრა.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>გადმოწერა</value>
+    <value>ჩამოტვირთვა</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud-ი</value>
@@ -491,7 +491,7 @@
     <value>მითითება</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>სინქრონიზაციისას გამოჩენილი შეცდომების სია. ისინი დროებითი პრობლემებია (მაგ.: ფაილი გახსნა სხვა აპლიკაციამ) და შემდეგი სინქრონიზაციისას აღარ უნდა არსებობდნენ.</value>
+    <value>სინქრონიზაციისას გამოჩენილი შეცდომების სია. ეს დროებითი პრობლემებია (მაგ.: ფაილი გახსნა სხვა აპლიკაციამ) და შემდეგი სინქრონიზაციისას აღარ უნდა არსებობდეს.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>ერიდეთ კონფლიქტებს!</value>
@@ -507,7 +507,7 @@
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>სერვისი დროებით ხელმიუწვდომელია (ხშირად ეს დროებითი სამუშაოების გამოა)
-გთხოვთ მოგვიანებით სცადოთ ახლიდან.</value>
+გთხოვთ სცადოთ ახლიდან მოგვიანებით.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>ფაილები ლოკალურადაც შეცვლილია და დისტანციურადაც. რომელს მივანიჭოთ უპირატესობა?</value>
@@ -525,16 +525,16 @@
     <value>ფაილი დისტანციურად გაუქმდა, თუმცა ლოკალურად შეიცვალა. რომელს ანიჭებთ უპირატესობას?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>დირექტორიის {0} სინქრონიზაცია დასრულდა {1} ცვლილებით და {2} შეცდომით თუ კონფლიქტით.</value>
+    <value>{0} დირექტორიის სინქრონიზაცია დასრულდა {1} ცვლილებით და {2} შეცდომით თუ კონფლიქტით.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>დირექტორიის {0} სინქრონიზაცია დასრულდა {1} ცვლილებით.</value>
+    <value>{0} დირექტორიის სინქრონიზაცია დასრულდა {1} ცვლილებით.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>სინქრონიზაცია დასრულდა</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>დირექტორიის {0} სინქრონიზაცია შეჩერდა, აპლიკაცია შეჩერდა.</value>
+    <value>{0} დირექტორიის სინქრონიზაცია შეწყდა, აპლიკაცია შეჩერდა.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>სინქრონიზაცია შეჩერდა</value>
@@ -558,10 +558,10 @@
     <value>ელემენტები: {0} (დირექტორიები: {1} ფაილები: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>როდესაც მოქმედია ექსპერტ-რეჟიმი, აპლიკაცია უზრუნველყოფს, ისეთ დამატებით ფუნქციებს/ინფორმაციას, რომგორიც შეიძლება არ იყოს ყველა მომხმარებლისთვის დამაინტერესებელი.</value>
+    <value>როდესაც მოქმედია ექსპერტ-რეჟიმი, აპლიკაცია უზრუნველყოფს, ისეთ დამატებით ფუნქციებს/ინფორმაციას, რომგორიც შეიძლება არ იყოს ყველა მომხმარებლისთვის საინტერესო.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>არასწორი თვით-დამოწმებული SSL სერტიფიკატების იგნორირება. ეს საშუალებას იძლება გამოყენებულ იქნას არასწორი SSL სერტიფიკატების რწმუნებულებები. იყავით ფრთხილად. თქვენ აღარ იქნებით (MITM) შემოტევებისგან დაცული!</value>
+    <value>არასწორი თვით-დამოწმებული SSL სერტიფიკატების იგნორირება. ეს საშუალებას იძლევა გამოყენებულ იქნას არასწორი SSL სერტიფიკატების რწმუნებულებები. იყავით ფრთხილად. თქვენ აღარ იქნებით (MITM) შემოტევებისგან დაცული!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>ამ დირექტორიის სინქრონიზაცია</value>
@@ -650,7 +650,7 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>სერვერის URL მიამართი არაა მითითებული. გთხოვთ შეიყვანოთ თქვენი Nextcloud ინსანციის URL.</value>
+    <value>სერვერის URL მიამართი არაა მითითებული. გთხოვთ შეიყვანოთ თქვენი Nextcloud ინსტანციის URL.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>დატოვეთ როგორც არის</value>
