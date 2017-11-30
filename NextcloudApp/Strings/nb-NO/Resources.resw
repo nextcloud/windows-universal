@@ -204,7 +204,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Opprett en ny mappe</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Last ned filen...</value>
+    <value>Last ned filen…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Last ned forhåndsvisningsbilder</value>
@@ -315,7 +315,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Laster opp fil {0} av {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Laster opp filen...</value>
+    <value>Laster opp filen…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} av {1} lastet ned</value>
