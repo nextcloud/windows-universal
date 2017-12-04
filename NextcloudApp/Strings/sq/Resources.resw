@@ -621,19 +621,19 @@ Ju lutem provoni përsëri më vonë.</value>
     <value>Problem gjatë krijimit të klientit për komunikimin WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nuk mund të krijonte direktorinë &apos;{0}&apos; në Nextcloud.</value>
+    <value>Nuk mund të krijonte direktorinë '{0}' në Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Fshirja e &apos;{0}&apos; në Nextcloud dështoi.</value>
+    <value>Fshirja e '{0}' në Nextcloud dështoi.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Gabim gjatë shkarkimit të skedarit &apos;{0}&apos; nga Nextcloud.</value>
+    <value>Gabim gjatë shkarkimit të skedarit '{0}' nga Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Gabim gjatë ngarkimit të skedarit &apos;{0}&apos; në Nextcloud.</value>
+    <value>Gabim gjatë ngarkimit të skedarit '{0}' në Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">

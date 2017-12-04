@@ -264,7 +264,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Serveradress</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställingar</value>
+    <value>Inställningar</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
     <value>Inställningar</value>
@@ -276,7 +276,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Storlek</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Det finns redan ett element med detta namn. Ange ett annat namn.</value>
+    <value>Det finns redan ett objekt med detta namn. Ange ett annat namn.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
@@ -381,7 +381,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>För att få tillgång till servern så måste du ange korrekt inloggningsinformation i din enhet.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>&quot;Windows Hello&quot; autentisering</value>
+    <value>"Windows Hello" autentisering</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
     <value>Ingen PIN är inställd för den här enheten. För att kunna använda Windows Hello måste en PIN-kod finnas.</value>
@@ -417,25 +417,25 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Uppdatera</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Flytta filer och mappar
+• Byta namn på filer och mappar
+• Manuell synkronisering av mappar
+• Ladda ner mappar som zip-fil 
+• Markera flera filer och mappar
+• Objekt kan väljas som favorit inuti appen
+• Storleken av mappar visas i mapplistan
+• Statusfält i mapplista visar antalet valda/totala filer
+• Sortera efter datatyp
+• Nya vyer för favoriter/delningar
+• Nåla filer och mappar på startskärmen
+• Använd Windows Hello för att autentisera vid appstart
+• Expertläge visar avancerad information i appen
+• Tilllåt självsignerade SSL-certifikat
+• Dela filer med appen
+• Teman (mörk/ljus/system)
+• Använd Lösenordsvalvet för att lagra användaruppgifter
+• Nytt och mer stabilt WebDAV-bibliotek
+• Säkerhetsförbättringar &amp; buggfixar</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Nåla fast högst upp</value>
@@ -474,7 +474,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Rensa synkhistoria</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Föredra fjärran fil</value>
+    <value>Föredra extern fil</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Certifikatutfärdaren är ogiltig eller felaktig. Ansluta ändå?
@@ -491,23 +491,23 @@ Var försiktig, du kommer inte att skyddas från man-in-the-middle (MITM) attack
     <value>Förslag</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista över felen som inträffade under synkroniseringen. Dessa borde vara temporära problem (t.ex. att filen öppnades av en annan app) och borde försvinna efter nästa synkronisering.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Se upp för konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Både extern och lokal mapp är inte tom. Detta kan resultera i en massa konflikter eftersom appen inte vet vilken filer som är de korrekta</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>Synkronisering har skapats!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synkronisering kommer göras i bakgrunden. Du blir meddelad när det är färdigt.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>Tjänsten är tillfälligt otillgänglig (vanligtvis på grund av ett kort underhållsarbete).
+Försök igen senare.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Fil ändrades lokalt eller externt. Vilket föredrar du?</value>
@@ -525,16 +525,16 @@ Please try again later.</value>
     <value>Borttagen fil externt men ändrades lokalt. Vilket föredrar du?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>Synkronisering av mapp {0} blev färdig med {1} ändringar och {2} fel och konflikter.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Synkronisering av mapp {0} färdig med {1} ändringar.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>Synkronisering har blivit färdig</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>Synkronisering av mapp {0} stoppades eftersom appen har blivit avbruten.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synkronisering uppskjuten</value>
@@ -558,10 +558,10 @@ Please try again later.</value>
     <value>Objekt: {0} (mappar: {1} filer: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>När expertläge är aktiverat erbjuder appen några extra funktioner/information som kanske inte är så intressanta för alla användare.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorera ogiltiga självsignerade SSL-certifikat. Detta tillåter ogiltiga eller inkorrekta SSL-certifikatbefogenheter att användas. Var försiktig, du kommer inte skyddas från man-in-the-middle (MITM)-attacker längre!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synkronisera denna mapp</value>
@@ -594,13 +594,13 @@ Please try again later.</value>
     <value>Ljus</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Använd systeminställningarna</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Välj ett läge</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Delad med andra</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favoriter</value>
@@ -609,83 +609,83 @@ Please try again later.</value>
     <value>Delad med mig</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Delad via länk</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Förbered för delning...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Skapa mapp</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Fel när klienten för WebDAV-kommunikationen skulle skapas</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Kunde inte skapa mapp '{0}' på Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Borttagande av '{0}' på Nextcloud misslyckades.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Fel när filen '{0}' laddades ner från Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Fel vid uppladdning av fil '{0}' till Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Vill du skriva över det?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>Filen finns redan</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Skriv över</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Oväntat fel: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Ingen server-URL specificerad. Var god ange URL'n till din Nextcloud-instans</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Behåll som det är</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Lösningen kan bara appliceras om filerna finns både externt och lokalt</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Hör upp</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Hur funkar expertläget?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Vad är meningen med detta?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Windows färginställningar</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Markera alla</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Avmarkera alla</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Är du säker att du vill återställa denna app? Detta kommer återställa hela appen och alla dina synkroniserade inställningar.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Återställ denna app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Ta bort filer</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Är du säker du vill ta bort alla markerade filer?</value>
   </data>
 </root>

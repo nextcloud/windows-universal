@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Wszystkie plikipert</value>
+    <value>Wszystkie pliki</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
     <value>Zawsze</value>
@@ -151,28 +151,28 @@
     <value>Sortuj</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Data (najstarsze na górze)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Data (najnowsze na górze)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Nazwa (A-Z)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Nazwa (Z-A)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Rozmiar (najmniejsze na górze)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Rozmiar (najwieksze na górze)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Typ (A-Z)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Typ (Z-A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Błąd aplikacji</value>
@@ -417,25 +417,26 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Aktualizacja</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Przenoś pliki i foldery
+• Zmieniaj nazwy plików i folderów
+• Ręcznie synchronizuj pliki i foldery
+• Pobieraj katalogi jako pliki zip
+• Wybieraj wiele plików i folderów
+• Elementy mogą być oznaczone jako ulubione wprost z aplikacji
+• Rozmiar folderów pokazywany jest na ich liście
+• Pasek stanu na liście folderów pokaże ilość zaznaczonych/wszystkich plików
+• Sortowanie po typie danych
+• Nowy wygląd w widoku dla ulubionych/udostępnionych
+• Przypinaj pliki i foldery do ekranu startowego
+• Używaj Windows Hello do uwierzytelnienia na starcie aplikacji
+• Tryb eksperta pokazuje zaawansowane informacje w aplikacji
+• Zezwalaj na certyfikaty SSL podpisane we własnym zakresie
+• Współdziel pliki z aplikacją
+• Temat/skóra (ciemny/jasny/systemowy)
+• Używaj PasswordVault do przechowywania poświadczeń
+• Nowa i bardziej stabilna biblioteka WebDAV
+• Poprawki bezpieczeństwa i błędów
+</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Przypnij do Startu</value>
@@ -497,7 +498,7 @@ Bądź ostrożny, ponieważ nie będziesz więcej chroniony przed atakiem Man-in
     <value>Uważaj na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Lokalny i zdalny folder nie są puste. Może to skutkować wieloma konfliktami, ponieważ nie wiemy które pliki są właściwymi plikami.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synchronizacja została włączona!</value>
@@ -561,7 +562,7 @@ Proszę spróbować ponownie później,</value>
     <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Zignoruj niepoprawnie podpisane certyfikaty SSL. Pozwala to na użycie błędnych lub nieprawidłowych urzędów certyfikacji SSL. Uważaj, nie będziesz już chroniony przed atakami typu &quot;man-in-the-middle&quot; (MITM)!</value>
+    <value>Zignoruj niepoprawnie podpisane certyfikaty SSL. Pozwala to na użycie błędnych lub nieprawidłowych urzędów certyfikacji SSL. Uważaj, nie będziesz już chroniony przed atakami typu "man-in-the-middle" (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizuj ten folder</value>
@@ -621,19 +622,19 @@ Proszę spróbować ponownie później,</value>
     <value>Wystąpił błąd w trakcie tworzenia klienta komunikacji WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nie można utworzyć katalogu &apos;{0}&apos; na Nextcloud.</value>
+    <value>Nie można utworzyć katalogu '{0}' na Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Kasowanie pliku &apos;{0}&apos; z Nextcloud nie powiodło się.</value>
+    <value>Kasowanie pliku '{0}' z Nextcloud nie powiodło się.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Wystąpił błąd w trakcie pobierania pliku &apos;{0}&apos; z Nextcloud.</value>
+    <value>Wystąpił błąd w trakcie pobierania pliku '{0}' z Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Wystąpił błąd trakcie wysyłania pliku &apos;{0}&apos; do Nextcloud.</value>
+    <value>Wystąpił błąd trakcie wysyłania pliku '{0}' do Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -653,10 +654,10 @@ Proszę spróbować ponownie później,</value>
     <value>Brak adresu URL serwera. Proszę wprowadzić adres URL twojego serwera Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Pozostaw bez zmian</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>To rozwiązanie może mieć zastosowanie tylko w przypadku, gdy pliki istnieją zarówno lokalnie jak i zdalnie</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Uwaga</value>
@@ -677,15 +678,15 @@ Proszę spróbować ponownie później,</value>
     <value>Odznacz wszystko</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Czy na pewno chcesz zresetować aplikację? Wszystkie ustawienia aplikacji i synchronizacji zostaną utracone.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Zresetuj ustawienia</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Usuń pliki</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Czy na pewno chcesz usunąć wybrane pliki?</value>
   </data>
 </root>
