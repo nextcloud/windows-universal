@@ -68,71 +68,81 @@ namespace NextcloudApp
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
-            //NavView.MenuItems.Add(new NavigationViewItemSeparator());
-            //< NavigationViewItemHeader Content = "Main pages" />
-            NavView.MenuItems.Add(new NavigationViewItem
-            {
-                Content = _resourceLoader.GetString("AllFiles"),
-                Icon = new FontIcon { Glyph = "\uE8B7" },
-                Tag = "AllFiles"
-            });
-
-
             foreach (PageToken pageToken in System.Enum.GetValues(typeof(PageToken)))
             {
                 _canNavigateLookup.Add(pageToken, true);
             }
 
-            
-            //new MenuItem
-            //{
-            //    DisplayName = resourceLoader.GetString("AllFiles"),
-            //    FontIcon = "\uE8B7",
-            //    Command = new DelegateCommand(
-            //        () => NavigateToPage(PageToken.DirectoryList),
-            //        () => CanNavigateToPage(PageToken.DirectoryList)
-            //    )
-            //},
-            //new MenuItem
-            //{
-            //    DisplayName = resourceLoader.GetString("Favorites"),
-            //    FontIcon = "\uE734",
-            //    Command = new DelegateCommand(
-            //        () => NavigateToPage(PageToken.Favorites),
-            //        () => CanNavigateToPage(PageToken.Favorites)
-            //    )
-            //},
-            //new MenuItem
-            //{
-            //    DisplayName = resourceLoader.GetString("SharingIn"),
-            //    FontIcon = "\uF003",
-            //    Command = new DelegateCommand(
-            //        () => NavigateToPage(PageToken.SharesIn),
-            //        () => CanNavigateToPage(PageToken.SharesIn)
-            //    )
-            //},
-            //new MenuItem
-            //{
-            //    DisplayName = resourceLoader.GetString("SharingOut"),
-            //    FontIcon = "\uF003",
-            //    Command = new DelegateCommand(
-            //        () => NavigateToPage(PageToken.SharesOut),
-            //        () => CanNavigateToPage(PageToken.SharesOut)
-            //    )
-            //},
-            //new MenuItem
-            //{
-            //    DisplayName = resourceLoader.GetString("SharingLink"),
-            //    FontIcon = "\uE167",
-            //    Command = new DelegateCommand(
-            //        () => NavigateToPage(PageToken.SharesLink),
-            //        () => CanNavigateToPage(PageToken.SharesLink)
-            //    )
-            //}
 
-            foreach (NavigationViewItem item in NavView.MenuItems)
+
+            //NavView.MenuItems.Add(new NavigationViewItemSeparator());
+            //< NavigationViewItemHeader Content = "Main pages" />
+
+            NavView.MenuItems.Add(new NavigationViewItemHeader
             {
-                if (item.Tag.ToString() != "AllFiles") continue;
+                Content = new Controls.UserInfo()
+            });
+
+            NavView.MenuItems.Add(new NavigationViewItem
+            {
+                Content = new Models.MenuItem
+                {
+                    DisplayName = _resourceLoader.GetString("AllFiles"),
+                    PageToken = PageToken.DirectoryList
+                },
+                Icon = new FontIcon { Glyph = "\uE8B7" }
+            });
+
+            NavView.MenuItems.Add(new NavigationViewItem
+            {
+                Content = new Models.MenuItem
+                {
+                    DisplayName = _resourceLoader.GetString("Favorites"),
+                    PageToken = PageToken.Favorites
+                },
+                Icon = new FontIcon { Glyph = "\uE734" }
+            });
+
+            NavView.MenuItems.Add(new NavigationViewItem
+            {
+                Content = new Models.MenuItem
+                {
+                    DisplayName = _resourceLoader.GetString("SharingIn"),
+                    PageToken = PageToken.SharesIn
+                },
+                Icon = new FontIcon { Glyph = "\uF003" }
+            });
+
+            NavView.MenuItems.Add(new NavigationViewItem
+            {
+                Content = new Models.MenuItem
+                {
+                    DisplayName = _resourceLoader.GetString("SharingOut"),
+                    PageToken = PageToken.SharesOut
+                },
+                Icon = new FontIcon { Glyph = "\uF003" }
+            });
+
+            NavView.MenuItems.Add(new NavigationViewItem
+            {
+                Content = new Models.MenuItem
+                {
+                    DisplayName = _resourceLoader.GetString("SharingLink"),
+                    PageToken = PageToken.SharesLink
+                },
+                Icon = new FontIcon { Glyph = "\uE167" }
+            });
+
+            foreach (var item in NavView.MenuItems)
+            {
+                var navViewItem = item as NavigationViewItem;
+                if (
+                    navViewItem == null ||
+                    (navViewItem.Content as Models.MenuItem).PageToken != PageToken.DirectoryList
+                )
+                {
+                    continue;
+                }
                 NavView.SelectedItem = item;
                 break;
             }
@@ -150,12 +160,7 @@ namespace NextcloudApp
             }
             else
             {
-                switch ((args.InvokedItem as NavigationViewItem).Tag)
-                {
-                    case "AllFiles":
-                        NavigateToPage(PageToken.DirectoryList);
-                        break;
-                }
+                NavigateToPage((args.InvokedItem as Models.MenuItem).PageToken);
             }
         }
 

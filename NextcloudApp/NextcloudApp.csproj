@@ -146,6 +146,9 @@
       <DependentUpon>PathStackHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ThemeablePage.cs" />
+    <Compile Include="Controls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converter\ConflictTypeNoneToVisibilityConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
@@ -316,6 +319,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\ListViewStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

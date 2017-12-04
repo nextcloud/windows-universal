@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="NextcloudApp.Controls.UserInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NextcloudApp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="52"
+    d:DesignWidth="400">
+
+    <Grid Height="52" Margin="12,0,24,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Ellipse 
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.RowSpan="4"
+            Height="52" 
+            Width="52" 
+            Margin="0,0,8,0"
+            Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}}">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="{Binding UserAvatarUrl}"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Grid
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.RowSpan="4"
+            Height="52" 
+            Width="52" 
+            Margin="0,0,8,0"
+            Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
+            <Ellipse Fill="{ThemeResource SystemControlBackgroundAccentBrush}" />
+            <TextBlock 
+                Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                FontSize="30"
+                LineHeight="47"
+                Foreground="White"/>
+        </Grid>
+        <TextBlock
+            Grid.Row="0" 
+            Grid.Column="1" 
+            Text="{Binding User.DisplayName}"
+            FontSize="12"
+            TextTrimming="CharacterEllipsis"/>
+        <TextBlock 
+            Grid.Row="1" 
+            Grid.Column="1"
+            Text="{Binding User.EMail}" 
+            FontSize="8"
+            Foreground="{ThemeResource SystemControlDisabledBaseLowBrush}"
+            TextTrimming="CharacterEllipsis"/>
+        <ProgressBar 
+            Grid.Row="2" 
+            Grid.Column="1"
+            Minimum="0"
+            Value="{Binding User.Quota.Used}"
+            Maximum="{Binding User.Quota.Total}"/>
+        <TextBlock 
+            Grid.Row="3" 
+            Grid.Column="1"
+            Text="{Binding QuotaUsedOfTotalString}"
+            FontSize="12"
+            TextTrimming="CharacterEllipsis"/>
+    </Grid>
+
+</UserControl>

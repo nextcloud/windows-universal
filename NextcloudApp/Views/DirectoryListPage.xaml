@@ -21,7 +21,7 @@
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
     </Page.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
@@ -30,7 +30,7 @@
 
         <SemanticZoom 
             Grid.Row="0"
-            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            Background="{ThemeResource SystemControlAcrylicWindowBrush}">
             <SemanticZoom.ZoomedInView>
                 <ListView
                     Name="FileOrFolderListView"

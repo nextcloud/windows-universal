@@ -11,6 +11,8 @@ namespace NextcloudApp.Models
 
         public ICommand Command { get; set; }
 
+        public PageToken PageToken { get; internal set; }
+
         public override string ToString()
         {
             return DisplayName;
