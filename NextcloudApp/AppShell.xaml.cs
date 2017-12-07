@@ -72,16 +72,11 @@ namespace NextcloudApp
             {
                 _canNavigateLookup.Add(pageToken, true);
             }
-
-
+            
 
             //NavView.MenuItems.Add(new NavigationViewItemSeparator());
             //< NavigationViewItemHeader Content = "Main pages" />
 
-            NavView.MenuItems.Add(new NavigationViewItemHeader
-            {
-                Content = new Controls.UserInfo()
-            });
 
             NavView.MenuItems.Add(new NavigationViewItem
             {

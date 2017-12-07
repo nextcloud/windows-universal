@@ -27,16 +27,10 @@
             </DataTemplate>
         </NavigationView.HeaderTemplate>
 
-        <NavigationView.Header>
-            <HyperlinkButton x:Name="MoreInfoBtn1"
-                             Content="More info"
-                             Margin="12,0"/>
-        </NavigationView.Header>
-
         <NavigationView.PaneFooter>
-            <HyperlinkButton x:Name="MoreInfoBtn"
-                             Content="More info"
-                             Margin="12,0"/>
+            <controls:UserInfo 
+                Height="52" 
+                Margin="12,0,24,12" />
         </NavigationView.PaneFooter>
 
         <Frame x:Name="ContentFrame">

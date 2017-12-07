@@ -2,14 +2,14 @@
     x:Class="NextcloudApp.Controls.UserInfo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:NextcloudApp.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="52"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    x:Name="UserInfoControl">
 
-    <Grid Height="52" Margin="12,0,24,24">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -21,45 +21,26 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Ellipse 
+        <PersonPicture
             Grid.Row="0" 
             Grid.Column="0"
             Grid.RowSpan="4"
             Height="52" 
             Width="52" 
             Margin="0,0,8,0"
-            Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}}">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding UserAvatarUrl}"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Grid
-            Grid.Row="0" 
-            Grid.Column="0"
-            Grid.RowSpan="4"
-            Height="52" 
-            Width="52" 
-            Margin="0,0,8,0"
-            Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
-            <Ellipse Fill="{ThemeResource SystemControlBackgroundAccentBrush}" />
-            <TextBlock 
-                Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center"
-                FontSize="30"
-                LineHeight="47"
-                Foreground="White"/>
-        </Grid>
+            DisplayName="{Binding User.DisplayName, ElementName=UserInfoControl}"
+            ProfilePicture="{Binding UserAvatarUrl, ElementName=UserInfoControl}"
+            Initials="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}, ElementName=UserInfoControl}" />
         <TextBlock
             Grid.Row="0" 
             Grid.Column="1" 
-            Text="{Binding User.DisplayName}"
+            Text="{Binding User.DisplayName, ElementName=UserInfoControl}"
             FontSize="12"
             TextTrimming="CharacterEllipsis"/>
         <TextBlock 
             Grid.Row="1" 
             Grid.Column="1"
-            Text="{Binding User.EMail}" 
+            Text="{Binding User.EMail, ElementName=UserInfoControl}" 
             FontSize="8"
             Foreground="{ThemeResource SystemControlDisabledBaseLowBrush}"
             TextTrimming="CharacterEllipsis"/>
@@ -67,12 +48,12 @@
             Grid.Row="2" 
             Grid.Column="1"
             Minimum="0"
-            Value="{Binding User.Quota.Used}"
-            Maximum="{Binding User.Quota.Total}"/>
+            Value="{Binding User.Quota.Used, ElementName=UserInfoControl}"
+            Maximum="{Binding User.Quota.Total, ElementName=UserInfoControl}"/>
         <TextBlock 
             Grid.Row="3" 
             Grid.Column="1"
-            Text="{Binding QuotaUsedOfTotalString}"
+            Text="{Binding QuotaUsedOfTotalString, ElementName=UserInfoControl}"
             FontSize="12"
             TextTrimming="CharacterEllipsis"/>
     </Grid>
