@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Windows.Input;
@@ -31,7 +30,6 @@ namespace NextcloudApp.ViewModels
         private string _fileExtension;
         private string _fileName;
         private string _fileSizeString;
-        private int _selectedPathIndex = -1;
         private BitmapImage _thumbnail;
         public ICommand DownloadCommand { get; }
         public ICommand DeleteResourceCommand { get; }
@@ -79,16 +77,13 @@ namespace NextcloudApp.ViewModels
             }
 
             Directory.RebuildPathStackFromResourceInfo(resourceInfo);
-
-            foreach (var path in Directory.PathStack)
-            {
-                PathStack.Add(path);
-            }
-
-            PathStack.Add(new PathInfo
+            
+            Directory.PathStack.Add(new PathInfo
             {
                 ResourceInfo = resourceInfo
             });
+
+            Directory.PathStack.CollectionChanged += PathStack_CollectionChanged;
 
             ResourceInfo = resourceInfo;
             FileExtension = Path.GetExtension(ResourceInfo.Name);
@@ -104,8 +99,14 @@ namespace NextcloudApp.ViewModels
             DownloadPreviewImages();
         }
 
+        private void PathStack_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            _navigationService.GoBack();
+        }
+
         public override void OnNavigatingFrom(NavigatingFromEventArgs e, Dictionary<string, object> viewModelState, bool suspending)
         {
+            Directory.PathStack.CollectionChanged -= PathStack_CollectionChanged;
             if (!suspending)
             {
                 Directory.StopDirectoryListing();
@@ -145,7 +146,7 @@ namespace NextcloudApp.ViewModels
                 Stream stream = null;
                 try
                 {
-                    stream = await client.GetThumbnail(ResourceInfo, 120, 120);
+                    stream = await client.GetThumbnail(ResourceInfo, 300, 300);
                 }
                 catch (ResponseError e)
                 {
@@ -217,33 +218,6 @@ namespace NextcloudApp.ViewModels
         {
             get => _directoryService;
             private set => SetProperty(ref _directoryService, value);
-        }
-
-        public ObservableCollection<PathInfo> PathStack { get; } = new ObservableCollection<PathInfo>();
-
-        public int SelectedPathIndex
-        {
-            get => _selectedPathIndex;
-            set
-            {
-                if (!SetProperty(ref _selectedPathIndex, value))
-                {
-                    return;
-                }
-
-                if (_selectedPathIndex == PathStack.Count - 1)
-                {
-                    // file name was selected, just return
-                    return;
-                }
-
-                while (Directory.PathStack.Count > 0 && Directory.PathStack.Count > _selectedPathIndex + 1)
-                {
-                    Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
-                }
-
-                _navigationService.GoBack();
-            }
         }
 
         private async void DeleteResource()
