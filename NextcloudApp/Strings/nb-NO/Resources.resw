@@ -497,7 +497,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>Se opp for konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Både lokal og mappe annensteds hen er ikke tomme. Dette kan skape konflikter, fordi programmet ikke vet hvilke filer som er de riktige.</value>
+    <value>Både lokal og ekstern mappe er ikke tomme. Dette kan skape konflikter, fordi programmet ikke vet hvilke filer som er de riktige.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synkronisering har blitt startet!</value>
@@ -656,7 +656,7 @@ Prøv igjen senere.</value>
     <value>Behold slik den er</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>Denne løsningen fungerer bare hvis filene finnes både her og annensteds hen</value>
+    <value>Denne løsningen fungerer bare hvis filene finnes både her og eksternt</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Merk</value>
