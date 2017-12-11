@@ -479,7 +479,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>De certificaat authoriteit is ongeldig. Toch verbinding maken?
 
-Kijk uit, u bent niet beveiligd tegen 'Man-in-the-middle (mitm)' aanvallen!</value>
+Kijk uit, je bent niet beveiligd tegen 'Man-in-the-middle (mitm)' aanvallen!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Let op!</value>
@@ -561,7 +561,7 @@ Probeer het later opnieuw.</value>
     <value>Als de expert-modus is ingeschakeld, heeft de app extra mogelijkheden en informatie, die niet voor anderen relevant zijn.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Negeer ongeldige 'zelf-ontekende' SSL certificaten. This maakt het mogelijks on ongeldige of incorrecte SSL certificaat authoriteiten te gebruiken. Kijk uit, u bent zo niet beschermd tegen 'man-in-the-middle (mitm)'  aanvallen!</value>
+    <value>Negeer ongeldige 'zelf-ondertekende' SSL certificaten. Dit maakt het mogelijk on ongeldige of incorrecte SSL certificaat autoriteiten te gebruiken. Kijk uit, je bent zo niet beschermd tegen 'man-in-the-middle (mitm)'  aanvallen!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchroniseer deze map</value>
