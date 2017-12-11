@@ -22,7 +22,7 @@
         </Style>
     </prismMvvm:SessionStateAwarePage.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
@@ -58,7 +58,7 @@
             VerticalAlignment="Center" 
             Foreground="White"/>
 
-        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Grid.Row="1" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
             <StackPanel Margin="12">
 
                 <TextBlock

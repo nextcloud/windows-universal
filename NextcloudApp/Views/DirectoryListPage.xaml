@@ -8,6 +8,8 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:actions="using:NextcloudApp.Actions"
     xmlns:controls="using:NextcloudApp.Controls"
+    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
     x:Class="NextcloudApp.Views.DirectoryListPage"
     x:Name="Page"
     mc:Ignorable="d"
@@ -125,6 +127,7 @@
                                         Background="#808080"
                                         Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
                                         <Image
+                                            x:Name="Thumbnail"
                                             Source="{Binding Thumbnail}"
                                             Stretch="UniformToFill"/>
                                     </Border>
@@ -244,6 +247,26 @@
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
+
+                    <ListView.Triggers>
+                        <EventTrigger>
+                            
+                        </EventTrigger>
+                    </ListView.Triggers>
+
+                    <i:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Loaded">
+                            <core:InvokeCommandAction Command="{Binding ListViewLoadedCommand}"/>
+                        </core:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
+                    <!--<interactivity:Interaction.Behaviors>
+                        <behaviors:ListViewConnectedAnimationBehavior/>
+                    </interactivity:Interaction.Behaviors>-->
+                    <!--<interactivity:Interaction.Triggers>
+                        <interactivity:EventTrigger EventName="Loaded">
+                            <interactivity:InvokeCommandAction Command="{Binding MyICommandThatShouldHandleLoaded}" />
+                        </interactivity:EventTrigger>
+                    </interactivity:Interaction.Triggers>-->
                 </ListView>
             </SemanticZoom.ZoomedInView>
             <SemanticZoom.ZoomedOutView>

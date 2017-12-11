@@ -20,8 +20,8 @@
                         <AdaptiveTrigger MinWindowWidth="1280" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="Thumbnail.Height" Value="300" />
-                        <Setter Target="Thumbnail.Width" Value="300" />
+                        <Setter Target="ThumbnailWrapper.Height" Value="300" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="300" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Medium">
@@ -29,8 +29,8 @@
                         <AdaptiveTrigger MinWindowWidth="800" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="Thumbnail.Height" Value="200" />
-                        <Setter Target="Thumbnail.Width" Value="200" />
+                        <Setter Target="ThumbnailWrapper.Height" Value="200" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="200" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="Narrow">
@@ -38,8 +38,8 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="Thumbnail.Height" Value="100" />
-                        <Setter Target="Thumbnail.Width" Value="100" />
+                        <Setter Target="ThumbnailWrapper.Height" Value="100" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="100" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -54,24 +54,29 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid
-                        x:Name="Thumbnail"
+                        x:Name="ThumbnailWrapper"
                         Height="100" 
                         Width="100"
-                        Background="{StaticResource SystemControlHighlightAccentBrush}">
-                        <FontIcon 
-                            Glyph="{Binding ResourceInfo, Converter={StaticResource ContentTypeToIconConverter}}" 
-                            FontFamily="Segoe MDL2 Assets"
-                            FontSize="80"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            Foreground="White"/>
-                        <Border
-                            Background="#808080"
-                            Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
-                            <Image
-                                Source="{Binding Thumbnail}"
-                                Stretch="UniformToFill"/>
-                        </Border>
+                        Margin="6,6,10,6">
+                        <Canvas x:Name="ShadowHost" />
+                        <Grid
+                            x:Name="Thumbnail"
+                            Background="{StaticResource SystemControlHighlightAccentBrush}">
+                            <FontIcon 
+                                Glyph="{Binding ResourceInfo, Converter={StaticResource ContentTypeToIconConverter}}" 
+                                FontFamily="Segoe MDL2 Assets"
+                                FontSize="80"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="White"/>
+                            <Border
+                                Background="#808080"
+                                Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
+                                <Image
+                                    Source="{Binding Thumbnail}"
+                                    Stretch="UniformToFill"/>
+                            </Border>
+                        </Grid>
                     </Grid>
 
                     <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="8,0,0,0">

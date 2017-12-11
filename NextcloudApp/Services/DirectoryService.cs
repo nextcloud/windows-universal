@@ -248,19 +248,6 @@ namespace NextcloudApp.Services
             
             _continueListing = true;
 
-            if (PathStack.Count == 0)
-            {
-                PathStack.Add(new PathInfo
-                {
-                    ResourceInfo = new ResourceInfo()
-                    {
-                        Name = "Nextcloud",
-                        Path = "/"
-                    },
-                    IsRoot = true
-                });
-            }
-
             var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
             List<ResourceInfo> list = null;
 
@@ -268,12 +255,20 @@ namespace NextcloudApp.Services
             {
                 if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
                 {
-                    PathStack.Clear();
+                    for (int i = PathStack.Count - 1; i > 0; i--)
+                    {
+                        PathStack.RemoveAt(i);
+                    }
+
                     _listingTask = client.GetSharesView(viewName);
                 }
                 else if (viewName == "favorites")
                 {
-                    PathStack.Clear();
+                    for (int i = PathStack.Count - 1; i > 0; i--)
+                    {
+                        PathStack.RemoveAt(i);
+                    }
+
                     _listingTask = client.GetFavorites();
                 }
                 else

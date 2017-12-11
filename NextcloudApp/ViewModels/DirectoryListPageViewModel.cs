@@ -55,6 +55,7 @@ namespace NextcloudApp.ViewModels
         public ICommand PinToStartCommand { get; }
         public ICommand SelectToggleCommand { get; }
         public ICommand ToggleFavoriteCommand { get; }
+        public ICommand ListViewLoadedCommand { get; }
 
         public DirectoryListPageViewModel(INavigationService navigationService, IResourceLoader resourceLoader, DialogService dialogService)
         {
@@ -147,6 +148,12 @@ namespace NextcloudApp.ViewModels
             MoveSelectedCommand = new RelayCommand(MoveSelected);
             PinToStartCommand = new DelegateCommand<object>(PinToStart, CanPinToStart);
             ToggleFavoriteCommand = new RelayCommand(ToggleFavorite);
+            ListViewLoadedCommand = new RelayCommand(ListViewLoaded);
+        }
+
+        private void ListViewLoaded(object obj)
+        {
+            var listView = obj as ListView;
         }
 
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
@@ -178,7 +185,11 @@ namespace NextcloudApp.ViewModels
                 _selectedFileOrFolder = null;
             }
             else
+            {
                 _isNavigatingBack = false;
+            }
+
+            Directory = null;
 
             base.OnNavigatingFrom(e, viewModelState, suspending);
         }
@@ -784,6 +795,19 @@ namespace NextcloudApp.ViewModels
                 }
                 else
                 {
+
+
+
+
+
+
+
+
+
+
+
+
+
                     var parameters = new FileInfoPageParameters
                     {
                         ResourceInfo = value
