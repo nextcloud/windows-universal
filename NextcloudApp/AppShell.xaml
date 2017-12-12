@@ -1,11 +1,12 @@
-﻿<controls:ThemeablePage x:Name="themeablePage"
+﻿<controls:ThemeablePage
     x:Class="NextcloudApp.AppShell"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:NextcloudApp.Controls"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    x:Name="AppShellControl">
 
     <NavigationView 
         x:Name="NavView"
@@ -22,7 +23,16 @@
         <NavigationView.HeaderTemplate>
             <DataTemplate>
                 <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
-                    <controls:PathStackHeader />
+                    <controls:PathStackHeader
+                        Visibility="{Binding PathStackHeaderVisible, ElementName=AppShellControl, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                    <TextBlock 
+                        Visibility="{Binding SettingsHeaderVisible, ElementName=AppShellControl, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Text="Settings"
+                        x:Uid="Settings2" 
+                        Margin="8,0,0,0" 
+                        VerticalAlignment="Center" 
+                        Foreground="White"/>
                 </Grid>
             </DataTemplate>
         </NavigationView.HeaderTemplate>

@@ -73,6 +73,7 @@
                                 Background="#808080"
                                 Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
                                 <Image
+                                    x:Name="ThumbnailImage"
                                     Source="{Binding Thumbnail}"
                                     Stretch="UniformToFill"/>
                             </Border>

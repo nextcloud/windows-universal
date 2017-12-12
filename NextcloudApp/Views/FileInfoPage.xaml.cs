@@ -1,4 +1,5 @@
-﻿using Prism.Windows.Mvvm;
+﻿using NextcloudApp.ViewModels;
+using Prism.Windows.Mvvm;
 using System.Numerics;
 using Windows.UI;
 using Windows.UI.Composition;
@@ -13,6 +14,9 @@ namespace NextcloudApp.Views
         {
             InitializeComponent();
             InitializeDropShadow(ShadowHost, Thumbnail);
+
+            var dataContext = DataContext as FileInfoPageViewModel;
+            dataContext.ThumbnailImage = ThumbnailImage;
         }
 
         private void InitializeDropShadow(UIElement shadowHost, UIElement shadowTarget)

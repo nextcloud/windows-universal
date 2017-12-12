@@ -134,7 +134,6 @@
       <DependentUpon>AppShell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
-    <Compile Include="Behaviors\ListViewConnectedAnimationBehavior.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
     <Compile Include="Constants\ResourceConstants.cs" />
     <Compile Include="Controls\FileOrFolderListZoomedOutView.xaml.cs">

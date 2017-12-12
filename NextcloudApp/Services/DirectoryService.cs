@@ -15,6 +15,7 @@ using NextcloudApp.Models;
 using NextcloudApp.Utils;
 using NextcloudClient.Exceptions;
 using NextcloudClient.Types;
+using System.Threading;
 
 namespace NextcloudApp.Services
 {
@@ -27,7 +28,7 @@ namespace NextcloudApp.Services
         private bool _continueListing;
         private bool _isSelecting;
         private string _selectionMode;
-        private Task<List<ResourceInfo>> _listingTask;
+        private CancellationTokenSource _listingTaskCancellationTokenSource;
 
         private DirectoryService()
         {
@@ -228,111 +229,120 @@ namespace NextcloudApp.Services
 
         public async Task StartDirectoryListing(ResourceInfo resourceInfoToExclude, string viewName = null)
         {
-            // cancel a current running listing
-            if (_listingTask != null)
-            {
-                _listingTask.AsAsyncAction().Cancel();
-                _listingTask = null;
-            }
-
-            // clear instantly, so the user will not see invalid listings
-            FilesAndFolders.Clear();
-            Folders.Clear();
-
-            var client = await ClientService.GetClient();
-
-            if (client == null || IsSelecting)
-            {
-                return;
-            }
-            
-            _continueListing = true;
-
-            var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
-            List<ResourceInfo> list = null;
-
             try
             {
-                if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
+                // cancel a current running listing
+                if (_listingTaskCancellationTokenSource != null)
                 {
-                    for (int i = PathStack.Count - 1; i > 0; i--)
-                    {
-                        PathStack.RemoveAt(i);
-                    }
-
-                    _listingTask = client.GetSharesView(viewName);
+                    _listingTaskCancellationTokenSource.Cancel();
                 }
-                else if (viewName == "favorites")
-                {
-                    for (int i = PathStack.Count - 1; i > 0; i--)
-                    {
-                        PathStack.RemoveAt(i);
-                    }
+                _listingTaskCancellationTokenSource = new CancellationTokenSource();
 
-                    _listingTask = client.GetFavorites();
+                // clear instantly, so the user will not see invalid listings
+                FilesAndFolders.Clear();
+                Folders.Clear();
+
+                var client = await ClientService.GetClient();
+
+                if (client == null || IsSelecting)
+                {
+                    return;
                 }
-                else
+
+                _continueListing = true;
+
+                var path = PathStack.Count > 0 ? PathStack[PathStack.Count - 1].ResourceInfo.Path : "/";
+                List<ResourceInfo> list = null;
+
+                try
                 {
-                    _listingTask = client.List(path);
+                    Task<List<ResourceInfo>> listingTask;
+                    if (viewName == "sharesIn" | viewName == "sharesOut" | viewName == "sharesLink")
+                    {
+                        for (int i = PathStack.Count - 1; i > 0; i--)
+                        {
+                            PathStack.RemoveAt(i);
+                        }
+
+                        listingTask = client.GetSharesView(viewName);
+                    }
+                    else if (viewName == "favorites")
+                    {
+                        for (int i = PathStack.Count - 1; i > 0; i--)
+                        {
+                            PathStack.RemoveAt(i);
+                        }
+
+                        listingTask = client.GetFavorites();
+                    }
+                    else
+                    {
+                        listingTask = client.List(path);
+                    }
+                    list = await listingTask.ContinueWith(t => t.GetAwaiter().GetResult(), _listingTaskCancellationTokenSource.Token);
+                    _listingTaskCancellationTokenSource = null;
                 }
-                list = await _listingTask;
-            }
-            catch (ResponseError e)
-            {
-                ResponseErrorHandlerService.HandleException(e);
-            }
-
-            if (list != null)
-            {
-                foreach (var item in list)
+                catch (ResponseError e)
                 {
-                    if (resourceInfoToExclude != null && item == resourceInfoToExclude)
+                    ResponseErrorHandlerService.HandleException(e);
+                }
+                
+                if (list != null)
+                {
+                    foreach (var item in list)
                     {
-                        continue;
-                    }
+                        if (resourceInfoToExclude != null && item == resourceInfoToExclude)
+                        {
+                            continue;
+                        }
 
-                    FilesAndFolders.Add(new FileOrFolder(item));
+                        FilesAndFolders.Add(new FileOrFolder(item));
 
-                    if (!item.IsDirectory)
-                    {
-                        continue;
-                    }
-                    if (RemoveResourceInfos != null)
-                    {
-                        var index = RemoveResourceInfos.FindIndex(
-                            res => res.Path.Equals(item.Path, StringComparison.Ordinal));
-                        if (index == -1)
+                        if (!item.IsDirectory)
+                        {
+                            continue;
+                        }
+                        if (RemoveResourceInfos != null)
+                        {
+                            var index = RemoveResourceInfos.FindIndex(
+                                res => res.Path.Equals(item.Path, StringComparison.Ordinal));
+                            if (index == -1)
+                            {
+                                Folders.Add(new FileOrFolder(item));
+                            }
+                        }
+                        else
                         {
                             Folders.Add(new FileOrFolder(item));
                         }
                     }
-                    else
-                    {
-                        Folders.Add(new FileOrFolder(item));
-                    }
                 }
-            }
 
-            switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
-            {
-                case PreviewImageDownloadMode.Always:
-                    DownloadPreviewImages();
-                    break;
-                case PreviewImageDownloadMode.WiFiOnly:
-                    var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
-                    // connectionProfile can be null (e.g. airplane mode)
-                    if (connectionProfile != null && connectionProfile.IsWlanConnectionProfile)
-                    {
+                switch (SettingsService.Default.Value.LocalSettings.PreviewImageDownloadMode)
+                {
+                    case PreviewImageDownloadMode.Always:
                         DownloadPreviewImages();
-                    }
-                    break;
-                case PreviewImageDownloadMode.Never:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+                        break;
+                    case PreviewImageDownloadMode.WiFiOnly:
+                        var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+                        // connectionProfile can be null (e.g. airplane mode)
+                        if (connectionProfile != null && connectionProfile.IsWlanConnectionProfile)
+                        {
+                            DownloadPreviewImages();
+                        }
+                        break;
+                    case PreviewImageDownloadMode.Never:
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
 
-            SortList();
+                SortList();
+            }
+            catch (OperationCanceledException)
+            {
+                // Handle the cancelled Task
+            }
         }
 
         private async void DownloadPreviewImages()

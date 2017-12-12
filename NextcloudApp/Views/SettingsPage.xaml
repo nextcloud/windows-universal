@@ -23,11 +23,7 @@
     </prismMvvm:SessionStateAwarePage.Resources>
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        
+
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="Wide">
@@ -50,15 +46,8 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <TextBlock 
-            x:Name="Settings"
-            Text="Settings"
-            x:Uid="Settings2" 
-            Margin="48,0,0,0" 
-            VerticalAlignment="Center" 
-            Foreground="White"/>
 
-        <ScrollViewer Grid.Row="1" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+        <ScrollViewer Background="{ThemeResource SystemControlAcrylicWindowBrush}">
             <StackPanel Margin="12">
 
                 <TextBlock

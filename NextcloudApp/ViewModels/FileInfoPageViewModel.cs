@@ -16,6 +16,7 @@ using Prism.Commands;
 using Prism.Windows.Navigation;
 using NextcloudClient.Types;
 using Prism.Windows.AppModel;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace NextcloudApp.ViewModels
 {
@@ -67,6 +68,14 @@ namespace NextcloudApp.ViewModels
         public override void OnNavigatedTo(NavigatedToEventArgs e, Dictionary<string, object> viewModelState)
         {
             base.OnNavigatedTo(e, viewModelState);
+
+            // Crashes ->
+
+            //var imageAnimation =  ConnectedAnimationService.GetForCurrentView().GetAnimation("image");
+            //if (imageAnimation != null)
+            //{
+            //    imageAnimation.TryStart(ThumbnailImage);
+            //}
 
             var parameters = FileInfoPageParameters.Deserialize(e.Parameter);
             var resourceInfo = parameters?.ResourceInfo;
@@ -219,6 +228,7 @@ namespace NextcloudApp.ViewModels
             get => _directoryService;
             private set => SetProperty(ref _directoryService, value);
         }
+        public Image ThumbnailImage { get; internal set; }
 
         private async void DeleteResource()
         {
