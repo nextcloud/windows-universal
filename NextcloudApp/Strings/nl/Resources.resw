@@ -513,7 +513,7 @@ Probeer het later opnieuw.</value>
     <value>Bestand zowel lokaal als extern gewijzigd. Welke heeft je voorkeur?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Bestand zowel lokaal als extern aangemaakt - wat is het juiste?</value>
+    <value>Bestand zowel lokaal als extern aangemaakt - welke is het juiste?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
     <value>Bestand lokaal verwijderd, maar extern gewijzigd. Wat heeft je voorkeur?</value>
@@ -606,7 +606,7 @@ Probeer het later opnieuw.</value>
     <value>Favorieten</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Deelde met jou</value>
+    <value>Met mij gedeeld</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Gedeeld via een link</value>
