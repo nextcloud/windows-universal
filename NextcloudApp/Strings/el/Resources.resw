@@ -157,22 +157,22 @@
     <value>Ημερομηνία (νεότερη στην κορυφή)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>΄Ονομα (Α στην κορυφή)&lt;br&gt;&lt;div&gt;&lt;br data-mce-bogus="1"&gt;&lt;/div&gt;</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Όνομα (Z στην κορυφή)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Μέγεθος (μικρότερα στην κορυφή)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Μέγεθος (μεγαλύτερα στην κορυφή)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Τύπος (A στην κορυφή)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Τύπος (Z στην κορυφή)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Σφάλμα εφαρμογής</value>
