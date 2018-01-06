@@ -1,0 +1,691 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>모든 파일</value>
+  </data>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>항상</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>오류가 발생했습니다</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>새 폴더</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>사진 촬영</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>파일 업로드</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>사진 업로드</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>새로 고침</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>정렬</value>
+  </data>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>날짜(오래된 항목부터)</value>
+  </data>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>날짜(새로운 항목부터)</value>
+  </data>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>이름(가나다순)</value>
+  </data>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>이름(가나다 역순)</value>
+  </data>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>크기(작은 것부터)</value>
+  </data>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>크기(큰 것부터)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>형식(가나다순)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>형식(가나다 역순)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>프로그램 오류</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>프로그램에 문제가 발생했습니다. 불편을 끼쳐 드려서 죄송합니다. 진행 중인 작업이 있었으면 해당 작업 진행 사항은 손실됩니다.
+
+프로그램 개발자에게 문제를 보고해 주시겠습니까? 문제를 더 빠르게 해결할 수 있습니다.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>폴더를 만들 수 없음</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>연결</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Content-Type</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>생성</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>생성됨</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>새 폴더 만들기</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>파일 다운로드 중…</value>
+  </data>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>미리 보기 그림 다운로드</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0}({1}바이트)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>폴더 이름</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>수정한 날짜</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>하지 않음</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>새 폴더</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>인증되지 않음</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>서버에서 오류 코드 401(인증되지 않음)을 반환했습니다. 다시 로그인하십시오.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>암호</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>경로</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{1} 중 {0} 사용함</value>
+  </data>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>이 앱 초기화</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>다시 시도</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>서버 주소</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>파일 및 폴더 목록 그룹 표시</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>크기</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>같은 이름을 가진 항목이 이미 있습니다. 다른 이름을 입력하십시오.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>종류</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>사용자 이름</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>버전 {0}</value>
+  </data>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Wi-Fi에 연결되어 있을 때만</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>파일 삭제</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>{0} 파일을 삭제하시겠습니까?</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>폴더 삭제</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>{0} 폴더를 삭제하시겠습니까?</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{1} 중 {0} 업로드됨</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>파일 {1}개 중 {0}개 업로드 중…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>파일 업로드 중…</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{1} 중 {0} 다운로드됨</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>서버가 현재 관리 모드입니다.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>사용자 이름이나 암호가 잘못되었습니다.</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>클라이언트 버전 {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>서버 이름이나 주소를 알 수 없습니다.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>서버 버전 {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>서버 응답 대기 중</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>새 이름을 입력하십시오</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>이름 바꾸기</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>이름 바꾸기</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>이름 바꾸기</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>다음으로 이동</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>다음으로 이동</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>폴더 선택</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>{0}에 있는 서버에 접근할 수 없습니다.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>ZIP 파일로 다운로드</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} 다운로드됨</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>내 Nextcloud에 접근하려면 장치의 로그인 정보를 입력하십시오.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello 인증</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>이 장치의 PIN을 설정하지 않았습니다. Windows Hello를 사용하려면 장치의 PIN을 설정해야 합니다.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>로그인 필요</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>장치 로그인 정보를 입력하지 않으면 Nextcloud를 열 수 없습니다.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>다시 시도</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Windows Mobile용 Nextcloud</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>앱을 버전 {0}(으)로 업데이트함</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>이 버전의 새로운 기능 및 변경 사항:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>추천</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• 파일과 폴더 이동
+• 파일과 폴더 이름 바꾸기
+• 폴더 수동 동기화
+• 디렉터리를 ZIP 파일로 다운로드
+• 다중 파일 및 폴더 선택
+• 앱 내에서 즐겨찾는 항목 설정
+• 디렉터리 목록에서 폴더 크기 표시
+• 디렉터리 목록에 선택한/전체 파일 개수를 나타내는 상태 표시줄 표시
+• 파일 형식으로 정렬
+• 즐겨찾기/공유 보기 개선
+• 시작 화면에 파일이나 폴더 고정
+• 앱 시작 시 Windows Hello 인증
+• 전문가 모드로 앱의 추가 설정 표시
+• 자가 서명 SSL 인증서 허용
+• 앱 내에서 파일 공유
+• 테마(어두움/밝음/시스템)
+• PasswordVault로 인증 정보 저장
+• 새롭고 안정적인 WebDAV 라이브러리
+• 보안 강화 및 버그 수정</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>시작 화면에 고정</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>시작 화면에 고정</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>연결</value>
+  </data>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>잘못된 자가 서명 SSL 인증서 무시</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>전문가 모드</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>동기화 상태</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>과거 기록</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>충돌</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>동기화</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>로컬 파일 우선</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>동기화 기록 비우기</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>원격 파일 우선</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>인증서 발급자가 잘못되었가나 올바르지 않습니다. 계속 진행하시겠습니까?
+
+중간자 공격(MitM)으로부터 보호받지 못할 수도 있습니다!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>주의!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>이 설정을 적용하려면 앱을 다시 시작해야 합니다.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>힌트</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>마지막 동기화 시 발생한 오류 목록입니다. 임시 문제(예: 파일을 다른 앱에서 사용 중)일 수도 있으며 다음 동기화 시에 해결될 것입니다.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>충돌에 주의하십시오!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>원격 및 로컬 폴더가 비어 있지 않습니다. 앱에서 어떤 파일이 올바른 것인지 알 수 없기 때문에 다량의 충돌이 발생할 수 있습니다.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>동기화 요청을 받았습니다!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>배경에서 동기화 작업을 진행합니다. 완료되면 알림을 받을 것입니다.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>서비스를 임시로 사용할 수 없습니다(관리 작업 중일 수도 있습니다).
+나중에 다시 시도하십시오.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>로컬과 원격 모두에서 파일이 변경되었습니다. 어느 쪽을 선택하시겠습니까?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>로컬과 원격 모두에서 파일이 생성되었습니다. 어느 쪽을 선택하시겠습니까?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>로컬에서 파일을 삭제했지만 원격에서 해당 파일이 변경되었습니다. 어떻게 하시겠습니까?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>충돌: </value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>원격에서 파일을 삭제했지만 로컬에서 해당 파일이 변경되었습니다. 어떻게 하시겠습니까?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>{0} 폴더 동기화 결과 변경 사항이 {1}개 있었고, 오류 및 충돌이 {2}개 있었습니다.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>{0} 폴더 동기화 결과 변경 사항이 {1}개 있었습니다.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>동기화 완료됨</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>앱이 일시 정지되어 {0} 폴더 동기화가 중단되었습니다.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>동기화 일시 정지됨</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>동기화 상태</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>로컬 경로</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud 경로</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>파일을 업로드할 폴더 선택</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>폴더</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>항목: {0}개(폴더: {1}개, 파일: {2}개)</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>전문가 모드를 사용하면 일부 사용자를 대상으로 하는 추가 기능/정보를 표시합니다.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>잘못된 자가 서명 SSL 인증서를 무시합니다. 잘못되었거나 올바르지 않은 SSL 인증서 발급자의 인증서를 사용할 수 있도록 합니다. 중간자 공격(MitM)으로부터 더 이상 보호받을 수 없습니다!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>이 폴더 동기화</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>이 폴더 동기화 중지</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>동기화 중지</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>동기화 상태</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>지금 동기화</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>동기화</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>이 폴더 지금 동기화</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>이 폴더 동기화</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>어두움</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>밝음</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>시스템 설정 사용</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>모드 선택</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>다른 사람과 공유됨</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>즐겨찾기</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>나와 공유됨</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>링크로 공유됨</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>공유 준비 중...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>폴더 만들기</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>WebDAV 통신 클라이언트를 생성하는 중 오류 발생</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nextcloud에 '{0}' 디렉터리를 만들 수 없습니다.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Nextcloud에서 '{0}'을(를) 삭제할 수 없습니다.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Nextcloud에서 '{0}' 파일을 다운로드할 수 없습니다.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Nextcloud에 '{0}' 파일을 업로드할 수 없습니다.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>덮어쓰시겠습니까?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>파일이 이미 존재함</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>엎어쓰기</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>처리하지 못한 예외: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>서버 URL을 입력하지 않았습니다. Nextcloud 인스턴스의 URL을 입력하십시오.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>그대로 유지</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>파일이 로컬과 원격에 모두 존재할 경우에만 이 방법을 선택할 수 있습니다</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>주의</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>전문가 모드는 어떻게 작동하나요?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>이것은 무엇인가요?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows 색 설정</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>모두 선택</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>모두 선택 해제</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>이 앱을 초기화하시겠습니까? 앱 설정 및 모든 동기화 설정을 초기화합니다.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>이 앱 초기화</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>파일 삭제</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>선택한 파일을 삭제하시겠습니까?</value>
+  </data>
+</root>
