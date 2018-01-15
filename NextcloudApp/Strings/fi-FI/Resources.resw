@@ -150,29 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Lajittele</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Päivämäärä (vanhin ensin)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Päiväys (vanhin ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Päivämäärä (uusin ensin)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Päiväys (uusin ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nimi (aakkosjärjetys)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Nimi (A ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nimi (käänteinen aakkosjärjestys)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Nimi (Ö ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Koko (pienin ensin)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Koko (pienin ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Koko (suurin ensin)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Koko (suurin ylimpänä)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Tyyppi (aakkosjärjestys)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Tyyppi (käänteinen aakkosjärjestys)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Sovellusvirhe</value>
@@ -254,8 +254,8 @@ Would you like to inform the application developers and submit the prepared erro
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0}/{1} käytetty</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Resetoi tämä sovellus</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Yritä uudelleen</value>
@@ -494,7 +494,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Varo ristiriitoja!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
@@ -503,7 +503,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Synchronization has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Palvelu on väliaikaisesti poissa käytöstä (yleensä lyhyen huoltotyön vuoksi).
@@ -546,7 +546,7 @@ Yritä myöhemmin uudelleen.</value>
     <value>Paikallinen polku</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud-polku</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Valitse kansio, mihin haluat lähettää tiedostot</value>
@@ -555,7 +555,7 @@ Yritä myöhemmin uudelleen.</value>
     <value>Kansiot</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Kohteet: {0} (kansiot: {1} tiedostot: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
@@ -582,7 +582,7 @@ Yritä myöhemmin uudelleen.</value>
     <value>Synkronoi</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Synkronoi tämä kansio nyt</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Synkronoi tämä kansio</value>
@@ -594,7 +594,7 @@ Yritä myöhemmin uudelleen.</value>
     <value>Vaalea</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Käytä järjestelmän asetuksia</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Select a mode</value>
@@ -621,19 +621,19 @@ Yritä myöhemmin uudelleen.</value>
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Ei voitu luoda kansiota '{0}' Nextcloudiin.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -665,9 +665,27 @@ Yritä myöhemmin uudelleen.</value>
     <value>How does the expert mode work?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Mitä tämä tarkoittaa?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Windows-väriasetukset</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Poista tiedostot</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Haluatko varmasti poistaa valitut tiedostot?</value>
   </data>
 </root>
