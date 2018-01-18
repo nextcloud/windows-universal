@@ -376,7 +376,7 @@
     <value>{0} atsiųsta</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+    <value>Norėdami gauti prieigą prie savo Nextcloud, pateikite savo įrenginio prisijungimo informacija.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello authentication</value>
@@ -466,7 +466,7 @@
     <value>Sinchronizuojama</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Teikti pirmenybę vietiniam failui</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
     <value>Ištrinti  sinchronizavimo istoriją</value>
@@ -492,7 +492,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Saugokitės konfliktų!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
@@ -541,10 +541,10 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Vietinis kelias</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Nextcloud kelias</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Choose the folder where you want to upload the files</value>
@@ -648,7 +648,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Nenurodytas serverio URL. Įveskite savo Nextcloud egzemplioriaus URL.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Palikti kaip yra</value>
