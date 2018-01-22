@@ -619,7 +619,7 @@
     <value>Создать каталог</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Ошибка создания соединения клиента с WebDAV</value>
+    <value>Ошибка при создании клиента для связи с WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
     <value>Ошибка создания каталога «{0}» в Nextcloud.</value>
@@ -630,11 +630,11 @@
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Ошибка загрузки файла «{0}» с Nextcloud.</value>
+    <value>Ошибка загрузки файла '{0}' с Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Ошибка загрузки файла «{0}» в Nextcloud.</value>
+    <value>Ошибка загрузки файла '{0}' в Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -651,7 +651,7 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Не указан URL сервера. Введите URL вашего сервера Nextcloud.</value>
+    <value>URL адрес сервера не указан. Введите пожалуйста URL адрес Вашего сервера NextCloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Оставлять как есть</value>
@@ -678,10 +678,10 @@
     <value>Снять все отметки</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Действительно сбросить настройки приложения? Это действие так же сбросит все настройки синхнронизации.</value>
+    <value>Вы уверены что хотите перезагрузить это приложение? Это действие приведёт к сбросу всего приложения и всех Ваших настроек синхнронизации.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Сбросить настройки приложения</value>
+    <value>Перезагрузить это приложение</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Удалить файлы</value>
