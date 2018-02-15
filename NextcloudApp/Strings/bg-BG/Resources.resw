@@ -118,303 +118,303 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AllFiles" xml:space="preserve">
-    <value>Visas datnes</value>
+    <value>Всички файлове</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Vienmēr</value>
+    <value>Винаги</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Radusies kļūda</value>
+    <value>Възникна грешка</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Pievienot</value>
+    <value>Добави</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Izveidot mapi</value>
+    <value>Създаване на папка</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Uzņemt attēlu</value>
+    <value>Заснемане</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Augšupielādē datnes</value>
+    <value>Качване на файлове</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
-    <value>Augšupielādēt fotoattēlu</value>
+    <value>Качване на снимки</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Lejupielādēt</value>
+    <value>Изтегляне</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Atsvaidzināt</value>
+    <value>Опресняване</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Kārtot</value>
+    <value>Сортиране</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Дата (старите в началото)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Дата (новите в началото)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Име (А в началото)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Име (Z в началото)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Размер (малките в началото)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Размер (големите в началото)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Тип (А в началото)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Тип (Z в началото)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Lietojumprogrammas kļūda</value>
+    <value>Програмна грешка</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Lietojumprogrammā radās problēma. Mēs atvainojamies par sagādātajām neērtībām. Ja nebijāt darbu pabeidzis, informācija, ar kuru strādājat jau ir zaudēta.
+    <value>Приложението се натъкна на проблем. Извиняваме се за неудобството. Ако сте изпълнявали конкретна задача, информацията, върху която сте работили е загубена.
 
-Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavoto kļūdas ziņojumu? Tas palīdzēs novērst problēmu ātrāk.</value>
+Бихте ли искали да информирате разработчиците на приложението и да предоставите изготвения доклад за грешки? Това помага за по-бързо елиминиране на проблемите.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Atcelt</value>
+    <value>Отказ</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Nevar izveidot mapi</value>
+    <value>Не може да се създаде папка</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Savienoties</value>
+    <value>Свързване</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
-    <value>Satura tips</value>
+    <value>Content-Type</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Izveidot</value>
+    <value>Създаване</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Izveidots</value>
+    <value>Създаден</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Izveidot jaunu mapi</value>
+    <value>Създаване на нова папка</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Lejupielādē datni...</value>
+    <value>Изтегляне на файл...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Lejupielādēt priekšskatījuma attēlus</value>
+    <value>Изтегляне на изображения за визуализация</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} baits)</value>
+    <value>{0} ({1} байта)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Mapes nosaukums</value>
+    <value>Име на папката</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informācija</value>
+    <value>Информация</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Pēdējoreiz mainīts</value>
+    <value>Последно променен</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Nosaukums</value>
+    <value>Име</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Nekad</value>
+    <value>Никога</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Jauna mape</value>
+    <value>Нова папка</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Nē</value>
+    <value>Не</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nav autorizēts</value>
+    <value>Не е разрешен</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Serveris atgrieza kļūdas kodu 401 (Unauthorized). Lūdzu, piesakieties vēlreiz.</value>
+    <value>Сървърът върна код за грешка 401 (Unauthorized). Моля, влезте отново.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>Labi</value>
+    <value>ОК</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Parole</value>
+    <value>Парола</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Ceļš</value>
+    <value>Път</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>{0} no {1} izmantots</value>
+    <value>{0} от {1} използвани</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Atiestatīt šo programmu</value>
+    <value>Нулиране на приложението</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Mēģināt vēlreiz</value>
+    <value>Повторен опит</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Servera adrese</value>
+    <value>Адрес на сървъра</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Iestatījumi</value>
+    <value>Настройки</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Iestatījumi</value>
+    <value>Настройки</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Rādīt failu un mapju sarakstu grupējumu</value>
+    <value>Показване на файл и папка списъците групирано</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Izmērs</value>
+    <value>Размер</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Tur jau ir elements ar šādu vārdu. Norādiet citu nosaukumu.</value>
+    <value>Вече съществува елемент с това име. Посочете различно име.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Tips</value>
+    <value>Тип</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Lietotājvārds</value>
+    <value>Потребител</value>
   </data>
   <data name="Version" xml:space="preserve">
-    <value>Versija {0}</value>
+    <value>Версия {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Tikai kad izmantoju WiFi</value>
+    <value>Само при Wi-Fi връзка</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Jā</value>
+    <value>Да</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Dzēst</value>
+    <value>Изтриване</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Dzēst failu</value>
+    <value>Изтриване на файл</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Vai esat pārliecināts, ka vēlaties izdzēst failu {0}</value>
+    <value>Сигурни ли сте, че искате да изтриете файла {0}</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Dzēst mapi</value>
+    <value>Изтриване на папка</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Vai esat pārliecināts, ka vēlaties izdzēst mapi {0}</value>
+    <value>Сигурни ли сте, че искате да изтриете папката {0}</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0} no {1} augšupielādēts</value>
+    <value>{0} от {1} качени</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Augšupielādē failu {0} no {1}…</value>
+    <value>Качване на файл {0} от {1}</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Augšupielādē failu...</value>
+    <value>Качване на файл...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} no {1} lejupielādēts</value>
+    <value>{0} от {1} изтеглени</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Apkopes režīms ir iespējots uz servera.</value>
+    <value>Режимът на поддръжка е включен на сървъра.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nepareizs lietotājvārds vai parole.</value>
+    <value>Грешно потребителско име или парола</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
-    <value>Klienta versija {0}</value>
+    <value>Версия на клиента {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Servera nosaukums vai adrese nav sasniedzama.</value>
+    <value>Името или адресът на сървъра не можаха да бъдат намерени.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Servera versija {0}</value>
+    <value>Версия на сървъра {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Dzēst</value>
+    <value>Изтриване</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>gaida servera atbildi</value>
+    <value>изчакване на отговор от сървъра</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Lūdzu, izvēlieties jaunu vārdu.</value>
+    <value>Моля изберете ново име</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Pārsaukt</value>
+    <value>Преименуване</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Pārsaukt</value>
+    <value>Преименуване</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Pārsaukt</value>
+    <value>Преименуване</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Pārvietot uz</value>
+    <value>Преместване в</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Pārvietot uz</value>
+    <value>Преместване в</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Atcelt</value>
+    <value>Отказ</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Pabeigts</value>
+    <value>Готово</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
-    <value>Izvēlies mapi</value>
+    <value>Избор на папка</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Serveris ar adresi {0} nav sasniedzams.</value>
+    <value>Сървърът с адрес {0} не е достъпен.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
-    <value>Lejupielādēt kā ZIP arhīvu</value>
+    <value>Изтегляне като ZIP файл</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} lejupielādēts</value>
+    <value>{0} изтеглени</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Lai piekļūtu jūsu Nextcloud, nodrošināt pierakstīšanās informāciju par ierīci.</value>
+    <value>За достъп до вашия Nextcloud, предоставете информация за вход на вашето устройство.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows sveiks autentifikācija</value>
+    <value>Windows Hello удостоверяване</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Nav PIN iestatīts šai ierīcei. Lai izmantotu Windows Hallo, PIN KODS ir jādefinē.</value>
+    <value>PIN не е настроен за това устройство. За да използвате  Windows Hello, трябва да дефинирате PIN за устройството.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Lejupielādēt</value>
+    <value>Изтегляне</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
-    <value>Nepieciešama pierakstīšanās</value>
+    <value>Изисква се вход</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Mēs nevaram atvērt Nextcloud līdz tu nodrošini savas ierīces ieejas informāciju.</value>
+    <value>Не може да стартираме Nextcloud, докато не се осигурите информация за вход на вашето устройство.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Mēģiniet vēlreiz</value>
+    <value>Нов опит</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud - Windows Mobile</value>
+    <value>Nextcloud за Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Jūsu programma tika atjaunināta uz versiju {0}</value>
+    <value>Приложението ви беше обновено до версия {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Jaunie līdzekļi un uzlabojumi šajā versijā:</value>
+    <value>Нови функции и подобрения в тази версия:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
-    <value>Ieteikt</value>
+    <value>Препоръчвам</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Atjaunināt</value>
+    <value>Обновяване</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Move files and folders
@@ -438,190 +438,190 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
 • Security improvements &amp; bug fixes</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Piespraust sākumam</value>
+    <value>Закачи към старт</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
-    <value>Piespraust sākumam</value>
+    <value>Закачи към старт</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Savienoties</value>
+    <value>Свързване</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignorēt pašrakstītus SSL certifikātus</value>
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Eksperta režīms</value>
+    <value>Експертен режим</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Sinhronizācijas status</value>
+    <value>Статус на синхронизиране</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
-    <value>Vēsture</value>
+    <value>История</value>
   </data>
   <data name="SynchronizationConflicts.Header" xml:space="preserve">
-    <value>Konflikti</value>
+    <value>Конфликти</value>
   </data>
   <data name="SynchronizationErrors.Header" xml:space="preserve">
-    <value>Kļūdas</value>
+    <value>Грешки</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Sinhronizēt</value>
+    <value>Синхронизирай</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>Prefer local file</value>
+    <value>Предпочети локалния файл</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Notīrīt sinhronizēšanas vēsturi</value>
+    <value>Изтрий историята на сихронизиране</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>Prefer remote file</value>
+    <value>Предпочети отдалечения файл</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>Органът за сертификат е невалиден или некоректен. Ще се свържете ли все пак?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+Бъдете внимателни, вие няма да бъдете защитени от Man-in-the-middle (човек-в-средата) атаки!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>Uzmanību!</value>
+    <value>Внимание!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Приложението трябва да бъде рестартирано, за да влязат в сила настройките.</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Atgādinājums</value>
+    <value>Подсказка</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
     <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Uzmanies no konfliktiem!</value>
+    <value>Beware of conflicts!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Sinhronizācija uzsākta!</value>
+    <value>Синхронизацията бе задействана!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Sinhronizācija notiks fonā. Tu saņemsi paziņojumu kad tā būs beigusies.</value>
+    <value>Синхронизацията ще се осъществи във фонов режим. Ще получите известие, когато приключи.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Pakalpojums īslaicīgi nav pieejams (parasti, īstermiņa tehniskās apkopes darbu dēļ).
-Lūdzu, vēlāk mēģiniet vēlreiz.</value>
+    <value>Услугата е временно недостъпна (обикновено това се дължи на краткосрочна работа по поддръжката).
+Моля, опитайте отново по-късно.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Fails pārmainīts vietēji un attāli. Kuram tu dod priekšroku?</value>
+    <value>Файлът е променен локално и отдалечено. Кое ще предпочетете?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Fails ir izveidots attāli un vietēji - kurš ir īstais?</value>
+    <value>Файлът е създаден отдалечено и локално - кой е правилният файл?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Fails izdzēsts vietēji bet pārmainīts attāli. Kuram tu dod priekšroku?</value>
+    <value>Файлът е изтрит локално, а променен отдалечено. Кое ще предпочетете?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Konflikts:</value>
+    <value>Конфликт:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Fails izdzēsts attāli bet pārmainīts vietēji. Kuram tu dod priekšroku?</value>
+    <value>Файлът е изтрит отдалечено, а променен локално. Кое ще предпочетете?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Mapes {0} sinhronizācija beidzās ar {1} izmaiņām un {2} kļūdām vai konfliktiem.</value>
+    <value>Синхронизирането на папката {0} завърши с {1} промени и {2} грешки или конфликти.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Mapes {0} sinhronizācija beidzās ar {1} izmaiņām.</value>
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Sinhronizācija pabeigta</value>
+    <value>Synchronization has been finished</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Mapes {0} sinhronizācija apturēta, jo lietotne tikusi apturēta.</value>
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Sinhronizācija apturēta</value>
+    <value>Synchronization suspended</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Sinhronizācijas Status</value>
+    <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Lokālais ceļš</value>
+    <value>Local Path</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud ceļš</value>
+    <value>Nextcloud Path</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Izvēlies mapi kurā tu gribi augšupielādēt failus</value>
+    <value>Choose the folder where you want to upload the files</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Mapes</value>
+    <value>Папки</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Vienības: {0} (mapes: {1} faili: {2})</value>
+    <value>Елементи: {0} (папки: {1} файлове: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Kad eksperta režīms ir ieslēgts, aplikācija parāda papildus iespējas/informāciju, kas var neintresēt visiem lietotājiem.</value>
+    <value>Когато е активиран експертният режим, приложението предоставя някои допълнителни функции / информация, които може да не са интересни за всички потребители.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Пренебрегване на невалидните SSL сертификати, които са самоподписани. Това позволява да се използват невалидни или неправилни SSL сертификати. Бъдете внимателни, няма да бъдете защитени от атаките "човек-в-средата" (MITM)!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Sinhronizēt šo mapi</value>
+    <value>Синхронизиране на тази папка</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Beigt šīs mapes sinhronizāciju</value>
+    <value>Спри синхронизирането на тази папка</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Beigt sinhronizāciju</value>
+    <value>Спри синхронизирането</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Sinhronizācijas status</value>
+    <value>Статус на синхронизиране</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Sinhronizēt tagad</value>
+    <value>Синхронизиране сега</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
-    <value>Sinhronizēt</value>
+    <value>Синхронизиране</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Sinhronizēt šo mapi tagad</value>
+    <value>Синхронизиране на тази папка сега</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Sinhronizēt šo mapi</value>
+    <value>Синхронизиране на тази папка</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Tumšs</value>
+    <value>Тъмна</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Gaišs</value>
+    <value>Светла</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Izmantot sistēmas iestatījumus</value>
+    <value>Използване на системните настройки</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Izvēlēties režīmu</value>
+    <value>Избор на режим</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Koplietots ar citiem</value>
+    <value>Споделено с други</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favorīti</value>
+    <value>Любими</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Koplietots ar mani</value>
+    <value>Споделено с мен</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Koplietots ar saiti</value>
+    <value>Споделено с връзка</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Sagatovojas koplietošanai...</value>
+    <value>Подготовка за споделяне...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Izveidot mapi</value>
+    <value>Създаване на папка</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Kļūda izveidojot klientu WebDAV komunikācijai.</value>
+    <value>Грешка при създаване на клиент за WebDAV комуникация</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Nevarēja izveidot mapi '{0}' Nextcloudā.</value>
+    <value>Could not create directory '{0}' on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
@@ -629,63 +629,63 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Kļūda lejupielādējot failu '{0}' no Nextcloud.</value>
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Kļūda augšupielādējot failu '{0}' no Nextcloud.</value>
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Vai tu gribi pārrakstīt to?</value>
+    <value>Искате ли да го презапишете?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Fails jau pastāv.</value>
+    <value>Файлът вече съществува</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Pārrakstīt</value>
+    <value>Презапиши</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Negaidīts izņēmums: {0}</value>
+    <value>Неочаквано изключение: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Nav ierakstīts servera URL. Lūdzu ievadi savas Nextcloud instances URL.</value>
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Saglabāt kā ir</value>
+    <value>Keep as is</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
     <value>This solution can only be applied, if files exist both remotely and locally</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Uzmanību!</value>
+    <value>Внимание!</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>Kā eksperta režīms strādā?</value>
+    <value>How does the expert mode work?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>Kāda ir šī nozīme?</value>
+    <value>What's the meaning of this?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows krāsu iestatījumi</value>
+    <value>Windows color settings</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Izvēlēties visu</value>
+    <value>Check all</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Noņemt atzīmi visam</value>
+    <value>Uncheck all</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Vai tu tiešām gribi atiestatīt šo aplikāciju? Tas atiestatīs visas aplikācijas un sinhronizācijas iestatījumus.</value>
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Atiestatīt šo programmu</value>
+    <value>Reset this app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Dzēst failus</value>
+    <value>Delete files</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Vai tiešām vēlies izdzēst izvēlētos?</value>
+    <value>Are you sure, you want to delete the selected files?</value>
   </data>
 </root>
