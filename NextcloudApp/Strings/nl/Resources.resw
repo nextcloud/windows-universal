@@ -418,14 +418,14 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Verplaatsen bestanden en mappen
-• Hernoemen bestanden en mappen
+• Hernoemen bestanden en mappen
 • Handmatig synchroniseren van mappen
-• Downloaden mappen als zip-bestand
+• Download mappen als zip-bestand
 • Selecteren meerdere bestanden en mappen
 • Objecten kunnen vanuit de app als favoriet worden gemarkeerd
 • Tonen mapgrootte in directoryoverzicht
 • Statusbalk in directoryoverzicht toont geselecteerde/totaal aantal bestanden
-• Sorteren op data type
+• Sorteren op data-type
 • Nieuwe overzichten voor favorieten/shares
 • Vastprikken bestanden en mappen aan startscherm
 • Gebruiken Windows Hello om bij starten app te authenticeren
@@ -435,7 +435,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
 • Thema's (donker/licht/systeem)
 • Gebruiken PasswordVault om inloggegevens op te slaan
 • Nieuwe en meer stabiele WebDAV library
-• Security verbeteringen &amp; bug fixes</value>
+• Beveiligingsupdates &amp; opgeloste fouten</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Pin om te starten</value>
