@@ -124,7 +124,7 @@
     <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>Ha ocurrido un error</value>
+    <value>Se ha producido un error</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
     <value>Añadir</value>
