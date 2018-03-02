@@ -240,7 +240,7 @@
     <value>No autorizado</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>El servidor devolvió un código de error 401 (no autorizado). Por favor, vuelva a registrarse.</value>
+    <value>El servidor ha devuelto un código de error 401 (no autorizado). Por favor, vuelva a iniciar sesión.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>Aceptar</value>
