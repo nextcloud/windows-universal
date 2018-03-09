@@ -214,7 +214,7 @@
     <value>{0} ({1} byt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Jméno složky</value>
+    <value>Název složky</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>Informace</value>
@@ -235,7 +235,7 @@
     <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Neautorizován</value>
+    <value>Není pověřen</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Server vrátil chybový kód 401 (neautorizovaný). Prosím, přihlašte se znovu.</value>
