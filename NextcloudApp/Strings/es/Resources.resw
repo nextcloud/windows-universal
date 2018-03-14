@@ -255,7 +255,7 @@
     <value>{0} de {1} usados</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Resetear esta app</value>
+    <value>Restablecer esta app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintentar</value>
@@ -422,7 +422,7 @@
 • Sincronización manual de carpetas
 •  Descarga directorios como un archivo ZIP
 • Selecciona múltiples archivos y carpetas
-• Los ítems se pueden marcar como favoritos desde dentro de la app
+• Los elementos se pueden marcar como favoritos desde dentro de la app
 • El tamaño de las carpetas se muestra en la lista de directorios.
 • La barra de estado en la lista de directorio muestra el número de archivos seleccionados/totales
 •  Ordenación por tipo de datos.
