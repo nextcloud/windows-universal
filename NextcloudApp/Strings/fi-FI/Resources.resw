@@ -450,7 +450,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Asiantuntijatila</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synkronoinnin tila</value>
