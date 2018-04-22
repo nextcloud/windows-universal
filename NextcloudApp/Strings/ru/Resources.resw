@@ -204,7 +204,7 @@
     <value>Создать новый каталог</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Скачивание файла...</value>
+    <value>Скачивание файла…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Скачать миниатюры изображений</value>
@@ -315,7 +315,7 @@
     <value>Загрузка файлов {0} из {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Загрузка файла...</value>
+    <value>Загрузка файла…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} из {1} скачано</value>
