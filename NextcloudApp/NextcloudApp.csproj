@@ -11,8 +11,8 @@
     <AssemblyName>NextcloudApp</AssemblyName>
     <DefaultLanguage>en</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -136,7 +136,19 @@
     <Compile Include="Actions\OpenMenuFlyoutAction.cs" />
     <Compile Include="Behaviors\ScrollListBoxToEndBehavior.cs" />
     <Compile Include="Constants\ResourceConstants.cs" />
+    <Compile Include="Controls\FileOrFolderListZoomedOutView.xaml.cs">
+      <DependentUpon>FileOrFolderListZoomedOutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilesAndFoldersStatusBar.xaml.cs">
+      <DependentUpon>FilesAndFoldersStatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PathStackHeader.xaml.cs">
+      <DependentUpon>PathStackHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ThemeablePage.cs" />
+    <Compile Include="Controls\UserInfo.xaml.cs">
+      <DependentUpon>UserInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converter\ConflictTypeNoneToVisibilityConverter.cs" />
     <Compile Include="Converter\ConflictTypeToStringConverter.cs" />
     <Compile Include="Converter\DateTimeToVisibilityConverter.cs" />
@@ -174,6 +186,7 @@
     <Compile Include="Services\MigrationService.cs" />
     <Compile Include="Services\ResponseErrorHandlerService.cs" />
     <Compile Include="Services\SyncService.cs" />
+    <Compile Include="Services\ThemeManager.cs" />
     <Compile Include="Services\ToastNotificationService.cs" />
     <Compile Include="Services\UpdateNotificationService.cs" />
     <Compile Include="Services\VerificationService.cs" />
@@ -211,6 +224,7 @@
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
     <Compile Include="Utils\Theme.cs" />
+    <Compile Include="Utils\ThemeColor.cs" />
     <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
     <Compile Include="ViewModels\SharesInPageViewModel.cs" />
     <Compile Include="ViewModels\SharesOutPageViewModel.cs" />
@@ -305,9 +319,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\UserInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ListViewStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Themes\AppBarButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
     <Page Include="AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\CommandBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Controls\FileOrFolderListZoomedOutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FilesAndFoldersStatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PathStackHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
     </Page>
     <Page Include="SampleData\SyncConflictSampleData.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -421,18 +472,6 @@
       <Project>{07797e3b-7077-43ef-8197-f8723e2b0cc4}</Project>
       <Name>NextcloudClientPortable</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Prism\Source\Prism\Prism.csproj">
-      <Project>{e9d9a366-83b7-4036-89a1-5a09c84081c2}</Project>
-      <Name>Prism</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Prism\Source\Windows10\Prism.Unity.Windows\Prism.Unity.Windows.csproj">
-      <Project>{b4060ad6-7a34-479c-b5eb-4c542a681f42}</Project>
-      <Name>Prism.Unity.Windows</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Prism\Source\Windows10\Prism.Windows\Prism.Windows.csproj">
-      <Project>{3b7c3599-a336-4db2-8678-710e3b36203b}</Project>
-      <Name>Prism.Windows</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Strings\bg-BG\" />
@@ -443,9 +482,9 @@
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
     <SDKReference Include="SQLite.UWP.2015, Version=3.21.0">
-      <Name>SQLite for Universal Windows Platform %28SQLite.UWP.2015, Version=3.21.0%29</Name>
+      <Name>SQLite for Universal Windows Platform</Name>
     </SDKReference>
-    <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
+    <SDKReference Include="WindowsMobile, Version=10.0.16299.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
@@ -457,10 +496,10 @@
       <Version>1.0.21</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.3.4</Version>
+      <Version>6.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
-      <Version>1.5.1</Version>
+      <Version>2.0.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Uwp.Managed">
       <Version>2.0.0</Version>
@@ -470,6 +509,9 @@
     </PackageReference>
     <PackageReference Include="PortableWebDavLibrary">
       <Version>1.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Unity">
+      <Version>6.3.0</Version>
     </PackageReference>
     <PackageReference Include="QueryString.NET">
       <Version>1.0.0</Version>

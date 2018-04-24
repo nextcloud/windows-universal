@@ -1,140 +1,57 @@
-﻿<controls:ThemeablePage x:Name="themeablePage"
+﻿<controls:ThemeablePage
     x:Class="NextcloudApp.AppShell"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:views="using:NextcloudApp.Views"
     xmlns:controls="using:NextcloudApp.Controls"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    x:Name="AppShellControl">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="MenuStates">
-                <VisualState x:Name="Wide">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1280" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="rootSplitView.DisplayMode" Value="Inline" />
-                        <Setter Target="rootSplitView.IsPaneOpen" Value="True" />
-                        <Setter Target="togglePaneButton.IsEnabled" Value="False" />
-                        <Setter Target="togglePaneButton.Opacity" Value="0" />
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Medium">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="800" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="rootSplitView.DisplayMode" Value="CompactOverlay" />
-                    </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Narrow" />
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+    <NavigationView 
+        x:Name="NavView"
+        ItemInvoked="NavView_ItemInvoked"
+        SelectionChanged="NavView_SelectionChanged"
+        Loaded="NavView_Loaded">
 
-        <SplitView 
-            x:Name="RootSplitView" 
-            Style="{StaticResource MenuSplitViewStyle}"
-            IsPaneOpen="{Binding DataContext.IsMenuOpen, ElementName=MenuView, Mode=TwoWay}">
-            <Frame x:Name="ContentFrame" />
-            <SplitView.Pane>
-                <views:MenuView x:Name="MenuView"/>
-            </SplitView.Pane>
-        </SplitView>
+        <!--
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
+        </NavigationView.AutoSuggestBox>
+        -->
 
-        <!-- Declared last to have it rendered above everything else, but it needs to be the first item in the tab sequence.  -->
-        <ToggleButton 
-            x:Name="TogglePaneButton"
-            Visibility="{Binding DataContext.ShowMenuButton, ElementName=MenuView, Converter={StaticResource BooleanToVisibilityConverter}}"
-            IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
-            Style="{StaticResource SplitViewTogglePaneButtonStyle}"
-            TabIndex="1" />
+        <NavigationView.HeaderTemplate>
+            <DataTemplate>
+                <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
+                    <controls:PathStackHeader
+                        Visibility="{Binding PathStackHeaderVisible, ElementName=AppShellControl, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
-        <Grid 
-            x:Name="UpdateDialogContainer" 
-            VerticalAlignment="Stretch"
-            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-            Padding="20"
-            Visibility="Collapsed">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="{ThemeResource ContentDialogButtonHeight}" />
-            </Grid.RowDefinitions>
-            <ScrollViewer 
-                x:Name="UpdateDialogContentScrollViewer"
-                HorizontalScrollBarVisibility="Disabled"
-                VerticalScrollBarVisibility="Auto"
-                VerticalAlignment="Stretch"
-                ZoomMode="Disabled"
-                Margin="{ThemeResource ContentDialogContentScrollViewerMargin}"
-                IsTabStop="False">
-                <StackPanel>
-                    <ContentControl 
-                        x:Name="UpdateDialogTitle"
-                        Margin="{ThemeResource ContentDialogTitleMargin}"
-                        FontSize="20"
-                        FontFamily="XamlAutoFontFamily"
-                        FontWeight="Normal"
-                        Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        IsTabStop="False"
-                        MaxHeight="{ThemeResource ContentDialogTitleMaxHeight}" >
-                        <ContentControl.Template>
-                            <ControlTemplate TargetType="ContentControl">
-                                <ContentPresenter
-                                    Content="{TemplateBinding Content}"
-                                    MaxLines="2"
-                                    TextWrapping="Wrap"
-                                    ContentTemplate="{TemplateBinding ContentTemplate}"
-                                    Margin="{TemplateBinding Padding}"
-                                    ContentTransitions="{TemplateBinding ContentTransitions}"
-                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                            </ControlTemplate>
-                        </ContentControl.Template>
-                    </ContentControl>
                     <TextBlock 
-                        x:Name="UpdateDialogContent" 
-                        TextWrapping="WrapWholeWords" 
-                        Margin="0,20,0,0"
-                        FontSize="{ThemeResource ControlContentThemeFontSize}"
-                        FontFamily="{ThemeResource ContentControlThemeFontFamily}"
-                        Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
-                        Grid.Row="1"/>
-                </StackPanel>
-            </ScrollViewer>
-            <Grid x:Name="UpdateDialogCommandSpace" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Border 
-                    x:Name="UpdateDialogButton1Host"
-                    Margin="{ThemeResource ContentDialogButton1HostMargin}"
-                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
-                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
-                    Height="{ThemeResource ContentDialogButtonHeight}"
-                    HorizontalAlignment="Stretch">
-                    <Button x:Name="UpdateDialogButton1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                </Border>
-                <Border 
-                    x:Name="UpdateDialogButton2Host"
-                    Margin="{ThemeResource ContentDialogButton2HostMargin}"
-                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
-                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
-                    Height="{ThemeResource ContentDialogButtonHeight}"
-                    Grid.Column="1"
-                    HorizontalAlignment="Stretch">
-                    <Button x:Name="UpdateDialogButton2" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                </Border>
-            </Grid>
-        </Grid>
+                        Visibility="{Binding SettingsHeaderVisible, ElementName=AppShellControl, Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Text="Settings"
+                        x:Uid="Settings2" 
+                        Margin="8,0,0,0" 
+                        VerticalAlignment="Center" 
+                        Foreground="White"/>
+                </Grid>
+            </DataTemplate>
+        </NavigationView.HeaderTemplate>
 
-    </Grid>
+        <NavigationView.PaneFooter>
+            <controls:UserInfo 
+                Height="52" 
+                Margin="12,0,24,12" />
+        </NavigationView.PaneFooter>
 
+        <Frame x:Name="ContentFrame">
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition/>
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+
+    </NavigationView>
+   
 </controls:ThemeablePage>
 

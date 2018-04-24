@@ -19,14 +19,31 @@ namespace NextcloudApp.Models
         }
 
         // As only serializable objects can be stored in the LocalSettings, we use a string internally.
-        [DefaultSettingValue(Value = Theme.System)]
+        [DefaultSettingValue(Value = Theme.Light)]
         public Theme Theme
         {
             get
             {
                 var strVal = Get<string>();
 
-                return string.IsNullOrEmpty(strVal) ? Theme.System : JsonConvert.DeserializeObject<Theme>(strVal);
+                return string.IsNullOrEmpty(strVal) ? Theme.Light : JsonConvert.DeserializeObject<Theme>(strVal);
+            }
+            set
+            {
+                var strVal = JsonConvert.SerializeObject(value);
+                Set(strVal);
+            }
+        }
+
+        // As only serializable objects can be stored in the LocalSettings, we use a string internally.
+        [DefaultSettingValue(Value = ThemeColor.Nextcloud)]
+        public ThemeColor ThemeColor
+        {
+            get
+            {
+                var strVal = Get<string>();
+
+                return string.IsNullOrEmpty(strVal) ? ThemeColor.Nextcloud : JsonConvert.DeserializeObject<ThemeColor>(strVal);
             }
             set
             {

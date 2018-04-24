@@ -39,6 +39,9 @@
                 <ResourceDictionary Source="ms-appx:///Themes/FavoriteButtonStyle.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/HelpButtonStyle.xaml" />
                 <ResourceDictionary Source="ms-appx:///Themes/PivotStyle.xaml" />
+                <ResourceDictionary Source="ms-appx:///Themes/CommandBarStyle.xaml" />
+                <ResourceDictionary Source="ms-appx:///Themes/AppBarButtonStyle.xaml"/>
+                <ResourceDictionary Source="ms-appx:///Themes/ListViewStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </prismUnity:PrismUnityApplication.Resources>

@@ -4,83 +4,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
-    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:behaviors="using:NextcloudApp.Behaviors"
     x:Class="NextcloudApp.Views.FileInfoPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ThumbnailWrapper.Height" Value="300" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="300" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Medium">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ThumbnailWrapper.Height" Value="200" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="200" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ThumbnailWrapper.Height" Value="100" />
+                        <Setter Target="ThumbnailWrapper.Width" Value="100" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
-        <ListBox 
-            x:Name="PathList" 
-            ItemsSource="{Binding PathStack}"
-            SelectionMode="Single"
-            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
-            Margin="48,0,0,0">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-
-            <ListBox.Template>
-                <ControlTemplate TargetType="ItemsControl">
-                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
-                        <ItemsPresenter/>
-                    </ScrollViewer>
-                </ControlTemplate>
-            </ListBox.Template>
-
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding ResourceInfo.Name}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListBoxItem">
-                                <StackPanel 
-                                    Orientation="Horizontal" 
-                                    Height="48">
-                                    <FontIcon 
-                                        Glyph="&#xE26B;"
-                                        FontSize="8"
-                                        Margin="0,0,8,0"
-                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
-                                    <FontIcon 
-                                        Glyph="{StaticResource NextcloudLogo}"
-                                        FontFamily="{StaticResource NextcloudIcons}"
-                                        Margin="8,0,8,0"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    <ContentPresenter 
-                                        VerticalAlignment="Center" 
-                                        Margin="0,0,8,0"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListBox.ItemContainerStyle>
-
-            <interactivity:Interaction.Behaviors>
-                <behaviors:ScrollListBoxToEndBehavior/>
-            </interactivity:Interaction.Behaviors>
-        </ListBox>
-
-        <ScrollViewer Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Grid.Row="0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Orientation="Vertical">
                 <Grid Margin="8">
                     <Grid.ColumnDefinitions>
@@ -89,23 +54,30 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid
+                        x:Name="ThumbnailWrapper"
                         Height="100" 
                         Width="100"
-                        Background="{StaticResource SystemControlHighlightAccentBrush}">
-                        <FontIcon 
-                            Glyph="{Binding ResourceInfo, Converter={StaticResource ContentTypeToIconConverter}}" 
-                            FontFamily="Segoe MDL2 Assets"
-                            FontSize="80"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            Foreground="White"/>
-                        <Border
-                            Background="#808080"
-                            Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
-                            <Image
-                                Source="{Binding Thumbnail}"
-                                Stretch="UniformToFill"/>
-                        </Border>
+                        Margin="6,6,10,6">
+                        <Canvas x:Name="ShadowHost" />
+                        <Grid
+                            x:Name="Thumbnail"
+                            Background="{StaticResource SystemControlHighlightAccentBrush}">
+                            <FontIcon 
+                                Glyph="{Binding ResourceInfo, Converter={StaticResource ContentTypeToIconConverter}}" 
+                                FontFamily="Segoe MDL2 Assets"
+                                FontSize="80"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Foreground="White"/>
+                            <Border
+                                Background="#808080"
+                                Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
+                                <Image
+                                    x:Name="ThumbnailImage"
+                                    Source="{Binding Thumbnail}"
+                                    Stretch="UniformToFill"/>
+                            </Border>
+                        </Grid>
                     </Grid>
 
                     <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="8,0,0,0">
@@ -270,7 +242,7 @@
             </StackPanel>
         </ScrollViewer>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
                 Icon="Pin" 

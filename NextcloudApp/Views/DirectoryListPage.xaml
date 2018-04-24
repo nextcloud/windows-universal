@@ -6,8 +6,8 @@
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:behaviors="using:NextcloudApp.Behaviors"
     xmlns:actions="using:NextcloudApp.Actions"
+    xmlns:controls="using:NextcloudApp.Controls"
     x:Class="NextcloudApp.Views.DirectoryListPage"
     x:Name="Page"
     mc:Ignorable="d"
@@ -21,80 +21,16 @@
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
     </Page.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ListBox 
-            x:Name="PathList" 
-            ItemsSource="{Binding Directory.PathStack}"
-            SelectionMode="Single"
-            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
-            Margin="48,0,0,0">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-
-            <ListBox.Template>
-                <ControlTemplate TargetType="ItemsControl">
-                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
-                        <ItemsPresenter/>
-                    </ScrollViewer>
-                </ControlTemplate>
-            </ListBox.Template>
-
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding ResourceInfo.Name}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListBoxItem">
-                                <StackPanel 
-                                    Orientation="Horizontal" 
-                                    Height="48">
-                                    <FontIcon 
-                                        Glyph="&#xE26B;"
-                                        FontSize="8"
-                                        Margin="0,0,8,0"
-                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
-                                    <FontIcon 
-                                        Glyph="{StaticResource NextcloudLogo}"
-                                        FontFamily="{StaticResource NextcloudIcons}"
-                                        Margin="8,0,8,0"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    <ContentPresenter 
-                                        VerticalAlignment="Center" 
-                                        Margin="0,0,8,0"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListBox.ItemContainerStyle>
-
-            <interactivity:Interaction.Behaviors>
-                <behaviors:ScrollListBoxToEndBehavior/>
-            </interactivity:Interaction.Behaviors>
-        </ListBox>
-
         <SemanticZoom 
-            Grid.Row="1"
-            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            Grid.Row="0"
+            Background="{ThemeResource SystemControlAcrylicWindowBrush}">
             <SemanticZoom.ZoomedInView>
                 <ListView
                     Name="FileOrFolderListView"
@@ -103,34 +39,9 @@
                     ItemsSource="{Binding Source={StaticResource GroupedFilesAndFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     SelectionMode="{Binding Directory.SelectionMode}" 
-                    Padding="0,2,0,2"
-                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
-                    <ListView.Resources>
-                        <Style x:Key="FileOrFolderHeaderItemStyle" TargetType="ListViewHeaderItem">
-                            <Setter Property="HorizontalAlignment" Value="Stretch" />
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListViewHeaderItem">
-                                        <ContentPresenter 
-                                            x:Name="ContentPresenter" 
-                                            ContentTemplate="{TemplateBinding ContentTemplate}" 
-                                            ContentTransitions="{TemplateBinding ContentTransitions}" 
-                                            Content="{TemplateBinding Content}"
-                                            Background="#00000000"
-                                            HorizontalContentAlignment="Left" 
-                                            VerticalContentAlignment="Center"/>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ListView.Resources>
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="Padding" Value="4,2,4,2"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    <ListView.GroupStyle>
+                    Padding="0,4"
+                    ItemContainerStyle="{StaticResource FileOrFolderItemContainerStyle}">
+                    <ListView.GroupStyle >
                         <GroupStyle HeaderContainerStyle="{StaticResource FileOrFolderHeaderItemStyle}">
                             <GroupStyle.ContainerStyle>
                                 <Style TargetType="GroupItem">
@@ -176,7 +87,7 @@
                                     <TextBlock 
                                         Style="{StaticResource TitleTextBlockStyle}"
                                         HorizontalAlignment="Stretch"
-                                        Padding="4,0,0,0"
+                                        Padding="8,0,0,0"
                                         TextWrapping="NoWrap"
                                         TextTrimming="CharacterEllipsis"
                                         Text="{Binding Key}"/>
@@ -214,6 +125,7 @@
                                         Background="#808080"
                                         Visibility="{Binding Thumbnail, Converter={StaticResource NullToVisibilityConverter}}">
                                         <Image
+                                            x:Name="Thumbnail"
                                             Source="{Binding Thumbnail}"
                                             Stretch="UniformToFill"/>
                                     </Border>
@@ -265,7 +177,7 @@
                                         <actions:OpenMenuFlyoutAction />
                                     </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
-                                
+
                                 <FlyoutBase.AttachedFlyout>
                                     <MenuFlyout>
                                         <MenuFlyoutItem 
@@ -365,21 +277,9 @@
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
 
-        <StackPanel 
-            Orientation="Horizontal"
-            Grid.Row="2"
-            Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
-            <!--
-            BorderThickness="0,1,0,0"
-            BorderBrush="{ThemeResource SystemControlForegroundChromeDisabledLowBrush}">
-            -->
-            <TextBlock 
-                Margin="10,3,10,5" 
-                FontSize="12"
-                Text="{Binding StatusBarText, Mode=OneWay}" />
-        </StackPanel>
+        <controls:FilesAndFoldersStatusBar Grid.Row="1"/>
 
-        <CommandBar Grid.Row="3" VerticalAlignment="Bottom">
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
                     Icon="Sync" 
@@ -495,7 +395,7 @@
                 Label="Delete"
                 Command="{Binding DataContext.DeleteSelectedCommand, ElementName=Page}"
                 CommandParameter="{Binding ElementName=FileOrFolderListView}"
-                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}"/>
+                Visibility="{Binding Directory.IsSelecting, Converter={StaticResource IsSelectingToVisibilityConverter}}" Style="{StaticResource AppBarButtonStyle}"/>
             <AppBarButton
                 Icon="Download"
                 x:Uid="AppBarDownload"

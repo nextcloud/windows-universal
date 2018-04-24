@@ -8,6 +8,7 @@
     xmlns:models="using:NextcloudApp.Models"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
+    
     <UserControl.Resources>
         <DataTemplate x:Key="MenuItemTemplate" x:DataType="models:MenuItem">
             <Grid>
@@ -28,33 +29,61 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <ScrollViewer Background="{ThemeResource SystemControlBackgroundBaseLowBrush}" Padding="0,48,12,0">
-        <Grid Margin="0,12,0,0">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="MenuStates">
-                    <VisualState x:Name="Wide">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="1280" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                            <Setter Target="menuItemsControl.Margin" Value="0" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Medium">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="800" />
-                        </VisualState.StateTriggers>
-                    </VisualState>
-                    <VisualState x:Name="Narrow" />
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
+    <ScrollViewer x:Name="ScrollViewer" Background="{ThemeResource SystemControlBackgroundBaseLowBrush}" Padding="0,48,0,0">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MenuItemsControl.Margin" Value="0" />
+                        <Setter Target="FooterMenuItemsControl.Margin" Value="0" />
+                        <Setter Target="MenuGrid.Margin" Value="0" />
+                        <Setter Target="ScrollViewer.Padding" Value="0" />
+                        <Setter Target="Header.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Medium">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="UserInfo.Visibility" Value="Collapsed" />
+                        <Setter Target="FooterMenuItemsControl.Margin" Value="0" />
+                        <Setter Target="MenuGrid.Margin" Value="0" />
+                        <Setter Target="MenuSeparator.Visibility" Value="Collapsed" />
+                        <Setter Target="Header.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Header.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid x:Name="MenuGrid"  Margin="0,12,0,0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Grid Height="52" Margin="12,0,12,24">
+
+            <Border 
+                x:Name="Header"
+                Background="{ThemeResource SystemAccentColorDark1}"
+                Height="48"
+                Margin="0,0,0,24"/>
+
+            <Grid Grid.Row="1" x:Name="UserInfo" Height="52" Margin="12,0,24,24">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
@@ -86,13 +115,14 @@
                     Width="52" 
                     Margin="0,0,8,0"
                     Visibility="{Binding UserAvatarUrl, Converter={StaticResource NullToVisibilityConverter}, ConverterParameter=true}">
-                    <Ellipse Fill="{ThemeResource SystemControlHighlightAccentBrush}" />
+                    <Ellipse Fill="{ThemeResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
                         Text="{Binding User.DisplayName, Converter={StaticResource FirstCharFromStringConverter}}" 
                         VerticalAlignment="Center" 
                         HorizontalAlignment="Center"
                         FontSize="30"
-                        LineHeight="47"/>
+                        LineHeight="47"
+                        Foreground="White"/>
                 </Grid>
                 <TextBlock
                     Grid.Row="0" 
@@ -122,22 +152,24 @@
             </Grid>
 
             <ItemsControl
-                Grid.Row="1" 
+                x:Name="MenuItemsControl"
+                Grid.Row="2" 
                 IsTabStop="False"
                 ItemTemplate="{StaticResource MenuItemTemplate}"
                 ItemsSource="{Binding Commands}"/>
 
             <Border
-                Grid.Row="2" 
+                x:Name="MenuSeparator"
+                Grid.Row="3" 
                 BorderThickness="1"
                 Height="1"
                 Margin="12"
                 BorderBrush="{ThemeResource SystemControlDisabledBaseLowBrush}"
-                Name="Separator" 
                 x:FieldModifier="public" />
 
             <ItemsControl
-                Grid.Row="3" 
+                x:Name="FooterMenuItemsControl"
+                Grid.Row="4" 
                 Margin="0,0,0,6"
                 IsTabStop="False"
                 ItemTemplate="{StaticResource MenuItemTemplate}"

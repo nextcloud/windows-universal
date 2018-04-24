@@ -3,11 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:converter="using:NextcloudApp.Converter"
     xmlns:prismMvvm="using:Prism.Windows.Mvvm"
-    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:behaviors="using:NextcloudApp.Behaviors"
+    xmlns:controls="using:NextcloudApp.Controls"
     x:Class="NextcloudApp.Views.FileSavePickerPage"
     mc:Ignorable="d"
     prismMvvm:ViewModelLocator.AutoWireViewModel="True">
@@ -19,79 +16,19 @@
             IsSourceGrouped="{Binding Settings.ShowFileAndFolderGroupingHeader}" />
     </Page.Resources>
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ListBox 
-            x:Name="PathList" 
-            ItemsSource="{Binding Directory.PathStack}"
-            SelectionMode="Single"
-            SelectedIndex="{Binding SelectedPathIndex, Mode=TwoWay}"
-            Margin="48,0,0,0">
-
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-
-            <ListBox.Template>
-                <ControlTemplate TargetType="ItemsControl">
-                    <ScrollViewer HorizontalScrollBarVisibility="Visible">
-                        <ItemsPresenter/>
-                    </ScrollViewer>
-                </ControlTemplate>
-            </ListBox.Template>
-
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding ResourceInfo.Name}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListBoxItem">
-                                <StackPanel 
-                                    Orientation="Horizontal" 
-                                    Height="48">
-                                    <FontIcon 
-                                        Glyph="&#xE26B;"
-                                        FontSize="8"
-                                        Margin="0,0,8,0"
-                                        Foreground="{StaticResource SystemControlHighlightAccentBrush}"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}"/>
-                                    <FontIcon 
-                                        Glyph="{StaticResource NextclousLogo}"
-                                        FontFamily="{StaticResource NextcloudIcons}"
-                                        Margin="8,0,8,0"
-                                        VerticalAlignment="Center"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    <ContentPresenter 
-                                        VerticalAlignment="Center" 
-                                        Margin="0,0,8,0"
-                                        Visibility="{Binding IsRoot, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListBox.ItemContainerStyle>
-
-            <interactivity:Interaction.Behaviors>
-                <behaviors:ScrollListBoxToEndBehavior/>
-            </interactivity:Interaction.Behaviors>
-        </ListBox>
+        <!--
+        
+                    SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
+        -->
 
         <SemanticZoom 
-            Grid.Row="1"
+            Grid.Row="0"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <SemanticZoom.ZoomedInView>
                 <ListView
@@ -101,9 +38,7 @@
                     IsHoldingEnabled="True" 
                     ItemsSource="{Binding Source={StaticResource GroupedFolders}}" 
                     SelectedItem="{Binding SelectedFileOrFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                    SelectionMode="{Binding Directory.IsSorting, Converter={StaticResource IsSortingToSelectionModeConverter}}" 
                     Padding="0,2,0,2"
-                    ContinuumNavigationTransitionInfo.ExitElementContainer="True"
                     Header="Choose the folder where you want to upload the files">
                     <ListView.HeaderTemplate>
                         <DataTemplate>
@@ -279,7 +214,8 @@
                 </GridView>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal">
+        
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal">
             <CommandBar.SecondaryCommands>
                 <AppBarButton 
                     Icon="Sync" 

@@ -648,8 +648,9 @@ namespace NextcloudClient
             {
                 return JsonConvert.DeserializeObject<Status>(content);
             }
-            catch
+            catch (Exception e)
             {
+                Debug.WriteLine(e);
                 return null;
             }
         }

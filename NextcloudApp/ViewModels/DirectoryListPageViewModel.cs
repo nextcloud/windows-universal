@@ -15,7 +15,8 @@ using Windows.Storage;
 using Windows.Storage.AccessCache;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using System.Linq;
+using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media;
 
 namespace NextcloudApp.ViewModels
 {
@@ -25,7 +26,6 @@ namespace NextcloudApp.ViewModels
         private DirectoryService _directoryService;
         private readonly TileService _tileService;
         private ResourceInfo _selectedFileOrFolder;
-        private int _selectedPathIndex = -1;
         private readonly INavigationService _navigationService;
         private readonly IResourceLoader _resourceLoader;
         private readonly DialogService _dialogService;
@@ -164,7 +164,6 @@ namespace NextcloudApp.ViewModels
                 Directory.RebuildPathStackFromResourceInfo(resourceInfo);
             }
 
-            _selectedPathIndex = Directory.PathStack.Count - 1;
             _isNavigatingBack = false;
             StartDirectoryListing();
         }
@@ -181,7 +180,11 @@ namespace NextcloudApp.ViewModels
                 _selectedFileOrFolder = null;
             }
             else
+            {
                 _isNavigatingBack = false;
+            }
+
+            Directory = null;
 
             base.OnNavigatingFrom(e, viewModelState, suspending);
         }
@@ -501,7 +504,6 @@ namespace NextcloudApp.ViewModels
             await Directory.DeleteResource((ResourceInfo) parameter);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private async void DeleteSelected(object parameter)
@@ -543,7 +545,6 @@ namespace NextcloudApp.ViewModels
             await Directory.DeleteSelected(selectedItems);
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-            RaisePropertyChanged(nameof(StatusBarText));
         }
 
         private void PinToStart(object parameter)
@@ -652,7 +653,6 @@ namespace NextcloudApp.ViewModels
                 if (success)
                 {
                     SelectedFileOrFolder = null;
-                    RaisePropertyChanged(nameof(StatusBarText));
                     return;
                 }
 
@@ -676,7 +676,6 @@ namespace NextcloudApp.ViewModels
                     continue;
                 }
                 SelectedFileOrFolder = null;
-                RaisePropertyChanged(nameof(StatusBarText));
                 return;
             }
         }
@@ -765,7 +764,6 @@ namespace NextcloudApp.ViewModels
                 }
                 catch
                 {
-                    _selectedPathIndex = -1;
                     return;
                 }
 
@@ -789,10 +787,24 @@ namespace NextcloudApp.ViewModels
                     {
                         ResourceInfo = value
                     });
-                    SelectedPathIndex = Directory.PathStack.Count - 1;
                 }
                 else
                 {
+                    //if (ListView != null && ListView.SelectionMode == ListViewSelectionMode.Single)
+                    //{
+                    //    var el = (FrameworkElement)ListView.ContainerFromIndex(0);
+                    //    if (el == null)
+                    //    {
+                    //        return;
+                    //    }
+                    //    var img = FindElementByName<Image>(el, "Thumbnail");
+                    //    if (img == null)
+                    //    {
+                    //        return;
+                    //    }
+                    //    ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("image", img);
+                    //}
+                    
                     var parameters = new FileInfoPageParameters
                     {
                         ResourceInfo = value
@@ -802,37 +814,55 @@ namespace NextcloudApp.ViewModels
             }
         }
 
-        public int SelectedPathIndex
+        /// <summary>
+        /// Extension method for a FrameworkElement that searches for a child element by type and name.
+        /// </summary>
+        /// <typeparam name="T">The type of the child element to search for.</typeparam>
+        /// <param name="element">The parent framework element.</param>
+        /// <param name="sChildName">The name of the child element to search for.</param>
+        /// <returns>The matching child element, or null if none found.</returns>
+        public static T FindElementByName<T>(FrameworkElement element, string sChildName) where T : FrameworkElement
         {
-            get => _selectedPathIndex;
-            set
+            Debug.WriteLine("[FindElementByName] ==> element [{0}] sChildName [{1}] T [{2}]", element, sChildName, typeof(T).ToString());
+
+            T childElement = null;
+
+            //
+            // Spin through immediate children of the starting element.
+            //
+            var nChildCount = VisualTreeHelper.GetChildrenCount(element);
+            for (int i = 0; i < nChildCount; i++)
             {
-                try
-                {
-                    if (!SetProperty(ref _selectedPathIndex, value))
-                    {
-                        return;
-                    }
-                }
-                catch
-                {
-                    _selectedPathIndex = -1;
-                    return;
-                }
+                // Get next child element.
+                FrameworkElement child = VisualTreeHelper.GetChild(element, i) as FrameworkElement;
+                Debug.WriteLine("Found child [{0}]", child);
 
-                if (Directory?.PathStack == null)
-                {
-                    return;
-                }
+                // Do we have a child?
+                if (child == null)
+                    continue;
 
-                while (Directory.PathStack.Count > 0 && Directory.PathStack.Count > _selectedPathIndex + 1)
+                // Is child of desired type and name?
+                if (child is T && child.Name.Equals(sChildName))
                 {
-                    Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
-                }
+                    // Bingo! We found a match.
+                    childElement = (T)child;
+                    Debug.WriteLine("Found matching element [{0}]", childElement);
+                    break;
+                } // if
 
-                StartDirectoryListing();
-            }
+                // Recurse and search through this child's descendants.
+                childElement = FindElementByName<T>(child, sChildName);
+
+                // Did we find a matching child?
+                if (childElement != null)
+                    break;
+            } // for
+
+            Debug.WriteLine("[FindElementByName] <== childElement [{0}]", childElement);
+            return childElement;
         }
+
+        public ListView ListView { get; internal set; }
 
         private async void StartDirectoryListing()
         {
@@ -842,32 +872,16 @@ namespace NextcloudApp.ViewModels
 
             HideProgressIndicator();
             SelectedFileOrFolder = null;
-
-            RaisePropertyChanged(nameof(StatusBarText));
         }
         
         public override bool CanRevertState()
         {
-            return SelectedPathIndex > 0;
+            return Directory.PathStack.Count > 1;
         }
 
         public override void RevertState()
         {
-            SelectedPathIndex--;
-        }
-
-        public string StatusBarText
-        {
-            get
-            {
-                if (Directory == null)
-                {
-                    return string.Empty;
-                }
-                var folderCount = Directory.FilesAndFolders.Count(x => x.IsDirectory);
-                var fileCount = Directory.FilesAndFolders.Count(x => !x.IsDirectory);
-                return string.Format(_resourceLoader.GetString("DirectoryListStatusBarText"), fileCount + folderCount, folderCount, fileCount);                
-            }
+            Directory.PathStack.RemoveAt(Directory.PathStack.Count - 1);
         }
     }
 }

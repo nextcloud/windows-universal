@@ -10,7 +10,7 @@
     prismMvvm:ViewModelLocator.AutoWireViewModel="True"
     d:DataContext="{d:DesignInstance viewModels:SyncStatusPageViewModel, d:IsDesignTimeCreatable=True}">
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+    <Grid Background="{ThemeResource SystemControlBackgroundAccentBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />

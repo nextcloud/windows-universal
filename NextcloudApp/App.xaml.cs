@@ -38,8 +38,9 @@ namespace NextcloudApp
         /// </summary>
         public App()
         {
-            UnhandledException += OnUnhandledException;
+            UnhandledException += OnUnhandledExceptionAsync;
             TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+
             InitializeComponent();
         }
 
@@ -57,7 +58,7 @@ namespace NextcloudApp
                     exceptionStackTrace, args.Exception.InnerException.GetType().ToString(), exceptionHashCode);
         }
 
-        private async void OnUnhandledException(object sender, UnhandledExceptionEventArgs args)
+        private async void OnUnhandledExceptionAsync(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs args)
         {
             var exceptionStackTrace = string.Empty;
             try
@@ -148,6 +149,7 @@ namespace NextcloudApp
 
         protected override UIElement CreateShell(Frame rootFrame)
         {
+            ThemeManager.Instance.Initialize();
             var shell = Container.Resolve<AppShell>();
             shell.SetContentFrame(rootFrame);
             return shell;
@@ -353,6 +355,7 @@ namespace NextcloudApp
         {
             // Ensure the current window is active
             Window.Current.Activate();
+
             // Remove unnecessary notifications whenever the app is used.
             ToastNotificationManager.History.RemoveGroup(ToastNotificationService.SyncAction);
             PinStartPageParameters pageParameters = null;
