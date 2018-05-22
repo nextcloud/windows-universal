@@ -300,13 +300,13 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Dosyayı sil</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>{0} dosyasını silmek istediğinize emin misiniz</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Klasörü sil</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>{0} klasörünü silmek istediğinize emin misiniz</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} / {1} yüklendi</value>

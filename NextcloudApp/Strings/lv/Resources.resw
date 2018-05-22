@@ -300,13 +300,13 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Dzēst failu</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Vai esat pārliecināts, ka vēlaties izdzēst failu {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Dzēst mapi</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Vai esat pārliecināts, ka vēlaties izdzēst mapi {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} no {1} augšupielādēts</value>

@@ -300,13 +300,13 @@ Souhaitez-vous informer les développeurs de l'application et envoyer le rapport
     <value>Effacer le fichier</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer le fichier {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Supprimer le dossier</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir supprimer le dossier {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} de {1} téléversé</value>

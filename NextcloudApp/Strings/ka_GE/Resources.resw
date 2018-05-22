@@ -300,13 +300,13 @@
     <value>ფაილის გაუქმება</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>დარწმუნებული ხართ, რომ გსურთ {0} ფაილის გაუქმება</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>დირექტორიის გაუქმება</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>დარწმუნებული ხართ, რომ გსურთ {0} დირექტორიის გაუქმება</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>ატვირთულია {0} სულ {1}-დან</value>

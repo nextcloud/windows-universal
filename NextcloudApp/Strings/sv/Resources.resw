@@ -300,13 +300,13 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Radera fil</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Är du säker på att du vill radera filen {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Radera mapp</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Är du säker på att du vill radera mappen {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} av {1} uppladdad</value>

@@ -300,13 +300,13 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Verwijderen bestand</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Weet je zeker dat je bestand {0} wilt verwijderen</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Verwijder map</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Weet je zeker dat je map {0} wilt verwijderen?</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} van {1} geüpload</value>

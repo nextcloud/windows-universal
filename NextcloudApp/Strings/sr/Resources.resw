@@ -300,13 +300,13 @@
     <value>Обриши фајл</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Да ли сте сигурни да желите да обришете фајл {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Обриши фасциклу</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Да ли сте сигурни да желите да обришете фасциклу {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} од {1} отпремљено</value>

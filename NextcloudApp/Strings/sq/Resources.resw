@@ -300,13 +300,13 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Fshini skedarin</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>A jeni të sigurt që doni ta fshini skedarin {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Fshini dosjen</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>A jeni të sigurt që doni ta fshini dosjen{0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>Ngarkuar {0} nga {1} </value>

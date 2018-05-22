@@ -300,13 +300,13 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Fájl törlés</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Biztos, hogy törölni szeretnéd ezt a fájlt: {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Mappa törlés</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Biztos, hogy törölni szeretnéd ezt a mappát: {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} / {1} feltöltve</value>

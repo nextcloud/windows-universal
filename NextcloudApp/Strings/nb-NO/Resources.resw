@@ -300,13 +300,13 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Slett fil</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Er du sikker på at du vil slette filen {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Slett mappe</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Er du sikker på at du vil slette mappen {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} av {1} lastet opp</value>

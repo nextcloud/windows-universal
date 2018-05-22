@@ -298,13 +298,13 @@
     <value>Ištrinti failą</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Ar tikrai norite ištrinti failą {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ištrinti aplanką</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Ar tikrai norite ištrinti katalogą{0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} iš {1} įkelta</value>
