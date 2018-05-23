@@ -299,13 +299,13 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Excluir arquivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Quer realmente excluir o arquivo {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Excluir pasta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Quer realmente excluir a pasta {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} de {1} enviados</value>
