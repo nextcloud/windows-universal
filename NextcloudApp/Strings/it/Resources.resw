@@ -300,13 +300,13 @@ Potresti informare gli sviluppatori dell'applicazione e inviare il resoconto di 
     <value>Elimina file</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Vuoi davvero eliminare il file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Elimina cartella</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Vuoi davvero eliminare la cartella {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} di {1} caricati</value>

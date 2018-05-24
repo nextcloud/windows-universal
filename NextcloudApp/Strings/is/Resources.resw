@@ -300,13 +300,13 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
     <value>Eyða skrá</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Ertu viss um að þú viljir eyða skránni {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Eyða möppu</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Ertu viss um að þú viljir eyða möppunni {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} af {1} sent inn</value>
