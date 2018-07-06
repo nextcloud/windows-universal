@@ -204,7 +204,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Utwórz nowy folder</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Pobieranie pliku...</value>
+    <value>Pobieranie pliku…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Pobierz przykładowe zdjęcia</value>
@@ -315,7 +315,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Wysyłam plik {0} z {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Wysyłam plik...</value>
+    <value>Wysyłam plik…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>Ściągnięto {0} z {1}</value>
@@ -613,7 +613,7 @@ Proszę spróbować ponownie później,</value>
     <value>Współdzielony linkiem</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Przygotowywanie do współdzielenia...</value>
+    <value>Przygotowywanie do współdzielenia…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Utwórz folder</value>
