@@ -300,13 +300,13 @@
     <value>删除文件</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>你确认你要删除文件 {0} 吗？</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>删除目录</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>你确认要删除文件夹 {0} 吗？</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0}已上传,共计 {1} 个</value>
