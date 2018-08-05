@@ -300,7 +300,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Verwijderen bestand</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Weet je zeker dat je bestand {0} wilt verwijderen?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Verwijder map</value>
