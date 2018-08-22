@@ -595,7 +595,7 @@ Prosím zkuste to znovu později.</value>
     <value>Použít systémová nastavení</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Vyberat režim</value>
+    <value>Vybrat režim</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Sdíleno s ostatními</value>
@@ -610,7 +610,7 @@ Prosím zkuste to znovu později.</value>
     <value>Sdíleno jako odkaz</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Příprava sdílení...</value>
+    <value>Příprava sdílení…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Vytvořit složku</value>
@@ -638,7 +638,7 @@ Prosím zkuste to znovu později.</value>
     <value>Chcete položku přepsat?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Soubor již existuje</value>
+    <value>Soubor už existuje</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Přepsat</value>
