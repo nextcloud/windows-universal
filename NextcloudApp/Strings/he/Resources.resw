@@ -485,7 +485,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>לתשומת לבך!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>כדי שהשינויים האלו יחולו, יש להפעיל את היישומון מחדש.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>רמז</value>
@@ -537,7 +537,7 @@ Please try again later.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>הסנכרון מושהה</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>מצב סנכרון</value>
@@ -621,11 +621,11 @@ Please try again later.</value>
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <value>לא ניתן ליצור את התיקייה ‚{0}’ ב־Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of '{0}' on Nextcloud failed.</value>
+    <value>המחיקה של ‚{0}’ ב־Nextcloud נכשלה.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
