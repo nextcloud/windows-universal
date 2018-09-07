@@ -528,10 +528,10 @@ Please try again later.</value>
     <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>סנכרון התיקייה {0} הסתיים עם {1} שינויים.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>הסנכרון הסתיים</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
@@ -618,7 +618,7 @@ Please try again later.</value>
     <value>יצירת תיקייה</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>אירעה שגיאה בעת יצירת לקוח לתקשורת WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
     <value>לא ניתן ליצור את התיקייה ‚{0}’ ב־Nextcloud.</value>
