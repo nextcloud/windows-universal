@@ -328,7 +328,7 @@
     <value>Verze klienta {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Jméno nebo adresu serveru se nepodařilo převést.</value>
+    <value>Název nebo adresu serveru se nepodařilo převést.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Verze serveru {0}</value>
@@ -340,7 +340,7 @@
     <value>Čekání na odpověď serveru</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
-    <value>Prosím, zvolte nové jméno</value>
+    <value>Zvolte nové jméno</value>
   </data>
   <data name="Rename" xml:space="preserve">
     <value>Přejmenovat</value>
@@ -358,7 +358,7 @@
     <value>Přesunout do</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Zrušit</value>
+    <value>Storno</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
     <value>Hotovo</value>
