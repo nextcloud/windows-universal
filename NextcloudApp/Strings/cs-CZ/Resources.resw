@@ -286,7 +286,7 @@
     <value>Verze {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Pouze, když jsem na Wi-Fi</value>
+    <value>Pouze když jsem na Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ano</value>
@@ -313,16 +313,16 @@
     <value>Nahrávání souboru {0} z  {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Nahrávání souboru</value>
+    <value>Nahrávání souboru…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>Staženo {0} z {1}</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Na serveru je povolen režim údržby.</value>
+    <value>Na serveru je zapnutý režim údržby.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Špatné uživatelské jméno nebo heslo.</value>
+    <value>Chybné uživatelské jméno nebo heslo.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Verze klienta {0}</value>

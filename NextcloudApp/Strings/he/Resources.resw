@@ -213,7 +213,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byte)</value>
+    <value>{0} ({1} בתים)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
     <value>שם תיקייה</value>
@@ -312,16 +312,16 @@ Would you like to inform the application developers and submit the prepared erro
     <value>{0} מתוך {1} נשלחו</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploading file {0} of {1}…</value>
+    <value>נשלח קובץ {0} מתוך {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
     <value>הקובץ נשלח…</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} of {1} downloaded</value>
+    <value>{0} מתוך {1} התקבלו</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>The maintenance mode is enabled on the server.</value>
+    <value>מצב התחזוקה מופעל בשרת.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>שם משתמש או ססמה שגויים.</value>
@@ -375,7 +375,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>הורדה כקובץ ZIP</value>
   </data>
   <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
-    <value>{0} downloaded</value>
+    <value>{0} התקבל</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
     <value>כדי לגשת ל־Nextcloud שלך, עליך לספק את פרטי הכניסה למכשיר שלך.</value>
@@ -477,9 +477,9 @@ Would you like to inform the application developers and submit the prepared erro
     <value>העדפת קובץ מרוחק</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>The certificate authority is invalid or incorrect. Connect anyway?
+    <value>רשות האישורים פגומה או שגויה. להתחבר בכל זאת?
 
-Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+מוטב להיזהר במהלך זה כיוון שלא תהיה לך הגנה מפני מתקפות אדם בתווך (mitm)! </value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>לתשומת לבך!</value>
@@ -500,32 +500,32 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronization has been triggered!</value>
+    <value>התקבלה בקשה לסנכרון!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+    <value>הסנכרון יתבצע ברקע. עם סיום התהליך תופיע הודעה.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Service temporarily unavailable (usually due to short-term maintenance work).
-Please try again later.</value>
+    <value>השירות אינו זמין כרגע (כנראה עקב משימות תחזוקה לטווח קצר).
+נא לנסות שוב מאוחר יותר.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>הקובץ נערך מקומית ובצד המרוחק. מה עדיף לך?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>הקובץ נוצר בצד המרוחק ומקומית - מי מהם הוא הנכון?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>הקובץ נמחק מקומית אבל נערך בצד המרוחק. מה עדיף לך?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>סתירה:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>הקובץ נערך מקומית אבל נמחק בצד המרוחק. מה עדיף לך?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>סנכרון התיקייה {0} הסתיים עם {1} שינויים ועם {2} שגיאות או סתירות.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
     <value>סנכרון התיקייה {0} הסתיים עם {1} שינויים.</value>
@@ -534,7 +534,7 @@ Please try again later.</value>
     <value>הסנכרון הסתיים</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>סנכרון התיקייה {0} נעצר כיוון שהיישומון הושעה.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>הסנכרון מושהה</value>
@@ -558,7 +558,7 @@ Please try again later.</value>
     <value>פריטים: {0} (תיקיות: {1} קבצים: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>כאשר מצב מומחה פעיל, היישום מספק מידע/תכונות נוספים, שעשויים לא לעניין את כל המשתמשים.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
@@ -629,11 +629,11 @@ Please try again later.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <value>שגיאה בעת הורדת קובץ ‚{0}’ מ־Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <value>שגיאה בעת העלאת קובץ ‚{0}’ ל־Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
