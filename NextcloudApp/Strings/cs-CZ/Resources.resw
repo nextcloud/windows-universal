@@ -376,13 +376,13 @@
     <value>{0} stažen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Abyste mohli přistupovat k vašemu Nextcloudu, zadejte přihlašovací údae pro vaše zařízení.</value>
+    <value>Abyste mohli přistupovat ke svému Nextcloud, zadejte přihlašovací údaje pro své zařízení.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Autentizace Windows Hello</value>
+    <value>Ověření prostřednictvím Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Pro toto zařízení není nastavený PIN. Pokud chcete použít Windows Hello, musí být definován.</value>
+    <value>Pro toto zařízení není nastavený PIN kód. Pokud chcete použít Windows Hello, je třeba ho definovat.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Stáhnout</value>
@@ -394,7 +394,7 @@
     <value>Vyžadováno přihlášení</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Nemůžeme otevřít Nexcloud, dokud nedodáte přihlašovací údaje.</value>
+    <value>Nexcloud nelze otevřít, dokud nezadáte přihlašovací údaje pro své zařízení.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Zkusit znovu</value>
@@ -415,22 +415,22 @@
     <value>Aktualizovat</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Přesun souborů a adresářů
-• Přejmenovávání souborů a adresářů
-• Ruční synchronizace adresářů
-• Stažení adresářů jako ZIP soubor
-• Vícenásobný výběr souborů a adresářů
+    <value>• Přesun souborů a složek
+• Přejmenovávání souborů a složek
+• Ruční synchronizace složek
+• Stahování složek jako ZIP soubor
+• Výběr vícero souborů a složek naráz
 • Označování oblíbených položek v aplikaci
-• Zobrazení velikosti adresářů v seznamu
+• Zobrazení velikosti složek v seznamu
 • Zobrazení počtu vybraných/všech souborů ve stavovém řádku
 • Řazení dle typu souboru
 • Nový vzhled oblíbených/sdílených položek
-• Připnutí souborů a adresářů na startovací obrazovku
+• Připnutí souborů a složek na startovací obrazovku
 • Použití Windows Hello k přihlášení při spuštění aplikace
-• Pokročilý mód zobrazující rozšířené informace v aplikaci
+• Pokročilý režim zobrazující rozšířené informace v aplikaci
 • Umožnění použití SSL certifikátů s vlastním podpisem
 • Sdílení pomocí aplikace
-• Témata (tmavé/světlé/systémové)
+• Motivy vzhledu (tmavé/světlé/systémové)
 • Použití klíčenky k uložení uživatelských pověření
 • Nová a stabilnější WebDAV knihovna
 • Bezpečnostní vylepšení a opravy chyb</value>
@@ -483,7 +483,7 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
     <value>Pozor!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Aby se toto nastavení projevilo, aplikace musí být restartována.</value>
+    <value>Aby se toto nastavení projevilo, aplikaci je třeba restartovat.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Nápověda</value>
@@ -505,7 +505,7 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Služba dočasně nedostupná (většinou kvůli krátkodobé údržbě).
-Prosím zkuste to znovu později.</value>
+Zkuste to znovu později.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Soubor změněn lokálně a místně. Který chcete?</value>
