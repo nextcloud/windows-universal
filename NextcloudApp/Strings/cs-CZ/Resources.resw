@@ -238,7 +238,7 @@
     <value>Není pověřen</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Server vrátil chybový kód 401 (neautorizovaný). Prosím, přihlašte se znovu.</value>
+    <value>Server vrátil chybový kód 401 (neautorizovaný). Přihlašte se znovu.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -247,7 +247,7 @@
     <value>Heslo</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Cesta</value>
+    <value>Popis umístění</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>Využito {0} z {1}</value>
@@ -274,7 +274,7 @@
     <value>Velikost</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Element s takovým jménem již existuje. Specifikujte jiné jméno.</value>
+    <value>Prvek s takovým názvem už existuje. Zadejte jiný.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Typ</value>
@@ -556,7 +556,7 @@ Zkuste to znovu později.</value>
     <value>Položky: {0} (složky: {1} soubory: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Pokud je povolen režim pro experty, aplikace poskytuje některé vlastnosti a informace, které nemusí být zajímavé pro všechny uživatele.</value>
+    <value>Pokud je zapnutý režim pro experty, aplikace poskytuje některé vlastnosti a informace, které nemusí být zajímavé pro všechny uživatele.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti man-in-the-middle (MITM) útokům.</value>
@@ -623,11 +623,11 @@ Zkuste to znovu později.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Mazání adresáře {0} v Nexcloudu selhalo.</value>
+    <value>Mazání adresáře {0} v Nexcloudu se nezdařilo.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Chyba při stahování souboru {0} z Nextcloudu.</value>
+    <value>Chyba při stahování souboru {0} z Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
@@ -648,7 +648,7 @@ Zkuste to znovu později.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Není zadána žádná URL adresa serveru. Zadejte prosím URL adresu vaší instance Nextcloud.</value>
+    <value>Není zadána žádná URL adresa serveru. Zadejte URL adresu své instance Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Zachovat</value>
@@ -663,7 +663,7 @@ Zkuste to znovu později.</value>
     <value>Jak funguje expertní režim?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>Jaký má smysl?</value>
+    <value>Jaký to má smysl?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Nastavení barev systému Windows</value>
