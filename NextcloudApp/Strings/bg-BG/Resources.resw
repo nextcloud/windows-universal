@@ -136,7 +136,7 @@
     <value>Заснемане</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Качване на файлове</value>
+    <value>Качи файлове</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Качване на снимки</value>
@@ -201,7 +201,7 @@
     <value>Създаден</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Създаване на нова папка</value>
+    <value>Създай нова папка</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Изтегляне на файл...</value>
