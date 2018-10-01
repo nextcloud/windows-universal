@@ -506,7 +506,7 @@ Tenha cuidado, você não estará protegido dos ataques Man-in-the-middle (mitm)
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Serviço temporariamente indisponível (normalmente devido a trabalhos rápidos de manutenção).
-Por favor tente mais tarde.</value>
+Tente mais tarde.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Arquivo alterado local e remotamente. Qual deles você prefere?</value>
