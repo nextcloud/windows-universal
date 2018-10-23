@@ -503,7 +503,7 @@ Man-in-the-middle (mitm) saldırılarına karşı korumasız kalacağınız içi
     <value>Eşitleme başlatıldı!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Eşitleme art alanda yürütülecek ve işlemin tamamlandığı bildirilecek.</value>
+    <value>Eşitleme arka planda yürütülecek ve işlemin tamamlandığı bildirilecek.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Hizmet geçici olarak kullanılamıyor (genellikle kısa süreli bakım çalışmaları nedeniyle).
