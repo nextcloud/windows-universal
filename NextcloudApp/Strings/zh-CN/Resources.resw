@@ -431,7 +431,7 @@
 应用启动时使用Hello窗口进行验证
 专家模式显示应用内的高级信息
 允许自签名的数字证书
-通过应用分享文件
+通过应用共享文件
 主题（黑色/发亮/系统)
 私用密码保险箱保存用户密码
 更稳定的WebDAV库
@@ -600,13 +600,13 @@
     <value>选择一个模式</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>您分享的文件</value>
+    <value>您共享的文件</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>收藏</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>分享给您的文件</value>
+    <value>共享给您的文件</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>通过链接共享</value>
