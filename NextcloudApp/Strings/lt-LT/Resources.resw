@@ -604,7 +604,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Mėgstamiausi</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
-    <value>Dalinamasi su manimi</value>
+    <value>Shared with me</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
     <value>Dalinamasi per nuorodą</value>
