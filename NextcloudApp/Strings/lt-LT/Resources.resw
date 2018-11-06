@@ -298,13 +298,13 @@
     <value>Ištrinti failą</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Ar tikrai norite ištrinti failą {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Ištrinti aplanką</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Ar tikrai norite ištrinti aplanką {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} iš {1} įkelta</value>
@@ -448,7 +448,7 @@
     <value>Nepaisyti savarankiškai pasirašytų SSL sertifikatų</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Expert mode</value>
+    <value>Eksperto veiksena</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Synchronization status</value>
@@ -501,7 +501,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Synchronization has been triggered!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+    <value>Sinchronizavimas veiks fone. Kai jis pasibaigs, gausite pranešimą.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Paslauga laikinai neprieinama (dažniausiai dėl trumpalaikių techninės priežiūros darbų).
@@ -535,7 +535,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronization suspended</value>
+    <value>Sinchronizavimas pristabdytas</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>Synchronization Status</value>
