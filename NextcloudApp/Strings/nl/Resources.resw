@@ -363,7 +363,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Annuleren</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Gedaan</value>
+    <value>Klaar</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Kies map</value>
