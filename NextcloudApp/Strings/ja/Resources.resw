@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>すべてのファイル</value>
+  </data>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>常に</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>エラーが発生しました。</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>フォルダーを作成</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>写真を撮る</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>ファイルをアップロード</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>写真をアップロード</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>同期</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>ソート</value>
+  </data>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>日付(古い順)</value>
+  </data>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>日付(新しい順)</value>
+  </data>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>名前(昇順)</value>
+  </data>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>名前(降順)</value>
+  </data>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>容量(昇順)</value>
+  </data>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>容量(降順)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>タイプ(昇順)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>タイプ(降順)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>アプリケーションエラー</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>アプリケーションに問題が発生しました。 ご不便をおかけして申し訳ございません。 あなたが何か作業の途中だったならば、その情報は保存されませんでした。
+
+
+アプリケーション開発者に通知し、準備されたエラー報告を提出しますか？ これにより、問題をより迅速に解決することができます。</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>ファイルを作成できません</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>コンテンツの種類</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>作成された</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>新しいフォルダーを作成</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>ファイルをダウンロード中...</value>
+  </data>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>プレビュー画像をダウンロード</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} バイト)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>フォルダー名</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>更新日時</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>しない</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>新しいフォルダー</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>許可されていない</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>サーバーはエラーコード(401Unauthorized)を返しました。 もう一度ログインしてください。</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{1}中{0}が使用中</value>
+  </data>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>このアプリをリセットする</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>サーバーアドレス</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>グループ化されたファイルとフォルダーのリストを表示する</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>すでにこの名前の要素があります。 別の名前を指定してください。</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>種類</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>バージョン {0}</value>
+  </data>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Wi-Fiに接続しているときだけ</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>ファイルを削除</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>ファイル{0}を本当に削除しますか？</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>フォルダーを削除</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>フォルダ{0}を本当に削除しますか？</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{1}中{0}がアップロードされました</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>{1}個中{0}のファイルをアップロード中...</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>ファイルをアップロード中...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{1}中{0}をダウンロードしました</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>メンテナンスモードはサーバー上で有効になっています。</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>ユーザー名またはパスワードが間違っています</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>クライアントバージョン {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>サーバー名またはアドレスを解決できませんでした。</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>サーバーバージョン {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>サーバーの応答を待機中</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>新しい名前を選択してください</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>移動</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>移動</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>フォルダーを選択</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>アドレス {0} のサーバーにはアクセスできません。</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>ZIPファイルでダウンロード</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} ダウンロード済み</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>あなたのNextcloudにアクセスするには、お使いのデバイスのサインイン情報を入力します。</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello 認証</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>このデバイスにはPINは設定されていません。 Windows Helloを使用するには、PINを定義する必要があります。</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>サインインが必要です</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>私たちはあなたのデバイスのサインイン情報を提供するまで、Nextcloudを開くことはできません。</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>再試行してください</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud for Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>あなたのアプリは {0} にバージョンアップされました。</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>このバージョンの新機能と改善点：</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>おすすめ</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>アップデート</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>開始するピン</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>開始するピン</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>無効な自己署名SSL証明書を無視する</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>エキスパートモード</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>同期状況</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>履歴</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>競合</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>同期</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>ローカルファイルを優先する</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>同期履歴を削除</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>リモートファイルを優先する</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>認証局が無効または間違っています。 かまわず接続しますか？
+
+Man-in-the-middle（mitm）攻撃から保護されません！</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>警告！</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>この設定を有効にするには、アプリを再起動する必要があります。</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>ヒント</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>同期中に発生したエラーのリスト。 それらは一時的な問題（ファイルが別のアプリによって開かれたなど）でなければならず、次の同期の実行後に消えてください。</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>競合に注意してください！</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>リモートフォルダとローカルフォルダの両方が空ではありません。 これは、アプリケーションが正しいファイルを認識しないため、多くの競合が発生する可能性があります。</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>同期が開始されました！</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>同期はバックグラウンドで行われます。 終了したら通知が届きます。</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>サービスは一時的に利用できません（通常は短期間のメンテナンスのため）。
+後でもう一度お試しください。</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>ファイルがローカルおよびリモートで変更されました。 どちらがよろしいですか？</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>ファイルはリモートからローカルに作成されています - どちらが正しいですか？</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>ファイルはローカルに削除されましたが、リモートで変更されました。 どちらがよろしいですか？</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>競合:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>リモートでファイルを削除しましたが、ローカルで変更されました。 どちらがよろしいですか？</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>{1} で終了したフォルダ {0} の同期が変更され、{2} エラーまたは競合が発生します。</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>フォルダ {0} の同期が {1} で終了しました。</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>同期が完了しました</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>アプリが停止されているため、フォルダ {0} の同期が停止しました。</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>同期の一時停止</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>同期状況</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>ローカルパス</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloudのパス</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>ファイルをアップロードするフォルダを選択します。</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>フォルダー</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>アイテム：{0}（フォルダ：{1} ファイル：{2} ）</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>エキスパートモードが有効になっていると、アプリはいくつかの追加機能や情報を提供しますが、これはすべてのユーザーにとって興味深いものではありません。</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>このフォルダを同期する</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>このフォルダの同期を停止する</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>同期を停止する</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>同期状況</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>今すぐ同期</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>同期</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>このフォルダを今すぐ同期する</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>このフォルダを同期する</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>システム設定を使用する</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>モードを選択する</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>他ユーザーと共有中</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>お気に入り</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>私と共有</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>リンク経由で共有</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>共有の準備をする...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>フォルダーを作成</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>WebDAV通信のクライアント作成中にエラーが発生しました</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Nextcloudにディレクトリ '{0}'を作成できませんでした。</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Nextcloudで '{0}'の削除に失敗しました。</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>ファイル '{0}' のNextcloudからのダウンロード中にエラーが発生しました。</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>ファイル '{0}' のNextcloudへのアップロード中にエラーが発生しました。</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>上書きしますか？</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>ファイルはすでに存在します</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>上書き</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>予期しない例外：{0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>サーバーURLが指定されていません。 あなたのNextcloudサーバーのURLを入力してください。</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>そのまま維持する</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>このソリューションは、ファイルがリモートとローカルの両方に存在する場合にのみ適用できます</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>エキスパートモードはどのように機能しますか？</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>これはどういう意味ですか？</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windowsの色設定</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>すべて調べる</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>すべてのチェックを外す</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>このアプリをリセットしてもよろしいですか？ これにより、すべてのアプリケーションとすべての同期設定がリセットされます。</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>このアプリをリセットする</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>ファイルの削除</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>選択したファイルを削除してもよろしいですか？</value>
+  </data>
+</root>
