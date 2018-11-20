@@ -210,6 +210,7 @@
     <Compile Include="Utils\ObservableGroupingCollection.cs" />
     <Compile Include="Utils\SortSequence.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\SyncMode.cs" />
     <Compile Include="Utils\Theme.cs" />
     <Compile Include="ViewModels\SharesLinkPageViewModel.cs" />
     <Compile Include="ViewModels\SharesInPageViewModel.cs" />
@@ -442,9 +443,6 @@
     <SDKReference Include="Microsoft.VCLibs, Version=14.0">
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
-    <SDKReference Include="SQLite.UWP.2015, Version=3.21.0">
-      <Name>SQLite for Universal Windows Platform %28SQLite.UWP.2015, Version=3.21.0%29</Name>
-    </SDKReference>
     <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
@@ -476,6 +474,9 @@
     </PackageReference>
     <PackageReference Include="SQLite.Net-PCL">
       <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.uwp">
+      <Version>3.25.3</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

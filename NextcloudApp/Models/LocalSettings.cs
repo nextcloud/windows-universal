@@ -58,6 +58,22 @@ namespace NextcloudApp.Models
             }
         }
 
+        [DefaultSettingValue(Value = SyncMode.LocalToRemote)]
+        public SyncMode SyncMode
+        {
+            get
+            {
+                var strVal = Get<string>();
+
+                return string.IsNullOrEmpty(strVal) ? SyncMode.LocalToRemote : JsonConvert.DeserializeObject<SyncMode>(strVal);
+            }
+            set
+            {
+                var strVal = JsonConvert.SerializeObject(value);
+                Set(strVal);
+            }
+        }
+
         [DefaultSettingValue(Value = 0)]
         public int AppTotalRuns
         {
@@ -95,6 +111,13 @@ namespace NextcloudApp.Models
 
         [DefaultSettingValue(Value = false)]
         public bool IgnoreServerCertificateErrors
+        {
+            get => Get<bool>();
+            set => Set(value);
+        }
+
+        [DefaultSettingValue(Value = false)]
+        public bool SyncDeletions
         {
             get => Get<bool>();
             set => Set(value);
