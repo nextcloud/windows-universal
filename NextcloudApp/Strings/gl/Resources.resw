@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -120,8 +120,8 @@
   <data name="AllFiles" xml:space="preserve">
     <value>Todos os ficheiros</value>
   </data>
-  <data name="Always" xml:space="preserve">
-    <value>Sempre</value>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Produciuse un erro</value>
@@ -150,29 +150,29 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordenar</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Data (máis antigo ao principio)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Date (oldest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Data (máis recente ao principio)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Date (newest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
-    <value>Nome (A - Z)</value>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Name (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
-    <value>Nome (Z -A)</value>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Name (Z to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Tamaño (de menor a maior)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Size (smallest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Tamaño (de maior a menor)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Size (largest to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Tipo (A arriba)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A to the top)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Tipo (Z arriba)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Produciuse un erro da aplicación</value>
@@ -206,8 +206,8 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Descargando o ficheiro</value>
   </data>
-  <data name="DownloadPreviewImages.Header" xml:space="preserve">
-    <value>Descargando vistas previas das imaxes</value>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Download preview images</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -227,8 +227,8 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
   <data name="Name.Text" xml:space="preserve">
     <value>Nome</value>
   </data>
-  <data name="Never" xml:space="preserve">
-    <value>Nunca</value>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Novo cartafol</value>
@@ -254,8 +254,8 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} de {1} usados</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Restabelecer esta aplicación</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reset this app</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Tentar de novo</value>
@@ -287,8 +287,8 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
   </data>
-  <data name="WiFiOnly" xml:space="preserve">
-    <value>Só cando estea conectado por WiFi</value>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Only when I'm on Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Si</value>
@@ -440,8 +440,8 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
   <data name="Connect2" xml:space="preserve">
     <value>Conectar</value>
   </data>
-  <data name="IgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar os certificados SSL auto asinados incorrectos</value>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -581,17 +581,17 @@ Ténteo nun chisco.</value>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
     <value>Sincronizar este cartafol</value>
   </data>
-  <data name="ThemeDark" xml:space="preserve">
-    <value>Escuro</value>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Dark</value>
   </data>
-  <data name="ThemeLight" xml:space="preserve">
-    <value>Craro</value>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Light</value>
   </data>
-  <data name="ThemeSystem" xml:space="preserve">
-    <value>Sistema</value>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Tema</value>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con outros</value>
@@ -609,34 +609,77 @@ Ténteo nun chisco.</value>
     <value>Preparando para compartir</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Crear cartafol</value>
+    <value>Create folder</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Produciuse un erro creando o cliente para a comunicación WebDAV</value>
+    <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Non foi posí­bel crear o cartafol &apos;{0}&apos; en Nextcloud.</value>
+    <value>Could not create directory '{0}' on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Fallou a eliminación de &apos;{0}&apos; en Nextcloud.</value>
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Produciuse un erro descargando o ficheiro &apos;{0}&apos; de Nextcloud.</value>
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Produciuse un erro enviando o ficheiro &apos;{0}&apos; a Nextcloud.</value>
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Quere sobrescribilo?</value>
+    <value>Do you want to overwrite it?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>O ficheiro xa existe</value>
+    <value>File already exists</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Sobrescribir</value>
+    <value>Overwrite</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Keep as is</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What's the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows color settings</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Uncheck all</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Delete files</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the selected files?</value>
   </data>
 </root>
