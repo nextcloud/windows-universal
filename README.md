@@ -1,7 +1,9 @@
-# Nextcloud Windows Mobile App
-[![Build status](https://ci.appveyor.com/api/projects/status/github/altima/nextcloud-app-uwp)](https://ci.appveyor.com/project/altima/nextcloud-app-uwp) [![Gitter](https://badges.gitter.im/Join_Chat.svg)](https://gitter.im/Nextcloud-App-UWP/Lobby)
+# NextCool Windows Mobile App
 
-This is the Nextcloud app allowing you to access all your files on Windows Mobile (...and UWP coming soon).
+This is the **modified** Nextcloud app **w/ additional sync settings** allowing you to access all your files on Windows Mobile.
+
+[Microsoft Shop Page](https://www.microsoft.com/zh-cn/p/nextcool/9nkl6mjgmwsj)
+
 
 ## Why is this so useful?
 
