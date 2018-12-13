@@ -418,25 +418,25 @@
     <value>アップデート</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>•ファイルとフォルダの移動
+•ファイルとフォルダの名前を変更する
+•フォルダの手動同期
+•ディレクトリをZIPファイルとしてダウンロードする
+•複数のファイルとフォルダを選択する
+•アイテムは、アプリ内からお気に入りとしてマークすることができます
+•ディレクトリの一覧にフォルダのサイズが表示されます
+•選択された/合計ファイルの数を示すディレクトリリストのステータスバー
+•データ型の並べ替え
+•お気に入り/共有の新しいビュー
+•ファイルとフォルダを開始画面に固定する
+•WindowsのHelloを使用してアプリの起動時に認証する
+•エキスパートモードでアプリの高度な情報を表示
+•自己署名入りのSSL証明書を許可する
+•アプリケーションとファイルを共有する
+•Theming（暗/明/システム）
+•PasswordVaultを使用してユーザーの資格情報を保存する
+•新しい安定したWebDAVライブラリ
+•セキュリティの改善とバグ修正</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>開始するピン</value>
@@ -562,7 +562,7 @@ Man-in-the-middle（mitm）攻撃から保護されません！</value>
     <value>エキスパートモードが有効になっていると、アプリはいくつかの追加機能や情報を提供しますが、これはすべてのユーザーにとって興味深いものではありません。</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>無効な自己署名SSL証明書を無視します。 無効または不正確なSSL証明機関を使用することができるようになります。注意が必要です。MITM（Man-in-the-Middle）攻撃から保護されなくなります。</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>このフォルダを同期する</value>
