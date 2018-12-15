@@ -168,5 +168,54 @@ namespace NextcloudApp.Services
             // TODO groups/tags?
             ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
+
+        internal static void ShowSyncedFileNotification(string fileName)
+        {
+            if (fileName == null)
+            {
+                return;
+            }
+            var loader = new ResourceLoader();
+            var title = loader.GetString("SyncedFileTitle");
+            var content = fileName;
+            const string action = SyncAction;
+
+            // Construct the visuals of the toast
+            var visual = new ToastVisual
+            {
+                BindingGeneric = new ToastBindingGeneric
+                {
+                    Children =
+                        {
+                            new AdaptiveText
+                            {
+                                Text = title
+                            },
+                            new AdaptiveText
+                            {
+                                Text = content
+                            }
+                        }
+                }
+            };
+            var toastContent = new ToastContent
+            {
+                Visual = visual,
+
+                // Arguments when the user taps body of toast
+                Launch = new QueryString
+                    {
+                        { "action", action }
+                    }.ToString()
+            };
+            var toast = new ToastNotification(toastContent.GetXml())
+            {
+                ExpirationTime = DateTime.Now.AddMinutes(30),
+                Group = action
+            };
+            // TODO Replace with syncinterval from settings.
+            // TODO groups/tags?
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
+        }
     }
 }

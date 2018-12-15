@@ -622,6 +622,8 @@ namespace NextcloudApp.Services
                     IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
                     result = await _client.Upload(path, targetStream, localFile.ContentType, progress, cts.Token);
                 }
+
+                ToastNotificationService.ShowSyncedFileNotification(localFile.Name);
             }
             catch (ResponseError e2)
             {
