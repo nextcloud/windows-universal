@@ -44,6 +44,7 @@ namespace NextcloudApp
         }
 
         public IActivatedEventArgs ActivatedEventArgs { get; private set; }
+        private readonly LocalSettings SettingsLocal = SettingsService.Default.Value.LocalSettings;
 
         private async void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs args)
         {
@@ -316,11 +317,22 @@ namespace NextcloudApp
             var task = base.OnSuspendingApplicationAsync();
             // Stop Background Sync Tasks
             var activeSyncs = SyncDbUtils.GetActiveSyncInfos();
-            foreach (var fsi in activeSyncs)
+
+            if (SettingsLocal.PauseSyncInBackground)
             {
-                ToastNotificationService.ShowSyncSuspendedNotification(fsi);
-                SyncDbUtils.UnlockFolderSyncInfo(fsi);
+                foreach (var fsi in activeSyncs)
+                {
+                    ToastNotificationService.ShowSyncSuspendedNotification(fsi);
+                    SyncDbUtils.UnlockFolderSyncInfo(fsi);
+                }
+            } else
+            {
+                foreach (var fsi in activeSyncs)
+                {
+                    ToastNotificationService.ShowSyncInBackgroundNotification(fsi);
+                }
             }
+
             return task;
         }
 

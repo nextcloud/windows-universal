@@ -124,6 +124,13 @@ namespace NextcloudApp.Models
         }
 
         [DefaultSettingValue(Value = false)]
+        public bool PauseSyncInBackground
+        {
+            get => Get<bool>();
+            set => Set(value);
+        }
+
+        [DefaultSettingValue(Value = false)]
         public bool ExpertMode
         {
             get => Get<bool>();

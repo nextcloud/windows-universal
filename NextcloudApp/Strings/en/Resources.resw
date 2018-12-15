@@ -688,4 +688,10 @@ Please try again later.</value>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the selected files?</value>
   </data>
+  <data name="SyncInBackgroundDescription" xml:space="preserve">
+    <value>Synchronization in background</value>
+  </data>
+  <data name="SyncInBackgroundTitle" xml:space="preserve">
+    <value>Synchronization of folder {0} is running in background, yay!</value>
+  </data>
 </root>

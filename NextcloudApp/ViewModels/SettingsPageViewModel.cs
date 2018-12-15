@@ -27,6 +27,7 @@ namespace NextcloudApp.ViewModels
         private bool _ignoreServerCertificateErrors;
         private bool _expertMode;
         private bool _syncDeletions;
+        private bool _pauseSyncInBackground;
 
         public ICommand ResetCommand { get; }
         public ICommand ShowHelpExpertModeCommand { get; }
@@ -136,6 +137,18 @@ namespace NextcloudApp.ViewModels
                     return;
 
                 SettingsLocal.SyncDeletions = value;
+            }
+        }
+
+        public bool PauseSyncInBackground
+        {
+            get => _pauseSyncInBackground;
+            set
+            {
+                if (!SetProperty(ref _pauseSyncInBackground, value))
+                    return;
+
+                SettingsLocal.PauseSyncInBackground = value;
             }
         }
 

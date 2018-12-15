@@ -84,10 +84,21 @@
                     Margin="0,12" 
                     Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
                     Height="1" />
+
+                <ToggleSwitch 
+                    x:Uid="PauseSyncInBackground"
+                    Header="Pause sync in background"
+                    IsOn="{Binding PauseSyncInBackground, Mode=TwoWay}">
+                </ToggleSwitch>
+
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                    Height="1" />
                 
                 <ToggleSwitch 
                     x:Uid="SyncDeletions"
-                    Header="Sync Deletions"
+                    Header="Sync deletions"
                     IsOn="{Binding SyncDeletions, Mode=TwoWay}">
                 </ToggleSwitch>
 
