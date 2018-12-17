@@ -300,13 +300,13 @@
     <value>Изтриване на файл</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Наистина ли желаете файла {0} да бъде изтрит?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Изтриване на папка</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Наистина ли желаете папката {0} да бъде изтрита?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} от {1} качени</value>
@@ -494,7 +494,7 @@
     <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
-    <value>Beware of conflicts!</value>
+    <value>Внимавайте за конфликти!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
     <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
@@ -531,7 +531,7 @@
     <value>Synchronization of folder {0} finished with {1} changes.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronization has been finished</value>
+    <value>Синхронизирането приключи</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
     <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
@@ -543,13 +543,13 @@
     <value>Synchronization Status</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Local Path</value>
+    <value>Локален път</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud Path</value>
+    <value>Път в Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Изберете папка, в която да бъдат качени файловете</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Папки</value>
@@ -621,7 +621,7 @@
     <value>Грешка при създаване на клиент за WebDAV комуникация</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <value>Директорията '{0}' не може да бъде създадена в Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
@@ -629,11 +629,11 @@
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <value>Възникна грешка при свалянето на файла '{0}' от Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <value>Възникна грешка при качването на файла '{0}' в Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -650,7 +650,7 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Не е въведен URL на сървъра. Моля, посочете URL на вашия Nextcloud сървър.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Keep as is</value>
@@ -665,7 +665,7 @@
     <value>How does the expert mode work?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What's the meaning of this?</value>
+    <value>Какво означава това?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows color settings</value>
@@ -683,9 +683,9 @@
     <value>Reset this app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Изтрий файловете</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Наистина ли желаете маркираните файлове да бъдат изтрити?</value>
   </data>
 </root>
