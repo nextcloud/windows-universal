@@ -175,12 +175,12 @@
     <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Produciuse un erro da aplicación</value>
+    <value>Produciuse un erro do aplicativo</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>A  aplicación atopou un problema. Pedímoslle desculpas polos inconvenientes. Se estaba a traballar en algo, a información na que estaba traballando perdeuse.
+    <value>O aplicativo atopou un problema. Pedímoslle desculpas polos inconvenientes. Se estaba a traballar en algo, a información na que estaba traballando perdeuse.
 
-Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos preparado? Isto axuda a solucionar máis rapidamente o problema.</value>
+Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos preparado? Isto axuda a solucionar máis rapidamente o problema.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
@@ -405,7 +405,7 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
     <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>A súa aplicación foi actualizada á versión {0}</value>
+    <value>O seu aplicativo foi actualizado á versión {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Novas funcionalidades e melloras nesta versión:</value>
@@ -423,7 +423,7 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
 • Descargar directorios como un arquivo .zip 
 • Seleccionar múltiples ficheiros e cartafoles 
 • Ancorar ficheiros e cartafoles á pantalla de inicio 
-• Usar Windows Hello para autenticar ao acceder á aplicación 
+• Usar Windows Hello para autenticar ao acceder ao aplicativo 
 • Permitir certificados SSL auto asinados 
 • Amosar o tamaño dos cartafoles en lista 
 • Compartir ficheiros coa aplicación 
@@ -479,7 +479,7 @@ Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-
     <value>Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Para que estes axustes teñan efecto é necesario reiniciar a aplicación.</value>
+    <value>Para que estes axustes teñan efecto é necesario reiniciar o aplicativo.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Consello</value>
@@ -528,7 +528,7 @@ Ténteo nun chisco.</value>
     <value>Rematou a sincronización</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>A sincronización do cartafol {0} detívose, por mor de que a aplicación foi suspendida.</value>
+    <value>A sincronización do cartafol {0} detívose, por mor de que o aplicativo foi suspendido.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>A sincronización foi suspendida</value>
@@ -552,7 +552,7 @@ Ténteo nun chisco.</value>
     <value>Elementos: {0} (cartafoles: {1} ficheiros: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Ao activar o modo experto, a aplicación fornece algunhas funcionalidades e  informacións adicionais, isto pode interesarlle a todos os usuarios.</value>
+    <value>Ao activar o modo experto, o aplicativo fornece algunhas funcionalidades e  informacións adicionais, isto pode interesarlle a todos os usuarios.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorar os certificados SSL auto asinados. Isto permite o uso de entidades de certificación SSL nulas ou incorrectas.  Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-the-middle -mitm)!</value>
