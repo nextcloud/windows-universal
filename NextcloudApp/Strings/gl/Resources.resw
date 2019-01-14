@@ -121,7 +121,7 @@
     <value>Todos os ficheiros</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Produciuse un erro</value>
@@ -151,28 +151,28 @@
     <value>Ordenar</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Data (máis antigo ao principio)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Data (máis recente ao principio)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Nome (A - Z)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Nome (Z -A)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Tamaño (de menor a maior)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Tamaño (de maior a menor)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Tipo (A arriba)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Tipo (Z arriba)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Produciuse un erro do aplicativo</value>
@@ -207,7 +207,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Descargando o ficheiro</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Descargando vistas previas das imaxes</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Nome</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Novo cartafol</value>
@@ -255,7 +255,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>{0} de {1} usados</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Restabelecer este aplicativo</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Tentar de novo</value>
@@ -288,7 +288,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Versión {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I'm on Wi-Fi</value>
+    <value>Só cando estea conectado por WiFi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Si</value>
@@ -417,19 +417,26 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Actualizar</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Mover ficheiros e cartafoles 
-• Renomear ficheiros e cartafoles 
-• Sincronización manual dos cartafoles 
-• Descargar directorios como un arquivo .zip 
-• Seleccionar múltiples ficheiros e cartafoles 
-• Ancorar ficheiros e cartafoles á pantalla de inicio 
-• Usar Windows Hello para autenticar ao acceder ao aplicativo 
-• Permitir certificados SSL auto asinados 
-• Amosar o tamaño dos cartafoles en lista 
-• Compartir ficheiros coa aplicación 
-• Usar a bóveda de contrasinais para almacenar credenciais de usuario 
-• Melloras de seguridade e corrección de fallas 
-• Unha nova e máis estábel biblioteca WebDAV</value>
+    <value>• Mover ficheiros e cartafoles
+• Renomear ficheiros e cartafoles
+• Sincronización manual dos cartafoles
+• Descargar directorios como un arquivo ZIP
+• Seleccionar múltiples ficheiros e cartafoles
+• Os elementos poden marcarse como favoritos dende dentro do aplicativo
+• O tamaño dos cartafoles amósase na lista de directorios
+• Barra de estado na lista de directorios que mostra o número de ficheiros seleccionados / total
+• Clasificación para o tipo de datos
+• Novas vistas para favoritos / compartir
+• Ancorar ficheiros e cartafoles á pantalla de inicio
+• Usar Windows Hello para autenticar ao acceder ao aplicativo
+• Modo experto que amosa información avanzada na aplicación
+• Permitir certificados SSL auto asinados
+• Amosar o tamaño dos cartafoles en lista
+• Compartir ficheiros co aplicativo
+• Temas (escuro/craro/sistema)
+• Usar a bóveda de contrasinais para almacenar credenciais de usuario
+• Unha nova e máis estábel biblioteca WebDAV
+• Melloras de seguridade e corrección de fallos</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Ancorar ao inicio</value>
@@ -441,7 +448,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Conectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorar os certificados SSL auto asinados incorrectos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -485,7 +492,7 @@ Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-
     <value>Consello</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser problemas temporais (p. ex., o ficheiro abriuse noutro aplicativo) e deberían desaparecer trala próxima sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Coidado cos conflitos!</value>
@@ -582,16 +589,16 @@ Ténteo nun chisco.</value>
     <value>Sincronizar este cartafol</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Escuro</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Usar os axustes do sistema</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Select a mode</value>
+    <value>Seleccione un modo</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Compartido con outros</value>
@@ -609,77 +616,77 @@ Ténteo nun chisco.</value>
     <value>Preparando para compartir</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Crear un cartafol</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Produciuse un erro ao crear o cliente para a comunicación WebDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <value>Non foi posí­bel crear o cartafol «{0}» no Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of '{0}' on Nextcloud failed.</value>
+    <value>Produciuse un fallo ao eliminar «{0}» no Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <value>Produciuse un erro ao descargar o ficheiro «{0}» do Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <value>Produciuse un erro ao enviar o ficheiro «{0}» ao Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Quere sobrescribilo?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>File already exists</value>
+    <value>O ficheiro xa existe</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Sobrescribir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Excepción non agardada: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>Non se especificou o URL do servidor. Introduza o URL da súa instancia do Nextcloud</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Manter así</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Esta solución só se pode aplicar, se existen ficheiros de xeito remoto e local</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Atención</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Como funciona o modo experto?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What's the meaning of this?</value>
+    <value>Cal é o significado disto?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Axustes de cor de Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Check all</value>
+    <value>Marcar todo</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Uncheck all</value>
+    <value>Desmarcar todo</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+    <value>Confirma que quere restabelecer este aplicativo? Isto reiniciará todo o aplicativo e todos os axustes de sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Restabelecer este aplicativo</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Eliminar ficheiros</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the selected files?</value>
+    <value>Confirma que quere eliminar os ficheiros seleccionados?</value>
   </data>
 </root>

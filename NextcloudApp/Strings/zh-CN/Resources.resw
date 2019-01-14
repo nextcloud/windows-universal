@@ -240,7 +240,7 @@
     <value>未经授权</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>服务器返回错误代码401(未经授权). 请重新登录.</value>
+    <value>服务器返回错误代码401（未经授权）请重新登录。</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>确定</value>
@@ -276,7 +276,7 @@
     <value>大小</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>此名称已存在.指定其他名称.</value>
+    <value>此名称已存在。请指定其他名称。</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>类型</value>
@@ -309,7 +309,7 @@
     <value>你确认要删除文件夹 {0} 吗？</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
-    <value>{0}已上传,共计 {1} 个</value>
+    <value>{0}已上传，共计 {1} 个</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
     <value>Uploading file {0} of {1}…</value>
@@ -321,10 +321,10 @@
     <value>{0} 于 {1} 下载</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>服务器维护模式被启用.</value>
+    <value>服务器维护模式被启用。</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>错误的用户名或密码.</value>
+    <value>错误的用户名或密码。</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>客户端版本 {0}</value>
@@ -369,7 +369,7 @@
     <value>选择目录</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>该服务器地址 {0} 无法访问.</value>
+    <value>该服务器地址 {0} 无法访问。</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>下载为 ZIP 文件</value>
@@ -378,13 +378,13 @@
     <value>已下载 {0}</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>要访问你的 Nextcloud, 为你的设备提供登录信息.</value>
+    <value>要访问你的 Nextcloud，为你的设备提供登录信息。</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello 认证</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>该设备没有设置 PIN .要使用 Windows Hello, 必须定义 PIN.</value>
+    <value>该设备没有设置 PIN。要使用 Windows Hello，必须定义 PIN。</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Download</value>
@@ -396,7 +396,7 @@
     <value>要求登录</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息.</value>
+    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息。</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>再试一次</value>
@@ -482,7 +482,7 @@
 请注意，你将无法避免中间人攻击(mitm)！</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
-    <value>注意!</value>
+    <value>注意！</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
     <value>要使此设置生效，需要重新启动应用程序。</value>
@@ -503,11 +503,11 @@
     <value>已开始同步</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>同步将在后台进行。 完成后您会收到通知。</value>
+    <value>同步将在后台进行。完成后您会收到通知。</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>服务临时不可用 (通常由于短时间的维护工作).
-请稍后重试.</value>
+    <value>服务暂时不可用（通常是由于短时间的维护工作）。
+请稍后重试。</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>文件在本地和远程更改。你更喜欢哪个？</value>
@@ -519,7 +519,7 @@
     <value>您删除的本地文件在云端已有改动，您要保留哪一份？</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>冲突;</value>
+    <value>冲突：</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>您删除的云端文件在本地已有改动，您要保留哪一份？</value>
@@ -534,7 +534,7 @@
     <value>同步已完成</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>同步文件夹 {0} 已经停止, 因为该应用已被暂停。</value>
+    <value>同步文件夹 {0} 已经停止，因为该应用已被暂停。</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>同步已暂停</value>
@@ -555,7 +555,7 @@
     <value>文件夹</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>项目: {0} (文件夹: {1} 文件: {2})</value>
+    <value>项目：{0}（文件夹：{1} 文件：{2}）</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>当专家模式启用时，应用程序会提供一些额外的功能/信息，并不是所有的用户对此都感兴趣。</value>
@@ -646,7 +646,7 @@
     <value>覆盖</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>意外异常: {0}</value>
+    <value>意外异常：{0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
@@ -659,7 +659,7 @@
     <value>仅在文件同时存在于远程和本地时采用本方案</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>注意!</value>
+    <value>注意！</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
     <value>专家模式是如何工作的？</value>
@@ -686,6 +686,6 @@
     <value>删除文件</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>您确定要删除被选文件?</value>
+    <value>您确定要删除被选文件？</value>
   </data>
 </root>
