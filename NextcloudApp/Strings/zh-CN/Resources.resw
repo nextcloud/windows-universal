@@ -178,7 +178,7 @@
     <value>应用程序错误</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>程序发生了一个问题，在此期间你操作的信息可能已经丢失，我们对此向您表示歉意。
+    <value>程序发生了一个问题，在此期间您操作的信息可能已经丢失，我们对此向您表示歉意。
 
 您是否同意将错误报告发送给程序开发者？这将有助于更快的解决问题。</value>
   </data>
@@ -288,7 +288,7 @@
     <value>版本 {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>只有在使用Wi-Fi时</value>
+    <value>只有在使用 Wi-Fi 时</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>是</value>
@@ -300,19 +300,19 @@
     <value>删除文件</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>你确认你要删除文件 {0} 吗？</value>
+    <value>您确认您要删除文件 {0} 吗？</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>删除目录</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>你确认要删除文件夹 {0} 吗？</value>
+    <value>您确认要删除文件夹 {0} 吗？</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0}已上传，共计 {1} 个</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Uploading file {0} of {1}…</value>
+    <value>上传文件 {0}，共 {1} 个...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
     <value>上传文件中 … </value>
@@ -330,7 +330,7 @@
     <value>客户端版本 {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>服务器名字或地址无法被识别</value>
+    <value>服务器名字或地址无法被识别。</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>服务器版本 {0}</value>
@@ -378,7 +378,7 @@
     <value>已下载 {0}</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>要访问你的 Nextcloud，为你的设备提供登录信息。</value>
+    <value>要访问您的 Nextcloud，请为您的设备提供登录信息。</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello 认证</value>
@@ -396,7 +396,7 @@
     <value>要求登录</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>我们不能打开 Nextcloud 直到你为你的设备提供了登录信息。</value>
+    <value>我们不能打开 Nextcloud 直到您为您的设备提供了登录信息。</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>再试一次</value>
@@ -447,7 +447,7 @@
     <value>连接</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>忽略无效的自签名的SSL证书</value>
+    <value>忽略无效的自签名的 SSL 证书</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>专家模式</value>
@@ -479,7 +479,7 @@
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>证书认证机构无效或不正确，是否继续连接？
 
-请注意，你将无法避免中间人攻击(mitm)！</value>
+请注意，您将无法避免中间人攻击（mitm）！</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>注意！</value>
@@ -491,7 +491,7 @@
     <value>提示</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>同步期间发生的错误列表。 这些应该是临时问题（例如，文件已被另一个应用程序打开），并且应该在下一次同步运行后恢复了。</value>
+    <value>同步期间发生的错误列表。这些应该是临时问题（例如，文件已被另一个应用程序打开），并且应该在下一次同步运行后恢复了。</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>当心冲突！</value>
@@ -510,7 +510,7 @@
 请稍后重试。</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>文件在本地和远程更改。你更喜欢哪个？</value>
+    <value>文件在本地和远程更改。您更喜欢哪个？</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
     <value>文件在本地和云端同时存在，您要保留哪一份？</value>
@@ -618,29 +618,29 @@
     <value>创建文件夹</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>创建客户端WebDAV通信时出错</value>
+    <value>创建客户端 WebDAV 通信时出错</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>无法在Nextcloud上创建文件夹’{0}‘</value>
+    <value>无法在 Nextcloud 上创建文件夹’{0}‘</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>在Nextcloud上删除‘{0}’的操作失败</value>
+    <value>在 Nextcloud 上删除‘{0}’的操作失败</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>从Nextcloud上下载‘{0}’时发生错误</value>
+    <value>从 Nextcloud 下载‘{0}’时发生错误</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>向Nextcloud上上传‘{0}’时发生错误</value>
+    <value>向 Nextcloud 上传‘{0}’时发生错误</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>你要覆盖吗？</value>
+    <value>您要覆盖吗？</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>文件已经存在</value>
+    <value>文件已存在</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>覆盖</value>
@@ -650,7 +650,7 @@
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>未注明服务器链接地址(URL)。请输入您Nextcloud的链接地址(URL)</value>
+    <value>未注明服务器链接地址。请输入您 Nextcloud 的链接地址。</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>保持原状</value>
