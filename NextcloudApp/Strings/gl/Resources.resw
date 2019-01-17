@@ -492,7 +492,7 @@ Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-
     <value>Consello</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser problemas temporais (p. ex., o ficheiro abriuse noutro aplicativo) e deberían desaparecer trala próxima sincronización.</value>
+    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser incidentes temporais (p. ex., o ficheiro abriuse noutro aplicativo) e deberían desaparecer trala próxima sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Coidado cos conflitos!</value>
