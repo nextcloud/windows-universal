@@ -610,7 +610,7 @@ Ténteo nun chisco.</value>
     <value>Compartido comigo</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Compartido por ligazón</value>
+    <value>Compartido mediante ligazón</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Preparando para compartir</value>
