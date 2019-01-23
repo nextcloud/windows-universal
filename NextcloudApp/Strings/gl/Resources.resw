@@ -384,7 +384,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Autenticación de Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Non foi establecido un PIN para este dispositivo. Para poder usar Windows Hello, necesitase un PIN definido.</value>
+    <value>Non foi estabelecido un PIN para este dispositivo. Para poder usar Windows Hello, necesitase un PIN definido.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Descargar</value>
