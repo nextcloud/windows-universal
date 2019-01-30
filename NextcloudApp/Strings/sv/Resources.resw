@@ -207,7 +207,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Laddar ned filen...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Ladda ner förhandsvisningsbilder</value>
+    <value>Ladda ned förhandsvisningsbilder</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -420,7 +420,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>• Flytta filer och mappar
 • Byta namn på filer och mappar
 • Manuell synkronisering av mappar
-• Ladda ner mappar som zip-fil 
+• Ladda ned mappar som zip-fil 
 • Markera flera filer och mappar
 • Objekt kan väljas som favorit inuti appen
 • Storleken av mappar visas i mapplistan
@@ -629,7 +629,7 @@ Försök igen senare.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Fel när filen '{0}' laddades ner från Nextcloud.</value>
+    <value>Fel när filen '{0}' laddades ned från Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
