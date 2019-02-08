@@ -510,19 +510,19 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
 Lūdzu, vēlāk mēģiniet vēlreiz.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Fails pārmainīts vietēji un attāli. Kuram tu dod priekšroku?</value>
+    <value>Datne pārmainīta lokāli un attālināti. Kurai tu dod priekšroku?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Fails ir izveidots attāli un vietēji - kurš ir īstais?</value>
+    <value>Datne ir izveidota attālināti un lokāli - kura ir īstā?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Fails izdzēsts vietēji bet pārmainīts attāli. Kuram tu dod priekšroku?</value>
+    <value>Datne lokāli izdzēsta bet pārmainīta attāli. Kurai tu dod priekšroku?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikts:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Fails izdzēsts attāli bet pārmainīts vietēji. Kuram tu dod priekšroku?</value>
+    <value>Datne attālināti izdzēsta bet pārmainīta lokāli. Kurai tu dod priekšroku?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Mapes {0} sinhronizācija beidzās ar {1} izmaiņām un {2} kļūdām vai konfliktiem.</value>
@@ -555,7 +555,7 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <value>Mapes</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Vienības: {0} (mapes: {1} faili: {2})</value>
+    <value>Vienības: {0} (mapes: {1} datnes: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>Kad eksperta režīms ir ieslēgts, aplikācija parāda papildus iespējas/informāciju, kas var neintresēt visiem lietotājiem.</value>
@@ -640,7 +640,7 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <value>Vai tu gribi pārrakstīt to?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Fails jau pastāv.</value>
+    <value>Datne jau pastāv.</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Pārrakstīt</value>
