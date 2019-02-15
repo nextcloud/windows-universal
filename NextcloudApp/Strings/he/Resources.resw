@@ -178,9 +178,9 @@
     <value>שגיאת יישומון</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
-
-Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+    <value>נתקלנו בבעיה. אנו מתנצלים על אי הנוחות. אם עבדת על משהו, המידע עליו עבדת אבד.
+הם ברצונך לעדכן את צוות הפיתוח ולשלוח את דו"ח השגיאה המצורף?
+פעולה זו מסייעת לתיקון בעיות באופן זריז יותר.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>ביטול</value>
@@ -384,7 +384,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>אימות Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>לא הוגדר קוד נעילה למכשיר זה. על מנת לשהתמש ב Windows Hello, עליך להגדיר קוד נעילה.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>הורדה</value>
@@ -417,25 +417,25 @@ Would you like to inform the application developers and submit the prepared erro
     <value>עדכון</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
+    <value>• העברת קבצים ותיקיות
+• שינוי שמות קבצים ותיקיות
+• סנכרון ידני של תיקיות
+• הורדת תיקיות כקובץ ZIP 
+• בחירה מרובה של קבצים ותיקיות
+• אפשר סימון פריטים כמועדפים מתוך האפליקציה
+• גודל הקבצים יראה ברשימת התיקיות
+• שורת מצב ברשימת התיקיות תראה את מספר הקבצים שנבחרו או שישנם
+• מיון סוג המידע
 • New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+• הצמדת קבצים ותיקיות למסך הכניסה
+• השתמש ב Windows Hello לאימות בהפעלת האפליקציה
+• מצב מומחה יראה מידע מתקדם באפליקציה
+• אפשר תעודות SSL בחתימה עצמית
+• שתף קבצים דרך ה אפליקציה
+• ערכות נושא (כהה/בהיר/ברירת מחדל מערכת)
+• השתמש ב PasswordVault לאחסן את פרטי הכניסה למשתמש
+• השתמש ב ספריית WebDAV חדשה ויציבה יותר
+• תיקוני אבטחה ו באגים</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>הצמדה לתפריט ההתחלה</value>
@@ -497,7 +497,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>זהירות מסתירות!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>התיקייה המקומית וזו המרוחקת אינן ריקות. התנגשויות רבות עלולות להתרחש משום שהאפליקציה אינה יודעת מי מהקבצים הוא הנכון.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>התקבלה בקשה לסנכרון!</value>
@@ -561,7 +561,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>כאשר מצב מומחה פעיל, היישום מספק מידע/תכונות נוספים, שעשויים לא לעניין את כל המשתמשים.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>התעלם מתעודות שגויות של SSL בחתימה אישית . דבר זה יאפשר עבודה בתעודות SSL שגויות או לא מאושרות. זהירות, לא תחול יותר הגנה מהתקפות מסוג "אדם בתווך".</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>סנכרון התיקייה הזאת</value>
