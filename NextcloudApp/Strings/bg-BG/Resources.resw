@@ -240,7 +240,7 @@
     <value>Не е разрешен</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Сървърът върна код за грешка 401 (Unauthorized). Моля, влезте отново.</value>
+    <value>Сървърът върна код за грешка 401 (Unauthorized). Впишете се.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>ОК</value>
