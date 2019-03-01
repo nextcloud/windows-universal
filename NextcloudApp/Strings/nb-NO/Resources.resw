@@ -175,10 +175,10 @@
     <value>Type (Å først)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Programfeil</value>
+    <value>App-feil</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Programmet har fått et problem. Vi beklager ulempene dette medfører. Hvis du var midt i et arbeid, har dette forsvunnet.
+    <value>Appen har fått et problem. Vi beklager ulempene dette medfører. Hvis du var midt i et arbeid, har dette forsvunnet.
 
 Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å løse problemet raskere.</value>
   </data>
@@ -240,7 +240,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Uautorisert</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>Tjeneren returnerte an feilkode 401 (Uautorisert). Logg inn på nytt.</value>
+    <value>Serveren returnerte an feilkode 401 (Uautorisert). Logg inn på nytt.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
@@ -255,13 +255,13 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>{0} av {1} brukt</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Nullstill dette programmet</value>
+    <value>Nullstill denne appen</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Prøv igjen</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Tjeneradresse</value>
+    <value>Serveradresse</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Innstillinger</value>
@@ -321,7 +321,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>{0} av {1} lastet ned</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Vedlikeholdsmodus er aktivert på tjeneren.</value>
+    <value>Vedlikeholdsmodus er aktivert på serveren.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>Feil brukernavn eller passord.</value>
@@ -330,16 +330,16 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Klientversjon {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Tjeneradressen ble ikke funnet.</value>
+    <value>Serveradressen ble ikke funnet.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
-    <value>Tjenerversjon {0}</value>
+    <value>Serverversjon {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
     <value>Slett</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>venter på svar fra tjener</value>
+    <value>venter på svar fra server</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
     <value>Velg et nytt navn</value>
@@ -369,7 +369,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Velg mappe</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>Tjeneren med adressen {0} kan ikke nås.</value>
+    <value>Serveren med adressen {0} kan ikke nås.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Last ned som ZIP- fil</value>
@@ -405,7 +405,7 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
     <value>Nextcloud for Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Programmet ditt ble oppdatert til versjon {0}</value>
+    <value>Appen din ble oppdatert til versjon {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Nye funksjoner og forbedringer i denne versjonen:</value>
@@ -422,16 +422,16 @@ Vil du sende utviklerne den klargjorte feilrapporten? Dette vil hjelpe med å l�
 • Manuell synkronisering av mapper
 • Last ned mapper som ZIP-fil 
 • Velg flere filer og mapper
-• Elementer kan favorittmarkeres fra programmet
+• Elementer kan favorittmarkeres fra appen
 • Størrelsen på mapper vises i mappelisten
 • Statusfelt i mappevisning viser antallet valgte/totalt antall filer
 • Sortering for datatype
 • Nye visninger for favoritter/lager
 • Fest filer og mapper til startskjermen
-• Vis Windows Hello for å autentisere ved programstart
-• Ekspertmodus viser avansert informasjon i programmet
+• Vis Windows Hello for å autentisere ved app-start
+• Ekspertmodus viser avansert informasjon i appen
 • Tillat selvsignerte SSL-sertifikater
-• Del filer med programmet
+• Del filer fra appen
 • Draktvalg (mørk/lys/system)
 • Bruk PasswordVault for å lagre brukeridentifikasjon
 • Nytt og mer stabilt WebDAV-bibliotek
@@ -485,7 +485,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>OBS!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For at endringer skal tre i effekt, må programmet startes på nytt.</value>
+    <value>For at endringer skal tre i effekt, må appen startes på nytt.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
@@ -497,7 +497,7 @@ Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (mim) angrep!</val
     <value>Se opp for konflikter!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Både lokal og ekstern mappe er ikke tomme. Dette kan skape konflikter, fordi programmet ikke vet hvilke filer som er de riktige.</value>
+    <value>Både lokal og ekstern mappe er ikke tomme. Dette kan skape konflikter, fordi appen ikke vet hvilke filer som er de riktige.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
     <value>Synkronisering har blitt startet!</value>
@@ -534,7 +534,7 @@ Prøv igjen senere.</value>
     <value>Synkronisering har blitt avsluttet.</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synkronisering av mappe {0} har blitt stoppet, fordi programmet har blitt suspendert.</value>
+    <value>Synkronisering av mappe {0} har blitt stoppet, fordi appen har blitt suspendert.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>Synkronisering utsatt</value>
@@ -558,7 +558,7 @@ Prøv igjen senere.</value>
     <value>Elementer: {0} (mapper: {1} filer: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Når eksportmodus er påskrudd, gir programmet noen ytterligere funksjoner/informasjon, som kanskje ikke er så interessant for alle brukere.</value>
+    <value>Når eksportmodus er påskrudd, gir appen noen ytterligere funksjoner/informasjon, som kanskje ikke er så interessant for alle brukere.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorer ugyldig selv-signerte SSL-sertifikater. Dette tillater bruk av ugyldige eller feil SSL sertifikater. Vær forsiktig, du vil ikke være beskyttet mot mann-i-midten (MIM) -angrep heretter.</value>
@@ -650,7 +650,7 @@ Prøv igjen senere.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Ingen tjeneradresse er angitt. Skriv inn adressen til Nextcloud-tjeneren.</value>
+    <value>Ingen serveradresse er angitt. Skriv inn adressen til Nextcloud-serveren.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Behold slik den er</value>
@@ -677,10 +677,10 @@ Prøv igjen senere.</value>
     <value>Fjern alle</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Er du sikker på at du vil nullstille dette programmet? Dette vil nullstille programmet og alle dine synkroniseringsinnstillinger.</value>
+    <value>Er du sikker på at du vil nullstille denne appen? Dette vil nullstille appen og alle dine synkroniseringsinnstillinger.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Nullstill dette programmet</value>
+    <value>Nullstill denne appen</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Slett filer</value>
