@@ -387,7 +387,7 @@
     <value>该设备没有设置 PIN。要使用 Windows Hello，必须定义 PIN。</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Download</value>
+    <value>下载</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -637,7 +637,7 @@
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>您要覆盖吗？</value>
+    <value>您确定要覆盖吗？</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>文件已存在</value>
