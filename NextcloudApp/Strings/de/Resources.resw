@@ -378,13 +378,13 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>{0} heruntergeladen</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Um auf Deine Nextcloud zuzugreifen, bitte die Zugangsdaten für Dein Gerät eingeben.</value>
+    <value>Um auf Ihre Nextcloud zuzugreifen, bitte die Zugangsdaten für Ihr Gerät eingeben.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Windows Hello Authentifizierung</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Für Dein Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
+    <value>Für Ihr Gerät wurde keine PIN gesetzt. Um Windows Hello zu benutzen muss eine PIN gesetzt werden.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Herunterladen</value>
