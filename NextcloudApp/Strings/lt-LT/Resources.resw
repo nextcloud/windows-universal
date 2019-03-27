@@ -601,7 +601,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Dalinamasi su kitais</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Mėgstamiausi</value>
+    <value>Svarbiausi</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Shared with me</value>
