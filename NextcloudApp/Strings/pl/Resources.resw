@@ -556,7 +556,7 @@ Proszę spróbować ponownie później,</value>
     <value>Foldery</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Zawartość: {0} (foldery: {1}, pliki: {2})</value>
+    <value>Zawartość: {0} (katalogi: {1}, pliki: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>Kiedy jest włączony tryb ekspercki aplikacja dostarcza dodatkowe funkcjonalności/informacje, które moga nie być i nteresujące dla wszystkich użytkowników.</value>
