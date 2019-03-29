@@ -276,7 +276,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Koko</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>There is already an element with this name. Specify a different name.</value>
+    <value>Saman niminen elementti on jo olemassa. Anna toinen nimi.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Tyyppi</value>
@@ -300,13 +300,13 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Poista tiedosto</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the file {0}?</value>
+    <value>Haluatko varmasti poistaa tiedoston {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Poista kansio</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Are you sure, you want to delete the folder {0}?</value>
+    <value>Haluatko varmasti poistaa kansion {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0}/{1} lähetetty</value>
