@@ -650,7 +650,7 @@ Bitte später noch einmal versuchen.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Es wurde keine URL angegeben. Bitte gebe die URL Deiner Nextcloud an.</value>
+    <value>Es wurde keine URL angegeben. Bitte geben Sie die URL Ihrer Nextcloud an.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>So beibehalten</value>
