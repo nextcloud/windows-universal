@@ -269,7 +269,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Configurações</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Mostrar lista agrupada de arquivos e pastas</value>
+    <value>Exibir lista agrupada de arquivos e pastas</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Tamanho</value>
