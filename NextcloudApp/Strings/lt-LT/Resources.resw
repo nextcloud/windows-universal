@@ -151,16 +151,16 @@
     <value>Rikiuoti</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Data (seniausi viršuje)</value>
+    <value>Datą (seniausi viršuje)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Data (naujausi viršuje)</value>
+    <value>Datą (naujausi viršuje)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Pavadinimą (nuo A iki Z)</value>
+    <value>Pavadinimą (nuo A iki Ž)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Pavadinimą (nuo Z iki A)</value>
+    <value>Pavadinimą (nuo Ž iki A)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
     <value>Dydį (mažiausi viršuje)</value>
@@ -178,7 +178,9 @@
     <value>Programos klaida</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>Programa patyrė problemų. Atsiprašome už sutrukdymus</value>
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Atsisakyti</value>
@@ -235,7 +237,7 @@
     <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Neautorizuotas</value>
+    <value>Neleidžiama</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Serveris grąžino klaidos kodą 401 (Nesankcionuota). Prašome prisijungti dar kartą.</value>
@@ -379,10 +381,10 @@
     <value>Norėdami gauti prieigą prie savo Nextcloud, pateikite savo įrenginio prisijungimo informacija.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Windows Hello authentication</value>
+    <value>Windows Hello tapatybės nustatymas</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+    <value>Šiam įrenginiui nėra nustatytas joks PIN. Norint naudoti Windows Hello, turi būti apibrėžtas PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Atsisiųsti</value>
@@ -400,7 +402,7 @@
     <value>Pabandyti iš naujo</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
-    <value>Nextcloud for Windows Mobile</value>
+    <value>Nextcloud skirta Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
     <value>Programėlė atnaujinta į {0} versiją</value>
