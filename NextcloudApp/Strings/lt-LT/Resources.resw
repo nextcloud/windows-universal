@@ -485,7 +485,7 @@ Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</va
     <value>Dėmėsio!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Tam, kad šis nustatymas įsigaliotų, programėlė turi būti paleista iš naujo.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Hint</value>
@@ -555,7 +555,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Aplankai</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elementų: {0} (aplankų: {1} failų: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
     <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
@@ -637,7 +637,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Ar norite jį perrašyti?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>Failas jau yra.</value>
