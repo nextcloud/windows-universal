@@ -491,7 +491,7 @@
     <value>רמז</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>רשימת שגיאות שהתרחשו במהלך הסנכרון. אלו אמורות להיות תקלות זמניות (למשל: קובץ נפתח על ידי יישומון אחר) והן אמורות לחלוף עד הסנכרון הבא.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>זהירות מסתירות!</value>
