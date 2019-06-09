@@ -207,7 +207,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Dosya indiriliyor...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Önizleme görselleri indirilsin</value>
+    <value>Ön izleme görselleri indirilsin</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
