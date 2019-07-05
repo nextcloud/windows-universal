@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,19 +124,19 @@
     <value>Sempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
-    <value>S\&apos;ha produït un error</value>
+    <value>S'ha produït un error</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Afegir</value>
+    <value>Afegeix</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Crear un directori</value>
+    <value>Crea una carpeta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Realitzar una fotografia</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Pujar fitxers</value>
+    <value>Puja fitxers</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Pujar imatges</value>
@@ -145,48 +145,48 @@
     <value>Baixa</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Refrescar</value>
+    <value>Actualitza</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordena</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
-    <value>Data (més antic a sobre)</value>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Data (antics a dalt)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
-    <value>Data (més nou a sobre)</value>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Data (nous a dalt)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
     <value>Nom (A - Z)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
     <value>Nom (Z - A)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
-    <value>Mida (més petit a sobre)</value>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Mida (petits a dalt)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
-    <value>Mida (més gran a sobre)</value>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Mida (grans a dalt)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
-    <value>Type (A to the top)</value>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Tipus (A - Z)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Tipus (Z - A)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Error en l\&apos;aplicació</value>
+    <value>Error en l\'aplicació</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>L\&apos;aplicació ha trobat un problema. Disculpeu les molesties. Si vosté es trobava realitzant alguna operació, la tasca que intentàveu realitzar s&apos;ha perdut. 
-Desitja que s\&apos;informi als desenvolupadors de l\&apos;aplicació i que s\&apos;enviï un informe d\&apos;error?
+    <value>L\'aplicació ha trobat un problema. Disculpeu les molesties. Si vosté es trobava realitzant alguna operació, la tasca que intentàveu realitzar s'ha perdut. 
+Desitja que s\'informi als desenvolupadors de l\'aplicació i que s\'enviï un informe d\'error?
 Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel·lar</value>
+    <value>Cancel·la</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>No s\&apos;ha pogut crear la carpeta</value>
+    <value>No s\'ha pogut crear la carpeta</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Connecta</value>
@@ -204,10 +204,10 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Crear una carpeta nova</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Descarregar l\&apos;arxiu...</value>
+    <value>Descarregar l\'arxiu...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Baixar previsualització de les imatges</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -222,7 +222,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Informació</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Última modificació</value>
+    <value>Darrera modificació</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Nom</value>
@@ -243,7 +243,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>El servidor ha retornat un error de codi 401 (Sense autorització). Si us plau, accedeixi de nou.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>Ok</value>
+    <value>D'acord</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>Contrasenya</value>
@@ -254,14 +254,14 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} de {1} utilitzat</value>
   </data>
-  <data name="ReseTthisApp.Content" xml:space="preserve">
-    <value>Reinicia la App</value>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Reiniciar aquesta aplicació</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Torna a intentar</value>
+    <value>Reintenta</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Direcció del servidor</value>
+    <value>Adreça del servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Paràmetres</value>
@@ -270,25 +270,25 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Paràmetres</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Mostra l\&apos;arxiu i la llista de carpetes agrupades </value>
+    <value>Mostra l\'arxiu i la llista de carpetes agrupades </value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Mida</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
-    <value>Ja existeix un element amb aquest nom. Especifiqui un altre nom.</value>
+    <value>Ja existeix un element amb aquest nom. Indiqueu un altre nom.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
     <value>Tipus</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nom d\&apos;usuari</value>
+    <value>Nom d'usuari</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versió {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Només amb connexió Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -300,19 +300,19 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Esborrar arxius</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Està segur que vol suprimir l\&apos;arxiu {0}</value>
+    <value>Esteu segurs de voler esborrar aquest fitxer {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Elimina carpeta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Està segur que vol suprimir la carpeta {0}</value>
+    <value>Esteu segurs de voler esborrar aquesta carpeta {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} de {1} pujat</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Pujant l\&apos;arxiu {0} de {1}</value>
+    <value>Pujant l\'arxiu {0} de {1}</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
     <value>Pujant el fitxer...</value>
@@ -330,7 +330,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Versió del client {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>El nom del servidor o l\&apos;adreça no s&apos;han pogut resoldre</value>
+    <value>El nom del servidor o l\'adreça no s'han pogut resoldre</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Versió del servidor {0}</value>
@@ -354,10 +354,10 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Canvia el nom</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
-    <value>Moure a</value>
+    <value>Mou a</value>
   </data>
   <data name="MoveTo_Text.Text" xml:space="preserve">
-    <value>Moure a</value>
+    <value>Mou a</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
     <value>Cancel·la</value>
@@ -369,7 +369,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Escollir carpeta</value>
   </data>
   <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
-    <value>El servidor amb l\&apos;adreça {0} no és assolible.</value>
+    <value>El servidor amb l\'adreça {0} no és assolible.</value>
   </data>
   <data name="DownloadAsZip.Text" xml:space="preserve">
     <value>Baixa fitxer com a ZIP</value>
@@ -378,13 +378,13 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>{0} descarregat</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>Per accedir al teu Nextcloud, proporciona la informació d\&apos;accés al teu dispositiu.</value>
+    <value>Per accedir al teu Nextcloud, proporciona la informació d\'accés al teu dispositiu.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>Autenticació Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>No s\&apos;ha seleccionat cap PIN en aquest dispositiu. Per poder utilitzar Windows Hello, s\&apos;ha de definir un PIN.</value>
+    <value>No s\'ha seleccionat cap PIN en aquest dispositiu. Per poder utilitzar Windows Hello, s\'ha de definir un PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Baixa</value>
@@ -396,7 +396,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Inici de sessió necessari</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>No podem obrir Nextcloud fins que proporcioneu les dades d\&apos;inici de sessió al vostre dispositiu.</value>
+    <value>No podem obrir Nextcloud fins que proporcioneu les dades d\'inici de sessió al vostre dispositiu.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Torna a provar</value>
@@ -405,7 +405,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Nextcloud per a Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>La vostra aplicació s\&apos;ha actualitzat a la versió {0}</value>
+    <value>La vostra aplicació s\'ha actualitzat a la versió {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Noves característiques i millores en aquesta versió</value>
@@ -417,25 +417,25 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Actualitza</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
-    <value>• Move files and folders
-• Rename files and folders
-• Manual synchronization of folders
-• Download directories as ZIP file 
-• Select multiple files and folders
-• Items can be marked as favorite from within the app
-• The size of folders is shown in the directory list
-• Status bar in directory list showing the number of selected/total files
-• Sorting for data type
-• New views for favorites/shares
-• Pin files and folders to start screen
-• Use Windows Hello to authenticate on app start
-• Expert mode showing advanced information in the app
-• Allow self signed SSL certificates
-• Share files with the app
-• Theming (dark/light/system)
-• Use the PasswordVault to store user credentials
-• New and more stable WebDAV library
-• Security improvements &amp; bug fixes</value>
+    <value>• Moure fitxers i carpetes
+• Reanomenar fitxers i carpetes
+• Sincronització manual de carpetes
+• Baixar directoris en un fitxer ZIP
+• Seleccionar múltiples fitxers i carpetes
+• Es poden marcar elements com a favorits des de la aplicació
+• La mida de les carpetes es mostra al llistat de directoris
+• Es mostra el nombre total de fitxers seleccionats a la barra d'estat del llistat de directoris
+• Ordenar per tipus de dades
+• Noves vistes pels favorits/compartits
+• Fixar fitxers i carpetes a la pantalla d'inici
+• Utilitzar Windows Hello per identificar-se a l'iniciar l'aplicació
+• Mode Expert mostrant informació avançada a l'aplicació
+• S'accepten certificats SSL auto-signats
+• Compartir fitxers amb l'aplicació
+• Ús de temes (fosc/clar/sistema)
+• Es pot emprar PasswordVault per guardar les credencials d'usuari
+• Llibreria WebDAV nova i més estable
+• Millores de seguretat i correcció d'errors</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
     <value>Clica per començar</value>
@@ -447,7 +447,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Connectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorar els certificats SSL auto-signats</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Mode expert</value>
@@ -471,72 +471,72 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Prefereix el fitxer local</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Neteja l&apos;historial de sincronització</value>
+    <value>Neteja l'historial de sincronització</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Prefereix el fitxer remot</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
-    <value>El certificat d\&apos;autorització  es invàlid o incorrecte. Connectar de totes formes?
-Tinguis cura, no estaràs protegit davant d&apos;atacs Man-in-the-middle (mitm).</value>
+    <value>El certificat d\'autorització  es invàlid o incorrecte. Connectar de totes formes?
+Tinguis cura, no estaràs protegit davant d'atacs Man-in-the-middle (mitm).</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Atenció!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>For this settings to take effect, the app needs to be restarted.</value>
+    <value>Per poder fer efectius aquests paràmetres és necessari reiniciar l'aplicació.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Indicació</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Llista d'errors que han succeït durant la sincronització. Hauria de ser un problema temporal (com ara que un fitxer estigués obert alhora en una altra aplicació o dispositiu) i s'hauria de resoldre a la següent sincronització.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Estigues al cas dels conflictes!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+    <value>Ambdues carpetes no són buides,  local i remota. Això podria derivar en un munt de conflictes, perquè l'aplicació no pot saber quins són els fitxers correctes.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>S&apos;ha activat la sincronització!</value>
+    <value>S'ha activat la sincronització!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronization will take place in the background. You&apos;ll get a notification when it&apos;s finished.</value>
+    <value>La sincronització tindrà lloc en segon pla. I rebreu una notificació quan s'enllesteixi.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>El servei no està disponible temporalment (normalment a causa de tasques de mantenimenta  curt termini)
 Si us plau, torni a intentar-ho més tard.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>File changed locally and remotely. Which do you prefer?</value>
+    <value>El fitxer ha canviat local i remotament. Quina de les dues versions preferiu conservar?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>File has been created remotely and locally - which is the correct one?</value>
+    <value>El fitxer ha estat crear local i remotament, quina és la versió que preferiu conservar?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+    <value>Aquest fitxer s'ha esborrat localment però alhora ha canviat remotament al servidor, què voleu fer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Conflicte:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+    <value>Aquest fitxer ha estat esborrat remotament al servidor alhora que l'heu modificat localment, què voleu fer?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+    <value>S'ha enllestit la sincronització de la carpeta {0}amb {1}canvis i {2}errors o conflictes.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronization of folder {0} finished with {1} changes.</value>
+    <value>Enllestida la sincronització de la carpeta {0}amb {1}canvis.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>S&apos;ha acabat la sincronització</value>
+    <value>S'ha acabat la sincronització</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+    <value>S'ha aturat la sincronització de la carpeta {0}perquè l'aplicació ha estat suspesa.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>S&apos;ha suspès la sincronització</value>
+    <value>S'ha suspès la sincronització</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
     <value>Estat de sincronització</value>
@@ -548,19 +548,19 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Ruta Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Choose the folder where you want to upload the files</value>
+    <value>Escolliu la carpeta a on voleu pujar els fitxers</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Carpetes</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
-    <value>Items: {0} (folders: {1} files: {2})</value>
+    <value>Elements: {0}(carpetes: {1}fitxers: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+    <value>Quan el mode expert està activat, l'aplicació proporciona informació i funcionalitats addicionals que poden no ser interessants per tos els usuaris.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+    <value>Ignorar certificats SSL no vàlids per ser auto-signats. Això permet emprar sense problemes certificats no vàlids o sense una autoritat certificadora a darrera. Aneu en compte, perquè ja no tindreu protecció davant d'atacs del tipus MITM (man-in-the-middle).</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronitza aquesta carpeta</value>
@@ -572,19 +572,19 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Atura la sincronització</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Estat de la sincronització</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Sincronitzar ara</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
     <value>Sincronitza</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Synchronize this folder now</value>
+    <value>Sincronitzar aquesta carpeta ara</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Synchronize this folder</value>
+    <value>Sincronitzar aquesta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Fosc</value>
@@ -593,13 +593,13 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Clar</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
-    <value>Use the system settings</value>
+    <value>Utilitza els paràmetres del sistema</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
     <value>Escull un mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Compartit amb altres</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Preferits</value>
@@ -608,35 +608,35 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Compartit amb mi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Shared via link</value>
+    <value>Compartit amb enllaç</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Prepare for sharing...</value>
+    <value>Preparar per compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Crear un directori</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
-    <value>Error while creating client for WebDAV communication</value>
+    <value>Ha fallat la creació del client per a comunicació WebDDAV</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>No s'ha pogut crear el directori '{0}' a Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>No s'ha pogut esborrar '{0}' a Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>No s'ha pogut baixar de Nextcloud el fitxer '{0}'.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>No s'ha pogut pujar el fitxer '{0}' a Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Voleu sobre-escriure'l?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>El fitxer ja existeix</value>
@@ -645,28 +645,46 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Sobreescriu</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
-    <value>Unexpected Exception: {0}</value>
+    <value>Error inesperat: {0}</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+    <value>No s'ha especificat una URL de servidor. Escriviu la URL de la vostra instància Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Keep as is</value>
+    <value>Conservar tal com és</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>This solution can only be applied, if files exist both remotely and locally</value>
+    <value>Només es pot aplicar aquesta solució si existeixen ambdues versions dels fitxers: remota i local</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
-    <value>Attention</value>
+    <value>Avís</value>
   </data>
   <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
-    <value>How does the expert mode work?</value>
+    <value>Com funciona el mode expert?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>Què vol dir això?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
-    <value>Windows color settings</value>
+    <value>Preferències de colors a Windows</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Marcar tot</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Desmarcar tot</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Esteu segurs de que voleu reiniciar aquesta aplicació? Això reiniciarà totes les aplicacions i tots els vostres paràmetres de sincronització.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reiniciar aquesta aplicació</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Esborrar fitxers</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Esteu segurs de que voleu esborrar els fitxers seleccionats?</value>
   </data>
 </root>
