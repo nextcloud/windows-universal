@@ -207,7 +207,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Descarregar l\'arxiu...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Baixar previsualització de les imatges</value>
+    <value>Baixa previsualització de les imatges</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -255,7 +255,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>{0} de {1} utilitzat</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reiniciar aquesta aplicació</value>
+    <value>Reinicia aquesta aplicació</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintenta</value>
@@ -300,13 +300,13 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Esborrar arxius</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Esteu segurs de voler esborrar aquest fitxer {0}?</value>
+    <value>Esteu segurs de voler suprimit aquest fitxer {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Elimina carpeta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Esteu segurs de voler esborrar aquesta carpeta {0}?</value>
+    <value>Esteu segurs de voler suprimir aquesta carpeta {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} de {1} pujat</value>
@@ -447,7 +447,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Connectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignorar els certificats SSL auto-signats</value>
+    <value>Ignora els certificats SSL auto-signats</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Mode expert</value>
@@ -490,7 +490,7 @@ Tinguis cura, no estaràs protegit davant d'atacs Man-in-the-middle (mitm).</val
     <value>Indicació</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Llista d'errors que han succeït durant la sincronització. Hauria de ser un problema temporal (com ara que un fitxer estigués obert alhora en una altra aplicació o dispositiu) i s'hauria de resoldre a la següent sincronització.</value>
+    <value>Llista d'errors que hi ha hagut durant la sincronització. Hauria de ser un problema temporal (com ara que un fitxer estigués obert alhora en una altra aplicació o dispositiu) i s'hauria de resoldre a la següent sincronització.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Estigues al cas dels conflictes!</value>
@@ -502,7 +502,7 @@ Tinguis cura, no estaràs protegit davant d'atacs Man-in-the-middle (mitm).</val
     <value>S'ha activat la sincronització!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>La sincronització tindrà lloc en segon pla. I rebreu una notificació quan s'enllesteixi.</value>
+    <value>La sincronització tindrà lloc en segon pla. Rebreu una notificació quan s'enllesteixi.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>El servei no està disponible temporalment (normalment a causa de tasques de mantenimenta  curt termini)
@@ -512,22 +512,22 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>El fitxer ha canviat local i remotament. Quina de les dues versions preferiu conservar?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>El fitxer ha estat crear local i remotament, quina és la versió que preferiu conservar?</value>
+    <value>El fitxer ha estat creat local i remotament, quina és la versió que preferiu conservar?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Aquest fitxer s'ha esborrat localment però alhora ha canviat remotament al servidor, què voleu fer?</value>
+    <value>Aquest fitxer s'ha suprimit localment però alhora ha canviat remotament al servidor, què voleu fer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Conflicte:</value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Aquest fitxer ha estat esborrat remotament al servidor alhora que l'heu modificat localment, què voleu fer?</value>
+    <value>Aquest fitxer ha estat suprimit remotament al servidor alhora que l'heu modificat localment, què voleu fer?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>S'ha enllestit la sincronització de la carpeta {0}amb {1}canvis i {2}errors o conflictes.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Enllestida la sincronització de la carpeta {0}amb {1}canvis.</value>
+    <value>S'ha enllestit la sincronització de la carpeta {0}amb {1}canvis.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
     <value>S'ha acabat la sincronització</value>
@@ -560,7 +560,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Quan el mode expert està activat, l'aplicació proporciona informació i funcionalitats addicionals que poden no ser interessants per tos els usuaris.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorar certificats SSL no vàlids per ser auto-signats. Això permet emprar sense problemes certificats no vàlids o sense una autoritat certificadora a darrera. Aneu en compte, perquè ja no tindreu protecció davant d'atacs del tipus MITM (man-in-the-middle).</value>
+    <value>Ignora certificats SSL no vàlids per ser auto-signats. Això permet emprar sense problemes certificats no vàlids o sense una autoritat certificadora al darrera. Aneu en compte, perquè ja no tindreu protecció davant d'atacs del tipus MITM (man-in-the-middle).</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Sincronitza aquesta carpeta</value>
@@ -575,16 +575,16 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Estat de la sincronització</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Sincronitzar ara</value>
+    <value>Sincronitza ara</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
     <value>Sincronitza</value>
   </data>
   <data name="SynchronizeThisFolderNow" xml:space="preserve">
-    <value>Sincronitzar aquesta carpeta ara</value>
+    <value>Sincronitza aquesta carpeta ara</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Sincronitzar aquesta carpeta</value>
+    <value>Sincronitza aquesta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Fosc</value>
@@ -611,7 +611,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Compartit amb enllaç</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
-    <value>Preparar per compartir...</value>
+    <value>Prepara per compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
     <value>Crear un directori</value>
@@ -624,15 +624,15 @@ Si us plau, torni a intentar-ho més tard.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>No s'ha pogut esborrar '{0}' a Nextcloud.</value>
+    <value>No s'ha pogut suprimir '{0}' a Nextcloud.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>No s'ha pogut baixar de Nextcloud el fitxer '{0}'.</value>
+    <value>No s'ha pogut descarregar de Nextcloud el fitxer '{0}'.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>No s'ha pogut pujar el fitxer '{0}' a Nextcloud.</value>
+    <value>No s'ha pogut carregar el fitxer '{0}' a Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -652,7 +652,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>No s'ha especificat una URL de servidor. Escriviu la URL de la vostra instància Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
-    <value>Conservar tal com és</value>
+    <value>Conserva-ho tal com és</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
     <value>Només es pot aplicar aquesta solució si existeixen ambdues versions dels fitxers: remota i local</value>
@@ -670,21 +670,21 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Preferències de colors a Windows</value>
   </data>
   <data name="AppBar_CheckAll.Label" xml:space="preserve">
-    <value>Marcar tot</value>
+    <value>Marca-ho tot</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Desmarcar tot</value>
+    <value>Desmarca-ho tot</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Esteu segurs de que voleu reiniciar aquesta aplicació? Això reiniciarà totes les aplicacions i tots els vostres paràmetres de sincronització.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reiniciar aquesta aplicació</value>
+    <value>Reinicia aquesta aplicació</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Esborrar fitxers</value>
+    <value>Suprimeix fitxers</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>Esteu segurs de que voleu esborrar els fitxers seleccionats?</value>
+    <value>Esteu segurs de que voleu suprimir els fitxers seleccionats?</value>
   </data>
 </root>
