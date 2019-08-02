@@ -303,7 +303,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Esteu segurs de voler suprimit aquest fitxer {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Elimina carpeta</value>
+    <value>Suprimeix la carpeta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>Esteu segurs de voler suprimir aquesta carpeta {0}?</value>
@@ -336,7 +336,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Versió del servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Elimina</value>
+    <value>Suprimeix</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>Esperant resposta del servidor</value>
