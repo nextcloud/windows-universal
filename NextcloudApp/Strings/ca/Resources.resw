@@ -649,7 +649,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>No s'ha especificat una URL de servidor. Escriviu la URL de la vostra instància Nextcloud.</value>
+    <value>No s'ha especificat un URL de servidor. Escriviu l'URL de la vostra instància Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Conserva-ho tal com és</value>
