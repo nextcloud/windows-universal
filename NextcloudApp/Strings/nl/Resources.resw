@@ -650,7 +650,7 @@ Probeer het later opnieuw.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
+    <value>Geen server URL opgegeven. Geef de URL van je Nextcloud server op.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Houden zoals nu</value>
