@@ -175,12 +175,12 @@
     <value>Type (Z to the top)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Lietojumprogrammas kļūda</value>
+    <value>Lietotnes kļūda</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
     <value>Lietojumprogrammā radās problēma. Mēs atvainojamies par sagādātajām neērtībām. Ja nebijāt darbu pabeidzis, informācija, ar kuru strādājat jau ir zaudēta.
 
-Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavoto kļūdas ziņojumu? Tas palīdzēs novērst problēmu ātrāk.</value>
+Vai jūs gribētu informēt lietotnes izstrādātāju un iesniegt sagatavoto kļūdas ziņojumu? Tas palīdzēs novērst problēmu ātrāk.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Atcelt</value>
@@ -255,7 +255,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>{0} no {1} izmantots</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Atiestatīt šo programmu</value>
+    <value>Atiestatīt šo lietotni</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Mēģināt vēlreiz</value>
@@ -270,7 +270,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Iestatījumi</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
-    <value>Rādīt failu un mapju sarakstu grupējumu</value>
+    <value>Rādīt datņu un mapju sarakstu grupējumu</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
     <value>Izmērs</value>
@@ -297,7 +297,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Dzēst</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Dzēst failu</value>
+    <value>Dzēst datni</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the file {0}?</value>
@@ -312,10 +312,10 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>{0} no {1} augšupielādēts</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Augšupielādē failu {0} no {1}…</value>
+    <value>Augšupielādē datni {0} no {1}…</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Augšupielādē failu...</value>
+    <value>Augšupielādē datni...</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} no {1} lejupielādēts</value>
@@ -405,7 +405,7 @@ Jūs gribētu informēt lietojumprogrammas izstrādātāju un iesniegt sagatavot
     <value>Nextcloud - Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Jūsu programma tika atjaunināta uz versiju {0}</value>
+    <value>Jūsu lietotne tika atjaunināta uz versiju {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Jaunie līdzekļi un uzlabojumi šajā versijā:</value>
@@ -549,7 +549,7 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <value>Nextcloud ceļš</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Izvēlies mapi kurā tu gribi augšupielādēt failus</value>
+    <value>Izvēlies mapi kurā tu gribi augšupielādēt datnes</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Mapes</value>
@@ -629,11 +629,11 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Kļūda lejupielādējot failu '{0}' no Nextcloud.</value>
+    <value>Kļūda lejupielādējot datni '{0}' no Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Kļūda augšupielādējot failu '{0}' no Nextcloud.</value>
+    <value>Kļūda augšupielādējot datni '{0}' no Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -680,10 +680,10 @@ Lūdzu, vēlāk mēģiniet vēlreiz.</value>
     <value>Vai tu tiešām gribi atiestatīt šo aplikāciju? Tas atiestatīs visas aplikācijas un sinhronizācijas iestatījumus.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Atiestatīt šo programmu</value>
+    <value>Atiestatīt šo lietotni</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Dzēst failus</value>
+    <value>Dzēst datnes</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Vai tiešām vēlies izdzēst izvēlētos?</value>
