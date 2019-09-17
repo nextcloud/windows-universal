@@ -247,7 +247,7 @@
     <value>Heslo</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Popis umístění</value>
+    <value>Cesta</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>Využito {0} z {1}</value>
