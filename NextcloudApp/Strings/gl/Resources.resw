@@ -175,12 +175,12 @@
     <value>Tipo (Z arriba)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
-    <value>Produciuse un erro do aplicativo</value>
+    <value>Produciuse un erro da aplicación</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>O aplicativo atopou un problema. Pedímoslle desculpas polos inconvenientes. Se estaba a traballar en algo, a información na que estaba traballando perdeuse.
+    <value>A aplicación atopou un problema. Pedímoslle desculpas polos inconvenientes. Se estaba a traballar en algo, a información na que estaba traballando perdeuse.
 
-Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos preparado? Isto axuda a solucionar máis rapidamente o problema.</value>
+Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos preparado? Isto axudará a solucionar máis rapidamente o problema.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
@@ -255,7 +255,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>{0} de {1} usados</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Restabelecer este aplicativo</value>
+    <value>Restabelecer esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Tentar de novo</value>
@@ -405,7 +405,7 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
     <value>Nextcloud para Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>O seu aplicativo foi actualizado á versión {0}</value>
+    <value>A súa aplicación foi actualizada á versión {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Novas funcionalidades e melloras nesta versión:</value>
@@ -422,17 +422,17 @@ Quere informar aos desenvolvedores do aplicativo e enviar o informe de fallos pr
 • Sincronización manual dos cartafoles
 • Descargar directorios como un arquivo ZIP
 • Seleccionar múltiples ficheiros e cartafoles
-• Os elementos poden marcarse como favoritos dende dentro do aplicativo
+• Os elementos poden marcarse como favoritos dende dentro da aplicación
 • O tamaño dos cartafoles amósase na lista de directorios
 • Barra de estado na lista de directorios que mostra o número de ficheiros seleccionados / total
 • Clasificación para o tipo de datos
 • Novas vistas para favoritos / compartir
 • Ancorar ficheiros e cartafoles á pantalla de inicio
-• Usar Windows Hello para autenticar ao acceder ao aplicativo
+• Usar Windows Hello para autenticar ao acceder á aplicación
 • Modo experto que amosa información avanzada na aplicación
 • Permitir certificados SSL auto asinados
 • Amosar o tamaño dos cartafoles en lista
-• Compartir ficheiros co aplicativo
+• Compartir ficheiros coa aplicación
 • Temas (escuro/craro/sistema)
 • Usar a bóveda de contrasinais para almacenar credenciais de usuario
 • Unha nova e máis estábel biblioteca WebDAV
@@ -486,13 +486,13 @@ Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-
     <value>Atención!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Para que estes axustes teñan efecto é necesario reiniciar o aplicativo.</value>
+    <value>Para que estes axustes teñan efecto é necesario reiniciar a aplicación.</value>
   </data>
   <data name="Hint" xml:space="preserve">
     <value>Consello</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser incidentes temporais (p. ex., o ficheiro abriuse noutro aplicativo) e deberían desaparecer trala próxima sincronización.</value>
+    <value>Lista de erros ocorridos durante a sincronización. Estes deberían ser incidentes temporais (p. ex., o ficheiro abriuse noutra aplicación) e deberían desaparecer trala próxima sincronización.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Coidado cos conflitos!</value>
@@ -535,7 +535,7 @@ Ténteo nun chisco.</value>
     <value>Rematou a sincronización</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>A sincronización do cartafol {0} detívose, por mor de que o aplicativo foi suspendido.</value>
+    <value>A sincronización do cartafol {0} detívose, por mor de que a aplicación foi suspendida.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
     <value>A sincronización foi suspendida</value>
@@ -559,7 +559,7 @@ Ténteo nun chisco.</value>
     <value>Elementos: {0} (cartafoles: {1} ficheiros: {2})</value>
   </data>
   <data name="HelpTextExpertMode" xml:space="preserve">
-    <value>Ao activar o modo experto, o aplicativo fornece algunhas funcionalidades e  informacións adicionais, isto pode interesarlle a todos os usuarios.</value>
+    <value>Ao activar o modo experto, a aplicación fornece algunhas funcionalidades e  informacións adicionais, isto pode interesarlle a todos os usuarios.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
     <value>Ignorar os certificados SSL auto asinados. Isto permite o uso de entidades de certificación SSL nulas ou incorrectas.  Teña coidado, de facelo arriscase a ter un ataque de «Home no medio» (Man-in-the-middle -mitm)!</value>
@@ -678,10 +678,10 @@ Ténteo nun chisco.</value>
     <value>Desmarcar todo</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Confirma que quere restabelecer este aplicativo? Isto reiniciará todo o aplicativo e todos os axustes de sincronización.</value>
+    <value>Confirma que quere restabelecer esta aplicación? Isto reiniciará toda a aplicacióno e todos os axustes de sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Restabelecer este aplicativo</value>
+    <value>Restabelecer esta aplicación</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Eliminar ficheiros</value>
