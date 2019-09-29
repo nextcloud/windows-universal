@@ -432,7 +432,7 @@
 专家模式显示应用内的高级信息
 允许自签名的数字证书
 通过应用共享文件
-主题（黑色/发亮/系统)
+主题（深色/浅色/系统)
 私用密码保险箱保存用户密码
 更稳定的WebDAV库
 安全更新和系统补丁</value>
@@ -588,10 +588,10 @@
     <value>同步此文件夹</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>暗色主题</value>
+    <value>深色主题</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>亮色主题</value>
+    <value>浅色主题</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>使用系统设置</value>
