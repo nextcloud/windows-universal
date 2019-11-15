@@ -136,7 +136,7 @@
     <value>Сделать фотографию</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Загрузить файлы</value>
+    <value>Отправить файлы</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Загрузить фотографии</value>
