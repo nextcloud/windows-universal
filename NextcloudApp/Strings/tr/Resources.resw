@@ -447,7 +447,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Bağlan</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Geçersiz kendinden imzalı SSL sertifikaları yoksayılsın</value>
+    <value>Geçersiz kendinden imzalı SSL sertifikaları yok sayılsın</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Uzman kipi</value>

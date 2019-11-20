@@ -181,7 +181,7 @@
     <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého úkolu, informace jsou ztraceny.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Zrušit</value>
+    <value>Storno</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Nelze vytvořit složku</value>
@@ -211,7 +211,7 @@
     <value>ETag</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
-    <value>{0} ({1} byt)</value>
+    <value>{0} ({1} bajt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
     <value>Název složky</value>
@@ -247,7 +247,7 @@
     <value>Heslo</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Cesta</value>
+    <value>Popis umístění</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>Využito {0} z {1}</value>
@@ -337,7 +337,7 @@
     <value>Smazat</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
-    <value>Čekání na odpověď serveru</value>
+    <value>čekání na odpověď serveru</value>
   </data>
   <data name="ChooseANewName" xml:space="preserve">
     <value>Zvolte nové jméno</value>
