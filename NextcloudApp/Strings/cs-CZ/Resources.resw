@@ -541,10 +541,10 @@ Zkuste to znovu později.</value>
     <value>Stav synchronizace</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
-    <value>Místní cesta</value>
+    <value>Místní popis umístění</value>
   </data>
   <data name="SyncPathRemote.Text" xml:space="preserve">
-    <value>Nextcloud cesta</value>
+    <value>Popis umístění v Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
     <value>Zvolte složku, kam chcete soubory nahrát</value>
