@@ -319,7 +319,7 @@
     <value>Staženo {0} z {1}</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
-    <value>Na serveru je zapnutý režim údržby.</value>
+    <value>Na serveru probíhá údržba.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
     <value>Chybné uživatelské jméno nebo heslo.</value>
@@ -379,10 +379,10 @@
     <value>Abyste mohli přistupovat ke svému Nextcloud, zadejte přihlašovací údaje pro své zařízení.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
-    <value>Ověření prostřednictvím Windows Hello</value>
+    <value>Ověření se prostřednictvím Windows Hello</value>
   </data>
   <data name="WindowsHelloNotAvailable" xml:space="preserve">
-    <value>Pro toto zařízení není nastavený PIN kód. Pokud chcete použít Windows Hello, je třeba ho definovat.</value>
+    <value>Pro toto zařízení není nastavený PIN kód. Pokud chcete použít Windows Hello, je třeba tento kód nastavit.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
     <value>Stáhnout</value>
@@ -504,8 +504,8 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
     <value>Synchronizace proběhne na pozadí. Obdržíte upozornění, až bude hotová.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
-    <value>Služba dočasně nedostupná (většinou kvůli krátkodobé údržbě).
-Zkuste to znovu později.</value>
+    <value>Služba dočasně nedostupná (obvykle kvůli krátkodobé údržbě).
+Zkuste to za chvíli znovu.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
     <value>Soubor změněn lokálně a místně. Který chcete?</value>
