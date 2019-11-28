@@ -133,7 +133,7 @@
     <value>Vytvořit složku</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Vyfotit obrázek</value>
+    <value>Pořídit obrázek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Nahrát soubory</value>
@@ -151,40 +151,43 @@
     <value>Řadit</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Datum (nejstarší nahoru)</value>
+    <value>Datum (nejstarší nahoře)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Datum (nejnovější nahoru)</value>
+    <value>Datum (nejnovější nahoře)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Jméno (A nahoru)</value>
+    <value>Jméno (A nahoře)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Jméno (Z nahoru)</value>
+    <value>Jméno (Z nahoře)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Velikost (nejmenší nahoru)</value>
+    <value>Velikost (nejmenší nahoře)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Velikost (největší nahoru)</value>
+    <value>Velikost (největší nahoře)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Typ (A nahoru)</value>
+    <value>Typ (A nahoře)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Typ (Z nahoru)</value>
+    <value>Typ (Z nahoře)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Chyba aplikace</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého úkolu, informace jsou ztraceny.</value>
+    <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého činnosti, informace na kterých jste pracovali, jsou ztraceny.
+
+
+Přejete si informovat o tom vývojáře a poslat jim připravené hlášení chyby? Pomůže to rychleji eliminovat problém.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Storno</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Nelze vytvořit složku</value>
+    <value>Nedaří se vytvořit složku</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Připojit</value>
@@ -223,7 +226,7 @@
     <value>Naposledy upraveno</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Jméno</value>
+    <value>Název</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Nikdy</value>
@@ -406,7 +409,7 @@
     <value>Vaše aplikace byla aktualizována na verzi {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
-    <value>Nové vlastnosti a vylepšení v této verzi:</value>
+    <value>Nové funkce a vylepšení v této verzi:</value>
   </data>
   <data name="Changes_Recommend" xml:space="preserve">
     <value>Doporučit</value>
@@ -477,7 +480,7 @@
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Certifikační autorita je neznámá, nebo neplatná. Přesto připojit?
 
-Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</value>
+Buďte opatrní, v tomto případě nebudete chráněni proti útokům typu Man-in-the-middle!.</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Pozor!</value>
@@ -508,19 +511,19 @@ Buďte opatrní, v tomto případě nebudete chráněni proti mitm útokům.</va
 Zkuste to za chvíli znovu.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Soubor změněn lokálně a místně. Který chcete?</value>
+    <value>Soubor změněn lokálně a místně. Který upřednostníte?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Soubor byl vytvořen místně i vzdáleně, který je ten správný?</value>
+    <value>Soubor byl vytvořen místně i vzdáleně – který je ten správný?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Soubor smazán místně, ale změněn vzdáleně. Který chcete?</value>
+    <value>Soubor smazán místně, ale změněn vzdáleně. Který upřednostníte?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Soubor smazán vzdáleně, ale změněn místně. Který chcete?</value>
+    <value>Soubor smazán vzdáleně, ale změněn místně. Který upřednostníte?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
     <value>Synchronizace složky{0} skončila s {1} změnami a {2} chybami nebo konflikty.</value>
@@ -547,7 +550,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Popis umístění v Nextcloud</value>
   </data>
   <data name="ShareTargetListView_Header" xml:space="preserve">
-    <value>Zvolte složku, kam chcete soubory nahrát</value>
+    <value>Zvolte složku, do které chcete soubory nahrát</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
     <value>Složky</value>
