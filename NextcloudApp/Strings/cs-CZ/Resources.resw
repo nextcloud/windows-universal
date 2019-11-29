@@ -448,7 +448,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Připojit</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignorovat neplatné certifikáty s vlastním podpisem</value>
+    <value>Ignorovat neplatné samy sebou podepsané certifikáty</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Režim pro experty</value>
@@ -562,7 +562,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Pokud je zapnutý režim pro experty, aplikace poskytuje některé vlastnosti a informace, které nemusí být zajímavé pro všechny uživatele.</value>
   </data>
   <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
-    <value>Ignorovat neplatné SSL certifikáty podepsané sami sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti man-in-the-middle (MITM) útokům.</value>
+    <value>Ignorovat neplatné SSL certifikáty podepsané samy sebou. To umožňuje použít neplatné nebo neznámé certifikační autority. Buďte ale opatrní, v takovém případě nebudete chráněni proti man-in-the-middle (MITM) útokům.</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
     <value>Synchronizovat tuto složku</value>
@@ -622,7 +622,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Chyba při vytváření klienta pro WebDAV komunikaci</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Adresář {0} nemohl být v Nextcloudu vytvořen.</value>
+    <value>Adresář „{0}“ nemohl být v Nextcloudu vytvořen.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
@@ -634,7 +634,7 @@ Zkuste to za chvíli znovu.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Chyba při nahrávání souboru {0} do Nextcloudu.</value>
+    <value>Chyba při nahrávání souboru „{0}“ do Nextcloudu.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -675,7 +675,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Zaškrtnout vše</value>
   </data>
   <data name="AppBar_UncheckAll.Label" xml:space="preserve">
-    <value>Zrušit zaškrtnutí všeho</value>
+    <value>Zrušit zaškrtnutí u všeho</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
     <value>Opravdu chcete tuto aplikaci vrátit do výchozího stavu? Vaše nastavení synchronizace bude smazáno.</value>
