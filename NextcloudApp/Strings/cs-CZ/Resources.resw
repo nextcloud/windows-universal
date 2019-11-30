@@ -145,40 +145,40 @@
     <value>Stáhnout</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Obnovit</value>
+    <value>Načíst znovu</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>Řadit</value>
+    <value>Seřadit podle</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Datum (nejstarší nahoře)</value>
+    <value>Data (nejstarší nahoře)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Datum (nejnovější nahoře)</value>
+    <value>Data (nejnovější nahoře)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Jméno (A nahoře)</value>
+    <value>Názvu (A nahoře)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Jméno (Z nahoře)</value>
+    <value>Názvu (Z nahoře)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Velikost (nejmenší nahoře)</value>
+    <value>Velikosti (nejmenší nahoře)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Velikost (největší nahoře)</value>
+    <value>Velikosti (největší nahoře)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Typ (A nahoře)</value>
+    <value>Typu (A nahoře)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Typ (Z nahoře)</value>
+    <value>Typu (Z nahoře)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Chyba aplikace</value>
   </data>
   <data name="ApplicationError_Description" xml:space="preserve">
-    <value>V aplikaci došlo k problému. Omlouváme se za tuto nepříjemnost. Pokud jste byli uprostřed nějakého činnosti, informace na kterých jste pracovali, jsou ztraceny.
+    <value>V aplikaci došlo k problému. Za tuto nepříjemnost se omlouváme. Pokud jste byli uprostřed nějakého činnosti, informace na kterých jste pracovali, jsou ztraceny.
 
 
 Přejete si informovat o tom vývojáře a poslat jim připravené hlášení chyby? Pomůže to rychleji eliminovat problém.</value>
@@ -187,7 +187,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Storno</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
-    <value>Nedaří se vytvořit složku</value>
+    <value>Složku se nedaří vytvořit</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
     <value>Připojit</value>
@@ -208,10 +208,10 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Stahování souboru…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Stáhnout náhledy obrázků</value>
+    <value>Stáhnout si náhledové obrázky</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
-    <value>ETag</value>
+    <value>Identif. verze (ETag)</value>
   </data>
   <data name="FileSizeString" xml:space="preserve">
     <value>{0} ({1} bajt)</value>
@@ -223,7 +223,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Informace</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Naposledy upraveno</value>
+    <value>Naposledy změněno</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Název</value>
@@ -238,7 +238,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Ne</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Není pověřen</value>
+    <value>Chybí pověření</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Server vrátil chybový kód 401 (neautorizovaný). Přihlašte se znovu.</value>
@@ -301,13 +301,13 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Smazat soubor</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Opravdu chcete smazat soubor {0}?</value>
+    <value>Opravdu chcete soubor {0} smazat?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Smazat složku</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Opravdu chcete smazat složku {0}?</value>
+    <value>Opravdu chcete složku {0} smazat?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>Nahráno {0} z {1}</value>
@@ -325,7 +325,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Na serveru probíhá údržba.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Chybné uživatelské jméno nebo heslo.</value>
+    <value>Nesprávné uživatelské jméno nebo heslo.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Verze klienta {0}</value>
@@ -480,53 +480,53 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>Certifikační autorita je neznámá, nebo neplatná. Přesto připojit?
 
-Buďte opatrní, v tomto případě nebudete chráněni proti útokům typu Man-in-the-middle!.</value>
+Buďte opatrní, v tomto případě nebudete chráněni proti útokům typu Man-in-the-middle!</value>
   </data>
   <data name="Attention_ExclamationMark" xml:space="preserve">
     <value>Pozor!</value>
   </data>
   <data name="AppMustBeRestarted" xml:space="preserve">
-    <value>Aby se toto nastavení projevilo, aplikaci je třeba restartovat.</value>
+    <value>Aby se toto nastavení projevilo, je aplikaci třeba restartovat.</value>
   </data>
   <data name="Hint" xml:space="preserve">
-    <value>Nápověda</value>
+    <value>Tip</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>Seznam chyb, které vznikly při synchronizaci. Mělo by se jednat o dočasné problémy (např. soubor byl otevřen jinou aplikací), které by měli zmizet při příští synchronizaci.</value>
+    <value>Seznam chyb, ke kterým při synchronizaci došlo. Mělo by se jednat o jen dočasné problémy (např. soubor byl v tu chvíli otevřený jinou aplikací). Při příští synchronizaci už by se ty stejné neměly opakovat.</value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>Pozor na konflikty!</value>
   </data>
   <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
-    <value>Vzdálená i místní složka není prázdná. To může mít za následek spoustu konfliktů, protože aplikace neví, které soubory jsou správné.</value>
+    <value>Vzdálená i místní složka nejsou prázdné. To může mít za následek mnoho konfliktů, protože aplikace neví, které soubory jsou ty, které chcete zachovat.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronizace byla spuštěna!</value>
+    <value>Byla vyvolána synchronizace</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronizace proběhne na pozadí. Obdržíte upozornění, až bude hotová.</value>
+    <value>Synchronizace proběhne na pozadí. Až bude dokončena, bude vám to oznámeno.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Služba dočasně nedostupná (obvykle kvůli krátkodobé údržbě).
 Zkuste to za chvíli znovu.</value>
   </data>
   <data name="SyncConflictBothChanged" xml:space="preserve">
-    <value>Soubor změněn lokálně a místně. Který upřednostníte?</value>
+    <value>Soubor změněn v místním i vzdáleném umsítění. Který upřednostníte?</value>
   </data>
   <data name="SyncConflictBothNew" xml:space="preserve">
-    <value>Soubor byl vytvořen místně i vzdáleně – který je ten správný?</value>
+    <value>Stejně nazvaný soubor byl vytvořen v místním i vzdáleném umístění – který je ten správný?</value>
   </data>
   <data name="SyncConflictLocalDel" xml:space="preserve">
-    <value>Soubor smazán místně, ale změněn vzdáleně. Který upřednostníte?</value>
+    <value>Soubor smazán v místním, ale změněn ve vzdáleném umístění. Který upřednostníte?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
     <value>Konflikt: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
-    <value>Soubor smazán vzdáleně, ale změněn místně. Který upřednostníte?</value>
+    <value>Soubor smazán ve vzdáleném, ale změněn v místním umsítění. Který upřednostníte?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronizace složky{0} skončila s {1} změnami a {2} chybami nebo konflikty.</value>
+    <value>Synchronizace složky{0} byla dokončena s {1} změnami a {2} chybami nebo konflikty.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
     <value>Synchronizace složky {0} byla dokončena s {1} změnami</value>
@@ -598,7 +598,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Použít systémová nastavení</value>
   </data>
   <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
-    <value>Vybrat režim</value>
+    <value>Vyberte režim</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
     <value>Sdíleno s ostatními</value>
@@ -610,7 +610,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Sdíleno s vámi</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Sdíleno jako odkaz</value>
+    <value>Sdíleno prostřednictvím odkazu</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Příprava sdílení…</value>
@@ -622,19 +622,19 @@ Zkuste to za chvíli znovu.</value>
     <value>Chyba při vytváření klienta pro WebDAV komunikaci</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Adresář „{0}“ nemohl být v Nextcloudu vytvořen.</value>
+    <value>Adresář „{0}“ se nepodařilo na Nextcloud vytvořit.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Mazání adresáře {0} v Nexcloudu se nezdařilo.</value>
+    <value>Smazání „{0}“ na Nexcloud se nezdařilo.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Chyba při stahování souboru {0} z Nextcloud.</value>
+    <value>Chyba při stahování souboru „{0}“ z Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Chyba při nahrávání souboru „{0}“ do Nextcloudu.</value>
+    <value>Chyba při nahrávání souboru „{0}“ na Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -651,13 +651,13 @@ Zkuste to za chvíli znovu.</value>
     <comment>{0} exception details</comment>
   </data>
   <data name="NoServerGiven" xml:space="preserve">
-    <value>Není zadána žádná URL adresa serveru. Zadejte URL adresu své instance Nextcloud.</value>
+    <value>Není zadána žádná URL adresa serveru. Zadejte tu vámi používané instance Nextcloud.</value>
   </data>
   <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
     <value>Ponechat, jak je</value>
   </data>
   <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
-    <value>Toto řešení může být aplikováno pouze pokud soubor existuje zároveň v místním i vzdáleném úložišti</value>
+    <value>Toto řešení může být použito pouze pokud soubor existuje zároveň v místním i vzdáleném úložišti</value>
   </data>
   <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
     <value>Pozor</value>
@@ -678,7 +678,7 @@ Zkuste to za chvíli znovu.</value>
     <value>Zrušit zaškrtnutí u všeho</value>
   </data>
   <data name="ResetThisApp_Description" xml:space="preserve">
-    <value>Opravdu chcete tuto aplikaci vrátit do výchozího stavu? Vaše nastavení synchronizace bude smazáno.</value>
+    <value>Opravdu chcete tuto aplikaci uvést do výchozího stavu? Veškerá nastavení aplikace a synchronizace tím budou smazána!</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
     <value>Resetovat tuto aplikaci</value>
