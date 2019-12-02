@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Alle filer</value>
+  </data>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Altid</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Der opstod en fejl.</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Tilføj</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Opret mappe</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Tag billede</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Upload filer</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Upload billeder</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Opdatér</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Sortér</value>
+  </data>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>Dato (ældste øverst)</value>
+  </data>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>Dato (nyeste øverst)</value>
+  </data>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>Navn (A øverst)</value>
+  </data>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>Navn (Å øverst)</value>
+  </data>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>Størrelse (mindste øverst)</value>
+  </data>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>Størrelse (største øverst)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>Type (A øverst)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>Type (Å øverst)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Program fejl</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Kunne ikke oprette mappen</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Forbind</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Indholdstype</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Opret</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Oprettet</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Opret ny mappe</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Downloder ...</value>
+  </data>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Hent forhåndsvisningsbilleder</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} byte)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Mappenavn</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Sidst ændret</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Aldrig</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Ny mappe</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Ikke autoriseret</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Adgangskode</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Sti</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} af {1} brugt</value>
+  </data>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Nulstil denne app</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Prøv igen</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Serveradresse</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Indstillinger</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Vis fil og mappeliste groupering</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>Der findes allerede et element med dette navn, vælg venligst et andet.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Brugernavn</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Kun når jeg er på Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Slet</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Slet fil</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Er du sikker på ,at du vil slette filen {0}?</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Slet mappe</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Er du sikker på ,at du vil slette folderen {0}?</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>{0} af {1} uploaded</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Uploader {0} af {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Uploader fil...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>{0} af {1} downloaded</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Vedligeholdelsestilstanden er aktiveret på serveren.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Forkert brugernavn eller kodeord</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Klient version {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Servernavnet eller adressen kunne ikke slås op.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Server version {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Slet</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>venter på svar fra server</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Vælg venligst et nyt navn</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Omdøb</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Omdøb</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Omdøb</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Flyt til</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Flyt til</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Annullér</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Færdig</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Vælg mappe</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>Serveren med adressen {0} kan ikke kontaktes.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Download som ZIP-fil</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} Hentet</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello autentificering</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Sign-in required</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Prøv igen</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud for Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Your app was updated to version {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>New features and improvements in this version:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Anbefal</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Opdatér</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Move files and folders
+• Rename files and folders
+• Manual synchronization of folders
+• Download directories as ZIP file 
+• Select multiple files and folders
+• Items can be marked as favorite from within the app
+• The size of folders is shown in the directory list
+• Status bar in directory list showing the number of selected/total files
+• Sorting for data type
+• New views for favorites/shares
+• Pin files and folders to start screen
+• Use Windows Hello to authenticate on app start
+• Expert mode showing advanced information in the app
+• Allow self signed SSL certificates
+• Share files with the app
+• Theming (dark/light/system)
+• Use the PasswordVault to store user credentials
+• New and more stable WebDAV library
+• Security improvements &amp; bug fixes</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Fastgør til start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Fastgør til start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Tilslut</value>
+  </data>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignorer ugyldigt self-signed SSL-certifikat</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Eksperttilstand </value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Synkroniserings status </value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Historie</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Konflikter</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Fejl</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Synkroniser</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Foretræk lokal fil</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Ryd synkroniseringshistorie</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Foretræk afsides fil</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Pas på</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>For this settings to take effect, the app needs to be restarted.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Pas på konflikter!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Konflikt:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspenderet</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Synkroniserings Status </value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Lokal sti</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Nextcloud Sti</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Choose the folder where you want to upload the files</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Mapper</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Items: {0} (folders: {1} files: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Synkronisér denne mappe</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Stop synkronisering af denne mappe</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Stop synkronisering</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Synchronization status</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Synchronize now</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Synkroniser</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Synchronize this folder now</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Synkronisér denne mappe</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Mørk</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Lys</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Use the system settings</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Vælg en tilstand</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>Delt med andre</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritter</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>Delt med mig</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>Delt via link</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Forbered til deling...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Opret mappe</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Vil du overskrive den?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Fil findes allerede</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overskriv</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Uventet Undtagelse: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Behold uændret</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>This solution can only be applied, if files exist both remotely and locally</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Pas på</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>Hvordan virker ekspert tilstand?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>Hvad betyder det her?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Windows farve indstillinger</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Vælg alt</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Fravælg alt</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Reset this app</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Slet filer</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Are you sure, you want to delete the selected files?</value>
+  </data>
+</root>
