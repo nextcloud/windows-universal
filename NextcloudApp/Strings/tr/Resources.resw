@@ -204,7 +204,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Yeni klasör ekle</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>Dosya indiriliyor...</value>
+    <value>Dosya indiriliyor …</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>Ön izleme görselleri indirilsin</value>
@@ -312,10 +312,10 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>{0} / {1} yüklendi</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>Dosyalar yükleniyor {0} / {1}…</value>
+    <value>Dosyalar yükleniyor {0} / {1} …</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>Dosya yükleniyor...</value>
+    <value>Dosya yükleniyor …</value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} / {1} indirildi</value>
