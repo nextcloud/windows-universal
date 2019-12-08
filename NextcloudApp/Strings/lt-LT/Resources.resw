@@ -600,7 +600,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Dalinamasi su kitais</value>
+    <value>Bendrinama su kitais</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Mėgstami</value>
@@ -609,7 +609,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Shared with me</value>
   </data>
   <data name="SharingLink" xml:space="preserve">
-    <value>Dalinamasi per nuorodą</value>
+    <value>Bendrinama per nuorodą</value>
   </data>
   <data name="PrepareForSharing" xml:space="preserve">
     <value>Pasiruošti dalinimuisi...</value>
