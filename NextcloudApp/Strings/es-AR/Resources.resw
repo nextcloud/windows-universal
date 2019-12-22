@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Todos los archivos</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Always</value>
+    <value>Siempre</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Se ha presentado un error</value>
@@ -150,28 +150,28 @@
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordenar</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateASC" xml:space="preserve">
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
     <value>Fecha (más antiguo al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByDateDESC" xml:space="preserve">
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
     <value>Fecha (más reciente al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameASC" xml:space="preserve">
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
     <value>Nombre (A al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByNameDESC" xml:space="preserve">
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
     <value>Nombre (Z al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeASC" xml:space="preserve">
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
     <value>Tamaño (más pequeño al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_BySizeDESC" xml:space="preserve">
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
     <value>Tamaño (más grande al principio)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeASC" xml:space="preserve">
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
     <value>Tipo (A al inicio)</value>
   </data>
-  <data name="AppBarSort_Flyout_ByTypeDESC" xml:space="preserve">
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
     <value>Tipo (Z al inicio)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
@@ -207,7 +207,7 @@
     <value>Descargando el archivo...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Descargar vistas previas de imagenes</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -228,7 +228,7 @@
     <value>Nombre</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Never</value>
+    <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Carpeta nueva</value>
@@ -255,7 +255,7 @@
     <value>{0} de {1} usado</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reiniciar esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Reintentar</value>
@@ -288,7 +288,7 @@
     <value>Versión {0}</value>
   </data>
   <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
-    <value>Only when I&apos;m on Wi-Fi</value>
+    <value>Sólo cuando este conectado por Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -300,13 +300,13 @@
     <value>Borrar archivo</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
-    <value>Está seguro que quiere borrar este archivo {0}</value>
+    <value>Are you sure, you want to delete the file {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
     <value>Borrar carpeta</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
-    <value>Está seguro que quiere borrar esta carpeta {0}</value>
+    <value>Are you sure, you want to delete the folder {0}?</value>
   </data>
   <data name="UploadingFileProgress" xml:space="preserve">
     <value>{0} de {1} cargado</value>
@@ -447,7 +447,7 @@
     <value>Conectar</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
-    <value>Ignore invalid self-signed SSL certificates</value>
+    <value>Ignorar certificados SSL auto firmados inválidos</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
     <value>Modo experto</value>
@@ -491,7 +491,7 @@
     <value>Pista</value>
   </data>
   <data name="SyncErrorHint_Header.Header" xml:space="preserve">
-    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+    <value>Lista de los errores que ocurrieron durante la sincronización. Estos pueden ser temas temporales (ejem. el archvio ha sido abierto por otra aplicación) y puede que no se presenten en la siguiente ejecución de sincronización. </value>
   </data>
   <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
     <value>¡Tenga cuidado con los conflictos!</value>
@@ -587,10 +587,10 @@
     <value>Sincronizar esta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Oscuro</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claro</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Use the system settings</value>
@@ -614,25 +614,25 @@
     <value>Preparando para compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Create folder</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error while creating client for WebDAV communication</value>
   </data>
   <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
-    <value>Could not create directory &apos;{0}&apos; on Nextcloud.</value>
+    <value>Could not create directory '{0}' on Nextcloud.</value>
     <comment>{0} = the path to be created</comment>
   </data>
   <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
-    <value>Deletion of &apos;{0}&apos; on Nextcloud failed.</value>
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
     <comment>{0} = the path to be deleted</comment>
   </data>
   <data name="SyncService_Error_DownloadFile" xml:space="preserve">
-    <value>Error while downloading file &apos;{0}&apos; from Nextcloud.</value>
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="SyncService_Error_UploadFile" xml:space="preserve">
-    <value>Error while uploading file &apos;{0}&apos; to Nextcloud.</value>
+    <value>Error while uploading file '{0}' to Nextcloud.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
@@ -642,7 +642,7 @@
     <value>File already exists</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Overwrite</value>
+    <value>Sobreescribir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
     <value>Unexpected Exception: {0}</value>
@@ -664,7 +664,7 @@
     <value>How does the expert mode work?</value>
   </data>
   <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
-    <value>What&apos;s the meaning of this?</value>
+    <value>What's the meaning of this?</value>
   </data>
   <data name="WindowsColorSettings.Content" xml:space="preserve">
     <value>Windows color settings</value>
@@ -679,10 +679,10 @@
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reiniciar esta aplicación</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Delete files</value>
+    <value>Borrar archivos</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the selected files?</value>

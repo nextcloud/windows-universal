@@ -573,10 +573,10 @@ Please try again later.</value>
     <value>Stop synkronisering</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Synkroniserings status </value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Synchronize now</value>
+    <value>Ajourfør nu</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
     <value>Synkroniser</value>
@@ -680,7 +680,7 @@ Please try again later.</value>
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Nulstil denne app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Slet filer</value>

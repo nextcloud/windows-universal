@@ -151,28 +151,28 @@
     <value>Ordenar</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Data (lo más vieyo no cimero)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Data (lo mas nuevo no cimero)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Nome (A no cimero)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Nome (Z no cimero)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Tamañu (lo más pequeño no cimero)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Tamañu (lo más grande no cimero)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Triba (A no cimero)</value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Triba (Z no cimero)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Fallu d'aplicación</value>
@@ -207,7 +207,7 @@
     <value>Baxando'l ficheru...</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
-    <value>Download preview images</value>
+    <value>Baxar imáxenes de previsualización</value>
   </data>
   <data name="ETag.Text" xml:space="preserve">
     <value>ETag</value>
@@ -255,7 +255,7 @@
     <value>{0} de {1} usao</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Reafitar esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Retentar</value>
@@ -588,10 +588,10 @@ Please try again later.</value>
     <value>Sincronizar esta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Dark</value>
+    <value>Escuru</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Light</value>
+    <value>Claru</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Use the system settings</value>
@@ -600,7 +600,7 @@ Please try again later.</value>
     <value>Select a mode</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Shared with others</value>
+    <value>Compartío con otros</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favorites</value>

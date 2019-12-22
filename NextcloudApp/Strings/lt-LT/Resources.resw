@@ -453,7 +453,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Eksperto veiksena</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronization status</value>
+    <value>Sinchronizavimo būsena</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Istorija</value>

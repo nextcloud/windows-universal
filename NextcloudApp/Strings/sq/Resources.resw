@@ -151,28 +151,28 @@
     <value>Rendit</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
-    <value>Date (oldest to the top)</value>
+    <value>Data (nga më e vjetra në krye)</value>
   </data>
   <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
-    <value>Date (newest to the top)</value>
+    <value>Data (nga më e reja deri në krye)</value>
   </data>
   <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
-    <value>Name (A to the top)</value>
+    <value>Emri (nga A-ja ne krye)</value>
   </data>
   <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
-    <value>Name (Z to the top)</value>
+    <value>Emri (nga nga Z-ja në Krye)</value>
   </data>
   <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
-    <value>Size (smallest to the top)</value>
+    <value>Madhësia (nga më e vogla në krye)</value>
   </data>
   <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
-    <value>Size (largest to the top)</value>
+    <value>Madhësia (nga më e madhja në krye)</value>
   </data>
   <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
-    <value>Type (A to the top)</value>
+    <value>Shtyp (nga A dhe më sipër) </value>
   </data>
   <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
-    <value>Type (Z to the top)</value>
+    <value>Shtyp(nga Z dhe më sipër)</value>
   </data>
   <data name="ApplicationError" xml:space="preserve">
     <value>Gabim ne Aplikacion</value>

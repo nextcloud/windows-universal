@@ -680,7 +680,7 @@
     <value>Are you sure you want to reset this app? This will reset all application and all your synchronisation settings.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Reset this app</value>
+    <value>Нулиране на приложението</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Изтрий файловете</value>
