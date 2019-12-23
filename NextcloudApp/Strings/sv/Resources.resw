@@ -330,7 +330,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Klientversion {0}</value>
   </data>
   <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
-    <value>Servernamnet eller adressen kunde ej beslutas.</value>
+    <value>Servernamnet eller adressen kunde inte beslutas.</value>
   </data>
   <data name="ServerVersion" xml:space="preserve">
     <value>Serverversion {0}</value>
@@ -396,7 +396,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Inloggning krävs</value>
   </data>
   <data name="SignInRequiredMessage" xml:space="preserve">
-    <value>Kan ej öppna Nextcloud förrän du anger din enhets inloggningsinformation.</value>
+    <value>Vi kan inte öppna Nextcloud förrän du anger din enhets inloggningsinformation.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
     <value>Försök igen</value>
