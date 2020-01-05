@@ -204,7 +204,7 @@
     <value>创建一个新文件夹</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
-    <value>文件下载中…</value>
+    <value>正在下载文件…</value>
   </data>
   <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
     <value>下载预览图片</value>
@@ -240,7 +240,7 @@
     <value>未经授权</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
-    <value>服务器返回错误代码401（未经授权）请重新登录。</value>
+    <value>服务器返回错误代码 401（未经授权）请重新登录。</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>确定</value>
@@ -252,7 +252,7 @@
     <value>路径</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
-    <value>已使用{0} (总计{1})</value>
+    <value>已使用 {0} (总计{1})</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
     <value>重置此应用</value>
@@ -312,13 +312,13 @@
     <value>{0}已上传，共计 {1} 个</value>
   </data>
   <data name="UploadingFiles" xml:space="preserve">
-    <value>上传文件 {0}，共 {1} 个...</value>
+    <value>正在上传文件 {0}，总计 {1} 个...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
     <value>上传文件中 … </value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
-    <value>{0} 于 {1} 下载</value>
+    <value>{0} 已下载，总计  {1}  个</value>
   </data>
   <data name="Auth_MaintenanceEnabled" xml:space="preserve">
     <value>服务器维护模式被启用。</value>
@@ -468,13 +468,13 @@
     <value>同步</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
-    <value>偏好本地文件</value>
+    <value>首选本地文件</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
     <value>清除同步历史</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
-    <value>偏好远程文件</value>
+    <value>首选远程文件</value>
   </data>
   <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
     <value>证书认证机构无效或不正确，是否继续连接？
@@ -588,10 +588,10 @@
     <value>同步此文件夹</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>深色主题</value>
+    <value>深色</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>浅色主题</value>
+    <value>浅色</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>使用系统设置</value>
@@ -686,6 +686,6 @@
     <value>删除文件</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
-    <value>您确定要删除被选文件？</value>
+    <value>确定要删除所选文件吗？</value>
   </data>
 </root>
