@@ -315,7 +315,7 @@
     <value>正在上传文件 {0}，总计 {1} 个...</value>
   </data>
   <data name="UploadingTheFile.Text" xml:space="preserve">
-    <value>上传文件中 … </value>
+    <value>正在上传文件... </value>
   </data>
   <data name="DownloadingFileProgress" xml:space="preserve">
     <value>{0} 已下载，总计  {1}  个</value>
