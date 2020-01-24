@@ -519,7 +519,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Deleted file locally but changed remotely. Which do you prefer?</value>
   </data>
   <data name="SyncConflictPrefix" xml:space="preserve">
-    <value>Conflict: </value>
+    <value>Konfliktas: </value>
   </data>
   <data name="SyncConflictRemoteDel" xml:space="preserve">
     <value>Deleted file remotely but changed locally. Which do you prefer?</value>
@@ -540,7 +540,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Sinchronizavimas pristabdytas</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronization Status</value>
+    <value>Sinchronizavimo būsena</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
     <value>Vietinis kelias</value>
