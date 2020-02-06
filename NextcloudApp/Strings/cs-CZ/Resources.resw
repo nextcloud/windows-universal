@@ -504,7 +504,7 @@ Buďte opatrní, v tomto případě nebudete chráněni proti útokům typu Man-
     <value>Byla vyvolána synchronizace</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Synchronizace proběhne na pozadí. Až bude dokončena, bude vám to oznámeno.</value>
+    <value>Synchronizace proběhne na pozadí. Až bude dokončena, budete na to upozorněni.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Služba dočasně nedostupná (obvykle kvůli krátkodobé údržbě).
