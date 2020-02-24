@@ -419,7 +419,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Dateien und Ordner verschieben
 • Dateien und Ordner umbenennen
-• Manuelle Ordner-Synchronisation
+• Manuelle Ordner-Synchronisierung
 • Ordner als ZIP-Dateien herunterladen
 • Mehrere Dateien und Ordner auswählen
 • Elemente können als Favoriten in der App markiert werden
@@ -453,7 +453,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Expertenmodus</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Synchronisations-Status</value>
+    <value>Synchronisierungstatus</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Verlauf</value>
@@ -471,7 +471,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Bevorzuge lokale Datei</value>
   </data>
   <data name="SyncClearHistory.Label" xml:space="preserve">
-    <value>Lösche Synchronisations-Verlauf</value>
+    <value>Lösche Synchronisierungsverlauf</value>
   </data>
   <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
     <value>Bevorzuge Datei auf dem Server</value>
@@ -500,10 +500,10 @@ Seien Sie bitte vorsichtig. Sie sind nicht vor Man-in-the-Middle (mitm) Angriffe
     <value>Sowohl der Ordner auf dem Server, als auch der lokale Ordner sind nicht leer. Dies kann zu vielen Konflikten führen, da nicht bekannt ist, welche Dateien die richtigen sind.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>Synchronisation wurde gestartet!</value>
+    <value>Synchronisierung wurde gestartet!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
-    <value>Die Synchronisation wird im Hintergrund ausgeführt. Sie werden benachrichtigt wenn sie beendet ist.</value>
+    <value>Die Synchronisierung wird im Hintergrund ausgeführt. Sie werden benachrichtigt wenn sie beendet ist.</value>
   </data>
   <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
     <value>Service vorübergehend nicht verfügbar (Zumeist aufgrund kurzer Wartungsarbeiten).
@@ -525,22 +525,22 @@ Bitte später noch einmal versuchen.</value>
     <value>Datei wurde auf dem Server gelöscht, jedoch lokal verändert. Welche bevorzugen Sie?</value>
   </data>
   <data name="SyncFinishedConflicts" xml:space="preserve">
-    <value>Synchronisation von Ordner {0} führte zu {1} Änderungen und {2} Fehlern oder Konflikten.</value>
+    <value>Synchronisierung von Ordner {0} führte zu {1} Änderungen und {2} Fehlern oder Konflikten.</value>
   </data>
   <data name="SyncFinishedSuccessful" xml:space="preserve">
-    <value>Synchronisation von Ordner {0} führte zu {1} Änderungen.</value>
+    <value>Synchronisierung von Ordner {0} führte zu {1} Änderungen.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>Synchronisation beendet</value>
+    <value>Synchronisierung beendet</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
-    <value>Synchronisation von Ordner {0} wurde angehalten, da die App geschlossen wurde.</value>
+    <value>Synchronisierung von Ordner {0} wurde angehalten, da die App geschlossen wurde.</value>
   </data>
   <data name="SyncSuspendedTitle" xml:space="preserve">
-    <value>Synchronisation unterbrochen</value>
+    <value>Synchronisierung unterbrochen</value>
   </data>
   <data name="SynchronizationPage" xml:space="preserve">
-    <value>Synchronisations-Status</value>
+    <value>Synchronisierungsstatus</value>
   </data>
   <data name="SyncPathLocal.Text" xml:space="preserve">
     <value>Lokaler Pfad</value>
@@ -567,13 +567,13 @@ Bitte später noch einmal versuchen.</value>
     <value>Synchronisiere diesen Ordner</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
-    <value>Stoppe die Synchronisation dieses Ordners</value>
+    <value>Stoppe die Synchronisierung dieses Ordners</value>
   </data>
   <data name="StopSynchronize.Text" xml:space="preserve">
-    <value>Synchronisation stoppen</value>
+    <value>Synchronisierung stoppen</value>
   </data>
   <data name="SyncStatusPageHeader.Text" xml:space="preserve">
-    <value>Synchronisations-Status</value>
+    <value>Synchronisierungstatus</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
     <value>Jetzt synchronisieren</value>
