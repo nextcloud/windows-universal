@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Vse datoteke</value>
+  </data>
+  <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
+    <value>Vedno</value>
+  </data>
+  <data name="AnErrorHasOccurred" xml:space="preserve">
+    <value>Prišlo je do napake</value>
+  </data>
+  <data name="AppBarAdd.Label" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
+    <value>Ustvari mapo</value>
+  </data>
+  <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
+    <value>Zajemi sliko</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
+    <value>Pošlji datoteke</value>
+  </data>
+  <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
+    <value>Pošlji fotografije</value>
+  </data>
+  <data name="AppBarDownload.Label" xml:space="preserve">
+    <value>Prejmi</value>
+  </data>
+  <data name="AppBarRefresh.Label" xml:space="preserve">
+    <value>Osveži</value>
+  </data>
+  <data name="AppBarSort.Label" xml:space="preserve">
+    <value>Razvrsti</value>
+  </data>
+  <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
+    <value>po datumu (najstarejši na vrhu)</value>
+  </data>
+  <data name="AppBarSort_ByDateDESC.Text" xml:space="preserve">
+    <value>po datumu (najnovejši na vrhu)</value>
+  </data>
+  <data name="AppBarSort_ByNameASC.Text" xml:space="preserve">
+    <value>po imenu (A na vrhu)</value>
+  </data>
+  <data name="AppBarSort_ByNameDESC.Text" xml:space="preserve">
+    <value>po imenu (Ž na vrhu)</value>
+  </data>
+  <data name="AppBarSort_BySizeASC.Text" xml:space="preserve">
+    <value>po velikosti (najmanjši na vrhu)</value>
+  </data>
+  <data name="AppBarSort_BySizeDESC.Text" xml:space="preserve">
+    <value>po velikosti (največji na vrhu)</value>
+  </data>
+  <data name="AppBarSort_ByTypeASC.Text" xml:space="preserve">
+    <value>po vrsti (A na vrhu)</value>
+  </data>
+  <data name="AppBarSort_ByTypeDESC.Text" xml:space="preserve">
+    <value>po vrsti (Ž na vrhu)</value>
+  </data>
+  <data name="ApplicationError" xml:space="preserve">
+    <value>Napaka programa</value>
+  </data>
+  <data name="ApplicationError_Description" xml:space="preserve">
+    <value>The application has encountered a problem. We apologize for the inconvenience. If you were in the middle of something, the information you have been working on is lost.
+
+Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Prekliči</value>
+  </data>
+  <data name="CanNotCreateFolder" xml:space="preserve">
+    <value>Mape ni mogoče ustvariti</value>
+  </data>
+  <data name="Connect.Content" xml:space="preserve">
+    <value>Poveži</value>
+  </data>
+  <data name="ContentType.Text" xml:space="preserve">
+    <value>Vrsta vsebine</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Ustvari</value>
+  </data>
+  <data name="Created.Text" xml:space="preserve">
+    <value>Ustvarjeno</value>
+  </data>
+  <data name="CreateNewFolder" xml:space="preserve">
+    <value>Ustvari novo mapo</value>
+  </data>
+  <data name="DownloadingTheFile.Text" xml:space="preserve">
+    <value>Poteka prejemanje datoteke ...</value>
+  </data>
+  <data name="SetingsDownloadPreviewImages.Text" xml:space="preserve">
+    <value>Prejmi slike predogleda</value>
+  </data>
+  <data name="ETag.Text" xml:space="preserve">
+    <value>ETag</value>
+  </data>
+  <data name="FileSizeString" xml:space="preserve">
+    <value>{0} ({1} bajt)</value>
+  </data>
+  <data name="FolderNeme" xml:space="preserve">
+    <value>Ime mape</value>
+  </data>
+  <data name="Information.Text" xml:space="preserve">
+    <value>Podrobnosti</value>
+  </data>
+  <data name="LastModified.Text" xml:space="preserve">
+    <value>Nazadnje spremenjeno</value>
+  </data>
+  <data name="Name.Text" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
+    <value>Nikoli</value>
+  </data>
+  <data name="NewFolder" xml:space="preserve">
+    <value>Nova mapa</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="NotAuthorized" xml:space="preserve">
+    <value>Ni overjeno</value>
+  </data>
+  <data name="NotAuthorized_Description" xml:space="preserve">
+    <value>The server returned an error code 401 (Unauthorized). Please log in again.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>V redu</value>
+  </data>
+  <data name="Password.Header" xml:space="preserve">
+    <value>Geslo</value>
+  </data>
+  <data name="Path.Text" xml:space="preserve">
+    <value>Pot</value>
+  </data>
+  <data name="QuotaUsedOfTotal" xml:space="preserve">
+    <value>{0} of {1} used</value>
+  </data>
+  <data name="Button_ResetThisApp.Content" xml:space="preserve">
+    <value>Ponastavi program</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Poskusi  znova</value>
+  </data>
+  <data name="ServerAddress.Header" xml:space="preserve">
+    <value>Naslov strežnika</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Nastavitve</value>
+  </data>
+  <data name="Settings2.Text" xml:space="preserve">
+    <value>Nastavitve</value>
+  </data>
+  <data name="ShowGrouping.Header" xml:space="preserve">
+    <value>Show file and folder list grouping</value>
+  </data>
+  <data name="Size.Text" xml:space="preserve">
+    <value>Velikost</value>
+  </data>
+  <data name="SpecifyDifferentName" xml:space="preserve">
+    <value>There is already an element with this name. Specify a different name.</value>
+  </data>
+  <data name="Type.Text" xml:space="preserve">
+    <value>Vrsta</value>
+  </data>
+  <data name="Username.Header" xml:space="preserve">
+    <value>Uporabniško ime</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Različica {0}</value>
+  </data>
+  <data name="PreviewImageDownloadModeWiFiOnly.Content" xml:space="preserve">
+    <value>Le na Wi-Fi</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="Delete_Text.Text" xml:space="preserve">
+    <value>Izbriši</value>
+  </data>
+  <data name="DeleteFile" xml:space="preserve">
+    <value>Izbriši datoteko</value>
+  </data>
+  <data name="DeleteFile_Description" xml:space="preserve">
+    <value>Ali ste prepričani, da želite izbrisati datoteko {0}?</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>Izbriši mapo</value>
+  </data>
+  <data name="DeleteFolder_Description" xml:space="preserve">
+    <value>Ali ste prepričani, da želite izbrisati mapo {0}?</value>
+  </data>
+  <data name="UploadingFileProgress" xml:space="preserve">
+    <value>Poslano {0} od {1}</value>
+  </data>
+  <data name="UploadingFiles" xml:space="preserve">
+    <value>Poteka pošiljanje datoteke {0} od {1}…</value>
+  </data>
+  <data name="UploadingTheFile.Text" xml:space="preserve">
+    <value>Pošiljanje datoteke ...</value>
+  </data>
+  <data name="DownloadingFileProgress" xml:space="preserve">
+    <value>Prejeto {0} od {1}</value>
+  </data>
+  <data name="Auth_MaintenanceEnabled" xml:space="preserve">
+    <value>Na strežniku je omogočen vzdrževalni način.</value>
+  </data>
+  <data name="Auth_Unauthorized" xml:space="preserve">
+    <value>Napačno uporabniško ime ali geslo</value>
+  </data>
+  <data name="ClientVersion" xml:space="preserve">
+    <value>Različica odjemalca {0}</value>
+  </data>
+  <data name="ServerNameOrAddressCouldNotBeResolved" xml:space="preserve">
+    <value>Imena strežnika oziroma naslova ni mogoče razrešiti.</value>
+  </data>
+  <data name="ServerVersion" xml:space="preserve">
+    <value>Različica strežnika {0}</value>
+  </data>
+  <data name="Delete_Label.Label" xml:space="preserve">
+    <value>Izbriši</value>
+  </data>
+  <data name="WaitingForServerResponse.Text" xml:space="preserve">
+    <value>waiting for server response</value>
+  </data>
+  <data name="ChooseANewName" xml:space="preserve">
+    <value>Izbrati je treba novo ime.</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Preimenuj</value>
+  </data>
+  <data name="Rename_Label.Label" xml:space="preserve">
+    <value>Preimenuj</value>
+  </data>
+  <data name="Rename_Text.Text" xml:space="preserve">
+    <value>Preimenuj</value>
+  </data>
+  <data name="MoveTo_Label.Label" xml:space="preserve">
+    <value>Premakni v</value>
+  </data>
+  <data name="MoveTo_Text.Text" xml:space="preserve">
+    <value>Premakni v</value>
+  </data>
+  <data name="AppBarCancel.Label" xml:space="preserve">
+    <value>Prekliči</value>
+  </data>
+  <data name="AppBarDone.Label" xml:space="preserve">
+    <value>Končano</value>
+  </data>
+  <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
+    <value>Izberi mapo</value>
+  </data>
+  <data name="ServerWithGivenAddressIsNotReachable" xml:space="preserve">
+    <value>The server with the address {0} is not reachable.</value>
+  </data>
+  <data name="DownloadAsZip.Text" xml:space="preserve">
+    <value>Prejmi kot datoteko ZIP</value>
+  </data>
+  <data name="DownloadingFileProgressIndeterminate" xml:space="preserve">
+    <value>{0} prejeto</value>
+  </data>
+  <data name="VerificationService_Prompt" xml:space="preserve">
+    <value>To access your Nextcloud, provide the sign-in info for your device.</value>
+  </data>
+  <data name="UseWindowsHello.Header" xml:space="preserve">
+    <value>Windows Hello authentication</value>
+  </data>
+  <data name="WindowsHelloNotAvailable" xml:space="preserve">
+    <value>No PIN is set for this device. In order to use Windows Hello, a PIN has to be defined.</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Prejmi</value>
+  </data>
+  <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
+    <value>Nextcloud</value>
+  </data>
+  <data name="DialogTitle_SignInRequired" xml:space="preserve">
+    <value>Zahtevana je prijava</value>
+  </data>
+  <data name="SignInRequiredMessage" xml:space="preserve">
+    <value>We can't open Nextcloud until you provide your device sign-in info.</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Poskusi znova</value>
+  </data>
+  <data name="Changes_AppName" xml:space="preserve">
+    <value>Nextcloud za Windows Mobile</value>
+  </data>
+  <data name="Changes_Intro_Line_1" xml:space="preserve">
+    <value>Your app was updated to version {0}</value>
+  </data>
+  <data name="Changes_Intro_Line_2" xml:space="preserve">
+    <value>Nove zmožnosti in posodobitve različice:</value>
+  </data>
+  <data name="Changes_Recommend" xml:space="preserve">
+    <value>Priporoči</value>
+  </data>
+  <data name="Changes_Title" xml:space="preserve">
+    <value>Posodobi</value>
+  </data>
+  <data name="Changes_version_1-1-0" xml:space="preserve">
+    <value>• Premikanje datotek in map
+• Preimenovanje datotek in map
+• Ročno usklajevanje map
+• Prejem map kot arhivske datoteke ZIP
+• Izbor več datotek in map
+• Predmeti so lahko označeni kot priljubljeni znotraj programa
+• Velikost map je pokazana v seznamu map
+• Vrstica stanja v seznamu map kaže število izbranih/vseh datotek
+• Razvrščanje po vrsti podatkov
+• Novi pogledi za priljubljene predmete/mesta souporabe
+• Pripenjanje datotek in map za začetni zaslon
+• Uporabi program Windows Hello za overitev ob zagonu programa
+• Napredni način s prikazom podrobnosti
+• Dovoljenje za uporabo samo-podpisanih potrdil SSL
+• Souporaba datotek iz programa
+• Teme (temna/svetla/sistemska)
+• Uporaba programa PasswordVault za shranjevanje poveril
+• Nova, bolj stabilna knjižnica WebDAV
+• Varnostne izboljšave in odprava znanih hroščev</value>
+  </data>
+  <data name="AppBarPinToStart.Label" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="PinToStart.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Connect2" xml:space="preserve">
+    <value>Poveži</value>
+  </data>
+  <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates</value>
+  </data>
+  <data name="ExpertMode.Header" xml:space="preserve">
+    <value>Napredni način</value>
+  </data>
+  <data name="SynchronizationStatus.Header" xml:space="preserve">
+    <value>Stanje usklajevanja</value>
+  </data>
+  <data name="SynchronizationHistory.Header" xml:space="preserve">
+    <value>Zgodovina</value>
+  </data>
+  <data name="SynchronizationConflicts.Header" xml:space="preserve">
+    <value>Spori</value>
+  </data>
+  <data name="SynchronizationErrors.Header" xml:space="preserve">
+    <value>Napake</value>
+  </data>
+  <data name="Synchronize.Text" xml:space="preserve">
+    <value>Uskladi</value>
+  </data>
+  <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
+    <value>Prefer local file</value>
+  </data>
+  <data name="SyncClearHistory.Label" xml:space="preserve">
+    <value>Počisti zgodovino usklajevanja</value>
+  </data>
+  <data name="SyncFixConflictPreferRemote.Label" xml:space="preserve">
+    <value>Prefer remote file</value>
+  </data>
+  <data name="TheCertificateAuthorityIsInvalidOrIncorrect_ConnectAnyway" xml:space="preserve">
+    <value>The certificate authority is invalid or incorrect. Connect anyway?
+
+Be careful, you will not be protected from Man-in-the-middle (mitm) attacks!</value>
+  </data>
+  <data name="Attention_ExclamationMark" xml:space="preserve">
+    <value>Pozor!</value>
+  </data>
+  <data name="AppMustBeRestarted" xml:space="preserve">
+    <value>For this settings to take effect, the app needs to be restarted.</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Namig</value>
+  </data>
+  <data name="SyncErrorHint_Header.Header" xml:space="preserve">
+    <value>List of errors that occurred during synchronization. Those should be temporary issues (e.g. file has been opened by another app) and should be gone after the next synchronization run.</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarning" xml:space="preserve">
+    <value>Beware of conflicts!</value>
+  </data>
+  <data name="SyncFoldersNotEmptyWarningDetail" xml:space="preserve">
+    <value>Both remote and local folder are not empty. This may result in a lot of conflicts, because the app does not know which files are the correct ones.</value>
+  </data>
+  <data name="SyncStarted" xml:space="preserve">
+    <value>Synchronization has been triggered!</value>
+  </data>
+  <data name="SyncStartedDetail" xml:space="preserve">
+    <value>Synchronization will take place in the background. You'll get a notification when it's finished.</value>
+  </data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve">
+    <value>Service temporarily unavailable (usually due to short-term maintenance work).
+Please try again later.</value>
+  </data>
+  <data name="SyncConflictBothChanged" xml:space="preserve">
+    <value>File changed locally and remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictBothNew" xml:space="preserve">
+    <value>File has been created remotely and locally - which is the correct one?</value>
+  </data>
+  <data name="SyncConflictLocalDel" xml:space="preserve">
+    <value>Deleted file locally but changed remotely. Which do you prefer?</value>
+  </data>
+  <data name="SyncConflictPrefix" xml:space="preserve">
+    <value>Spor:</value>
+  </data>
+  <data name="SyncConflictRemoteDel" xml:space="preserve">
+    <value>Deleted file remotely but changed locally. Which do you prefer?</value>
+  </data>
+  <data name="SyncFinishedConflicts" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes and {2} errors or conflicts.</value>
+  </data>
+  <data name="SyncFinishedSuccessful" xml:space="preserve">
+    <value>Synchronization of folder {0} finished with {1} changes.</value>
+  </data>
+  <data name="SyncFinishedTitle" xml:space="preserve">
+    <value>Synchronization has been finished</value>
+  </data>
+  <data name="SyncSuspendedDescription" xml:space="preserve">
+    <value>Synchronization of folder {0} has been stopped, because the app has been suspended.</value>
+  </data>
+  <data name="SyncSuspendedTitle" xml:space="preserve">
+    <value>Synchronization suspended</value>
+  </data>
+  <data name="SynchronizationPage" xml:space="preserve">
+    <value>Stanje usklajevanja</value>
+  </data>
+  <data name="SyncPathLocal.Text" xml:space="preserve">
+    <value>Krajevna pot</value>
+  </data>
+  <data name="SyncPathRemote.Text" xml:space="preserve">
+    <value>Pot Nextcloud</value>
+  </data>
+  <data name="ShareTargetListView_Header" xml:space="preserve">
+    <value>Izbor mape za pošiljanje datotek</value>
+  </data>
+  <data name="SynchronizationFolders.Header" xml:space="preserve">
+    <value>Mape</value>
+  </data>
+  <data name="DirectoryListStatusBarText" xml:space="preserve">
+    <value>Predmeti: {0} (mape: {1} datoteke: {2})</value>
+  </data>
+  <data name="HelpTextExpertMode" xml:space="preserve">
+    <value>When the expert mode is enabled, the app provides some additional features/information, which may not be interesting for all users.</value>
+  </data>
+  <data name="HelpTextIgnoreInvalidSelfSignedSslCertificates" xml:space="preserve">
+    <value>Ignore invalid self-signed SSL certificates. This allows invalid or incorrect SSL certificate authorities to be used. Be careful, you will not be protected from man-in-the-middle (MITM) attacks anymore!</value>
+  </data>
+  <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
+    <value>Uskladi to mapo</value>
+  </data>
+  <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
+    <value>Zaustavi usklajevanje te mape</value>
+  </data>
+  <data name="StopSynchronize.Text" xml:space="preserve">
+    <value>Zaustavi usklajevanje</value>
+  </data>
+  <data name="SyncStatusPageHeader.Text" xml:space="preserve">
+    <value>Stanje usklajevanja</value>
+  </data>
+  <data name="SynchronizeNow" xml:space="preserve">
+    <value>Uskladi takoj</value>
+  </data>
+  <data name="SynchronizeStart" xml:space="preserve">
+    <value>Uskladi</value>
+  </data>
+  <data name="SynchronizeThisFolderNow" xml:space="preserve">
+    <value>Uskladi mapo takoj</value>
+  </data>
+  <data name="SynchronizeThisFolderStart" xml:space="preserve">
+    <value>Uskladi mapo</value>
+  </data>
+  <data name="SettingsThemeDark.Content" xml:space="preserve">
+    <value>Temna</value>
+  </data>
+  <data name="SettingsThemeLight.Content" xml:space="preserve">
+    <value>Svetla</value>
+  </data>
+  <data name="SettingsThemeSystem.Content" xml:space="preserve">
+    <value>Uporabi sistemske nastavitve</value>
+  </data>
+  <data name="SettingsThemeSelectMode.Text" xml:space="preserve">
+    <value>Izbor načina</value>
+  </data>
+  <data name="SharingOut" xml:space="preserve">
+    <value>V souporabi z drugimi</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Priljubljene</value>
+  </data>
+  <data name="SharingIn" xml:space="preserve">
+    <value>V souporabi z mano</value>
+  </data>
+  <data name="SharingLink" xml:space="preserve">
+    <value>V souporabi prek povezave</value>
+  </data>
+  <data name="PrepareForSharing" xml:space="preserve">
+    <value>Pripravi za usklajevanje ...</value>
+  </data>
+  <data name="AppBarCreateFolder.Label" xml:space="preserve">
+    <value>Ustvari mapo</value>
+  </data>
+  <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
+    <value>Error while creating client for WebDAV communication</value>
+  </data>
+  <data name="SyncService_Error_CreateFolderRemotely" xml:space="preserve">
+    <value>Could not create directory '{0}' on Nextcloud.</value>
+    <comment>{0} = the path to be created</comment>
+  </data>
+  <data name="SyncService_Error_DeleteFolderRemotely" xml:space="preserve">
+    <value>Deletion of '{0}' on Nextcloud failed.</value>
+    <comment>{0} = the path to be deleted</comment>
+  </data>
+  <data name="SyncService_Error_DownloadFile" xml:space="preserve">
+    <value>Error while downloading file '{0}' from Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="SyncService_Error_UploadFile" xml:space="preserve">
+    <value>Prišlo je do napake med pošiljanjem datoteke »{0}« v oblak Nextcloud.</value>
+    <comment>{0} = file name</comment>
+  </data>
+  <data name="DoYouWantToOverwriteIt" xml:space="preserve">
+    <value>Do you want to overwrite it?</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Datoteka s tem imenom že obstaja.</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Prepiši</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Unexpected Exception: {0}</value>
+    <comment>{0} exception details</comment>
+  </data>
+  <data name="NoServerGiven" xml:space="preserve">
+    <value>No server URL specified. Please enter the URL of your Nextcloud instance.</value>
+  </data>
+  <data name="SyncFixConflictKeepAsIs.Label" xml:space="preserve">
+    <value>Ohrani kot je</value>
+  </data>
+  <data name="SyncKeepAsIsHintDesc" xml:space="preserve">
+    <value>To rešitev je mogoče uporabiti le, če datoteke obstajajo krajevno in na strežniku.</value>
+  </data>
+  <data name="SyncKeepAsIsHintTitle" xml:space="preserve">
+    <value>Pozor</value>
+  </data>
+  <data name="HowDoesTheExpertModeWork.Content" xml:space="preserve">
+    <value>How does the expert mode work?</value>
+  </data>
+  <data name="WhatsTheMeaningOfThis.Content" xml:space="preserve">
+    <value>What's the meaning of this?</value>
+  </data>
+  <data name="WindowsColorSettings.Content" xml:space="preserve">
+    <value>Nastavitve barv oken</value>
+  </data>
+  <data name="AppBar_CheckAll.Label" xml:space="preserve">
+    <value>Označi vse</value>
+  </data>
+  <data name="AppBar_UncheckAll.Label" xml:space="preserve">
+    <value>Odstrani oznako vseh</value>
+  </data>
+  <data name="ResetThisApp_Description" xml:space="preserve">
+    <value>Ali ste prepričani, da želite ponastaviti program? Ponastavljene bodo tudi nastavitve usklajevanja.</value>
+  </data>
+  <data name="ResetThisApp_Title" xml:space="preserve">
+    <value>Ponastavi program</value>
+  </data>
+  <data name="DeleteFiles" xml:space="preserve">
+    <value>Izbriši datoteke</value>
+  </data>
+  <data name="DeleteFiles_Description" xml:space="preserve">
+    <value>Ali ste prepričani, da želite izbrisati izbrane datoteke?</value>
+  </data>
+</root>
