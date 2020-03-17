@@ -133,7 +133,7 @@
     <value>Crea cartella</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
-    <value>Scatta una foto</value>
+    <value>Scatta foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
     <value>Carica file</value>
@@ -500,7 +500,7 @@ Fai attenzione non sarai più protetto da attacchi Man-in-the-middle (mitm)!</va
     <value>Sia la cartella remota che quella locale sono vuote. Ciò potrebbe dar luogo a molti conflitti, poiché l'applicazione non sa quali file siano quelli corretti.</value>
   </data>
   <data name="SyncStarted" xml:space="preserve">
-    <value>La sincronizzazioni è stata innescata</value>
+    <value>La sincronizzazione è stata innescata!</value>
   </data>
   <data name="SyncStartedDetail" xml:space="preserve">
     <value>La sincronizzazione avverrà sullo sfondo. Riceverai una notifica al termine.</value>
@@ -531,7 +531,7 @@ Riprova più tardi.</value>
     <value>Sincronizzazione della cartella {0} terminata con {1} modifiche.</value>
   </data>
   <data name="SyncFinishedTitle" xml:space="preserve">
-    <value>La sincronizzazioni è stata completata</value>
+    <value>La sincronizzazione è stata completata</value>
   </data>
   <data name="SyncSuspendedDescription" xml:space="preserve">
     <value>La sincronizzazione della cartella {0} è stata interrotta, poiché l'applicazione è stata sospesa.</value>
