@@ -637,7 +637,7 @@ Please try again later.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Do you want to overwrite it?</value>
+    <value>Ali želite predmet prepisati?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>Datoteka s tem imenom že obstaja.</value>
