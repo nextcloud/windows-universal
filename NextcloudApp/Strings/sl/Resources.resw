@@ -405,7 +405,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Nextcloud za Windows Mobile</value>
   </data>
   <data name="Changes_Intro_Line_1" xml:space="preserve">
-    <value>Your app was updated to version {0}</value>
+    <value>Program je posodobljen na različico {0}</value>
   </data>
   <data name="Changes_Intro_Line_2" xml:space="preserve">
     <value>Nove zmožnosti in posodobitve različice:</value>
