@@ -378,7 +378,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>{0} hämtade</value>
   </data>
   <data name="VerificationService_Prompt" xml:space="preserve">
-    <value>För att få tillgång till servern så måste du ange korrekt inloggningsinformation i din enhet.</value>
+    <value>För att få tillgång till servern måste du ange korrekt inloggningsinformation i din enhet.</value>
   </data>
   <data name="UseWindowsHello.Header" xml:space="preserve">
     <value>"Windows Hello" autentisering</value>
