@@ -228,7 +228,7 @@
     <value>שם</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>לעולם לא</value>
+    <value>מעולם לא</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>תיקייה חדשה</value>
@@ -324,7 +324,7 @@
     <value>מצב התחזוקה מופעל בשרת.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>שם משתמש או ססמה שגויים.</value>
+    <value>שם המשתמש או הססמה שגויים.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>גרסת לקוח {0}</value>
@@ -363,7 +363,7 @@
     <value>ביטול</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>סיום</value>
+    <value>הסתיים</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>בחירת תיקייה</value>
@@ -453,7 +453,7 @@
     <value>מצב מומחה</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>מצב סנכרון</value>
+    <value>מצב הסנכרון</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>היסטוריה</value>
@@ -564,7 +564,7 @@
     <value>התעלם מתעודות שגויות של SSL בחתימה אישית . דבר זה יאפשר עבודה בתעודות SSL שגויות או לא מאושרות. זהירות, לא תחול יותר הגנה מהתקפות מסוג "אדם בתווך".</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>סנכרון התיקייה הזאת</value>
+    <value>לסנכרן את התיקייה הזו</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
     <value>להפסיק לסנכרן את התיקייה הזו</value>
@@ -591,7 +591,7 @@
     <value>כהה</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>בהיר</value>
+    <value>בהירה</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>שימוש בהגדרות המערכת</value>

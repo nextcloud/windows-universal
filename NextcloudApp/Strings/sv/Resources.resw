@@ -198,10 +198,10 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Skapa</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Skapad</value>
+    <value>Skapat</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Skapa en ny mapp</value>
+    <value>Skapa ny mapp</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Hämtar filen...</value>
@@ -222,7 +222,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Information</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Senast modifierad</value>
+    <value>Senast ändrad</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Namn</value>
@@ -264,10 +264,10 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Serveradress</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Inställningar</value>
+    <value>Inställnigar</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Inställningar</value>
+    <value>Inställnigar</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Visa fil- och mapplistgruppering</value>
@@ -363,7 +363,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Avbryt</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Färdig</value>
+    <value>Klar</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Välj mapp</value>
@@ -390,7 +390,7 @@ Vill du informera appens utvecklare om detta problem och skicka en färdig felra
     <value>Hämta</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
-    <value>NextCloud</value>
+    <value>Nextcloud</value>
   </data>
   <data name="DialogTitle_SignInRequired" xml:space="preserve">
     <value>Inloggning krävs</value>
@@ -588,10 +588,10 @@ Försök igen senare.</value>
     <value>Synkronisera denna mapp</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Mörk</value>
+    <value>Mörkt</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Ljus</value>
+    <value>Ljust</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Använd systeminställningarna</value>
@@ -683,7 +683,7 @@ Försök igen senare.</value>
     <value>Återställ denna app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Ta bort filer</value>
+    <value>Radera filer</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Är du säker du vill ta bort alla markerade filer?</value>

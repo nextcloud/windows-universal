@@ -130,7 +130,7 @@
     <value>Adicionar</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Criar uma pasta</value>
+    <value>Criar pasta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Tirar uma foto</value>
@@ -142,7 +142,7 @@
     <value>Enviar fotos</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Baixar</value>
+    <value>Download</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Atualizar</value>
@@ -323,7 +323,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>O modo de manutenção está ativado no servidor.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Nome de usuário ou senha incorreto.</value>
+    <value>Senha ou nome de usuário incorretos.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Versão do cliente {0}</value>
@@ -386,7 +386,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
     <value>Nenhum PIN definido para este dispositivo. Para usar a autenticação Windows Hello, é necessário definir um PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Baixar</value>
+    <value>Download</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -437,7 +437,7 @@ Gostaria de informar os desenvolvedores de aplicativos e enviar o relatório de 
 • Melhoria na segurança &amp; correção de bugs</value>
   </data>
   <data name="AppBarPinToStart.Label" xml:space="preserve">
-    <value>Destacar no niciar</value>
+    <value>Destacar no iniciar</value>
   </data>
   <data name="PinToStart.Text" xml:space="preserve">
     <value>Destacar no iniciar</value>
@@ -679,7 +679,7 @@ Tente mais tarde.</value>
     <value>Quer mesmo redefinir este aplicativo? Isso irá redefini-lo e também suas configurações de sincronização.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Redefinir este aplicativo</value>
+    <value>Redefinir esta aplicação</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Excluir arquivos</value>

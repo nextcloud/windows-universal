@@ -237,7 +237,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Ei</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Ei sallittu</value>
+    <value>Ei valtuutettu</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Palvelin palautti virhekoodin 401 (Pääsy evätty). Kirjaudu uudelleen.</value>
@@ -683,7 +683,7 @@ Yritä myöhemmin uudelleen.</value>
     <value>Resetoi tämä sovellus</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Poista tiedostot</value>
+    <value>Poista tiedostoja</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Haluatko varmasti poistaa valitut tiedostot?</value>

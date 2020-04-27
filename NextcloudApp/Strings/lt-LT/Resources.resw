@@ -222,7 +222,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Informacija</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Paskutinis keitimas</value>
+    <value>Paskutinis modifikavimas</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Pavadinimas</value>
@@ -258,7 +258,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Atstatyti šią programėlę</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Pabandyti iš naujo</value>
+    <value>Bandyti dar kartą</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Serverio adresas</value>
@@ -399,7 +399,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>We can't open Nextcloud until you provide your device sign-in info.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Pabandyti iš naujo</value>
+    <value>Bandykite dar kartą</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud skirta Windows Mobile</value>
@@ -465,7 +465,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Klaidos</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Sinchronizuojama</value>
+    <value>Sinchronizuoti</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Teikti pirmenybę vietiniam failui</value>
@@ -603,7 +603,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Bendrinama su kitais</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Mėgstami</value>
+    <value>Mėgstamos</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Shared with me</value>
@@ -640,7 +640,7 @@ Prašome vėliau bandyti dar kartą.</value>
     <value>Ar norite jį perrašyti?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Failas jau yra.</value>
+    <value>Failas jau yra</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Perrašyti</value>

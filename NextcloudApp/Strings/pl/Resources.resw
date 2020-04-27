@@ -130,7 +130,7 @@
     <value>Dodaj</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Utwórz folder</value>
+    <value>Utwórz katalog</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Zrób zdjęcie</value>
@@ -216,13 +216,13 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>{0} ({1} bajtów)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Nazwa folderu</value>
+    <value>Nazwa katalogu</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informacja</value>
+    <value>Informacje</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Ostatnia modyfikacja</value>
+    <value>Ostatnio zmodyfikowane</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Nazwa</value>
@@ -237,7 +237,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Nie</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Brak dostępu</value>
+    <value>Nieautoryzowany</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Serwer zwrócił kod błędu 401 (Brak dostępu). Zaloguj się ponownie.</value>
@@ -258,7 +258,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Zresetuj ustawienia</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Ponów</value>
+    <value>Powtórz</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Adres serwera</value>
@@ -282,7 +282,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Typ</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Użytkownik</value>
+    <value>Nazwa użytkownika</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Wersja {0}</value>
@@ -303,7 +303,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Czy na pewno chcesz usunąć plik {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Usuń folder</value>
+    <value>Usuń katalog</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>Czy na pewno chcesz usunąć folder {0}?</value>
@@ -324,7 +324,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Włączono tryb konserwacji na serwerze</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Zły login lub hasło</value>
+    <value>Zła nazwa użytkownika lub hasło.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Wersja klienta {0}</value>
@@ -363,7 +363,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Anuluj</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Zrobiono</value>
+    <value>Gotowe</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Wybierz folder</value>
@@ -387,7 +387,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>PIN nie jest ustawiony dla tego urządzenia. Żeby użyć Windows Hello musi być zdefiniowany PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Ściągnij</value>
+    <value>Pobierz</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -414,7 +414,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Zalecane</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Aktualizacja</value>
+    <value>Aktualizuj</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Przenoś pliki i foldery
@@ -451,7 +451,7 @@ Czy chcesz poinformować o tym autorów aplikacji i wysłać im przygotowany rap
     <value>Ignoruj błędne samopodpisane certyfikaty SSL</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Tryb zaawansowany</value>
+    <value>Tryb eksperta</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Status synchronizacji</value>
@@ -616,7 +616,7 @@ Proszę spróbować ponownie później,</value>
     <value>Przygotowywanie do współdzielenia…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Utwórz folder</value>
+    <value>Utwórz katalog</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Wystąpił błąd w trakcie tworzenia klienta komunikacji WebDAV</value>
@@ -644,7 +644,7 @@ Proszę spróbować ponownie później,</value>
     <value>Plik już istnieje</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Nadpisz</value>
+    <value>Nadpisać</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
     <value>Nieoczekiwany wyjątek: {0}</value>

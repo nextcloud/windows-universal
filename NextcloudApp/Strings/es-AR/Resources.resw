@@ -127,7 +127,7 @@
     <value>Se ha presentado un error</value>
   </data>
   <data name="AppBarAdd.Label" xml:space="preserve">
-    <value>Agregar</value>
+    <value>Añadir</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
     <value>Crear carpeta</value>
@@ -136,7 +136,7 @@
     <value>Capturar imagen</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Cargar archivos</value>
+    <value>Subiendo archivos</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Cargar fotos</value>
@@ -145,7 +145,7 @@
     <value>Descargar</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Actualizar</value>
+    <value>Recargar</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Ordenar</value>
@@ -234,7 +234,7 @@
     <value>Carpeta nueva</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No </value>
+    <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
     <value>No autorizado</value>
@@ -264,10 +264,10 @@
     <value>Dirección del servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Configuraciones </value>
+    <value>Ajustes</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Configuraciones </value>
+    <value>Ajustes</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Mostrar agrupación de archivos y carpetas</value>
@@ -279,10 +279,10 @@
     <value>Ya existe un elemento con este nombre. Especifique un nombre diferente</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Escribir</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nombre del usuario</value>
+    <value>Nombre de usuario</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
@@ -291,10 +291,10 @@
     <value>Sólo cuando este conectado por Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Sí</value>
+    <value>Si</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Eliminar</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
     <value>Borrar archivo</value>
@@ -336,7 +336,7 @@
     <value>Versión del servidor  {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Eliminar</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>esperando respuesta del servidor</value>
@@ -399,7 +399,7 @@
     <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de su dispositivo. </value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Vuelva a intentar</value>
+    <value>Inténtalo de nuevo</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud para Windows Mobile</value>
@@ -453,7 +453,7 @@
     <value>Modo experto</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Estatus de sincronización</value>
+    <value>Estatus de la sincronización</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Histórico</value>

@@ -136,7 +136,7 @@
     <value>Tag billede</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Upload filer</value>
+    <value>Send filer</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Upload billeder</value>
@@ -145,7 +145,7 @@
     <value>Download</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Opdatér</value>
+    <value>Opdater</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Sortér</value>
@@ -183,13 +183,13 @@
 Would you like to inform the application developers and submit the prepared error report? This helps to eliminate the problem more quickly.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Annuller</value>
+    <value>Annullér</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Kunne ikke oprette mappen</value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Forbind</value>
+    <value>Tilslut</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
     <value>Indholdstype</value>
@@ -324,7 +324,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Vedligeholdelsestilstanden er aktiveret på serveren.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Forkert brugernavn eller kodeord</value>
+    <value>Forkert brugernavn eller adgangskode</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Klient version {0}</value>

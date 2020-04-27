@@ -231,10 +231,10 @@
     <value>Nunca</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Carpeta nueva</value>
+    <value>Carpeta nueva </value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>No </value>
+    <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
     <value>No autorizado</value>
@@ -399,7 +399,7 @@
     <value>No es posible abrir Nextcloud hasta que proporcione la información de autenticación de tu dispositivo. </value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Vuelve a intentar</value>
+    <value>Reintentar</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud para Windows Mobile</value>
@@ -453,7 +453,7 @@
     <value>Modo experto</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Estatus de sincronización</value>
+    <value>Estatus de la sincronización</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Histórico</value>
@@ -642,7 +642,7 @@
     <value>El archivo ya existe</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Sobre escribir</value>
+    <value>Sobreescribir</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
     <value>Excepción inesperada:{0}</value>

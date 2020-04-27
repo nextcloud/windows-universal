@@ -183,7 +183,7 @@
 Θέλετε να ενημερώσετε τους προγραμματιστές και να παρέχεται μια αναφορά λάθους? Αυτό βοηθάει στο να εξαλειφθεί το πρόβλημα ποιο γρήγορα.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Άκυρο</value>
+    <value>Ακύρωση</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Αδυναμία δημιουργίας φακέλου</value>
@@ -222,7 +222,7 @@
     <value>Πληροφορίες</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Τελευταία τροποποίηση</value>
+    <value>Τελευταία τροποίηση</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Όνομα</value>
@@ -237,16 +237,16 @@
     <value>Όχι</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Δεν πιστοποιήθηκε</value>
+    <value>Μη έγκυρος</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Ο διακομιστής επέστρεψε μήνυμα λάθους 401 (μη εξουσιοδοτημένη πρόσβαση). Παρακαλώ προσπαθήστε είσοδο εκ'νέου.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>Εντάξει</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Συνθηματικό</value>
+    <value>Κωδικός πρόσβασης</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
     <value>Διαδρομή</value>
@@ -324,7 +324,7 @@
     <value>Ενεργοποιήθηκε η κατάσταση συντήρησης σε αυτόν τον διακομιστή.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Εσφαλμένο όνομα χρήστη ή συνθηματικό.</value>
+    <value>Λάθος όνομα χρήστη ή κωδικού.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Έκδοση πελάτη {0}</value>
@@ -360,7 +360,7 @@
     <value>Μετακίνηση σε</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Άκυρο</value>
+    <value>Ακύρωση</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
     <value>Ολοκληρώθηκε</value>
@@ -399,7 +399,7 @@
     <value>Δεν μπορεί να δοθεί πρόσβαση στο Nextcloud αν δεν παρέχεται τα στοιχεία εισόδου της συσκευής σας.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Δοκιμή ξανά</value>
+    <value>Δοκιμάστε ξανά</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud για Windows Mobile</value>
@@ -564,7 +564,7 @@
     <value>Παράβλεψη μη έγκυρων αυτό-υπογεγραμμένων SSL πιστοποιητικών. Αυτό επιτρέπει μη έγκυρα ή μη σωστά SSL πιστοποιητικά να χρησιμοποιηθούν. Προσοχή, δεν προστατεύεστε πλέον από man-in-the-middle (ΜΙΤΜ) επιθέσεις.</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Συγχρονισμός αυτού του φακέλου</value>
+    <value>Συγχρονισμός φακέλου</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
     <value>Διακοπή συγχρονισμού αυτού του φακέλου</value>
@@ -588,7 +588,7 @@
     <value>Συγχρονισμός φακέλου</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Σκοτεινό</value>
+    <value>Σκούρο</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
     <value>Φωτεινό</value>
@@ -680,7 +680,7 @@
     <value>Είστε σίγουρος για την επαναφορά της εφαρμογής? Η ενέργεια αυτή θα κάνει επαναφορά όλη την εφαρμογή και τις ρυθμίσεις συγχρονισμού.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Επαναφορά της εφαρμογής στο αρχικό στάδιο</value>
+    <value>Eπαναφορά της εφαρμογής</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Διαγραφή αρχείων</value>

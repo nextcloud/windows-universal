@@ -246,7 +246,7 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
     <value>Aceptar</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Password</value>
+    <value>Contrasinal</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
     <value>Ruta</value>
@@ -258,7 +258,7 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
     <value>Restabelecer esta aplicación</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Tentar de novo</value>
+    <value>Volver tentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Enderezo do servidor</value>
@@ -303,7 +303,7 @@ Quere informar aos desenvolvedores da aplicación e enviar o informe de fallos p
     <value>Confirma que quere eliminar o ficheiro {0}?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Eliminar o cartafol</value>
+    <value>Eliminar cartafol</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>Confirma que quere eliminar o cartafol {0}?</value>

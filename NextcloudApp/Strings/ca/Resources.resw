@@ -130,19 +130,19 @@
     <value>Afegeix</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Crea una carpeta</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Realitzar una fotografia</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Puja fitxers</value>
+    <value>Carrega fitxers</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Pujar imatges</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Baixa</value>
+    <value>Descarrega</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
     <value>Actualitza</value>
@@ -195,7 +195,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Tipus de contingut</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Crear</value>
+    <value>Crea</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
     <value>Creat</value>
@@ -237,7 +237,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>No</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>No està autoritzat</value>
+    <value>No autoritzat</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>El servidor ha retornat un error de codi 401 (Sense autorització). Si us plau, accedeixi de nou.</value>
@@ -258,7 +258,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Reinicia aquesta aplicació</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Reintenta</value>
+    <value>Torna a intentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Adreça del servidor</value>
@@ -294,10 +294,10 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Sí</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Esborrar</value>
+    <value>Eliminar</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Esborrar arxius</value>
+    <value>Suprimeix el fitxer</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Esteu segurs de voler suprimit aquest fitxer {0}?</value>
@@ -336,7 +336,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Versió del servidor {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Suprimeix</value>
+    <value>Eliminar</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>Esperant resposta del servidor</value>
@@ -345,13 +345,13 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Si us plau, escolliu un nou nom</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Canvia el nom</value>
+    <value>Canvia'n el nom</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Canvia el nom</value>
+    <value>Canvia'n el nom</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Canvia el nom</value>
+    <value>Canvia'n el nom</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>Mou a</value>
@@ -363,7 +363,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Cancel·la</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fet</value>
+    <value>Desat</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Escollir carpeta</value>
@@ -387,7 +387,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>No s\'ha seleccionat cap PIN en aquest dispositiu. Per poder utilitzar Windows Hello, s\'ha de definir un PIN.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Baixa</value>
+    <value>Descarrega</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -444,7 +444,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Clica per començar</value>
   </data>
   <data name="Connect2" xml:space="preserve">
-    <value>Connectar</value>
+    <value>Connecta</value>
   </data>
   <data name="SettingsIgnoreInvalidSelfSignedSslCertificates.Header" xml:space="preserve">
     <value>Ignora els certificats SSL auto-signats</value>
@@ -453,7 +453,7 @@ Aixó ens ajudaria a eliminar el problema més ràpidament.</value>
     <value>Mode expert</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
-    <value>Estat de sincronització</value>
+    <value>Estat de la sincronització</value>
   </data>
   <data name="SynchronizationHistory.Header" xml:space="preserve">
     <value>Història</value>
@@ -551,7 +551,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Escolliu la carpeta a on voleu pujar els fitxers</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Carpetes</value>
+    <value>Carpetes:</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
     <value>Elements: {0}(carpetes: {1}fitxers: {2})</value>
@@ -602,7 +602,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Compartit amb altres</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Preferits</value>
+    <value>Favorits</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Compartit amb mi</value>
@@ -614,7 +614,7 @@ Si us plau, torni a intentar-ho més tard.</value>
     <value>Prepara per compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Crear un directori</value>
+    <value>Crear carpeta</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Ha fallat la creació del client per a comunicació WebDDAV</value>

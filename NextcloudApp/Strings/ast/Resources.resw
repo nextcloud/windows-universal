@@ -237,16 +237,16 @@
     <value>Non</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Ensin autorización</value>
+    <value>Nun s'autorizó</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>El sirvidor devolvió un códigu 401 de fallu (ensin autorización). Volvi aniciar sesión, por favor.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>Encaboxar</value>
+    <value>Aceutar</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Contraseña</value>
+    <value>Password</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
     <value>Camín</value>
@@ -261,13 +261,13 @@
     <value>Retentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Direición del sirvidor</value>
+    <value>Direición del sividor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Axustes</value>
+    <value>Settings</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Axustes</value>
+    <value>Settings</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Show file and folder list grouping</value>
@@ -279,7 +279,7 @@
     <value>Yá hai un elementu con esti nome. Especifica otru distintu.</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Triba</value>
+    <value>Type</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
     <value>Nome d'usuariu</value>
@@ -576,7 +576,7 @@ Please try again later.</value>
     <value>Estáu de sincronización</value>
   </data>
   <data name="SynchronizeNow" xml:space="preserve">
-    <value>Sincornizar agora</value>
+    <value>Sincronizar agora</value>
   </data>
   <data name="SynchronizeStart" xml:space="preserve">
     <value>Sincronizar</value>
@@ -585,7 +585,7 @@ Please try again later.</value>
     <value>Sincronizar agora esta carpeta</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Sincronizar esta carpeta</value>
+    <value>Sincornizar esta carpeta</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Escuru</value>
@@ -683,7 +683,7 @@ Please try again later.</value>
     <value>Reafitar esta aplicación</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Desaniciar ficheros</value>
+    <value>Delete files</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>¿De xuru que quies desaniciar los ficheros desaniciaos?</value>

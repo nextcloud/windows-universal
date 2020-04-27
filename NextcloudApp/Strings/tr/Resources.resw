@@ -121,7 +121,7 @@
     <value>Tüm dosyalar</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Herzaman</value>
+    <value>Her Zaman</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Bir sorun çıktı</value>
@@ -136,7 +136,7 @@
     <value>Fotoğraf çek</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Dosya yükle</value>
+    <value>Dosyaları yükle</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Fotoğraf yükle</value>
@@ -198,7 +198,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Ekle</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Eklendi</value>
+    <value>Oluşturulma</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Yeni klasör ekle</value>
@@ -216,13 +216,13 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>{0} ({1} bayt)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Klasör adı</value>
+    <value>Klasör adı</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>Bilgiler</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Son değiştirilme</value>
+    <value>Son değişiklik</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Ad</value>
@@ -237,7 +237,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Hayır</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Yeterli izin yok</value>
+    <value>İzin verilmemiş</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Sunucu 401 hata kodunu döndürdü (Yeterli izin yok). Lütfen yeniden oturum açın.</value>
@@ -324,7 +324,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>Sunucu bakım kipinde.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Kullanıcı adı ya da parola yanlış.</value>
+    <value>Kullanıcı adı ya da parola hatalı.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>İstemci sürümü {0}</value>
@@ -363,7 +363,7 @@ Bu sorun hakkında hazırlanmış raporu uygulama geliştiricilerine iletmek ist
     <value>İptal</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Bitti</value>
+    <value>Tamam</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Klasör seçin</value>
@@ -603,7 +603,7 @@ Lütfen bir süre sonra yeniden deneyin.</value>
     <value>Başkaları ile paylaşılmış</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Sık Kullanılanlar</value>
+    <value>Sık kullanılanlar</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Benimle paylaşılmış</value>

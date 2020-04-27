@@ -183,7 +183,7 @@
 Да ли желите да обавестите програмере и поднесете припремљени извештај о грешци? Овим ћете помоћи да се проблеми уклањају још брже.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Одустани</value>
+    <value>Поништи</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Не могу да направим фасциклу</value>
@@ -198,7 +198,7 @@
     <value>Направи</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Направљено</value>
+    <value>Направљен</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Направи нову фасциклу</value>
@@ -216,13 +216,13 @@
     <value>{0} ({1} бајтова)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Име фасцикле</value>
+    <value>Назив фасцикле</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Информација</value>
+    <value>Информације</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Последња измена</value>
+    <value>По времену последње измене</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Име</value>
@@ -237,7 +237,7 @@
     <value>Не</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Немате овлашћења</value>
+    <value>Нема овлашћења</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Сервер је вратио код грешке 401 (Unauthorized). Пријавите се поново.</value>
@@ -255,7 +255,7 @@
     <value>{0} од {1} искоришћено</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Ресетујте ову апликацију</value>
+    <value>Ресетуј апликацију</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Покушај поново</value>
@@ -273,7 +273,7 @@
     <value>Прикажи груписање листе фајлова и фасцикли</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Величина</value>
+    <value>величина</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
     <value>Већ постоји елемент са овим именом. Наведите друго име.</value>
@@ -294,7 +294,7 @@
     <value>Да</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Обриши</value>
+    <value>Избриши</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
     <value>Обриши фајл</value>
@@ -336,7 +336,7 @@
     <value>Верзија сервера {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Обриши</value>
+    <value>Избриши</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>чекам на одговор сервера</value>
@@ -360,7 +360,7 @@
     <value>Премести у</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Откажи</value>
+    <value>Поништи</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
     <value>Готово</value>
@@ -450,7 +450,7 @@
     <value>Игориши неисправне само-потписане SSL сертификате</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Експертски режим рада</value>
+    <value>Експертски режим</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Статус синхронизације</value>
@@ -588,10 +588,10 @@
     <value>Синхронизуј ову фасциклу</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Тамна</value>
+    <value>тамна</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Светла</value>
+    <value>светла</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Користи системске поставке</value>
@@ -600,10 +600,10 @@
     <value>Одаберите тему</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Дељено са осталима</value>
+    <value>Дељени са осталима</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Омиљени</value>
+    <value>Омиљене</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Дељено са мном</value>
@@ -683,7 +683,7 @@
     <value>Ресетуј апликацију</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Обриши фајлове</value>
+    <value>Избриши фајлове</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Да ли сте сигурни да желите да обришете означене фајлове?</value>

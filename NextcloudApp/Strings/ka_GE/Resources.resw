@@ -130,7 +130,7 @@
     <value>დამატება</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>დირექტორიის შექმნა</value>
+    <value>შექმენით დირექტორია</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>სურათის გადაღება</value>
@@ -148,7 +148,7 @@
     <value>განახლება</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
-    <value>სორტირება</value>
+    <value>განლაგება</value>
   </data>
   <data name="AppBarSort_ByDateASC.Text" xml:space="preserve">
     <value>თარიღი (ჯერ ძველი)</value>
@@ -183,7 +183,7 @@
 გსურთ შეატყობინოთ აპლიკაციის დეველოპერს და გააგზავნოთ გამზადებული შეცდომის რეპორტი? ეს ხელს უწყობს პრობლემის უფრო სწრაფ მოგვარებას.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>გაუქმება</value>
+    <value>უარყოფა</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>დირექტორია ვერ იქმნება</value>
@@ -282,7 +282,7 @@
     <value>სახეობა</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>მომხმარებლის სახელი</value>
+    <value>მომხმარებელი</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>ვერსია {0}</value>
@@ -294,10 +294,10 @@
     <value>კი</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>გაუქმება</value>
+    <value>წაშლა</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>ფაილის გაუქმება</value>
+    <value>გაუქმდეს ფაილი</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the file {0}?</value>
@@ -336,7 +336,7 @@
     <value>სერვერის ვერსია {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>გაუქმება</value>
+    <value>წაშლა</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>ველოდებით სერვერის პასუხს</value>
@@ -615,7 +615,7 @@
     <value>მოემზადეთ გაზიარებისთვის…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>დირექტორიის შექმნა</value>
+    <value>შექმენით დირექტორია</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>შეცდომა WebDAV კომუნიკაციისთვის კლიენტის შექმნისას</value>
@@ -683,7 +683,7 @@
     <value>ამ აპლიკაციის საწყის მდგომარეობაში დაბრუნება</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>ფაილების წაშლა</value>
+    <value>ფაილების გაუქმება</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>დარწმუნებული ხართ, რომ გსურთ მონიშნული ფაილების გაუქმება?</value>

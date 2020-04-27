@@ -121,7 +121,7 @@
     <value>Të gjitha dosjet</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>Gjithmonë</value>
+    <value>Përherë</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>Ka ndodhur një gabim</value>
@@ -130,7 +130,7 @@
     <value>Shto</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Krijo dosje</value>
+    <value>Krijoni dosje</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Bëj një foto</value>
@@ -183,25 +183,25 @@
 Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dërgoni raportin e gabimit? Kjo ndihmon në eleminimin e problemit më shpejt.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Anulo</value>
+    <value>Anullo</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Nuk mund të krijojë dosje </value>
   </data>
   <data name="Connect.Content" xml:space="preserve">
-    <value>Lidhuni </value>
+    <value>Lidh</value>
   </data>
   <data name="ContentType.Text" xml:space="preserve">
     <value>Lloji i lidhjes</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Krijoni</value>
+    <value>Krijo</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
     <value>U krijua</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>Krijoni një dosje të re</value>
+    <value>Krijo një dosje të re</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>Duke shkarkuar dosjen...</value>
@@ -219,7 +219,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Emri i dosjes</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informacion</value>
+    <value>Informacioni</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
     <value>Ndryshuar së fundmi</value>
@@ -237,7 +237,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Jo</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>E pa autorizuar</value>
+    <value>E paautorizuar</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Serveri kthehu nje kode gabimi 401 (I Paautorizuar). Ju lutem identifikohuni dhe njëherë.</value>
@@ -246,7 +246,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
-    <value>Fjalëkalimi</value>
+    <value>Fjalëkalim</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
     <value>Adresa</value>
@@ -255,7 +255,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Përdorur {0} nga {1} </value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Rivendos këtë aplikacion</value>
+    <value>Rifresko këtë aplikacion</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Riprovoni</value>
@@ -264,25 +264,25 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Adresa e serverit</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Konfigurimet</value>
+    <value>Rregullimet</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Konfigurimet</value>
+    <value>Rregullimet</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Shfaq listën e grupimit të skedarëve dhe dosjeve</value>
   </data>
   <data name="Size.Text" xml:space="preserve">
-    <value>Madhësia</value>
+    <value>Madhësi</value>
   </data>
   <data name="SpecifyDifferentName" xml:space="preserve">
     <value>Një element me këtë emër ekziston. Specifiko një emër tjetër. </value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>Shtypni</value>
+    <value>Shtyp</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Emri i përdoruesit</value>
+    <value>Username</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versioni {0}</value>
@@ -291,13 +291,13 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Vetëm kur jam në Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Po</value>
+    <value>Yes</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
-    <value>Fshini</value>
+    <value>Delete</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Fshini skedarin</value>
+    <value>Fshi skedarin</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Are you sure, you want to delete the file {0}?</value>
@@ -336,7 +336,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Versioni i serverit {0}</value>
   </data>
   <data name="Delete_Label.Label" xml:space="preserve">
-    <value>Fshini</value>
+    <value>Delete</value>
   </data>
   <data name="WaitingForServerResponse.Text" xml:space="preserve">
     <value>duke pritur përgjigjen e serverit</value>
@@ -345,13 +345,13 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Ju lutem, zgjidhni një emër të ri</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Riemërtoni</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Riemërtoni</value>
+    <value>Rename</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Riemërtoni</value>
+    <value>Rename</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>Shkoni te</value>
@@ -360,10 +360,10 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Shkoni te</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Anuloni</value>
+    <value>Anullo</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>U bë</value>
+    <value>U krye</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Zgjidhni dosjen</value>
@@ -399,7 +399,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Nuk mund ta hapim Nextcloud derisa të mundësoni informacionet e kyçjes për pajisjen tuaj.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Provojeni përsëri</value>
+    <value>Provo përsëri</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud për Windows Mobile</value>
@@ -414,7 +414,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Rekomanduar</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Përditësim</value>
+    <value>Përditëso</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Lëviz skedarët dhe dosjet
@@ -450,7 +450,7 @@ Do të kishit dëshirë të lajmëronit përpunuesit e aplikacionit dhe të dër
     <value>Injoro çertifikatat e pavlefshme të vetë-firmosura SSL</value>
   </data>
   <data name="ExpertMode.Header" xml:space="preserve">
-    <value>Moda ekspert</value>
+    <value>Mënyra eksperte</value>
   </data>
   <data name="SynchronizationStatus.Header" xml:space="preserve">
     <value>Statusi i sinkronizimit</value>
@@ -591,7 +591,7 @@ Ju lutem provoni përsëri më vonë.</value>
     <value>E errët</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Dritë</value>
+    <value>E çelët</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Përdor konfigurimet e sistemit</value>
@@ -603,7 +603,7 @@ Ju lutem provoni përsëri më vonë.</value>
     <value>Ndarë me të tjerët</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Favoritet</value>
+    <value>Favorites</value>
   </data>
   <data name="SharingIn" xml:space="preserve">
     <value>Ndarë me mua</value>
@@ -643,7 +643,7 @@ Ju lutem provoni përsëri më vonë.</value>
     <value>Skedari ekziston tashmë</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>Mbishkrim</value>
+    <value>Mbishkruaj</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
     <value>Përjashtim i Papritur: {0}</value>
@@ -683,7 +683,7 @@ Ju lutem provoni përsëri më vonë.</value>
     <value>Rifresko këtë aplikacion</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value>Fshi skedarët</value>
+    <value>Fshij dosjet</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>A jeni të sigurt që doni ta fshini skedarin e zgjedhur?</value>

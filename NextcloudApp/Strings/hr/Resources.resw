@@ -225,7 +225,7 @@
     <value>Posljednja izmjena</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Ime</value>
+    <value>Naziv</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Nikad</value>
@@ -243,7 +243,7 @@
     <value>Došlo je do pogreške poslužitelja: pogreška 401 (neovlaštena radnja). Ponovo se prijavite.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>OK</value>
+    <value>U redu</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>Zaporka</value>

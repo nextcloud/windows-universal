@@ -219,7 +219,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Ordnername</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
-    <value>Informationen</value>
+    <value>Information</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
     <value>Zuletzt geändert</value>
@@ -228,7 +228,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Name</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>Nie</value>
+    <value>Niemals</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>Neuer Ordner</value>
@@ -237,7 +237,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Nein</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nicht berechtigt</value>
+    <value>Nicht autorisiert</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>Der Server hat den Fehlercode 401 (Unauthorized) zurückgegeben. Bitte melden Sie sich erneut an.</value>
@@ -249,7 +249,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Passwort</value>
   </data>
   <data name="Path.Text" xml:space="preserve">
-    <value>Pfad</value>
+    <value>Verzeichnis</value>
   </data>
   <data name="QuotaUsedOfTotal" xml:space="preserve">
     <value>{0} von {1} verwendet</value>
@@ -324,7 +324,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Der Maintenance-Mode ist auf dem Server aktiviert.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Falscher Benutzername oder Passwort</value>
+    <value>Falscher Benutzername oder Passwort.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Client-Version {0}</value>
@@ -348,7 +348,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Umbenennen</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Umbennen</value>
+    <value>Umbenennen</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
     <value>Umbenennen</value>
@@ -414,7 +414,7 @@ Möchten Sie die Anwendungsentwickler informieren und den vorbereiteten Fehlerbe
     <value>Empfehlen</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>Aktualisierung</value>
+    <value>Aktualisieren</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>• Dateien und Ordner verschieben
@@ -564,7 +564,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Ungültige selbst-signierte SSL-Zertifikate ignorieren. Dadurch können ungültige oder falsche SSL-Zertifizierungsstellen verwendet werden. Diese Option sollte nur mit Vorsicht gesetzt werden, da man hierdurch nicht mehr vor man-in-the-middle (MITM) Angriffen geschützt ist!</value>
   </data>
   <data name="AppBarSyncThisFolder.Label" xml:space="preserve">
-    <value>Synchronisiere diesen Ordner</value>
+    <value>Diesen Ordner synchronisieren</value>
   </data>
   <data name="AppBarUnSyncThisFolder.Label" xml:space="preserve">
     <value>Stoppe die Synchronisierung dieses Ordners</value>
@@ -637,10 +637,10 @@ Bitte später noch einmal versuchen.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Soll überschrieben werden?</value>
+    <value>Möchten Sie überschreiben?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
-    <value>Datei existiert bereits</value>
+    <value>Datei bereits vorhanden</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Überschreiben</value>
@@ -683,7 +683,7 @@ Bitte später noch einmal versuchen.</value>
     <value>Diese App zurücksetzen</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
-    <value> Dateien löschen </value>
+    <value>Dateien löschen</value>
   </data>
   <data name="DeleteFiles_Description" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie die ausgewählten Dateien löschen möchten?</value>

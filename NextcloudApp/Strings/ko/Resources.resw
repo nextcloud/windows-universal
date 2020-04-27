@@ -130,7 +130,7 @@
     <value>추가</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>새 폴더</value>
+    <value>폴더 만들기</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>사진 촬영</value>
@@ -588,10 +588,10 @@
     <value>이 폴더 동기화</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>어두움</value>
+    <value>어둡게</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>밝음</value>
+    <value>밝게</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>시스템 설정 사용</value>
@@ -643,7 +643,7 @@
     <value>파일이 이미 존재함</value>
   </data>
   <data name="Overwrite" xml:space="preserve">
-    <value>엎어쓰기</value>
+    <value>덮어쓰기</value>
   </data>
   <data name="UnexpectedException" xml:space="preserve">
     <value>처리하지 못한 예외: {0}</value>

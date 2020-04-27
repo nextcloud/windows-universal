@@ -225,7 +225,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Nazadnje spremenjeno</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Ime</value>
+    <value>Ime jedi</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Nikoli</value>
@@ -324,7 +324,7 @@ Would you like to inform the application developers and submit the prepared erro
     <value>Na strežniku je omogočen vzdrževalni način.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Napačno uporabniško ime ali geslo</value>
+    <value>Napačno uporabniško ime oziroma geslo</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Različica odjemalca {0}</value>
@@ -585,7 +585,7 @@ Please try again later.</value>
     <value>Uskladi mapo takoj</value>
   </data>
   <data name="SynchronizeThisFolderStart" xml:space="preserve">
-    <value>Uskladi mapo</value>
+    <value>Uskladi to mapo</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
     <value>Temna</value>
@@ -600,7 +600,7 @@ Please try again later.</value>
     <value>Izbor načina</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>V souporabi z drugimi</value>
+    <value>V souporabi  z drugimi</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Priljubljene</value>

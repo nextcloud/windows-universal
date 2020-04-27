@@ -364,7 +364,7 @@ Přejete si informovat o tom vývojáře a poslat jim připravené hlášení ch
     <value>Storno</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Hotovo</value>
+    <value>Dokončeno</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Vybrat složku</value>
@@ -589,10 +589,10 @@ Zkuste to za chvíli znovu.</value>
     <value>Synchronizovat tuto složku</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Tmavé</value>
+    <value>Tmavý</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Svétlé</value>
+    <value>Světlý</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Použít systémová nastavení</value>

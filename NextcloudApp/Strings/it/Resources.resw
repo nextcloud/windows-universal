@@ -198,7 +198,7 @@ Potresti informare gli sviluppatori dell'applicazione e inviare il resoconto di 
     <value>Crea</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Creato</value>
+    <value>Creato il</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Crea una nuova cartella</value>
@@ -363,7 +363,7 @@ Potresti informare gli sviluppatori dell'applicazione e inviare il resoconto di 
     <value>Annulla</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Fatto</value>
+    <value>Completato</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Scegli cartella</value>

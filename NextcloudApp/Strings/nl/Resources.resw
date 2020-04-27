@@ -130,22 +130,22 @@
     <value>Toevoegen</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Aanmaken nieuwe map</value>
+    <value>Maak map</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Maak een foto</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>Uploaden bestanden</value>
+    <value>Bestanden uploaden</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>Uploaden foto's</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Download</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Vernieuwen</value>
+    <value>Verversen</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Sorteren</value>
@@ -198,7 +198,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Creëren</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Aangemaakt</value>
+    <value>Gemaakt</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Creëer een nieuwe map</value>
@@ -258,7 +258,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Reset deze app</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Opnieuw</value>
+    <value>Opnieuw proberen</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Serveradres</value>
@@ -303,7 +303,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Weet je zeker dat je bestand {0} wilt verwijderen?</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>Verwijder map</value>
+    <value>Verwijderen map</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>Weet je zeker dat je map {0} wilt verwijderen?</value>
@@ -363,7 +363,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Annuleren</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Klaar</value>
+    <value>Gedaan</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Kies map</value>
@@ -387,7 +387,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>Er is geen PIN ingesteld voor dit apparaat. Om Windows Hello te kunnen gebruiken, moet een PIN worden ingesteld.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Downloaden</value>
+    <value>Download</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -399,7 +399,7 @@ Wil je de ontwikkelaars van deze applicatie informeren en de gemaakte foutmeldin
     <value>We kunnen Nextcloud niet openen totdat je apparaat inloginfo hebt opgegeven.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Probeer het opnieuw</value>
+    <value>Probeer opnieuw</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud voor Windows Mobile</value>
@@ -615,7 +615,7 @@ Probeer het later opnieuw.</value>
     <value>Klaarmaken voor delen...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Aanmaken map</value>
+    <value>Maak map</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Een foutmelding tijdens het aanmaken van de gebruiker voor de WebDAV commmunicatie.</value>

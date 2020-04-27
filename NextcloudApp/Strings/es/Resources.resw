@@ -130,7 +130,7 @@
     <value>Añadir</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Crear carpeta</value>
+    <value>Crear carpeta </value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Hacer una foto</value>
@@ -222,7 +222,7 @@
     <value>Información</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Modificado por última vez</value>
+    <value>Última modificación</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Nombre</value>
@@ -243,7 +243,7 @@
     <value>El servidor ha devuelto un código de error 401 (no autorizado). Por favor, vuelva a iniciar sesión.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>Aceptar</value>
+    <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>Contraseña</value>
@@ -261,13 +261,13 @@
     <value>Reintentar</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Dirección del servidor</value>
+    <value>Nombre del servidor</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Configuración</value>
+    <value>Ajustes</value>
   </data>
   <data name="Settings2.Text" xml:space="preserve">
-    <value>Configuración</value>
+    <value>Ajustes</value>
   </data>
   <data name="ShowGrouping.Header" xml:space="preserve">
     <value>Mostrar agrupada la lista de archivos y carpetas </value>
@@ -282,7 +282,7 @@
     <value>Tipo</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
-    <value>Nombre de usuario</value>
+    <value>Usuario</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Versión {0}</value>
@@ -291,7 +291,7 @@
     <value>Solo al estar conectado a Wi-Fi</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Sí</value>
+    <value>Si</value>
   </data>
   <data name="Delete_Text.Text" xml:space="preserve">
     <value>Eliminar</value>
@@ -387,7 +387,7 @@
     <value>No se ha configurado ningún PIN para este dispositivo. Para poder usar Windows Hello, se necesita un PIN definido.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Descarga</value>
+    <value>Descargar</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -399,7 +399,7 @@
     <value>No podemos abrir Nextcloud hasta que provea su información de inicio de sesión.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Intente de nuevo</value>
+    <value>Vuelve a intentarlo</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud para Windows Mobile</value>
@@ -614,7 +614,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>Preparando para compartir...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Crear carpeta</value>
+    <value>Crear carpeta </value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Error al crear cliente para la comunicación WebDAV</value>
@@ -679,7 +679,7 @@ Por favor, inténtelo de nuevo más tarde.</value>
     <value>¿Estás seguro de que quieres resetear esta app? Esto reseteará toda la aplicación y todas tus configuraciones de sincronización.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Resetear esta app</value>
+    <value>Restablecer esta app</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Eliminar archivos</value>

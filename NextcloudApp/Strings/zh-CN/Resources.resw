@@ -121,7 +121,7 @@
     <value>全部文件</value>
   </data>
   <data name="PreviewImageDownloadModeAlways.Content" xml:space="preserve">
-    <value>一直</value>
+    <value>总是</value>
   </data>
   <data name="AnErrorHasOccurred" xml:space="preserve">
     <value>发生错误</value>
@@ -201,7 +201,7 @@
     <value>已创建</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
-    <value>创建一个新文件夹</value>
+    <value>创建文件夹</value>
   </data>
   <data name="DownloadingTheFile.Text" xml:space="preserve">
     <value>正在下载文件…</value>
@@ -237,13 +237,13 @@
     <value>否</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>未经授权</value>
+    <value>未授权</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>服务器返回错误代码 401（未经授权）请重新登录。</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>确定</value>
+    <value>确认</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>密码</value>
@@ -303,7 +303,7 @@
     <value>您确认您要删除文件 {0} 吗？</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>删除目录</value>
+    <value>删除文件夹</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>您确认要删除文件夹 {0} 吗？</value>
@@ -363,7 +363,7 @@
     <value>取消</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>完成</value>
+    <value>已完成</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>选择目录</value>
@@ -399,7 +399,7 @@
     <value>我们不能打开 Nextcloud 直到您为您的设备提供了登录信息。</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>再试一次</value>
+    <value>重试</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud Windows 移动版</value>

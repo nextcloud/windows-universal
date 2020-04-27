@@ -136,7 +136,7 @@
     <value>写真を撮る</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadFiles.Text" xml:space="preserve">
-    <value>ファイルをアップロード</value>
+    <value>アップロードファイル</value>
   </data>
   <data name="AppBarAdd_Flyout_UploadPhotos.Text" xml:space="preserve">
     <value>写真をアップロード</value>
@@ -145,7 +145,7 @@
     <value>ダウンロード</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>同期</value>
+    <value>更新</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>ソート</value>
@@ -199,7 +199,7 @@
     <value>作成</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>作成された</value>
+    <value>作成時刻</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>新しいフォルダーを作成</value>
@@ -223,13 +223,13 @@
     <value>情報</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>更新日時</value>
+    <value>最終更新日順</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>名前</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
-    <value>しない</value>
+    <value>なし</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
     <value>新しいフォルダー</value>
@@ -238,7 +238,7 @@
     <value>いいえ</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>許可されていない</value>
+    <value>承認されていません</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>サーバーはエラーコード(401Unauthorized)を返しました。 もう一度ログインしてください。</value>
@@ -280,7 +280,7 @@
     <value>すでにこの名前の要素があります。 別の名前を指定してください。</value>
   </data>
   <data name="Type.Text" xml:space="preserve">
-    <value>種類</value>
+    <value>タイプ</value>
   </data>
   <data name="Username.Header" xml:space="preserve">
     <value>ユーザー名</value>
@@ -304,7 +304,7 @@
     <value>ファイル{0}を本当に削除しますか？</value>
   </data>
   <data name="DeleteFolder" xml:space="preserve">
-    <value>フォルダーを削除</value>
+    <value>フォルダを削除</value>
   </data>
   <data name="DeleteFolder_Description" xml:space="preserve">
     <value>フォルダー{0}を本当に削除しますか？</value>
@@ -346,13 +346,13 @@
     <value>新しい名前を選択してください</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>名前を変更</value>
+    <value>名前変更</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>名前を変更</value>
+    <value>名前変更</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>名前を変更</value>
+    <value>名前変更</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>移動</value>
@@ -400,7 +400,7 @@
     <value>私たちはあなたのデバイスのサインイン情報を提供するまで、Nextcloudを開くことはできません。</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>再試行してください</value>
+    <value>もう一度やり直してください</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud for Windows Mobile</value>
@@ -415,7 +415,7 @@
     <value>おすすめ</value>
   </data>
   <data name="Changes_Title" xml:space="preserve">
-    <value>アップデート</value>
+    <value>更新</value>
   </data>
   <data name="Changes_version_1-1-0" xml:space="preserve">
     <value>•ファイルとフォルダーの移動
@@ -589,10 +589,10 @@ Man-in-the-middle（mitm）攻撃から保護されません！</value>
     <value>このフォルダーを同期する</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>ダーク</value>
+    <value>暗い</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>ライト</value>
+    <value>明るい</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>システム設定を使用する</value>

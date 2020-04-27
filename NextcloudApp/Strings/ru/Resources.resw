@@ -130,7 +130,7 @@
     <value>Добавить</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Создать каталог</value>
+    <value>Создать папку</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Сделать фотографию</value>
@@ -198,7 +198,7 @@
     <value>Создать</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Создан</value>
+    <value>Создана</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Создать новый каталог</value>
@@ -216,22 +216,22 @@
     <value>{0} ({1} байт)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Имя каталога</value>
+    <value>Имя папки</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>Информация</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Изменён</value>
+    <value>В порядке изменения</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Имя</value>
+    <value>Название</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Никогда</value>
   </data>
   <data name="NewFolder" xml:space="preserve">
-    <value>Новый каталог</value>
+    <value>Новая папка</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>Нет</value>
@@ -243,7 +243,7 @@
     <value>Сервер вернул ошибку 401 (Неавторизован). Пожалуйста, войдите снова.</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>ОК</value>
+    <value>OK</value>
   </data>
   <data name="Password.Header" xml:space="preserve">
     <value>Пароль</value>
@@ -255,7 +255,7 @@
     <value>использовано {0} из {1}</value>
   </data>
   <data name="Button_ResetThisApp.Content" xml:space="preserve">
-    <value>Сбросить настройки приложения</value>
+    <value>Перезагрузить это приложение</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Повторить</value>
@@ -324,7 +324,7 @@
     <value>На сервере включен режим обслуживания.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Неверное имя пользователя или пароль</value>
+    <value>Неверное имя пользователя или пароль.</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Версия клиента {0}</value>
@@ -363,7 +363,7 @@
     <value>Отмена</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
-    <value>Готово</value>
+    <value>Выполненные</value>
   </data>
   <data name="ChooseFolderListView_Header.Header" xml:space="preserve">
     <value>Выберите каталог</value>
@@ -553,7 +553,7 @@
     <value>Выберите каталог для загрузки файлов</value>
   </data>
   <data name="SynchronizationFolders.Header" xml:space="preserve">
-    <value>Каталоги</value>
+    <value>Папки</value>
   </data>
   <data name="DirectoryListStatusBarText" xml:space="preserve">
     <value>Элементов: {0} (каталогов: {1} файлов: {2})</value>
@@ -589,10 +589,10 @@
     <value>Синхронизировать этот каталог</value>
   </data>
   <data name="SettingsThemeDark.Content" xml:space="preserve">
-    <value>Тёмная</value>
+    <value>Тёмное</value>
   </data>
   <data name="SettingsThemeLight.Content" xml:space="preserve">
-    <value>Светлая</value>
+    <value>Светлое</value>
   </data>
   <data name="SettingsThemeSystem.Content" xml:space="preserve">
     <value>Использовать системные настройки</value>
@@ -616,7 +616,7 @@
     <value>Подготовка общего доступа…</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Создать каталог</value>
+    <value>Создать папку</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Ошибка при создании клиента для связи с WebDAV</value>

@@ -198,7 +198,7 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
     <value>Búa til</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
-    <value>Búið til</value>
+    <value>Búið til þann</value>
   </data>
   <data name="CreateNewFolder" xml:space="preserve">
     <value>Búa til nýja möppu</value>
@@ -225,7 +225,7 @@ Myndirðu vilja upplýsa forritarana um þetta með því að senda inn forunna 
     <value>Síðast breytt</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
-    <value>Heiti</value>
+    <value>Nafn</value>
   </data>
   <data name="PreviewImageDownloadModeNever.Content" xml:space="preserve">
     <value>Aldrei</value>

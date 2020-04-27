@@ -130,7 +130,7 @@
     <value>Hozzáadás</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Mappa létrehozás</value>
+    <value>Mappa létrehozása</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Kép készítés</value>
@@ -183,7 +183,7 @@
 Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az előkészített jelentést? Ez segít a hiba mielőbbi javításában.</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Mégsem</value>
+    <value>Mégse</value>
   </data>
   <data name="CanNotCreateFolder" xml:space="preserve">
     <value>Nem lehet létrehozni a mappát</value>
@@ -195,7 +195,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Tartalom típus</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Létrehoz</value>
+    <value>Létrehozás</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
     <value>Létrehozva</value>
@@ -216,7 +216,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>{0} ({1} byte)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Mappa név</value>
+    <value>Mappanév</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>Információ</value>
@@ -237,7 +237,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Nem</value>
   </data>
   <data name="NotAuthorized" xml:space="preserve">
-    <value>Nem engedélyezett</value>
+    <value>Nincs hozzá jogosultsága</value>
   </data>
   <data name="NotAuthorized_Description" xml:space="preserve">
     <value>A szerver 401-es (jogosulatlan) hibakóddal tért vissza. Kérlek jelentkezz be újra.</value>
@@ -261,7 +261,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Újra</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
-    <value>Szerver cím</value>
+    <value>Kiszolgálócím</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Beállítások</value>
@@ -297,7 +297,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Törlés</value>
   </data>
   <data name="DeleteFile" xml:space="preserve">
-    <value>Fájl törlés</value>
+    <value>Fájl törlése</value>
   </data>
   <data name="DeleteFile_Description" xml:space="preserve">
     <value>Biztosan törölni akarod a(z) {0} fájlt?</value>
@@ -360,7 +360,7 @@ Szeretnéd értesíteni az alkalmazás készítőjét és elküldöd neki az el�
     <value>Áthelyezés ide</value>
   </data>
   <data name="AppBarCancel.Label" xml:space="preserve">
-    <value>Mégsem</value>
+    <value>Mégse</value>
   </data>
   <data name="AppBarDone.Label" xml:space="preserve">
     <value>Kész</value>
@@ -615,7 +615,7 @@ Kérlek próbáld meg később.</value>
     <value>Előkészítés megosztáshoz...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Mappa létrehozás</value>
+    <value>Mappa létrehozása</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Hiba a WebDAV kommunikációs kliens létrehozásakor</value>
@@ -637,7 +637,7 @@ Kérlek próbáld meg később.</value>
     <comment>{0} = file name</comment>
   </data>
   <data name="DoYouWantToOverwriteIt" xml:space="preserve">
-    <value>Felülírod?</value>
+    <value>Felülírja?</value>
   </data>
   <data name="FileAlreadyExists" xml:space="preserve">
     <value>A fájl már létezik</value>
@@ -680,7 +680,7 @@ Kérlek próbáld meg később.</value>
     <value>Biztosan visszaállítod az alkalmazást? Ezzel minden alkalmazás és szinkronizálási beállítás is vissza áll alapállapotba.</value>
   </data>
   <data name="ResetThisApp_Title" xml:space="preserve">
-    <value>Alkalmazás visszaállítás</value>
+    <value>App visszaálítása</value>
   </data>
   <data name="DeleteFiles" xml:space="preserve">
     <value>Fájlok törlése</value>

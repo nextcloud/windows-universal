@@ -130,7 +130,7 @@
     <value>Добави</value>
   </data>
   <data name="AppBarAdd_Flyout_CreateFolder.Text" xml:space="preserve">
-    <value>Създаване на папка</value>
+    <value>Създай папка</value>
   </data>
   <data name="AppBarAdd_Flyout_TakePicture.Text" xml:space="preserve">
     <value>Заснемане</value>
@@ -142,10 +142,10 @@
     <value>Качване на снимки</value>
   </data>
   <data name="AppBarDownload.Label" xml:space="preserve">
-    <value>Изтегляне</value>
+    <value>Свали</value>
   </data>
   <data name="AppBarRefresh.Label" xml:space="preserve">
-    <value>Опресняване</value>
+    <value>Опресни</value>
   </data>
   <data name="AppBarSort.Label" xml:space="preserve">
     <value>Сортиране</value>
@@ -195,7 +195,7 @@
     <value>Content-Type</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Създаване</value>
+    <value>Създай</value>
   </data>
   <data name="Created.Text" xml:space="preserve">
     <value>Създаден</value>
@@ -216,13 +216,13 @@
     <value>{0} ({1} байта)</value>
   </data>
   <data name="FolderNeme" xml:space="preserve">
-    <value>Име на папката</value>
+    <value>Име на папка</value>
   </data>
   <data name="Information.Text" xml:space="preserve">
     <value>Информация</value>
   </data>
   <data name="LastModified.Text" xml:space="preserve">
-    <value>Последно променен</value>
+    <value>Променена</value>
   </data>
   <data name="Name.Text" xml:space="preserve">
     <value>Име</value>
@@ -258,7 +258,7 @@
     <value>Нулиране на приложението</value>
   </data>
   <data name="Retry" xml:space="preserve">
-    <value>Повторен опит</value>
+    <value>Опитай отново</value>
   </data>
   <data name="ServerAddress.Header" xml:space="preserve">
     <value>Адрес на сървъра</value>
@@ -324,7 +324,7 @@
     <value>Режимът на поддръжка е включен на сървъра.</value>
   </data>
   <data name="Auth_Unauthorized" xml:space="preserve">
-    <value>Грешно потребителско име или парола</value>
+    <value>Грешен потребител или парола</value>
   </data>
   <data name="ClientVersion" xml:space="preserve">
     <value>Версия на клиента {0}</value>
@@ -345,13 +345,13 @@
     <value>Моля изберете ново име</value>
   </data>
   <data name="Rename" xml:space="preserve">
-    <value>Преименуване</value>
+    <value>Преименувай</value>
   </data>
   <data name="Rename_Label.Label" xml:space="preserve">
-    <value>Преименуване</value>
+    <value>Преименувай</value>
   </data>
   <data name="Rename_Text.Text" xml:space="preserve">
-    <value>Преименуване</value>
+    <value>Преименувай</value>
   </data>
   <data name="MoveTo_Label.Label" xml:space="preserve">
     <value>Преместване в</value>
@@ -387,7 +387,7 @@
     <value>PIN не е настроен за това устройство. За да използвате  Windows Hello, трябва да дефинирате PIN за устройството.</value>
   </data>
   <data name="Download.Text" xml:space="preserve">
-    <value>Изтегляне</value>
+    <value>Свали</value>
   </data>
   <data name="DialogTitle_GeneralNextCloudApp" xml:space="preserve">
     <value>Nextcloud</value>
@@ -399,7 +399,7 @@
     <value>Не може да стартираме Nextcloud, докато не се осигурите информация за вход на вашето устройство.</value>
   </data>
   <data name="TryAgain" xml:space="preserve">
-    <value>Нов опит</value>
+    <value>Опитай отново</value>
   </data>
   <data name="Changes_AppName" xml:space="preserve">
     <value>Nextcloud за Windows Mobile</value>
@@ -465,7 +465,7 @@
     <value>Грешки</value>
   </data>
   <data name="Synchronize.Text" xml:space="preserve">
-    <value>Синхронизирай</value>
+    <value>Синхронизиране</value>
   </data>
   <data name="SyncFixConflictPreferLocal.Label" xml:space="preserve">
     <value>Предпочети локалния файл</value>
@@ -600,7 +600,7 @@
     <value>Избор на режим</value>
   </data>
   <data name="SharingOut" xml:space="preserve">
-    <value>Споделено с други</value>
+    <value>Споделени с други</value>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Любими</value>
@@ -615,7 +615,7 @@
     <value>Подготовка за споделяне...</value>
   </data>
   <data name="AppBarCreateFolder.Label" xml:space="preserve">
-    <value>Създаване на папка</value>
+    <value>Създай папка</value>
   </data>
   <data name="SyncService_Error_CannotCreateClient" xml:space="preserve">
     <value>Грешка при създаване на клиент за WebDAV комуникация</value>
