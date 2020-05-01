@@ -54,7 +54,54 @@
                     Content="Never"
                     IsChecked="{Binding PreviewImageDownloadModeAsNever, Mode=TwoWay}"
                     GroupName="PreviewImageDownloadModeNever"/>
+
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                    Height="1" />
+
+                <TextBlock
+                    x:Uid="SetingsSyncMode"
+                    Text="Sync mode"
+                    Margin="0,0,0,6"/>
+                <RadioButton
+                    x:Uid="SyncModeLocalToRemote"
+                    Content="Local to remote"
+                    IsChecked="{Binding SyncModeAsLocalToRemote, Mode=TwoWay}"
+                    GroupName="SyncModeLocalToRemote"/>
+                <RadioButton
+                    x:Uid="SyncModeRemoteToLocal"
+                    Content="Remote to local"
+                    IsChecked="{Binding SyncModeAsRemoteToLocal, Mode=TwoWay}"
+                    GroupName="SyncModeRemoteToLocal"/>
+                <RadioButton
+                    x:Uid="SyncModeTwoWay"
+                    Content="Two way"
+                    IsChecked="{Binding SyncModeAsTwoWay, Mode=TwoWay}"
+                    GroupName="SyncModeTwoWay"/>
+
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                    Height="1" />
+
+                <ToggleSwitch 
+                    x:Uid="PauseSyncInBackground"
+                    Header="Pause sync in background"
+                    IsOn="{Binding PauseSyncInBackground, Mode=TwoWay}">
+                </ToggleSwitch>
+
+                <Border 
+                    Margin="0,12" 
+                    Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                    Height="1" />
                 
+                <ToggleSwitch 
+                    x:Uid="SyncDeletions"
+                    Header="Sync deletions"
+                    IsOn="{Binding SyncDeletions, Mode=TwoWay}">
+                </ToggleSwitch>
+
                 <Border 
                     Margin="0,12" 
                     Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
@@ -70,7 +117,7 @@
                         </Core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
                 </ToggleSwitch>
-
+                
                 <Border 
                     Margin="0,12" 
                     Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 

@@ -24,6 +24,7 @@ namespace NextcloudApp.Services
         private NextcloudClient.NextcloudClient _client;
         private readonly List<SyncInfoDetail> _sidList;
         private readonly IResourceLoader _resourceLoader;
+        private readonly LocalSettings SettingsLocal = SettingsService.Default.Value.LocalSettings;
 
         public SyncService(StorageFolder startFolder, ResourceInfo resourceInfo, FolderSyncInfo syncInfo, IResourceLoader resourceLoader)
         {
@@ -162,15 +163,24 @@ namespace NextcloudApp.Services
                                 if (subSid != null)
                                 {
                                     Debug.WriteLine("Sync folder (delete remotely) " + subInfo.Path);
-                                    if (await _client.Delete(subInfo.Path))
+
+                                    if (SettingsLocal.SyncDeletions)
                                     {
-                                        SyncDbUtils.DeleteSyncInfoDetail(subSid, true);
+                                        if (await _client.Delete(subInfo.Path))
+                                        {
+                                            SyncDbUtils.DeleteSyncInfoDetail(subSid, true);
+                                        }
+                                        else
+                                        {
+                                            sid.Error = string.Format(_resourceLoader.GetString(ResourceConstants.SyncService_Error_DeleteFolderRemotely), subInfo.Path);
+                                            // Error could be overridden by other errors
+                                        }
                                     }
                                     else
                                     {
-                                        sid.Error = string.Format(_resourceLoader.GetString(ResourceConstants.SyncService_Error_DeleteFolderRemotely), subInfo.Path);
-                                        // Error could be overridden by other errors
+                                        SyncDbUtils.DeleteSyncInfoDetail(subSid, true);
                                     }
+                                    
                                 }
                                 else
                                 {
@@ -241,10 +251,15 @@ namespace NextcloudApp.Services
                     var subSid = SyncDbUtils.GetSyncInfoDetail(localFolder, _folderSyncInfo);
                     if (subSid != null)
                     {
-                        // Delete all sids and local folder
-                        Debug.WriteLine("Sync folder (delete locally) " + localFolder.Path);
-                        await localFolder.DeleteAsync();
+                        if (SettingsLocal.SyncDeletions)
+                        {
+                            // Delete all sids and local folder
+                            Debug.WriteLine("Sync folder (delete locally) " + localFolder.Path);
+                            await localFolder.DeleteAsync();
+                        }
+
                         SyncDbUtils.DeleteSyncInfoDetail(subSid, true);
+
                     }
                     else
                     {
@@ -341,7 +356,7 @@ namespace NextcloudApp.Services
                             sid.Error = string.Format(_resourceLoader.GetString(ResourceConstants.SyncService_Error_UploadFile), file.Name);
                         }
                     }
-                    else if (info != null)
+                    else if (info != null && (SettingsLocal.SyncMode == SyncMode.RemoteToLocal || SettingsLocal.SyncMode == SyncMode.TwoWay))
                     {
                         // Create sid and download file
                         var localFile = await parentFolder.CreateFileAsync(info.Name);
@@ -370,9 +385,12 @@ namespace NextcloudApp.Services
                         {
                             Debug.WriteLine("Sync file (Delete locally) " + sid.Path);
                             // Remove sid and local file
-                            if (file != null)
+                            if (SettingsLocal.SyncDeletions)
                             {
-                                await file.DeleteAsync();
+                                if (file != null)
+                                {
+                                    await file.DeleteAsync();
+                                }
                             }
                             SyncDbUtils.DeleteSyncInfoDetail(sid, false);
                             changed = true;
@@ -425,12 +443,16 @@ namespace NextcloudApp.Services
                     {
                         if (sid.ETag == null || info.ETag.Equals(sid.ETag))
                         {
-                            Debug.WriteLine("Sync file (Delete remotely) " + sid.Path);
-                            // Remove sid and remote file
-                            await _client.Delete(info.Path + "/" + info.Name);
-                            SyncDbUtils.DeleteSyncInfoDetail(sid, false);
-                            deleted = true;
-                            changed = true;
+                            if (SettingsLocal.SyncDeletions)
+                            {
+                                Debug.WriteLine("Sync file (Delete remotely) " + sid.Path);
+                                // Remove sid and remote file
+                                if (SettingsLocal.SyncDeletions)
+                                    await _client.Delete(info.Path + "/" + info.Name);
+                                SyncDbUtils.DeleteSyncInfoDetail(sid, false);
+                                deleted = true;
+                                changed = true;
+                            }
                         }
                         else
                         {
@@ -474,7 +496,7 @@ namespace NextcloudApp.Services
                     {
                         if (currentModified.Equals(sid.DateModified))
                         {
-                            if (!info.ETag.Equals(sid.ETag))
+                            if (!info.ETag.Equals(sid.ETag) && (SettingsLocal.SyncMode == SyncMode.RemoteToLocal || SettingsLocal.SyncMode == SyncMode.TwoWay))
                             {
                                 // Update local file
                                 Debug.WriteLine("Sync file (update locally) " + info.Path + "/" + info.Name);
@@ -490,7 +512,7 @@ namespace NextcloudApp.Services
                                 }
                             }
                         }
-                        else if (info.ETag.Equals(sid.ETag))
+                        else if (info.ETag.Equals(sid.ETag) && (SettingsLocal.SyncMode == SyncMode.LocalToRemote || SettingsLocal.SyncMode == SyncMode.TwoWay))
                         {
                             // update file on nextcloud
                             Debug.WriteLine("Sync file (update remotely) " + info.Path + "/" + info.Name);
@@ -600,6 +622,8 @@ namespace NextcloudApp.Services
                     IProgress<WebDavProgress> progress = new Progress<WebDavProgress>(ProgressHandler);
                     result = await _client.Upload(path, targetStream, localFile.ContentType, progress, cts.Token);
                 }
+
+                ToastNotificationService.ShowSyncedFileNotification(localFile.Name);
             }
             catch (ResponseError e2)
             {

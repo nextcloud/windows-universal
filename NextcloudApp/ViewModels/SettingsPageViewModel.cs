@@ -26,6 +26,8 @@ namespace NextcloudApp.ViewModels
         private string _serverVersion;
         private bool _ignoreServerCertificateErrors;
         private bool _expertMode;
+        private bool _syncDeletions;
+        private bool _pauseSyncInBackground;
 
         public ICommand ResetCommand { get; }
         public ICommand ShowHelpExpertModeCommand { get; }
@@ -42,6 +44,7 @@ namespace NextcloudApp.ViewModels
             UseWindowsHello = SettingsLocal.UseWindowsHello;
             IgnoreServerCertificateErrors = SettingsLocal.IgnoreServerCertificateErrors;
             ExpertMode = SettingsLocal.ExpertMode;
+            SyncDeletions = SettingsLocal.SyncDeletions;
 
             ResetCommand = new DelegateCommand(Reset);
             ShowHelpExpertModeCommand = new DelegateCommand(ShowHelpExpertMode);
@@ -122,6 +125,30 @@ namespace NextcloudApp.ViewModels
                     return;
 
                 SettingsLocal.ExpertMode = value;
+            }
+        }
+
+        public bool SyncDeletions
+        {
+            get => _syncDeletions;
+            set
+            {
+                if (!SetProperty(ref _syncDeletions, value))
+                    return;
+
+                SettingsLocal.SyncDeletions = value;
+            }
+        }
+
+        public bool PauseSyncInBackground
+        {
+            get => _pauseSyncInBackground;
+            set
+            {
+                if (!SetProperty(ref _pauseSyncInBackground, value))
+                    return;
+
+                SettingsLocal.PauseSyncInBackground = value;
             }
         }
 
@@ -270,6 +297,63 @@ namespace NextcloudApp.ViewModels
                 {
                     PreviewImageDownloadMode = PreviewImageDownloadMode.Never;
                 }
+            }
+        }
+
+        public bool SyncModeAsLocalToRemote
+        {
+            get => SyncMode.Equals(SyncMode.LocalToRemote);
+            set
+            {
+                if (value)
+                {
+                    SyncMode = SyncMode.LocalToRemote;
+                }
+            }
+        }
+
+        public bool SyncModeAsRemoteToLocal
+        {
+            get => SyncMode.Equals(SyncMode.RemoteToLocal);
+            set
+            {
+                if (value)
+                {
+                    SyncMode = SyncMode.RemoteToLocal;
+                }
+            }
+        }
+
+        public bool SyncModeAsTwoWay
+        {
+            get => SyncMode.Equals(SyncMode.TwoWay);
+            set
+            {
+                if (value)
+                {
+                    SyncMode = SyncMode.TwoWay;
+                }
+            }
+        }
+
+        public SyncMode SyncMode
+        {
+            get => SettingsLocal.SyncMode;
+            set
+            {
+                if (SettingsLocal.SyncMode.Equals(value))
+                {
+                    return;
+                }
+
+                SettingsLocal.SyncMode = value;
+
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(SyncModeAsLocalToRemote));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(SyncModeAsRemoteToLocal));
+                // ReSharper disable once ExplicitCallerInfoArgument
+                RaisePropertyChanged(nameof(SyncModeAsTwoWay));
             }
         }
 
